@@ -1,3144 +1,1710 @@
-{
-  "meta": {
-    "source_file": "translation/references/text.json",
-    "total_records": 880,
-    "used_records": 781,
-    "skipped_empty_text_zhCN": 99,
-    "count_basis": {
-      "terms_and_templates": "count 表示该英文词或短语出现于多少条已采用的双语记录中。",
-      "repeated_clauses": "count 表示该英文子句在按换行和句号对齐后，出现于多少条双语子句中。"
-    },
-    "notes": [
-      "terms 收录高频核心术语和短语级术语。",
-      "templates 收录高频固定句式与模板。",
-      "repeated_clauses 尽量完整保留语料中重复出现且译法稳定的英文子句及其中文对应。"
-    ]
+[
+  {
+    "en": "run",
+    "translation": "潜袭"
   },
-  "terms": [
-    {
-      "en": "run",
-      "zh": "潜袭",
-      "count": 262,
-      "category": "term"
-    },
-    {
-      "en": "card",
-      "zh": "卡牌",
-      "count": 247,
-      "category": "term"
-    },
-    {
-      "en": "ice",
-      "zh": "防火墙",
-      "count": 216,
-      "category": "term"
-    },
-    {
-      "en": "Runner",
-      "zh": "潜袭者",
-      "count": 196,
-      "category": "term"
-    },
-    {
-      "en": "install",
-      "zh": "安装",
-      "count": 191,
-      "category": "term"
-    },
-    {
-      "en": "trash",
-      "zh": "销毁",
-      "count": 177,
-      "category": "term"
-    },
-    {
-      "en": "gain",
-      "zh": "获得",
-      "count": 172,
-      "category": "term"
-    },
-    {
-      "en": "agenda",
-      "zh": "议案",
-      "count": 156,
-      "category": "term"
-    },
-    {
-      "en": "hosted",
-      "zh": "所附载的",
-      "count": 156,
-      "category": "term"
-    },
-    {
-      "en": "HQ",
-      "zh": "总部",
-      "count": 151,
-      "category": "term"
-    },
-    {
-      "en": "installed",
-      "zh": "已安装的",
-      "count": 150,
-      "category": "term"
-    },
-    {
-      "en": "server",
-      "zh": "服务器",
-      "count": 145,
-      "category": "term"
-    },
-    {
-      "en": "place",
-      "zh": "放置",
-      "count": 137,
-      "category": "term"
-    },
-    {
-      "en": "program",
-      "zh": "程序",
-      "count": 110,
-      "category": "term"
-    },
-    {
-      "en": "R&D",
-      "zh": "研发中心",
-      "count": 105,
-      "category": "term"
-    },
-    {
-      "en": "piece of ice",
-      "zh": "一层防火墙",
-      "count": 101,
-      "category": "term"
-    },
-    {
-      "en": "this ice",
-      "zh": "本防火墙",
-      "count": 101,
-      "category": "term"
-    },
-    {
-      "en": "draw",
-      "zh": "抽",
-      "count": 93,
-      "category": "term"
-    },
-    {
-      "en": "break",
-      "zh": "破解",
-      "count": 90,
-      "category": "term"
-    },
-    {
-      "en": "play",
-      "zh": "打出",
-      "count": 89,
-      "category": "term"
-    },
-    {
-      "en": "add",
-      "zh": "加入",
-      "count": 82,
-      "category": "term"
-    },
-    {
-      "en": "remove",
-      "zh": "移除",
-      "count": 82,
-      "category": "term"
-    },
-    {
-      "en": "score",
-      "zh": "计分",
-      "count": 80,
-      "category": "term"
-    },
-    {
-      "en": "rez",
-      "zh": "激活",
-      "count": 79,
-      "category": "term"
-    },
-    {
-      "en": "cost",
-      "zh": "费用",
-      "count": 77,
-      "category": "term"
-    },
-    {
-      "en": "subroutine",
-      "zh": "子进程",
-      "count": 74,
-      "category": "term"
-    },
-    {
-      "en": "this agenda",
-      "zh": "本议案",
-      "count": 72,
-      "category": "term"
-    },
-    {
-      "en": "ability",
-      "zh": "能力",
-      "count": 71,
-      "category": "term"
-    },
-    {
-      "en": "this ability",
-      "zh": "本能力",
-      "count": 69,
-      "category": "term"
-    },
-    {
-      "en": "Archives",
-      "zh": "档案库",
-      "count": 68,
-      "category": "term"
-    },
-    {
-      "en": "this server",
-      "zh": "本服务器",
-      "count": 68,
-      "category": "term"
-    },
-    {
-      "en": "tag",
-      "zh": "锁定标记",
-      "count": 67,
-      "category": "term"
-    },
-    {
-      "en": "spend",
-      "zh": "花费",
-      "count": 66,
-      "category": "term"
-    },
-    {
-      "en": "Corp",
-      "zh": "公司",
-      "count": 61,
-      "category": "term"
-    },
-    {
-      "en": "resource",
-      "zh": "资源",
-      "count": 60,
-      "category": "term"
-    },
-    {
-      "en": "grip",
-      "zh": "操控器",
-      "count": 59,
-      "category": "term"
-    },
-    {
-      "en": "reveal",
-      "zh": "展示",
-      "count": 58,
-      "category": "term"
-    },
-    {
-      "en": "successful run",
-      "zh": "成功的潜袭",
-      "count": 57,
-      "category": "term"
-    },
-    {
-      "en": "this program",
-      "zh": "本程序",
-      "count": 57,
-      "category": "term"
-    },
-    {
-      "en": "power counter",
-      "zh": "能量指示物",
-      "count": 56,
-      "category": "term"
-    },
-    {
-      "en": "hardware",
-      "zh": "硬件",
-      "count": 53,
-      "category": "term"
-    },
-    {
-      "en": "net damage",
-      "zh": "网域伤害",
-      "count": 52,
-      "category": "term"
-    },
-    {
-      "en": "asset",
-      "zh": "资产",
-      "count": 51,
-      "category": "term"
-    },
-    {
-      "en": "pay",
-      "zh": "支付",
-      "count": 51,
-      "category": "term"
-    },
-    {
-      "en": "additional cost",
-      "zh": "额外费用",
-      "count": 49,
-      "category": "term"
-    },
-    {
-      "en": "this asset",
-      "zh": "本资产",
-      "count": 48,
-      "category": "term"
-    },
-    {
-      "en": "advancement counter",
-      "zh": "推进指示物",
-      "count": 47,
-      "category": "term"
-    },
-    {
-      "en": "advance",
-      "zh": "推进",
-      "count": 45,
-      "category": "term"
-    },
-    {
-      "en": "shuffle",
-      "zh": "洗混",
-      "count": 45,
-      "category": "term"
-    },
-    {
-      "en": "encounter",
-      "zh": "遭遇",
-      "count": 42,
-      "category": "term"
-    },
-    {
-      "en": "operation",
-      "zh": "事务",
-      "count": 42,
-      "category": "term"
-    },
-    {
-      "en": "stack",
-      "zh": "存储栈",
-      "count": 41,
-      "category": "term"
-    },
-    {
-      "en": "this resource",
-      "zh": "本资源",
-      "count": 40,
-      "category": "term"
-    },
-    {
-      "en": "access",
-      "zh": "读取",
-      "count": 39,
-      "category": "term"
-    },
-    {
-      "en": "hosted power counter",
-      "zh": "所附载的能量指示物",
-      "count": 39,
-      "category": "term"
-    },
-    {
-      "en": "choose",
-      "zh": "选择",
-      "count": 38,
-      "category": "term"
-    },
-    {
-      "en": "event",
-      "zh": "事件",
-      "count": 38,
-      "category": "term"
-    },
-    {
-      "en": "root",
-      "zh": "根目录",
-      "count": 38,
-      "category": "term"
-    },
-    {
-      "en": "search",
-      "zh": "搜寻",
-      "count": 29,
-      "category": "term"
-    },
-    {
-      "en": "installed card",
-      "zh": "已安装的卡牌",
-      "count": 28,
-      "category": "term"
-    },
-    {
-      "en": "hosted credits",
-      "zh": "所附载的信用点",
-      "count": 27,
-      "category": "term"
-    },
-    {
-      "en": "agenda counter",
-      "zh": "议案指示物",
-      "count": 26,
-      "category": "term"
-    },
-    {
-      "en": "breach",
-      "zh": "侵入",
-      "count": 26,
-      "category": "term"
-    },
-    {
-      "en": "hosted agenda counter",
-      "zh": "所附载的议案指示物",
-      "count": 26,
-      "category": "term"
-    },
-    {
-      "en": "upgrade",
-      "zh": "升级",
-      "count": 26,
-      "category": "term"
-    },
-    {
-      "en": "barrier",
-      "zh": "屏障",
-      "count": 25,
-      "category": "term"
-    },
-    {
-      "en": "code gate",
-      "zh": "门禁",
-      "count": 25,
-      "category": "term"
-    },
-    {
-      "en": "core damage",
-      "zh": "核心伤害",
-      "count": 25,
-      "category": "term"
-    },
-    {
-      "en": "load",
-      "zh": "填装",
-      "count": 25,
-      "category": "term"
-    },
-    {
-      "en": "faceup",
-      "zh": "牌面朝上",
-      "count": 23,
-      "category": "term"
-    },
-    {
-      "en": "lose",
-      "zh": "失去",
-      "count": 23,
-      "category": "term"
-    },
-    {
-      "en": "sentry",
-      "zh": "警报",
-      "count": 23,
-      "category": "term"
-    },
-    {
-      "en": "installed program",
-      "zh": "已安装的程序",
-      "count": 22,
-      "category": "term"
-    },
-    {
-      "en": "remote server",
-      "zh": "远程服务器",
-      "count": 22,
-      "category": "term"
-    },
-    {
-      "en": "console",
-      "zh": "控制台",
-      "count": 21,
-      "category": "term"
-    },
-    {
-      "en": "bad publicity",
-      "zh": "负面声誉标记",
-      "count": 20,
-      "category": "term"
-    },
-    {
-      "en": "heap",
-      "zh": "堆阵",
-      "count": 20,
-      "category": "term"
-    },
-    {
-      "en": "hosted advancement counter",
-      "zh": "所附载的推进指示物",
-      "count": 20,
-      "category": "term"
-    },
-    {
-      "en": "derez",
-      "zh": "关闭",
-      "count": 19,
-      "category": "term"
-    },
-    {
-      "en": "region",
-      "zh": "区域",
-      "count": 19,
-      "category": "term"
-    },
-    {
-      "en": "bypass",
-      "zh": "略过",
-      "count": 18,
-      "category": "term"
-    },
-    {
-      "en": "meat damage",
-      "zh": "肢体伤害",
-      "count": 18,
-      "category": "term"
-    },
-    {
-      "en": "steal",
-      "zh": "窃取",
-      "count": 18,
-      "category": "term"
-    },
-    {
-      "en": "central server",
-      "zh": "中央服务器",
-      "count": 17,
-      "category": "term"
-    },
-    {
-      "en": "virus counter",
-      "zh": "病毒指示物",
-      "count": 15,
-      "category": "term"
-    },
-    {
-      "en": "rez cost",
-      "zh": "激活费用",
-      "count": 13,
-      "category": "term"
-    },
-    {
-      "en": "host ice",
-      "zh": "被附载的防火墙",
-      "count": 12,
-      "category": "term"
-    },
-    {
-      "en": "identity",
-      "zh": "特性",
-      "count": 12,
-      "category": "term"
-    },
-    {
-      "en": "installed Runner card",
-      "zh": "已安装的潜袭者卡牌",
-      "count": 12,
-      "category": "term"
-    },
-    {
-      "en": "hosted virus counter",
-      "zh": "所附载的病毒指示物",
-      "count": 11,
-      "category": "term"
-    },
-    {
-      "en": "install cost",
-      "zh": "安装费用",
-      "count": 11,
-      "category": "term"
-    },
-    {
-      "en": "agenda point",
-      "zh": "议案分数",
-      "count": 9,
-      "category": "term"
-    },
-    {
-      "en": "uninstalled",
-      "zh": "已卸载",
-      "count": 8,
-      "category": "term"
-    },
-    {
-      "en": "mark",
-      "zh": "目标",
-      "count": 6,
-      "category": "term"
-    },
-    {
-      "en": "prevent",
-      "zh": "防止",
-      "count": 6,
-      "category": "term"
-    },
-    {
-      "en": "stealth cards",
-      "zh": "隐匿卡牌",
-      "count": 6,
-      "category": "term"
-    },
-    {
-      "en": "trace",
-      "zh": "追踪",
-      "count": 6,
-      "category": "term"
-    },
-    {
-      "en": "hosted card",
-      "zh": "所附载的卡牌",
-      "count": 4,
-      "category": "term"
-    },
-    {
-      "en": "the chosen ice",
-      "zh": "所选择的防火墙",
-      "count": 3,
-      "category": "term"
-    },
-    {
-      "en": "transaction operation",
-      "zh": "交易事务",
-      "count": 3,
-      "category": "term"
-    },
-    {
-      "en": "AI program",
-      "zh": "智能模块程序",
-      "count": 2,
-      "category": "term"
-    },
-    {
-      "en": "trash cost",
-      "zh": "销毁费用",
-      "count": 2,
-      "category": "term"
-    },
-    {
-      "en": "virtual resources",
-      "zh": "虚拟资源",
-      "count": 2,
-      "category": "term"
-    }
-  ],
-  "templates": [
-    {
-      "en": "you may",
-      "zh": "你可以",
-      "count": 253,
-      "category": "template"
-    },
-    {
-      "en": "whenever",
-      "zh": "每当",
-      "count": 121,
-      "category": "template"
-    },
-    {
-      "en": "end the run",
-      "zh": "终止本次潜袭",
-      "count": 88,
-      "category": "template"
-    },
-    {
-      "en": "when your turn begins",
-      "zh": "当你的回合开始时",
-      "count": 82,
-      "category": "template"
-    },
-    {
-      "en": "the first time each turn",
-      "zh": "每回合第一次",
-      "count": 74,
-      "category": "template"
-    },
-    {
-      "en": "you can",
-      "zh": "你可以",
-      "count": 70,
-      "category": "template"
-    },
-    {
-      "en": "when you score this agenda",
-      "zh": "当你将本议案计分时",
-      "count": 53,
-      "category": "template"
-    },
-    {
-      "en": "up to",
-      "zh": "最多",
-      "count": 48,
-      "category": "template"
-    },
-    {
-      "en": "if you do",
-      "zh": "如果你如此做",
-      "count": 45,
-      "category": "template"
-    },
-    {
-      "en": "once per turn",
-      "zh": "每回合限一次",
-      "count": 38,
-      "category": "template",
-      "variants": [
-        "本能力每回合仅限使用一次"
-      ]
-    },
-    {
-      "en": "during a run",
-      "zh": "在潜袭中",
-      "count": 36,
-      "category": "template"
-    },
-    {
-      "en": "if successful",
-      "zh": "如果成功",
-      "count": 34,
-      "category": "template"
-    },
-    {
-      "en": "play only if",
-      "zh": "只有……时，才能打出",
-      "count": 33,
-      "category": "template"
-    },
-    {
-      "en": "instead",
-      "zh": "改为",
-      "count": 29,
-      "category": "template"
-    },
-    {
-      "en": "when you install this program",
-      "zh": "当你安装本程序时",
-      "count": 29,
-      "category": "template"
-    },
-    {
-      "en": "do 1 net damage",
-      "zh": "造成1点网域伤害",
-      "count": 28,
-      "category": "template"
-    },
-    {
-      "en": "ignoring all costs",
-      "zh": "忽略所有的费用",
-      "count": 28,
-      "category": "template"
-    },
-    {
-      "en": "when it is empty",
-      "zh": "当其清空时",
-      "count": 25,
-      "category": "template"
-    },
-    {
-      "en": "limit 1 console per player",
-      "zh": "每位玩家限制1个控制台",
-      "count": 21,
-      "category": "template"
-    },
-    {
-      "en": "during that run",
-      "zh": "在本次潜袭中",
-      "count": 20,
-      "category": "template"
-    },
-    {
-      "en": "when you rez this ice",
-      "zh": "当你激活本防火墙时",
-      "count": 20,
-      "category": "template"
-    },
-    {
-      "en": "limit 1 region per server",
-      "zh": "每台服务器限制1个区域",
-      "count": 19,
-      "category": "template",
-      "variants": [
-        "每个服务器限制1个区域"
-      ]
-    },
-    {
-      "en": "when the Runner encounters this ice",
-      "zh": "当潜袭者遭遇本防火墙时",
-      "count": 19,
-      "category": "template"
-    },
-    {
-      "en": "as an additional cost to play this operation",
-      "zh": "作为打出本事务的额外费用",
-      "count": 17,
-      "category": "template"
-    },
-    {
-      "en": "instead of",
-      "zh": "代替",
-      "count": 16,
-      "category": "template"
-    },
-    {
-      "en": "when you install this resource",
-      "zh": "当你安装本资源时",
-      "count": 16,
-      "category": "template"
-    },
-    {
-      "en": "do 2 net damage",
-      "zh": "造成2点网域伤害",
-      "count": 15,
-      "category": "template"
-    },
-    {
-      "en": "when you install this hardware",
-      "zh": "当你安装本硬件时",
-      "count": 15,
-      "category": "template"
-    },
-    {
-      "en": "when your turn ends",
-      "zh": "当你的回合结束时",
-      "count": 15,
-      "category": "template"
-    },
-    {
-      "en": "break 1 code gate subroutine",
-      "zh": "破解1条门禁子进程",
-      "count": 14,
-      "category": "template"
-    },
-    {
-      "en": "for the remainder of this run",
-      "zh": "在本次潜袭的剩余时间内",
-      "count": 14,
-      "category": "template"
-    },
-    {
-      "en": "break 1 barrier subroutine",
-      "zh": "破解1条屏障子进程",
-      "count": 13,
-      "category": "template"
-    },
-    {
-      "en": "install only on a piece of ice",
-      "zh": "仅能安装在一层防火墙上",
-      "count": 13,
-      "category": "template"
-    },
-    {
-      "en": "break 1 sentry subroutine",
-      "zh": "破解1条警报子进程",
-      "count": 12,
-      "category": "template"
-    },
-    {
-      "en": "do 1 core damage",
-      "zh": "造成1点核心伤害",
-      "count": 12,
-      "category": "template"
-    },
-    {
-      "en": "only the Runner can use this ability",
-      "zh": "只有潜袭者可以使用本能力",
-      "count": 12,
-      "category": "template"
-    },
-    {
-      "en": "use this ability only if",
-      "zh": "只有……时，才能使用本能力",
-      "count": 11,
-      "category": "template",
-      "variants": [
-        "仅能在……时使用本能力"
-      ]
-    },
-    {
-      "en": "when you rez this asset",
-      "zh": "当你激活本资产时",
-      "count": 11,
-      "category": "template"
-    },
-    {
-      "en": "as an additional cost to play this event",
-      "zh": "作为打出本事件的额外费用",
-      "count": 10,
-      "category": "template"
-    },
-    {
-      "en": "when the Runner accesses this asset",
-      "zh": "当潜袭者读取本资产时",
-      "count": 9,
-      "category": "template"
-    },
-    {
-      "en": "for the remainder of the turn",
-      "zh": "在本回合剩余时间内",
-      "count": 8,
-      "category": "template"
-    },
-    {
-      "en": "access 2 additional cards",
-      "zh": "额外读取2张卡牌",
-      "count": 7,
-      "category": "template"
-    },
-    {
-      "en": "for the remainder of this encounter",
-      "zh": "在本次遭遇的剩余时间内",
-      "count": 6,
-      "category": "template"
-    },
-    {
-      "en": "remote server only",
-      "zh": "仅能安装在远程服务器",
-      "count": 5,
-      "category": "template"
-    },
-    {
-      "en": "spend credits only from stealth cards to use this ability",
-      "zh": "本能力仅能花费隐匿卡牌上的信用点来使用",
-      "count": 4,
-      "category": "template"
-    },
-    {
-      "en": "you must",
-      "zh": "你必须",
-      "count": 4,
-      "category": "template"
-    }
-  ],
-  "repeated_clauses": [
-    {
-      "en": "[subroutine] End the run.",
-      "count": 55,
-      "translations": [
-        {
-          "zh": "[subroutine] 终止本次潜袭。",
-          "count": 55
-        }
-      ]
-    },
-    {
-      "en": "When it is empty, trash it.",
-      "count": 17,
-      "translations": [
-        {
-          "zh": "当其清空时，销毁之。",
-          "count": 17
-        }
-      ]
-    },
-    {
-      "en": "Limit 1 console per player.",
-      "count": 15,
-      "translations": [
-        {
-          "zh": "每位玩家限制1个控制台。",
-          "count": 15
-        }
-      ]
-    },
-    {
-      "en": "Limit 1 region per server.",
-      "count": 15,
-      "translations": [
-        {
-          "zh": "每台服务器限制1个区域。",
-          "count": 12
-        },
-        {
-          "zh": "每个服务器限制1个区域。",
-          "count": 3
-        }
-      ]
-    },
-    {
-      "en": "[subroutine] Do 1 net damage.",
-      "count": 14,
-      "translations": [
-        {
-          "zh": "[subroutine] 造成1点网域伤害。",
-          "count": 14
-        }
-      ]
-    },
-    {
-      "en": "Run any server.",
-      "count": 14,
-      "translations": [
-        {
-          "zh": "潜袭任意一台服务器。",
-          "count": 14
-        }
-      ]
-    },
-    {
-      "en": "[subroutine] Trash 1 installed program.",
-      "count": 13,
-      "translations": [
-        {
-          "zh": "[subroutine] 销毁1个已安装的程序。",
-          "count": 13
-        }
-      ]
-    },
-    {
-      "en": "Interface -> 1[credit]: Break 1 code gate subroutine.",
-      "count": 12,
-      "translations": [
-        {
-          "zh": "对接 -> 1[credit]：破解1条门禁子进程。",
-          "count": 12
-        }
-      ]
-    },
-    {
-      "en": "1[credit]: +1 strength.",
-      "count": 11,
-      "translations": [
-        {
-          "zh": "1[credit]：强度+1。",
-          "count": 11
-        }
-      ]
-    },
-    {
-      "en": "Only the Runner can use this ability.",
-      "count": 11,
-      "translations": [
-        {
-          "zh": "只有潜袭者可以使用本能力。",
-          "count": 11
-        }
-      ]
-    },
-    {
-      "en": "You can advance this asset.",
-      "count": 11,
-      "translations": [
-        {
-          "zh": "你可以推进本资产。",
-          "count": 11
-        }
-      ]
-    },
-    {
-      "en": "You can advance this ice.",
-      "count": 11,
-      "translations": [
-        {
-          "zh": "你可以推进本防火墙。",
-          "count": 11
-        }
-      ]
-    },
-    {
-      "en": "[subroutine] Give the Runner 1 tag.",
-      "count": 9,
-      "translations": [
-        {
-          "zh": "[subroutine] 给予潜袭者1枚锁定标记。",
-          "count": 9
-        }
-      ]
-    },
-    {
-      "en": "As an additional cost to play this operation, spend [click].",
-      "count": 9,
-      "translations": [
-        {
-          "zh": "作为打出本事务的额外费用，花费[click]。",
-          "count": 9
-        }
-      ]
-    },
-    {
-      "en": "Install only on a piece of ice.",
-      "count": 9,
-      "translations": [
-        {
-          "zh": "仅能安装在一层防火墙上。",
-          "count": 9
-        }
-      ]
-    },
-    {
-      "en": "[subroutine] Gain 1[credit].",
-      "count": 8,
-      "translations": [
-        {
-          "zh": "[subroutine] 获得1[credit]。",
-          "count": 8
-        }
-      ]
-    },
-    {
-      "en": "Interface -> 1[credit]: Break 1 barrier subroutine.",
-      "count": 8,
-      "translations": [
-        {
-          "zh": "对接 -> 1[credit]：破解1条屏障子进程。",
-          "count": 8
-        }
-      ]
-    },
-    {
-      "en": "Interface -> 1[credit]: Break 1 sentry subroutine.",
-      "count": 8,
-      "translations": [
-        {
-          "zh": "对接 -> 1[credit]：破解1条警报子进程。",
-          "count": 8
-        }
-      ]
-    },
-    {
-      "en": "Lose [click]: Break 1 subroutine on this ice.",
-      "count": 8,
-      "translations": [
-        {
-          "zh": "失去[click]：破解1条本防火墙上的子进程。",
-          "count": 8
-        }
-      ]
-    },
-    {
-      "en": "[subroutine] Do 2 net damage.",
-      "count": 7,
-      "translations": [
-        {
-          "zh": "[subroutine] 造成2点网域伤害。",
-          "count": 7
-        }
-      ]
-    },
-    {
-      "en": "[subroutine] Gain 2[credit].",
-      "count": 7,
-      "translations": [
-        {
-          "zh": "[subroutine] 获得2[credit]。",
-          "count": 7
-        }
-      ]
-    },
-    {
-      "en": "Run R&D.",
-      "count": 7,
-      "translations": [
-        {
-          "zh": "潜袭研发中心。",
-          "count": 7
-        }
-      ]
-    },
-    {
-      "en": "2[credit]: +2 strength.",
-      "count": 6,
-      "translations": [
-        {
-          "zh": "2[credit]：强度+2。",
-          "count": 6
-        }
-      ]
-    },
-    {
-      "en": "Run HQ.",
-      "count": 6,
-      "translations": [
-        {
-          "zh": "潜袭总部。",
-          "count": 6
-        }
-      ]
-    },
-    {
-      "en": "While the Runner is accessing this asset in R&D, they must reveal it.",
-      "count": 6,
-      "translations": [
-        {
-          "zh": "在潜袭者从研发中心读取本资产的期间，其必须展示之。",
-          "count": 6
-        }
-      ]
-    },
-    {
-      "en": "[subroutine] End the run unless the Runner pays 3[credit].",
-      "count": 5,
-      "translations": [
-        {
-          "zh": "[subroutine] 终止本次潜袭，除非潜袭者支付3[credit]。",
-          "count": 5
-        }
-      ]
-    },
-    {
-      "en": "[subroutine] The Runner loses [click].",
-      "count": 5,
-      "translations": [
-        {
-          "zh": "[subroutine] 潜袭者失去[click]。",
-          "count": 5
-        }
-      ]
-    },
-    {
-      "en": "It gets +1 strength for each hosted advancement counter.",
-      "count": 5,
-      "translations": [
-        {
-          "zh": "每有1枚所附载的推进指示物，本防火墙的强度+1。",
-          "count": 3
-        },
-        {
-          "zh": "每有1枚所附载的推进指示物，本防火墙的强度+l。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Run Archives.",
-      "count": 5,
-      "translations": [
-        {
-          "zh": "潜袭档案库。",
-          "count": 5
-        }
-      ]
-    },
-    {
-      "en": "Spend credits only from stealth cards to use this ability.",
-      "count": 5,
-      "translations": [
-        {
-          "zh": "本能力仅能花费隐匿卡牌上的信用点来使用。",
-          "count": 5
-        }
-      ]
-    },
-    {
-      "en": "When you score this agenda, place 1 agenda counter on it for each hosted advancement counter past 3.",
-      "count": 5,
-      "translations": [
-        {
-          "zh": "当你将本议案计分时，如果所附载的推进指示物超过3枚，每超过1枚，放置1枚议案指示物到本议案上。",
-          "count": 5
-        }
-      ]
-    },
-    {
-      "en": "When you score this agenda, place 1 agenda counter on it.",
-      "count": 5,
-      "translations": [
-        {
-          "zh": "当你将本议案计分时，放置1枚议案指示物到本议案上。",
-          "count": 5
-        }
-      ]
-    },
-    {
-      "en": "When your turn begins, gain 1[credit].",
-      "count": 5,
-      "translations": [
-        {
-          "zh": "当你的回合开始时，获得1[credit]。",
-          "count": 5
-        }
-      ]
-    },
-    {
-      "en": "[subroutine] Do 1 core damage.",
-      "count": 4,
-      "translations": [
-        {
-          "zh": "[subroutine] 造成1点核心伤害。",
-          "count": 4
-        }
-      ]
-    },
-    {
-      "en": "[subroutine] The Runner loses 2[credit].",
-      "count": 4,
-      "translations": [
-        {
-          "zh": "[subroutine] 潜袭者失去2[credit]。",
-          "count": 4
-        }
-      ]
-    },
-    {
-      "en": "[subroutine] The Runner loses 3[credit].",
-      "count": 4,
-      "translations": [
-        {
-          "zh": "[subroutine] 潜袭者失去3[credit]。",
-          "count": 4
-        }
-      ]
-    },
-    {
-      "en": "[subroutine] Trash 1 installed Runner card.",
-      "count": 4,
-      "translations": [
-        {
-          "zh": "[subroutine] 销毁1张已安装的潜袭者卡牌。",
-          "count": 4
-        }
-      ]
-    },
-    {
-      "en": "Draw 3 cards.",
-      "count": 4,
-      "translations": [
-        {
-          "zh": "抽3张卡牌。",
-          "count": 4
-        }
-      ]
-    },
-    {
-      "en": "Gain 5[credit].",
-      "count": 4,
-      "translations": [
-        {
-          "zh": "获得5[credit]。",
-          "count": 4
-        }
-      ]
-    },
-    {
-      "en": "Gain 9[credit].",
-      "count": 4,
-      "translations": [
-        {
-          "zh": "获得9[credit]。",
-          "count": 4
-        }
-      ]
-    },
-    {
-      "en": "Limit 1 per deck.",
-      "count": 4,
-      "translations": [
-        {
-          "zh": "每套牌组限制1张。",
-          "count": 4
-        }
-      ]
-    },
-    {
-      "en": "Play only if there is no active lockdown.",
-      "count": 4,
-      "translations": [
-        {
-          "zh": "只有当前没有正在生效的封锁时，才能打出。",
-          "count": 4
-        }
-      ]
-    },
-    {
-      "en": "Remote server only.",
-      "count": 4,
-      "translations": [
-        {
-          "zh": "仅能安装在远程服务器。",
-          "count": 4
-        }
-      ]
-    },
-    {
-      "en": "Remove this event from the game.",
-      "count": 4,
-      "translations": [
-        {
-          "zh": "将本事件移出游戏。",
-          "count": 4
-        }
-      ]
-    },
-    {
-      "en": "Remove this operation from the game.",
-      "count": 4,
-      "translations": [
-        {
-          "zh": "将本事务移出游戏。",
-          "count": 4
-        }
-      ]
-    },
-    {
-      "en": "This operation is not trashed until your next turn begins.",
-      "count": 4,
-      "translations": [
-        {
-          "zh": "直到你的下回合开始前，本事务不会被销毁。",
-          "count": 4
-        }
-      ]
-    },
-    {
-      "en": "Use this ability only during a run.",
-      "count": 4,
-      "translations": [
-        {
-          "zh": "本能力仅能在潜袭中使用。",
-          "count": 4
-        }
-      ]
-    },
-    {
-      "en": "You can spend hosted credits during runs.",
-      "count": 4,
-      "translations": [
-        {
-          "zh": "你可以在潜袭中花费所附载的信用点。",
-          "count": 4
-        }
-      ]
-    },
-    {
-      "en": "You may trash that card.",
-      "count": 4,
-      "translations": [
-        {
-          "zh": "你可以销毁该卡牌。",
-          "count": 4
-        }
-      ]
-    },
-    {
-      "en": "2[credit]: +1 strength.",
-      "count": 3,
-      "translations": [
-        {
-          "zh": "2[credit]：强度+1。",
-          "count": 3
-        }
-      ]
-    },
-    {
-      "en": "2[credit]: +3 strength.",
-      "count": 3,
-      "translations": [
-        {
-          "zh": "2[credit]：强度+3。",
-          "count": 3
-        }
-      ]
-    },
-    {
-      "en": "[subroutine] End the run unless the Runner pays 1[credit].",
-      "count": 3,
-      "translations": [
-        {
-          "zh": "[subroutine] 终止本次潜袭，除非潜袭者支付1[credit]。",
-          "count": 3
-        }
-      ]
-    },
-    {
-      "en": "Add 1 card from Archives to HQ.",
-      "count": 3,
-      "translations": [
-        {
-          "zh": "将1张卡牌从档案库加入总部。",
-          "count": 3
-        }
-      ]
-    },
-    {
-      "en": "After you resolve this operation, your action phase ends.",
-      "count": 3,
-      "translations": [
-        {
-          "zh": "在你结算本事务后，结束你的行动阶段。",
-          "count": 3
-        }
-      ]
-    },
-    {
-      "en": "As an additional cost to play this operation, remove 1 tag.",
-      "count": 3,
-      "translations": [
-        {
-          "zh": "作为打出本事务的额外费用，移除1枚锁定标记。",
-          "count": 3
-        }
-      ]
-    },
-    {
-      "en": "Choose 1 installed card you can advance.",
-      "count": 3,
-      "translations": [
-        {
-          "zh": "选择1张你可以推进的已安装的卡牌。",
-          "count": 3
-        }
-      ]
-    },
-    {
-      "en": "Draw 2 cards.",
-      "count": 3,
-      "translations": [
-        {
-          "zh": "抽2张卡牌。",
-          "count": 3
-        }
-      ]
-    },
-    {
-      "en": "Gain [click][click].",
-      "count": 3,
-      "translations": [
-        {
-          "zh": "获得[click][click]。",
-          "count": 3
-        }
-      ]
-    },
-    {
-      "en": "If successful, access 2 additional cards when you breach HQ.",
-      "count": 3,
-      "translations": [
-        {
-          "zh": "如果成功，当你侵入总部时，额外读取2张卡牌。",
-          "count": 3
-        }
-      ]
-    },
-    {
-      "en": "If you do, add 1 card from Archives to HQ.",
-      "count": 3,
-      "translations": [
-        {
-          "zh": "如果你如此做，将1张卡牌从档案库加入总部。",
-          "count": 3
-        }
-      ]
-    },
-    {
-      "en": "If you do, bypass that ice.",
-      "count": 3,
-      "translations": [
-        {
-          "zh": "如果你如此做，略过该防火墙。",
-          "count": 3
-        }
-      ]
-    },
-    {
-      "en": "If you do, gain 3[credit].",
-      "count": 3,
-      "translations": [
-        {
-          "zh": "如果你如此做，获得3[credit]。",
-          "count": 3
-        }
-      ]
-    },
-    {
-      "en": "If you do, give the Runner 1 tag and do 3 net damage.",
-      "count": 3,
-      "translations": [
-        {
-          "zh": "如果你如此做，给予潜袭者1枚锁定标记并造成3点网域伤害。",
-          "count": 3
-        }
-      ]
-    },
-    {
-      "en": "Interface -> 1[credit]: Break 1 subroutine.",
-      "count": 3,
-      "translations": [
-        {
-          "zh": "对接 -> 1[credit]：破解1条子进程。",
-          "count": 3
-        }
-      ]
-    },
-    {
-      "en": "Play only if the Runner is tagged.",
-      "count": 3,
-      "translations": [
-        {
-          "zh": "只有潜袭者被锁定时，才能打出。",
-          "count": 3
-        }
-      ]
-    },
-    {
-      "en": "Play only if you made a successful run on HQ, R&D, and Archives this turn.",
-      "count": 3,
-      "translations": [
-        {
-          "zh": "只有你本回合对总部、研发中心与档案库均进行过成功的潜袭时，才能打出。",
-          "count": 3
-        }
-      ]
-    },
-    {
-      "en": "Remove 1 tag.",
-      "count": 3,
-      "translations": [
-        {
-          "zh": "移除1枚锁定标记。",
-          "count": 3
-        }
-      ]
-    },
-    {
-      "en": "Run HQ or R&D.",
-      "count": 3,
-      "translations": [
-        {
-          "zh": "潜袭总部或研发中心。",
-          "count": 3
-        }
-      ]
-    },
-    {
-      "en": "When the Runner’s discard phase ends, flip this identity.",
-      "count": 3,
-      "translations": [
-        {
-          "zh": "当潜袭者的弃牌阶段结束时，将本特性翻面。",
-          "count": 3
-        }
-      ]
-    },
-    {
-      "en": "When you install this program, place 2 virus counters on it.",
-      "count": 3,
-      "translations": [
-        {
-          "zh": "当你安装本程序时，放置2枚病毒指示物到本程序上。",
-          "count": 3
-        }
-      ]
-    },
-    {
-      "en": "When your turn begins, take 1[credit] from this resource.",
-      "count": 3,
-      "translations": [
-        {
-          "zh": "当你的回合开始时，从本资源上拿取1[credit]。",
-          "count": 3
-        }
-      ]
-    },
-    {
-      "en": "When your turn begins, you may trash 1 of your other installed cards.",
-      "count": 3,
-      "translations": [
-        {
-          "zh": "当你的回合开始时，你可以销毁另1张你已安装的卡牌。",
-          "count": 3
-        }
-      ]
-    },
-    {
-      "en": "+1[link] Whenever you install a non-AI icebreaker, that icebreaker gets +2 strength for the remainder of the turn.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "+1[link] 每当你安装一个非智能模块的破解器时，该破解器在本回合剩余时间内强度+2。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "+1[mu] The first time each turn you play a run event, gain [click].",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "+1[mu] 每回合你第一次打出一个潜袭事件时，获得[click]。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "1[credit]: +1 strength for the remainder of this run.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "1[credit]：本次潜袭的剩余时间内强度+1。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "1[credit]: +2 strength.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "1[credit]：强度+2。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "1[recurring-credit] (When you install this card and before your turn begins, refill to 1 hosted credit.) You can spend hosted credits to play events.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "1[recurring-credit] （当你安装本卡牌时及你的回合开始前，将所附载的信用点补充至1个。） 你可以花费所附载的信用点以打出事件。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "2[recurring-credit] (When you install this card and before your turn begins, refill to 2 hosted credits.) You can spend hosted credits to pay trash costs.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "2[recurring-credit] （当你安装本卡牌时及你的回合开始前，将所附载的信用点补充至2个。） 你可以花费所附载的信用点以支付销毁费用。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "3[credit]: +2 strength.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "3[credit]：强度+2。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "3[credit]: +3 strength.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "3[credit]：强度+3。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "[click], [trash], suffer 1 core damage: Run a remote server.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "[click]，[trash]，受到1点核心伤害：潜袭一台远程服务器。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "[click], [trash]: Do 3 net damage.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "[click]，[trash]：造成3点网域伤害。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "[click], [trash]: Gain [click][click].",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "[click]，[trash]：获得[click][click]。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "[click], [trash]: The Runner loses 4[credit] for each hosted advancement counter.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "[click]，[trash]：每有1枚所附载的推进指示物，潜袭者失去4[credit]。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "[click]: Gain 1[credit] and draw 1 card.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "[click]：获得1[credit]并抽1张卡牌。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "[click]: Run Archives.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "[click]：潜袭档案库。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "[click]: Take 4[credit] from this resource.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "[click]：从本资源上拿取4[credit]。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "[interrupt] -> The first time each turn you would draw any number of cards, increase the number of cards you will draw by 1.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "[interrupt] -> 每回合你第一次将要抽任意数量的卡牌时，抽牌数量增加1张。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "[subroutine] Add 1 installed Runner card to the grip.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "[subroutine] 将1张已安装的潜袭者卡牌加入操控器。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "[subroutine] Do 3 net damage.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "[subroutine] 造成3点网域伤害。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "[subroutine] Resolve 1 subroutine on another rezzed bioroid ice.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "[subroutine] 结算另1层已激活的生化人防火墙上的1条子进程。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "[subroutine] Reveal the grip.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "[subroutine] 展示操控器。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "[subroutine] The Runner loses 1[credit].",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "[subroutine] 潜袭者失去1[credit]。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "[subroutine] Trash 1 installed AI program.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "[subroutine] 销毁1个已安装的智能模块程序。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "[subroutine] Trash 1 installed program or end the run.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "[subroutine] 销毁1个已安装的程序或终止本次潜袭。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "[subroutine] You may draw 1 card.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "[subroutine] 你可以抽1张卡牌。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "[subroutine] You may install 1 card from HQ or Archives.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "[subroutine] 你可以从总部或档案库安装1张卡牌。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "[trash]: Bypass the code gate you are encountering.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "[trash]：略过你当前正在遭遇的门禁。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "[trash]: End the run.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "[trash]：终止本次潜袭。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "[trash]: Remove 1 tag.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "[trash]：移除1枚锁定标记。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Access 1 of those cards.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "读取其中1张卡牌。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Add it to HQ.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "将其加入总部。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Add those cards to HQ, then end the run.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "将这些卡牌加入总部，然后终止本次潜袭。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "After it resolves, remove it from the game.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "结算后将其移出游戏。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "As an additional cost to play this event, spend [click].",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "作为打出本事件的额外费用，花费[click]。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "As an additional cost to play this event, suffer 1 core damage.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "作为打出本事件的额外费用，受到1点核心伤害。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "As an additional cost to play this event, trash 1 installed resource.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "作为打出本事件的额外费用，销毁1个已安装的资源。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "As an additional cost to play this operation, spend [click][click].",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "作为打出本事务的额外费用，花费[click][click]。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "As an additional cost to rez this ice, forfeit 1 agenda.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "作为激活本防火墙的额外费用，废除1个议案。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "As an additional cost to rez this ice, take 1 bad publicity or remove 1 tag.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "作为激活本防火墙的额外费用，拿取1枚负面声誉标记或移除1枚锁定标记。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "As an additional cost to score this agenda, trash 1 of your other installed cards.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "作为将本议案计分的额外费用，销毁另1张你已安装的卡牌。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Derez 1 installed piece of ice.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "关闭1层已安装的防火墙。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "During that run, cards in the root of the attacked server lose all abilities.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "在本次潜袭中，被攻击的服务器根目录中的卡牌失去所有能力。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Each agenda in the root of this server gets -1 advancement requirement.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "本服务器根目录中的议案的推进需求-1。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "End the run.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "终止本次潜袭。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Gain 1[credit]. The first time each turn you play a copy of Subliminal Messaging, gain [click]. When your turn begins, if this card is in Archives and the Runner did not initiate any runs during their last turn, you may reveal this card and add it to HQ.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "获得1[credit]. 每回合你第一次打出一张名称为潜意识信号的卡牌时，获得[click]。 当你的回合开始时，如果本卡牌在档案库中，且潜袭者在其上回合未发起过潜袭，你可以展示本卡牌，并将其加入总部。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Gain 2[credit] for each card you revealed this way.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "你每以此法展示1张卡牌，获得2[credit]。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Gain 3[credit].",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "获得3[credit]。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Gain 4[credit] and draw 2 cards.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "获得4[credit]并抽2张卡牌。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Gain 7[credit].",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "获得7[credit]。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Give the Runner 1 tag.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "给予潜袭者1枚锁定标记。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Host ice gains barrier, code gate, and sentry.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "被附载的防火墙获得屏障、门禁与警报。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Hosted agenda counter: Add 1 card from Archives to HQ.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "所附载的议案指示物：将1张卡牌从档案库加入总部。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Hosted agenda counter: End the run.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "所附载的议案指示物：终止本次潜袭。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Hosted agenda counter: Search R&D for 1 card and reveal it.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "所附载的议案指示物：在研发中心搜寻1张卡牌并展示之。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "If successful, access 2 additional cards when you breach R&D.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "如果成功，当你侵入研发中心时，额外读取2张卡牌。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "If successful, do X meat damage.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "如果成功，造成X点肢体伤害。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "If successful, instead of breaching Archives, you may install 1 program from your heap, ignoring all costs.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "如果成功，你可以从你的堆阵安装1个程序，忽略所有的费用，代替侵入档案库。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "If that run would be declared successful, change the attacked server to HQ for the remainder of that run.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "如果本次潜袭将要宣告为成功，在本次潜袭的剩余时间内将被攻击的服务器改为总部。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "If there are 3 or more hosted advancement counters, instead gain 4[credit].",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "如果所附载的推进指示物有3枚或更多，则改为获得4[credit]。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "If there are 3 or more hosted advancement counters, instead search R&D for up to 2 cards.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "如果所附载的推进指示物有3枚或更多，则改为在研发中心搜寻最多2张卡牌。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "If there are 3 or more hosted advancement counters, the Runner cannot break subroutines on this ice using AI programs.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "如果所附载的推进指示物有3枚或更多，潜袭者不能使用智能模块程序破解本防火墙上的子进程。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "If they do not, end the run.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "如果其未如此做，终止本次潜袭。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "If you do, the Runner cannot use paid abilities printed on bioroid ice for the remainder of this turn.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "如果你如此做，潜袭者在本回合剩余时间内不能使用生化人防火墙上印刷的付费能力。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "If you have any [click] remaining, lose [click].",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "如果你有任何剩余的[click]，失去[click]。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Install 1 resource from your grip, paying 3[credit] less.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "从你的操控器安装1个资源，其安装费用减3[credit]。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Install only faceup. (This agenda is neither rezzed nor unrezzed.) Whenever you advance this agenda, gain 2[credit]. If there are 5 or more hosted advancement counters (including the counter just placed), gain 3[credit] instead.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "本议案仅能面朝上安装。（本议案不视为已激活或未激活。） 每当你推进本议案时，获得2[credit]。如果所附载的推进指示物有5枚或更多（包括刚放上去的那1枚），则改为获得3[credit]。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Install up to 2 cards from HQ (one at a time).",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "从总部安装最多2张卡牌（每次一张）。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Interface -> [trash] or hosted power counter: Break 1 sentry subroutine.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "对接 -> [trash]或所附载的能量指示物：破解1条警报子进程。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Move up to 2 advancement counters from 1 other card to the chosen card.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "从另1张卡牌上转移最多2枚推进指示物到所选择的卡牌上。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Once per turn -> 0[credit]: Break 1 barrier subroutine.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "0[credit]：破解1条屏障子进程。本能力每回合仅限使用一次。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Once per turn -> 2 hosted advancement counters: Place 2 advancement counters on another card you can advance in the root of this server.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "每回合限一次 -> 2枚所附载的推进指示物：放置2枚推进指示物到本服务器根目录中另一张你可以推进的卡牌上。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Once per turn -> [click]: Gain 2[credit].",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "每回合限一次 -> [click]：获得2[credit]。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Place 4[credit] on this event.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "放置4[credit]到本事件上。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Place X advancement counters on 1 installed card you can advance.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "放置X枚推进指示物到1张你可以推进的已安装的卡牌上。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Play only if the Runner made a successful run during their last turn.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "只有潜袭者在其上回合进行过成功的潜袭时，才能打出。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Play only if the Runner stole an agenda during their last turn.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "只有潜袭者在其上回合窃取过议案时，才能打出。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Play only if you are not tagged.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "只有你未被锁定时，才能打出。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Play only if you made a successful run on HQ this turn.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "只有你本回合已对总部进行过成功的潜袭时，才能打出。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Reveal up to 5 cards in HQ.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "展示总部中的最多5张卡牌。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Run a server protected by ice.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "潜袭一台有防火墙保护的服务器。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Runs against this server cannot be declared successful. (This effect does not cause runs to become unsuccessful.) Limit 1 region per server.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "对本服务器的潜袭不能宣告为成功。（本效果不会导致潜袭被视为失败。） 每台服务器限制1个区域。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Search either your stack or your heap for 1 program. (Shuffle your stack after searching it.) Install that program, ignoring all costs. When your turn ends, if that program has not been uninstalled, add it to the top of your stack.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "在你的存储栈或堆阵搜寻1个程序。（如果搜寻了存储栈则将其洗混。）安装该程序，忽略所有的费用。当你的回合结束时，如果该程序仍未被卸载，将其加入你的存储栈顶端。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Starter game only.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "仅用于起始包对战。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "The Corp must set aside the top 8 cards of R&D faceup.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "公司必须将研发中心顶端8张卡牌牌面朝上置于一旁。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "The first piece of ice the Corp rezzes each turn costs 1[credit] more to rez.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "每回合公司激活的第一层防火墙的激活费用加1[credit]。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "The first time each turn you encounter a piece of ice, it gains code gate for the remainder of this run.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "每回合你第一次遭遇一层防火墙时，该防火墙在本次潜袭的剩余时间内获得门禁。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "The first time you encounter a piece of ice during that run, bypass it.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "本次潜袭中你第一次遭遇一层防火墙时，略过该防火墙。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "The rez cost of each piece of ice is increased by 1[credit].",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "每层防火墙的激活费用加1[credit]。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "The Runner cannot break subroutines on this ice using AI programs.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "潜袭者不能使用智能模块程序破解本防火墙上的子进程。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "The Runner may jack out.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "潜袭者可以退出潜袭。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "The strength of this ice cannot be lowered.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "本防火墙的强度不能被降低。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Then, the Corp shuffles the set-aside cards into R&D.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "然后，公司将置于一旁的卡牌洗入研发中心。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Then, you may pay 1[credit] to add this event to your grip.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "然后你可以支付1[credit]，以将本事件加入你的操控器。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "This agenda is worth 1 more agenda point for each hosted agenda counter.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "每有1枚所附载的议案指示物，本议案的价值增加1点议案分数。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "This program gets +1 strength for each hosted power counter, and it can only interface with ice of exactly equal strength.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "每有1枚所附载的能量指示物，本程序的强度+1，且本程序只能与强度与其相等的防火墙对接。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Trace[5].",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "追踪 5。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Trash this ice.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "销毁本防火墙。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Use this ability only during a run against another server.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "本能力仅能在对另一台服务器的潜袭中使用。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Use this ability only during a run on this server.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "本能力仅能在对本服务器的潜袭中使用。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Use this ability only during your turn.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "本能力仅能在你的回合中使用。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Use this ability only if there are 4 or more hosted advancement counters.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "只有所附载的推进指示物有4枚或更多时，才能使用本能力。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Use this ability only if this program was installed this turn.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "本能力仅能在安装本程序的回合使用。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When that run ends, if it was successful, gain 5[credit].",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当本次潜袭结束时，如果潜袭成功，获得5[credit]。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When that run is successful, trash all cards in the root of the attacked server.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当本次潜袭成功时，销毁被攻击的服务器根目录中的所有卡牌。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When the Corp purges virus counters, trash this program.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当公司清除病毒指示物时，销毁本程序。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When the Runner accesses this asset anywhere except in Archives, you may pay 4[credit].",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当潜袭者从档案库以外其他区域读取本资产时，你可以支付4[credit]。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When the Runner encounters this ice, gain 1[credit].",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当潜袭者遭遇本防火墙时，你获得1[credit]。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When the Runner encounters this ice, they must pay 3[credit], if able.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当潜袭者遭遇本防火墙时，如可能，其必须支付3[credit]。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When you draw those cards, add 1 of them to the bottom of R&D.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当你抽这些卡牌时，将其中1张加入研发中心底端。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When you install this hardware, load 3 power counters onto it.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当你安装本硬件时，填装3枚能量指示物到本硬件上。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When you install this hardware, suffer 1 core damage.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当你安装本硬件时，受到1点核心伤害。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When you install this hardware, suffer 1 meat damage.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当你安装本硬件时，受到1点肢体伤害。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When you install this program, choose 1 installed piece of ice.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当你安装本程序时，选择1层已安装的防火墙。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When you install this program, place 2 power counters on it.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当你安装本程序时，放置2枚能量指示物到本程序上。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When you install this program, place 2 virus counters on it. Access, once per turn -> Hosted virus counter: Trash the card you are accessing.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当你安装本程序时，放置2枚病毒指示物到本程序上。 读取 -> 所附载的病毒指示物：销毁你正在读取的卡牌。本能力每回合仅限使用一次。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When you install this program, place 6 power counters on it.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当你安装本程序时，放置6枚能量指示物到本程序上。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When you install this program, you may spend any number of credits to place that many power counters on it.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当你安装本程序时，你可以支付X[credit]，以放置X枚能量指示物到本程序上。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When you install this resource, load 16[credit] onto it.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当你安装本资源时，填装16[credit]到本资源上。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When you install this resource, load 3 power counters onto it.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当你安装本资源时，填装3枚能量指示物到本资源上。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When you rez this ice during a run against this server, you may derez another installed card.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "在对本服务器的潜袭中，当你激活本防火墙时，你可以关闭另一张已安装的卡牌。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When you rez this ice during a run against this server, you may have the Runner gain 2[credit].",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "在对本服务器的潜袭中，当你激活本防火墙时，你可以令潜袭者获得2[credit]。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When you rez this ice during a run against this server, you may trash 1 card from HQ to do 2 net damage.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "在对本服务器的潜袭中，当你激活本防火墙时，你可以从总部销毁1张卡牌，以造成2点网域伤害。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When you score this agenda, do 2 meat damage.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当你将本议案计分时，造成2点肢体伤害。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When you score this agenda, gain 7[credit] and take 1 bad publicity.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当你将本议案计分时，获得7[credit]并拿取1枚负面声誉标记。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When you score this agenda, if there is another copy of Megaprix Qualifier in either playerʼs score area, place 1 agenda counter on this agenda.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当你计分本议案时，如果任一玩家的分数区内有另一张名称为极大奖资格赛的卡牌，放置1枚议案指示物到本议案上。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When you score this agenda, place 1 agenda counter on it for every 2 hosted advancement counters past 3.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当你将本议案计分时，如果所附载的推进指示物超过3枚，每超过2枚，放置1枚议案指示物到本议案上。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When you score this agenda, place 3 agenda counters on it.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当你将本议案计分时，放置3枚议案指示物到本议案上。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When your turn begins and whenever you steal an agenda, place 1[credit] on this resource.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当你的回合开始或你窃取一个议案时，放置1[credit]到本资源上。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When your turn begins, place 1 advancement counter on a card in the root of this server.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当你的回合开始时，放置1枚推进指示物到本服务器内的1张卡牌上。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When your turn begins, place 1 advancement counter on a piece of ice protecting this server.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当你的回合开始时，放置1枚推进指示物到1层保护本服务器的防火墙上。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When your turn begins, remove 1 hosted power counter and draw 2 cards.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当你的回合开始时，移除1枚所附载的能量指示物并抽2张卡牌。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "When your turn ends, if there are 3 or more hosted credits, you must trash 1 card from your grip at random or trash this resource.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "当你的回合结束时，如果所附载的信用点有3个或更多，你必须从你的操控器中随机销毁1张卡牌或者销毁本资源。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Whenever an agenda is scored or stolen, do 1 net damage.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "每当一个议案被计分或窃取时，造成1点网域伤害。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Whenever the Runner approaches this server, end the run unless they pay 2[credit] for each advanced piece of ice protecting this server.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "每当潜袭者接驳本服务器时，终止本次潜袭，除非潜袭者支付等同于保护本服务器的已推进的防火墙二倍数量的信用点。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Whenever the Runner makes a successful run on this server, do 1 net damage.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "每当潜袭者对本服务器进行一次成功的潜袭时，造成1点网域伤害。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Whenever you encounter the chosen ice, you may pay 1[credit] for each subroutine it has.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "每当你遭遇所选择的防火墙时，你可以支付与该防火墙上子进程数量相等的[credit]。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Whenever you play a transaction operation, gain 1[credit].",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "每当你打出一个交易事务时，获得1[credit]。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "While the Runner is accessing this upgrade in R&D, they must reveal it.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "在潜袭者从研发中心读取本升级的期间，其必须展示之。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "While there are no installed fracter programs, this ice gets +7 strength.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "只要没有已安装的分解模块程序，本防火墙的强度便+7。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "While this agenda has a hosted agenda counter, it is worth 1 more agenda point.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "只要本议案上有所附载的议案指示物，其价值便增加1点议案分数。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "While you are encountering a piece of ice, it gets -1 strength.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "在你遭遇一层防火墙的期间，该防火墙的强度-1。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "X is equal to the sum of the printed agenda points on all agendas the Runner stole during their last turn.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "X等于潜袭者在其上回合所窃取的所有议案的印刷议案分数总和。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "X must be equal to or less than the number of tags the Runner has.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "X必须等于或少于潜袭者所具有的锁定标记数量。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "You can advance this upgrade.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "你可以推进本升级。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "You can spend hosted credits during that run.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "你可以在本次潜袭中花费所附载的信用点。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "You can spend hosted credits to play events.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "你可以花费所附载的信用点以打出事件。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "You may draw 1 card.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "你可以抽1张卡牌。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "You may install 1 card from HQ.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "你可以从总部安装1张卡牌。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "You may spend [click] to access another 1 of those cards.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "你可以花费[click]，以读取其中另1张卡牌。",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "en": "Your deck cannot include more than 1 copy of any card.",
-      "count": 2,
-      "translations": [
-        {
-          "zh": "你的牌组中每种同名卡牌限1张。",
-          "count": 2
-        }
-      ]
-    }
-  ]
-}
+  {
+    "en": "card",
+    "translation": "卡牌"
+  },
+  {
+    "en": "ice",
+    "translation": "防火墙"
+  },
+  {
+    "en": "Runner",
+    "translation": "潜袭者"
+  },
+  {
+    "en": "install",
+    "translation": "安装"
+  },
+  {
+    "en": "trash",
+    "translation": "销毁"
+  },
+  {
+    "en": "gain",
+    "translation": "获得"
+  },
+  {
+    "en": "agenda",
+    "translation": "议案"
+  },
+  {
+    "en": "hosted",
+    "translation": "所附载的"
+  },
+  {
+    "en": "HQ",
+    "translation": "总部"
+  },
+  {
+    "en": "installed",
+    "translation": "已安装的"
+  },
+  {
+    "en": "server",
+    "translation": "服务器"
+  },
+  {
+    "en": "place",
+    "translation": "放置"
+  },
+  {
+    "en": "program",
+    "translation": "程序"
+  },
+  {
+    "en": "R&D",
+    "translation": "研发中心"
+  },
+  {
+    "en": "piece of ice",
+    "translation": "一层防火墙"
+  },
+  {
+    "en": "this ice",
+    "translation": "本防火墙"
+  },
+  {
+    "en": "draw",
+    "translation": "抽"
+  },
+  {
+    "en": "break",
+    "translation": "破解"
+  },
+  {
+    "en": "play",
+    "translation": "打出"
+  },
+  {
+    "en": "add",
+    "translation": "加入"
+  },
+  {
+    "en": "remove",
+    "translation": "移除"
+  },
+  {
+    "en": "score",
+    "translation": "计分"
+  },
+  {
+    "en": "rez",
+    "translation": "激活"
+  },
+  {
+    "en": "cost",
+    "translation": "费用"
+  },
+  {
+    "en": "subroutine",
+    "translation": "子进程"
+  },
+  {
+    "en": "this agenda",
+    "translation": "本议案"
+  },
+  {
+    "en": "ability",
+    "translation": "能力"
+  },
+  {
+    "en": "this ability",
+    "translation": "本能力"
+  },
+  {
+    "en": "Archives",
+    "translation": "档案库"
+  },
+  {
+    "en": "this server",
+    "translation": "本服务器"
+  },
+  {
+    "en": "tag",
+    "translation": "锁定标记"
+  },
+  {
+    "en": "spend",
+    "translation": "花费"
+  },
+  {
+    "en": "Corp",
+    "translation": "公司"
+  },
+  {
+    "en": "resource",
+    "translation": "资源"
+  },
+  {
+    "en": "grip",
+    "translation": "操控器"
+  },
+  {
+    "en": "reveal",
+    "translation": "展示"
+  },
+  {
+    "en": "successful run",
+    "translation": "成功的潜袭"
+  },
+  {
+    "en": "this program",
+    "translation": "本程序"
+  },
+  {
+    "en": "power counter",
+    "translation": "能量指示物"
+  },
+  {
+    "en": "hardware",
+    "translation": "硬件"
+  },
+  {
+    "en": "net damage",
+    "translation": "网域伤害"
+  },
+  {
+    "en": "asset",
+    "translation": "资产"
+  },
+  {
+    "en": "pay",
+    "translation": "支付"
+  },
+  {
+    "en": "additional cost",
+    "translation": "额外费用"
+  },
+  {
+    "en": "this asset",
+    "translation": "本资产"
+  },
+  {
+    "en": "advancement counter",
+    "translation": "推进指示物"
+  },
+  {
+    "en": "advance",
+    "translation": "推进"
+  },
+  {
+    "en": "shuffle",
+    "translation": "洗混"
+  },
+  {
+    "en": "encounter",
+    "translation": "遭遇"
+  },
+  {
+    "en": "operation",
+    "translation": "事务"
+  },
+  {
+    "en": "stack",
+    "translation": "存储栈"
+  },
+  {
+    "en": "this resource",
+    "translation": "本资源"
+  },
+  {
+    "en": "access",
+    "translation": "读取"
+  },
+  {
+    "en": "hosted power counter",
+    "translation": "所附载的能量指示物"
+  },
+  {
+    "en": "choose",
+    "translation": "选择"
+  },
+  {
+    "en": "event",
+    "translation": "事件"
+  },
+  {
+    "en": "root",
+    "translation": "根目录"
+  },
+  {
+    "en": "search",
+    "translation": "搜寻"
+  },
+  {
+    "en": "installed card",
+    "translation": "已安装的卡牌"
+  },
+  {
+    "en": "hosted credits",
+    "translation": "所附载的信用点"
+  },
+  {
+    "en": "agenda counter",
+    "translation": "议案指示物"
+  },
+  {
+    "en": "breach",
+    "translation": "侵入"
+  },
+  {
+    "en": "hosted agenda counter",
+    "translation": "所附载的议案指示物"
+  },
+  {
+    "en": "upgrade",
+    "translation": "升级"
+  },
+  {
+    "en": "barrier",
+    "translation": "屏障"
+  },
+  {
+    "en": "code gate",
+    "translation": "门禁"
+  },
+  {
+    "en": "core damage",
+    "translation": "核心伤害"
+  },
+  {
+    "en": "load",
+    "translation": "填装"
+  },
+  {
+    "en": "faceup",
+    "translation": "牌面朝上"
+  },
+  {
+    "en": "lose",
+    "translation": "失去"
+  },
+  {
+    "en": "sentry",
+    "translation": "警报"
+  },
+  {
+    "en": "installed program",
+    "translation": "已安装的程序"
+  },
+  {
+    "en": "remote server",
+    "translation": "远程服务器"
+  },
+  {
+    "en": "console",
+    "translation": "控制台"
+  },
+  {
+    "en": "bad publicity",
+    "translation": "负面声誉标记"
+  },
+  {
+    "en": "heap",
+    "translation": "堆阵"
+  },
+  {
+    "en": "hosted advancement counter",
+    "translation": "所附载的推进指示物"
+  },
+  {
+    "en": "derez",
+    "translation": "关闭"
+  },
+  {
+    "en": "region",
+    "translation": "区域"
+  },
+  {
+    "en": "bypass",
+    "translation": "略过"
+  },
+  {
+    "en": "meat damage",
+    "translation": "肢体伤害"
+  },
+  {
+    "en": "steal",
+    "translation": "窃取"
+  },
+  {
+    "en": "central server",
+    "translation": "中央服务器"
+  },
+  {
+    "en": "virus counter",
+    "translation": "病毒指示物"
+  },
+  {
+    "en": "rez cost",
+    "translation": "激活费用"
+  },
+  {
+    "en": "host ice",
+    "translation": "被附载的防火墙"
+  },
+  {
+    "en": "identity",
+    "translation": "特性"
+  },
+  {
+    "en": "installed Runner card",
+    "translation": "已安装的潜袭者卡牌"
+  },
+  {
+    "en": "hosted virus counter",
+    "translation": "所附载的病毒指示物"
+  },
+  {
+    "en": "install cost",
+    "translation": "安装费用"
+  },
+  {
+    "en": "agenda point",
+    "translation": "议案分数"
+  },
+  {
+    "en": "uninstalled",
+    "translation": "已卸载"
+  },
+  {
+    "en": "mark",
+    "translation": "目标"
+  },
+  {
+    "en": "prevent",
+    "translation": "防止"
+  },
+  {
+    "en": "stealth cards",
+    "translation": "隐匿卡牌"
+  },
+  {
+    "en": "trace",
+    "translation": "追踪"
+  },
+  {
+    "en": "hosted card",
+    "translation": "所附载的卡牌"
+  },
+  {
+    "en": "the chosen ice",
+    "translation": "所选择的防火墙"
+  },
+  {
+    "en": "transaction operation",
+    "translation": "交易事务"
+  },
+  {
+    "en": "AI program",
+    "translation": "智能模块程序"
+  },
+  {
+    "en": "trash cost",
+    "translation": "销毁费用"
+  },
+  {
+    "en": "virtual resources",
+    "translation": "虚拟资源"
+  },
+  {
+    "en": "you may",
+    "translation": "你可以"
+  },
+  {
+    "en": "whenever",
+    "translation": "每当"
+  },
+  {
+    "en": "end the run",
+    "translation": "终止本次潜袭"
+  },
+  {
+    "en": "when your turn begins",
+    "translation": "当你的回合开始时"
+  },
+  {
+    "en": "the first time each turn",
+    "translation": "每回合第一次"
+  },
+  {
+    "en": "you can",
+    "translation": "你可以"
+  },
+  {
+    "en": "when you score this agenda",
+    "translation": "当你将本议案计分时"
+  },
+  {
+    "en": "up to",
+    "translation": "最多"
+  },
+  {
+    "en": "if you do",
+    "translation": "如果你如此做"
+  },
+  {
+    "en": "once per turn",
+    "translation": "每回合限一次"
+  },
+  {
+    "en": "during a run",
+    "translation": "在潜袭中"
+  },
+  {
+    "en": "if successful",
+    "translation": "如果成功"
+  },
+  {
+    "en": "play only if",
+    "translation": "只有……时，才能打出"
+  },
+  {
+    "en": "instead",
+    "translation": "改为"
+  },
+  {
+    "en": "when you install this program",
+    "translation": "当你安装本程序时"
+  },
+  {
+    "en": "do 1 net damage",
+    "translation": "造成1点网域伤害"
+  },
+  {
+    "en": "ignoring all costs",
+    "translation": "忽略所有的费用"
+  },
+  {
+    "en": "when it is empty",
+    "translation": "当其清空时"
+  },
+  {
+    "en": "limit 1 console per player",
+    "translation": "每位玩家限制1个控制台"
+  },
+  {
+    "en": "during that run",
+    "translation": "在本次潜袭中"
+  },
+  {
+    "en": "when you rez this ice",
+    "translation": "当你激活本防火墙时"
+  },
+  {
+    "en": "limit 1 region per server",
+    "translation": "每台服务器限制1个区域"
+  },
+  {
+    "en": "when the Runner encounters this ice",
+    "translation": "当潜袭者遭遇本防火墙时"
+  },
+  {
+    "en": "as an additional cost to play this operation",
+    "translation": "作为打出本事务的额外费用"
+  },
+  {
+    "en": "instead of",
+    "translation": "代替"
+  },
+  {
+    "en": "when you install this resource",
+    "translation": "当你安装本资源时"
+  },
+  {
+    "en": "do 2 net damage",
+    "translation": "造成2点网域伤害"
+  },
+  {
+    "en": "when you install this hardware",
+    "translation": "当你安装本硬件时"
+  },
+  {
+    "en": "when your turn ends",
+    "translation": "当你的回合结束时"
+  },
+  {
+    "en": "break 1 code gate subroutine",
+    "translation": "破解1条门禁子进程"
+  },
+  {
+    "en": "for the remainder of this run",
+    "translation": "在本次潜袭的剩余时间内"
+  },
+  {
+    "en": "break 1 barrier subroutine",
+    "translation": "破解1条屏障子进程"
+  },
+  {
+    "en": "install only on a piece of ice",
+    "translation": "仅能安装在一层防火墙上"
+  },
+  {
+    "en": "break 1 sentry subroutine",
+    "translation": "破解1条警报子进程"
+  },
+  {
+    "en": "do 1 core damage",
+    "translation": "造成1点核心伤害"
+  },
+  {
+    "en": "only the Runner can use this ability",
+    "translation": "只有潜袭者可以使用本能力"
+  },
+  {
+    "en": "use this ability only if",
+    "translation": "仅能在……时使用本能力"
+  },
+  {
+    "en": "when you rez this asset",
+    "translation": "当你激活本资产时"
+  },
+  {
+    "en": "as an additional cost to play this event",
+    "translation": "作为打出本事件的额外费用"
+  },
+  {
+    "en": "when the Runner accesses this asset",
+    "translation": "当潜袭者读取本资产时"
+  },
+  {
+    "en": "for the remainder of the turn",
+    "translation": "在本回合剩余时间内"
+  },
+  {
+    "en": "access 2 additional cards",
+    "translation": "额外读取2张卡牌"
+  },
+  {
+    "en": "for the remainder of this encounter",
+    "translation": "在本次遭遇的剩余时间内"
+  },
+  {
+    "en": "remote server only",
+    "translation": "仅能安装在远程服务器"
+  },
+  {
+    "en": "spend credits only from stealth cards to use this ability",
+    "translation": "本能力仅能花费隐匿卡牌上的信用点来使用"
+  },
+  {
+    "en": "you must",
+    "translation": "你必须"
+  },
+  {
+    "en": "[subroutine] End the run.",
+    "translation": "[subroutine] 终止本次潜袭。"
+  },
+  {
+    "en": "When it is empty, trash it.",
+    "translation": "当其清空时，销毁之。"
+  },
+  {
+    "en": "Limit 1 console per player.",
+    "translation": "每位玩家限制1个控制台。"
+  },
+  {
+    "en": "Limit 1 region per server.",
+    "translation": "每台服务器限制1个区域。"
+  },
+  {
+    "en": "[subroutine] Do 1 net damage.",
+    "translation": "[subroutine] 造成1点网域伤害。"
+  },
+  {
+    "en": "Run any server.",
+    "translation": "潜袭任意一台服务器。"
+  },
+  {
+    "en": "[subroutine] Trash 1 installed program.",
+    "translation": "[subroutine] 销毁1个已安装的程序。"
+  },
+  {
+    "en": "Interface -> 1[credit]: Break 1 code gate subroutine.",
+    "translation": "对接 -> 1[credit]：破解1条门禁子进程。"
+  },
+  {
+    "en": "1[credit]: +1 strength.",
+    "translation": "1[credit]：强度+1。"
+  },
+  {
+    "en": "Only the Runner can use this ability.",
+    "translation": "只有潜袭者可以使用本能力。"
+  },
+  {
+    "en": "You can advance this asset.",
+    "translation": "你可以推进本资产。"
+  },
+  {
+    "en": "You can advance this ice.",
+    "translation": "你可以推进本防火墙。"
+  },
+  {
+    "en": "[subroutine] Give the Runner 1 tag.",
+    "translation": "[subroutine] 给予潜袭者1枚锁定标记。"
+  },
+  {
+    "en": "As an additional cost to play this operation, spend [click].",
+    "translation": "作为打出本事务的额外费用，花费[click]。"
+  },
+  {
+    "en": "Install only on a piece of ice.",
+    "translation": "仅能安装在一层防火墙上。"
+  },
+  {
+    "en": "[subroutine] Gain 1[credit].",
+    "translation": "[subroutine] 获得1[credit]。"
+  },
+  {
+    "en": "Interface -> 1[credit]: Break 1 barrier subroutine.",
+    "translation": "对接 -> 1[credit]：破解1条屏障子进程。"
+  },
+  {
+    "en": "Interface -> 1[credit]: Break 1 sentry subroutine.",
+    "translation": "对接 -> 1[credit]：破解1条警报子进程。"
+  },
+  {
+    "en": "Lose [click]: Break 1 subroutine on this ice.",
+    "translation": "失去[click]：破解1条本防火墙上的子进程。"
+  },
+  {
+    "en": "[subroutine] Do 2 net damage.",
+    "translation": "[subroutine] 造成2点网域伤害。"
+  },
+  {
+    "en": "[subroutine] Gain 2[credit].",
+    "translation": "[subroutine] 获得2[credit]。"
+  },
+  {
+    "en": "Run R&D.",
+    "translation": "潜袭研发中心。"
+  },
+  {
+    "en": "2[credit]: +2 strength.",
+    "translation": "2[credit]：强度+2。"
+  },
+  {
+    "en": "Run HQ.",
+    "translation": "潜袭总部。"
+  },
+  {
+    "en": "While the Runner is accessing this asset in R&D, they must reveal it.",
+    "translation": "在潜袭者从研发中心读取本资产的期间，其必须展示之。"
+  },
+  {
+    "en": "[subroutine] End the run unless the Runner pays 3[credit].",
+    "translation": "[subroutine] 终止本次潜袭，除非潜袭者支付3[credit]。"
+  },
+  {
+    "en": "[subroutine] The Runner loses [click].",
+    "translation": "[subroutine] 潜袭者失去[click]。"
+  },
+  {
+    "en": "It gets +1 strength for each hosted advancement counter.",
+    "translation": "每有1枚所附载的推进指示物，本防火墙的强度+1。"
+  },
+  {
+    "en": "Run Archives.",
+    "translation": "潜袭档案库。"
+  },
+  {
+    "en": "Spend credits only from stealth cards to use this ability.",
+    "translation": "本能力仅能花费隐匿卡牌上的信用点来使用。"
+  },
+  {
+    "en": "When you score this agenda, place 1 agenda counter on it for each hosted advancement counter past 3.",
+    "translation": "当你将本议案计分时，如果所附载的推进指示物超过3枚，每超过1枚，放置1枚议案指示物到本议案上。"
+  },
+  {
+    "en": "When you score this agenda, place 1 agenda counter on it.",
+    "translation": "当你将本议案计分时，放置1枚议案指示物到本议案上。"
+  },
+  {
+    "en": "When your turn begins, gain 1[credit].",
+    "translation": "当你的回合开始时，获得1[credit]。"
+  },
+  {
+    "en": "[subroutine] Do 1 core damage.",
+    "translation": "[subroutine] 造成1点核心伤害。"
+  },
+  {
+    "en": "[subroutine] The Runner loses 2[credit].",
+    "translation": "[subroutine] 潜袭者失去2[credit]。"
+  },
+  {
+    "en": "[subroutine] The Runner loses 3[credit].",
+    "translation": "[subroutine] 潜袭者失去3[credit]。"
+  },
+  {
+    "en": "[subroutine] Trash 1 installed Runner card.",
+    "translation": "[subroutine] 销毁1张已安装的潜袭者卡牌。"
+  },
+  {
+    "en": "Draw 3 cards.",
+    "translation": "抽3张卡牌。"
+  },
+  {
+    "en": "Gain 5[credit].",
+    "translation": "获得5[credit]。"
+  },
+  {
+    "en": "Gain 9[credit].",
+    "translation": "获得9[credit]。"
+  },
+  {
+    "en": "Limit 1 per deck.",
+    "translation": "每套牌组限制1张。"
+  },
+  {
+    "en": "Play only if there is no active lockdown.",
+    "translation": "只有当前没有正在生效的封锁时，才能打出。"
+  },
+  {
+    "en": "Remote server only.",
+    "translation": "仅能安装在远程服务器。"
+  },
+  {
+    "en": "Remove this event from the game.",
+    "translation": "将本事件移出游戏。"
+  },
+  {
+    "en": "Remove this operation from the game.",
+    "translation": "将本事务移出游戏。"
+  },
+  {
+    "en": "This operation is not trashed until your next turn begins.",
+    "translation": "直到你的下回合开始前，本事务不会被销毁。"
+  },
+  {
+    "en": "Use this ability only during a run.",
+    "translation": "本能力仅能在潜袭中使用。"
+  },
+  {
+    "en": "You can spend hosted credits during runs.",
+    "translation": "你可以在潜袭中花费所附载的信用点。"
+  },
+  {
+    "en": "You may trash that card.",
+    "translation": "你可以销毁该卡牌。"
+  },
+  {
+    "en": "2[credit]: +1 strength.",
+    "translation": "2[credit]：强度+1。"
+  },
+  {
+    "en": "2[credit]: +3 strength.",
+    "translation": "2[credit]：强度+3。"
+  },
+  {
+    "en": "[subroutine] End the run unless the Runner pays 1[credit].",
+    "translation": "[subroutine] 终止本次潜袭，除非潜袭者支付1[credit]。"
+  },
+  {
+    "en": "Add 1 card from Archives to HQ.",
+    "translation": "将1张卡牌从档案库加入总部。"
+  },
+  {
+    "en": "After you resolve this operation, your action phase ends.",
+    "translation": "在你结算本事务后，结束你的行动阶段。"
+  },
+  {
+    "en": "As an additional cost to play this operation, remove 1 tag.",
+    "translation": "作为打出本事务的额外费用，移除1枚锁定标记。"
+  },
+  {
+    "en": "Choose 1 installed card you can advance.",
+    "translation": "选择1张你可以推进的已安装的卡牌。"
+  },
+  {
+    "en": "Draw 2 cards.",
+    "translation": "抽2张卡牌。"
+  },
+  {
+    "en": "Gain [click][click].",
+    "translation": "获得[click][click]。"
+  },
+  {
+    "en": "If successful, access 2 additional cards when you breach HQ.",
+    "translation": "如果成功，当你侵入总部时，额外读取2张卡牌。"
+  },
+  {
+    "en": "If you do, add 1 card from Archives to HQ.",
+    "translation": "如果你如此做，将1张卡牌从档案库加入总部。"
+  },
+  {
+    "en": "If you do, bypass that ice.",
+    "translation": "如果你如此做，略过该防火墙。"
+  },
+  {
+    "en": "If you do, gain 3[credit].",
+    "translation": "如果你如此做，获得3[credit]。"
+  },
+  {
+    "en": "If you do, give the Runner 1 tag and do 3 net damage.",
+    "translation": "如果你如此做，给予潜袭者1枚锁定标记并造成3点网域伤害。"
+  },
+  {
+    "en": "Interface -> 1[credit]: Break 1 subroutine.",
+    "translation": "对接 -> 1[credit]：破解1条子进程。"
+  },
+  {
+    "en": "Play only if the Runner is tagged.",
+    "translation": "只有潜袭者被锁定时，才能打出。"
+  },
+  {
+    "en": "Play only if you made a successful run on HQ, R&D, and Archives this turn.",
+    "translation": "只有你本回合对总部、研发中心与档案库均进行过成功的潜袭时，才能打出。"
+  },
+  {
+    "en": "Remove 1 tag.",
+    "translation": "移除1枚锁定标记。"
+  },
+  {
+    "en": "Run HQ or R&D.",
+    "translation": "潜袭总部或研发中心。"
+  },
+  {
+    "en": "When the Runner’s discard phase ends, flip this identity.",
+    "translation": "当潜袭者的弃牌阶段结束时，将本特性翻面。"
+  },
+  {
+    "en": "When you install this program, place 2 virus counters on it.",
+    "translation": "当你安装本程序时，放置2枚病毒指示物到本程序上。"
+  },
+  {
+    "en": "When your turn begins, take 1[credit] from this resource.",
+    "translation": "当你的回合开始时，从本资源上拿取1[credit]。"
+  },
+  {
+    "en": "When your turn begins, you may trash 1 of your other installed cards.",
+    "translation": "当你的回合开始时，你可以销毁另1张你已安装的卡牌。"
+  },
+  {
+    "en": "+1[link] Whenever you install a non-AI icebreaker, that icebreaker gets +2 strength for the remainder of the turn.",
+    "translation": "+1[link] 每当你安装一个非智能模块的破解器时，该破解器在本回合剩余时间内强度+2。"
+  },
+  {
+    "en": "+1[mu] The first time each turn you play a run event, gain [click].",
+    "translation": "+1[mu] 每回合你第一次打出一个潜袭事件时，获得[click]。"
+  },
+  {
+    "en": "1[credit]: +1 strength for the remainder of this run.",
+    "translation": "1[credit]：本次潜袭的剩余时间内强度+1。"
+  },
+  {
+    "en": "1[credit]: +2 strength.",
+    "translation": "1[credit]：强度+2。"
+  },
+  {
+    "en": "1[recurring-credit] (When you install this card and before your turn begins, refill to 1 hosted credit.) You can spend hosted credits to play events.",
+    "translation": "1[recurring-credit] （当你安装本卡牌时及你的回合开始前，将所附载的信用点补充至1个。） 你可以花费所附载的信用点以打出事件。"
+  },
+  {
+    "en": "2[recurring-credit] (When you install this card and before your turn begins, refill to 2 hosted credits.) You can spend hosted credits to pay trash costs.",
+    "translation": "2[recurring-credit] （当你安装本卡牌时及你的回合开始前，将所附载的信用点补充至2个。） 你可以花费所附载的信用点以支付销毁费用。"
+  },
+  {
+    "en": "3[credit]: +2 strength.",
+    "translation": "3[credit]：强度+2。"
+  },
+  {
+    "en": "3[credit]: +3 strength.",
+    "translation": "3[credit]：强度+3。"
+  },
+  {
+    "en": "[click], [trash], suffer 1 core damage: Run a remote server.",
+    "translation": "[click]，[trash]，受到1点核心伤害：潜袭一台远程服务器。"
+  },
+  {
+    "en": "[click], [trash]: Do 3 net damage.",
+    "translation": "[click]，[trash]：造成3点网域伤害。"
+  },
+  {
+    "en": "[click], [trash]: Gain [click][click].",
+    "translation": "[click]，[trash]：获得[click][click]。"
+  },
+  {
+    "en": "[click], [trash]: The Runner loses 4[credit] for each hosted advancement counter.",
+    "translation": "[click]，[trash]：每有1枚所附载的推进指示物，潜袭者失去4[credit]。"
+  },
+  {
+    "en": "[click]: Gain 1[credit] and draw 1 card.",
+    "translation": "[click]：获得1[credit]并抽1张卡牌。"
+  },
+  {
+    "en": "[click]: Run Archives.",
+    "translation": "[click]：潜袭档案库。"
+  },
+  {
+    "en": "[click]: Take 4[credit] from this resource.",
+    "translation": "[click]：从本资源上拿取4[credit]。"
+  },
+  {
+    "en": "[interrupt] -> The first time each turn you would draw any number of cards, increase the number of cards you will draw by 1.",
+    "translation": "[interrupt] -> 每回合你第一次将要抽任意数量的卡牌时，抽牌数量增加1张。"
+  },
+  {
+    "en": "[subroutine] Add 1 installed Runner card to the grip.",
+    "translation": "[subroutine] 将1张已安装的潜袭者卡牌加入操控器。"
+  },
+  {
+    "en": "[subroutine] Do 3 net damage.",
+    "translation": "[subroutine] 造成3点网域伤害。"
+  },
+  {
+    "en": "[subroutine] Resolve 1 subroutine on another rezzed bioroid ice.",
+    "translation": "[subroutine] 结算另1层已激活的生化人防火墙上的1条子进程。"
+  },
+  {
+    "en": "[subroutine] Reveal the grip.",
+    "translation": "[subroutine] 展示操控器。"
+  },
+  {
+    "en": "[subroutine] The Runner loses 1[credit].",
+    "translation": "[subroutine] 潜袭者失去1[credit]。"
+  },
+  {
+    "en": "[subroutine] Trash 1 installed AI program.",
+    "translation": "[subroutine] 销毁1个已安装的智能模块程序。"
+  },
+  {
+    "en": "[subroutine] Trash 1 installed program or end the run.",
+    "translation": "[subroutine] 销毁1个已安装的程序或终止本次潜袭。"
+  },
+  {
+    "en": "[subroutine] You may draw 1 card.",
+    "translation": "[subroutine] 你可以抽1张卡牌。"
+  },
+  {
+    "en": "[subroutine] You may install 1 card from HQ or Archives.",
+    "translation": "[subroutine] 你可以从总部或档案库安装1张卡牌。"
+  },
+  {
+    "en": "[trash]: Bypass the code gate you are encountering.",
+    "translation": "[trash]：略过你当前正在遭遇的门禁。"
+  },
+  {
+    "en": "[trash]: End the run.",
+    "translation": "[trash]：终止本次潜袭。"
+  },
+  {
+    "en": "[trash]: Remove 1 tag.",
+    "translation": "[trash]：移除1枚锁定标记。"
+  },
+  {
+    "en": "Access 1 of those cards.",
+    "translation": "读取其中1张卡牌。"
+  },
+  {
+    "en": "Add it to HQ.",
+    "translation": "将其加入总部。"
+  },
+  {
+    "en": "Add those cards to HQ, then end the run.",
+    "translation": "将这些卡牌加入总部，然后终止本次潜袭。"
+  },
+  {
+    "en": "After it resolves, remove it from the game.",
+    "translation": "结算后将其移出游戏。"
+  },
+  {
+    "en": "As an additional cost to play this event, spend [click].",
+    "translation": "作为打出本事件的额外费用，花费[click]。"
+  },
+  {
+    "en": "As an additional cost to play this event, suffer 1 core damage.",
+    "translation": "作为打出本事件的额外费用，受到1点核心伤害。"
+  },
+  {
+    "en": "As an additional cost to play this event, trash 1 installed resource.",
+    "translation": "作为打出本事件的额外费用，销毁1个已安装的资源。"
+  },
+  {
+    "en": "As an additional cost to play this operation, spend [click][click].",
+    "translation": "作为打出本事务的额外费用，花费[click][click]。"
+  },
+  {
+    "en": "As an additional cost to rez this ice, forfeit 1 agenda.",
+    "translation": "作为激活本防火墙的额外费用，废除1个议案。"
+  },
+  {
+    "en": "As an additional cost to rez this ice, take 1 bad publicity or remove 1 tag.",
+    "translation": "作为激活本防火墙的额外费用，拿取1枚负面声誉标记或移除1枚锁定标记。"
+  },
+  {
+    "en": "As an additional cost to score this agenda, trash 1 of your other installed cards.",
+    "translation": "作为将本议案计分的额外费用，销毁另1张你已安装的卡牌。"
+  },
+  {
+    "en": "Derez 1 installed piece of ice.",
+    "translation": "关闭1层已安装的防火墙。"
+  },
+  {
+    "en": "During that run, cards in the root of the attacked server lose all abilities.",
+    "translation": "在本次潜袭中，被攻击的服务器根目录中的卡牌失去所有能力。"
+  },
+  {
+    "en": "Each agenda in the root of this server gets -1 advancement requirement.",
+    "translation": "本服务器根目录中的议案的推进需求-1。"
+  },
+  {
+    "en": "End the run.",
+    "translation": "终止本次潜袭。"
+  },
+  {
+    "en": "Gain 1[credit]. The first time each turn you play a copy of Subliminal Messaging, gain [click]. When your turn begins, if this card is in Archives and the Runner did not initiate any runs during their last turn, you may reveal this card and add it to HQ.",
+    "translation": "获得1[credit]. 每回合你第一次打出一张名称为潜意识信号的卡牌时，获得[click]。 当你的回合开始时，如果本卡牌在档案库中，且潜袭者在其上回合未发起过潜袭，你可以展示本卡牌，并将其加入总部。"
+  },
+  {
+    "en": "Gain 2[credit] for each card you revealed this way.",
+    "translation": "你每以此法展示1张卡牌，获得2[credit]。"
+  },
+  {
+    "en": "Gain 3[credit].",
+    "translation": "获得3[credit]。"
+  },
+  {
+    "en": "Gain 4[credit] and draw 2 cards.",
+    "translation": "获得4[credit]并抽2张卡牌。"
+  },
+  {
+    "en": "Gain 7[credit].",
+    "translation": "获得7[credit]。"
+  },
+  {
+    "en": "Give the Runner 1 tag.",
+    "translation": "给予潜袭者1枚锁定标记。"
+  },
+  {
+    "en": "Host ice gains barrier, code gate, and sentry.",
+    "translation": "被附载的防火墙获得屏障、门禁与警报。"
+  },
+  {
+    "en": "Hosted agenda counter: Add 1 card from Archives to HQ.",
+    "translation": "所附载的议案指示物：将1张卡牌从档案库加入总部。"
+  },
+  {
+    "en": "Hosted agenda counter: End the run.",
+    "translation": "所附载的议案指示物：终止本次潜袭。"
+  },
+  {
+    "en": "Hosted agenda counter: Search R&D for 1 card and reveal it.",
+    "translation": "所附载的议案指示物：在研发中心搜寻1张卡牌并展示之。"
+  },
+  {
+    "en": "If successful, access 2 additional cards when you breach R&D.",
+    "translation": "如果成功，当你侵入研发中心时，额外读取2张卡牌。"
+  },
+  {
+    "en": "If successful, do X meat damage.",
+    "translation": "如果成功，造成X点肢体伤害。"
+  },
+  {
+    "en": "If successful, instead of breaching Archives, you may install 1 program from your heap, ignoring all costs.",
+    "translation": "如果成功，你可以从你的堆阵安装1个程序，忽略所有的费用，代替侵入档案库。"
+  },
+  {
+    "en": "If that run would be declared successful, change the attacked server to HQ for the remainder of that run.",
+    "translation": "如果本次潜袭将要宣告为成功，在本次潜袭的剩余时间内将被攻击的服务器改为总部。"
+  },
+  {
+    "en": "If there are 3 or more hosted advancement counters, instead gain 4[credit].",
+    "translation": "如果所附载的推进指示物有3枚或更多，则改为获得4[credit]。"
+  },
+  {
+    "en": "If there are 3 or more hosted advancement counters, instead search R&D for up to 2 cards.",
+    "translation": "如果所附载的推进指示物有3枚或更多，则改为在研发中心搜寻最多2张卡牌。"
+  },
+  {
+    "en": "If there are 3 or more hosted advancement counters, the Runner cannot break subroutines on this ice using AI programs.",
+    "translation": "如果所附载的推进指示物有3枚或更多，潜袭者不能使用智能模块程序破解本防火墙上的子进程。"
+  },
+  {
+    "en": "If they do not, end the run.",
+    "translation": "如果其未如此做，终止本次潜袭。"
+  },
+  {
+    "en": "If you do, the Runner cannot use paid abilities printed on bioroid ice for the remainder of this turn.",
+    "translation": "如果你如此做，潜袭者在本回合剩余时间内不能使用生化人防火墙上印刷的付费能力。"
+  },
+  {
+    "en": "If you have any [click] remaining, lose [click].",
+    "translation": "如果你有任何剩余的[click]，失去[click]。"
+  },
+  {
+    "en": "Install 1 resource from your grip, paying 3[credit] less.",
+    "translation": "从你的操控器安装1个资源，其安装费用减3[credit]。"
+  },
+  {
+    "en": "Install only faceup. (This agenda is neither rezzed nor unrezzed.) Whenever you advance this agenda, gain 2[credit]. If there are 5 or more hosted advancement counters (including the counter just placed), gain 3[credit] instead.",
+    "translation": "本议案仅能面朝上安装。（本议案不视为已激活或未激活。） 每当你推进本议案时，获得2[credit]。如果所附载的推进指示物有5枚或更多（包括刚放上去的那1枚），则改为获得3[credit]。"
+  },
+  {
+    "en": "Install up to 2 cards from HQ (one at a time).",
+    "translation": "从总部安装最多2张卡牌（每次一张）。"
+  },
+  {
+    "en": "Interface -> [trash] or hosted power counter: Break 1 sentry subroutine.",
+    "translation": "对接 -> [trash]或所附载的能量指示物：破解1条警报子进程。"
+  },
+  {
+    "en": "Move up to 2 advancement counters from 1 other card to the chosen card.",
+    "translation": "从另1张卡牌上转移最多2枚推进指示物到所选择的卡牌上。"
+  },
+  {
+    "en": "Once per turn -> 0[credit]: Break 1 barrier subroutine.",
+    "translation": "0[credit]：破解1条屏障子进程。本能力每回合仅限使用一次。"
+  },
+  {
+    "en": "Once per turn -> 2 hosted advancement counters: Place 2 advancement counters on another card you can advance in the root of this server.",
+    "translation": "每回合限一次 -> 2枚所附载的推进指示物：放置2枚推进指示物到本服务器根目录中另一张你可以推进的卡牌上。"
+  },
+  {
+    "en": "Once per turn -> [click]: Gain 2[credit].",
+    "translation": "每回合限一次 -> [click]：获得2[credit]。"
+  },
+  {
+    "en": "Place 4[credit] on this event.",
+    "translation": "放置4[credit]到本事件上。"
+  },
+  {
+    "en": "Place X advancement counters on 1 installed card you can advance.",
+    "translation": "放置X枚推进指示物到1张你可以推进的已安装的卡牌上。"
+  },
+  {
+    "en": "Play only if the Runner made a successful run during their last turn.",
+    "translation": "只有潜袭者在其上回合进行过成功的潜袭时，才能打出。"
+  },
+  {
+    "en": "Play only if the Runner stole an agenda during their last turn.",
+    "translation": "只有潜袭者在其上回合窃取过议案时，才能打出。"
+  },
+  {
+    "en": "Play only if you are not tagged.",
+    "translation": "只有你未被锁定时，才能打出。"
+  },
+  {
+    "en": "Play only if you made a successful run on HQ this turn.",
+    "translation": "只有你本回合已对总部进行过成功的潜袭时，才能打出。"
+  },
+  {
+    "en": "Reveal up to 5 cards in HQ.",
+    "translation": "展示总部中的最多5张卡牌。"
+  },
+  {
+    "en": "Run a server protected by ice.",
+    "translation": "潜袭一台有防火墙保护的服务器。"
+  },
+  {
+    "en": "Runs against this server cannot be declared successful. (This effect does not cause runs to become unsuccessful.) Limit 1 region per server.",
+    "translation": "对本服务器的潜袭不能宣告为成功。（本效果不会导致潜袭被视为失败。） 每台服务器限制1个区域。"
+  },
+  {
+    "en": "Search either your stack or your heap for 1 program. (Shuffle your stack after searching it.) Install that program, ignoring all costs. When your turn ends, if that program has not been uninstalled, add it to the top of your stack.",
+    "translation": "在你的存储栈或堆阵搜寻1个程序。（如果搜寻了存储栈则将其洗混。）安装该程序，忽略所有的费用。当你的回合结束时，如果该程序仍未被卸载，将其加入你的存储栈顶端。"
+  },
+  {
+    "en": "Starter game only.",
+    "translation": "仅用于起始包对战。"
+  },
+  {
+    "en": "The Corp must set aside the top 8 cards of R&D faceup.",
+    "translation": "公司必须将研发中心顶端8张卡牌牌面朝上置于一旁。"
+  },
+  {
+    "en": "The first piece of ice the Corp rezzes each turn costs 1[credit] more to rez.",
+    "translation": "每回合公司激活的第一层防火墙的激活费用加1[credit]。"
+  },
+  {
+    "en": "The first time each turn you encounter a piece of ice, it gains code gate for the remainder of this run.",
+    "translation": "每回合你第一次遭遇一层防火墙时，该防火墙在本次潜袭的剩余时间内获得门禁。"
+  },
+  {
+    "en": "The first time you encounter a piece of ice during that run, bypass it.",
+    "translation": "本次潜袭中你第一次遭遇一层防火墙时，略过该防火墙。"
+  },
+  {
+    "en": "The rez cost of each piece of ice is increased by 1[credit].",
+    "translation": "每层防火墙的激活费用加1[credit]。"
+  },
+  {
+    "en": "The Runner cannot break subroutines on this ice using AI programs.",
+    "translation": "潜袭者不能使用智能模块程序破解本防火墙上的子进程。"
+  },
+  {
+    "en": "The Runner may jack out.",
+    "translation": "潜袭者可以退出潜袭。"
+  },
+  {
+    "en": "The strength of this ice cannot be lowered.",
+    "translation": "本防火墙的强度不能被降低。"
+  },
+  {
+    "en": "Then, the Corp shuffles the set-aside cards into R&D.",
+    "translation": "然后，公司将置于一旁的卡牌洗入研发中心。"
+  },
+  {
+    "en": "Then, you may pay 1[credit] to add this event to your grip.",
+    "translation": "然后你可以支付1[credit]，以将本事件加入你的操控器。"
+  },
+  {
+    "en": "This agenda is worth 1 more agenda point for each hosted agenda counter.",
+    "translation": "每有1枚所附载的议案指示物，本议案的价值增加1点议案分数。"
+  },
+  {
+    "en": "This program gets +1 strength for each hosted power counter, and it can only interface with ice of exactly equal strength.",
+    "translation": "每有1枚所附载的能量指示物，本程序的强度+1，且本程序只能与强度与其相等的防火墙对接。"
+  },
+  {
+    "en": "Trace[5].",
+    "translation": "追踪 5。"
+  },
+  {
+    "en": "Trash this ice.",
+    "translation": "销毁本防火墙。"
+  },
+  {
+    "en": "Use this ability only during a run against another server.",
+    "translation": "本能力仅能在对另一台服务器的潜袭中使用。"
+  },
+  {
+    "en": "Use this ability only during a run on this server.",
+    "translation": "本能力仅能在对本服务器的潜袭中使用。"
+  },
+  {
+    "en": "Use this ability only during your turn.",
+    "translation": "本能力仅能在你的回合中使用。"
+  },
+  {
+    "en": "Use this ability only if there are 4 or more hosted advancement counters.",
+    "translation": "只有所附载的推进指示物有4枚或更多时，才能使用本能力。"
+  },
+  {
+    "en": "Use this ability only if this program was installed this turn.",
+    "translation": "本能力仅能在安装本程序的回合使用。"
+  },
+  {
+    "en": "When that run ends, if it was successful, gain 5[credit].",
+    "translation": "当本次潜袭结束时，如果潜袭成功，获得5[credit]。"
+  },
+  {
+    "en": "When that run is successful, trash all cards in the root of the attacked server.",
+    "translation": "当本次潜袭成功时，销毁被攻击的服务器根目录中的所有卡牌。"
+  },
+  {
+    "en": "When the Corp purges virus counters, trash this program.",
+    "translation": "当公司清除病毒指示物时，销毁本程序。"
+  },
+  {
+    "en": "When the Runner accesses this asset anywhere except in Archives, you may pay 4[credit].",
+    "translation": "当潜袭者从档案库以外其他区域读取本资产时，你可以支付4[credit]。"
+  },
+  {
+    "en": "When the Runner encounters this ice, gain 1[credit].",
+    "translation": "当潜袭者遭遇本防火墙时，你获得1[credit]。"
+  },
+  {
+    "en": "When the Runner encounters this ice, they must pay 3[credit], if able.",
+    "translation": "当潜袭者遭遇本防火墙时，如可能，其必须支付3[credit]。"
+  },
+  {
+    "en": "When you draw those cards, add 1 of them to the bottom of R&D.",
+    "translation": "当你抽这些卡牌时，将其中1张加入研发中心底端。"
+  },
+  {
+    "en": "When you install this hardware, load 3 power counters onto it.",
+    "translation": "当你安装本硬件时，填装3枚能量指示物到本硬件上。"
+  },
+  {
+    "en": "When you install this hardware, suffer 1 core damage.",
+    "translation": "当你安装本硬件时，受到1点核心伤害。"
+  },
+  {
+    "en": "When you install this hardware, suffer 1 meat damage.",
+    "translation": "当你安装本硬件时，受到1点肢体伤害。"
+  },
+  {
+    "en": "When you install this program, choose 1 installed piece of ice.",
+    "translation": "当你安装本程序时，选择1层已安装的防火墙。"
+  },
+  {
+    "en": "When you install this program, place 2 power counters on it.",
+    "translation": "当你安装本程序时，放置2枚能量指示物到本程序上。"
+  },
+  {
+    "en": "When you install this program, place 2 virus counters on it. Access, once per turn -> Hosted virus counter: Trash the card you are accessing.",
+    "translation": "当你安装本程序时，放置2枚病毒指示物到本程序上。 读取 -> 所附载的病毒指示物：销毁你正在读取的卡牌。本能力每回合仅限使用一次。"
+  },
+  {
+    "en": "When you install this program, place 6 power counters on it.",
+    "translation": "当你安装本程序时，放置6枚能量指示物到本程序上。"
+  },
+  {
+    "en": "When you install this program, you may spend any number of credits to place that many power counters on it.",
+    "translation": "当你安装本程序时，你可以支付X[credit]，以放置X枚能量指示物到本程序上。"
+  },
+  {
+    "en": "When you install this resource, load 16[credit] onto it.",
+    "translation": "当你安装本资源时，填装16[credit]到本资源上。"
+  },
+  {
+    "en": "When you install this resource, load 3 power counters onto it.",
+    "translation": "当你安装本资源时，填装3枚能量指示物到本资源上。"
+  },
+  {
+    "en": "When you rez this ice during a run against this server, you may derez another installed card.",
+    "translation": "在对本服务器的潜袭中，当你激活本防火墙时，你可以关闭另一张已安装的卡牌。"
+  },
+  {
+    "en": "When you rez this ice during a run against this server, you may have the Runner gain 2[credit].",
+    "translation": "在对本服务器的潜袭中，当你激活本防火墙时，你可以令潜袭者获得2[credit]。"
+  },
+  {
+    "en": "When you rez this ice during a run against this server, you may trash 1 card from HQ to do 2 net damage.",
+    "translation": "在对本服务器的潜袭中，当你激活本防火墙时，你可以从总部销毁1张卡牌，以造成2点网域伤害。"
+  },
+  {
+    "en": "When you score this agenda, do 2 meat damage.",
+    "translation": "当你将本议案计分时，造成2点肢体伤害。"
+  },
+  {
+    "en": "When you score this agenda, gain 7[credit] and take 1 bad publicity.",
+    "translation": "当你将本议案计分时，获得7[credit]并拿取1枚负面声誉标记。"
+  },
+  {
+    "en": "When you score this agenda, if there is another copy of Megaprix Qualifier in either playerʼs score area, place 1 agenda counter on this agenda.",
+    "translation": "当你计分本议案时，如果任一玩家的分数区内有另一张名称为极大奖资格赛的卡牌，放置1枚议案指示物到本议案上。"
+  },
+  {
+    "en": "When you score this agenda, place 1 agenda counter on it for every 2 hosted advancement counters past 3.",
+    "translation": "当你将本议案计分时，如果所附载的推进指示物超过3枚，每超过2枚，放置1枚议案指示物到本议案上。"
+  },
+  {
+    "en": "When you score this agenda, place 3 agenda counters on it.",
+    "translation": "当你将本议案计分时，放置3枚议案指示物到本议案上。"
+  },
+  {
+    "en": "When your turn begins and whenever you steal an agenda, place 1[credit] on this resource.",
+    "translation": "当你的回合开始或你窃取一个议案时，放置1[credit]到本资源上。"
+  },
+  {
+    "en": "When your turn begins, place 1 advancement counter on a card in the root of this server.",
+    "translation": "当你的回合开始时，放置1枚推进指示物到本服务器内的1张卡牌上。"
+  },
+  {
+    "en": "When your turn begins, place 1 advancement counter on a piece of ice protecting this server.",
+    "translation": "当你的回合开始时，放置1枚推进指示物到1层保护本服务器的防火墙上。"
+  },
+  {
+    "en": "When your turn begins, remove 1 hosted power counter and draw 2 cards.",
+    "translation": "当你的回合开始时，移除1枚所附载的能量指示物并抽2张卡牌。"
+  },
+  {
+    "en": "When your turn ends, if there are 3 or more hosted credits, you must trash 1 card from your grip at random or trash this resource.",
+    "translation": "当你的回合结束时，如果所附载的信用点有3个或更多，你必须从你的操控器中随机销毁1张卡牌或者销毁本资源。"
+  },
+  {
+    "en": "Whenever an agenda is scored or stolen, do 1 net damage.",
+    "translation": "每当一个议案被计分或窃取时，造成1点网域伤害。"
+  },
+  {
+    "en": "Whenever the Runner approaches this server, end the run unless they pay 2[credit] for each advanced piece of ice protecting this server.",
+    "translation": "每当潜袭者接驳本服务器时，终止本次潜袭，除非潜袭者支付等同于保护本服务器的已推进的防火墙二倍数量的信用点。"
+  },
+  {
+    "en": "Whenever the Runner makes a successful run on this server, do 1 net damage.",
+    "translation": "每当潜袭者对本服务器进行一次成功的潜袭时，造成1点网域伤害。"
+  },
+  {
+    "en": "Whenever you encounter the chosen ice, you may pay 1[credit] for each subroutine it has.",
+    "translation": "每当你遭遇所选择的防火墙时，你可以支付与该防火墙上子进程数量相等的[credit]。"
+  },
+  {
+    "en": "Whenever you play a transaction operation, gain 1[credit].",
+    "translation": "每当你打出一个交易事务时，获得1[credit]。"
+  },
+  {
+    "en": "While the Runner is accessing this upgrade in R&D, they must reveal it.",
+    "translation": "在潜袭者从研发中心读取本升级的期间，其必须展示之。"
+  },
+  {
+    "en": "While there are no installed fracter programs, this ice gets +7 strength.",
+    "translation": "只要没有已安装的分解模块程序，本防火墙的强度便+7。"
+  },
+  {
+    "en": "While this agenda has a hosted agenda counter, it is worth 1 more agenda point.",
+    "translation": "只要本议案上有所附载的议案指示物，其价值便增加1点议案分数。"
+  },
+  {
+    "en": "While you are encountering a piece of ice, it gets -1 strength.",
+    "translation": "在你遭遇一层防火墙的期间，该防火墙的强度-1。"
+  },
+  {
+    "en": "X is equal to the sum of the printed agenda points on all agendas the Runner stole during their last turn.",
+    "translation": "X等于潜袭者在其上回合所窃取的所有议案的印刷议案分数总和。"
+  },
+  {
+    "en": "X must be equal to or less than the number of tags the Runner has.",
+    "translation": "X必须等于或少于潜袭者所具有的锁定标记数量。"
+  },
+  {
+    "en": "You can advance this upgrade.",
+    "translation": "你可以推进本升级。"
+  },
+  {
+    "en": "You can spend hosted credits during that run.",
+    "translation": "你可以在本次潜袭中花费所附载的信用点。"
+  },
+  {
+    "en": "You can spend hosted credits to play events.",
+    "translation": "你可以花费所附载的信用点以打出事件。"
+  },
+  {
+    "en": "You may draw 1 card.",
+    "translation": "你可以抽1张卡牌。"
+  },
+  {
+    "en": "You may install 1 card from HQ.",
+    "translation": "你可以从总部安装1张卡牌。"
+  },
+  {
+    "en": "You may spend [click] to access another 1 of those cards.",
+    "translation": "你可以花费[click]，以读取其中另1张卡牌。"
+  },
+  {
+    "en": "Your deck cannot include more than 1 copy of any card.",
+    "translation": "你的牌组中每种同名卡牌限1张。"
+  },
+  {
+    "en": "uninstall",
+    "translation": "卸载"
+  },
+  {
+    "en": "rezzed",
+    "translation": "已激活"
+  },
+  {
+    "en": "unrezzed",
+    "translation": "未激活"
+  },
+  {
+    "en": "forfeit",
+    "translation": "废除"
+  },
+  {
+    "en": "credit",
+    "translation": "信用点"
+  },
+  {
+    "en": "protecting",
+    "translation": "保护"
+  },
+  {
+    "en": "icebreaker",
+    "translation": "破解器"
+  },
+  {
+    "en": "connection",
+    "translation": "人脉"
+  },
+  {
+    "en": "job",
+    "translation": "工作"
+  },
+  {
+    "en": "virus",
+    "translation": "病毒"
+  },
+  {
+    "en": "trojan",
+    "translation": "木马"
+  },
+  {
+    "en": "companion",
+    "translation": "同伴"
+  },
+  {
+    "en": "virtual",
+    "translation": "虚拟"
+  },
+  {
+    "en": "bioroid",
+    "translation": "生化人"
+  },
+  {
+    "en": "harmonic",
+    "translation": "和声"
+  },
+  {
+    "en": "AP",
+    "translation": "杀伤"
+  },
+  {
+    "en": "destroyer",
+    "translation": "毁灭者"
+  },
+  {
+    "en": "observer",
+    "translation": "观察者"
+  },
+  {
+    "en": "fracter",
+    "translation": "分解模块"
+  },
+  {
+    "en": "decoder",
+    "translation": "解码模块"
+  },
+  {
+    "en": "killer",
+    "translation": "断路模块"
+  },
+  {
+    "en": "AI",
+    "translation": "智能模块"
+  },
+  {
+    "en": "counter",
+    "translation": "指示物"
+  },
+  {
+    "en": "pass",
+    "translation": "通过"
+  },
+  {
+    "en": "approach",
+    "translation": "接驳"
+  },
+  {
+    "en": "Interface",
+    "translation": "对接"
+  },
+  {
+    "en": "strength",
+    "translation": "强度"
+  },
+  {
+    "en": "host",
+    "translation": "附载"
+  },
+  {
+    "en": "move",
+    "translation": "转移"
+  },
+  {
+    "en": "swap",
+    "translation": "互换"
+  },
+  {
+    "en": "charge",
+    "translation": "充能"
+  },
+  {
+    "en": "score area",
+    "translation": "分数区"
+  },
+  {
+    "en": "facedown",
+    "translation": "牌面朝下"
+  },
+  {
+    "en": "damage",
+    "translation": "伤害"
+  },
+  {
+    "en": "do damage",
+    "translation": "造成伤害"
+  },
+  {
+    "en": "suffer damage",
+    "translation": "受到伤害"
+  },
+  {
+    "en": "prevent damage",
+    "translation": "防止伤害"
+  },
+  {
+    "en": "End the run",
+    "translation": "终止本次潜袭"
+  },
+  {
+    "en": "unsuccessful run",
+    "translation": "失败的潜袭"
+  },
+  {
+    "en": "make a run",
+    "translation": "进行潜袭"
+  },
+  {
+    "en": "when you install",
+    "translation": "当你安装"
+  },
+  {
+    "en": "for the remainder of",
+    "translation": "在...的剩余时间内"
+  },
+  {
+    "en": "unless",
+    "translation": "除非"
+  },
+  {
+    "en": "only if",
+    "translation": "只有...时"
+  },
+  {
+    "en": "use this ability only",
+    "translation": "本能力仅能"
+  },
+  {
+    "en": "Limit 1 per",
+    "translation": "每...限制1"
+  },
+  {
+    "en": "as an additional cost",
+    "translation": "作为...的额外费用"
+  },
+  {
+    "en": "printed",
+    "translation": "印刷"
+  },
+  {
+    "en": "remove from the game",
+    "translation": "移出游戏"
+  },
+  {
+    "en": "recurring credit",
+    "translation": "循环信用点"
+  },
+  {
+    "en": "Trace",
+    "translation": "追踪"
+  },
+  {
+    "en": "Psi Game",
+    "translation": "灵能博弈"
+  },
+  {
+    "en": "sabotage",
+    "translation": "破坏"
+  },
+  {
+    "en": "Threat",
+    "translation": "威胁"
+  },
+  {
+    "en": "Dividends",
+    "translation": "红利"
+  },
+  {
+    "en": "Persistent",
+    "translation": "持久"
+  },
+  {
+    "en": "interrupt",
+    "translation": "中断"
+  }
+]

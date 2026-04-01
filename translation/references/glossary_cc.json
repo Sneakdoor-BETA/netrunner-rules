@@ -1,146 +1,506 @@
-{
-  "game_terms": {
-    "run": "潜袭",
-    "ice": "防火墙",
-    "subroutine": "子进程",
-    "breach": "侵入",
-    "access": "读取",
-    "trash": "销毁",
-    "install": "安装",
-    "uninstall": "卸载",
-    "rez": "激活",
-    "derez": "关闭",
-    "rezzed": "已激活",
-    "unrezzed": "未激活",
-    "agenda": "议案",
-    "score": "计分",
-    "steal": "窃取",
-    "forfeit": "废除",
-    "Corp": "公司",
-    "Runner": "潜袭者",
-    "credit": "信用点",
-    "server": "服务器",
-    "remote server": "远程服务器",
-    "central server": "中央服务器",
-    "HQ": "总部",
-    "R&D": "研发中心",
-    "Archives": "档案库",
-    "root": "根目录",
-    "protecting": "保护"
+[
+  {
+    "en": "run",
+    "translation": "潜袭"
   },
-  "card_types": {
-    "program": "程序",
-    "hardware": "硬件",
-    "resource": "资源",
-    "event": "事件",
-    "operation": "事务",
-    "asset": "资产",
-    "upgrade": "升级",
-    "icebreaker": "破解器",
-    "console": "控制台",
-    "connection": "人脉",
-    "job": "工作",
-    "virus": "病毒",
-    "trojan": "木马",
-    "companion": "同伴",
-    "virtual": "虚拟"
+  {
+    "en": "ice",
+    "translation": "防火墙"
   },
-  "ice_subtypes": {
-    "barrier": "屏障",
-    "code gate": "门禁",
-    "sentry": "警报",
-    "bioroid": "生化人",
-    "harmonic": "和声",
-    "AP": "杀伤",
-    "destroyer": "毁灭者",
-    "observer": "观察者",
-    "fracter": "分解模块",
-    "decoder": "解码模块",
-    "killer": "断路模块",
-    "AI": "智能模块"
+  {
+    "en": "subroutine",
+    "translation": "子进程"
   },
-  "counters": {
-    "counter": "指示物",
-    "advancement counter": "推进指示物",
-    "power counter": "能量指示物",
-    "virus counter": "病毒指示物",
-    "agenda counter": "议案指示物",
-    "bad publicity": "负面声誉标记",
-    "tag": "锁定标记"
+  {
+    "en": "breach",
+    "translation": "侵入"
   },
-  "game_actions": {
-    "encounter": "遭遇",
-    "bypass": "略过",
-    "break": "破解",
-    "pass": "通过",
-    "approach": "接驳",
-    "Interface": "对接",
-    "strength": "强度",
-    "gain": "获得",
-    "lose": "失去",
-    "spend": "花费",
-    "pay": "支付",
-    "draw": "抽",
-    "reveal": "展示",
-    "shuffle": "洗混",
-    "search": "搜寻",
-    "host": "附载",
-    "hosted": "所附载的",
-    "place": "放置",
-    "remove": "移除",
-    "move": "转移",
-    "swap": "互换",
-    "charge": "充能"
+  {
+    "en": "access",
+    "translation": "读取"
   },
-  "zones": {
-    "stack": "存储栈",
-    "grip": "操控器",
-    "heap": "堆阵",
-    "score area": "分数区",
-    "faceup": "牌面朝上",
-    "facedown": "牌面朝下"
+  {
+    "en": "trash",
+    "translation": "销毁"
   },
-  "damage_types": {
-    "damage": "伤害",
-    "net damage": "网域伤害",
-    "meat damage": "肢体伤害",
-    "core damage": "核心伤害",
-    "do damage": "造成伤害",
-    "suffer damage": "受到伤害",
-    "prevent damage": "防止伤害"
+  {
+    "en": "install",
+    "translation": "安装"
   },
-  "common_phrases": {
-    "End the run": "终止本次潜袭",
-    "successful run": "成功的潜袭",
-    "unsuccessful run": "失败的潜袭",
-    "make a run": "进行潜袭",
-    "when you install": "当你安装",
-    "when your turn begins": "当你的回合开始时",
-    "when your turn ends": "当你的回合结束时",
-    "once per turn": "每回合限一次",
-    "the first time each turn": "每回合第一次",
-    "for the remainder of": "在...的剩余时间内",
-    "ignoring all costs": "忽略所有的费用",
-    "you may": "你可以",
-    "if you do": "如果你如此做",
-    "unless": "除非",
-    "only if": "只有...时",
-    "play only if": "只有...才能打出",
-    "use this ability only": "本能力仅能",
-    "Limit 1 per": "每...限制1",
-    "as an additional cost": "作为...的额外费用",
-    "printed": "印刷",
-    "installed": "已安装",
-    "remove from the game": "移出游戏"
+  {
+    "en": "uninstall",
+    "translation": "卸载"
   },
-  "ability_keywords": {
-    "recurring credit": "循环信用点",
-    "Trace": "追踪",
-    "Psi Game": "灵能博弈",
-    "sabotage": "破坏",
-    "Threat": "威胁",
-    "Dividends": "红利",
-    "Persistent": "持久",
-    "interrupt": "中断"
+  {
+    "en": "rez",
+    "translation": "激活"
+  },
+  {
+    "en": "derez",
+    "translation": "关闭"
+  },
+  {
+    "en": "rezzed",
+    "translation": "已激活"
+  },
+  {
+    "en": "unrezzed",
+    "translation": "未激活"
+  },
+  {
+    "en": "agenda",
+    "translation": "议案"
+  },
+  {
+    "en": "score",
+    "translation": "计分"
+  },
+  {
+    "en": "steal",
+    "translation": "窃取"
+  },
+  {
+    "en": "forfeit",
+    "translation": "废除"
+  },
+  {
+    "en": "Corp",
+    "translation": "公司"
+  },
+  {
+    "en": "Runner",
+    "translation": "潜袭者"
+  },
+  {
+    "en": "credit",
+    "translation": "信用点"
+  },
+  {
+    "en": "server",
+    "translation": "服务器"
+  },
+  {
+    "en": "remote server",
+    "translation": "远程服务器"
+  },
+  {
+    "en": "central server",
+    "translation": "中央服务器"
+  },
+  {
+    "en": "HQ",
+    "translation": "总部"
+  },
+  {
+    "en": "R&D",
+    "translation": "研发中心"
+  },
+  {
+    "en": "Archives",
+    "translation": "档案库"
+  },
+  {
+    "en": "root",
+    "translation": "根目录"
+  },
+  {
+    "en": "protecting",
+    "translation": "保护"
+  },
+  {
+    "en": "program",
+    "translation": "程序"
+  },
+  {
+    "en": "hardware",
+    "translation": "硬件"
+  },
+  {
+    "en": "resource",
+    "translation": "资源"
+  },
+  {
+    "en": "event",
+    "translation": "事件"
+  },
+  {
+    "en": "operation",
+    "translation": "事务"
+  },
+  {
+    "en": "asset",
+    "translation": "资产"
+  },
+  {
+    "en": "upgrade",
+    "translation": "升级"
+  },
+  {
+    "en": "icebreaker",
+    "translation": "破解器"
+  },
+  {
+    "en": "console",
+    "translation": "控制台"
+  },
+  {
+    "en": "connection",
+    "translation": "人脉"
+  },
+  {
+    "en": "job",
+    "translation": "工作"
+  },
+  {
+    "en": "virus",
+    "translation": "病毒"
+  },
+  {
+    "en": "trojan",
+    "translation": "木马"
+  },
+  {
+    "en": "companion",
+    "translation": "同伴"
+  },
+  {
+    "en": "virtual",
+    "translation": "虚拟"
+  },
+  {
+    "en": "barrier",
+    "translation": "屏障"
+  },
+  {
+    "en": "code gate",
+    "translation": "门禁"
+  },
+  {
+    "en": "sentry",
+    "translation": "警报"
+  },
+  {
+    "en": "bioroid",
+    "translation": "生化人"
+  },
+  {
+    "en": "harmonic",
+    "translation": "和声"
+  },
+  {
+    "en": "AP",
+    "translation": "杀伤"
+  },
+  {
+    "en": "destroyer",
+    "translation": "毁灭者"
+  },
+  {
+    "en": "observer",
+    "translation": "观察者"
+  },
+  {
+    "en": "fracter",
+    "translation": "分解模块"
+  },
+  {
+    "en": "decoder",
+    "translation": "解码模块"
+  },
+  {
+    "en": "killer",
+    "translation": "断路模块"
+  },
+  {
+    "en": "AI",
+    "translation": "智能模块"
+  },
+  {
+    "en": "counter",
+    "translation": "指示物"
+  },
+  {
+    "en": "advancement counter",
+    "translation": "推进指示物"
+  },
+  {
+    "en": "power counter",
+    "translation": "能量指示物"
+  },
+  {
+    "en": "virus counter",
+    "translation": "病毒指示物"
+  },
+  {
+    "en": "agenda counter",
+    "translation": "议案指示物"
+  },
+  {
+    "en": "bad publicity",
+    "translation": "负面声誉标记"
+  },
+  {
+    "en": "tag",
+    "translation": "锁定标记"
+  },
+  {
+    "en": "encounter",
+    "translation": "遭遇"
+  },
+  {
+    "en": "bypass",
+    "translation": "略过"
+  },
+  {
+    "en": "break",
+    "translation": "破解"
+  },
+  {
+    "en": "pass",
+    "translation": "通过"
+  },
+  {
+    "en": "approach",
+    "translation": "接驳"
+  },
+  {
+    "en": "Interface",
+    "translation": "对接"
+  },
+  {
+    "en": "strength",
+    "translation": "强度"
+  },
+  {
+    "en": "gain",
+    "translation": "获得"
+  },
+  {
+    "en": "lose",
+    "translation": "失去"
+  },
+  {
+    "en": "spend",
+    "translation": "花费"
+  },
+  {
+    "en": "pay",
+    "translation": "支付"
+  },
+  {
+    "en": "draw",
+    "translation": "抽"
+  },
+  {
+    "en": "reveal",
+    "translation": "展示"
+  },
+  {
+    "en": "shuffle",
+    "translation": "洗混"
+  },
+  {
+    "en": "search",
+    "translation": "搜寻"
+  },
+  {
+    "en": "host",
+    "translation": "附载"
+  },
+  {
+    "en": "hosted",
+    "translation": "所附载的"
+  },
+  {
+    "en": "place",
+    "translation": "放置"
+  },
+  {
+    "en": "remove",
+    "translation": "移除"
+  },
+  {
+    "en": "move",
+    "translation": "转移"
+  },
+  {
+    "en": "swap",
+    "translation": "互换"
+  },
+  {
+    "en": "charge",
+    "translation": "充能"
+  },
+  {
+    "en": "stack",
+    "translation": "存储栈"
+  },
+  {
+    "en": "grip",
+    "translation": "操控器"
+  },
+  {
+    "en": "heap",
+    "translation": "堆阵"
+  },
+  {
+    "en": "score area",
+    "translation": "分数区"
+  },
+  {
+    "en": "faceup",
+    "translation": "牌面朝上"
+  },
+  {
+    "en": "facedown",
+    "translation": "牌面朝下"
+  },
+  {
+    "en": "damage",
+    "translation": "伤害"
+  },
+  {
+    "en": "net damage",
+    "translation": "网域伤害"
+  },
+  {
+    "en": "meat damage",
+    "translation": "肢体伤害"
+  },
+  {
+    "en": "core damage",
+    "translation": "核心伤害"
+  },
+  {
+    "en": "do damage",
+    "translation": "造成伤害"
+  },
+  {
+    "en": "suffer damage",
+    "translation": "受到伤害"
+  },
+  {
+    "en": "prevent damage",
+    "translation": "防止伤害"
+  },
+  {
+    "en": "End the run",
+    "translation": "终止本次潜袭"
+  },
+  {
+    "en": "successful run",
+    "translation": "成功的潜袭"
+  },
+  {
+    "en": "unsuccessful run",
+    "translation": "失败的潜袭"
+  },
+  {
+    "en": "make a run",
+    "translation": "进行潜袭"
+  },
+  {
+    "en": "when you install",
+    "translation": "当你安装"
+  },
+  {
+    "en": "when your turn begins",
+    "translation": "当你的回合开始时"
+  },
+  {
+    "en": "when your turn ends",
+    "translation": "当你的回合结束时"
+  },
+  {
+    "en": "once per turn",
+    "translation": "每回合限一次"
+  },
+  {
+    "en": "the first time each turn",
+    "translation": "每回合第一次"
+  },
+  {
+    "en": "for the remainder of",
+    "translation": "在...的剩余时间内"
+  },
+  {
+    "en": "ignoring all costs",
+    "translation": "忽略所有的费用"
+  },
+  {
+    "en": "you may",
+    "translation": "你可以"
+  },
+  {
+    "en": "if you do",
+    "translation": "如果你如此做"
+  },
+  {
+    "en": "unless",
+    "translation": "除非"
+  },
+  {
+    "en": "only if",
+    "translation": "只有...时"
+  },
+  {
+    "en": "play only if",
+    "translation": "只有...才能打出"
+  },
+  {
+    "en": "use this ability only",
+    "translation": "本能力仅能"
+  },
+  {
+    "en": "Limit 1 per",
+    "translation": "每...限制1"
+  },
+  {
+    "en": "as an additional cost",
+    "translation": "作为...的额外费用"
+  },
+  {
+    "en": "printed",
+    "translation": "印刷"
+  },
+  {
+    "en": "installed",
+    "translation": "已安装"
+  },
+  {
+    "en": "remove from the game",
+    "translation": "移出游戏"
+  },
+  {
+    "en": "recurring credit",
+    "translation": "循环信用点"
+  },
+  {
+    "en": "Trace",
+    "translation": "追踪"
+  },
+  {
+    "en": "Psi Game",
+    "translation": "灵能博弈"
+  },
+  {
+    "en": "sabotage",
+    "translation": "破坏"
+  },
+  {
+    "en": "Threat",
+    "translation": "威胁"
+  },
+  {
+    "en": "Dividends",
+    "translation": "红利"
+  },
+  {
+    "en": "Persistent",
+    "translation": "持久"
+  },
+  {
+    "en": "interrupt",
+    "translation": "中断"
   }
-}
+]
