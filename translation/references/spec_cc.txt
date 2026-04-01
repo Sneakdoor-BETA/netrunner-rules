@@ -1,0 +1,234 @@
+# Netrunner 卡牌游戏翻译规范
+
+## 一、基本原则
+
+1. 游戏术语采用意译而非音译，确保中文玩家能够理解术语含义
+2. 保持术语翻译的一致性，相同英文术语在所有卡牌中使用相同的中文翻译
+3. 保留原文中的HTML标签（如<strong>、<em>）和游戏符号（如[credit]、[click]、[trash]）
+4. 数字和符号保持原样，不进行翻译
+5. 卡牌能力文本采用简洁、准确的中文表达，符合中文语言习惯
+
+## 二、语法结构
+
+### 2.1 条件句式
+
+- "When..." → "当...时，"
+  例：When you install this card → 当你安装本卡牌时
+
+- "Whenever..." → "每当...时，"
+  例：Whenever you make a successful run → 每当你进行一次成功的潜袭时
+
+- "If..." → "如果...，"（条件置于主句之前）
+  例：If successful, gain 5[credit] → 如果成功，获得5[credit]
+
+- "Unless..." → "除非..."
+  例：End the run unless the Runner pays 3[credit] → 终止本次潜袭，除非潜袭者支付3[credit]
+
+### 2.2 频率限定
+
+- "Once per turn" → "每回合限一次"
+- "The first time each turn" → "每回合第一次"
+- "The first time you..." → "你第一次..."
+- "Each time..." → "每次..."
+- "Use this ability only once per..." → "本能力每...仅限使用一次"
+
+### 2.3 时间范围
+
+- "for the remainder of this turn" → "在本回合剩余时间内"
+- "for the remainder of this run" → "在本次潜袭的剩余时间内"
+- "for the remainder of this encounter" → "在本次遭遇的剩余时间内"
+- "until the end of the turn" → "直到本回合结束"
+
+### 2.4 许可与限制
+
+- "You may..." → "你可以..."
+- "If you do" → "如果你如此做"
+- "You cannot..." → "你不能..."
+- "Only if..." → "只有...时"
+- "Play only if..." → "只有...才能打出"
+- "Install only if..." → "只有...才能安装"
+- "Use this ability only..." → "本能力仅能..." 或 "只有...才能使用本能力"
+
+### 2.5 数量表达
+
+- "up to X" → "最多X"
+- "at least X" → "至少X"
+- "X or more" → "X或更多" 或 "X枚或更多"
+- "X or less" → "X或更少"
+- "any number of" → "任意数量"
+- "each" → "每" 或 "每有1"
+
+## 三、特殊句式
+
+### 3.1 额外费用
+
+"As an additional cost to [action]" → "作为[动作]的额外费用"
+例：As an additional cost to play this event, spend [click] → 作为打出本事件的额外费用，花费[click]
+
+### 3.2 能力使用限制
+
+"Use this ability only during..." → "本能力仅能在...使用"
+"Use this ability only if..." → "只有...时，才能使用本能力"
+"Only the Runner/Corp can use this ability" → "只有潜袭者/公司可以使用本能力"
+
+### 3.3 限制声明
+
+"Limit 1 per deck" → "每套牌组限制1张"
+"Limit 1 per player" → "每位玩家限制1个"
+"Limit 1 per server" → "每台服务器限制1个"
+"Limit X remote servers" → "限制X台远程服务器"
+
+### 3.4 卡牌状态变化
+
+"When this card is installed/trashed/scored/stolen" → "当本卡牌被安装/销毁/计分/窃取时"
+"While this card is rezzed" → "只要本卡牌已激活" 或 "在本卡牌处于激活状态的期间"
+
+## 四、标点符号使用
+
+1. 中文句子使用中文标点符号（，。）
+2. 保留原文中的冒号（：）用于分隔能力费用和效果
+3. 保留原文中的破折号（-）用于追踪等特殊能力
+4. 列表使用<ul><li>标签，保持原格式
+5. 括号内的说明性文字保留<em>标签
+
+## 五、专有名词处理
+
+### 5.1 卡牌类型保持加粗
+
+使用<strong>标签标记的卡牌类型、子类型在中文中同样保持加粗：
+- <strong>barrier</strong> → <strong>屏障</strong>
+- <strong>icebreaker</strong> → <strong>破解器</strong>
+
+### 5.2 服务器名称
+
+- HQ → 总部（不翻译为"总部"）
+- R&D → 研发中心
+- Archives → 档案库
+- 保持原文缩写在游戏符号中，翻译在正文中
+
+### 5.3 独有卡牌标记
+
+独有标记符号保持不变：
+- unique (♦) → 独有（◆）或保持原符号
+
+## 六、数值与符号
+
+1. 数字保持阿拉伯数字：1, 2, 3...
+2. 游戏符号保持不变：[credit], [click], [trash], [mu], [link]
+3. X、Y等变量保持英文字母
+4. 强度增减使用"+""-"符号：+1 strength → 强度+1
+
+## 七、特殊能力关键词
+
+### 7.1 能力类型标记
+
+- [interrupt] → [interrupt]（保持原文）
+- [subroutine] → [subroutine]（保持原文）
+- Interface → 对接（在破解器能力中）
+- Access → 读取（在读取卡牌时的能力）
+
+### 7.2 循环信用点
+
+"X[recurring-credit]" → "X[recurring-credit]"（保持符号）
+后续说明："(When you install this card and before your turn begins, refill to X hosted credits.)"
+→ "<em>（当你安装本卡牌时及你的回合开始前，将所附载的信用点补充至X个。）</em>"
+
+### 7.3 追踪能力
+
+"Trace[X]" → "<trace>追踪 X</trace>" 或 "Trace[X]"（根据上下文）
+"If successful" → "如果成功"
+
+### 7.4 灵能博弈
+
+"Psi Game" → "灵能博弈"
+标准说明文本："<em>（双方玩家秘密决定0-2的数值，然后同时宣告并花费所声明数值的[credit]。）</em>"
+
+## 八、常见动词翻译
+
+- install → 安装
+- uninstall → 卸载
+- rez → 激活
+- derez → 关闭
+- trash → 销毁
+- gain → 获得
+- lose → 失去
+- spend → 花费
+- pay → 支付
+- draw → 抽
+- reveal → 展示
+- shuffle → 洗混/洗入
+- search → 搜寻
+- place → 放置
+- remove → 移除
+- host → 附载
+- move → 转移
+- swap → 互换
+- access → 读取
+- breach → 侵入
+- steal → 窃取
+- score → 计分
+- forfeit → 废除
+- advance → 推进
+- encounter → 遭遇
+- bypass → 略过
+- break → 破解
+- pass → 通过
+- approach → 接驳
+- resolve → 结算
+- prevent → 防止
+- suffer → 受到
+- take → 拿取
+- charge → 充能
+
+## 九、被动语态处理
+
+英文中的被动语态在中文中通常转换为主动语态或使用"被"字句：
+- "When this card is trashed" → "当本卡牌被销毁时"
+- "If the Runner is tagged" → "如果潜袭者被锁定"
+- "While this ice is rezzed" → "只要本防火墙已激活" 或 "在本防火墙处于激活状态的期间"
+
+## 十、括号说明文本
+
+括号内的说明性文字使用<em>标签，翻译时保持括号和标签：
+- "(Shuffle your stack after searching it.)" → "<em>（在搜寻存储栈后将其洗混。）</em>"
+- "(It is not installed.)" → "<em>（它没有被安装。）</em>"
+- "(including this card)" → "<em>（包括本卡牌在内）</em>"
+
+## 十一、指代词使用
+
+1. "this card/program/ice" → "本卡牌/本程序/本防火墙"
+2. "that card/server" → "该卡牌/该服务器"
+3. "the chosen/selected" → "所选择的"
+4. "host card/ice" → "被附载的卡牌/防火墙"
+5. "installed card" → "已安装的卡牌"
+6. "rezzed card" → "已激活的卡牌"
+
+## 十二、复数与单数
+
+中文不区分单复数，根据上下文添加量词或数量词：
+- "cards" → "卡牌"（不加"们"）
+- "2 cards" → "2张卡牌"
+- "all cards" → "所有卡牌"
+- "each card" → "每张卡牌"
+
+## 十三、所有格表达
+
+英文所有格在中文中使用"的"或直接并列：
+- "the Runner's grip" → "潜袭者的操控器" 或 "操控器"（根据上下文）
+- "this card's abilities" → "本卡牌的能力"
+- "ice protecting this server" → "保护本服务器的防火墙"
+
+## 十四、并列结构
+
+使用"和"、"与"、"或"连接并列成分：
+- "and" → "和" 或 "与" 或 "并"
+- "or" → "或" 或 "或者"
+- "HQ and/or R&D" → "总部和/或研发中心"
+
+## 十五、否定表达
+
+- "cannot" → "不能"
+- "do not" → "不"
+- "no" → "没有"
+- "never" → "从不" 或 "不能"
+- "without" → "不" 或 "未"

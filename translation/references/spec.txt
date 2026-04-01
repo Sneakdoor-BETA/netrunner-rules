@@ -1,0 +1,117 @@
+基于文件：translation/references/text.json
+统计范围：共 880 条记录，其中 text_zhCN 非空并纳入分析的记录有 781 条，忽略空译文 99 条。
+
+一、总体翻译取向
+1. 译文整体采用“规则说明文”风格，句子短、动作明确、术语稳定，优先保证规则可执行性而非文学性。
+2. 英文规则文本中的实体、动作、条件、结果通常都会被明确拆开，中文以“条件/时点 + 动作 + 结果/限制”的顺序表达。
+3. 专有游戏术语优先固定译名，不随上下文自由改写；同一个核心术语在整批译文中通常只保留一种主译法。
+4. 与规则执行直接相关的逻辑连接词，如 if、when、whenever、instead、only if、if you do，都会显式翻译，不省略逻辑关系。
+5. 图标和规则标签保留原始记号，如 [credit]、[click]、[trash]、[subroutine]、[interrupt]、->，中文只负责补足其周围语义。
+
+二、核心术语规范
+1. Runner 统一译为“潜袭者”，Corp 统一译为“公司”。
+2. run 统一译为“潜袭”；successful run 译为“成功的潜袭”。
+3. breach 统一译为“侵入”，access 统一译为“读取”；两者严格区分，不混用。
+4. encounter 统一译为“遭遇”。
+5. ice 统一译为“防火墙”；piece of ice 通常译为“一层防火墙”。
+6. subroutine 统一译为“子进程”。
+7. barrier / code gate / sentry 分别稳定译为“屏障 / 门禁 / 警报”。
+8. agenda / asset / upgrade / resource / program / hardware / event / operation / identity 分别稳定译为“议案 / 资产 / 升级 / 资源 / 程序 / 硬件 / 事件 / 事务 / 特性”。
+9. HQ / R&D / Archives 分别稳定译为“总部 / 研发中心 / 档案库”。
+10. stack / heap / grip 分别稳定译为“存储栈 / 堆阵 / 操控器”。
+11. tag / bad publicity / net damage / meat damage / core damage 分别稳定译为“锁定标记 / 负面声誉标记 / 网域伤害 / 肢体伤害 / 核心伤害”。
+12. advancement counter / power counter / virus counter / agenda counter 分别稳定译为“推进指示物 / 能量指示物 / 病毒指示物 / 议案指示物”。
+13. hosted 作定语时稳定译为“所附载的”；host ice 这类结构则译为“被附载的防火墙”。
+14. rez 统一译为“激活”，derez 统一译为“关闭”；不使用“揭示”“翻开”等泛化说法替代。
+15. trash 统一译为“销毁”；remove from the game 统一译为“移出游戏”。
+16. bypass 统一译为“略过”；break 统一译为“破解”；advance 统一译为“推进”。
+17. cost 统一译为“费用”；install cost / rez cost / trash cost 分别译为“安装费用 / 激活费用 / 销毁费用”。
+18. trace 统一译为“追踪”；mark 统一译为“目标”。
+19. console / region / central server / remote server / root 分别稳定译为“控制台 / 区域 / 中央服务器 / 远程服务器 / 根目录”。
+20. stealth cards / virtual resources / transaction operation 分别稳定译为“隐匿卡牌 / 虚拟资源 / 交易事务”。
+
+三、常见动作动词的处理
+1. gain / lose / draw / place / load / remove / add / pay / spend / choose / search / shuffle / reveal / score / steal 分别优先译为“获得 / 失去 / 抽 / 放置 / 填装 / 移除 / 加入 / 支付 / 花费 / 选择 / 搜寻 / 洗混 / 展示 / 计分 / 窃取”。
+2. load 常用于把信用点或指示物放到卡牌上，译作“填装……到……上”，与普通的 place 区分。
+3. place 常用于常规放置指示物，译作“放置X枚……到……上”。
+4. pay 强调支付成本，spend 强调花费可用资源；中文分别保留“支付”和“花费”的区别。
+5. add 常用于把卡牌加入某区域，常见结构为“将1张卡牌从A加入B”。
+6. shuffle 既可译为“洗混”，也可在“洗入某区域”语境中译为“洗入”；具体按目标区域决定。
+7. reveal 译为“展示”，不用“公开”作常规主译。
+8. uninstall 译为“卸载”；如果句中是 has not been uninstalled，则译为“仍未被卸载”。
+
+四、固定句式与语法模板
+1. If successful 固定译为“如果成功”。
+2. If you do 固定译为“如果你如此做”；If they do not / If they do 也会对应译为“如果其未如此做 / 如果其如此做”。
+3. you may / you can 基本都译为“你可以”；语料中不刻意区分许可和能力。
+4. you must 译为“你必须”。
+5. When your turn begins / When your turn ends 固定译为“当你的回合开始时 / 当你的回合结束时”。
+6. Whenever 固定译为“每当”，用于触发式持续条件。
+7. once per turn 有两种稳定实现：
+   a. 作为前置标签时译为“每回合限一次 -> …”。
+   b. 作为整句限制时译为“本能力每回合仅限使用一次。”
+8. Play only if … 固定归纳为“只有……时，才能打出。”
+9. Use this ability only if … 常译为“只有……时，才能使用本能力。”，也可用“仅能在……时使用本能力。”
+10. As an additional cost to play this operation/event 固定译为“作为打出本事务/本事件的额外费用……”。
+11. instead of 表达替代关系时通常译为“代替……”；句中副词 instead 常译为“改为”。
+12. ignoring all costs 固定译为“忽略所有的费用”。
+13. for the remainder of this run / encounter / turn 分别固定译为“在本次潜袭 / 本次遭遇 / 本回合的剩余时间内”。
+14. the first time each turn / the first time this turn 固定译为“每回合第一次 / 本回合第一次”。
+15. during a run / during that run 固定译为“在潜袭中 / 在本次潜袭中”，若强调持续时段，也常并入“在本次潜袭的剩余时间内”。
+16. only the Runner can use this ability 固定译为“只有潜袭者可以使用本能力”。
+17. spend credits only from stealth cards to use this ability 固定译为“本能力仅能花费隐匿卡牌上的信用点来使用”。
+18. when it is empty, trash it 固定译为“当其清空时，销毁之。”
+19. limit 句式稳定采用“每位玩家限制1个…… / 每台服务器限制1个…… / 每套牌组限制1张……”。其中 region 句式以“每台服务器限制1个区域”为主，也见“每个服务器限制1个区域”的次要变体。
+20. remote server only 在语料中常按可安装语境译为“仅能安装在远程服务器”。
+
+五、语序与信息组织
+1. 中文通常前置时间、条件和场景，再给出动作。例如 When the Runner encounters this ice 常译为“当潜袭者遭遇本防火墙时……”。
+2. 英文中的后置条件、限制、补充说明，中文多用逗号或单独一句后置表达，不强行保持英文原序。
+3. 如果英文句子包含“条件 + 主效果 + 后续结果”，中文往往拆成两句或用“如果……，则……”重新组织。
+4. 带有 to 不定式表示目的时，中文常改成“以……”结构，例如“支付X，以放置Y”“销毁本资源，以选择……”。
+5. “A and B”如果两个动作紧密，可直接译为“并”；若逻辑先后更清晰，则拆成两句或用“然后”。
+6. 英文中抽象名词化结构，中文优先还原为动词结构，避免生硬直译。
+
+六、指代、代词与省略
+1. this + 名词几乎一律译为“本 + 名词”，如 this asset / program / resource / agenda / ice / server / ability -> “本资产 / 本程序 / 本资源 / 本议案 / 本防火墙 / 本服务器 / 本能力”。
+2. the chosen + 名词通常译为“所选择的……”。
+3. it 在规则语句中常依上下文译为“其 / 之 / 该名词 / 本名词”，而不是机械重复“它”。
+4. trash it 常规译法是“销毁之”；when it is empty 常规译法是“当其清空时”。
+5. 为避免歧义，中文经常把英文中的代词还原成明确名词，如 that ice -> “该防火墙”。
+6. 英文的所有格结构常转成“你已安装的……”“潜袭者的……”“本资源上的……”。
+
+七、数值、量词与数学表达
+1. 数字与图标连写，保持原记号，不在数字和图标间加空格，如 1[credit]、[click]、2[recurring-credit]。
+2. 中文保留阿拉伯数字，不改写成汉字数字。
+3. 常用量词稳定：卡牌多用“张”，程序/资源/硬件等卡牌类型常用“个”或“张”视语境而定，防火墙用“层”，子进程用“条”，指示物和标记用“枚”，服务器用“台”。
+4. “+1 strength / +2 strength / +3 strength”统一译作“强度+1 / 强度+2 / 强度+3”，数值后置到属性名之后。
+5. “X is equal to …”统一译为“X等于……”。
+6. “3 or more / 4 or more”统一译为“3枚或更多 / 4枚或更多 / 3点或更多”，按对象补足单位。
+7. “up to N”优先译为“最多N”。
+8. “greater than / equal to or less than / exactly equal”分别译为“大于 / 等于或少于 / 与……相等”。
+9. for each … 常见表达是“每有1枚……，……”或“你每以此法……1张……，……”。
+
+八、标点与版式
+1. 中文主标点使用全角：，。；：（）。
+2. 规则标签后的冒号统一为全角“：”，例如“1[credit]：强度+1。”
+3. 箭头 `->` 保留 ASCII 形式，前后通常保留空格，与中文规则关键字连用，如“对接 -> …”“持久 -> …”。
+4. 括号说明通常改成全角中文括号“（……）”。
+5. 原文中的 HTML 强调标签不会体现在术语层面，实际译文只保留语义，不保留 `<strong>` 之类标记。
+6. 多段效果如果原文按换行分段，中文通常也保留分段，以维持能力结构清晰。
+
+九、风格与措辞偏好
+1. 译文偏好正式、客观、可执行的规则语气，避免口语化表达。
+2. “终止本次潜袭”是 end the run 的固定译法，不简化为“结束潜袭”。
+3. “略过”是 bypass 的固定译法，不改成“绕过”。
+4. “销毁”覆盖 trash 的普通规则含义，不用“弃掉”“废弃”等说法。
+5. “激活 / 关闭”稳定对应 rez / derez，保持术语闭环。
+6. 译文会主动补足隐含主语或宾语来消除歧义，例如“如果你如此做，给予潜袭者1枚锁定标记并造成3点网域伤害。”
+7. 部分英文结构在中文中会做顺句处理，例如把 instead 后置成“代替……”或改写为“则改为……”，但不改变规则结算逻辑。
+8. 对象一旦已经由 this / chosen / hosted 等结构限定，中文会持续沿用“本…… / 所选择的…… / 所附载的……”的形式，避免中途换称。
+
+十、可直接复用的实践建议
+1. 继续翻译时，先锁定术语，再处理句法；凡是出现在 glossary.json 的术语和模板，应优先沿用既有译法。
+2. 遇到英文中的 if / when / whenever / only if / instead / if you do 等逻辑连接词时，不要省略，必须在中文中显式落地。
+3. 遇到 this、that、chosen、hosted、installed 等限定词时，优先用“本 / 该 / 所选择的 / 所附载的 / 已安装的”体系保持一致。
+4. 遇到数值、图标、规则标签时，优先保留原记号，只翻译周围说明，不要自创替代记法。
+5. 如果新文本和既有模板只差对象名、数值或区域名，应尽量套用现成句式，而不是重新组织一套表达。
