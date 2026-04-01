@@ -1,0 +1,137 @@
+\documentclass{article}
+
+\usepackage[a4paper,bindingoffset=0.1in,left=0.8in,right=0.8in,top=0.8in,bottom=0.8in,footskip=.25in]{geometry}
+\usepackage[hidelinks]{hyperref}
+
+% Use Atkinson Hyperlegible font.
+\usepackage[sfdefault]{atkinson}
+\usepackage[T1]{fontenc}
+
+\usepackage{amssymb}
+\usepackage{changepage}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+\usepackage{outlines}
+\usepackage{soul}
+\usepackage{svg}
+\usepackage{xcolor}
+
+\graphicspath{{data/images/}}
+
+% Increase penalty for hyphenating to discourage hyphens/overstepping margin bounds.
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+% Display diamond character.
+\DeclareUnicodeCharacter{25C6}{$\blacklozenge$}
+
+% Subtitle.
+\newcommand*{\subtitle}[1]{{\Large #1 \vspace{2ex}}}
+
+% Counter for manually added references.
+\newcounter{manual_refs}
+
+% Change heading for table of contents.
+\renewcommand*{\contentsname}{Table of Contents}
+
+% Commands for underlined links.
+\newcommand*{\reful}[2]{\hyperref[#1]{\color{blue}\setulcolor{blue}\ul{#2}}}
+\newcommand*{\hreful}[2]{\href{#1}{\color{blue}\setulcolor{blue}\ul{#2}}}
+
+% Game term.
+\newcommand*{\gameterm}{\small\upshape\uppercase}
+
+\newcommand{\colorlabel}{%
+  \ifcolorlabel\bfseries\color{orange}\global\colorlabelfalse\fi
+}
+\newif\ifcolorlabel
+
+\begin{document}
+
+% Prelude
+
+\section*{\Huge{Netrunner Comprehensive Rules}}
+\subtitle{\color{darkgray}Null Signal Games}
+
+\noindent
+This rules document is to be used as reference material. It is not intended to be read straight through. If you still have questions after consulting this document, please ask us online via \hreful{mailto:rules@nullsignal.games}{email}.
+
+\noindent
+%__DATE_PLACEHOLDER__%
+
+\section*{Summary of Changes}
+\addcontentsline{toc}{section}{Summary of Changes}
+
+\noindent
+To see this document with a complete list of changes and with new material highlighted, please visit the \hreful{https://nullsignal.games/comp-rules}{Comprehensive Rules Hub} at \textlangle{}\hreful{https://nullsignal.games/comp-rules}{nullsignal.games/comp-rules}\textrangle.
+
+\begin{outline}[enumerate]
+\setlist[enumerate,1]{label=$\bullet$}
+%__CHANGELOG_PLACEHOLDER__%
+\end{outline}
+
+% Table of Contents
+
+\newpage
+
+% Add empty section, to make sure ToC self-link works correctly.
+\section*{}
+
+% ToC indentation.
+\makeatletter
+\renewcommand{\l@section}{\@dottedtocline{1}{1.8em}{1.4em}}
+\renewcommand{\l@subsection}{\@dottedtocline{2}{3.4em}{2.5em}}
+\renewcommand{\l@subsubsection}{\@dottedtocline{3}{6em}{2.5em}}
+\makeatother
+
+\addcontentsline{toc}{section}{Table of Contents}
+
+\begin{multicols}{2}
+  \tableofcontents
+\end{multicols}
+
+% Main Content
+
+\newpage
+
+% Change style for enumerate sections.
+\setlist[enumerate,1]{label=\protect\colorlabel\arabic{section}.\arabic{subsection}.\arabic*.,leftmargin=50pt,labelindent=15pt}
+\setlist[enumerate,2]{label=\protect\colorlabel\alph*.}
+
+%__DOCUMENT_PLACEHOLDER__%
+
+% Acknowledgements
+
+\newpage
+
+\section*{Acknowledgements}
+\addcontentsline{toc}{section}{Acknowledgements}
+
+\begin{outline}[enumerate]
+\setlist[enumerate,1]{label=$\bullet$}
+\setlist[enumerate,2]{label=$\circ$}
+\1 \emph{Netrunner} Original Game Design: Richard Garfield
+\1 \emph{Android: Netrunner}
+  \2 Game Development: Lukas Litzsinger
+  \2 Expansion Development: Lukas Litzsinger, Damon Stone, and Michael Boggs
+  \2 Rules by: Adam Baker, Michael Boggs, and Erik Dahlman
+  \2 Android Universe created by: Kevin Wilson with Daniel Lovat Clark
+\1 Null Signal Games
+  \2 Rules Manager: Jamie Perconti
+  \2 Rules Associates: Ruben P. Pieters and Justin Prentice
+  \2 Rules Editors: Jonny Foster
+  \2 Additional Contributions: Kayli Ammen, Noah Bogart, Pat Chapman, Tim Vaduva, and Olive Wesley
+\1 Github Repository Contributions: James Chamberlain, lostgeek, plural, and qwitwa
+\end{outline}
+
+\noindent
+Netrunner is a ™ of R. Talsorian Games, Inc. Android is ™ \& © Fantasy Flight Games.
+
+\noindent
+Although these rules are made to be compatible with cards from \emph{Android: Netrunner}, they are not in any way associated with or endorsed by Fantasy Flight Games, R. Talsorian Games, or Wizards of the Coast.
+
+\end{document}
