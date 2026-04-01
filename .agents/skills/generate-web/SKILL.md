@@ -8,11 +8,11 @@ Run one of these commands based on the user request:
 - If the user asks for "生成中文网页":
 
 ```bash
-uv run python -m rules_doc_generator -t web -p translation
+uv run python -m rules_doc_generator -t web -p translation -o translation/final
 ```
 
 - If the user asks for "生成英文网页":
 
 ```bash
-uv run python -m rules_doc_generator -t web -p data
+uv run python -m rules_doc_generator -t web -p data -o html
 ```
