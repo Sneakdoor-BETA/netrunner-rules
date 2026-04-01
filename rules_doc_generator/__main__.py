@@ -5,7 +5,7 @@ import os
 import shutil
 import yaml
 
-from rules_doc_generator.config import Config, parse_output_types, validate_nrdb_info_folder, default_config
+from rules_doc_generator.config import Config, parse_output_types, validate_data_path, validate_nrdb_info_folder, default_config
 from rules_doc_generator.model.main import standalone_html, standalone_latex, standalone_json, write_to_file
 from rules_doc_generator.input.yaml.parser import yaml_to_document, read_nrdb_info_from_file
 from rules_doc_generator.model.analysis.references import construct_reference_map
@@ -26,6 +26,9 @@ with open('config.yaml') as f:
     config = replace(config, effective_year=yaml_config["date"]["year"], effective_month=yaml_config["date"]["month"], effective_day=yaml_config["date"]["day"])
   if yaml_config["allow_unknown_cards"] is not None:
     config = replace(config, allow_unknown_cards=yaml_config["allow_unknown_cards"])
+  yaml_data_path = yaml_config.get("data_path")
+  if yaml_data_path is not None:
+    config = replace(config, data_path=validate_data_path(yaml_data_path))
 
 # Parse command line arguments.
 print("Reading Config...")
@@ -37,12 +40,15 @@ parser.add_argument("-d", "--day", help="Effective day", action="store")
 parser.add_argument("-b", "--php-base-path", help="Basepath of php server", action="store")
 parser.add_argument("-t", "--output-types", help="Output types", nargs="*", action="store")
 parser.add_argument("-n", "--nrdb-info-folder", type=validate_nrdb_info_folder, help="Folder to generate the NRDB info file from", action="store")
+parser.add_argument("-p", "--data-path", type=validate_data_path, help="Data root folder", action="store")
 parser.add_argument("-u", "--allow-unknown-cards", const=True, help="Allows unknown cards in input", action="store_const")
 args = parser.parse_args()
 if args.annotated is not None:
   config = replace(config, annotated=args.annotated)
 if args.nrdb_info_folder is not None:
   config = replace(config, generate_nrdb_info=True, nrdb_info_folder=args.nrdb_info_folder)
+if args.data_path is not None:
+  config = replace(config, data_path=args.data_path)
 if args.year is not None and args.month is not None and args.day is not None:
   config = replace(config, effective_year=args.year, effective_month=args.month, effective_day=args.day)
 if args.php_base_path is not None:
@@ -59,6 +65,7 @@ print("- Version String: " + str(config.version_string()))
 print("- Effective Date: " + str(config.effective_date_str()))
 print("- Annotated: " + str(config.annotated))
 print("- Output Types: " + str(config.output_types))
+print("- Data Path: " + str(config.data_path))
 print("- Generate NRDB Info: " + str(config.nrdb_info_folder))
 print("- Allow Unknown Cards: " + str(config.allow_unknown_cards))
 
@@ -94,13 +101,13 @@ if "web" in config.output_types:
   if os.path.exists('html'):
     shutil.rmtree('html')
   write_to_file('html', 'rules.html', standalone_html(document, config, model_data))
-  files = glob.iglob(os.path.join(os.path.join('data', 'images'), "*.svg"))
+  files = glob.iglob(os.path.join(config.data_path, 'images', "*.svg"))
   for file in files:
     shutil.copyfile(file, os.path.join('html', os.path.basename(file)))
-  shutil.copyfile(os.path.join('data', 'images', 'preview_placeholder.jpg'), os.path.join('html', 'preview_placeholder.jpg'))
-  shutil.copyfile(os.path.join('data', 'templates', 'html', 'rules.js'), os.path.join('html', 'rules.js'))
-  shutil.copyfile(os.path.join('data', 'templates', 'html', 'rules.css'), os.path.join('html', 'rules.css'))
-  shutil.copyfile(os.path.join('data', 'templates', 'html', 'extended.css'), os.path.join('html', 'extended.css'))
+  shutil.copyfile(os.path.join(config.data_path, 'images', 'preview_placeholder.jpg'), os.path.join('html', 'preview_placeholder.jpg'))
+  shutil.copyfile(os.path.join(config.data_path, 'templates', 'html', 'rules.js'), os.path.join('html', 'rules.js'))
+  shutil.copyfile(os.path.join(config.data_path, 'templates', 'html', 'rules.css'), os.path.join('html', 'rules.css'))
+  shutil.copyfile(os.path.join(config.data_path, 'templates', 'html', 'extended.css'), os.path.join('html', 'extended.css'))
 
 # Opengraph Web Version Output
 if "opengraph" in config.output_types:
@@ -108,15 +115,15 @@ if "opengraph" in config.output_types:
     shutil.rmtree('php')
   write_to_file('php', 'rules.html', standalone_html(document, config, model_data))
   write_to_file('php', 'rules.json', standalone_json(document, config, model_data))
-  files = glob.iglob(os.path.join(os.path.join('data', 'images'), "*.svg"))
+  files = glob.iglob(os.path.join(config.data_path, 'images', "*.svg"))
   for file in files:
     shutil.copyfile(file, os.path.join('php', os.path.basename(file)))
-  shutil.copyfile(os.path.join('data', 'images', 'preview_placeholder.jpg'), os.path.join('php', 'preview_placeholder.jpg'))
-  shutil.copyfile(os.path.join('data', 'templates', 'html', 'rules.js'), os.path.join('php', 'rules.js'))
-  shutil.copyfile(os.path.join('data', 'templates', 'html', 'rules.css'), os.path.join('php', 'rules.css'))
-  shutil.copyfile(os.path.join('data', 'templates', 'html', 'extended.css'), os.path.join('php', 'extended.css'))
-  shutil.copyfile(os.path.join('data', 'templates', 'php', 'index.php'), os.path.join('php', 'index.php'))
-  shutil.copyfile(os.path.join('data', 'templates', 'php', 'logo.png'), os.path.join('php', 'logo.png'))
+  shutil.copyfile(os.path.join(config.data_path, 'images', 'preview_placeholder.jpg'), os.path.join('php', 'preview_placeholder.jpg'))
+  shutil.copyfile(os.path.join(config.data_path, 'templates', 'html', 'rules.js'), os.path.join('php', 'rules.js'))
+  shutil.copyfile(os.path.join(config.data_path, 'templates', 'html', 'rules.css'), os.path.join('php', 'rules.css'))
+  shutil.copyfile(os.path.join(config.data_path, 'templates', 'html', 'extended.css'), os.path.join('php', 'extended.css'))
+  shutil.copyfile(os.path.join(config.data_path, 'templates', 'php', 'index.php'), os.path.join('php', 'index.php'))
+  shutil.copyfile(os.path.join(config.data_path, 'templates', 'php', 'logo.png'), os.path.join('php', 'logo.png'))
   phpConfigFile = "<?php\n$CONFIG = array (\n"
   phpConfigFile += f"  'base_path' => '{config.php_base_path}',\n"
   phpConfigFile += ");\n?>\n"

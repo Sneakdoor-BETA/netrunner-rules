@@ -1,3 +1,4 @@
+import os
 import re
 from typing import Any, Callable, TypeVar
 import yaml
@@ -190,13 +191,15 @@ def parse_with_default(obj: Any, field_type: str, default: A, parse_func: Callab
 
 def read_changelog_from_file(config: Config) -> list[FormatText]:
   print(f"Parsing changelog")
-  with open(f'data/changelogs/{config.version_string()}.yaml', "r", encoding="utf8") as stream:
+  changelog_path = os.path.join(config.data_path, 'changelogs', f'{config.version_string()}.yaml')
+  with open(changelog_path, "r", encoding="utf8") as stream:
     yaml_input = load_yaml(stream)
     return parse_changelog(yaml_input)
 
-def read_chapter_from_file(section_file: str) -> Chapter:
+def read_chapter_from_file(config: Config, section_file: str) -> Chapter:
   print(f"Parsing {section_file}")
-  with open(f'data/input/{section_file}.yaml', "r", encoding="utf8") as stream:
+  chapter_path = os.path.join(config.data_path, 'input', f'{section_file}.yaml')
+  with open(chapter_path, "r", encoding="utf8") as stream:
     yaml_input = load_yaml(stream)
     return parse_chapter(yaml_input)
 
@@ -233,7 +236,7 @@ def yaml_to_document(config: Config) -> Document:
     , "10_additional_rules"
     , "11_appendix_timing_structures"
     ]
-  chapters = list(map(read_chapter_from_file, chapter_files))
+  chapters = list(map(lambda section_file: read_chapter_from_file(config, section_file), chapter_files))
   return Document(changelog, chapters)
 
 def read_nrdb_info_from_file() -> dict[str, str]:

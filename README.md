@@ -199,3 +199,10 @@ For production deployment, do the following, after a successful `docker login re
  
 * `docker compose pull`
 * `docker compose -f docker-compose.prod.yml -f docker-compose.yml up -d`
+
+## Custom Data Root
+
+By default, the generator reads from the `data` folder. You can override this root path in two ways:
+
+* Command line (highest priority): `python -m rules_doc_generator --data-path ./alt_data`
+* `config.yaml` (optional): `data_path: "./alt_data"`

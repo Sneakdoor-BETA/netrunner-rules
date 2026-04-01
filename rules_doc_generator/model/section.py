@@ -2,6 +2,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Optional, Union
 
+import os
 import re
 
 from rules_doc_generator.config import (Config)
@@ -413,7 +414,7 @@ class Document:
     return result
 
   def to_html(self, config: Config, model_data: ModelData) -> str:
-    html_template = open("data/templates/html/rules.html", "r")
+    html_template = open(os.path.join(config.data_path, "templates", "html", "rules.html"), "r")
     html_content = html_template.read()
     html_template.close()
 
@@ -430,7 +431,7 @@ class Document:
     return html_content
 
   def to_latex(self, config: Config, model_data: ModelData) -> str:
-    latex_template = open("data/templates/latex/template.tex", "r")
+    latex_template = open(os.path.join(config.data_path, "templates", "latex", "template.tex"), "r")
     latex_content = latex_template.read()
     latex_template.close()
     

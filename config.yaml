@@ -7,3 +7,5 @@ date:
 output_types: [all]
 annotated: True
 allow_unknown_cards: False
+# Optional: root directory that contains input/changelogs/templates/images.
+data_path: "data"

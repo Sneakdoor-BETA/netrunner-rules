@@ -29,6 +29,7 @@ class Config:
   effective_day: str
   php_base_path: str
   output_types: list[str]
+  data_path: str
   allow_unknown_cards: bool
 
   def version_string(self):
@@ -50,4 +51,9 @@ def validate_nrdb_info_folder(file: str):
         raise argparse.ArgumentTypeError(f"{file} does not exist")
     return file
 
-default_config = Config(False, False, "", "XXXX", "XX", "XX", "", ["all"], False)
+def validate_data_path(path: str):
+    if not os.path.isdir(path):
+        raise argparse.ArgumentTypeError(f"Data path does not exist or is not a directory: {path}")
+    return path
+
+default_config = Config(False, False, "", "XXXX", "XX", "XX", "", ["all"], "data", False)
