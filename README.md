@@ -206,3 +206,10 @@ By default, the generator reads from the `data` folder. You can override this ro
 
 * Command line (highest priority): `python -m rules_doc_generator --data-path ./alt_data`
 * `config.yaml` (optional): `data_path: "./alt_data"`
+
+## Custom Web Output Path
+
+By default, web output files are written to the `html` folder. You can override this path in two ways:
+
+* Command line (highest priority): `python -m rules_doc_generator -o ./dist_web` (or `--web-output-path ./dist_web`)
+* `config.yaml` (optional): `web_output_path: "./dist_web"`

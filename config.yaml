@@ -7,5 +7,7 @@ date:
 output_types: [all]
 annotated: True
 allow_unknown_cards: False
+# Optional: output directory for web files (rules.html + static assets).
+web_output_path: "html"
 # Optional: root directory that contains input/changelogs/templates/images.
 data_path: "data"

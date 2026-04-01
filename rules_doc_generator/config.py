@@ -29,6 +29,7 @@ class Config:
   effective_day: str
   php_base_path: str
   output_types: list[str]
+  web_output_path: str
   data_path: str
   allow_unknown_cards: bool
 
@@ -56,4 +57,4 @@ def validate_data_path(path: str):
         raise argparse.ArgumentTypeError(f"Data path does not exist or is not a directory: {path}")
     return path
 
-default_config = Config(False, False, "", "XXXX", "XX", "XX", "", ["all"], "data", False)
+default_config = Config(False, False, "", "XXXX", "XX", "XX", "", ["all"], "html", "data", False)

@@ -26,6 +26,9 @@ with open('config.yaml') as f:
     config = replace(config, effective_year=yaml_config["date"]["year"], effective_month=yaml_config["date"]["month"], effective_day=yaml_config["date"]["day"])
   if yaml_config["allow_unknown_cards"] is not None:
     config = replace(config, allow_unknown_cards=yaml_config["allow_unknown_cards"])
+  yaml_web_output_path = yaml_config.get("web_output_path")
+  if yaml_web_output_path is not None:
+    config = replace(config, web_output_path=yaml_web_output_path)
   yaml_data_path = yaml_config.get("data_path")
   if yaml_data_path is not None:
     config = replace(config, data_path=validate_data_path(yaml_data_path))
@@ -41,6 +44,7 @@ parser.add_argument("-b", "--php-base-path", help="Basepath of php server", acti
 parser.add_argument("-t", "--output-types", help="Output types", nargs="*", action="store")
 parser.add_argument("-n", "--nrdb-info-folder", type=validate_nrdb_info_folder, help="Folder to generate the NRDB info file from", action="store")
 parser.add_argument("-p", "--data-path", type=validate_data_path, help="Data root folder", action="store")
+parser.add_argument("-o", "--web-output-path", help="Web output folder", action="store")
 parser.add_argument("-u", "--allow-unknown-cards", const=True, help="Allows unknown cards in input", action="store_const")
 args = parser.parse_args()
 if args.annotated is not None:
@@ -49,6 +53,8 @@ if args.nrdb_info_folder is not None:
   config = replace(config, generate_nrdb_info=True, nrdb_info_folder=args.nrdb_info_folder)
 if args.data_path is not None:
   config = replace(config, data_path=args.data_path)
+if args.web_output_path is not None:
+  config = replace(config, web_output_path=args.web_output_path)
 if args.year is not None and args.month is not None and args.day is not None:
   config = replace(config, effective_year=args.year, effective_month=args.month, effective_day=args.day)
 if args.php_base_path is not None:
@@ -65,6 +71,7 @@ print("- Version String: " + str(config.version_string()))
 print("- Effective Date: " + str(config.effective_date_str()))
 print("- Annotated: " + str(config.annotated))
 print("- Output Types: " + str(config.output_types))
+print("- Web Output Path: " + str(config.web_output_path))
 print("- Data Path: " + str(config.data_path))
 print("- Generate NRDB Info: " + str(config.nrdb_info_folder))
 print("- Allow Unknown Cards: " + str(config.allow_unknown_cards))
@@ -98,16 +105,16 @@ if "pdf" in config.output_types:
 
 # Web Version Output
 if "web" in config.output_types:
-  if os.path.exists('html'):
-    shutil.rmtree('html')
-  write_to_file('html', 'rules.html', standalone_html(document, config, model_data))
+  if os.path.exists(config.web_output_path):
+    shutil.rmtree(config.web_output_path)
+  write_to_file(config.web_output_path, 'rules.html', standalone_html(document, config, model_data))
   files = glob.iglob(os.path.join(config.data_path, 'images', "*.svg"))
   for file in files:
-    shutil.copyfile(file, os.path.join('html', os.path.basename(file)))
-  shutil.copyfile(os.path.join(config.data_path, 'images', 'preview_placeholder.jpg'), os.path.join('html', 'preview_placeholder.jpg'))
-  shutil.copyfile(os.path.join(config.data_path, 'templates', 'html', 'rules.js'), os.path.join('html', 'rules.js'))
-  shutil.copyfile(os.path.join(config.data_path, 'templates', 'html', 'rules.css'), os.path.join('html', 'rules.css'))
-  shutil.copyfile(os.path.join(config.data_path, 'templates', 'html', 'extended.css'), os.path.join('html', 'extended.css'))
+    shutil.copyfile(file, os.path.join(config.web_output_path, os.path.basename(file)))
+  shutil.copyfile(os.path.join(config.data_path, 'images', 'preview_placeholder.jpg'), os.path.join(config.web_output_path, 'preview_placeholder.jpg'))
+  shutil.copyfile(os.path.join(config.data_path, 'templates', 'html', 'rules.js'), os.path.join(config.web_output_path, 'rules.js'))
+  shutil.copyfile(os.path.join(config.data_path, 'templates', 'html', 'rules.css'), os.path.join(config.web_output_path, 'rules.css'))
+  shutil.copyfile(os.path.join(config.data_path, 'templates', 'html', 'extended.css'), os.path.join(config.web_output_path, 'extended.css'))
 
 # Opengraph Web Version Output
 if "opengraph" in config.output_types:
