@@ -1,0 +1,346 @@
+chapter: chpt_game_zones
+text: 游戏区域
+sections:
+- section: sec_game_zones_general
+  text: 总则
+  rules:
+  - subsection: rule_zone
+    text: 一个{term:区域}是在游戏中卡牌和指示物可以存在的地方。
+    rules:
+    - rule: rule_zone_types
+      text: |-
+        共有8种区域类型：牌组、手牌、弃牌堆、分数区、游戏区、银行、置于一旁区和移出游戏区。
+    - rule: rule_player_zones
+      text: 每位玩家各自拥有自己的牌组、手牌、弃牌堆和分数区。所有玩家共享游戏区、银行、置于一旁区和移出游戏区。
+    - rule: rule_card_in_one_zone
+      text: 游戏中的每张卡牌在同一时间都只存在于1个区域中。
+  - subsection: rule_move_between_zones
+    text: 游戏规则和卡牌效果可以在区域之间转移卡牌和指示物。有关卡牌移动的规则，见{ref:sec_card_movements}。
+    rules:
+    - rule: rule_reveal_from_hidden
+      text: 如果一张牌面朝下的卡牌，或一张位于隐藏区域中的卡牌，因某项要求该卡牌具有特定属性的效果而将要转移到另一个区域，则在转移到新区域之前必须先展示该卡牌。如果该卡牌正在被安装，则此规则仅在{ref:rule_install_from_hidden_or_secret_zone}所示情况下适用。
+      examples:
+      - text: 在结算{card:克隆体参政运动}时，公司选择档案库中的1张牌面朝下的{card:快速突破}。公司必须在将{card:快速突破}加入总部之前先展示它，以证明它确实是一张事务，满足{card:克隆体参政运动}的要求。
+    - rule: rule_move_instantaneous
+      text: 当一张卡牌从一个区域转移到另一个区域时，该转移是瞬时的。该卡牌不会同时存在于两个区域中，也不会完全不在任何区域中。
+  - rule: rule_outside_game
+    text: 一张不在任何区域中的卡牌即为游戏外卡牌。游戏外卡牌与移出游戏区中的卡牌不同，并且不能影响游戏。只有明确从游戏外带入额外卡牌的能力才能影响它们。见{ref:sec_extra_cards}。
+  - rule: rule_public_zone
+    text: 一个{term:公开的}区域是指，除非卡牌是牌面朝下的，否则其中的卡牌对双方玩家都能自由看见。游戏区、银行、置于一旁区、移出游戏区，以及双方玩家的分数区和弃牌堆都是公开区域。有关卡牌可见性的规则，见{ref:sec_card_visibility}；有关卡牌牌面朝上和牌面朝下状态的规则，见{ref:sec_faceup_facedown_status}。
+  - rule: rule_hidden_zone
+    text: 一个{term:隐藏的}区域是指其中的卡牌对任一玩家都不可见。每位玩家的牌组都是隐藏区域。
+  - rule: rule_secret_zone
+    text: 一个{term:秘密的}区域是指其中的卡牌只有其操控者可见。每位玩家的手牌都是秘密区域。
+  - subsection: rule_location
+    text: "{term:位置}是物件在某个区域内可以占据的具体位置。{term:目的地}是物件要被移动到的位置。"
+    rules:
+    - rule: rule_deck_location
+      text: 玩家牌组中的卡牌，其位置由它距离该牌组顶部有多少张卡牌来确定。
+    - rule: rule_play_area_location
+      text: 游戏区中的某些物件位于特定位置。见{ref:rule_play_area_organization}。
+    - rule: rule_hosted_object_location
+      text: 被附载物件的位置就是其主卡牌。
+    - rule: rule_default_location
+      text: 其他所有物件则只位于其所在区域中，没有更具体的位置。
+
+- section: sec_deck
+  text: 牌组
+  rules:
+  - rule: rule_draw_deck
+    text: 当游戏开始时，每位玩家在设置期间展示的牌组会成为其游戏中的抽牌牌组。
+  - rule: rule_deck_hidden
+    text: 牌组必须保持牌面朝下，卡牌对双方玩家都不可见。除非某条规则或卡牌能力明确指示，否则任一玩家都不能查看任何牌组中的卡牌。
+  - subsection: rule_deck_ordered
+    text: 牌组是有顺序的。除非某条规则或卡牌能力明确指示玩家操弄牌组中的卡牌，否则必须保持牌组中每张卡牌的位置。见{ref:rule_deck_location}。
+    rules:
+      - rule: rule_deck_order_while_searching
+        text: 在搜寻牌组时，玩家无需保持所搜寻卡牌的顺序，也无需标明搜寻到的任何卡牌先前所在的位置。注意，按照{ref:rule_shuffle_deck_after_search}的要求，搜寻完成后牌组总是会被洗混。
+  - rule: rule_deck_size_open_info
+    text: 牌组中的卡牌数量是公开信息。任一玩家可在任意时间数牌组中的卡牌数量。
+  - rule: rule_deck_inactive
+    text: 牌组中的卡牌是闲置的。
+  - rule: rule_deck_name
+    text: 每位玩家的牌组都有自己的名称，用以区分二者。
+  - subsection: subsec_rnd
+    text: 研发中心
+    toc:
+    snippet: R&D 代表“研究与开发”。它代表公司即将可供其支配的项目和收购对象。
+    rules:
+    - rule: rule_rnd_name
+      text: |-
+        {term:研发中心}是公司牌组的名称。它也是公司的其中一个中央服务器。见{ref:subsec_central_servers}。
+    - rule: rule_rnd_empty_rnd
+      text: 如果公司在R&D为空时必须从其中抽牌，则潜袭者赢得游戏。见{ref:sec_ending_the_game}。
+  - subsection: subsec_stack
+    text: 存储栈
+    toc:
+    snippet: |-
+      存储栈代表潜袭者尚未开发的潜力：未来计划、人脉以及他们尚未发现的机会。
+    rules:
+    - rule: rule_stack_name
+      text: "{term:存储栈}是潜袭者牌组的名称。"
+
+- section: sec_hand
+  text: 手牌
+  rules:
+  - rule: rule_hand
+    text: 玩家的{term:手牌}是其存放从牌组中抽取的卡牌的区域。其他规则和卡牌能力也可以将卡牌加入玩家的手牌。在设置期间，每位玩家抽取起始手牌。见{ref:sec_starting_the_game}。
+  - rule: rule_hand_secret
+    text: 玩家手牌对对手保持秘密。玩家可以查看自己的手牌，但不能查看对手手牌中的任何卡牌。
+  - rule: rule_hand_unordered
+    text: 手牌没有顺序。玩家可以在任意时间自由地按任意顺序整理自己手牌中的卡牌。
+  - rule: rule_hand_size_open_info
+    text: 手牌中的卡牌数量对所有玩家来说都是公开信息。任一玩家可在任意时间数手牌中的卡牌数量。
+  - rule: rule_hand_inactive
+    text: 手牌中的卡牌是闲置的。
+  - rule: rule_maximum_hand_size
+    text: 每位玩家都有手牌上限，通常为5。玩家在任意时间都可以在手牌中持有任意数量的卡牌，但在玩家回合的弃牌阶段，他们必须从手牌中弃除卡牌，直到手牌中的卡牌数量不再超过其手牌上限。见{ref:sec_discard_phase}。
+  - rule: rule_hand_name
+    text: 每位玩家的手牌都有自己的名称，用以区分二者。
+  - subsection: subsec_hq
+    text: 总部
+    toc:
+    snippet: HQ 代表“总部”。它代表公司被授权部署的项目、人员、技术和其他资产。
+    rules:
+    - rule: rule_hq_name
+      text: |-
+        {term:总部}是公司手牌的名称。它也是公司的其中一个中央服务器。见{ref:subsec_central_servers}。
+    - rule: rule_identity_represents_hq
+      text: 公司的特性卡牌在游戏中代表其总部服务器的位置。防护HQ的防火墙安装在公司特性卡牌前方，而安装在HQ根目录中的升级安装在公司特性卡牌后方。
+  - subsection: subsec_grip
+    text: 操控器
+    toc:
+    snippet: 操控器代表潜袭者当前可动用的思想、计划、知识、潜在人际联系以及其他可利用的无形信息。
+    rules:
+    - rule: rule_grip_name
+      text: "{term:操控器}是潜袭者手牌的名称。"
+
+- section: sec_discard_pile
+  text: 弃牌堆
+  rules:
+  - rule: rule_discard_pile
+    text: 玩家的{term:弃牌堆}是其放置已被销毁或弃除的卡牌的区域。弃牌堆在游戏开始时为空。
+  - rule: rule_discard_pile_unordered
+    text: 弃牌堆没有顺序。玩家可以在任意时间自由地按任意顺序整理弃牌堆中的卡牌。
+  - rule: rule_discard_pile_open_info
+    text: 弃牌堆中的卡牌数量是公开信息。任一玩家可在任意时间数弃牌堆中的卡牌数量。
+  - rule: rule_discard_pile_inactive
+    text: 弃牌堆中的卡牌是闲置的。
+  - rule: rule_discard_pile_inactive_name
+    text: 每位玩家的弃牌堆都有自己的名称，用以区分二者。
+  - subsection: subsec_archives
+    text: 档案库
+    toc:
+    snippet: 档案库代表公司内部记录数据库，记录着所有报废、废弃或停用的项目、合约、任务以及其他事务。
+    rules:
+    - rule: rule_archives_name
+      text: |-
+        {term:档案库}是公司弃牌堆的名称。它也是公司的其中一个中央服务器。见{ref:subsec_central_servers}。
+    - rule: rule_archives_faceup_facedown
+      text: 档案库中的卡牌可以牌面朝上，也可以牌面朝下。如果一张公司卡牌在被销毁或弃除时对潜袭者可见，则将其以牌面朝上的方式放入档案库。如果一张公司卡牌在被销毁或弃除时对潜袭者不可见，则将其以牌面朝下的方式放入档案库。档案库中的牌面朝下卡牌应水平摆放，以便潜袭者能轻易看出其存在。
+    - rule: rule_archives_faceup_open_info
+      text: 档案库中牌面朝上的卡牌属于公开信息。任一玩家可在任意时间查看档案库中牌面朝上的卡牌。档案库中牌面朝下的卡牌仅对公司可见。公司可在任意时间查看档案库中牌面朝下的卡牌，但潜袭者不能查看它们。
+  - subsection: subsec_heap
+    text: 堆阵
+    toc:
+    snippet: |-
+      堆阵代表潜袭者失去的一切：旧工作、耗尽的人情、久已离去的朋友、报废的装备以及被抹除的代码。
+    rules:
+    - rule: rule_heap_name
+      text: "{term:堆阵}是潜袭者弃牌堆的名称。"
+    - rule: rule_heap_open_info
+      text: 堆阵中的卡牌属于公开信息。任一玩家可在任意时间查看堆阵中的卡牌。
+
+- section: sec_score_area
+  text: 分数区
+  snippet: 分数区代表每位玩家为实现长期目标而取得的重大成果。公司的分数区包含其已经完成的所有大规模项目。潜袭者的分数区则纪念所有此类计划：它们被成功破坏、揭露，或将细节卖给出价最高者。
+  rules:
+  - rule: rule_score_area
+    text: 玩家的{term:分数区}是其放置已计分或已窃取议案的区域。{ref:Sec_score_scoring_steal}详述议案的计分和窃取。分数区在游戏开始时为空。
+  - rule: rule_score_area_open_info
+    text: 分数区中的议案属于公开信息。玩家可在任意时间查看或数点分数区中的议案。
+  - rule: rule_score_area_unordered
+    text: 分数区没有顺序。玩家可以在任意时间自由地按任意顺序整理自己分数区中的议案。
+  - rule: rule_score_area_active_inactive
+    text: 公司分数区中的议案是活动的。潜袭者分数区中的议案是闲置的，除非另有说明。
+
+- section: sec_play_area
+  text: 游戏区
+  rules:
+  - subsection: rule_play_area
+    text: "{term:游戏区}是共享的活动区域，卡牌会在其中被打出或安装。游戏区通常在游戏开始时为空，唯有每位玩家的特性卡牌除外。"
+    rules:
+    - rule: rule_play_area_start_game
+      text: |-
+        {ref:Sec_extra_cards}详述了某项能力可能使卡牌在游戏开始时位于游戏区中的情况。
+  - rule: rule_play_area_number_location_open_info
+    text: 游戏区中的卡牌数量以及每张卡牌在游戏区中的位置始终属于公开信息。
+  - rule: rule_play_area_card_open_info
+    text: 卡牌本身及其属性在游戏区中是否属于公开信息，取决于卡牌的状态。牌面朝上的卡牌属于公开信息，任一玩家可在任意时间查看。牌面朝下的卡牌属于秘密信息，只能由控制该卡牌的玩家查看。见{ref:sec_information}。
+  - subsection: rule_play_area_active_inactive
+    text: 卡牌在游戏区中是否处于活动状态，取决于其状态。
+    rules:
+    - rule: rule_play_area_identity
+      text: 特性卡牌在游戏开始时位于游戏区中，并始终处于活动状态。
+    - rule: rule_play_area_corp_cards
+      text: 通常情况下，公司议案、资产、防火墙和升级会以未激活状态安装到游戏区中，因此是闲置的。它们在已激活时处于活动状态。见{ref:sec_install_uninstall}。
+    - rule: rule_play_area_runner_cards
+      text: 通常情况下，潜袭者硬件、程序和资源会以牌面朝上且活动的状态安装到游戏区中。见{ref:sec_install_uninstall}。
+    - rule: rule_play_area_faceup_facedown
+      text: 某些潜袭者卡牌会通过卡牌能力以牌面朝下的方式安装，或被翻成牌面朝下。这与公司卡牌可能具有的已激活/未激活状态不同。牌面朝下的潜袭者卡牌不是活动的。见{ref:sec_facedown_runner_cards}。
+    - rule: rule_play_area_operations_events
+      text: 事务和事件会以牌面朝上的方式打出到游戏区中，并在结算期间处于活动状态，之后被销毁。见{ref:sec_playing_events_and_operations}。
+  - subsection: rule_play_area_organization
+    text: 游戏区中的某些物件会按特定朝向和/或位置进行组织。
+    rules:
+    - rule: rule_play_area_corp_cards_distinct_server
+      text: 公司卡牌被组织成不同的服务器。议案和资产安装在远程服务器的根目录中，升级安装在任意服务器的根目录中，而防火墙则水平安装在服务器前方以提供防护。见{ref:subsec_servers}和{ref:subsec_protecting_a_server}。
+    - rule: rule_play_area_corp_identity
+      text: 公司的特性卡牌用于标示HQ在游戏区中的位置，以便在HQ根目录中安装升级以及安装防护HQ的防火墙。见{ref:subsec_central_servers}。
+    - rule: rule_play_area_runner_identity
+      text: 潜袭者的特性卡牌、硬件、程序和资源在游戏区中没有特定位置。
+    - rule: rule_play_area_operation_events
+      text: 事务或事件在游戏区中没有特定位置。它们只是被打出到游戏区中，在结算完毕后便被销毁。见{ref:sec_playing_events_and_operations}。
+    - rule: rule_play_area_credit_pool
+      text: |-
+        {n}游戏区中的信用点始终放置在指定位置：公司的信用点池、潜袭者的信用点池、负面声誉基金，或被附载在卡牌上。有关信用点池的规则，见{ref:sec_credits}；有关负面声誉基金的规则，见{ref:sec_bad_publicity}。{/n}
+    - rule: rule_play_area_counters
+      text: |-
+        {n}锁定标记和负面声誉指示物{/n}在游戏区中没有特定位置{n}，除非它们被附载在卡牌上{/n}。其他类型的指示物要么只是无实际作用的游戏辅助物，要么只会出现在附载关系中。另见{ref:sec_counters_and_tokens}。
+    - rule: rule_play_area_installed_hosted
+      text: 某些卡牌在游戏区中可以充当其他卡牌的安装位置，使特定类型的卡牌在安装过程中可以直接附载到其上。在这种附载关系中，主卡牌和被附载卡牌都位于游戏区中，但附载关系可以影响卡牌本身或安装过程的某些方面。见{ref:sec_host}。
+    - rule: rule_play_area_not_installed_hosted
+      text: 某些卡牌可以附载其他卡牌，但不将其安装。在这种附载关系中，主卡牌和被附载卡牌都位于游戏区中，但被附载卡牌未被安装，因此不是活动的。见{ref:sec_host}。
+
+  - subsection: subsec_servers
+    text: 服务器
+    toc:
+    rules:
+    - rule: rule_server
+      text: "{term:服务器}是一组位置，公司会将其卡牌安装到这些位置中，而潜袭者可以对其发起潜袭。每当公司安装议案、资产、防火墙或升级时，必须为该卡牌选择一个目的地服务器。见{ref:sec_install_uninstall}。"
+    - rule: rule_corp_cards_cannot_be_moved
+      text: 一旦公司卡牌被安装，除非游戏规则或卡牌效果明确指示，否则不能从其服务器转移出去。
+    - rule: rule_server_types
+      text: 服务器分为两种：中央服务器和远程服务器。分别见{ref:subsec_central_servers,subsec_remote_servers}。
+    - rule: rule_server_ice
+      text: 所有服务器都可以安装防火墙进行防护。见{ref:subsec_protecting_a_server}。
+    - rule: rule_server_root
+      text: 所有服务器都有一个{term:根目录}，卡牌可以安装在其中。中央服务器的根目录可容纳任意数量的升级，而远程服务器的根目录可容纳1张资产或议案以及任意数量的升级。资产和议案不能安装在中央服务器的根目录中。
+    - rule: rule_server_root_order
+      text: 所有安装在服务器根目录中的卡牌都保持相同的朝向，并被放置在同一位置一起。它们的安装顺序属于公开信息，但远程服务器根目录中安装的卡牌类型不应能从其朝向或位置推断出来。
+    - rule: rule_region_unique
+      text: 同一时间，1个服务器根目录中只能安装1张{subtype:区域}升级。见{ref:subsec_regions}。
+    - rule: rule_upgrade_server_restriction
+      text: 某些升级有将其限制在特定服务器上的限制。见{ref:rule_x_server_only}。
+    - rule: rule_this_server
+      text: 某些卡牌会用“本服务器”来指代其所在的服务器（或其所在区域所对应的中央服务器）。如果一项能力是由与该能力来源卡牌从一台服务器、其根目录，或防护该服务器的位置移动到另一台服务器或一个不属于任何服务器的位置相关的触发条件或费用所引发，那么在结算该能力的整个过程中，“本服务器”都应理解为该卡牌先前所在位置所对应的服务器。如果一项能力在结算过程中移动其来源卡牌，则继续根据该卡牌先前所在的位置来解释“本服务器”。
+      examples:
+      - text: 潜袭者销毁了1张已激活的{card:生化战士追迹者}。这满足了{card:生化战士追迹者}能力的触发条件，但当检查点结算、且该能力的一个实例即将进入待结算状态时，{card:生化战士追迹者}本身已不再处于安装状态。触发条件中的“本服务器”仍指{card:生化战士追迹者}被销毁时所在的服务器，而不是{card:生化战士追迹者}在档案库中新位置所在的服务器。
+      - text: 公司使用{card:保密行政区网阵}赋予的能力销毁{card:边境管控}并结算其第1条子进程。该子进程中的“本服务器”指的是{card:边境管控}被销毁时所在的服务器。不过，{card:边境管控}已不再防护该服务器，因此计入的防火墙数量不包括它。
+      - text: 公司使用{card:纳尼西维克网阵}将档案库中的1张牌面朝下的{card:边境管控}翻为牌面朝上，并结算其第1条子进程。{card:边境管控}并未在服务器之间移动，所以该子进程中的“本服务器”指的是档案库。
+    - rule: rule_another_server
+      text: 如果当前或曾位于某台服务器、其根目录，或防护该服务器的物件上的一项能力提到“另一台服务器”，则其含义为除{ref:rule_this_server}所解释的“本服务器”之外的任何服务器。如果卡牌的能力涉及选择一台服务器，那么连锁能力中的“另一台服务器”指除所选服务器之外的任何服务器。如果前两种情况都不适用且当前正在进行潜袭，则“另一台服务器”指除被攻击服务器之外的任何服务器。
+    - rule: rule_host_server
+      text: 如果一个物件上的能力使用了“本服务器”这一短语，而该物件又被附载在另一个物件上（见{ref:sec_host}），则所指的服务器是主物件所在的服务器。
+
+  - subsection: subsec_central_servers
+    text: 中央服务器
+    toc:
+    rules:
+    - rule: rule_three_central_servers
+      text: |-
+        公司始终拥有3个{term:中央服务器}。每个中央服务器分别对应公司的某个区域：HQ对应公司的手牌，R&D对应公司的牌组，Archives对应公司的弃牌堆。
+    - rule: rule_hq_identity
+      text: 公司的特性卡牌位于游戏区中，用来标示HQ相对于其他服务器的位置，但它既不在HQ中，也不在HQ根目录中，亦不防护HQ。HQ中的卡牌就是公司手牌中的卡牌。安装在HQ根目录中的升级垂直放置在公司特性卡牌附近。防护HQ的防火墙水平放置在公司特性卡牌前方，并朝向潜袭者外侧。
+    - rule: rule_rnd_deck
+      text: 公司的牌组被放置在游戏区中，用来标示R&D相对于其他服务器的位置，但牌组中的卡牌并没有被安装。R&D中的卡牌就是牌组中的卡牌。安装在R&D根目录中的升级垂直放置在牌组附近。防护R&D的防火墙水平放置在牌组前方，并朝向潜袭者外侧。
+    - rule: rule_archives_discard_pile
+      text: 公司的弃牌堆被放置在游戏区中，用来标示Archives相对于其他服务器的位置，但弃牌堆中的卡牌并没有被安装。Archives中的卡牌就是弃牌堆中的卡牌。安装在Archives根目录中的升级垂直放置在弃牌堆附近。防护Archives的防火墙水平放置在弃牌堆前方，并朝向潜袭者外侧。
+
+  - subsection: subsec_remote_servers
+    text: 远程服务器
+    toc:
+    rules:
+    - rule: rule_remote_server
+      text: "{term:远程服务器}是唯一一种其根目录中可以容纳资产或议案的服务器。"
+    - rule: rule_creating_remote_servers
+      text: 公司在游戏开始时没有任何远程服务器。公司通过将即将安装的卡牌宣告为其目的地服务器来创建新的远程服务器。公司在任意时点通常可以拥有的远程服务器数量没有上限。
+    - rule: rule_separate_remote_servers
+      text: 安装在不同远程服务器根目录中的卡牌会以竖向朝向排列成一列，并向远离中央服务器的方向延伸，以表明这些远程服务器相对于其他服务器的位置。防护各个远程服务器的防火墙水平放置在该服务器根目录中任何卡牌的前方，并朝向潜袭者外侧。
+    - rule: rule_remote_server_existence
+      text: 只要其根目录中有卡牌，或者有卡牌防护它，远程服务器就存在。远程服务器可以只由防护它的防火墙构成，只由安装在其中的卡牌构成，或由二者共同构成。
+    - rule: rule_remote_server_cease_to_exist
+      text: 在检查点期间，如果远程服务器的根目录中没有安装卡牌，也没有卡牌防护它，则该远程服务器不再存在。如果在针对它的潜袭中服务器不再存在，则在当前开启的付费能力窗口关闭后，本次潜袭结束。除非本次潜袭已经被宣告为成功或失败，否则它既不算成功，也不算失败。见{ref:rule_server_ceases_to_exist}。
+    - rule: rule_limit_remote_servers
+      text: |-
+        某些能力会限制远程服务器的数量。只要该能力处于活动状态，如果创建新的远程服务器会使远程服务器总数超过所规定的上限，公司就不能创建新的远程服务器。在每个检查点的{ref:step_checkpoint_card_restrictions}期间，如果远程服务器数量超过活动中的上限所允许的数量，公司玩家选择数量等于该上限的服务器。随后该检查点销毁每个未被选择的远程服务器根目录中以及防护该服务器的所有卡牌。
+      examples:
+      - text: |-
+          公司的特性卡牌是{card:地球站：空梯管理局总部}，其能力为“限制1台远程服务器。”如果已经存在任何远程服务器，公司就不能创建新的远程服务器。
+
+  - subsection: subsec_protecting_a_server
+    text: 防护服务器
+    toc:
+    rules:
+    - rule: rule_ice_ordered
+      text: 已安装的一层防火墙水平放置在其所防护的服务器前方。防火墙在游戏区内是有顺序的。一层防火墙的位置由其所防护的服务器，以及它与该服务器之间隔着的其他防火墙数量决定。
+    - rule: rule_innermost_ice
+      text: 如果服务器与某层防火墙之间没有其他防火墙，则该防火墙是最内层防火墙。如果没有比某层防火墙更远离服务器的防火墙，则该防火墙是最外层防火墙。如果只有1层防火墙防护某个服务器，则该防火墙既是最内层防火墙，也是最外层防火墙。
+    - rule: rule_ice_same_position
+      text: 如果两层分别防护不同服务器的防火墙与各自所防护的服务器之间隔着相同数量的其他防火墙，则这些防火墙视为处于相同位置。
+    - rule: rule_ice_install_outermost
+      text: 当公司安装一层防护某个服务器的防火墙时，必须将其放在防护该服务器的最外层位置。见{ref:sec_install_uninstall}。
+    - rule: rule_ice_move
+      text: 如果某层防火墙与服务器之间的其他防火墙数量发生变化，其位置会相应改变，向服务器更近或更远移动。如果在潜袭中该防火墙正在被接驳、遭遇或通过时发生这种情况，攻击该服务器的潜袭者位置也会以同样方式改变。
+
+- section: sec_bank
+  text: 银行
+  rules:
+  - rule: rule_bank_counter_supply
+    text: "{term:银行}是双方玩家共享的闲置区域。它保存着供游戏过程中使用的无限量指示物。"
+  - rule: rule_counters_default_from_bank
+    text: 除非另有说明，放置到卡牌上或填装到卡牌上的指示物都取自银行。除非另有说明，玩家获得的指示物也取自银行。
+  - rule: rule_spent_counters_returned_to_bank
+    text: 支付费用时花费掉的信用点和其他指示物会返回银行。
+  - rule: rule_illegal_location_counters_returned_to_bank
+    text: 不在合法位置上的指示物会在检查点期间返回银行。见{ref:sec_checkpoints}。
+  - rule: rule_cards_never_in_bank
+    text: 卡牌从不会位于银行中。
+
+- section: sec_set_aside
+  text: 置于一旁
+  rules:
+  - rule: rule_set_aside_zone
+    text: "{term:置于一旁区}是双方玩家共享的闲置区域。它用作受能力影响的物件的临时存放区。"
+  - rule: rule_set_aside
+    text: 如果某物件被“置于一旁”，它会从当前区域转移到置于一旁区。
+  - rule: rule_set_aside_zone_passthrough
+    text: 除非某项能力明确将物件置于一旁，或提及被置于一旁的物件，否则该能力无法影响置于一旁区。除此之外，从置于一旁区转移到其他区域的卡牌，视为它们直接从被置于一旁之前的位置进入该区域。
+    examples:
+    - text: 潜袭者以{card:流亡者}为身份卡牌，并打出测试运行，从其堆阵中搜寻1张程序。虽然该程序在安装前先被置于一旁，但{card:流亡者}的能力将其视为仿佛直接从堆阵安装，因此{card:流亡者}会抽1张卡牌。
+  - rule: rule_searched_cards_set_aside
+    text: 在搜寻完成期间（尤其是在被搜寻的任何牌组洗混期间），搜寻中找到的卡牌会牌面朝下地置于一旁。见{ref:sec_searching_cards}。
+  - rule: rule_set_aside_hosted_counters_trash_ability
+    text: 某些带有触发费用、且会卸载或废除其能力来源卡牌的付费能力，需要提及或作用于该卡牌所附载的卡牌或指示物。这些能力会在支付触发费用时将所附载的卡牌或指示物置于一旁。见{ref:rule_trash_ability_keeps_track_of_hosted_objects}。
+  - rule: rule_set_aside_default_faceup
+    text: 由卡牌能力置于一旁的卡牌，除非该能力明确指示其牌面朝下地置于一旁，否则都为牌面朝上。
+  - rule: rule_facedown_set_aside_distinct_groups
+    text: 置于一旁区中的牌面朝下卡牌必须按照将其置于一旁的效果分成不同组别保存。组内的卡牌没有顺序，且可由其操控者自由整理。
+    examples:
+    - text: 潜袭者读取R&D顶牌，并没有窃取或销毁它。到了下一个回合，公司使用{card:每日商业秀}同时抽取那张牌和另1张卡牌，但必须将抽到的1张卡牌放到底部的R&D中。在结算抽牌时，这些卡牌会牌面朝下地置于一旁，因此公司可以将它们洗混。公司不必告诉潜袭者，先前读取的那张卡牌最终是进入总部还是进入R&D底部。
+
+- section: sec_removed_from_game
+  text: 移出游戏
+  rules:
+  - rule: rule_removed_from_game_zone
+    text: "{term:移出游戏区}是双方玩家共享的闲置区域。它用于在游戏结束前将卡牌移出任一玩家的控制。"
+  - rule: rule_rfg_move
+    text: 如果一张卡牌被移出游戏，则它会从当前区域转移到移出游戏区。
+  - rule: rule_forfeit_rfg
+    text: 废除一张议案会将其移出游戏。见{ref:movement_forfeit}。
+  - rule: rule_rfg_inactive
+    text: 已被移出游戏的卡牌是闲置的。
+  - rule: rule_rfg_no_interaction
+    text: 已被移出游戏的卡牌不能从移出游戏区离开，也不能以其他方式与之互动。
+  - rule: rule_rfg_open_information
+    text: 已被移出游戏的卡牌属于公开信息。任一玩家可在任意时间查看或数点已被移出游戏的卡牌。

@@ -1,0 +1,397 @@
+chapter: chpt_additional_rules
+text: 额外规则
+sections:
+- section: sec_additional_general
+  text: 总则
+  rules:
+  - rule: rule_uniqueness
+    text: |-
+      有些卡牌是独有的，在其名称前会有独有符号（◆）以示区别。相同名称的独有卡牌在同一时间内只能有1张处于活动状态。如果1张独有卡牌变为活动的，任何其他同名卡牌都会在下一个检查点被销毁。以这种方式销毁卡牌无法被防止。见 {ref:sec_checkpoints}。
+  - rule: rule_purge
+    text: |-
+      清除病毒指示物，就是移除卡牌上附载的所有病毒指示物，并将其返还银行。公司可以作为1个基础行动，或借助1项卡牌能力来清除病毒指示物。
+  - rule: rule_add_card_to_score_area
+    text: |-
+      有些能力会将1张卡牌加入玩家的分数区，作为1张议案。发生这种情况时，该卡牌失去其所有先前特性，只获得将其转换的效果所指定的那些特性。该转换持续到该卡牌移至非分数区的区域为止，此时其恢复为原本印刷的卡牌。如果这并非通过废除议案而发生，则立即销毁该卡牌。见 {ref:movement_forfeit}。
+  - rule: rule_card_to_counter
+    text: |-
+      有些能力可以将1张卡牌转换为1枚指示物。发生这种情况时，该卡牌失去其所有先前特性，只获得将其转换的效果所指定的那些特性。该转换持续到该指示物移至另一区域为止，此时其恢复为卡牌，重新获得其原本印刷的特征，并被销毁。
+  - rule: sec_old_self_reference_rules
+    text: 有些卡牌的文本采用自指性措辞。如果某张卡牌在提到自身名称时未使用“副本”一词，则将该名称视为写作“本物件”。
+    examples:
+    - text: |-
+        {card:狐女} 原始印刷版上的子进程包含短语“销毁狐女。”这句话的意思是“销毁本防火墙”。
+    - text: |-
+        {card:回力镖} 的文本提到“1张回力镖的副本”。这不是自指性措辞，而是指任何名为 {card:回力镖} 的卡牌。
+
+  - subsection: sec_infinite_loops
+    toc:
+    text: 无限循环
+    rules:
+    - rule: rule_mandatory_infinite_loop
+      text: 如果形成了强制无限循环（某位玩家不能选择停止结算该循环），则正在结算该循环的玩家选择1个次数。该循环会立即结算该次数，然后结束。
+      examples:
+      - text: |-
+          潜袭者遭遇1层已激活的 {card:虫洞}。场上唯一其他已激活的防火墙也是1层 {card:虫洞}，因此形成了一个强制无限循环，其中每个 {card:虫洞} 的子进程都会结算另一个。公司选择该循环发生的次数，例如2,157次，然后潜袭者继续该次潜袭。
+    - rule: rule_optional_infinite_loop
+      text: 如果在潜袭中形成了可选无限循环（某位玩家可以选择停止结算该循环），则潜袭者必须退出潜袭，除非另一项卡牌能力阻止其这么做。如果潜袭者不能退出潜袭，则由公司负责通过让潜袭者继续潜袭来结束该循环。
+  
+- section: sec_information
+  text: 信息
+  snippet: 游戏的核心在于信息。游戏的大部分内容都围绕着推断对手的卡牌与策略信息展开。
+  rules:
+  - rule: rule_hidden_or_open_information
+    text: |-
+      游戏中的信息分为{term:hidden information}或{term:open information}。
+  - subsection: subsec_hidden_information
+    text: 隐藏信息
+    toc:
+    rules:
+    - rule: rule_hidden_information
+      text: |-
+        {term:hidden information} 是指有关游戏、游戏状态或卡牌的、对1名或多名玩家不可见的信息。其中包括场上或档案库中牌面朝下的卡牌、总部或研发中心中的卡牌、潜袭者操控器或存储栈中的卡牌，等等。
+    - rule: rule_bluffing
+      text: 玩家不能在没有游戏效果、规则或其他玩家口头告知的帮助下获知隐藏信息。然而，如果某位能接触到有关游戏或某张卡牌信息的玩家选择以口头方式与对手分享这些信息，那么该玩家不必说真话。允许虚张声势。
+      examples:
+      - text: |-
+          潜袭者使用 {card:索引化}。在重新排列卡牌时，潜袭者先将 {card:智脑团} 放在研发中心顶端，随后放上 {card:圈套！}。公司在下个回合开始时抽牌，然后花费其第1个[click]抽1张卡牌。花费第2个[click]时，公司在1台空的远程服务器中安装1张卡牌，并告诉潜袭者应该去潜袭，因为那是 {card:智脑团}。
+  - subsection: subsec_open_information
+    text: 公开信息
+    toc:
+    rules:
+    - rule: rule_open_information
+      text: |-
+        {term:open information} 是指双方玩家都可获得的有关游戏、游戏状态、卡牌或能力的信息。其中包括档案库和堆阵中牌面朝上的卡牌、总部、研发中心、存储栈和操控器中的卡牌数量、信用池中的信用点数量，以及任何其他双方玩家持续可得的信息。
+    - rule: rule_cannot_hide_open_info
+      text: 公开信息不能向对手隐藏。如果玩家试图自行发现这些信息，对方必须允许其自己发现。
+      examples:
+      - text: |-
+          潜袭者安装 {card:蛇蝎美人}，并使用其能力选择1层保护总部的防火墙。潜袭者必须明确告知公司所选择的是哪1层防火墙，并且如果公司在之后的回合询问 {card:蛇蝎美人} 的目标，潜袭者仍必须如此说明。
+
+- section: sec_checkpoints
+  text: 检查点
+  rules:
+  - subsection: rule_checkpoints
+    text: |-
+      {term:checkpoint} 是一个过程，在这个过程中，会修正已进入非法状态的物件，移除已过期的效果，并检查其他重要条件。该过程会在游戏中的若干时点自动执行，并按顺序进行以下步骤：
+    steps:
+    rules:
+    - rule: step_checkpoint_conditional_abilities
+      text: |-
+        每项活动的条件能力都会查看自上一个检查点开始以来游戏状态的变化，以确认其条件是否已满足。任何已满足其条件的能力都会创建其自身的相应实例，并将其标记为待定，详见 {ref:sec_conditional_abilities}。
+    - rule: step_checkpoint_duration_abilities
+      text: 任何持续时间已到期的能力都会从游戏状态中移除。
+      examples:
+      - text: 在遭遇结束后紧接着的那个检查点中，在该次遭遇中提高了1个{subtype:icebreaker}强度的能力会过期，而该{subtype:icebreaker}的强度也会相应降低。
+      - text: |-
+          当潜袭者窃取1张议案时，公司有 {card:定向营销} 在游戏区中。在下一个检查点中，游戏会识别出 {card:定向营销} 上阻止该事务被销毁的能力已不再适用，因此公司将 {card:定向营销} 视为正在完成其结算，并将其销毁。
+    - rule: step_checkpoint_agenda_points
+      text: 如果任一玩家分数区中的议案合计达到7点或更多议案分数，该玩家赢得游戏。如果双方会同时以此方式获胜，则游戏平局结束。
+    - rule: step_checkpoint_uniqueness
+      text: |-
+        如果2张或更多同名独有（◆）卡牌处于活动状态，则对于每个这样的名称，除最近变为活动的那1张以外，其余所有这些卡牌都被销毁。如果2张或更多{subtype:console}卡牌在同一位玩家的操控下被安装，则对于每位该玩家，除最近变为活动的那1张以外，其余所有这些卡牌都被销毁。
+    - rule: step_checkpoint_card_restrictions
+      text: 如果任何物件违反了卡牌能力或游戏规则的限制（例如潜袭者的内存上限），或安装在或附载于非法位置，则会销毁这些物件中的一个适当集合。如果销毁该集合中的物件后，会使所有剩余已安装或所附载的物件都留在合法位置，并且在保持这一性质的前提下无法从该集合中移除任何一个物件，则该集合便是适当的。如果存在多个不同的适当集合，并且某位玩家操控着每个集合中的全部物件，则由该玩家选择要销毁哪一组。如果这些集合中包含由双方玩家操控的物件，则由主动玩家选择销毁哪一组。
+      examples:
+      - text: 潜袭者操控着1张附载于1层未激活防火墙上的 {card:凿子}。公司激活该防火墙，展示其为 {card:提托努利林}。由于 {card:提托努利林} 具有禁止卡牌附载于其上的能力，{card:凿子} 现在处于非法位置，必须被销毁。
+      - text: |-
+          当公司打出 {card:难关}，将内存上限降低2[MU] 时，潜袭者已安装的程序总内存费用与其内存上限相等。潜袭者可以销毁任意2个内存费用均为1[MU]的程序，或销毁任意1个内存费用为2[MU]或更高的程序。他们不能销毁任何内存费用为0[MU]的程序，也不能销毁任何包含多于1个程序且总内存费用大于2[MU]的集合，因为可以从该待销毁集合中移除某些物件，同时仍保持结果是合法游戏状态。
+    - rule: step_checkpoint_hosted_on_agenda
+      text: 任何原本附载在1张从分数区移至任一非分数区区域的议案上的物件都会被销毁。
+    - rule: step_checkpoint_hosted_on_installed_cards
+      text: |-
+        任何原本附载在已安装卡牌上、而该卡牌后来被卸载的物件都会被销毁，但因 {ref:rule_trash_ability_keeps_track_of_hosted_objects} 而暂时置于一旁区的卡牌或指示物除外。此步骤会重复执行，直到不再有卡牌或指示物被销毁。
+    - rule: step_checkpoint_remote_server
+      text: 任何没有卡牌保护、根目录中也没有卡牌，且没有卡牌正在安装到其保护位或根目录中的远程服务器都会不再存在。
+    - rule: step_checkpoint_vacant_position
+      text: 任何保护1台服务器、但并未被1层防火墙占据的位置都会不再存在，除非那是潜袭者当前所处的位置，或者有1层防火墙正在安装以保护该服务器。另见 {ref:rule_destroy_position}。
+    - rule: step_checkpoint_card_entering_root_during_breach
+      text: 如果某台服务器正在被侵入，且自上一个检查点以来有1张或更多卡牌进入了该服务器的根目录，则对于每张这类卡牌，潜袭者都要声明其是否会成为本次侵入中的可读取候选。另见 {ref:sec_determining_candidates}。
+      examples:
+      - text: 潜袭者读取 {card:偷袭！}，并在侵入某台服务器的过程中遭遇 {card:制图师}。{card:制图师} 的第2个子进程结算，公司利用其效果在正在被侵入的服务器的根目录中安装1张卡牌。安装完成后，潜袭者声明该卡牌是否成为可读取候选。如果它成为候选，潜袭者将在本次侵入的后续步骤中选择其读取。
+    - rule: step_checkpoint_discard_pile_cards
+      text: 弃牌堆中任何已被转换为指示物或议案的卡牌都会恢复其原本印刷的特征。
+    - rule: step_checkpoint_discard_pile_counters
+      text: 弃牌堆中的任何指示物都会返还银行。
+  - rule: rule_after_checkpoint_reaction_window
+    text: 检查点完成后，如果它将任何条件能力实例标记为待定，则会立即开启一个新的响应窗口来处理这些能力，即使这发生在另一个响应窗口中也是如此。响应窗口关闭后，游戏会继续执行该检查点之后原本应发生的内容。
+  - rule: rule_checkpoint_before_priority
+    text: |-
+      每当某位玩家将获得优先权时，首先会进行1个检查点。另见 {ref:rule_priority_window}。
+  - rule: rule_checkpoint_after_paying_cost
+    text: |-
+      每当某位玩家支付费用后，会立即进行1个检查点，然后才继续执行支付该费用的效果或时序结构。另见 {ref:sec_costs}。
+  - rule: rule_checkpoint_after_instruction_resolution
+    text: |-
+      每当一项指示完成结算后，会立即进行1个检查点，然后才会有下一项指示变为迫近。另见 {ref:sec_identifying_instructions}。
+  - rule: rule_checkpoint_after_timing_structure
+    text: 时序结构最后一步之后的检查点发生在该时序结构之外，相关的响应窗口也是如此。
+    examples:
+    - text: |-
+        潜袭者以 {card:杰斯敏德·萨林：幕后女孩} 身份，在对1台根目录中已激活 {card:惊奇迷乐园} 的服务器进行潜袭时窃取1张议案。由于 {card:惊奇迷乐园} 的能力在潜袭结束时满足其触发条件，因此它会在 {ref:step_run_complete} 之后的响应窗口中变为待定，并试图给予潜袭者2枚锁定标记。在该窗口中，潜袭时序结构已经关闭，而杰斯敏德的打断能力无法作用于那些锁定标记。
+
+- section: sec_damage
+  text: 伤害
+  rules:
+  - rule: rule_suffer_or_take_damage
+    text: |-
+      许多卡牌和防火墙子进程会对潜袭者造成伤害。潜袭者会按照所指定伤害类型的规则承受（有时也称为“受到”）伤害。如果某张公司卡牌“造成”对潜袭者的伤害，则潜袭者承受相应数值的伤害，且公司与该来源卡牌要对该伤害负责。如果某张卡牌指示或允许潜袭者“承受”伤害，则由潜袭者与该来源卡牌对该伤害负责。
+    examples:
+    - text: |-
+        公司以 {card:阿戈斯防卫所：安全无忧} 身份计分了 {card:清除者}。潜袭者对研发中心发动潜袭并窃取 {card:恶意收购}。{card:阿戈斯防卫所：安全无忧} 的能力触发，潜袭者选择承受2点肢体伤害。由于 {card:清除者} 只会为公司造成的伤害增加额外伤害，其能力不适用。等到公司在下个回合打出 {card:强硬反击} 时，{card:清除者} 就会增加 {card:强硬反击} 造成的伤害数值。
+  - subsection: rule_damage_types
+    text: 潜袭者可以承受的3种伤害类型是肢体伤害、网域伤害和核心伤害
+    rules:
+    - rule: rule_meat_net_damage
+      text: |-
+        肢体伤害和网域伤害的结算方式相同。每承受1点此类伤害，{n}对该伤害负责的玩家会从操控器中销毁1张随机选择的卡牌{/n}。
+    - rule: rule_core_damage
+      text: |-
+        每承受1点核心伤害，{n}对该伤害负责的玩家会从操控器中销毁1张随机选择的卡牌{/n}，且潜袭者的最大手牌上限会永久降低1。潜袭者每承受1点核心伤害都会拿取1枚核心伤害指示物，以记录手牌上限的降低。
+    - rule: rule_brain_damage
+      text: 有些卡牌会提到“脑部伤害”。这是核心伤害的旧称。两者可以互换使用。
+  - subsection: rule_multiple_damage_taken_simultaneously
+    text: 如果潜袭者一次承受了超过1点任意类型的伤害，这些卡牌会被同时随机销毁。
+    examples:
+    - text: |-
+        潜袭者有2枚锁定标记，操控器中有4张卡牌，其中1张是 {card:这还不算惨}。公司打出 {card:轰！}，对潜袭者造成7点肢体伤害。如果潜袭者不能防止，或者不选择防止，至少3点即将到来的伤害，他们会立即死亡，因为承受的伤害已超过操控器中的卡牌数量，而 {card:这还不算惨} 也没有机会结算。如果潜袭者确实防止了足够的伤害以幸存下来，则潜袭者会随机销毁与剩余伤害数值相同数量的卡牌。所有卡牌都随机选定并置入堆阵后，如果 {card:这还不算惨} 在那些因伤害而被销毁的卡牌之中，它就满足其触发条件。
+    rules:
+    - rule: rule_multiple_damage_selected_sequentially
+      text: 如果某项效果将造成伤害的流程改为不能同时选择要销毁的卡牌，那么这些卡牌会按顺序选择，但仍会同时被销毁。
+      examples:
+      - text: |-
+          当潜袭者在本回合尚未受到其他伤害前先读取了 {card:圈套！} 时，公司正以 {card:柯罗诺斯协议：选择性的心智图} 身份行动。公司查看操控器并选择1张要作为本回合第1点网域伤害销毁的卡牌，然后又随机选择另外2张卡牌。3张卡牌会同时被销毁。
+  - rule: rule_flatline_damage_reference
+    text: 如果潜袭者承受的伤害超过其操控器中的卡牌数量，则其死亡。另见 {ref:rule_flatline}。
+
+- section: sec_tags
+  text: 锁定标记
+  snippet: |-
+    锁定标记代表公司掌握了有关潜袭者的有价值信息，例如其留下的数据痕迹或其进行接入的实际地点。
+  rules:
+  - rule: rule_tag
+    text: |-
+      {term:tag} 指放置在潜袭者身上的1枚锁定标记指示物。锁定标记用于卡牌能力和基础行动。
+  - rule: rule_tagged
+    text: |-
+      如果潜袭者身上有1枚或更多锁定标记，则其为{term:tagged}。
+  - rule: rule_tagged_trash_resource
+    text: |-
+      只要潜袭者被锁定，公司就可以作为1个行动，花费[click]和2[c]，销毁潜袭者的一张资源卡牌。
+  - rule: rule_tagged_remove_tag
+    text: |-
+      只要潜袭者被锁定，其就可以作为1个行动，花费[click]和2[c]，移除1枚锁定标记，并将其返还银行。
+- section: sec_bad_publicity
+  text: 负面声誉
+  snippet: |-
+    没有人喜欢腐败的公司，至少大多数人是这么说的。如果公司声名狼藉，潜袭者就更容易找到协助来攻击该公司的服务器。这里将这种额外协助抽象为潜袭者可在潜袭中使用的额外信用点。
+  rules:
+  - rule: rule_bad_publicity
+    text: |-
+      {term:bad publicity} 指放置在公司身上的1枚负面声誉指示物。负面声誉用于卡牌能力以及潜袭中。
+  - rule: rule_bad_publicity_fund
+    text: |-
+      {term:bad publicity fund} 是游戏区中的1个位置，可以容纳信用点。负面声誉资金池中的信用点由潜袭者操控，但不属于潜袭者的信用池。潜袭者可以在潜袭中花费负面声誉资金池中的信用点。
+    new:
+  - subsection: rule_bad_publicity_added_and_removed
+    text: 在每次潜袭中，都会有信用点被加入和移出负面声誉资金池。
+    new:
+    rules:
+    - rule: rule_bad_publicity_beginning_run
+      text: 在 {ref:step_initiation_bad_publicity} 期间，每有1点公司拥有的负面声誉，潜袭者就从银行向负面声誉资金池加入1[c]。
+      new:
+    - rule: rule_bad_publicity_gone_in_run_ends_phase
+      text: 在 {ref:step_run_ends_bad_publicity} 期间，潜袭者会将负面声誉资金池中剩余的信用点返还银行。
+      new:
+    - rule: rule_bad_publicity_during_run
+      text: 如果公司在一次潜袭的 {ref:step_initiation_bad_publicity} 之后获得负面声誉{n}，或移除负面声誉，这对该次潜袭中负面声誉资金池中的信用点没有影响。{/n}
+
+- section: sec_link
+  text: 中转
+  snippet: |-
+    潜袭者的中转值是其网路路径在其装备组与公司服务器之间经过的中转点数。公司与潜袭者之间的代理、重定向及其他中间连接点越多，系统管理员就越难追踪潜袭者的虚拟位置。
+  rules:
+  - rule: rule_link_value
+    text: |-
+      潜袭者的{term:link value}由其身份卡上的基础中转加上其已安装卡牌提供的中转（[link]）计算得出。
+  - rule: rule_link_contests_traces
+    text: |-
+       中转主要用于对抗追踪，详见 {ref:sec_traces}，但其他能力也可以引用潜袭者的中转值。
+
+- section: sec_traces
+  text: 追踪
+  snippet: |-
+    追踪是公司试图从其服务器回连潜袭者的尝试。许多追踪可以让公司获得有关潜袭者的信息，并给其加上锁定标记，但追踪也可以产生各种其他效果。追踪最常见于防火墙子进程，但公司的事务也能制造一些最棘手的追踪效果。
+  rules:
+  - rule: rule_trace_attempt_and_base_trace_strength
+    text: |-
+      有些卡牌能力会对潜袭者发起一次{term:trace attempt}（有时简称为{term:trace}）。卡牌上以“Trace [N]”字样标示追踪，其中给定数值 N 是该追踪的{term:base trace strength}。追踪会让公司的追踪强度与潜袭者的中转强度相对抗，这两者都可以通过花费信用点提高。
+  - rule: rule_trace_strength
+    text: |-
+      在追踪尝试中，公司先行动，公开花费任意数量的信用点。这会设定{term:trace strength}，其数值等于基础追踪强度加上所花费的信用点数。
+  - rule: rule_link_strength
+    text: |-
+      在公司花费其信用点后，潜袭者有机会花费信用点来确定其中转强度。潜袭者的{term:link strength}等于其中转值加上所花费的信用点数。
+  - rule: rule_compare_trace_and_link_strength
+    text: 在潜袭者的中转强度确定后，将其与公司的追踪强度进行比较。如果追踪强度高于中转强度，则追踪尝试成功，且与该追踪相关的任何“如果成功”能力都满足其触发条件。如果中转强度等于或高于追踪强度，则追踪尝试失败，且与该追踪相关的任何“如果失败”能力都满足其触发条件。
+  - rule: rule_trace_conditional_abilities
+    text: |-
+      位于“Trace [N]”指示之后的“如果成功”和“如果失败”效果，都是与追踪结果相绑定的条件能力。追踪正文中任何没有“如果成功”或“如果失败”的指示，都属于条件能力，其隐含触发条件为“当追踪结果被判定为成功或失败时”。
+    examples:
+    - text: |-
+        {card:双子座} 的子进程发起一次追踪尝试，并附带2个条件能力。第1个是“如果成功，造成1点网域伤害。”第2个是“当追踪结果被判定为成功或失败时，如果你的追踪强度为5或更高，造成1点网域伤害。”如果适用，这2个能力都会在下面的 {ref:step_trace_determine_success} 之后变为待定。
+  - subsection: rule_steps_of_resolving_trace_attempt
+    text: 结算追踪尝试的步骤
+    toc:
+    steps:
+    rules:
+    - rule: step_trace_initiated
+      text: 追踪开始。此时，任何“当追踪开始时”能力都满足其触发条件。
+    - rule: step_trace_checkpoint
+      text: 进行1个检查点。
+    - rule: step_trace_corp_spend_credits
+      text: 公司可以花费信用点来提高追踪强度。
+    - rule: step_trace_runner_spend_credits
+      text: 潜袭者可以花费信用点来提高其中转强度。
+    - rule: step_trace_determine_success
+      text: 追踪结果被判定为成功或失败。
+    - rule: step_trace_complete
+      text: 追踪结束。
+
+- section: sec_load_and_empty
+  text: 填装与清空
+  rules:
+  - rule: rule_load_and_empty
+    text: |-
+      将指示物填装到1张卡牌上，就是把那些指示物放置到该卡牌上。当某张卡牌不再附载任何之前曾被填装到其上的某一类型指示物时，该卡牌即为清空。
+  - rule: rule_empty_requires_loading
+    text: 某张卡牌上提到其变为清空的能力，始终与该卡牌上先前将其填装上指示物的前置能力相绑定。
+    examples:
+    - text: |-
+        潜袭者安装 {card:众筹}，其第1项能力变为待定。即使在该能力结算之前，{card:众筹} 上都没有附载信用点，但后面的“当其清空时，……”能力也不会满足其触发条件，因为该卡牌尚未被填装。
+  - rule: rule_meeting_empty_condition
+    text: 如果在未经过填装的情况下将其他类型的指示物放置到该卡牌上，且这些指示物之后被移除，那么该卡牌上以其清空为条件的能力不会满足其条件。
+  - rule: rule_loading_does_not_restrict_counters
+    text: 将指示物填装到1张卡牌上，并不会对该卡牌上的这些指示物施加任何额外限制。其他能力仍然可以指示对该类型的指示物执行动作，包括但不限于再放置更多该类指示物，或者移除其中一部分。
+
+- section: sec_charge
+  text: 充能
+  snippet: |-
+    潜袭者的生活总是充满流动与适应；其装备组不断维修升级，藏身处也在不断变换，而随身物品来来去去。凭借创造力与技巧，潜袭者可以为自己的工具和资源注入个人风格，从而让它们发挥出比其他任何人都更超乎想象的效用。
+  rules:
+  - rule: rule_charge
+    text: |-
+      充能，就是在1张已经至少附载1枚能量指示物的卡牌上放置1枚能量指示物。没有附载能量指示物的卡牌不能被充能。
+  - rule: rule_charge_targets
+    text: |-
+      如果某项指示要求玩家从一组卡牌中充能1张或更多卡牌，那么要被充能的具体卡牌会被选为该指示的目标。只有所示集合中至少附载1枚能量指示物的卡牌才是有效目标。见 {ref:sec_targets}。
+  - rule: rule_charge_requires_hosted_counter
+    text: 如果某项指示要求你充能某张特定卡牌，则仅当该卡牌在该指示变为迫近时至少附载1枚能量指示物时，这部分指示才能结算。
+
+- section: sec_mark
+  text: 目标
+  snippet: |-
+    一位精明的潜袭者总是准备好利用意外之财或脆弱的瞬间：无人看守的货运、来自可信朋友的突发情报、疏忽的警卫，或仅仅是未受保护的 PAD。许多潜袭者将这些机会称为“目标”，并会追逐它们以获取读取与利润。
+  rules:
+  - subsection: rule_mark
+    text: |-
+      {term:mark} 是可应用于某台特定服务器的一个指定。它本身没有固有效果，但能力可以引用它。
+    rules:
+    - rule: rule_only_one_mark
+      text: 任何时候都只会有1台服务器被指定为目标，而所有提及某位玩家的目标的卡牌都共享同1台被指定的服务器。
+  - subsection: rule_mark_identification
+    text: 如果某位玩家被指示“识别你的目标”，则先确定当前是否有任何服务器被指定为目标。如果没有目标，则随机1台中央服务器在本回合剩余时间内成为目标。
+    rules:
+    - rule: rule_mark_identification_method
+      text: 随机中央服务器可以通过任何方法选出，只要 3 台中央服务器（总部、研发中心和档案库）被选中的概率相等即可。推荐的方法包括：从移出游戏区选出1张卡牌分别代表1台服务器，洗混这3张卡牌并抽1张；或者用骰子上相同数量的面分别代表每台服务器，然后掷骰。
+  - rule: rule_mark_already_identified
+    text: 如果某台服务器已经被指定为目标，那么“识别你的目标”这项指示不会产生任何效果。该目标在本回合剩余时间内不可更改。
+  - rule: rule_mark_designation_lingering_effect
+    text: 将某台服务器指定为目标会被视为1个在回合结束时过期的存留效果。当该效果过期时，除非另有“识别你的目标”的指示结算，否则不会有目标。
+  - rule: rule_mark_designated_condition_check
+    text: 当某个条件检查与某位玩家的目标相关的游戏属性时，它只检查该服务器被指定为目标时起算的内容。
+    examples:
+     - text: |-
+         潜袭者当前没有目标，并打出 {card:越狱} 对总部发动潜袭。当潜袭成功时，他们通过 {card:越狱} 的能力抽取 {card:演奏大师}。潜袭者继续其回合，安装 {card:演奏大师} 并打出 {card:时不再来}。如果 {card:时不再来} 中“识别你的目标”的指示使总部成为目标，那么它所允许的后续潜袭就会在成功时满足 {card:演奏大师} 第3项能力的触发条件。尽管本回合之前已经有一次对总部的成功潜袭，但当时总部并未被指定为目标，因此这次由 {card:时不再来} 发起的潜袭，才是潜袭者本回合第一次对其目标发动成功的潜袭。潜袭者在侵入总部时将额外读取1张卡牌。
+
+- section: sec_sabotage
+  text: 破坏
+  snippet: |-
+    破坏可以悄无声息地从内部削弱公司、组织抗议行动、击沉一艘运输船，或者仅仅激励他人将行动进一步扩散。恰到好处的一次破坏，足以严重限制公司的选择，并迫使其做出艰难决定。
+  rules:
+  - rule: rule_sabotage
+    text: |-
+      有些潜袭者卡牌能力会对公司造成{term:sabotage}。“破坏 N”这项指示会指示公司从总部和研发中心顶端合计销毁 N 张卡牌。
+  - subsection: rule_sabotage_resolution
+    text: 结算破坏效果时，公司先选择要从总部销毁哪些卡牌，并确定还需要从研发中心顶端销毁多少张卡牌。然后，这些卡牌会同时被销毁。
+    rules:
+    - rule: rule_sabotage_facedown
+      text: 被破坏效果销毁的卡牌会牌面朝下进入档案库。
+    - rule: rule_sabotage_when_corp_can_look_facedown
+      text: 在为该效果的结算做出所有决定之前，公司不能查看因破坏效果而从研发中心销毁的卡牌。
+  - subsection: rule_sabotage_with_not_enough_cards
+    text: 在结算“破坏 N”效果时，如果另一处区域中的卡牌不足，公司可能需要从某个指定区域销毁卡牌。
+    rules:
+    - rule: rule_sabotage_hq_first
+      text: 如果研发中心中的卡牌少于 N 张，但总部与研发中心合计至少有 N 张卡牌，则公司必须选择足够多的总部卡牌销毁，使得还需从研发中心顶端销毁的卡牌数不超过研发中心中的实际卡牌数。
+    - rule: rule_sabotage_all_remaining_cards
+      text: 如果总部和研发中心合计少于 N 张卡牌，则公司会销毁总部和研发中心中的所有卡牌。
+      examples:
+      - text: |-
+          潜袭者利用 {card:艾萨·阿方托夫：生态起义者} 的能力破坏2。公司在总部有2张卡牌，在研发中心有30张卡牌。公司可以选择不从总部销毁任何卡牌，而从研发中心顶端销毁2张卡牌；也可以从总部选1张卡牌销毁，并销毁研发中心顶端的1张卡牌；或者选择并销毁总部中的2张卡牌。
+      - text: 潜袭者利用 {card:恰斯图什卡} 的能力破坏4。公司在总部有5张卡牌，在研发中心有2张卡牌。公司必须至少选择2张总部卡牌销毁，这样总共销毁的卡牌数才会达到4。
+      - text: |-
+          潜袭者利用 {card:恰斯图什卡} 的能力破坏4。公司在总部有2张卡牌，在研发中心有1张卡牌。公司必须销毁总部和研发中心中的所有卡牌。
+
+- section: sec_dividends
+  text: 红利
+  snippet: 红利是公司因在议案上投入过多而获得的奖励。红利可能代表建设生物材料的丰收、调查记者揭露（或编造）出一个特别有效的故事，或者只是在一次特别冒险的投资后收获创纪录的利润。
+  rules:
+  - rule: rule_dividends 
+    text: |-
+      {term:Dividends} 是表示一项条件能力的关键字。“Dividends N”意为“当你计分该议案时，每有1枚超出其推进需求的附载推进指示物，便在其上放置 N 枚议案指示物。”
+    examples:
+    - text: 公司以5枚推进指示物对 {card:卧底报道} 计分。公司会在其分数区中的该议案上放置4枚议案指示物，也就是每1枚多余的推进指示物对应2枚议案指示物。
+  - rule: rule_dividends_timing
+    text: 红利能力会检查其来源议案在开始计分时的推进需求和其上附载的推进指示物数量，也就是在其移至公司的分数区之前。
+    examples:
+    - text: 公司拥有 {card:忆存计划}，并在某台服务器的根目录中有1张已激活的 {card:圣加州城际网阵}。公司推进 {card:忆存计划} 3次并对其计分。{card:忆存计划} 移至公司的分数区后，其上附载的推进指示物全部移除，而 {card:圣加州城际网阵} 的修正也不再适用。但在其被计分时，它确实有3枚附载推进指示物，且推进需求为2，因此公司会用其红利1能力在其上放置1枚议案指示物。
+
+- section: sec_bidding
+  text: 出价
+  rules:
+  - rule: rule_bidding
+    text: |-
+      {term:bid} 是玩家在结算一项能力时秘密选择花费的信用点数。有些效果只指示单一玩家出价，而另一些效果则要求双方玩家同时出价。
+  - rule: rule_bid_secret
+    text: 玩家秘密选择其出价。这可以通过写下一个数字、将若干信用点指示物藏在紧握的拳头中，或任何其他明确无歧义的方法完成。
+  - rule: rule_bid_possible
+    text: 玩家不能出价超过其能够花费的信用点数。玩家始终可以出价0[c]。
+    examples:
+    - text: 当潜袭者对根目录中已激活 {card:阿德里安·赛斯} 的服务器发动一次成功的潜袭时，其信用池中没有信用点，而 {card:剑术师弗恩诺} 上附载有1点信用点。当 {card:阿德里安·赛斯} 上的能力结算时，双方玩家进行一次灵能博弈，要求他们都出价0、1或2[c]。在这种情况下，潜袭者不能出价2[c]，因为其无法花费那么多信用点。不过，其可以出价1[c]，因为它可以花费 {card:剑术师弗恩诺} 上的那点信用点来支付该出价。
+    - text: 潜袭者遭遇 {card:急盼回复}，其子进程结算。后来在该次潜袭中，他们又被另一项能力要求出价信用点。由于 {card:急盼回复} 的子进程效果禁止潜袭者花费信用点，因此其必须出价0[c]。
+  - subsection: rule_bid_reveal_spend
+    text: 在所有出价都选定后，要求出价的能力会继续结算。随后，玩家会被指示展示其出价。一旦出价被展示，每位玩家都必须立即花费与其出价相等数量的信用点。
+    rules:
+    - rule: rule_bid_spent_immediately
+      text: 为已展示的出价花费信用点并不是一项条件能力，也不会在展示出价数额后等待检查点或优先权窗口。
+    - rule: rule_bid_is_cost
+      text: 为出价花费信用点算作支付1项内部费用。见 {ref:sec_costs}。
+    - rule: rule_bid_payment_choices
+      text: 如果双方都在出价，并且某位玩家有多个可用的信用点来源来支付其出价（见 {ref:rule_spend_credits}），那么该玩家会在得知对手出价的信用点数后选择如何支付。如果双方都有多种支付其出价的方法，则先由主动玩家选择如何支付，再由非主动玩家选择如何支付。在任何一种情况下，这些信用点都是同时花费的。
+  - rule: rule_bid_secretly_spend
+    text: 有些较旧的卡牌会指示玩家“秘密花费信用点”，但并未提到出价。这些能力仍然遵循出价规则。基于玩家“秘密花费信用点”或“展示秘密花费的信用点”的触发条件，会在出价被展示并支付后下一个检查点满足。
+
+  - subsection: sec_psi_games
+    toc:
+    text: 灵能博弈
+    rules:
+    - rule: rule_psi_game
+      text: |-
+        {term:Psi Game} 是一种出价竞赛，其结果取决于每位玩家出价的信用点数是否相同。指示“进行一次灵能博弈。”同时包含出价和展示出价这两个步骤。
+    - rule: rule_psi_bid_options
+      text: 进行灵能博弈时，每位玩家都可以出价0[c]、1[c]或2[c]。
+    - rule: rule_psi_bid_reveal
+      text: 进行灵能博弈被视为1项单独指示。双方玩家为灵能博弈选定出价后，会立即转入展示并花费其出价。在双方玩家都为其出价付费之后，此过程中不会有检查点。
+    - rule: rule_psi_outcome
+      text: 在要求进行灵能博弈的能力中，后续指示将取决于灵能博弈的结果。若公司与潜袭者出价的信用点数相同，则满足“如果出价相同”这一条件。若公司与潜袭者出价的信用点数不同，则满足“如果出价不同”这一条件。

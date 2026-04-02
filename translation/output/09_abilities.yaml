@@ -1,0 +1,1102 @@
+chapter: chpt_abilities
+text: 能力
+sections:
+- section: sec_abilities_general
+  text: 通用
+  rules:
+  - subsection: rule_ability
+    text: 一个{term:ability}是卡牌或指示物上的独立文本单元、基础行动，或基础销毁能力。
+    rules:
+    - rule: rule_all_text_is_an_ability
+      text: 卡牌或指示物上的所有规则文本都是能力的一部分。
+    - rule: rule_basic_action_link
+      text: 基础行动定义于 {ref:rule_corp_actions} 与 {ref:rule_runner_actions}。
+    - rule: rule_trash_ability_link
+      text: 基础销毁能力定义于 {ref:rule_basic_trash_ability}。
+    - rule: rule_lingering_effects_link
+      text: 能力文本可以包含其可赋予卡牌或指示物的其他能力，或直接引入到游戏状态中的其他能力。另见 {ref:sec_lingering_effects}。
+    - rule: rule_ability_categories
+      text: 每个能力都被归类为静态能力（{ref:sec_static_abilities}）、付费能力（{ref:sec_paid_abilities}）、条件能力（{ref:sec_conditional_abilities}）、打出能力（{ref:sec_play_abilities}），或子进程（{ref:sec_subroutines}）。
+    - rule: rule_interrupt_link
+      text: 带有 [interrupt] 标记，或其指令中包含“would”一词的能力，具有不同于其他能力的特殊时序规则。参见 {ref:sec_interrupts_replacements}。
+    - rule: rule_instruction_link
+      text: 每个非静态能力都包含一个或多个{term:instructions}，它们构成该能力的组成步骤。{ref:Rule_instruction}描述了能力文本中指令的性质和作用。游戏当前正在处理的指令可以是{term:imminent}或{term:resolving}。
+
+  - subsection: rule_resolve_ability
+    text: |-
+      {term:resolve an ability}就是按照该能力中各条指令出现的顺序逐条结算。若一个能力包含不止一条指令，则每条相邻指令之间都会出现一个检查点。{term:resolve an instruction}就是执行该指令。
+    rules:
+    - rule: rule_chain_reaction
+      text: 在结算某个能力时，其他能力也可能满足其条件。发生这种情况时，就会产生“连锁反应”。当前指令先完成结算，然后更晚满足条件的能力会在原能力的下一条指令之前完全结算。如果在结算这些“链式”能力时，其他任何能力又满足了其条件，那么就在继续结算上一组链式能力之前，再产生另一条“链”。在继续触发连锁反应的原能力之前，先按从最新满足条件到最早满足条件的顺序，一次结算一组链式能力。
+      examples:
+      - text: 潜袭者的特性是 {card:Armand "Geist" Walker}。他们从研发中心读取 {card:圈套！} 时，操控器里只有2张卡牌。就在拿取1枚锁定标记或受到任何网域伤害之前，潜袭者触发 {card:虚假目标} 的能力，以避免该锁定标记。使用 {card:虚假目标} 满足了 {card:Armand "Geist" Walker} 的触发条件。由于这是最近才满足其触发条件的能力，{card:Armand "Geist" Walker} 的能力必须先结算，然后 {card:虚假目标} 才能避免该锁定标记，且 {card:圈套！} 才能完成结算。潜袭者从 {card:Armand "Geist" Walker} 抽1张卡牌，借助 {card:虚假目标} 避免了 {card:圈套！} 的锁定标记，然后最终承受（并存活于）来自 {card:圈套！} 的3点网域伤害。
+    - rule: rule_is_resolving
+      text: 一个能力“正在结算”，是指从其第一条指令变为迫近开始，直到最后一条指令完成结算为止。另见 {ref:sec_interrupts_replacements}。一个事件或事务在打出该事件或事务的 {ref:rule_steps_playing_resolve_play_abilities} 全过程中，也都“正在结算”。
+      examples:
+      - text: |-
+          公司结算 {card:切叶蚁} 上的一条子进程时，其第一项能力处于活动状态。该子进程在其指令的中断窗口内正在结算，因此潜袭者在那个窗口内不能花费信用点，也就不能使用 {card:火山臼} 的能力来防止网域伤害。
+      - text: |-
+          潜袭者正在使用 {card:扎赫亚·萨迪吉：多才多艺的走私者}，并打出 {card:单刀直入} 以潜袭总部。{card:单刀直入} 上的静态能力会在其正在结算时移除 {card:扎赫亚·萨迪吉} 的能力。通常，该能力会满足其触发条件，并在“潜袭任意服务器。”这条指令之后立即结算。这个反应窗口位于潜袭之外，但它仍然是 {card:单刀直入} 结算过程的一部分，因此该能力在所需时刻并不存在，因而不能被触发或结算。
+          
+
+  - subsection: rule_source
+    text: 一个能力的{term:source}，就是其起源的卡牌、指示物或游戏规则。
+    rules:
+    - rule: rule_source_printed_abilities
+      text: 每张卡牌都是其自身印刷能力的来源。
+    - rule: rule_source_granted_abilities
+      text: 如果某物赋予了某个对象一个能力（见 {ref:rule_gaining_losing_abilities}），那么该被赋予能力的来源就是那个对象本身，而不是赋予它的东西。
+    - rule: rule_source_lingering_effect
+      text: 由持续效果维持的能力，其来源是创建该持续效果的对象。见 {ref:sec_lingering_effects}。
+
+  - rule: rule_abilities_resolution_independent
+    text: 每个付费能力、条件能力和子进程都会在结算前的某个时点摆脱其来源而变得独立，分别如 {ref:rule_paid_ability_independent,rule_conditional_ability_independent,rule_subroutine_independent} 所述。若在那个时点之后来源改变了区域，该能力就不能再作用于其来源。
+    examples:
+    - text: 潜袭者打出 {card:编译}，用它在随后产生的潜袭中安装 {card:蜉蝣}，并在那次潜袭中用 {card:蜉蝣} 破解子进程。潜袭结束时，来自 {card:蜉蝣} 和 {card:编译} 的延迟条件能力都会变为待触发。潜袭者决定先结算 {card:编译}，把 {card:蜉蝣} 加到其存储栈底部。随后，潜袭者结算来自 {card:蜉蝣} 的能力，该能力指示其销毁其来源程序。由于 {card:蜉蝣} 已经改变区域，存储栈底部那张 {card:蜉蝣} 的复制品是一个新的对象。由于没有东西可销毁，来自 {card:蜉蝣} 的能力没有效果。
+
+  - subsection: rule_effect
+    text: 能力、指令或宣告是由文本组成的；而{term:effect}则是游戏中因该文本而发生的事情。
+    rules:
+    - rule: rule_effect_beyond_resolution
+      text: 非静态能力中，凡是在该能力结算持续时间之外仍然生效的效果，都会脱离该能力及其来源而变得独立。游戏引擎会直接负责管理这些{term:lingering effects}，并在其持续时间结束时将其从游戏状态中删除。见 {ref:sec_lingering_effects}。
+
+  - subsection: rule_using
+    text: 只要玩家选择结算一个可选能力，或一个能力中的可选部分，就视为该玩家在{term:using}那个能力及其来源卡牌。完全强制的能力不被玩家“使用”。
+    rules:
+    - rule: rule_paid_ability_used_condition
+      text: 付费能力在支付触发费用后，就视为已被使用。付费能力的使用步骤见 {ref:sec_steps_of_using_a_paid_ability}。
+    - rule: rule_conditional_ability_used_condition
+      text: 条件能力在该能力的操控者结算了其相关的可选效果后，就视为已被使用。条件能力的触发与结算步骤见 {ref:sec_steps_of_triggering_and_resolving_a_conditional_ability}。
+    - rule: rule_hosted_counter_used_condition
+      text: 如果某个能力允许玩家花费或转移指示物，那么当玩家通过花费或转移那些指示物来支付费用时，该能力的来源卡牌就视为已被使用，即使那些指示物是从别的卡牌上花费或转移的，而不是从该能力的来源卡牌上。
+      examples:
+      - text: 潜袭者花费附载在 {card:赛博补给器} 上的信用点，来支付 {card:变脸者} 能力的触发费用。由于潜袭者触发了 {card:变脸者} 的付费能力，而 {card:赛博补给器} 的能力允许该信用点被花费，因此 {card:变脸者} 和 {card:赛博补给器} 都已被使用。
+
+  - rule: rule_ability_active
+    text: 若能力有资格被结算或作用于当前游戏状态，则该能力为{term:active}；否则为{term:inactive}。默认情况下，一张卡牌的能力当且仅当那张卡牌是活动的时才是活动的（见 {ref:rule_active_cards}）。指示物的能力只要该指示物存在，就始终是活动的。
+
+  - subsection: rule_ability_active_inactive_source_card
+    text: 有些类型的能力即使其来源卡牌不活动，也仍然是活动的。
+    rules:
+    - rule: rule_active_exception_access
+      text: 当来源卡牌被读取时满足其条件的条件能力，即使该卡牌不活动，也仍然是活动的。
+    - rule: rule_active_exception_catchall
+      text: 声明其在某个特定区域中活动的能力，就在该区域中活动。只能在某个特定区域中满足其条件的能力，就在该区域中活动。只能从某个特定区域影响游戏状态的能力，就在该区域中活动。在判断这些限定是否适用时，只参考游戏规则，而不要参考任何可能改变卡牌在区域之间移动方式的其他效果。
+      examples:
+      - text: |-
+          {card:这还不算惨} 有一个能力，会在其因伤害而被销毁时满足触发条件。通常，这只能通过将 {card:这还不算惨} 从操控器移动到堆阵来发生。因此，该能力在堆阵中是活动的。不过，如果 {card:这还不算惨} 被销毁，但公司改用 {card:蝎岛防御体系} 将其移出游戏，而不是将其加入堆阵，那么该能力就不活动。
+    - rule: rule_active_exception_modify_play_install_rez
+      text: 修改其来源卡牌何时或是否可以被打出、安装或激活的能力，即使该卡牌不活动，也仍然是活动的。
+    - rule: rule_active_exception_modify_cost
+      text: 修改其来源卡牌安装、激活或打出费用的能力，即使该卡牌不活动，也仍然是活动的。
+    - rule: rule_active_exception_advancement_requirement
+      text: 定义或修改其来源卡牌推进需求，或为窃取其来源卡牌创建额外费用的能力，即使该卡牌不活动，也仍然是活动的。
+    - rule: rule_active_exception_can_be_advanced
+      text: 允许一张卡牌被推进的能力，即使该卡牌未激活，也仍然是活动的。
+    - rule: rule_active_exception_conditional_move_to_inactive_zone
+      text: 如果一张活动卡牌移动到了一个使其不活动的区域，那么那张卡牌上、其触发条件由这次区域变化满足的能力，会在该卡牌的新位置继续保持活动，直到该能力的任何相应实例结算完毕。有关条件能力实例的信息，见 {ref:rule_pending_instances}。
+      examples:
+      - text: 潜袭者使用 {card:奇点} 同时销毁一张已激活的 {card:敌意架构} 和2张升级。这些卡牌被移动到档案库并变为不活动，但 {card:敌意架构} 的能力仍然活动，并会有3个实例变为待触发，每个实例在结算时造成1点网域伤害。等这些实例全部结算完毕后，{card:敌意架构} 的能力才停止活动。
+      - text: 潜袭者打出 {card:测试运行} 来安装 {card:北极熊}。当其回合结束时，{card:测试运行} 的延迟条件能力将 {card:北极熊} 加到潜袭者存储栈顶。这满足了 {card:北极熊} 第一项能力的触发条件。尽管 {card:北极熊} 本身在存储栈中是不活动的，但该能力会一直保持活动，直到其结算完毕。该能力会将 {card:北极熊} 从存储栈顶移动到移出游戏区。
+    - rule: rule_active_exception_encounter_not_installed
+      text: 如果一层防火墙在未安装时被遭遇，那么其子进程在那次遭遇中是活动的。
+      examples:
+      - text: 潜袭者从总部读取 {card:大天使}，公司使用其能力迫使潜袭者遭遇它。{card:大天使} 的子进程是活动的，并且可以在那次遭遇中结算。
+    - rule: rule_active_exception_persistent
+      text: 持续能力有时在其来源卡牌被销毁后仍然可以保持活动。见 {ref:subsec_persistent}。
+
+  - subsection: rule_gaining_losing_abilities
+    text: 静态能力和持续效果都可以使对象获得或失去能力。
+    rules:
+    - rule: rule_lose_ability
+      text: 如果一个对象失去了某个能力，那么该能力会被完全忽略。如果失去的是子进程，那么任何计算该对象上子进程数量的效果都不会将其计入。
+    - rule: rule_determine_actual_abilities
+      text: 要确定一个对象当前实际具有哪些能力（以及其其他特征），请遵循 {ref:rule_dependent_effects} 和 {ref:rule_independent_effects} 中描述的流程。
+    - rule: rule_abilities_no_inherent_order
+      text: 对象上的能力没有固定顺序，打出能力和子进程除外。打出能力不能被加入到或从事件或事务中移除，而它们的顺序就是它们在来源卡牌上出现的顺序。要确定一个对象上的子进程顺序，请参见 {ref:rule_subroutines_ordered} 和 {ref:rule_subroutine_origins}。
+
+  - section: sec_timing_and_priority
+  text: 时序与优先权
+  rules:
+  - rule: rule_active_player
+    text: |-
+      {term:active player}是当前轮到其回合的玩家。另一位玩家是{term:inactive player}。
+
+  - subsection: rule_timing_structure
+    text: 一个{term:timing structure}是游戏中的一个单元，其中按既定顺序的一系列步骤推动游戏向前进行。
+    rules:
+    - rule: rule_turn_timing_structure
+      text: 公司的回合和潜袭者的回合都是时序结构，回合中的3个阶段也都是时序结构。见 {ref:chpt_turns}。
+    - rule: rule_run_timing_structure
+      text: 一次潜袭是一个时序结构，潜袭中的6个阶段也都是时序结构。见 {ref:chpt_runs}。
+    - rule: rule_breaching_timing_structure
+      text: 侵入服务器是一个时序结构。见 {ref:sec_breaching_servers,sec_breaching_steps}。
+    - rule: rule_accessing_timing_structure
+      text: 读取卡牌是一个时序结构。见 {ref:sec_accessing_cards,sec_steps_accessing_card}。
+    - rule: rule_not_timing_structures
+      text: 其他具有既定步骤的流程，例如安装卡牌或结算一次追踪尝试，都不是时序结构。
+
+  - rule: rule_priority
+    text: |-
+      {term:Priority}是玩家采取行动并作出某些游戏选择的机会。在任何给定时刻，都不会有超过1位玩家拥有优先权。
+
+  - subsection: rule_priority_window
+    text: 一个{term:priority window}是一个通用术语，指一个时间步骤，在该步骤中一方或双方玩家获得优先权。优先权窗口会因不同目的在整局游戏中{term:open}。当优先权窗口{term:closes}时，游戏继续进入下一时间步骤。
+    rules:
+    - rule: rule_triggering
+      text: 所有优先权窗口都会让拥有优先权的玩家有机会选择其控制下的、相关的能力（如果有的话）作为游戏下一个要结算的能力。这通常称为对所选能力进行{term:triggering}。有些优先权窗口还会给玩家提供其他选项。
+    - rule: rule_pass
+      text: 除了在行动窗口中之外，拥有优先权的玩家除了该优先权窗口定义的可用选项外，还可以选择{term:pass}。当玩家通过时，游戏会推进到下一步骤，要么将优先权交给另一位玩家，要么关闭该优先权窗口。每一种优先权窗口都会定义通过的方式和结算方式。
+    - rule: rule_keep_priority_until_pass
+      text: 除非另有说明，拥有优先权的玩家在结算其一个可用选项后会再次获得优先权。该玩家会一直获得优先权，直到其通过为止。
+    - rule: rule_nested_priority_window
+      text: 当一个优先权窗口处于开启状态时，另一个嵌套的优先权窗口也可以开启。这种嵌套使游戏能够结算“连锁反应”，如 {ref:rule_chain_reaction} 所述。最近开启的优先权窗口总是先结算，然后才返回更早的优先权窗口。
+    - rule: rule_checkpoint_before_receiving_priority
+      text: 每当玩家在优先权窗口中获得优先权时，在该玩家采取行动之前会立即出现一个检查点。见 {ref:sec_checkpoints}。
+
+  - rule: rule_priority_window_types
+    text: 优先权窗口的类型包括行动窗口、付费能力窗口、反应窗口、中断窗口以及读取中能力窗口。
+
+  - subsection: rule_action_window
+    text: 一个{term:action window}是在玩家行动阶段、且其仍有未花费[click]时开启的优先权窗口。
+    rules:
+    - rule: rule_action_window_priority
+      text: 行动窗口只会将优先权给予主动玩家。
+    - rule: rule_action_window_options
+      text: 在行动窗口中，主动玩家必须进行1次行动。{ref:Sec_actions}讨论了行动。此类窗口不提供通过选项。
+    - rule: rule_action_window_closes_after_action
+      text: 主动玩家进行1次行动后，行动窗口关闭，游戏进入下一时间步骤。该玩家不会再次获得优先权。
+    - rule: rule_action_window_occurrence
+      text: 有两个时间步骤可能开启行动窗口。公司在其行动阶段的 {ref:step_corp_turn_action} 拥有1个行动窗口。潜袭者在其行动阶段的 {ref:step_runner_turn_action} 拥有1个行动窗口。
+
+  - subsection: rule_paid_ability_window
+    text: 一个{term:paid ability window}是在游戏的各个时序结构中开启的优先权窗口，用于让玩家触发付费能力、激活卡牌或给议案计分。
+    rules:
+    - rule: rule_ability_window_priority
+      text: 付费能力窗口会把优先权给予双方玩家，首先从主动玩家开始。当一名玩家通过时，另一名玩家获得优先权。玩家会持续互换优先权，直到某位从对手那里获得优先权的玩家在不结算其任何其他可用选项的情况下通过为止。一旦发生这种情况，付费能力窗口就关闭。
+    - rule: rule_paid_ability_window_options
+      text: 在每一个付费能力窗口中，拥有优先权的玩家都可以选择触发其控制下的一个活动付费能力。玩家不能在付费能力窗口中触发行动、中断或读取中能力。见 {ref:sec_paid_abilities}。在本文档中，付费能力窗口用符号 (P) 标示，以表示可触发普通付费能力的选项。
+    - rule: rule_paid_ability_window_corp_rez
+      text: 在某些付费能力窗口中，公司在拥有优先权时可以选择激活1张资产或升级。在本文档中，符号 (R) 表示可以激活卡牌的付费能力窗口。见 {ref:sec_faceup_facedown_status}。
+    - rule: rule_paid_ability_window_corp_score
+      text: 在某些付费能力窗口中，公司在拥有优先权时可以选择给1个议案计分。在本文档中，符号 (S) 表示可以给议案计分的付费能力窗口。见 {ref:sec_score_scoring_steal}。
+    - rule: rule_paid_ability_window_corp_rez_ice
+      text: 在一次潜袭的接驳防火墙阶段中 {ref:step_approach_paw} 的付费能力窗口里，公司在拥有优先权时可以选择激活潜袭者正在接驳的那层防火墙。
+    - rule: rule_paid_ability_window_multiple_options
+      text: 在付费能力窗口中，拥有优先权的玩家可以按任意组合和顺序、任意次数地使用其可用选项，只要这样做被允许，并且玩家为使用每个选项支付其全部费用，直到其决定通过为止。每个选项都必须完全结算后，才能选择另一个选项。玩家没有义务结算其可用选项中的任何一个，除了他们必须通过。
+    - rule: rule_paid_ability_window_occurrence
+      text: 付费能力窗口会出现在回合和潜袭的各个时间步骤中。{ref:Sec_steps_corp_turn,sec_steps_runner_turn,sec_steps_of_a_run} 详细说明了这些步骤，并标明哪些窗口提供哪些选项。{ref:Chpt_appendix_timing_structures} 也包含这些步骤的摘要版本。
+
+  - subsection: rule_reaction_window
+    text: 一个{term:reaction window}是在一个或多个活动条件能力通过满足其条件变为待触发时开启的优先权窗口。{ref:Sec_conditional_abilities}讨论了条件能力。
+    rules:
+    - rule: rule_reaction_window_linked_to_pending_conditional_abilities
+      text: 每个反应窗口都与在该窗口开启前刚刚满足其条件的一组固定条件能力相关。如果在反应窗口中有其他能力变为待触发，则会开启一个单独的反应窗口来处理这些新能力。见 {ref:rule_chain_reaction}。
+    - rule: rule_reaction_window_priority
+      text: 反应窗口会把优先权给予双方玩家，首先从主动玩家开始。当主动玩家通过时，非主动玩家获得优先权。当非主动玩家通过时，反应窗口关闭。
+    - rule: rule_reaction_window_options
+      text: 在反应窗口中，拥有优先权的玩家可以选择触发其控制下、与该窗口相关联的一个待触发条件能力。
+    - rule: rule_reaction_window_pending_abilities_unordered
+      text: 在反应窗口中，拥有优先权的玩家可以按任意顺序触发其待触发能力，直到其决定通过为止；他们不需要先触发强制能力再触发可选能力。其触发的每个能力都必须完全结算后，才能选择另一个。
+    - rule: rule_reaction_window_must_resolve_mandatory_abilities
+      text: 如果拥有优先权的玩家控制着任何待触发的强制能力，就不能通过。他们可以在仍有可选条件能力待触发时通过；在这种情况下，那些能力会失去待触发状态而不会被触发。{ref:Rule_optional_conditional_ability}说明了强制条件能力与可选条件能力之间的区别。
+    - rule: rule_reaction_window_closing_timing_structure
+      text: 如果反应窗口是由于某个时序结构开始而开启的，并且在该反应窗口中该时序结构结束了（例如，某个效果把游戏移动到了该结构结束之后的另一个时间点），那么反应窗口会立即关闭。与该窗口相关的所有剩余能力都会失去待触发状态而不会被触发，即使它们是强制能力也一样。
+      examples:
+      - text: 潜袭者已安装 {card:蛇蝎美人}，并用其“安装时”能力选中了 {card:收费站}。当潜袭者遭遇 {card:收费站} 时，他们支付1[c]，借助 {card:蛇蝎美人} 略过 {card:收费站}。由于 {card:蛇蝎美人} 的能力结算会使遭遇结束，因此来自 {card:收费站} 的待触发能力无法被触发。潜袭者不会支付3[c]，而且这次潜袭不会终止。
+
+  - subsection: rule_interrupt_window
+    text: 一个{term:interrupt window}是在一条指令即将结算之前开启的优先权窗口，前提是一名或多名玩家拥有能够修改该迫近指令的能力。有关打断能力的规则见 {ref:sec_interrupts_replacements}。
+    rules:
+    - rule: rule_interrupt_window_linked_to_imminent_instruction
+      text: 每个打断窗口都与一条正在被该窗口中触发的能力修改的单一迫近指令相关联，也与在该窗口开启时就已确定的一组固定条件能力打断相关联。
+    - rule: rule_interrupt_window_opening
+      text: 在打断窗口开启时、玩家获得优先权之前，先确定该迫近指令的预期效果，应用任何适用的替代效果，然后让相关的条件能力变为待触发。见 {ref:sec_interrupt_window_for_imminent_instruction}。
+    - rule: rule_interrupt_window_priority
+      text: 打断窗口会把优先权给予双方玩家，首先从主动玩家开始。当一名玩家通过时，另一名玩家获得优先权。玩家会持续互换优先权，直到某位从对手那里获得优先权的玩家在不结算其任何其他可用选项的情况下通过为止。一旦发生这种情况，打断窗口就关闭。
+    - rule: rule_interrupt_window_options
+      text: 在打断窗口中，拥有优先权的玩家可以选择触发其控制下、且与该迫近效果相关的一个打断能力。见 {ref:sec_relevant_interrupts}。
+    - rule: rule_interrupt_window_abilities_unordered
+      text: 在打断窗口中，拥有优先权的玩家可以按任意顺序触发其能力，直到其决定通过为止。他们不需要先触发强制能力再触发可选能力，也不需要先触发条件能力再触发付费能力。其触发的每个能力都必须完全结算后，才能选择另一个。
+    - rule: rule_interrupt_window_must_resolve_mandatory_abilities
+      text: 如果拥有优先权的玩家控制着任何仍与该迫近效果相关的待触发强制能力，就不能通过。他们可以在仍有可选条件能力待触发时通过。（{ref:Rule_optional_conditional_ability}说明了强制条件能力与可选条件能力之间的区别。）一旦玩家已经通过，如果他们再次获得优先权，仍可继续触发相关的付费能力和待触发条件能力。随着打断窗口关闭，任何剩余的待触发条件能力都会失去待触发状态。
+
+  - subsection: rule_mid_access_window
+    text: 一个{term:mid-access ability window}是在潜袭者读取卡牌时开启的优先权窗口。
+    rules:
+    - rule: rule_mid_access_window_priority
+      text: 读取时能力窗口只会将优先权给予潜袭者。
+    - rule: rule_mid_access_window_options
+      text: 在读取时能力窗口中，潜袭者可以使用一个读取时能力，或者通过。除了卡牌上可用的任何读取时能力外，潜袭者还可以使用基础销毁能力（见 {ref:rule_basic_trash_ability}）。
+    - rule: rule_mid_access_window_one_ability
+      text: 潜袭者使用一个读取时能力或通过之后，读取时能力窗口就关闭，游戏进入下一时间步骤。潜袭者不会再次获得优先权。
+    - rule: rule_mid_access_window_occurrence
+      text: 读取时能力窗口唯一出现的时点，是读取卡牌的 {ref:step_mid_access_ability}。
+
+- section: sec_interpreting_card_text
+  text: 解析卡牌文本
+  rules:
+  - rule: rule_text_classification
+    text: 文本可分为条件、限制、指令、宣告和能力标记。一个能力的规则文本可以由这些类别中的任意组合构成，但没有任何能力会同时包含指令和宣告。
+
+  - subsection: rule_condition
+    text: 一个{term:condition}是说明某项能力的效果被允许适用时所需满足条件的文本单元。
+    rules:
+    - rule: rule_cost_condition
+      text: 一个{term:cost condition}描述了玩家必须支付的费用（可以是嵌套费用或触发费用），以使某个效果适用。费用的详细规则见 {ref:sec_costs}。
+    - rule: rule_trigger_condition
+      text: 一个{term:trigger condition}描述了某个效果要适用时必须发生的游戏状态变化。触发条件通常以“if”、“when”、“whenever”或“after”等词开头，或者以“the first time”之类的序数短语开头。
+    - rule: rule_static_condition
+      text: 一个{term:static condition}描述了某个效果要适用时必须为真的游戏状态属性。静态条件通常以“if”、“during”或“while”等词开头。
+
+  - subsection: rule_restriction
+    text: 一个{term:restriction}是文本单元，它为卡牌的打出或能力的使用施加一组特定限制之一。如果限制出现在一个能力中，那么无论它写在该能力其他文本的前面、后面还是中间，它都适用于整个能力。许多限制都属于 {ref:rule_ability_active_inactive_source_card} 之下，这意味着即使其来源不活动，它们也仍然活动。
+    rules:
+    - rule: rule_modify_cost_restriction
+      text: 修改其所在卡牌的打出、安装、激活或窃取费用的文本都属于限制，包括增加额外费用的文本。
+    - rule: rule_act_restriction
+      text: 对卡牌何时或何处可以安装、激活、打出或计分的限制，都属于限制。
+    - rule: rule_use_restriction
+      text: 对能力可在何时、何处或以多高频率使用的限制，都属于限制。
+    - rule: rule_pay_cost_restriction
+      text: 对费用如何支付的限制，都属于限制。
+    - rule: rule_host_restriction
+      text: 如果某张卡牌的文本限制了它可以附载哪些卡牌，那么描述该限制的文本就是限制。另见 {ref:rule_host_via_ability}。
+    - rule: rule_variable_restriction
+      text: 对某个变量的定义或限制都属于限制。
+      examples:
+      - text: Some abilities dictate a value for X, such as "X is the number of rezzed NEXT ice." Some abilities with X in their cost constrain the value that can be chosen for X, such as "X must be equal to or less than the number of tags the Runner has." These statements are restrictions.
+    - rule: rule_cannot_be_prevented_restriction
+      text: 规定某个效果或其一部分不能被防止的说明，都属于限制。
+    - rule: rule_no_restriction
+      text: 不属于以上任一类别的文本，都不是限制。
+
+  - subsection: rule_instruction
+    text: 一个{term:instruction}是会在特定时点结算、并立即对游戏状态施加效果的陈述或命令。（这也可以包括创建新的持续能力或持续效果，它们会在一段时间内持续生效；见 {ref:sec_lingering_effects}。）
+    rules:
+    - rule: rule_instruction_source
+      text: 指令可以来源于游戏规则，也可以来源于能力文本。能力中的指令会在该能力结算时结算（见 {ref:rule_resolve_ability}）。游戏规则中的指令会在其出现的时间步骤中结算。{ref:Sec_identifying_instructions} 解释了如何确定相邻指令之间的边界。
+    - rule: rule_instruction_target
+      text: 如果一条指令需要任何目标，玩家必须在该指令变为迫近之前宣告那些目标。见 {ref:sec_targets}。
+    - rule: rule_instruction_atomic
+      text: 每条指令都作为一个原子单元执行，一旦开始结算就不能被打断。执行一条指令的流程可以在其开始结算之前被其他效果（例如打断）改变。见 {ref:sec_interrupts_replacements}。
+    - rule: rule_resolve_instruction_in_order
+      text: 除了选择目标之外，一条指令的各个步骤要按照其书写顺序执行。
+    - rule: rule_instruction_lingering_effect
+      text: 一个能力中的指令可以创建在该能力结算之后仍会持续的效果。见 {ref:sec_lingering_effects}。
+
+  - rule: rule_declaration
+    text: 一个{term:declaration}是描述对组件或游戏规则所施加效果的陈述，并且会持续适用。宣告只要处于活动状态，就会持续施加其效果。
+
+  - subsection: rule_ability_flag
+    text: 一个{term:ability flag}是出现在能力开头的关键词或符号。能力标记与能力正文之间由箭头（→）分隔。每个能力标记都会改变被标记能力的运作规则。
+    rules:
+    - rule: rule_ability_flag_types
+      text: |-
+        能力标记共有6种：access、interface、[interrupt]、persistent、threat N，以及 once per turn。
+    - rule: rule_access_flag
+      text: “access”标记出现在潜袭者卡牌的付费能力上，并影响这些能力的触发时机。潜袭者只能在读取卡牌的 {ref:step_mid_access_ability} 处的读取时能力窗口中使用带有此标记的能力。见 {ref:rule_mid_access_window}。
+    - rule: rule_interface_flag
+      text: “interface”标记出现在破解器的付费能力上，并影响这些能力的触发时机。潜袭者只能在遭遇期间使用带有此标记的能力，而且只有当该能力的来源是1个强度等于或高于所遭遇防火墙强度的破解器时才能使用。见 {ref:subsec_icebreakers}。
+    - rule: rule_interrupt_flag
+      text: 打断标记（[interrupt]）出现在付费能力和条件能力上，并影响这些能力的触发时机。玩家只能在打断窗口中使用带有此标记的能力，而且只有当该能力与那条迫近指令相关时才能使用。见 {ref:sec_interrupts_replacements}。
+    - rule: rule_persistent_flag
+      text: “persistent”标记出现在公司卡牌的能力上，并改变这些能力何时处于活动状态的规则。带有此标记的能力在其来源卡牌被销毁后，可以持续到本次潜袭结束。见 {ref:subsec_persistent}。
+    - rule: rule_threat_flag
+      text: “threat N”标记可以出现在任何类型的能力上。带有此标记的能力只有在威胁等级大于或等于N时才活动，不受 {ref:rule_ability_active_inactive_source_card} 影响。见 {ref:rule_threat_level}。
+    - rule: rule_once_per_turn_flag
+      text: “once per turn”标记出现在付费能力和条件能力上。带有此标记的能力每回合仅能使用1次。{ref:rule_using} 解释了“使用”一个能力是什么意思。
+      examples:
+      - text: 潜袭者正在使用 {card:扎赫亚·萨迪吉}，并完成了一次针对总部的潜袭，期间读取了1张卡牌。他们选择不借助 Zahya 的能力获得1[c]。该能力并未被“使用”，因此其“once per turn”限制没有被消耗，尽管该能力本可以结算。潜袭者可以在本回合稍后再进行一次潜袭，并借助该能力获得信用点。
+
+  - subsection: rule_ability_classification
+    text: 这5种能力可以根据其由何种文本组成来识别。
+    rules:
+    - rule: rule_static_abilities_link
+      text: 静态能力（{ref:sec_static_abilities}）可以包含宣告、限制和条件，但绝不会包含指令。静态能力是唯一可以包含宣告的能力类型。
+    - rule: rule_paid_abilities_link
+      text: |-
+        付费能力（{ref:sec_paid_abilities}）总是可以通过其格式识别：粗体的费用条件、一个冒号（:），然后是能力的其余部分。冒号后的文本可以包含条件、限制和/或指令。
+    - rule: rule_conditional_abilities_link
+      text: 条件能力（{ref:sec_conditional_abilities}）总是包含1个触发条件或静态条件，以及至少1条指令。它们也可以包含限制、其他指令或嵌套条件。主要条件通常会用与时机相关的词或短语来写，例如“when”、“after”、“the first time”等，并且通常是该能力文本的第一部分。有些较老的卡牌会把条件写在能力末尾，或者用“if”来表示条件。
+    - rule: rule_play_abilities_link
+      text: 打出能力（{ref:sec_play_abilities}）是事件和事务上的能力，且不属于付费能力、条件能力或静态能力。它们可以包含条件、限制和/或指令。
+    - rule: rule_subroutines_link
+      text: 子进程（{ref:sec_subroutines}）总是以 [sub] 符号开头，并且可以包含条件、限制和/或指令。
+
+- section: sec_static_abilities
+  text: 静态能力
+  rules:
+  - rule: rule_static_ability
+    text: 一个{term:static ability}是只要处于活动状态就会持续影响游戏的能力。静态能力是唯一可以包含宣告的能力类型，而且它们不会结算，也没有关联的优先权窗口。
+  - rule: rule_static_ability_with_condition
+    text: 如果静态能力包含静态条件，那么该能力中受该条件约束的部分只会在该条件满足时适用于游戏状态。
+  - rule: rule_static_ability_with_restriction
+    text: 静态能力可以包含适用于其来源卡牌的限制。这些限制即使在卡牌不活动时也通常仍然活动。见 {ref:rule_ability_active_inactive_source_card}。
+  - rule: rule_static_no_lingering_effects
+    text: 静态能力的效果没有持续时间，也不能直接创建持续效果（见 {ref:sec_lingering_effects}）。
+    examples:
+    - text: 潜袭者控制着 {card:河豚}，其上附载着 {card:格布雷西拉西耶}。{card:格布雷西拉西耶} 会改变影响其所附载对象强度的能力持续时间，所以如果潜袭者使用 {card:河豚} 的付费能力使其强度+1，那么该提升会持续到本回合结束。{card:格布雷西拉西耶} 不会影响 {card:河豚} 那条每有1枚附载的能量指示物就提高其强度的静态能力，所以如果潜袭者花费[click]移除1枚能量指示物，那么来自 {card:河豚} 静态能力的强度提升会立刻失去。
+  - rule: rule_static_modification_keep_restrictions
+    text: 修改某个数值的静态能力，会保留原始数值所具有的相同限制和说明。
+    examples:
+      - text: "{card:清除者} 有一个静态能力，会让公司造成的每1点肢体伤害都额外+1。{card:耀斑} 的部分效果会造成2点不能被防止的肢体伤害。如果该效果在 {card:清除者} 活动时结算，那么这3点肢体伤害都不能被防止。"
+
+- section: sec_paid_abilities
+  text: 付费能力
+  rules:
+  - rule: rule_paid_ability
+    text: 一个{term:paid ability}是玩家在适当的优先权窗口中按需触发的能力。要使用付费能力，该能力的操控者必须支付其{term:trigger cost}。付费能力总是先写触发费用，然后是冒号（:），再接能力文本的其余部分。
+
+  - subsection: rule_trigger_paid_abilities
+    text: 玩家在适当的优先权窗口中拥有优先权时，可以触发其控制下的付费能力。
+    rules:
+    - rule: rule_action
+      text: 如果付费能力的触发费用以 [click] 符号开头，那么该能力就是{term:action}。玩家在其回合中的每个行动窗口内都可以使用1个行动型付费能力。见 {ref:rule_action_window} 和 {ref:sec_actions}。
+    - rule: rule_interrupt
+      text: 如果 [interrupt] 标记出现在付费能力的触发费用之前，那么该能力就是打断。玩家可以在适当的打断窗口中使用打断型付费能力。每个这样的能力都可以使用与其效果可适用于迫近指令的次数相同的次数。见 {ref:sec_interrupts_replacements}。
+    - rule: rule_mid_access_ability
+      text: 如果“access”标记出现在付费能力的触发费用之前，那么该能力就是读取时能力。潜袭者可以在读取卡牌的 {ref:step_mid_access_ability} 处的读取时能力窗口中使用最多1个读取时能力。
+    - rule: rule_interface_ability
+      text: 如果“interface”标记出现在付费能力的触发费用之前，那么该能力就是对接能力，并受 {ref:subsec_icebreakers} 中讨论的破解器限制。对接能力没有特殊的优先权窗口类型。
+    - rule: rule_paid_ability_timing_restriction_reference
+      text: 某些付费能力只能在与其效果相适的时机使用，详见 {ref:rule_paid_ability_effect_based_timing_restrictions}。
+    - rule: rule_other_paid_abilities
+      text: 既不是行动、打断，也不是读取时能力的付费能力，可以在付费能力窗口中使用。只要每次都支付其费用，并遵守其文本或其他能力规定的任何限制，这类能力就可以无限次使用。
+
+  - subsection: rule_paid_ability_optional
+    text: 付费能力总是可选的。当付费能力的触发费用被支付时，该付费能力及其来源就视为已被使用。
+    rules:
+    - rule: rule_forced_mid_access_ability_optional
+      text: 潜袭者被迫触发的读取时能力仍然算作可选能力。另见 {ref:rule_access_installed_must_trash_if_able} 和 {ref:rule_access_reveal_trash_if_able}。
+      examples:
+      - text: 公司结算 {card:温迪戈} 上的子进程，禁止潜袭者在本次潜袭的剩余时间内使用其已安装的 {card:小恶魔}。稍后，潜袭者读取1张已安装的 {card:孟巴德虚拟之旅}。即使 {card:孟巴德虚拟之旅} 会强迫潜袭者在能够做到时销毁它，但就 {card:温迪戈} 的禁止效果而言，{card:小恶魔} 的能力仍然是可选的。由于 {card:小恶魔} 的能力在本次潜袭中根本不能使用，{card:孟巴德虚拟之旅} 就不能强迫潜袭者花费其上附载的1枚病毒指示物。如果潜袭者能够支付另一个读取时能力的费用，例如基础销毁能力，那么潜袭者就必须使用那个能力。否则，潜袭者根本无法销毁 {card:孟巴德虚拟之旅}。
+
+  - rule: rule_paid_ability_independent
+    text: 一旦玩家支付了付费能力的触发费用，该能力就会脱离其来源而变得独立，并适用 {ref:rule_abilities_resolution_independent}。
+  - rule: rule_trash_ability_keeps_track_of_hosted_objects
+    text: 如果付费能力的触发费用会卸载或废除该付费能力的来源，而且该付费能力的效果会提及或作用于附载在该来源上的卡牌或指示物，那么在支付触发费用时，就把任何附载的卡牌和指示物先放到一边。对于本能力而言，这些被放到一边的卡牌或指示物仍然被视为“附载”的，但只要该能力还在结算，它们就不会因为没有承载者而被销毁。当能力结算完毕后，如果这些卡牌或指示物中有任何仍然被放在一边，那么它们会在下一次检查点的 {ref:step_checkpoint_hosted_on_agenda} 或 {ref:step_checkpoint_hosted_on_installed_cards} 期间被销毁，视情况而定。在它们被放到一边时，其他能力无法与这些卡牌或指示物互动（见 {ref:rule_set_aside_zone_passthrough}）。
+    examples:
+    - text: 潜袭者安装了 {card:发酵罐}，其上附载着4枚病毒指示物。他们使用其付费能力，而该费用包括销毁 {card:发酵罐}。在潜袭者支付这笔费用时，他们把那4枚指示物先放到一边。当该能力结算并提到附载的病毒指示物数量时，会把那些被放到一边的指示物也算进去，所以潜袭者获得8个信用点。当该能力结算完毕后，这些指示物会回到银行。
+    - text: |-
+        潜袭者使用 {card:街头小贩} 上的 [trash] 能力。他们支付触发费用，并把3张附载卡牌先放到一边。当该能力结算时，潜袭者安装其中1张被放到一边的卡牌。由于另外2张卡牌仍然被放到一边，下一次检查点会把它们销毁，就像任何其他附载在一张已不再安装的卡牌上的卡牌一样。没有任何其他能力能够看出这些卡牌曾被放到一边：它们会被视为是从其先前所在的游戏区域被安装或销毁的。
+    - text: 这个例子描述的情况与前面的例子相似，但会以更高层次的细节展示游戏执行的步骤。公司在一个付费能力窗口中拥有优先权，并选择触发 {card:重建合约} 上的 [trash] 能力。在支付触发费用时，他们把 {card:重建合约} 移到档案库，同时把附载在 {card:重建合约} 上的推进指示物先放到一边。接着，在费用已被支付后会出现一个检查点。该检查点以及任何对应的反应窗口结束后，[trash] 能力的指令就准备变为迫近。公司选择1张可以推进的卡牌作为该指令的目标，然后打开一个打断窗口。在打断窗口结束后（假设该指令的效果没有被防止），公司把那些被放到一边的指示物移动到目标卡牌上。
+
+  - subsection: rule_paid_ability_effect_based_timing_restrictions
+    text: 具有某些效果的付费能力只能在特定情形下触发。
+    rules:
+    - rule: rule_paid_ability_breaks_subroutines
+      text: 包含可能破解1条或多条子进程之指令的付费能力，只能在遭遇期间使用。
+    - rule: rule_paid_ability_refers_to_approached_ice
+      text: 提及潜袭者正在接驳的防火墙的付费能力，只能在一次潜袭的接驳防火墙阶段使用，而且只有当被接驳的防火墙满足该提及中使用的所有说明时才能使用。
+      examples:
+      - text: 公司只有在潜袭者正在接驳1层已激活的{subtype:bioroid}防火墙时，才能使用 {card:奥丁计划} 上的付费能力。
+    - rule: rule_paid_ability_refers_to_encountered_ice
+      text: 提及潜袭者正在遭遇的防火墙的付费能力，只能在遭遇1层满足该提及中使用的所有说明的防火墙期间使用。
+      examples:
+      - text: 潜袭者不能在任意时刻触发 {card:暴力团伙} 的第一项能力来给自己放置1枚锁定标记。他们只能在遭遇期间使用这项能力。
+      - text: 潜袭者可以在遭遇1层{subtype:code gate}时使用 {card:阿巴内尔} 上的 [trash] 能力。他们只能在遭遇1层 {card:阿巴内尔} 有足够强度可以对接的 {subtype:code gate} 时，使用 {card:阿巴内尔} 上的对接能力。
+
+  - subsection: sec_steps_of_using_a_paid_ability
+    text: 使用付费能力的步骤
+    toc:
+    steps:
+    rules:
+    - rule: step_paid_ability_announce
+      text: 宣告你要触发该付费能力。
+    - rule: step_paid_ability_condition
+      text: 支付触发费用。该能力及其来源视为已被使用。“使用时”能力满足其触发条件。（随后会出现费用已支付检查点。）
+    - rule: step_paid_ability_target_first_instruction
+      text: 宣告该能力第一条指令的任何目标。那条指令随后变为迫近。
+    - rule: step_paid_ability_interrupt_window
+      text: 出现1个打断窗口，在此期间能力可以修改、防止或避免该迫近效果。
+    - rule: step_paid_ability_resolution
+      text: 结算该指令，并应用已结算的打断对其效果所做的任何改变。
+    - rule: step_paid_ability_checkpoint
+      text: 出现1个检查点。
+    - rule: step_paid_ability_loop
+      text: 如果还有更多指令要结算，宣告下一条指令的任何目标。那条指令随后变为迫近。返回（d）。
+    - rule: step_paid_ability_complete
+      text: 付费能力结算完毕。
+
+- section: sec_conditional_abilities
+  text: 条件能力
+  rules:
+  - subsection: rule_conditional_ability
+    text: 一个{term:conditional ability}是玩家可以或必须在游戏中的特定时点触发的能力。条件能力总是包含1个主要条件和1条或多条指令，但它们没有特殊的语法要求。
+    rules:
+    - rule: rule_primary_condition
+      text: 条件能力的主要条件通常是触发条件，但也可以是静态条件。
+    - rule: rule_primary_condition_front
+      text: 条件能力的主要条件通常写在能力开头，但并不总是如此。有关条件能力语法的细节，见 {ref:rule_conditional_abilities_link}。
+
+  - rule: rule_pending_instances
+    text: 当某个条件能力满足其条件时，该条件能力的1个或多个{term:instances}会在下一个开启的反应窗口中变为{term:pending}。条件能力的每个实例都是该能力的一份独立复制品，会彼此独立地结算。处于待触发状态的能力实例正在等待其操控者触发它。
+  - rule: rule_static_condition_one_instance
+    text: 带有静态条件的条件能力同一时间只能有1个实例。
+
+  - subsection: rule_trigger_condition_multiple_instances
+    text: 带有触发条件的条件能力可以有多个实例。
+    rules:
+    - rule: rule_condition_met_with_pending_instances
+      text: 如果某个能力的一个实例已经处于待触发、迫近或结算中状态时，其触发条件再次被满足，那么新的实例仍然可以在下一个反应窗口中变为待触发。
+    - rule: rule_condition_met_multiple_times
+      text: 如果某个能力的触发条件在相邻两个检查点之间被满足了不止1次，那么该能力的多个实例会在下一个反应窗口中变为待触发。
+      examples:
+      - text: 潜袭者打出 {card:奇点}，同时销毁3张公司卡牌。由于 {card:敌意架构} 的触发条件会对每张被销毁的卡牌分别满足，因此下一个检查点会处理所有这些发生情况，而该能力的3个实例会在同一个反应窗口中变为待触发。
+      - text: 潜袭者控制着 {card:黑暗卫士}，并打出 {card:卫星上行传输}，在一条指令中展示了2张卡牌。在下一个检查点中，{card:黑暗卫士} 的能力会有2个实例变为待触发，每个实例对应1张被展示的卡牌。
+
+  - subsection: rule_trigger_description
+    text: 大多数条件能力的触发条件描述的是一种发生情况，它允许该能力变为待触发。关于触发条件的这些规则也适用于带有静态条件的条件能力，除非 {ref:rule_conditional_ability_with_static_condition} 另有说明。
+    rules:
+    - rule: rule_condition_checked_in_checkpoints
+      text: 在每个检查点中，游戏都会检查是否有任何条件能力满足了其触发条件。如果有，则会开启一个反应窗口来结算那些能力（见 {ref:sec_checkpoints}）。在游戏继续到原效果或游戏规则的下一条指令之前，这个反应窗口会被完全结算并关闭。
+    - rule: rule_condition_only_met_while_active
+      text: 只有当满足其触发条件的效果或游戏状态在检查点的 {ref:step_checkpoint_conditional_abilities} 处理中发生时，该条件能力处于活动状态，条件能力才能识别其触发条件的发生。如果某个条件能力在其触发条件已经被满足且一个检查点已经出现之后才变为活动，那么即使与该条件相关联的反应窗口已经开启，该能力也不会变为待触发。
+      examples:
+      - text: 公司正在结算其“回合开始时”能力，并销毁 {card:死神函数} 来造成2点网域伤害。这个销毁使公司能够使用 {card:鄂毕超重型物流} 上的能力来安装并激活 {card:尼可营销计划}。本回合中，公司不能从 {card:尼可营销计划} 取得信用点，因为“回合开始时”这一触发条件已经被处理过了。
+      - text: 公司使用 {card:建筑师部署测试} 来安装并激活1张 {card:宁静家园网阵} 复制品，而这也是本回合安装的第一张卡牌。完成这次由该效果带来的安装后，公司支付 {card:宁静家园网阵} 的激活费用。由于 {card:建筑师部署测试} 规定忽略所有费用，激活费用被减为0（见 {ref:rule_ignore_all_costs}），但这个步骤仍然会发生，并且之后仍然会有一个检查点（见 {ref:rule_cost_checkpoint_cost_zero}）。这个检查点会处理一张卡牌已被安装这一事实，但 {card:宁静家园网阵} 还不是活动的，因此不能创建其能力的实例。在检查点以及任何对应的反应窗口结束后，公司完成激活 {card:宁静家园网阵}，它才变为活动。
+    - rule: rule_condition_requirements_part_of_condition
+      text: 只有当触发条件中列出的所有说明和要求在触发条件本应发生的那个时刻都已满足时，条件能力才能识别其触发条件的发生。
+      examples:
+      - text: "{card:量子预测模型} 上完整的触发条件是“如果潜袭者在读取 {card:量子预测模型} 时被锁定标记”。只有在读取发生的那个时刻潜袭者已经被锁定标记时，{card:量子预测模型} 才能满足其触发条件。即使 {card:试镜选角} 附载在 {card:量子预测模型} 上，锁定标记也是在读取开始之后才给予的，而无论怎样安排能力顺序，都无法让 {card:量子预测模型} 满足其触发条件。"
+    - rule: rule_condition_requirements_part_of_effect
+      text: 条件能力指令中列出的额外说明和要求，会作为该能力效果的一部分进行检查，而不是该能力触发条件的一部分。对于这类条件范围内的效果要结算，只需在相关指令结算时满足该条件即可。即使在该能力满足其触发条件时，这些条件中的一部分或全部都没有满足，这种情况也可能发生。
+      examples:
+      - text: 如果一位只有1点连接值的潜袭者同时安装了 {card:秘密接触} 和附载着 {card:戴森内存芯片} 的 {card:供应商}，那么 {card:秘密接触} 和 {card:供应商} 会同时满足其触发条件。潜袭者可以先触发 {card:供应商}，安装 Dyson Mem Chip，从而让 {card:秘密接触} 识别出潜袭者有2点连接值，并给予其1个信用点，即使潜袭者在 {card:秘密接触} 变为待触发时并没有2点连接值。
+    - rule: rule_condition_if_successful
+      text: 在提及一次潜袭时，“If successful”这句话是一个具有特殊规则的触发条件。见 {ref:rule_if_successful}。“If successful”和“If unsuccessful”这两个短语也经常作为与追踪结果相关的触发条件使用。见 {ref:sec_traces}。
+
+  - subsection: rule_trigger_condition_checked
+    text: 触发条件寻找的是游戏状态中的瞬时变化。该变化发生后的下一个检查点，会为所寻找的每一次变化发生情况标记1个该能力的实例为待触发。
+    rules:
+    - rule: rule_instruction_requirements_past_state
+      text: 有些条件能力会使用“had”一词来提及触发条件被满足之前的游戏状态。这里所提及的先前游戏状态，是在该能力变为待触发的那个检查点之前的前一个检查点中的 {ref:step_checkpoint_conditional_abilities} 时的游戏状态。
+      examples:
+      - text: |-
+          {card:威兰财团：建造不朽} 的能力只会在公司推进一张“没有推进指示物”的卡牌时让公司获得2[c]。这项能力会在公司推进卡牌的一条指令结算之后立即变为待触发，而该要求会对照前一个检查点、也就是那次推进发生之前的游戏状态来检查。
+
+  - subsection: rule_conditional_ability_with_static_condition
+    text: 以静态条件而不是触发条件为主要条件的条件能力，描述的是一种只要条件为真，就必须在可能的情况下反复执行的效果。此类能力通常会尝试通过卸载其来源来结束自己的重复。
+    rules:
+    - rule: rule_conditional_ability_check_to_become_pending
+      text: 在每个检查点中，游戏会与带有触发条件的条件能力一起检查是否有任何带有静态条件的条件能力应该变为待触发。不过，这类能力要被标记为待触发，还有进一步的要求。
+    - rule: rule_conditional_ability_check_start_of_checkpoint
+      text: 带有静态条件的条件能力，只有在该检查点开始时该条件为真时，才能在该检查点中被标记为待触发。
+    - rule: rule_conditional_ability_static_one_instance
+      text: 带有静态条件的条件能力，只有在同一来源的同一能力没有其他实例已经处于待触发、迫近或结算中状态时，才能被标记为待触发。
+    - rule: rule_conditional_ability_static_condition_no_effect
+      text: 如果一个带有静态条件的条件能力已经结算，而且在该能力中没有任何一条指令在其打断窗口开启时具有任何预期效果，那么该能力在一个时序结构步骤完成之前，不能再次被标记为待触发。
+      examples:
+      - text: |-
+          {card:寄生虫} 附载在1层强度为0的防火墙上。{card:寄生虫} 的能力试图销毁那层防火墙。如果某个打断能力的效果在不提高其强度的情况下防止了那层防火墙被销毁，那么该条件仍然成立，因此该能力会再次变为待触发。但在先前那个实例仍处于待触发或结算中状态时，不会发生这种情况。相反，如果某个静态能力（例如 {card:建筑师} 上的能力）禁止 {card:寄生虫} 销毁那层防火墙，那么 {card:寄生虫} 的能力就没有任何可执行的效果，因此该能力在每个时序结构步骤中只会结算1次。
+
+  - subsection: rule_trigger_conditional_ability
+    text: 玩家在拥有优先权、且该能力处于待触发状态的反应窗口中，可以触发一个条件能力。
+    rules:
+    - rule: rule_triggered_ability_loses_pending
+      text: 一旦玩家触发了一个条件能力，那一个实例就会失去待触发状态。该能力的其他待触发实例不受影响，之后仍然可以被触发，不管那些实例是否与同一个反应窗口相关联。
+    - rule: rule_conditional_ability_interrupt
+      text: 如果 [interrupt] 符号出现在条件能力文本之前，那么该能力就是打断。这些能力会在打断窗口而不是反应窗口中变为待触发，但除此之外，其结算方式与非打断条件能力相同。见 {ref:sec_interrupts_replacements}。
+
+  - subsection: rule_optional_conditional_ability
+    text: 如果某个条件能力让其操控者可以选择是否应用其效果，以至于该能力有可能根本没有任何效果，那么它就被视为一个{term:optional conditional ability}。这类能力通常可以通过“may”或“allows”等许可性词语，或者通过“Use this ability only once per turn.”这样的限制来识别。如果该能力不是可选的，那么它就是一个{term:mandatory conditional ability}。
+    rules:
+    - rule: rule_pass_with_optional_conditional_abilities_pending
+      text: 可选条件能力的实例在其操控者于相应优先权窗口中通过时，仍然可以处于待触发状态。玩家没有义务触发可选条件能力。
+    - rule: rule_cannot_pass_with_mandatory_conditional_abilities_pending
+      text: 玩家必须先触发其在给定优先权窗口中控制的所有待触发强制条件能力实例，然后才能在那个窗口中通过。见 {ref:rule_reaction_window}。
+    - rule: rule_mandatory_conditional_ability_with_optional_effects
+      text: 可选和强制条件能力都可以在其效果中包含可选部分。即使触发该能力是强制的，其操控者在结算过程中仍然可以拒绝任何出现的可选组成效果。
+    - rule: rule_optional_conditional_ability_use
+      text: 当该能力效果中的任何可选组成部分被执行时，该条件能力及其来源就视为已被使用。
+
+  - rule: rule_conditional_ability_lose_pending_when_ability_becomes_inactive
+    text: 如果一个条件能力的任何实例处于待触发状态，而该条件能力本身变为不活动，那么那些实例会失去待触发状态，并且不会结算。
+    examples:
+    - text: 潜袭者同时安装了 {card:伊索的典当铺} 和 {card:毒贩}。当潜袭者的回合开始时，这两张卡牌的能力都会满足其触发条件。如果潜袭者先选择触发 {card:伊索的典当铺}，然后用它来销毁 {card:毒贩}，那么 {card:毒贩} 的待触发能力就永远无法被触发，因此潜袭者不会失去1个信用点。
+  - rule: rule_conditional_ability_lose_pending_when_priority_window_closes
+    text: 如果某个优先权窗口关闭时，仍有任何能力的待触发实例与该窗口相关联，那么剩余实例会失去待触发状态，并且不能再被触发或结算。见 {ref:rule_reaction_window_closing_timing_structure}。
+  - rule: rule_conditional_ability_independent
+    text: 一旦玩家触发了一个条件能力，而其指令变为迫近，该能力就会脱离其来源而变得独立，并适用 {ref:rule_abilities_resolution_independent}。
+
+  - subsection: rule_delayed_conditional_ability
+    text: 一个{term:delayed conditional ability}是由持续效果维持的条件能力（见 {ref:sec_lingering_effects}）。与其他持续效果不同，有些延迟条件能力在创建时并没有明确写出的持续时间。
+    rules:
+    - rule: rule_delayed_conditional_ability_if_successful_duration
+      text: 如果一个“If successful”能力包含一个提及侵入被攻击服务器的嵌套延迟条件能力，那么该能力适用于其所关联那次潜袭中的 {ref:step_breach} 侵入。其持续时间会在本次潜袭结束时到期。见 {ref:rule_if_successful_lingering_effect}。
+    - rule: rule_delayed_conditional_ability_specified_duration
+      text: 如果一条指令创建了一个延迟条件能力并指定了持续时间，那么该延迟条件能力会一直活动，直到该持续时间到期。
+      examples:
+      - text: |-
+          {card:最佳状态} 创建了一个持续时间为“本回合”的延迟条件能力。由于这里指定了持续时间，因此它不只限于被触发1次。该能力会在每次满足其触发条件时变为待触发并可以结算，而它的存在只会在回合结束时到期。
+    - rule: rule_delayed_conditional_ability_relevant_once
+      text: 其他任何延迟条件能力都会一直存在，直到它下一次结算为止，之后它就到期。
+      examples:
+      - text: |-
+          {card:约书亚B.} 的能力允许潜袭者获得[click]。如果他们这样做，就会创建一个独立于 {card:约书亚B.} 本身的延迟条件能力，该能力只会在那个回合结束时满足其触发条件1次。在那个能力结算之后，游戏就不再维持创建该能力的持续效果。
+    - rule: rule_delayed_run_ends_condition_outside_run
+      text: 如果某个效果试图创建一个触发条件为“When this run ends”的延迟条件能力，但当前没有进行中的潜袭，那么该持续效果不会被创建。
+      examples:
+      - text: The Runner encounters a piece of ice outside of a run, and uses {card:蜉蝣} to break its subroutines. Since there is no run in progress, the delayed conditional ability inside {card:蜉蝣}'s interface ability cannot be created, and {card:蜉蝣} will not be trashed.
+  - subsection: rule_references_to_trigger_conditions
+    text: |-
+      有些卡牌会根据其触发条件来提及某一类条件能力。
+    rules:
+    - rule: rule_when_encountered
+      text: 一个“遭遇时”能力，是指在与其来源的遭遇的 {ref:step_encounter_begins} 时可能满足其触发条件的任何能力。
+    - rule: rule_when_installed
+      text: 一个“安装时”能力，是指在安装其来源的过程中于 {ref:rule_steps_installing_installed_condition} 时可能满足其触发条件的任何能力。
+    - rule: rule_when_scored
+      text: 一个“计分时”能力，是指议案上的任何能力，只要公司在付费能力窗口中选择给该议案计分，它就可能满足其触发条件（见 {ref:rule_paid_ability_window_corp_score}）。
+    - rule: rule_instructed_to_resolve_conditional_ability
+      text: |-
+        如果某个效果试图按照 {ref:rule_references_to_trigger_conditions} 中识别出的某一类来结算一个条件能力，那么该能力会像该类别所述情况已经发生一样被标记为待触发。相关触发条件的任何额外要求仍然必须由游戏状态满足。
+      examples:
+      - text: 公司已经给 {card:神符实验项目} 和 {card:市场研究} 计了分。他们废除其中1个议案来打出 {card:24/7新闻循环}，并结算另1个议案的“计分时”能力，尽管此时这两个议案实际上都没有被计分。公司可以废除 {card:市场研究} 来结算 {card:神符实验项目} 的能力，并在其上放置1枚议案指示物，而不需要其他说明。如果潜袭者被锁定标记，公司也可以改为废除 {card:神符实验项目}，将1枚议案指示物放到 {card:市场研究} 上。不过，如果潜袭者没有被锁定标记，那么 {card:市场研究} 触发条件中的额外要求就不会满足，因此它的“计分时”能力不能变为待触发，也不能结算。
+
+  - subsection: sec_steps_of_triggering_and_resolving_a_conditional_ability
+    text: 触发并结算条件能力的步骤
+    toc:
+    steps:
+    rules:
+    - rule: step_conditional_ability_announce
+      text: 宣告你要触发与给予你优先权的那个反应窗口相关联的某个待触发能力。
+    - rule: step_conditional_ability_target_first_instruction
+      text: 宣告该能力第一条指令的任何目标。那条指令随后变为迫近。
+    - rule: step_conditional_ability_interrupt_window
+      text: 出现1个打断窗口，在此期间能力可以修改、防止或避免该迫近效果。
+    - rule: step_conditional_ability_resolution
+      text: 结算该指令，并应用已结算的打断对其效果所做的任何改变。如果该能力的操控者选择结算这条指令中包含的某个可选效果，并且这是该玩家第一次这样做，那么“使用时”条件能力就满足其触发条件。
+    - rule: step_conditional_ability_checkpoint
+      text: 出现1个检查点。
+    - rule: step_conditional_ability_loop
+      text: 如果还有更多指令要结算，宣告下一条指令的任何目标。那条指令随后变为迫近。返回（c）。
+    - rule: step_conditional_ability_complete
+      text: 条件能力结算完毕。
+
+- section: sec_play_abilities
+  text: 打出能力
+  rules:
+  - rule: rule_play_ability
+    text: 事件或事务上任何不属于付费能力、条件能力或静态能力的能力，都是{term:play ability}。打出能力是作为打出该事件或事务的一部分，在 {ref:rule_steps_playing_resolve_play_abilities} 中结算的能力。
+    examples:
+    - text: 事务卡牌 {card:竞对调研} 具有几种不同类型的能力。第一项能力写着“只有在潜袭者于其上个回合窃取或销毁了1张公司卡牌时，才能打出。”这是一项包含限制、但不包含宣告的静态能力。第二项能力（“在你结算完本事务后，你的行动阶段结束。”）是一项条件能力，它会在公司完成打出并结算 {card:竞对调研} 后满足其触发条件并结算。第三和第四项能力包含没有触发条件或付费能力触发费用的指令，因此它们都是打出能力。它们会在 {card:竞对调研} 被打出时依序结算。
+
+  - subsection: sec_steps_of_resolving_a_play_ability
+    text: 结算打出能力的步骤
+    toc:
+    steps:
+    rules:
+    - rule: step_play_ability_target_first_instruction
+      text: 宣告该能力第一条指令的任何目标。那条指令随后变为迫近。
+    - rule: step_play_ability_interrupt_window
+      text: 出现1个打断窗口，在此期间能力可以修改、防止或避免该迫近效果。
+    - rule: step_play_ability_interrupt_resolution
+      text: 结算该指令，并应用已结算的打断对其效果所做的任何改变。
+    - rule: step_play_ability_checkpoint
+      text: 出现1个检查点。
+    - rule: step_play_ability_loop
+      text: 如果还有更多指令要结算，宣告下一条指令的任何目标。那条指令随后变为迫近。返回（b）。
+    - rule: step_play_ability_complete
+      text: 打出能力结算完毕。
+
+- section: sec_subroutines
+  text: 子进程
+  rules:
+  - rule: rule_subroutine
+    text: 一个{term:subroutine}是以 [sub] 符号开头的能力。只有防火墙才能拥有子进程。
+
+  - subsection: rule_subroutines_ordered
+    text: 子进程总是有指定顺序。{n}防火墙上的子进程会根据该防火墙是如何获得它们的来分类，如 {ref:rule_subroutine_origins} 所述。首先是所列出的第一类（{ref:rule_subroutine_origin_external_before}）中的所有子进程，然后是第二类（{ref:rule_subroutine_origin_static_before}）中的所有子进程，依此类推。每一类的说明都包含该类内部多个子进程的排序规则。{/n}
+    rules:
+    - rule: rule_subroutines_duplicated
+      text: 1张卡牌 {card:太长；不看} 拥有一个能力，可以为1层防火墙上的每条子进程再赋予1份复制品。以这种方式创建的每条子进程都会紧接在其所复制的子进程之后排序，不受类别影响。如果在这些复制品仍然活动时有任何子进程被移除，那么这些复制品会保持其相对顺序，就好像被移除的子进程仍然存在一样。
+    - rule: rule_subroutines_static_ability_remove_subroutines
+      text: 1张卡牌 {card:蜂巢} 拥有一个静态能力，会移除其自身印刷的子进程。子进程会从最后1条印刷子进程开始，逆向被该能力移除。
+    - rule: rule_gain_subroutines_in_any_order
+      text: 某些公司能力会“按你选择的顺序”给予1条或多条子进程。此类能力结算时，公司会宣告该能力添加的每条子进程相对于当时那层防火墙已有的每条其他子进程的顺序，不受类别影响。
+      examples:
+      - text: 潜袭者遭遇1张 {card:兰斯洛特} 的复制品，其上附载着来自 {card:子进程助推} 的条件指示物。公司展示总部中的1张 {card:梅林} 复制品，以向 {card:兰斯洛特} 添加1条“[sub] 造成2点网域伤害。”子进程。公司会宣告来自 {card:梅林} 的那条子进程，是添加在 {card:兰斯洛特} 印刷的“[sub] 销毁1个已安装的程序。”子进程之前，还是位于印刷子进程与由条件指示物赋予的“[sub] 终止本次潜袭。”子进程之间，或者添加在“[sub] 终止本次潜袭。”子进程之后。
+    - rule: rule_corp_decides_unspecified_order
+      text: 如果多条子进程在同一时间、以未指定顺序、{n}通过同一类别的效果{/n}被添加到1层防火墙上，那么公司会在该防火墙获得它们时宣告这些子进程的相对顺序。
+
+  - subsection: rule_subroutine_origins
+    text: |-
+      如 {ref:rule_subroutines_ordered} 所述，用于决定子进程顺序的类别如下：
+    rules:
+    - rule: rule_subroutine_origin_external_before
+      text: 由某个能力获得的子进程，但不包括防火墙自身上的静态能力所赋予的子进程，且该赋予子进程的能力声明这些子进程被添加在其他子进程之前。这一类别中的子进程按赋予它们的效果开始适用的时间排序，最新添加的子进程排在最前。
+      examples:
+      - text: |-
+          当 {card:针仔与戳仔} 已安装且 {card:监察员法图玛} 已激活时，潜袭者遭遇1张 {card:洛基} 复制品。由于 {card:监察员法图玛} 的能力是静态能力，因此它所赋予的子进程在遭遇开始时就已经存在。潜袭者先结算 {card:针仔与戳仔} 的能力，然后公司结算 {card:洛基} 的能力，选择1张 {card:什一税} 复制品。{card:洛基} 上的子进程序列依次是：“[sub] 造成1点网域伤害。”、“[sub] 获得1[c]。”、“[sub] 造成1点网域伤害。潜袭者抽1张卡牌。”、“[sub] 潜袭者失去[click]。”以及“[sub] 终止本次潜袭，除非潜袭者将操控器中的所有卡牌洗入存储栈。”
+    - rule: rule_subroutine_origin_static_before
+      text: 由防火墙自身上的静态能力获得的子进程，且该能力声明这些子进程被添加在其他子进程之前。单独1层防火墙上这一类别的子进程总是相同的。如果此类子进程数量增加，那么新的复制品会添加在该类别中先前已存在的子进程之后。如果此类子进程数量减少，那么子进程会从该防火墙先前通过同一能力获得的最后1条子进程开始，逆向被移除。
+    - rule: rule_subroutine_origin_printed
+      text: 印刷在防火墙上的子进程。这一类别中的子进程序列与它们在该防火墙卡牌文本中的书写顺序一致。
+    - rule: rule_subroutine_origin_static_after
+      text: 由防火墙自身上的静态能力获得的子进程，且该能力要么声明这些子进程被添加在其他子进程之后，要么没有指定顺序。单独1层防火墙上这一类别的子进程总是相同的。如果此类子进程数量增加，那么新的复制品会添加在该类别中先前已存在的子进程之后。如果此类子进程数量减少，那么子进程会从该防火墙先前通过同一能力获得的最后1条子进程开始，逆向被移除。
+      examples:
+      - text: 当潜袭者遭遇 {card:足轻} 时，公司在总部中有3张卡牌。潜袭者破解了 {card:足轻} 的3条子进程之后，公司使用 {card:应急按钮} 再抽1张卡牌。新的子进程会添加在原先3条之后，因此潜袭者可以使用 {card:巴哈利} 来破解它。
+      - text: 当潜袭者遭遇 {card:足轻} 时，公司在总部中有3张卡牌。潜袭者先破解第一条子进程，然后使用 {card:乌托邦碎片} 迫使公司弃掉2张卡牌。{card:足轻} 便相应失去了最后2条子进程，只留下已经被破解的那条子进程。
+    - rule: rule_subroutine_origin_external_after
+      text: 由某个能力获得的子进程，但不包括防火墙自身上的静态能力所赋予的子进程，且该能力要么声明这些子进程被添加在其他子进程之后，要么没有指定顺序。这一类别中的子进程按赋予它们的效果开始适用的时间排序，最早的子进程排在最前。
+      examples:
+      - text: 潜袭者遭遇 {card:标记}，并结算了它的子进程。潜袭者接下来遭遇的防火墙是 {card:头脑风暴}。当这次遭遇开始时，来自 {card:标记} 的持续效果给 {card:头脑风暴} 赋予了1条“[sub] 终止本次潜袭。”子进程。然后，{card:头脑风暴} 的条件能力结算，给它赋予了适当数量的“[sub] 造成1点核心伤害。”子进程。所有“[sub] 造成1点核心伤害。”子进程都排在“[sub] 终止本次潜袭。”子进程之后。
+
+  - subsection: rule_subroutines_status
+    text: 对于每一次遭遇，所遭遇防火墙上的子进程相对于那次遭遇的状态，要么是{term:broken}，要么是{term:unbroken}。
+    rules:
+    - rule: rule_subroutines_initial_status_in_encounter
+      text: 当遭遇开始时，所遭遇防火墙的每条子进程都会相对于那次遭遇变为未破解。
+    - rule: rule_new_subroutines_during_encounter
+      text: 当1层防火墙在与它的遭遇期间获得1条或多条新的子进程时，那些子进程在那次遭遇中以未破解状态出现。
+    - rule: rule_subroutine_status_lifetime
+      text: 当遭遇结束时，卡牌能力仍然可以检查那些子进程在那次遭遇中是被破解还是未被破解。
+
+  - rule: rule_break_subroutine
+    text: 要{term:break}一条子进程，就是将其相对于当前遭遇的状态从未破解改为已破解。许多可以让玩家破解子进程的卡牌都是破解器（见 {ref:subsec_icebreakers}）。如果潜袭者破解了所遭遇防火墙上的所有子进程，他们就完全破解了那层防火墙（见 {ref:subsec_fully_break}）。
+
+  - subsection: rule_unbroken_subroutines_target_for_break_abilities
+    text: 只有未破解的子进程才能被选为那些会破解它们的能力的目标。
+    rules:
+    - rule: rule_break_all_subroutines_no_targets
+      text: 破解“所有子进程”的能力不会指定任何子进程为目标，只要所遭遇防火墙至少有1条未破解的子进程，就可以使用。
+    - rule: rule_break_all_but_x_subroutines_targets
+      text: 1张卡牌 {card:爪钩} 拥有一个能力，可以破解所遭遇防火墙上的“除1条之外的所有子进程”。要触发这个能力，其操控者会把那1条不会被破解的子进程选为目标。当该能力结算时，它会破解所有未破解的子进程，除了所选的那条子进程。
+      examples:
+      - text: 潜袭者使用2张 {card:爪钩} 来破解 {card:海姆达尔1.0} 上的所有子进程。对于第1张 {card:爪钩}，潜袭者选择那条未破解的“[sub] 造成1点核心伤害。”子进程作为目标，而 {card:爪钩} 会破解两条“[sub] 终止本次潜袭。”子进程。对于第2张 {card:爪钩}，潜袭者选择其中1条已经被破解的“[sub] 终止本次潜袭。”子进程作为目标。他们之所以可以选择已破解的子进程作为 {card:爪钩} 的目标，是因为 {card:爪钩} 不会尝试去破解所选子进程。当该能力结算时，{card:爪钩} 会破解“[sub] 造成1点核心伤害。”子进程，但不会对另一条“[sub] 终止本次潜袭。”子进程做任何事，因为它已经被破解了。
+
+  - subsection: rule_resolve_unbroken_subroutines
+    text: 在一次遭遇的 {ref:step_resolve_subroutine} 中，公司会结算那些相对于那次遭遇仍未被破解的子进程。
+    rules:
+    - rule: rule_resolve_subroutines_mandatory
+      text: 结算子进程是强制的，而且不会开启优先权窗口。
+    - rule: rule_resolve_subroutines_in_order
+      text: 公司按顺序一次结算1条未破解的子进程。子进程的顺序见 {ref:rule_subroutines_ordered}。
+    - rule: rule_resolve_subroutines_run_ends
+      text: 如果在这个过程中遭遇结束，那么就不会再结算更多子进程。
+      examples:
+      - text: 潜袭者遭遇 {card:小火车}，并且没有破解任何子进程。{card:小火车} 的第一条子进程结算并终止了本次潜袭。由于本次潜袭、进而那次遭遇都已经结束，所以不会再结算更多子进程。潜袭者不会获得5[c]。
+    - rule: rule_resolve_subroutines_runner_choice
+      text: 1张卡牌 {card:街头魔术} 允许潜袭者设定子进程的结算顺序。如果这项能力在一次遭遇中首次到达 {ref:step_resolve_subroutine} 时是活动的，那么潜袭者会为未破解的子进程宣告一个顺序，公司必须按这个顺序而不是正常顺序来结算它们。新顺序会在任何子进程结算之前确定。
+
+  - rule: rule_subroutine_independent
+    text: 一旦某条子进程的第一条指令变为迫近，该子进程就会脱离其来源而变得独立，并适用 {ref:rule_abilities_resolution_independent}。
+
+  - rule: rule_replace_subroutine_resolution
+    text: 1张卡牌 {card:Tsakhia "Bankhar" Gantulga} 可以在某条子进程处于迫近状态时应用1个替代效果，以改为结算另一条子进程。被替代的子进程会被视为与原本那条迫近子进程有相同的来源。
+    examples:
+      - text: 潜袭者在 {card:Tsakhia "Bankhar" Gantulga} 的替代效果适用时遭遇 {card:海洋怪声}。{card:海洋怪声} 的3条子进程本来都会结算，但都被替代效果改成了“[sub] 造成1点网域伤害。”。这些子进程仍然算作是由 {card:海洋怪声} 结算出来的，所以当潜袭者在遭遇后通过 {card:海洋怪声} 时，潜袭者可以使用 {card:珀耳塞福涅} 销毁其存储栈顶的1张卡牌以及研发中心顶上的3张卡牌。
+
+  - subsection: sec_steps_of_resolving_a_subroutine
+    text: 结算子进程的步骤
+    toc:
+    steps:
+    rules:
+    - rule: step_subroutine_becomes_imminent
+      text: 子进程本身变为迫近。
+    - rule: step_subroutine_interrupt_subroutine_resolution
+      text: 出现1个打断窗口，在此期间能力可以防止该子进程结算。如果发生这种情况，剩余步骤不会执行。
+    - rule: step_subroutine_target_first_instruction
+      text: 宣告该子进程第一条指令的任何目标。那条指令随后变为迫近。
+    - rule: step_subroutine_interrupt_subroutine_effect
+      text: 出现1个打断窗口，在此期间能力可以修改、防止或避免该迫近效果。
+    - rule: step_subroutine_resolution
+      text: 结算该指令，并应用已结算的打断对其效果所做的任何改变。
+    - rule: step_subroutine_checkpoint
+      text: 出现1个检查点。
+    - rule: step_subroutine_loop
+      text: 如果还有更多指令要结算，宣告下一条指令的任何目标。那条指令随后变为迫近。返回（d）。
+    - rule: step_subroutine_complete
+      text: 子进程结算完毕。
+
+- section: sec_interrupts_replacements
+  text: 打断与替代效果
+  rules:
+  - subsection: rule_interrupt_definition
+    text: |-
+      一个{term:interrupt}是会修改另一条指令的效果，或修改该指令将被结算时所处上下文的能力。打断可以写成付费能力或条件能力的形式。
+    rules:
+    - rule: rule_interrupt_symbol
+      text: |-
+        打断能力由出现在能力开头的 [interrupt] 符号，或能力文本中的某些关键词来表示。
+    - rule: rule_interrupt_keywords
+      text: |-
+        任何使用“prevent”、“avoid”或“would”一词的付费能力或条件能力，都是打断能力。
+
+  - subsection: rule_expected_effects
+    text: |-
+      一条迫近指令的{term:expected effects}，就是该指令文本所描述的效果，再加上任何影响它的静态能力以及已经应用的替代效果或打断效果所修改后的结果。一条指令的预期效果会在整个打断窗口中持续更新。
+    examples:
+    - text: 潜袭者打出 {card:流程自动化}，于是“获得2[c]并抽1张卡牌。”这条指令变为迫近。该指令的预期效果是潜袭者将获得2[c]并抽1张卡牌。
+    - text: 潜袭者在 {card:禁闭} 的子进程结算后打出 {card:流程自动化}。“获得2[c]并抽1张卡牌。”这条指令变为迫近，但潜袭者不能抽牌。这条指令的预期效果是潜袭者将获得2[c]。
+    rules:
+    - rule: rule_expected_effects_resolve
+      text: |-
+        当一条指令结算时，其预期效果就对应于实际发生的效果，除非 {ref:rule_negative_values_resolution} 适用。
+
+  - subsection: sec_relevant_interrupts
+    text: |-
+      要触发一个打断，它必须与一条迫近指令{term:relevant}。如果以下至少一项为真，那么该打断就与这条指令相关：
+    rules:
+    - rule: rule_prevent_relevant
+      text: 其效果可以防止或避免该迫近指令的部分或全部预期效果。见 {ref:sec_prevent_avoid}。
+    - rule: rule_modify_value_relevant
+      text: 其效果可以修改与该迫近指令预期效果相关联的某个数值。见 {ref:sec_modifiable_values} 和 {ref:sec_calculating_expected_effect_values}。
+    - rule: rule_replacement_effect_relevant
+      text: 其效果可以创建1个适用于该迫近指令预期效果的替代效果。见 {ref:rule_replace_imminent_effects}。
+    - rule: rule_would_relevant
+      text: 它有一个使用“would”一词的触发条件，而该触发条件会被这条迫近指令的预期效果满足。
+      examples:
+      - text: "{card:一流选手} 第二项能力的触发条件是“本回合第一次你将要抽任意数量的卡牌时”。即使这项能力的效果并没有直接修改那条迫近指令的效果，该能力仍然与一条预期会抽牌的指令相关。"
+
+  - subsection: sec_interrupt_window_for_imminent_instruction
+    text: |-
+      每当一条指令变为迫近时，就会开启1个打断窗口，让玩家修改该指令的效果。{ref:Rule_interrupt_window}包含处理打断窗口中优先权的规则。
+    rules:
+    - rule: rule_apply_replacement_effects_on_opening_interrupt_window
+      text: |-
+        在窗口开启时，先确定该指令最初的预期效果，然后应用任何会替代全部或部分预期效果的活动替代效果。如果有多个替代效果都可以适用，那么它们的应用顺序遵循 {ref:rule_order_of_replacement_effects} 中的规则。
+    - rule: rule_pending_status_for_interrupt_windows
+      text: |-
+        在替代效果应用之后、玩家获得优先权之前，与该迫近指令相关的活动条件能力打断会被标记为待触发，并与该窗口关联。如果某个条件能力打断在打断窗口开启之后才变为活动，它就不会变为待触发。
+    - rule: rule_trigger_conditional_ability_interrupt
+      text: |-
+        当玩家在打断窗口中拥有优先权时，只有当其控制下的某个条件能力打断在该窗口中处于待触发状态、且仍与该迫近指令相关时，他们才能触发它。
+      examples:
+      - text: 有一条迫近的指令会销毁1张已安装的 {card:先驱} 复制品。潜袭者使用 {card:自毁结构体} 来防止 {card:先驱} 被销毁。即使 {card:先驱} 的打断能力仍然处于待触发状态，潜袭者也不能再触发它，因为该指令的预期效果已不再包括销毁 {card:先驱}，因此该能力已经不再相关。
+      - text: 有一条迫近的指令会让潜袭者获得2枚锁定标记。潜袭者销毁 {card:虚假目标} 来使用其能力避免其中1枚锁定标记，而这满足了 {card:雷鸣画廊} 的能力触发条件。后者在打断窗口仍然开启时作为连锁反应结算（见 {ref:rule_chain_reaction}），使潜袭者可以安装 {card:家中无人}。{card:家中无人} 拥有一个条件能力打断，只要该指令仍然预期会给潜袭者1枚锁定标记，它就是相关的。不过，{card:家中无人} 在打断窗口开启时并不活动，所以它的能力不会变为待触发，也无法被触发。
+    - rule: rule_trigger_paid_ability_interrupt
+      text: |-
+        当玩家在打断窗口中拥有优先权时，他们可以使用与该迫近指令相关的付费能力打断。该能力不必在打断窗口开启时就已经活动，此时也不需要有付费能力窗口开启。
+      examples:
+      - text: 有一条迫近的指令会让潜袭者获得2枚锁定标记。潜袭者销毁 {card:虚假目标} 来使用其能力避免其中1枚锁定标记，而这满足了 {card:雷鸣画廊} 的能力触发条件。后者在打断窗口仍然开启时作为连锁反应结算（见 {ref:rule_chain_reaction}），使潜袭者可以安装另一张 {card:虚假目标}。潜袭者随后在原本的打断窗口中再次获得优先权，并使用第2张 {card:虚假目标} 的能力来避免另一枚迫近的锁定标记。
+
+  - subsection: sec_prevent_avoid
+    text: 要{term:prevent}或{term:avoid}一个效果，就是阻止该效果发生。“prevent”和“avoid”这两个词是同义的。
+    rules:
+    - rule: rule_ordinal_would
+      text: |-
+        有些能力寻找的是在指定时间段内某个“would”将要发生的效果的序数实例。这些能力寻找的是该效果变为迫近的合适次数，而不是该效果是否真的结算。防止或替代某个效果，并不会让这些能力在同一时间段内再次满足其触发条件。
+      examples:
+      - text: |-
+          {card:半藏冬莉} 的打断只能在一次潜袭中“你第一次将要造成网域伤害时”使用。如果第一点变为迫近的网域伤害被潜袭者使用 {card:反馈式过滤器} 防止了，那么在本次潜袭的剩余时间内，{card:半藏冬莉} 就不能再用于任何其他网域伤害实例，因为下一次迫近的网域伤害是公司“将要”造成网域伤害的第2次，而不是第1次。
+    - rule: rule_ordinal_prevented
+      text: 不使用“would”的能力不会看到被防止的效果，因为那些效果并未发生。
+
+  - subsection: sec_modifiable_values
+    text: 有些指令会使用一个关联数值。这些数值可以被打断和替代效果改变。
+    rules:
+    - rule: rule_modifiable_value_tags
+      text: 潜袭者将会从某个效果中获得的锁定标记数量，是一个数值。避免其中若干枚锁定标记会降低该数值。潜袭者获得的锁定标记数量这个数值必须大于0，给予锁定标记的效果才会发生。
+    - rule: rule_modifiable_value_damage
+      text: 潜袭者将会从某个效果中受到的伤害数量，是一个数值。防止其中若干点伤害会降低该数值。潜袭者受到的伤害数量这个数值必须大于0，伤害效果才会发生。
+    - rule: rule_modifiable_value_cost
+      text: 在结算某个效果时将要支付的费用，是一个数值。{ref:Rule_cost_calculation} 适用于支付费用时的最终数值。另见 {ref:rule_cost_zero}。
+      examples:
+      - text: |-
+          {card:补丁} 的打断会修改打出费用或安装费用，因此它与任何会打出或安装卡牌、并支付相应费用的指令都相关。
+    - rule: rule_modifiable_value_base_trace_strength
+      text: 一次追踪尝试的基础追踪强度是一个数值。有关追踪尝试的规则见 {ref:sec_traces}。基础追踪强度这个数值不必大于0，追踪尝试才会发生。
+
+  - subsection: sec_calculating_expected_effect_values
+    text: 与迫近指令相关联的数值，会作为该指令预期效果的一部分持续计算。
+    rules:
+    - rule: rule_negative_values_imminent
+      text: 当一条指令处于迫近状态时，与该指令相关的数值可以被降到0以下。只要该指令仍处于迫近状态，数值为0或更低时仍然可以被其他打断能力修改。
+      examples:
+      - text: |-
+          潜袭者在其回合中拿到1枚锁定标记，使公司得以触发 {card:斯通先生}。当 {card:斯通先生} 能力造成的1点肢体伤害处于迫近状态时，双方玩家都可以触发打断来修改该伤害效果。由于这是潜袭者的回合，他们先获得优先权，并使用 {card:冒用生物特征} 防止2点伤害。此时该迫近效果的预期结果变成了造成-1点伤害。当公司获得优先权时，他们触发2张 {card:清除者} 的复制品，每张都会让预期伤害增加1，于是总数先变成0，再变成1。即使该效果在迫近时一度是0或更低，能力最终还是会结算为造成1点伤害。
+    - rule: rule_prevent_all
+      text: 如果在一条指令处于迫近状态时，某个效果防止了“所有伤害”或“任意数量的伤害”，那么伤害就会从预期效果中被完全移除，不再有可供修改的数值。如果在一条指令处于迫近状态时，某个效果避免了“所有锁定标记”或“任意数量的锁定标记”，那么获得锁定标记就会从预期效果中被完全移除，不再有可供修改的数值。
+      examples:
+      - text: |-
+          潜袭者安装 {card:网备视眼}，并使用 {card:铬金改造院} 防止其第一项能力造成的全部伤害。此时已经不再有迫近的伤害效果，因此公司不能使用 {card:清除者}。
+    - rule: rule_prevent_all_but_one
+      text: 1张卡牌 {card:生物建模网络} 拥有一条指令，可以防止“除了1点网域伤害以外的所有网域伤害”。当迫近指令的预期效果包含造成网域伤害，且伤害数量为2点或更多时，这个能力就相关。该能力的效果是把伤害数量这个数值设为1。先前已经应用的该数值修正会被忽略。以这种方式设为1之后，这个数值仍然可以被其他打断修改。
+    - rule: rule_negative_values_resolution
+      text: |-
+        某些类型的数值必须大于0，相应效果才会发生。见 {ref:sec_modifiable_values}。在一条指令结算时，如果这些类型中的任何一个数值为0或更低，那么按照黄金规则中的 {ref:rule_if_able,rule_do_as_much_as_you_can}，该能力会尽可能多地结算，但不应用使用该数值的那部分效果。
+      examples:
+      - text: The Runner accesses {card:破裂穹顶}. While the instruction from its "when accessed" ability is imminent, the Runner uses {card:冒用生物特征} to prevent 2 damage. When the ability resolves, the value for the amount of damage is -1, which is less than or equal to 0, so the damage effect cannot occur and the Corp only trashes the top card of the stack.
+    - rule: rule_modified_values_retain_properties
+      text: 任何使用了被修改数值的效果，都会用新数值保留其限制和说明。
+      examples:
+      - text: While the result of a successful trace from {card:耀斑} is imminent, the Corp triggers {card:清除者} to increase the imminent meat damage by 1. Even though the damage from {card:耀斑} has been increased from 2 to 3, none of that meat damage can be prevented.
+    - rule: rule_prevent_as_trigger_condition
+      text: |-
+        1张卡牌 {card:古鲁达温德} 拥有一个非打断条件能力，其触发条件是“每当此资源防止1点或更多伤害时”。当以下情况发生时，就满足该触发条件：一条迫近指令的预期效果包含某个伤害效果，且伤害数量的数值大于0；一个打断能力从与该条件能力相同的来源对象结算；并且该打断降低了伤害数量的数值，或将该伤害效果完全移除。
+      examples:
+      - text: |-
+          潜袭者读取 {card:安吉丽克·加尔萨·科雷亚}，公司支付2[c]，使“造成2点肢体伤害”这条指令变为迫近。潜袭者使用 {card:凝塑铠甲} 防止2点肢体伤害，使该迫近指令的预期效果变成“造成0点肢体伤害。”。此时，伤害的0值仍然可以被像 {card:清除者} 这样的能力修改。然后潜袭者结算 {card:古鲁达温德} 上的打断能力，将该伤害效果完全移除。由于伤害的数值是0，{card:古鲁达温德} 的第二项能力并没有满足其触发条件，潜袭者不必销毁 {card:古鲁达温德} 或支付4[c]。此时已经不再有迫近的伤害效果，因此公司不能使用 {card:清除者}。
+
+  - subsection: sec_replacement_effects
+    text: |-
+      一个{term:replacement effect}会通过用不同的行为替换原效果的部分或全部行为，来修改另一个效果。其文本中会出现“instead”一词，以表明这是替代效果。一旦创建，替代效果就会自动应用，不需要玩家显式触发。
+    rules:
+    - rule: rule_replacement_effect_from_interrupt
+      text: 打断可以引入替代效果，这些替代效果会作用于当前即将发生的指令。见 {ref:rule_replace_imminent_effects}。
+    - rule: rule_replacement_effect_from_static_ability
+      text: 静态能力可以规定替代效果，只要时机合适且该静态能力处于活动状态，这些替代效果就会生效。
+    - rule: rule_replacement_effect_from_lingering_effect
+      text: 其他能力可以预先创建替代效果，用于之后可能发生的效果。这是持续效果的一种（见 {ref:sec_lingering_effects}）。
+
+  - subsection: rule_applying_replacement_effects
+    text: 替代效果最常作用于指令的效果，但有些会作用于静态能力，或改变持续效果的持续时间。
+    rules:
+    - rule: rule_replacement_on_static_ability_must_remain_active
+      text: |-
+        如果某个替代效果修改了静态能力的效果或持续效果的持续时间，那么只要该替代效果本身处于活动状态，这种修改就会持续生效；一旦该替代效果或被修改的原效果变为不活动，这种修改就不再生效。
+      examples:
+      - text: |-
+          {card:格布雷西拉西耶} 的静态能力会把影响其宿主的某些持续效果的持续时间改为“直到本回合结束”。如果 {card:格布雷西拉西耶} 被卸载或移到其他宿主上，它的替代效果就不再作用于那些持续效果，因此它们会恢复为正常持续时间。如果其中任何持续时间已经到期，相应效果会在下一个检查点结束。
+    - rule: rule_replacement_effects_apply_as_interrupt_window_opens
+      text: |-
+        如果一个活动的替代效果可以作用于一条即将发生的指令的预期效果，那么当打断窗口开启时，它就会被应用，指令的预期效果也会相应更新。这一步发生在检查可能变为待触发的相关活动能力之前。此时由打断创建的替代效果尚未活动，因此会改按 {ref:rule_replace_imminent_effects} 处理。
+    - rule: rule_replacement_effect_only_applies_once_per_effect
+      text: |-
+        每个替代效果对单个效果最多只能应用一次。一个替代效果一旦已经应用过，即使它创建的新效果（或后续替代效果创建的新效果）仍然包含被替代效果的出现，该替代效果也不能再应用到该效果上。
+      examples:
+      - text: 潜袭者读取 {card:瓦什隆计划}，其打断能力结算。该打断创建了一个替代效果，会取代将议案加入潜袭者计分区的行为。潜袭者仍然会夺取 {card:瓦什隆计划}，但他们会通过将其连同附着的议案指示物一起加入自己的计分区来这么做。即使修改后的效果仍然包含把 {card:瓦什隆计划} 加入潜袭者计分区，也没有办法让替代效果再次应用到其自身结果上。
+
+  - rule: rule_replace_imminent_effects
+    text: 有些打断会创建替代效果，用来修改一条已经即将发生的指令。该打断结算时，如果该替代效果可以作用于这条即将发生的指令的预期效果，就会立即应用。
+    examples:
+    - text: 一条指令即将发生，其预期效果是公司对潜袭者造成网域伤害。公司使用 {card:半藏冬莉} 的能力，创建了一个将网域伤害替换为中枢伤害的替代效果。该替代效果会立即应用，因此在 {card:半藏冬莉} 的能力结算后，预期效果现在变成造成1点中枢伤害。当玩家再次获得优先权时，他们的打断是否相关，将取决于新的预期效果。
+
+  - subsection: rule_order_of_replacement_effects
+    text: 如果多个替代效果都会作用于一个以目标卡牌为对象的效果，那么由该卡牌的操控者选择这些替代效果的应用顺序。如果多个替代效果会作用于其他任何效果，则由基础效果的操控者选择这些替代效果的应用顺序。
+    rules:
+    - rule: rule_replacement_effect_must_have_something_to_replace
+      text: 在应用一个替代效果之后，只有在它原本要替代的效果仍然处于预期之中时，后续替代效果才能应用。没有可替代之物，替代效果就不能应用。
+      examples:
+      - text: |-
+          潜袭者在其回合开始时用 {card:安全测试} 选择总部，然后打出 {card:账户虹吸}。当潜袭成功时，{card:安全测试} 和 {card:账户虹吸} 都会创建替代效果。当这次潜袭的 {ref:step_breach} 变为即将发生时，潜袭者必须选择应用 {card:安全测试} 的替代效果或 {card:账户虹吸} 的替代效果其中之一。由于这两个效果都不会创建一次新的侵入服务器实例，先应用哪个都无关紧要，未被选中的效果都没有东西可替代，因此不会生效。
+      - text: |-
+          潜袭者在其回合开始时用 {card:安全测试} 选择研发中心，然后打出 {card:卖弄}。当一场针对研发中心的潜袭成功时，{card:安全测试} 和 {card:卖弄} 都会创建替代效果。当这次潜袭的 {ref:step_breach} 变为即将发生时，潜袭者必须在 {card:安全测试} 的替代效果和 {card:卖弄} 的替代效果之间择一应用。如果他们先应用 {card:安全测试}，那么 {card:卖弄} 的效果就没有东西可替代，因此不会生效。如果他们先应用 {card:卖弄}，预期效果仍然包含侵入研发中心，只是方式不同。{card:安全测试} 仍然可以替代这次侵入，因此它会接着应用。无论哪种顺序，潜袭者都会获得2[c]，而且不会侵入该服务器。
+
+  - section: sec_lingering_effects
+    text: 持续效果
+    rules:
+    - rule: rule_lingering_effect
+      text: 指令可以创建{term:lingering effects}，让它们在结算后继续存在。一个持续效果一旦创建，即使其来源变为不活动，也会独立于来源存在。持续效果只会在创建它的指令所指定的持续时间内保持活动。在每个检查点的 {ref:step_checkpoint_duration_abilities} 处，持续时间已经到期的持续效果会从游戏状态中移除。
+    - rule: rule_lingering_effect_maintain_existence_ability
+      text: 有些持续效果存在的唯一目的，是维持另一个能力的存在。延迟条件能力就是这样维持的，而且可能具有隐含的持续时间。见 {ref:rule_delayed_conditional_ability}。
+
+  - subsection: rule_lingering_effect_maintain_choice
+    text: 有些持续效果会维持玩家在结算某个能力时所做出的选择，以便另一个具有相同来源对象的能力或效果能够利用该选择。
+    rules:
+    - rule: rule_lingering_effect_maintaining_choice_default_duration
+      text: 如果该选择只会被另一个持续效果引用，那么维持该选择的持续效果与另一个持续效果具有相同的持续时间。
+      examples:
+      - text: 潜袭者结算 {card:虹彩} 的付费能力并选择一个冰的子类型。随后该能力创建一个持续效果，将所选子类型添加到遭遇的冰上。该子类型的选择以及将其添加到冰上的效果都会在此次遭遇结束时到期。
+    - rule: rule_lingering_effect_maintaining_choice_turn_begins_duration
+      text: 如果一个条件能力的触发条件是“当你的回合开始时”，且除了做出一个选择之外没有任何其他效果，那么维持该选择的持续效果会在那个回合结束时，或者在来源对象变为不活动时到期。
+      examples:
+      - text: |-
+          {card:安全测试} 的第一项能力写道：“当你的回合开始时，你可以选择一个服务器。”在某个回合中结算这项能力时所做出的选择，只应维持到那个回合结束为止。{card:安全测试} 第二项能力的触发条件会引用所选服务器，并且它总会查找本回合所选的服务器。对一个本回合未被选择的服务器进行一次成功潜袭，永远不会满足那个触发条件，即使本回合实际上没有选择任何服务器也是如此。
+    - rule: rule_lingering_effect_maintaining_choice_duration_other_cases
+      text: 如果前述情况都不适用，那么持续效果的持续时间只会在来源对象变为不活动时到期。
+      examples:
+      - text: |-
+          {card:蛇蝎美人} 的第一项条件能力指示潜袭者选择一张已安装的冰。所选的是哪张冰，会在 {card:蛇蝎美人} 保持活动期间作为一个持续效果被维持，而它的最后一项能力会引用那个被该持续效果记住的对象。
+
+  - subsection: rule_lingering_effect_inapplicable_timing_structure
+    text: 如果一个持续效果在创建时所依据的时序结构当时并未进行中，那么其持续时间会立即到期，而该持续效果只会持续到它创建后下一个检查点为止。
+    rules:
+    - rule: rule_icebreaker_strength_increase_implicit_link
+      text: 能修改其来源强度的 {subtype:icebreaker} 上的能力，具有“直到当前遭遇结束为止”的隐含持续时间。见 {ref:rule_icebreaker_strength_increase_implicit}。
+
+  - rule: rule_modify_duration_of_lingering_effect
+    text: 只有持续效果才有持续时间。修改其他能力持续时间的能力，是通过让其对应的持续效果保持活动，直到额外的持续时间到期为止来运作的。这类能力不会与静态能力的效果互动。
+    examples:
+    - text: 潜袭者操控着附载在 {card:纳补科} 上的 {card:格布雷西拉西耶}。他们针对有3层冰保护的服务器发起潜袭，并使用 {card:纳补科} 的最后一项能力，把其强度提高到总计6点。当潜袭结束时，{card:纳补科} 的静态能力将不再提供+3强度，但其付费能力带来的+2强度持续效果会由 {card:格布雷西拉西耶} 维持，直到回合结束或 {card:格布雷西拉西耶} 不再附载于 {card:纳补科}。如果潜袭者再针对只有1层冰保护的服务器发起一次潜袭，那么当那次潜袭开始时，{card:纳补科} 的强度将为4点。
+
+  - section: sec_identifying_instructions
+    text: 识别指令
+    snippet: |-
+      要正确结算条件能力以及可能在另一能力结算过程中满足其触发条件的打断（见 {ref:rule_chain_reaction}），玩家需要确定每个能力结算过程中检查点出现的位置。本节有助于玩家作出这一判断。有关特定卡牌的说明，请参见 {link:netrunnerdb.com|https://www.netrunnerdb.com} 上该卡牌页面的裁定部分。
+    rules:
+    - subsection: rule_instruction_pause
+      text: |-
+        一条指令通常一旦开始结算就不能被暂停。只有当某个检查点在其结算过程中间开启时，指令才可以暂停，而这只会出现在以下情况中：
+      rules:
+      - rule: rule_cost_paid_checkpoint
+        text: 每当支付一次费用之后，必须立刻出现一个检查点。
+      - rule: rule_checkpoint_timing_structure
+        text: 当一个时序结构开启时，该时序结构中的检查点就会依序执行。见 {ref:rule_timing_structure}，其中列出了各类时序结构。
+      - rule: rule_draw_checkpoint
+        text: 当玩家抽牌时，该流程的 {ref:step_draw_checkpoint} 处会出现一个检查点。
+      - rule: rule_play_checkpoint
+        text: 当一个事件或事务被打出时，该流程的 {ref:rule_steps_playing_played_checkpoint} 处会出现一个检查点。
+      - rule: rule_trace_checkpoint
+        text: 当一次追踪被发起时，该流程的 {ref:step_trace_checkpoint} 处会出现一个检查点。
+
+    - subsection: rule_step_in_timing_structure_is_instruction
+      text: 时序结构中的每个步骤都构成一条独立的指令，因此其前面会有一个打断窗口，后面会跟着一个检查点。
+      rules:
+      - rule: rule_step_sequences
+        text: 有些并非时序结构的游戏流程也会以一系列步骤的形式呈现。这些步骤并不表示指令边界，只有在这些流程中明确要求时，才会出现检查点。
+        examples:
+        - text: 安装卡牌的各个步骤并不是独立的指令。安装卡牌通常作为单条指令的一部分一次性完成。安装卡牌过程中唯一出现的检查点，是在 {ref:rule_steps_installing_pay_install_cost} 处，也就是安装费用支付完毕之后。
+        - text: 检查点的各个步骤不是指令。一个检查点的中间不会再发生任何检查点。
+
+    - rule: rule_instructions_in_ability_text
+      text: 通常，能力文本中的每个句子都会构成一条独立的指令。每条指令结算完毕后，能力会暂停其结算，以便开启优先权窗口并让其他能力结算。首先会出现一个检查点，使任何适当的条件能力都能在反应窗口中被标记为待触发，然后为下一条指令宣告目标。最后，下一条指令变为即将发生，从而让与该指令相关的打断在打断窗口中结算。
+
+    - subsection: rule_instruction_sentence_exceptions
+      text: |-
+        有些句子不是指令，有些句子包含多条指令，还有些指令包含多个句子。以下就是句子与指令并非一一对应的情况：
+      rules:
+      - rule: rule_use_restrictions
+        text: 如果一个句子只是在说明该能力何时或如何能够被触发时所需的澄清、限制或条件，或者除此之外没有向玩家或游戏状态给出在该能力结算时会执行的指示，那么它就不属于任何一条指令。
+        examples:
+        - text: 句子“Use this ability only by spending credits from a {subtype:stealth} card.”不是指令，也不属于任何指令的一部分。它只是适用于整个能力的限制。
+      - rule: rule_split_up_instruction
+        text: 如果一个句子指示玩家打出、安装或读取不止1张卡牌，那么每张卡牌都作为独立指令处理。第一张之后的每一次打出、安装或读取之前，当前指令都会结束，并立即开始下一条。
+        examples:
+        - text: 公司打出 {card:幻镜所的货物}，其单句指示他们从总部安装最多3张卡牌。这可以视为它写成了：“你可以从总部安装1张卡牌。你可以从总部安装1张卡牌。你可以从总部安装1张卡牌。”，或者等价地视为：“你可以从总部安装1张卡牌。重复此过程2次。”
+      - rule: rule_choose_instruction
+        text: 如果一个句子指示玩家选择1个或多个目标，但既没有作用于该选择，也没有描述任何其他效果，那么这个句子与其后的句子构成同一条指令。
+        examples:
+        - text: |-
+            {card:校正} 的打出能力写道：“选择一层冰。那层冰获得 {subtype:sentry}、{subtype:code gate} 和 {subtype:barrier}，直到回合结束。”第一句除了指示潜袭者选择目标之外什么也没做，因此它与第二句构成同一条指令。目标会在指令变为即将发生时被选定，而那张卡牌会在指令结算时获得这些子类型。
+      - rule: rule_search_instruction
+        text: 有些老旧卡牌把搜索效果写在同一句里，而该句后半部分才是对找到的卡牌要执行的效果。应当把这些句子视为：搜索结束并完成任何必要的洗牌，就标志着一条指令的结束。在搜索找到的卡牌处于放到一边的区域时会出现一个检查点，然后把句子的其余部分当作下一条指令。 
+        examples:
+        - text: 潜袭者使用 {card:巨灵} 搜索一个程序，而公司在计分区中有 {card:人格剖析}。潜袭者找到了 {card:数据吸食虫} 的一张复制品，把它放到一边，并洗牌。这样就结束了一条指令；由于搜索已经发生，{card:人格剖析} 的能力满足了其触发条件。公司会在下一条指令变为即将发生之前的反应窗口中结算该能力，迫使潜袭者从手牌中随机销毁1张卡。最后，第二条指令结算，潜袭者把先前放到一边的 {card:数据吸食虫} 加入其手牌。
+      - rule: rule_look_reveal_instruction
+        text: 有些老旧卡牌把“查看”或“展示”一个卡组的效果写在同一句里，而该句后半部分才是对这些卡牌要执行的效果。应当把这些句子视为：让相关玩家能够看到这些卡牌，就标志着一条指令的结束。当相关玩家能够看到这些卡牌后，会出现一个检查点，然后把句子的其余部分当作下一条指令。
+        examples:
+        - text: 公司正在结算 {card:建筑师} 上的第一条子进程，而它用一句话允许公司查看研发中心中的卡牌并安装其中1张。查看研发中心顶端的5张牌就结束了该能力的第一条指令。一旦公司能够看到这些牌，他们就可以为第二条指令选择目标，而那条指令会安装该目标。由于安装是可选的，公司也可以拒绝选择目标，这样第二条指令就没有效果。第二条指令结算完毕后，能力结束，公司查看研发中心卡牌的许可也随之结束。
+      - rule: rule_nested_cost_instruction
+        text: 如果一个能力包含嵌套费用，那么选择是否支付该费用就会结束一条指令。如果该费用被支付（或未支付）之后，相应效果将会被执行，那么这部分能力就成为下一条指令。另见 {ref:rule_nested_cost}。
+      - rule: rule_choice_instruction
+        text: 如果某个效果指示玩家在一组会产生不同效果的选项之间做选择，那么该选择就会结束一条指令。每个选项都各自开始一条指令或一组指令，而所选的那个会接着结算。
+        examples:
+        - text: 潜袭者遭遇 {card:数据乌鸦}，并被其第一项能力强制在“获得1个锁定标记”或“结束潜袭”之间结算其一。作出这个选择会结束第一条指令，而潜袭者所选的选项会在一个检查点之后变为即将发生。
+
+    - rule: rule_linked_abilities_during_timing_structure
+      text: 如果一个能力发起一个时序结构，那么其来源可能拥有会在该时序结构中适用的联结能力。这些能力通常写在创建该时序结构的指令之后，但它们不属于同一个能力中的指令。
+
+  - section: sec_other_rules_and_terminology
+    text: 其他规则与术语
+    rules:
+    - subsection: subsec_simultaneous_effects
+      toc:
+      text: 同时效果
+      rules:
+      - rule: rule_modify_value
+        text: 如果有不止一个效果试图修改同一个数值，那么应从其默认值开始，先应用把它设为特定值的效果，再应用每个使该数值增加的效果，最后应用每个使该数值降低的效果。
+      - rule: rule_modify_subtypes
+        text: 如果有不止一个效果试图为一张卡牌添加或移除同一个子类型，则要统计该子类型被添加的次数（包括其印刷文本中的添加）和被移除的次数。只要添加次数更多，这张卡牌就具有该子类型。只要移除次数更多，或者二者次数相等，这张卡牌就不具有该子类型。
+      - rule: rule_modify_ability_with_choice
+        text: 如果有不止一个效果让玩家有机会如何结算某个能力或游戏规则，以至于双方玩家都被指示作出一次且只能作一次的选择，那么由主动玩家作出该选择。除此之外，给予玩家选择的那些效果会照常结算。
+        examples:
+        - text: 如果 {card:柯罗诺斯协议} 和 {card:钛金肋骨} 都处于活动状态，那么双方玩家都必须选择每回合第一次网域伤害会销毁的卡牌。由于这不可能实现，只有主动玩家选择那张牌。由于 {card:柯罗诺斯协议} 还会指示公司查看潜袭者手牌，而且这既没有被其他任何能力防止，也没有被任何其他能力矛盾，这部分效果会在任一玩家的回合中发生。
+      - rule: rule_dependent_effects
+        text: |-
+          如果静态效果或持续效果改变了第二个效果是否活动、它作用于哪些对象，或者它对这些对象做什么，那么第二个效果{term: depends on}第一个效果。要在存在依赖关系的游戏状态中确定每个对象的特征，请按以下流程进行：先使用每个对象的印刷特征，然后按 {ref:rule_independent_effects} 指定的顺序将修改对象的效果应用到游戏状态中。如果某个效果来自一个已经不存在，或者由于先前已应用的效果而不再活动的静态能力，则不要应用该效果。当所有活动效果都应用完毕时，流程就完成了，每个对象都具有其正确特征。
+      - rule: rule_independent_effects
+        text: 当按照 {ref:rule_dependent_effects} 的说明应用效果时，待应用的效果如果不依赖于任何其他待应用的效果，那么它就是{term:independent}。若可能，总是优先选择一个独立效果作为下一个要应用的效果。如果同时存在多个独立效果，这些效果彼此之间可以按任意顺序应用。（所选顺序不应影响最终结果。）如果不存在独立效果（因为其余每个效果都依赖于另一个效果，形成了“循环”），则检查这些效果各自的来源，并把附载对象上的效果视为不依赖于其宿主上的对象效果。
+        examples:
+        - text: |-
+            {card:母神}、{card:安塞尔1.0} 和 {card:监察员法图玛} 都已激活，而 {card:消音} 附载在 {card:母神} 上。{card:母神}、{card:监察员法图玛} 和 {card:消音} 都会产生可能修改 {card:母神} 特征的效果，因此为了确定 {card:母神} 的真实特征，我们必须检视这些效果彼此之间如何依赖。{card:母神} 的效果会赋予它 {card:安塞尔1.0} 的子类型，包括 {subtype:bioroid} 子类型，而这会影响 {card:监察员法图玛} 的能力是否适用于 {card:母神}，因此 {card:监察员法图玛} 的效果依赖于 {card:母神} 的效果。{card:消音} 的效果会移除 {card:母神} 的能力，因此 {card:母神} 的效果依赖于 {card:消音} 的效果。没有其他效果会改变 {card:消音} 的效果如何运作。由于 {card:消音} 的效果是独立的，它必须先应用。当它被应用后，{card:母神} 的能力就不再存在，因此 {card:监察员法图玛} 的效果现在变成独立。它接着被应用，并赋予 {card:安塞尔1.0} 一条子进程，但不会赋予 {card:母神}，因为后者不具有 {subtype:bioroid} 子类型。
+        - text: |-
+            {card:消音} 附载在 {card:磁铁} 上。{card:消音} 的能力会创建一个移除 {card:磁铁} 能力的效果，而 {card:磁铁} 的能力会创建一个移除 {card:消音} 能力的效果。这些效果的依赖关系形成了一个循环，因此要考虑其来源对象的附载关系，并把 {card:消音} 的能力所创建的效果视为不依赖于 {card:磁铁} 的能力所创建的效果。于是 {card:消音} 的效果被视为独立并先应用。{card:磁铁} 的能力以及由其产生的效果都不再存在，因此它们从未被应用。
+
+    - subsection: subsec_quantities_and_sets
+      toc:
+      text: 数量与集合
+      rules:
+      - rule: rule_act_on_multiple_cards
+        text: 如果一个效果为了单一目的作用于一组卡牌，那么该效果会同时作用于这些卡牌全部，而不是一次只作用于一张。
+        examples:
+        - text: 潜袭者使用 {card:奇点} 同时销毁一张已激活的 {card:生化战士追迹者} 和一张已激活的 {card:敌意架构}。{card:敌意架构} 的触发条件是“每当潜袭者销毁一张公司卡牌”，因此它会同时看见这两张被销毁的卡牌，并变为待定两次。相比之下，{card:生化战士追迹者} 的触发条件是“每当潜袭者销毁至少1张卡牌…”，因此它只会看到一次销毁了多张卡牌的事件。{card:生化战士追迹者} 的能力只会变为待定一次。
+      - rule: rule_calculated_quantity
+        text: |-
+          {n}有些能力会根据一个计算得出的数量来执行效果，通常会由“for each”、“for every”或“plus”之类的短语指示。如果与某个数量相关联的所有效果都列在 {ref:rule_aggregated_instructions} 中，那么这些效果只会执行一次，并且会根据该计算得出的数量对效果中包含的数值进行聚合。如果以这种方式聚合后的数值小于或等于0，那么与该数值对应的效果部分就完全不发生。如果某个能力指示效果要执行若干次，或作用于若干个目标，而这些效果中有任何部分未列在 {ref:rule_aggregated_instructions} 中，那么这些效果就不会被聚合。{/n}
+        examples:
+        - text: 潜袭者在还剩3个 [click] 且已安装 {card:一流选手} 时打出 {card:仪式}。{card:仪式} 的指令会让潜袭者执行1次抽3张牌，因此 {card:一流选手} 的打断能力会先让潜袭者查看其存储栈顶的4张牌，并将1张牌放到底部。
+        - text: 潜袭者读取 {card:荨麻暗码}，其上有3个附着的推进指示物。公司结算“造成2点网域伤害，再加上每个附着的推进指示物再造成1点网域伤害”这一指令，结果是单次造成5点网域伤害。他们只能对这次伤害应用一次来自 {card:真气冷凝器} 的打断能力。
+        - text: 公司有一张已激活的 {card:新洛杉矶证交所}，并打出 {card:realloc()}。其能力会让公司根据“for each”获得信用点，但也会让公司根据同样的“for each”使卡牌去激活。由于使卡牌去激活并不是一个聚合效果，所以没有任何效果会被聚合，而公司将能够在 {card:新洛杉矶证交所} 上分别结算第二项能力的2个独立实例。
+      - rule: rule_aggregated_instructions
+        text: |-
+          根据 {ref:rule_calculated_quantity} 的说明，在单条指令中执行时会被聚合的效果包括：获得、失去或支付若干信用点；获得、失去或支付若干 [click]；获得、移除或防止若干锁定标记；获得、移除或防止若干恶名；查看或展示指定位置的若干张卡牌；抽若干张卡牌；从指定区域销毁若干张卡牌（包括通过伤害）；以及将玩家弃牌堆中的若干张牌洗回其牌库。
+      - rule: rule_vacuous_truth
+        text: 如果某个条件提到一组中的“all”项目，而该组中一个项目都没有，那么一旦该条件对1个或更多该项目本来应该能够满足时，它就自动满足。
+        examples:
+        - text: 潜袭者打出 {card:叉穿}，从而对某个服务器发起潜袭。潜袭者遭遇的第一层冰是 {card:巨魔}。如果 {card:巨魔} 的“遭遇时”能力没有结束潜袭，那么一旦遭遇的 {ref:step_encounter_paw} 开始，潜袭者就会自动被视为已经破解了 {card:巨魔} 上那0条子进程，而 {card:巨魔} 会被 {card:叉穿} 销毁。
+      - rule: rule_values_defined_by_x
+        text: 有些数值由变量“X”定义。如果定义 X 的能力不活动，或者无法计算 X 的数值，就把 X 视为0。
+        examples:
+        - text: 公司使用 {card:保密行政区网阵} 赋予的能力销毁 {card:鉴定者} 并结算其一条子进程。由于当该子进程上的追踪被发起时 {card:鉴定者} 已在档案库中，所以定义 X 的能力不活动，因此基础追踪强度为0。
+        - text: |-
+            {card:消音} 附载在 {card:鉴定者} 上。定义 X 的能力已失去，因此 {card:鉴定者} 的强度为0。
+
+    - subsection: subsec_must
+      toc:
+      text: 必须
+      rules:
+      - rule: rule_must_with_choice
+        text: 如果某张卡牌的能力声称某位玩家“必须”做某事，却没有说明该玩家必须如何做到，那么即使这需要借助其他卡牌能力，该玩家也必须作出满足该要求所需的任何决定。
+        examples:
+        - text: 潜袭者安装了 {card:小恶魔} 和 {card:清洗者}，并读取 {card:孟巴德虚拟之旅}。如果潜袭者只有4[c]，他们仍然必须选择要么在能够做到时花费 {card:小恶魔} 上的1枚指示物来销毁 {card:孟巴德虚拟之旅}，要么花费 {card:清洗者} 上的循环信用点来帮助支付销毁 {card:孟巴德虚拟之旅} 的费用。
+      - rule: rule_must_without_choice
+        text: 如果某张卡牌的能力声称某位玩家“必须”做某事，并且明确了该玩家必须通过什么方式去做，那么即使借助其他卡牌能力本可以做到，该玩家也不需要用除指定方式之外的任何其他方式去执行该效果。
+        examples:
+        - text: 潜袭者安装了 {card:小恶魔} 和 {card:消除威胁}，当他们读取一张销毁费用高于自己可用信用点数量的卡牌时就是如此。由于他们无法通过支付该卡牌的销毁费用来销毁它，因此他们也不需要花费 {card:小恶魔} 上的1枚指示物来销毁它。
+      - rule: rule_mandatory_choice
+        text: 如果“必须”能力给玩家提供了两种或更多效果供其选择，那么该玩家必须选择一项能够完全结算的效果。如果没有任何选项能够完全结算，那么这个“必须”能力就没有效果。
+        examples:
+        - text: 如果 {card:仙童2.0} 的第一条子进程在潜袭者没有已安装卡牌但有3[c]时结算，那么潜袭者必须选择支付2[c]。当 {card:仙童2.0} 的第二条子进程结算时，潜袭者既无法支付2[c]，也无法销毁一张已安装卡牌，因此什么也不会发生。
+      - rule: rule_mandatory_choice_effects_can_be_modified
+        text: 在效果之间作选择，永远是与结算所选效果不同的一条独立指令（见 {ref:rule_choice_instruction}）。上一条规则只要求玩家选择一个能够结算的效果；它并不要求所选效果真的要像预期那样结算。效果一旦被选定，玩家就可以照常使用打断来修改、防止或替代该效果。
+        examples:
+        - text: 如果潜袭者遭遇 {card:数据乌鸦}，他们必须在获得1个锁定标记与结束潜袭之间二选一。潜袭者可以选择获得锁定标记，然后再用 {card:虚假目标} 避免该锁定标记。这不会导致潜袭结束，因为获得锁定标记的决定已经作出。
+      - rule: rule_must_cannot_force_additional_cost
+        text: 单数形式的“必须”能力不能强迫玩家支付他们想要拒绝的额外费用，但玩家也不能通过拒绝支付某个选项的额外费用，来避开在多个选项构成的“必须”能力中选择一个能够完全结算的效果。
+        examples:
+        - text: 如果 {card:服务停运} 处于活动状态，而潜袭者安装了 {card:始终运行}，那么潜袭者可以拒绝支付额外的1[c]，以便用其第一个 [click] 发起一次潜袭，从而满足 {card:始终运行} 的“必须”，并让他们能把第一个点击花在别的行动上。然而，如果潜袭者安装了 {card:虚假回声} 并经过一名未激活的 {card:射手}，公司就不能选择激活 {card:射手} 但拒绝牺牲一张议案；公司必须要么支付4[c]并牺牲一张议案来激活 {card:射手}，要么把 {card:射手} 加入总部。
+
+    - subsection: subsec_repeat_this_process
+      toc:
+      text: 重复此过程
+      rules:
+      - rule: rule_repeat_this_process
+        text: 如果某个能力指示玩家“重复此过程”，却没有说明要重复多少次，那么该玩家就再次结算该能力，包括其中“重复此过程”的指示，只要它仍然适用。
+      - rule: rule_repeat_this_process_x_times
+        text: 如果某个能力指示玩家“重复此过程”指定次数，那么该玩家就连续重复结算整个能力，唯独不包括重复指示本身，重复次数与指定次数相同。重复次数会在第一次完整结算之后、第一次重复之前确定，而且一旦确定就不能再更改。
+      - rule: rule_checkpoint_after_repetition
+        text: 不论能力被重复多少次，在每次完整结算完其指令之后、下一次重复开始之前，都会出现一个检查点。
+      - rule: rule_repetition_resolve_independently
+        text: 每一次重复结算该能力都彼此独立。如果该能力让玩家作出任何选择，那么每次都可以选择不同的选项。
+
+    - subsection: subsec_persistent
+      toc:
+      text: 持续
+      rules:
+      - rule: rule_persistent
+        text: 一个{term:persistent}能力，是公司卡牌上在其其他文本之前带有“persistent”能力标记的能力。当潜袭者销毁一张他们正在读取的已激活卡牌时，其持续能力会通过一个在来源卡牌被销毁时创建的持续效果{term:persist}。另见 {ref:sec_lingering_effects}。
+      - rule: rule_persistent_continuous
+        text: 持续能力会随着其来源卡牌被销毁而同时开始持续。该能力不会变为不活动，也不被视为一项新能力。
+      - rule: rule_persistent_expiration
+        text: 一项能力只会持续到其开始持续的那次潜袭结束之后不久。当紧随该次潜袭的 {ref:step_run_complete} 之后的反应窗口关闭时，允许该能力持续的持续效果就会到期，而该能力也会停止持续。
+      - rule: rule_persistent_applicability
+        text: 持续中的能力只适用于其开始持续的那次潜袭。在那次潜袭的 {ref:step_run_complete} 之后的检查点过后，就不再能创建该能力的任何实例。即使在该检查点之后的反应窗口中又发起了另一场潜袭，来自第一次潜袭的任何持续中的能力的新实例也不会在第二次潜袭中变为待定，即使它们的触发条件在第二次潜袭中本来通常会满足也是如此。
+        examples:
+        - text: 潜袭者销毁 {card:惊奇迷乐园}，使其“每当本服务器上的一次潜袭结束时”这一能力持续生效。当潜袭结束时，潜袭者使用 {card:双重幻影} 进行另一次潜袭，而此时该持续中的能力仍然处于待定状态。该能力会保持活动，以便其已经待定的实例能够结算，但即使潜袭者在第二次潜袭中窃取了一张议案，也不会再创建另一个实例。
+
+    - subsection: subsec_modal_abilities
+      toc:
+      text: 模态能力
+      rules:
+      - rule: rule_mode_definition
+        text: 有些能力的文本以项目符号列表的形式组织。这些被称为{term:modal abilities}，而列表中的每一项被称为一个{term:mode}。
+      - rule: rule_choose_next_mode
+        text: 每个模态能力都包含一条指示，其控制者需要结算其1个或多个模式。这条指示的效果，是让相关玩家选择接下来要结算的模式。所选模式中的第一条指令将成为下一条变为即将发生的指令。玩家不需要按照模式书写的顺序来选择。如果要结算的模式数量说明中包含“up to”，那么玩家也可以选择不再结算更多模式。
+      - rule: rule_after_resolving_mode
+        text: 一旦某个模式的指令全部完成，游戏就会回到“结算1个或多个模式”的那条指令。如果尚未结算允许的最大模式数量，玩家就会像在重新结算那条初始指令一样，再选择另一个模式来结算。如果已经结算了允许的最大模式数量，游戏就会进入列表中模式之后的下一条指令或能力。
+      - rule: rule_cannot_repeat_modes
+        text: 在单次结算模态能力时，除非该能力明确说明其模式可以被选择不止一次，否则每个模式最多只能结算1次。

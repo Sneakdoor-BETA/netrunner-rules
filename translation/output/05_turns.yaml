@@ -1,0 +1,277 @@
+chapter: chpt_turns
+text: 回合
+sections:
+- section: sec_turn_general
+  text: 概述
+  rules:
+  - rule: rule_turn
+    text: 一个{term:回合}是一段时间，在此期间玩家可以执行行动，并且在优先权窗口中最先获得行动优先权。
+  - rule: rule_corp_turn_phases
+    text: |-
+      公司的回合由3个阶段组成。在{term:抽牌阶段}，公司将研发中心顶端的1张卡牌抽入总部；在{term:行动阶段}，公司花费[click]来执行行动；在{term:弃牌阶段}，公司弃除卡牌，直到总部中的卡牌数量不超过其手牌上限。公司的回合结束后，潜袭者的回合开始。
+  - rule: rule_runner_turn_phases
+    text: |-
+      潜袭者的回合由2个阶段组成。在{term:行动阶段}，潜袭者花费[click]来执行行动；在{term:弃牌阶段}，潜袭者弃除卡牌，直到其操控器中的卡牌数量不超过其手牌上限。潜袭者的回合结束后，公司的回合开始。
+  - subsection: rule_begin_end_turn_step
+    text: 每位玩家回合的开始与结束，都形式化为回合时序结构中的特定步骤。
+    rules:
+    - rule: rule_turn_begin_trigger_conditions
+      text: 与回合开始相关的触发条件，在回合时序结构开启时并未满足。它们会在表示回合正式开始的时序步骤中满足。
+    - rule: rule_turn_end_trigger_conditions
+      text: 与回合或弃牌阶段结束相关的触发条件，会在表示回合正式结束的时序步骤中满足。它们不会在回合时序结构随后关闭时满足。回合结束与弃牌阶段结束是同一步骤。
+    - rule: rule_before_turn_begins
+      text: 有些效果可以发生在回合的“回合开始”步骤之前，或“回合结束”步骤之后。在该回合时序结构进行中的玩家仍然是主动玩家，而且适用于其回合的效果仍然适用，即使其回合尚未正式开始，或已经正式结束。
+    - rule: rule_never_between_turns
+      text: 一旦游戏开始，就始终是其中一位玩家的回合。不存在“回合之间”的时间。
+      
+- section: sec_actions
+  text: 行动
+  rules:
+  - subsection: rule_action_definition
+    text: |-
+      一个{term:行动}是指任何费用以[click]符号开头的付费能力。
+    rules:
+    - rule: rule_costs_with_click
+      text: 其他费用中也可以包含[click]符号，但不代表行动。
+      examples: 
+      - text: |-
+          《专家联系人》上的能力"[click]：获得1[c]并抽1张卡牌。"是一个行动。《伊莱1.0》上的能力"失去[click]：破解本防火墙上的1条子进程。只有潜袭者可以使用本能力。"不是行动，而是在付费能力窗口中使用。
+  - subsection: rule_initiate_action
+    text: 玩家在其行动窗口中，支付该行动的[click]费用以及与该行动相关的其他费用，从而发起一个行动。
+    rules:
+    - rule: rule_action_completion
+      text: 一旦行动被发起，它必须在游戏推进到下一步骤或开启另一个行动窗口之前结算完毕。如果某个行动的效果引发了一个时序结构，例如一次潜袭，则玩家可以按照该嵌套时序结构的优先权窗口使用付费能力、激活卡牌并计分议案；否则，在该行动结算期间，玩家不能执行这些自愿效果。有关优先权的更多详情，请参见 {ref:sec_timing_and_priority}。
+    - rule: rule_action_timing_structure_completion
+      text: 如果在行动结算期间引发了一个时序结构，那么在新的时序结构结算完毕，并且所发起行动在新时序结构结算完成后继续产生的任何后续效果也都结算完毕之前，该行动都不算完成。
+      examples: 
+      - text: 潜袭者执行“打出1张事件”这一行动，打出了《狂热式入侵》。在《狂热式入侵》发起的潜袭结束、潜袭者受到核心伤害，以及《狂热式入侵》在其结算后被销毁之前，该行动都不算完成。
+    - rule: rule_action_conditional_ability_trigger
+      text: 如果某个条件能力因玩家执行行动而满足其触发条件，则它会在支付该行动的触发费用后、在该行动本身的效果之前结算。参见 {ref:rule_chain_reaction}。
+    - rule: rule_finish_action_trigger_condition
+      text: 有些条件能力会因行动“结束”“完成”或“结算完毕”而满足其触发条件。公司和潜袭者执行的行动，分别会在 {ref:step_corp_turn_action} 或 {ref:step_runner_turn_action} 之后的响应窗口中结算这些能力。
+  - subsection: rule_basic_actions
+    text: 每位玩家都有若干始终可以执行的基础行动。公司的基础行动列于 {ref:rule_corp_actions}，潜袭者的基础行动列于 {ref:rule_runner_actions}。
+    rules:
+    - rule: rule_with_the_basic_action
+      text: 如果某项能力的触发条件与以“基础行动”执行某个效果有关，那么任何执行了该效果的基础行动都会满足该触发条件。如果某项能力对以“基础行动”执行某个效果施加费用，那么该费用适用于作为基础行动结算一部分而发生的该效果的任何实例。
+  - rule: rule_actions_outside_action_phase
+    text: 玩家只能在其回合的行动阶段执行行动。如果某个效果指示玩家在其行动阶段之外执行行动，则该玩家什么也不做。
+  - subsection: rule_same_different_actions
+    text: 有些卡牌会提到玩家执行“相同的行动”或“不同的行动”。
+    rules:
+    - rule: rule_same_actions
+      text: 如果玩家执行的所有行动都是同一种基础行动，或者这些行动全都由同一张卡牌上的同一项能力发起，则这些行动相同。
+    - rule: rule_defferent_actions
+      text: 如果玩家执行的每个行动分别由不同的基础行动或卡牌能力发起，则这些行动不同。不同卡牌上效果相同的能力，仍然算作不同的行动。
+      examples: 
+      - text: |-
+          公司在使用《幻镜所：无尽迭代》时，先将《对冲基金》作为其回合的第1个行动打出，然后再打出《横向发展》。尽管打出了2张不同的卡牌，但两次公司都使用了“从总部打出1张事务”这个基础行动。由于前2个行动相同，本回合公司将无法触发《幻镜所：无尽迭代》上的能力。
+  - subsection: rule_corp_actions
+    text: 公司行动
+    rules:
+    - rule: rule_corp_basic_actions
+      text: |-
+        以下{term:基础行动}在公司的行动阶段始终可供公司使用，此外还可以使用卡牌能力提供的任何行动。
+    - rule: rule_corp_basic_action_credit
+      text: |-
+        "[click]：获得1[c]。"
+    - rule: rule_corp_basic_action_draw
+      text: |-
+        "[click]：抽1张卡牌。"
+    - rule: rule_corp_basic_action_install
+      text: |-
+        "[click]：从总部安装1张议案、1张资产、1张升级或1层防火墙。参见 {ref:sec_install_uninstall}。"
+    - rule: rule_corp_basic_action_operation
+      text: |-
+        "[click]：从总部打出1张事务。参见 {ref:sec_playing_events_and_operations}。"
+    - rule: corp_basic_action_advance
+      text: |-
+        "[click]，1[c]：推进1张已安装的卡牌。参见 {ref:sec_advancing_cards}。"
+    - rule: corp_basic_action_trash_resource
+      text: |-
+        "[click]，2[c]：销毁1张资源。只有潜袭者被锁定时，才能执行此行动。参见 {ref:sec_tags}。"
+    - rule: corp_basic_action_purge_virus_counters
+      text: |-
+        "[click][click][click]：清除病毒指示物。参见 {ref:rule_purge}。"
+  - subsection: rule_runner_actions
+    text: 潜袭者行动
+    rules:
+    - rule: rule_runner_basic_actions
+      text: |-
+        以下{term:基础行动}在潜袭者的行动阶段始终可供潜袭者使用，此外还可以使用卡牌能力提供的任何行动。
+    - rule: runner_basic_action_credit
+      text: |-
+        "[click]：获得1[c]。"
+    - rule: runner_basic_action_card
+      text: |-
+        "[click]：抽1张卡牌。"
+    - rule: runner_basic_action_install
+      text: |-
+        "[click]：从操控器安装1张程序、1张资源或1件硬件。参见 {ref:sec_install_uninstall}。"
+    - rule: runner_basic_action_event
+      text: |-
+        "[click]：从操控器打出1张事件。参见 {ref:sec_playing_events_and_operations}。"
+    - rule: runner_basic_action_run
+      text: |-
+        "[click]：对任意服务器进行1次潜袭。参见 {ref:chpt_runs}。"
+    - rule: runner_basic_action_remove_tag
+      text: |-
+        "[click]，2[c]：移除1枚锁定标记。参见 {ref:sec_tags}。"
+- section: sec_draw_phase
+  text: 抽牌阶段
+  rules:
+  - rule: rule_draw_phase_definition
+    text: 抽牌阶段是公司回合的第1个阶段。它包括公司回合的正式开始以及公司的强制抽牌。
+  - rule: rule_mandatory_draw
+    text: |-
+        {term:强制抽牌}是公司执行的抽牌。它不是行动，也不花费[click]。
+  - rule: rule_no_runner_draw_phase
+    text: 潜袭者的回合没有抽牌阶段。
+- section: sec_action_phase
+  text: 行动阶段
+  rules:
+  - rule: rule_action_phase_definition
+    text: 行动阶段是潜袭者回合的第1个阶段，也是公司回合的第2个阶段。正如 {ref:sec_actions} 所述，它是玩家唯一可以执行行动的时序结构。
+  - rule: rule_action_phase_duration
+    text: 在玩家的行动阶段中，除非已没有更多[click]，或者某项卡牌能力直接结束该阶段，否则他们必须持续执行行动。只要支付适当的费用，玩家可以以任意组合和顺序执行行动。一旦没有剩余的[click]，行动阶段就结束。
+  - subsection: rule_forced_action_phase_end
+    text: |-
+      某些卡牌能力可以强制结束玩家的行动阶段（例如通过一张{subtype:终止}事务或事件上的能力）。当玩家的行动阶段被强制结束时，会发生以下情况：
+    rules:
+    - rule: rule_terminal_step_ends
+      text: 当前步骤结束，其余所有步骤都被跳过。
+    - rule: rule_terminal_priority_windows_close
+      text: 当前所有已开放的优先权窗口都关闭，其相关能力失去待定状态，拥有优先权的玩家失去优先权。
+    - rule: rule_terminal_completion
+      text: 当前正在结算的任何行动或能力都停止结算，并视为已完成。
+    - rule: rule_terminal_checkpoint
+      text: 与行动阶段结束相关的条件已满足，并发生一个检查点。由该检查点产生的响应窗口仍视为发生在行动阶段中，但玩家不能在此窗口中执行行动。
+    - rule: rule_terminal_to_discard_phase
+      text: 在完成由 {ref:rule_terminal_checkpoint} 产生的任何响应窗口后，游戏进入主动玩家的弃牌阶段。
+  - rule: rule_end_action_phase_outside_action_phase
+    text: 如果某个效果试图在玩家的抽牌阶段、弃牌阶段或其他玩家的回合中结束其行动阶段，则该效果无效。
+- section: sec_discard_phase
+  text: 弃牌阶段
+  rules:
+  - rule: rule_discard_phase_definition
+    text: 弃牌阶段是每位玩家回合的最后1个阶段。它包含弃牌步骤以及该玩家回合的正式结束。
+  - subsection: rule_discard_phase_discarding
+    text: |-
+      {term:弃除}是指玩家在弃牌阶段因其手牌超过手牌上限而将卡牌移至其弃牌堆的行为。
+    rules:
+    - rule: rule_discarding_facedown_status
+      text: 从总部弃除的卡牌总是以牌面朝下的状态置于档案库中，不论潜袭者之前是否已读取过它们。
+    - rule: rule_discarding_trashed
+      text: 被弃除的卡牌不视为已被销毁，反之亦然。
+  - subsection: rule_max_hand_size
+    text: |-
+        玩家的{term:手牌上限}是指该玩家在其弃牌阶段能够保留在手中的最大卡牌数量。
+    rules:
+    - rule: rule_max_hand_size_default
+      text: 玩家在游戏开始时的手牌上限为5张卡牌。
+    - rule: rule_max_hand_size_core_damage
+      text: 潜袭者每受到1点核心伤害，其手牌上限便永久减少1张卡牌。参见 {ref:sec_damage}。其他能力也可以直接修改玩家的手牌上限。
+  - subsection: rule_discard_step
+    text: |-
+      {term:弃牌步骤}对于公司来说是 {ref:step_corp_turn_discard}，对于潜袭者来说是 {ref:step_runner_turn_discard}。在该步骤中，主动玩家弃除卡牌以达到其手牌上限。
+    rules:
+    - rule: rule_runner_discard_step
+      text: 在潜袭者于其弃牌步骤中弃除卡牌之前，必须先检查是否死亡。参见 {ref:rule_flatline}。
+    - rule: rule_discard_step_noop
+      text: 如果主动玩家手中的卡牌数量小于或等于其手牌上限，则在该步骤中不会发生其他事情。
+    - rule: rule_discarding_process
+      text: 如果主动玩家手中的卡牌数量大于其手牌上限，则其从手中弃除与差额相等数量的卡牌。由弃除的玩家选择要弃除哪些卡牌，所选择的卡牌同时弃除。
+    - rule: rule_skip_discard_step
+      text: 如果某个效果指示玩家跳过其弃牌步骤，则游戏会直接从其弃牌阶段开始处推进到弃牌步骤之后的步骤。其不会检查手牌数量，也不会弃除卡牌。
+
+- section: sec_steps_corp_turn
+  text: 公司回合的步骤
+  rules:
+  - subsection: subsec_corp_draw_phase
+    steps:
+    text: |-
+      在抽牌阶段，按如下顺序发生以下步骤：
+    rules:
+    - rule: step_corp_turn_allotted_clicks
+      text: 公司获得其分配的[click]（默认[click][click][click]）。
+    - rule: step_corp_turn_draw_phase_paw
+      text: 出现一个付费能力窗口，玩家可以使用付费能力，公司可以激活非防火墙卡牌，公司可以计分议案。（P）（R）（S）
+    - rule: step_corp_turn_recurring_credits_refill
+      text: 公司的可再生信用点([recurring])补充完毕。
+    - rule: step_corp_turn_turn_formal_begin
+      text: 公司的回合正式开始。与回合开始相关的条件已满足。
+    - rule: step_corp_turn_mandatory_draw
+      text: 公司执行其强制抽牌。
+    - rule: step_corp_turn_draw_phase_complete
+      text: 公司的抽牌阶段完成。游戏继续进行到公司的行动阶段。
+  - subsection: subsec_corp_action_phase
+    steps:
+    text: |-
+      在公司的行动阶段，按如下顺序发生以下步骤：
+    rules:
+    - rule: step_corp_turn_action_phase_paw
+      text: 出现一个付费能力窗口，玩家可以使用付费能力，公司可以激活非防火墙卡牌，公司可以计分议案。（P）（R）（S）
+    - rule: step_corp_turn_action
+      text: 如果公司有任何未花费的[click]，公司执行1次行动。否则，跳到（d）。
+    - rule: step_corp_turn_action_phase_loop
+      text: 返回（a）。
+    - rule: step_corp_turn_action_phase_end
+      text: 公司的行动阶段正式结束。与行动阶段结束相关的条件已满足。
+    - rule: step_corp_turn_action_phase_complete
+      text: 公司的行动阶段完成。游戏继续进行到公司的弃牌阶段。
+  - subsection: subsec_corp_discard_phase
+    steps:
+    text: |-
+      在公司的弃牌阶段，按如下顺序发生以下步骤：
+    rules:
+    - rule: step_corp_turn_discard
+      text: 公司弃除卡牌以达到其手牌上限。
+    - rule: step_corp_turn_discard_phase_paw
+      text: 出现一个付费能力窗口，玩家可以使用付费能力，公司可以激活非防火墙卡牌。（P）（R）
+    - rule: step_corp_turn_lose_unspent_clicks
+      text: 如果公司有任何未花费的[click]，公司失去这些[click]。
+    - rule: step_corp_turn_formal_end
+      text: 公司的回合正式结束。与回合或弃牌阶段结束相关的条件已满足。
+    - rule: step_corp_turn_complete
+      text: 公司的弃牌阶段和回合完成。游戏继续进行到潜袭者的回合。
+
+- section: sec_steps_runner_turn
+  text: 潜袭者回合的步骤
+  rules:
+  - subsection: subsec_runner_action_phase
+    steps:
+    text: |-
+      在潜袭者的行动阶段，按如下顺序发生以下步骤：
+    rules:
+    - rule: step_runner_turn_allotted_clicks
+      text: 潜袭者获得其分配的[click]（默认[click][click][click][click]）。
+    - rule: step_runner_turn_action_phase_paw
+      text: 出现一个付费能力窗口，玩家可以使用付费能力，公司可以激活非防火墙卡牌。（P）（R）
+    - rule: step_runner_turn_recurring_credits_refill
+      text: 潜袭者的可再生信用点([recurring])补充完毕。
+    - rule: step_runner_turn_recurring_formal_begin
+      text: 潜袭者的回合正式开始。与回合开始相关的条件已满足。
+    - rule: step_runner_turn_loop_paw
+      text: 出现一个付费能力窗口，玩家可以使用付费能力，公司可以激活非防火墙卡牌。（P）（R）
+    - rule: step_runner_turn_action
+      text: 如果潜袭者有任何未花费的[click]，潜袭者执行1次行动。否则，跳到（h）。
+    - rule: step_runner_turn_action_loop
+      text: 返回（e）。
+    - rule: step_runner_turn_action_phase_end
+      text: 潜袭者的行动阶段正式结束。与行动阶段结束相关的条件已满足。
+    - rule: step_runner_turn_action_phase_complete
+      text: 潜袭者的行动阶段完成。游戏继续进行到潜袭者的弃牌阶段。
+  - subsection: subsec_runner_discard_phase
+    text: |-
+      在潜袭者的弃牌阶段，按如下顺序发生以下步骤：
+    rules:
+    - rule: step_runner_turn_discard
+      text: 潜袭者弃除卡牌以达到其手牌上限。
+    - rule: step_runner_turn_discard_phase_paw
+      text: 出现一个付费能力窗口，玩家可以使用付费能力，公司可以激活非防火墙卡牌。（P）（R）
+    - rule: step_runner_turn_lose_unspent_clicks
+      text: 如果潜袭者有任何未花费的[click]，潜袭者失去这些[click]。
+    - rule: step_runner_turn_formal_end
+      text: 潜袭者的回合正式结束。与回合或弃牌阶段结束相关的条件已满足。
+    - rule: step_runner_turn_complete
+      text: 潜袭者的弃牌阶段和回合完成。游戏继续进行到公司的回合。

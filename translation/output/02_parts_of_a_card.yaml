@@ -1,0 +1,261 @@
+chapter: chpt_parts_of_a_card
+text: 卡牌部件
+sections:
+- section: sec_card_name
+  text: 名称
+  rules:
+  - rule: rule_card_name_definition
+    text: |-
+      卡牌的标识是其{term:名称}，也称为标题。对于特性、议案、防火墙、事务、事件和资源，它写在卡牌顶部；对于资产、升级、硬件和程序，则写在插画框正下方。
+  - subsection: rule_identity_subtitles
+    text: 特性卡牌在主标题下方会写有副标题。其全名由主标题和副标题组合而成。
+    rules:
+    - rule: rule_identity_pronouns
+      text: 潜袭者特性卡牌的副标题旁，可能会写有其所代表角色的代词。代词不影响游戏。
+  - rule: rule_self_reference
+    text: |-
+      当一张卡牌提到自己的名称时，这就是自我指代。参见 {ref:sec_old_self_reference_rules}。
+  - rule: rule_copies_of
+    text: 当一张卡牌提到具有特定名称卡牌的“副本”时，指的是任何具有该名称的卡牌。
+  - rule: rule_act_on_different_names
+    text: 如果玩家被指示选择或搜寻“名称不同”的卡牌，则所选或搜寻到的每张卡牌，都必须具有与其他所选或搜寻到的卡牌不同的英文名称。另见 {ref:sec_searching_cards}。
+
+- section: sec_unique_symbol
+  text: 独有符号
+  rules:
+  - rule: rule_unique_symbol
+    text: |-
+      有些卡牌是{term:独有}的，其名称前会有独有符号（◆）作为标记。参见 {ref:rule_uniqueness}。
+
+- section: sec_printed_cost
+  text: 打出费用、安装费用或激活费用
+  rules:
+  - rule: rule_printed_cost_definition
+    text: |-
+      卡牌的打出、安装或激活费用，是大多数卡牌类型左上角出现的一个数值。打出费用和安装费用显示在较大的圆形图标中，而激活费用则显示在较小的八边形图标中。
+  - rule: rule_paying_printed_costs
+    text: |-
+      卡牌上的打出、安装和激活费用都以信用点支付。{ref:Chpt_card_manipulation} 详细说明了卡牌如何被打出、安装和激活。
+  - rule: rule_card_types_with_play_costs
+    text: 事件和事务有打出费用。
+  - subsection: rule_card_types_with_install_costs
+    text: 硬件、程序和资源有安装费用。
+    rules:
+    - rule: rule_ice_have_install_costs_too
+      text: |-
+        防火墙也有安装费用，但它不会显示在卡牌上。防火墙的安装费用由其他已安装防火墙的配置决定，而不是卡牌自身固有的。参见 {ref:rule_install_cost}。
+  - rule: rule_card_types_with_rez_costs
+    text: 资产、防火墙和升级有激活费用。
+
+- section: sec_adv_req
+  text: 推进需求
+  rules:
+  - rule: rule_adv_requirement_location
+    text: 推进需求只出现在议案上。它是卡牌右上角小圆圈中的一个数值。
+  - rule: rule_adv_requirement_citation
+    text: |-
+      {ref:Sec_score_scoring_steal} 详细说明了议案如何计分，以及推进需求的作用。
+
+- section: sec_agenda_points
+  text: 议案分数
+  rules:
+  - rule: rule_agenda_points_location
+    text: 议案分数值只出现在议案上。它是卡牌左侧中部、三根柱子图案上方的那个数值。
+  - rule: rule_agenda_points_citation
+    text: |-
+      玩家得分区中的议案分数会计入该玩家赢得游戏的条件中。参见 {ref:sec_ending_the_game}。
+  
+- section: sec_trash_cost
+  text: 销毁费用
+  rules:
+  - rule: rule_trash_cost_location
+    text: 资产、升级，以及部分防火墙和事务有销毁费用。销毁费用是卡牌右下角 [trashcost] 符号内的一个数值。
+  - rule: rule_trash_cost_citation
+    text: |-
+      {ref:Rule_basic_trash_ability} 详细说明了潜袭者如何通过支付其读取的卡牌的销毁费用来销毁它。
+
+- section: sec_strength
+  text: 强度
+  rules:
+  - rule: rule_strength_location
+    text: |-
+      强度是出现在防火墙和{subtype:破解器}程序上的一个数值。它位于卡牌左下角的大半圆内。
+  - rule: rule_strength_dash
+    text: |-
+      非{subtype:破解器}程序在左下角显示的是短横线（[dash]），而不是强度值。
+  - rule: rule_strength_citation
+    text: |-
+      {ref:Subsec_icebreakers} 讨论了防火墙强度和{subtype:破解器}强度之间的相互作用。
+
+- section: sec_memory_cost
+  text: 内存费用
+  rules:
+  - rule: rule_memory_cost_location
+    text: |-
+      内存费用是只出现在程序上的一个数值。它位于安装费用右侧，在[MU]符号内。
+  - rule: rule_memory_cost_citation
+    text: |-
+      {ref:Sec_memory} 讨论内存这一主题，而 {ref:rule_program_memory_cost} 详细说明程序如何根据其内存费用与潜袭者的内存上限相互作用。
+
+- section: sec_base_link
+  text: 基础中转
+  rules:
+  - rule: rule_base_link_location
+    text: 基础中转是出现在潜袭者特性卡左上角、位于[link]符号旁边的一个数值。
+  - rule: rule_base_link_citation
+    text: |-
+      潜袭者的基础中转会计入其中转值。{ref:Sec_link} 定义潜袭者的中转值如何计算，而 {ref:sec_traces} 解释它如何用于对抗追踪尝试。
+
+- section: sec_memory_limit
+  text: 初始内存上限
+  rules:
+  - rule: rule_memory_limit_location
+    text: 初始内存上限是出现在潜袭者特性卡左上角、位于[MU]符号内的一个数值。
+  - rule: rule_memory_limit_citation
+    text: |-
+      潜袭者的内存上限会与其已安装程序的总内存费用进行比较。该数值通过对潜袭者的初始内存上限应用任何生效中的修正来计算。参见 {ref:sec_memory}。
+
+- section: sec_min_deck_size
+  text: 牌组张数下限
+  rules:
+  - rule: rule_min_deck_size_location
+    text: 牌组张数下限是显示为公司特性卡左下角两个小框中最上方的数值，以及潜袭者特性卡右下角两个小框中最下方的数值。
+  - rule: rule_min_deck_size_citation
+    text: |-
+      {ref:Sec_deck_construction} 详细说明了构筑牌组的规则，包括遵守该牌组所对应特性的牌组张数下限这一要求。
+
+- section: sec_inf_limit
+  text: 影响力上限
+  rules:
+  - rule: rule_inf_limit_location
+    text: 影响力上限是显示为公司特性卡左下角两个小框中最下方的数值，以及潜袭者特性卡右下角两个小框中最下方的数值。
+  - rule: rule_inf_limit_citation
+    text: |-
+      {ref:Sec_deck_construction} 详细说明了构筑牌组的规则，包括该牌组中的异派系卡牌必须遵守所对应特性的影响力上限这一要求。
+
+- section: sec_faction
+  text: 派系归属
+  rules:
+  - subsection: rule_faction_list
+    text: |-
+      卡牌被分为十个派系：四个公司派系、三个潜袭者主派系，以及三个潜袭者小派系。派系和影响力会限制构筑选项，使每个派系彼此之间都具有不同的玩法差异。
+    rules:
+    - rule: rule_corp_faction_list
+      text: 公司派系分别是哈斯生化、人间会社、网际传媒和威兰财团。
+    - rule: rule_runner_major_faction_list
+      text: 潜袭者主派系分别是反叛者、逆法者和塑造者。
+    - rule: rule_runner_minifaction_list
+      text: 潜袭者小派系分别是亚当、尖峰和桑妮·勒博。
+  - rule: rule_faction_identification
+    text: |-
+      可通过卡牌背景颜色，以及四个角中的任一角上的派系徽标来识别卡牌的派系。该徽标也会作为水印出现在文本框后方。如果卡牌背景为白色且没有徽标，则它是中立卡牌。
+  - rule: rule_faction_citation
+    text: |-
+      每种特性都关联一个派系。{ref:Sec_deck_construction} 详细说明了派系如何影响构筑。
+
+- section: sec_inf_cost
+  text: 影响力费用
+  rules:
+  - rule: rule_inf_cost_location
+    text: |-
+      卡牌的影响力费用，或影响力值，显示在大多数卡牌底部附近、带有5个圆形槽位的横条中。影响力费用就是被蓝色圆点填满的槽位数量，范围为0到5。
+  - rule: rule_inf_cost_absent
+    text: |-
+      有些卡牌不能以异派系打出，因此没有影响力值，这与影响力费用“0”不同。这些卡牌根本没有影响力横条。
+  - rule: rule_alliance
+    text: 有些公司卡牌具有{subtype:联盟}子类型，并有文字定义对其影响力费用的调整。调整{subtype:联盟}卡牌影响力费用的能力，只在判定已构筑牌组是否合法时生效，在游戏进行期间没有任何效果。该能力会参考牌组中包含的其他卡牌，以决定该卡牌应按其印刷的影响力费用还是按0计入该牌组的影响力上限。
+  - rule: rule_inf_cost_citation
+    text: |-
+      {ref:Sec_deck_construction} 详细说明了卡牌的影响力费用（或缺乏影响力费用）如何影响构筑。
+
+- section: sec_card_type
+  text: 卡牌类型
+  rules:
+  - rule: rule_type_line_location
+    text: |-
+      卡牌类型以一行文字显示在非防火墙卡牌文本框上方的中央位置。对于防火墙，它们沿着文本框左侧纵向排列，并相对其余文字旋转90°。
+  - rule: rule_card_type_list
+    text: |-
+      每张卡牌只有1种卡牌类型：特性、议案、资产、防火墙、事务、升级、事件、硬件、程序或资源。它以粗体写在类型行开头。
+  - rule: rule_card_type_while_inactive
+    text: |-
+      在非活动状态下，卡牌仍被视为其印在牌面上的那种类型卡牌，牌面朝下安装的潜袭者卡牌除外。参见 {ref:sec_facedown_runner_cards}。
+  - rule: rule_card_type_conversion_citation
+    text: |-
+      能力可以将卡牌从其印刷类型变为议案。参见 {ref:rule_add_card_to_score_area}。
+  - rule: rule_card_type_counters
+    text: 指示物从不会具有卡牌类型。
+
+- section: sec_subtypes
+  text: 子类型
+  rules:
+  - subsection: rule_subtypes
+    text: 卡牌可能拥有1个或多个子类型，它们写在主要类型之后。子类型是可被卡牌能力引用的卡牌描述符。共享同一子类型的卡牌，往往也共享某种独特特征或能力。
+    rules:
+    - rule: rule_subtype_special_rules
+      text: 子类型{subtype:区域}、{subtype:控制台}和{subtype:破解器}有特殊规则，分别在 {ref:subsec_regions,subsec_consoles,subsec_icebreakers} 中讨论。其他子类型本身没有固有规则含义。
+  - rule: rule_subtype_bold
+    text: 在卡牌文本中，子类型总是以粗体文字提及。如果某个同样也是子类型的单词或短语出现在卡牌文本中，但没有以粗体显示，那么该单词或短语并不是在引用该子类型。
+  - rule: rule_lack_of_subtype
+    text: 有些能力会依据卡牌缺少某个子类型来引用卡牌，例如“非{subtype:病毒}”。这些能力只能影响不具有所指定子类型的卡牌，而不论这些卡牌还具有其他任何子类型。
+  - rule: rule_subtypes_active
+    text: 卡牌在任何时候都拥有其全部子类型，即使在非活动状态下也一样，牌面朝下安装的潜袭者卡牌除外。参见 {ref:sec_facedown_runner_cards}。
+  - rule: rule_add_remove_subtypes
+    text: |-
+      能力可以增加或移除子类型。卡牌具有、获得和失去每个子类型的次数都会作为一个持续累计总数记录，但结果是二元的：如果该子类型的总实例数超过其被移除的次数，则该卡牌具有该子类型；否则，它不具有该子类型。
+    examples: 
+    - text: |-
+        潜袭者在一张附载1枚推进指示物的 {card:狼人} 上打出 {card:校正}。{card:狼人} 具有两次 {subtype:警报}，一次是印刷自带的，一次来自 {card:校正}；并且它因自身能力失去了一次 {subtype:警报}。因此它仍然是 {subtype:警报}。
+  - rule: rule_choose_valid_subtype
+    text: 如果某个效果要求玩家选择一个子类型，则该玩家必须选择一种至少印在1张卡牌上的单一子类型。如果玩家被要求选择属于某种特定卡牌类型的子类型，则其必须选择一种至少印在1张该卡牌类型卡牌上的子类型。
+  - subsection: rule_subtypes_list
+    text: 下面列出所有子类型。
+    rules:
+    - rule: rule_identity_subtypes
+      text: 特性子类型有生化人、克隆体、公司、半机械人、部门、数字、部门、转基因人、负债、巨型公司、原生人、警局、隐匿、子公司和未证实。
+    - rule: rule_agenda_subtypes
+      text: 议案子类型有伏击、刺杀、扩张、可消耗、原创、负债、次级、灵能、公开的、研究、防卫、复感电影和来源。
+    - rule: rule_asset_subtypes
+      text: 资产子类型有学术、广告、联盟、伏击、豆茎、生化人、节目、人物、克隆体、公司、深网、执法者、主管、设施、政府、敌对、工业、负债、政治、灵能、区域、研究、豪华、低劣和交易。
+    - rule: rule_ice_subtypes
+      text: 防火墙子类型有杀伤、广告、伏击、屏障、生化人、门禁、深网、偏导器、毁灭者、可消耗、圣杯、和声、负债、变形、神秘、次级、观察者、灵能、警报、追踪者和陷阱。
+    - rule: rule_operation_subtypes
+      text: 事务子类型有联盟、黑色行动、状况、局势、双重、灰色行动、负债、封锁、命令、灵能、报复、终止、交易和三重。
+    - rule: rule_upgrade_subtypes
+      text: 升级子类型有学术、广告、联盟、伏击、豆茎、生化人、人物、克隆体、执法者、主管、可消耗、设施、敌对、场外、黑社会、灵能、区域、豪华、低劣、安全协议、管理员和异类。
+    - rule: rule_event_subtypes
+      text: 事件子类型有状况、局势、双重、工作、改造、黑社会、优先、潜袭、破坏、隐匿和终止。
+    - rule: rule_hardware_subtypes
+      text: 硬件子类型有芯片、同伴、控制台、消费级、义体、装备、中转、改造、隐匿、载具和武器。
+    - rule: rule_program_subtypes
+      text: 程序子类型有智能模块、西洋棋、云、后台、解码模块、深网、提婆、分解模块、破解器、断路模块、隐匿、木马、病毒和武器。
+    - rule: rule_resource_subtypes
+      text: 资源子类型有部落、克隆体、同伴、人脉、指令、基因、政府、工作、中转、位置、远程、豪华、破坏、低劣、来源、隐匿和虚拟。
+
+- section: sec_text_box
+  text: 文本框
+  rules:
+  - rule: rule_text_box_definition
+    text: |-
+      {term:文本框}是卡牌中央的区域，其中包含该卡牌拥有的任何能力。能力通常只在其所在卡牌处于活动状态时生效。例外情况见 {ref:Rule_ability_active_inactive_source_card}。
+  - rule: rule_flavor_text
+    text: |-
+      许多卡牌在其游戏文本后都有斜体文字。这就是{term:背景叙述}，它对游戏或卡牌功能都没有影响，其他能力也不能引用它或与之互动。
+  - rule: rule_reminder_text
+    text: |-
+      有些卡牌的括号内有斜体文字。这就是{term:提示文本}，它对游戏或卡牌功能都没有影响，其他能力也不能直接引用它或与之互动。提示文本只是对可能适用于该卡牌文本的一条规则的简述。
+
+- section: sec_server_indicator
+  text: 服务器指示图标
+  new:
+  rules:
+  - rule: rule_server_back
+    text: 一张公司特性卡 {card:梅里爱大学} 的背面有多个带不同副标题的版本，而这些版本中的每个版本都在派系徽标旁额外带有一个图标，以便区分这些版本。这些图标各自代表一个特定的中央服务器，该服务器在这张卡第一条能力的触发条件中被提及。
+    new:
+  - rule: rule_server_icon
+    text: |-
+      3个服务器指示图标分别是：办公楼（代表总部）、实验室烧瓶（代表研发中心）和计算机服务器（代表档案库）。
+    new:
+  - rule: sec_server_indicator_no_gameplay
+    text: 服务器指示图标只是视觉辅助，没有直接的游戏功能。
+    new:

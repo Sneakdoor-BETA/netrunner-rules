@@ -1,0 +1,191 @@
+chapter: chpt_access_breach
+text: 读取卡牌与侵入服务器
+sections: 
+- section: sec_accessing_cards
+  text: 读取卡牌
+  rules: 
+  - rule: rule_accessing
+    text: |-
+      {term:读取}是指公司将其1张卡牌展示给潜袭者，以供潜袭者可能与之互动的过程。
+  - rule: rule_accessing_who_can_look
+    text: 当潜袭者正在读取1张卡牌时，其可以查看那张卡牌，即使按通常情况其本来不能看到该卡牌。当潜袭者正在读取1张卡牌时，公司也可以查看它，除非该卡牌是从研发中心被读取的。
+  - rule: rule_accessing_trigger_condition
+    text: 当其来源卡牌被读取时满足触发条件的能力，即使来源卡牌是非活动的，该能力也仍然是活动的。参见 {ref:rule_ability_active_inactive_source_card}。
+  - rule: rule_mid_access_ability_opportunity
+    text: 每次读取时，潜袭者都有1次使用读取时能力的机会。这发生在读取开始时的响应窗口之后、潜袭者窃取所读取的议案之前。
+  - subsection: rule_basic_trash_ability
+    text: |-
+      潜袭者始终具有能力“读取 -> 支付所读取卡牌的销毁费用：销毁之。”这就是{term:基础销毁能力}。
+    rules:
+    - rule: rule_paying_trash_costs
+      text: 所有资产和升级都有销毁费用，部分防火墙和事务也有销毁费用。如果一张卡牌没有销毁费用，潜袭者便不能支付其销毁费用，因此在该次读取中潜袭者不能使用基础销毁能力。
+    - rule: rule_trash_in_archives
+      text: 潜袭者不能销毁公司弃牌堆中的卡牌，也不能支付其销毁费用，无论是通过基础销毁能力还是通过其他读取时能力。
+    - rule: rule_access_installed_must_trash_if_able
+      text: 一张卡牌，{card:孟巴德虚拟之旅}，具有能力：“如果潜袭者在本升级已安装时读取它，则若能如此做，必须销毁它。”当这项能力适用时，潜袭者可以使用其可用的任何能够销毁该卡牌的读取时能力，但除非其无法支付任何会销毁该卡牌的能力的费用，否则其不能拒绝使用读取时能力，也不能使用不会销毁所读取卡牌的读取时能力。
+    - rule: rule_access_reveal_trash_if_able
+      text: 一张卡牌，{card:消除威胁}，具有能力：“每回合第一次你读取1张具有销毁费用的卡牌时，展示它。若能如此做，你必须支付其销毁费用来销毁那张卡牌。”当这项能力适用时，潜袭者只能使用基础销毁能力。除非其不能支付基础销毁能力的费用，否则其不能拒绝使用读取时能力，也不能使用来自某张卡牌的读取时能力。
+  - subsection: rule_after_mid_access_agenda
+    text: 如果在结算完读取时能力后，潜袭者仍在读取1张议案，则其必须窃取它。
+    rules:
+    - rule: rule_agenda_additional_cost
+      text: 某些能力会为窃取1张议案制造额外费用。潜袭者可以选择不支付这些费用，从而不窃取该议案。参见 {ref:rule_additional_cost}。
+  - rule: rule_moved_while_accessing
+    text: 如果一张卡牌在被读取时转移到其他区域，读取立即结束。
+  - rule: rule_end_run_ends_access
+    text: |-
+      {n}当一张卡牌正在被读取时，若“终止本次潜袭”效果结算，有时会结束该次读取。参见 {ref:rule_end_the_run}。{/n}
+  - rule: rule_access_set_of_cards
+    text: 一张卡牌，{card:信息筛选}，使用侵入之外的方法，为潜袭者建立一组供其读取的卡牌。潜袭者按其选择的顺序逐张读取这些卡牌。每次读取都作为一条独立指令执行。参见 {ref:rule_split_up_instruction}。以这种方式读取卡牌，是对 {ref:rule_act_on_multiple_cards} 的例外。
+  - rule: rule_access_cards_without_breach
+    text: |-
+      一张卡牌，{card:反向监视}，指示潜袭者从一台服务器读取一定数量的卡牌，但没有提到侵入。对于这些读取，其流程遵循侵入该服务器的正常规则，除了：如果该服务器是总部或研发中心，则没有随机读取上限；并且一旦已选择指定数量的卡牌进行读取，该流程便结束。
+- section: sec_steps_accessing_card
+  steps:
+  text: 读取卡牌的步骤
+  rules: 
+  - rule: step_card_accessed
+    text: 该卡牌被读取。与读取该卡牌相关的条件已满足。
+  - rule: step_mid_access_ability
+    text: 潜袭者可以使用1个读取时能力，例如基础销毁能力。
+  - rule: step_access_agenda
+    text: 如果所读取的卡牌是议案，潜袭者必须窃取它。
+  - rule: step_access_complete
+    text: 读取完成。与读取结束相关的条件已满足。
+- section: sec_breaching_servers
+  text: 侵入服务器
+  rules: 
+  - subsection: rule_breaching_servers
+    text: |-
+      {term:侵入}一台服务器，是指潜袭者读取与该服务器相关联的一组特定卡牌的过程。大多数读取都发生在侵入中。一次潜袭中的 {ref:Step_breach} 要求潜袭者侵入被攻击的服务器，但卡牌能力也可以直接指示潜袭者侵入一台服务器。
+    rules:
+    - rule: rule_visibility_after_access
+      text: 在侵入中，潜袭者读取1张卡牌后，该物件在本次侵入的剩余时间内对潜袭者仍然可见。
+      examples:
+      - text: 潜袭者侵入总部，依次读取 {card:散射场}、{card:围栏} 和 {card:地外办公室}。当潜袭者窃取 {card:地外办公室} 时，公司使用 {card:珀依诗奢品：风靡万世} 从总部安装1张卡牌。潜袭者将知道公司安装的是 {card:散射场}、{card:围栏}，还是总部其余部分中的某张未知卡牌。
+  - subsection: rule_breaching_archives
+    text: 当潜袭者侵入档案库时，在潜袭者读取任何卡牌之前，公司弃牌堆中的所有牌面朝下卡牌都会翻为牌面朝上。
+    rules:
+    - rule: rule_archives_facedowns_after_breach
+      text: 如果在此步骤之后有卡牌牌面朝下加入档案库，那么该卡牌在本次侵入剩余时间内仍保持牌面朝下，即使在读取之后也是如此。潜袭者只有在读取档案库中的牌面朝下卡牌之后才能查看它。
+  - rule: rule_candidates
+    text: |-
+      与被侵入服务器相关联、潜袭者可能读取的卡牌称为{term:可读取卡牌}。可读取卡牌集合由被侵入服务器根目录中的卡牌构成；对于中央服务器，还包括该服务器对应区域中的卡牌（见 {ref:rule_three_central_servers}）。{ref:Sec_determining_candidates} 定义其中哪些卡牌属于可读取卡牌。
+  - subsection: rule_candidates_presented
+    text: 在侵入中，当前可读取卡牌会呈现在潜袭者面前。其从中选择1张并读取它。如此反复，直到不再有可读取卡牌为止。
+    rules:
+    - rule: rule_candidates_breaching_hq
+      text: 在侵入总部时，当可读取卡牌呈现给潜袭者时，潜袭者可以选择一张不在公司手牌中的特定可读取卡牌，或者从公司手牌中的可读取卡牌里随机读取1张。以这种方式随机选出的卡牌仍视为潜袭者主动选择的卡牌。
+    - rule: rule_corp_choosing_candidates_breaching_hq
+      text: 一张卡牌，{card:专属神经网络}，指示公司决定潜袭者从总部读取哪些卡牌。当这一效果适用时，潜袭者仍然照常选择不在公司手牌中的可读取卡牌。每当潜袭者选择从公司手牌中读取1张可读取卡牌时，原本应随机选择可读取卡牌的情况改为由公司选择其中1张供潜袭者读取。所选卡牌仍视为潜袭者主动选择的卡牌。
+  - subsection: rule_random_access_limit
+    text: |-
+      在分别侵入总部或研发中心时，潜袭者只能从公司手牌或牌组中有限次数地选择可读取卡牌。这个数值称为随机读取上限。在潜袭者开始在侵入总部或研发中心时读取卡牌之前，先确定该次侵入的随机读取上限，此后在本次侵入的剩余时间内该数值不再改变。
+    rules:
+    - rule: rule_default_random_access_limit
+      text: 默认情况下，随机读取上限为1。
+    - rule: rule_increasing_random_access_limit
+      text: 如果某项能力允许潜袭者在侵入总部或研发中心时“读取额外卡牌”，那么该能力的效果是提高随机读取上限。此类能力只能在侵入开始时、随机读取上限尚未确定之前适用。
+    - rule: rule_counting_random_access_limit
+      text: |-
+        {n}如果潜袭者在总部或研发中心选择了1张可读取卡牌，但因任何原因没有实际读取该卡牌，那么该可读取卡牌仍计入达到随机读取上限的次数。{/n}
+  - rule: rule_number_of_accesses
+    text: |-
+      {n}某些能力会统计读取次数以确定数量。以这种方式统计的能力只包括实际执行的读取。{/n}
+    examples:
+    - text: |-
+        潜袭者使用 {card:冥府碎片}，在一次针对总部的潜袭中侵入档案库。在该次侵入中的1次读取里，在选择1张可读取卡牌后，其使用 {card:档案库接口} 应用替换效应，改为将所选择的可读取卡牌移出游戏，而不是读取它。当本次潜袭结束时，潜袭者使用 {card:扎赫亚·萨迪吉：多才多艺的走私者}，在其于本次潜袭中每读取1张卡牌时获得1[c]。被替换掉的那次读取不计入潜袭者获得的信用点数量。
+      new:
+    - text: 潜袭者打出 {card:祭品脚本}，并且在档案库被侵入之前，{card:哈德森1.0} 上的子进程结算。{n}当潜袭者侵入档案库时，其选择的第一张可读取卡牌是一层防火墙，其应用 {card:祭品脚本} 的替换效应，改为销毁所选择防火墙的一个已激活副本，而不是读取该可读取副本。由于实际上没有读取任何卡牌，潜袭者可以继续选择另一张可读取卡牌。不过，如果潜袭者先在不应用 {card:祭品脚本} 的替换效应的情况下读取了1张卡牌，那么其随后就会被禁止再读取任何卡牌，因此不会再有可读取卡牌可供选择，也就无法在之后应用替换效应。{/n}
+  - rule: rule_end_run_ends_breach
+    text: |-
+      {n}当服务器正在被侵入时，若“终止本次潜袭”效果结算，有时会结束该次侵入。参见 {ref:rule_end_the_run}。{/n}
+  - rule: rule_consecutive_breaches
+    text: 如果在一次侵入已经进行中时本应侵入一台服务器，则改为在当前侵入结束时进行新的侵入。制造该延时侵入的效果被视为由潜袭者操控的条件能力。
+    examples:
+    - text: 潜袭者在侵入总部时窃取 {card:克隆体退役}，导致公司获得负面声誉标记。潜袭者必须先完成当前侵入，然后才能开始由 {card:雷蒙德·弗林特} 第一项能力赋予的侵入。
+- section: sec_determining_candidates
+  text: 确定可读取卡牌
+  rules:
+  - subsection: rule_candidates_beginning_breach
+    text: |-
+      侵入开始时的可读取卡牌如下：
+    rules:
+     - rule: rule_candidates_in_server_root
+       text: 被侵入服务器根目录中的每张卡牌都是1张可读取卡牌。
+     - rule: rule_candidates_in_hq
+       text: 如果被侵入的服务器是总部，则公司手牌中的每张卡牌都是1张可读取卡牌。
+     - rule: rule_candidates_in_rnd
+       text: 如果被侵入的服务器是研发中心，则公司牌组顶牌是1张可读取卡牌。
+     - rule: rule_candidates_in_archives
+       text: 如果被侵入的服务器是档案库，则公司弃牌堆中的每张卡牌都是1张可读取卡牌。
+  - subsection: rule_prohibiting_access
+    text: 如果在任何时点潜袭者被禁止读取某个物件，则该物件不再是1张可读取卡牌。只要读取它仍被禁止，它就不能重新成为可读取卡牌。
+    examples:
+    - text: 公司使用 {card:尘埃2X3ZB9CY} 上的能力成功执行1次追踪，使潜袭者在本次潜袭剩余时间内不能读取除尘埃之外的任何卡牌。当该服务器被侵入时，尘埃将是潜袭者首次选择时唯一的可读取卡牌，然后将不再有可读取卡牌，因此该次侵入会结束。
+    rules:
+    - rule: rule_prohibition_removed
+      text: |-
+        如果在侵入过程中，某项禁止部分或全部读取的能力变为非活动的，则会重新评估可读取卡牌，以反映该禁止不再生效：对于被侵入服务器中或其根目录中的每张卡牌，如果该物件曾被刚刚变为非活动的能力禁止读取，且不存在其他适用的规则或效果会阻止该物件成为可读取卡牌，那么该物件就会成为可读取卡牌。
+      new:
+      examples:
+      - text: 潜袭者在一次针对总部的潜袭中，{card:旗舰大厦} 已在总部根目录中被激活。其已安装1张 {card:码头区通行证}，因此随机读取上限设为2。潜袭者读取了总部中的1张卡牌，这意味着 {card:旗舰大厦} 的限制生效，总部中的其他所有卡牌都不再是可读取卡牌。随后，潜袭者读取 {card:旗舰大厦}，并使用 {card:灰吹精炼} 的能力将 {card:旗舰大厦} 附载到 {card:灰吹精炼} 上，从而在其持久能力不再继续生效的情况下将其卸载（见 {ref:subsec_persistent}）。由于读取除旗舰大厦之外的卡牌这一限制不再适用，总部中的卡牌再次成为可读取卡牌，除了潜袭者先前读取过的那张卡牌。
+        new:
+    - rule: rule_prohibiting_access_to_1
+      text: |-
+        {n}某些能力会说明潜袭者在某次特定潜袭中“不能读取超过1张卡牌”。该能力的效果是，只要潜袭者在所指明的潜袭中已经读取过1张卡牌，其在该次潜袭中就被禁止读取其他卡牌。该能力在有卡牌被读取之前对侵入或可读取卡牌都没有影响；而对于侵入总部和研发中心，它从不影响随机读取上限，即使在侵入开始前已经读取过1张卡牌也是如此。{/n}
+      examples:
+      - text: 潜袭者在一次针对总部的潜袭中，{card:旗舰大厦} 已在总部根目录中被激活。其已安装1张 {card:码头区通行证}，但由于其先前因 {card:小丑} 的能力在该次潜袭中已经读取过1张卡牌，随机读取上限仍设为2。由于潜袭者不被允许读取除 {card:旗舰大厦} 之外的任何卡牌，公司手牌中的卡牌都不会成为可读取卡牌。如果 {card:旗舰大厦} 的能力在侵入结束前变为非活动的，则公司手牌中的卡牌会再次成为可读取卡牌，而潜袭者将能够读取其中2张。
+        new:
+  - rule: rule_candidates_already_accessed
+    text: 一旦潜袭者选择1张可读取卡牌进行读取，该卡牌在本次侵入剩余时间内就不再是可读取卡牌。被选中的可读取卡牌是否真的被读取并不重要。只要该卡牌已被选择，它就不再是可读取卡牌。
+    examples:
+    - text: 潜袭者使用 {card:祭品脚本} 进行的一次潜袭中侵入档案库。他们从可读取卡牌集合中选择了1层防火墙，并应用 {card:祭品脚本} 的替换效应，改为销毁另一张卡牌，而不是读取所选择的防火墙。结算完这件事后，所选择的防火墙不再是可读取卡牌，并且在本次侵入中不能再次被读取。（不过，新被销毁的那张卡牌则可能成为可读取卡牌。）
+    - text: |-
+        公司使用 {card:加加林深空：开阔视界} 进行游戏，潜袭者侵入一台远程服务器。当潜袭者从该服务器根目录中选择1张可读取卡牌时，会施加1项读取的额外费用。潜袭者拒绝支付该费用，因此没有实际执行读取。那张卡牌仍然不再是可读取卡牌。
+  - rule: rule_after_reaching_random_access_limit
+    text: 当在侵入总部或研发中心时达到随机读取上限后，被侵入服务器对应区域中的所有可读取卡牌都不再是可读取卡牌，并且该区域中的任何卡牌在本次侵入剩余时间内都不能再成为可读取卡牌。参见 {ref:rule_random_access_limit}。
+  - rule: rule_candidates_leaving_server
+    text: 如果1张可读取卡牌离开被侵入的服务器，它就不再是可读取卡牌。请注意，被转移的卡牌可能成为一个新的物件，而在适当情况下，该新物件可能符合成为新的可读取卡牌的条件。
+    examples:
+    - text: 潜袭者在侵入档案库时销毁1张已安装的升级。那张卡牌转移到公司弃牌堆。该升级在公司弃牌堆中作为一个新物件的存在会成为可读取卡牌，因此潜袭者会在本次侵入中两次读取同一张实体卡牌。
+  - subsection: rule_candidates_entering_server
+    text: 在侵入进行中进入一台服务器的卡牌，可以成为可读取卡牌。
+    rules:
+    - rule: rule_candidates_entering_root
+      text: 如果一张卡牌在侵入该服务器时进入服务器根目录，则潜袭者会在下一个检查点的 {ref:step_checkpoint_card_entering_root_during_breach} 决定该卡牌是否成为可读取卡牌。如果潜袭者选择让该卡牌不成为可读取卡牌，那么该物件在本次侵入剩余时间内都不能成为可读取卡牌。
+    - rule: rule_candidates_entering_hq
+      text: 如果在侵入总部时，随机读取上限尚未达到，而一张卡牌进入公司手牌，则该卡牌成为1张可读取卡牌。
+    - rule: rule_candidates_entering_rnd
+      text: 如果在侵入研发中心时，一张卡牌进入公司牌组，则该卡牌可能成为可读取卡牌（可能在当时，也可能在本次侵入稍后），具体取决于随机读取上限以及其在牌组中的位置。参见 {ref:rule_rnd_candidates_1_at_a_time}。
+    - rule: rule_candidates_entering_archives
+      text: 如果在侵入档案库时，一张卡牌进入公司弃牌堆，则该卡牌成为可读取卡牌。另见 {ref:rule_archives_facedowns_after_breach}。
+  - subsection: rule_rnd_candidates_1_at_a_time
+    text: 在侵入研发中心时，潜袭者会按顺序一次看到公司牌组中的1张可读取卡牌，从牌组顶端向下进行。卡牌会一次变为1张可读取卡牌，直到达到读取上限。
+    rules:
+    - rule: rule_rnd_topmost_eligibile_candidate
+      text: 在潜袭者从公司牌组中选择1张可读取卡牌之后，以及每当公司牌组中有任何卡牌进入、离开或被重新排列时，公司牌组中的所有卡牌都不再是可读取卡牌。然后，如果随机读取上限尚未达到，则牌组中最上方符合条件的卡牌成为1张可读取卡牌。就此而言，如果潜袭者尚未选择读取该物件，并且在本次侵入中不被禁止读取该物件，则该卡牌符合条件。
+      examples: 
+      - text: 潜袭者打出 {card:造物者之眼} 并侵入研发中心，读取额外2张卡牌。他们读取 {card:名流的馈赠}，然后读取并窃取 {card:细菌编程}。公司使用 {card:细菌编程} 的能力重新排列研发中心中的卡牌，但将 {card:名流的馈赠} 保留在研发中心顶牌位置。返回到研发中心顶部的卡牌是新的物件，因此潜袭者必须从研发中心顶部继续该次侵入，并且会再次读取 {card:名流的馈赠}。
+      - text: 公司使用 {card:西德尔实验室} 进行游戏，并且在研发中心根目录中已激活 {card:保险箱}。潜袭者以随机读取上限4侵入研发中心。他们首先读取公司牌组顶牌，并让其保持原位。现在从上往下第2张卡牌成为1张可读取卡牌，结果发现它是一张议案，潜袭者通过花费[click]来支付 {card:保险箱} 施加的额外费用而窃取它。随后，公司使用 {card:西德尔实验室} 将1张卡牌从档案库加入研发中心顶端。呈现在潜袭者面前的第3张可读取卡牌，就是刚刚加入研发中心顶端的那张卡牌。在读取该卡牌后，下面那张卡牌仍然是最初被读取的那个物件，因此其下方那张卡牌（当前从上往下第3张）成为第4张也是最后1张可读取卡牌。
+    - rule: rule_rnd_access_from_bottom
+      text: |-
+        一张卡牌，{card:卖弄}，允许潜袭者从研发中心底部读取卡牌。当这一效果适用时，公司牌组中的可读取卡牌会从底部向上依次呈现：将 {ref:rule_candidates_in_rnd} 视为写的是“底部”而不是“顶部”，并将 {ref:rule_rnd_topmost_eligibile_candidate} 视为写的是“最底部”而不是“最顶部”。
+- section: sec_breaching_steps
+  steps:
+  text: 侵入服务器的步骤
+  rules:
+  - rule: step_breaching_begins
+    text: 对该服务器的侵入正式开始。与侵入这台服务器相关的条件已满足。
+  - rule: step_flip_archives
+    text: 如果被侵入的服务器是档案库，则将公司弃牌堆中的所有卡牌翻为牌面朝上。
+  - rule: step_determine_candidates_limit
+    text: 如果被侵入的服务器是总部或研发中心，则确定潜袭者可以从公司手牌或牌组中选择可读取卡牌的次数上限。
+  - rule: step_choose_candidate
+    text: 潜袭者选择1张可读取卡牌。如果其无法选择，则跳到 {ref:step_breach_complete}。
+  - rule: step_access_candidate
+    text: 潜袭者读取所选卡牌。
+  - rule: step_repeat_candidate_selection
+    text: 返回 {ref:step_choose_candidate}。
+  - rule: step_breach_complete
+    text: 侵入完成。与侵入结束相关的条件已满足。

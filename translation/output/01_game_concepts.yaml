@@ -1,0 +1,876 @@
+chapter: chpt_game_concepts
+text: 游戏概念
+sections:
+- section: sec_concepts_general
+  text: 通则
+  snippet: |-
+    这些规则可与Fantasy Flight Games的{term:android: netrunner}卡牌兼容。{term:android: netrunner}是一款关于庞大公司与被称为潜袭者的颠覆性黑客之间赛博斗争的游戏。
+  rules:
+  - rule: rule_player_definitions
+    text: |-
+      本游戏由2名玩家对战。1名玩家扮演公司（Corp）的角色，另1名玩家扮演潜袭者（Runner）的角色。本规则文档中，常常会交替以玩家和其游戏角色来称呼该玩家。
+  - rule: rule_requirements
+    text: |-
+      每位玩家都需要1副合法套牌、与其角色对应的身份卡牌，以及从套牌外使用的任何额外卡牌。他们还需要一批指示物，见{ref:sec_counters_and_tokens}。定义套牌合法性的限制见{ref:sec_deck_construction}，而可使用套牌和身份之外卡牌的情况见{ref:sec_extra_cards}。
+  - rule: rule_game_numbers
+    text: 游戏中使用的所有数值都是整数。除非另有说明，某个数值可以是正数、负数或0。
+- section: sec_golden_rules
+  text: 黄金规则
+  rules:
+  - rule: rule_card_precedence
+    text: 如果某张卡牌的文本与这些规则直接冲突，则以该卡牌文本为准。
+  - rule: rule_cannot_precedence
+    text: 如果某条规则或能力指示某事发生，但另1个效果表示它不能发生，则以“cannot”能力为准。
+  - rule: rule_if_able
+    text: 如果某条指示包含“if able”字样，那么其要么完整执行，要么完全不执行。如果该指示的任何一部分都无法执行，则整条指示被忽略。
+  - rule: rule_do_as_much_as_you_can
+    text: 如果某条指示不包含“if able”字样，则尽可能多地执行该指示。任何无法执行的部分都被忽略。
+
+- section: sec_symbols
+  text: 符号
+  rules:
+  - rule: rule_symbols
+    text: 有几种非英文符号会出现在卡牌和本规则文档中。本节提供这些符号的基本说明。
+  - rule: rule_symbol_credits
+    text: |-
+      符号[c]（纯文本：{curly:c}）表示“信用点”。它总是与数量连用，例如1[c]表示“1个信用点”，或3[c]表示“3个信用点”。有关信用点的规则见{ref:sec_credits}。
+  - rule: rule_symbol_clicks
+    text: |-
+      符号[click]（纯文本：{curly:click}）表示“时点”。多个时点可以用多个符号表示，例如[click][click]，也可以用数字加符号表示，例如2[click]，两者都表示“2个时点”。有关时点的规则见{ref:sec_clicks}。
+  - rule: rule_symbol_recurring
+    text: |-
+      符号[recurring]（纯文本：{curly:recurring}）表示可再生信用点。它总是与数量连用，例如1[recurring]表示“1个可再生信用点”，或3[recurring]表示“3个可再生信用点”。有关可再生信用点的规则见{ref:rule_sec_recurring}。
+  - rule: rule_symbol_link
+    text: |-
+      符号[link]（纯文本：{curly:link}）表示“连接值”。它总是与数量连用，例如1[link]表示“1点连接值”。有关连接值的规则见{ref:sec_link}。
+  - rule: rule_symbol_mu
+    text: |-
+      符号[MU]（纯文本：{curly:MU}）表示“内存”，也代表用于衡量内存的单位。与数量连用时，它应读作“内存单位”。例如，2[MU]表示“2个内存单位”。有关内存的规则见{ref:sec_memory}。
+  - rule: rule_symbol_sub
+    text: |-
+      符号[sub]（纯文本：{curly:sub}）表示“子进程”。每个符号标示1层防火墙上的1条子进程。有关子进程的说明见{ref:sec_subroutines}。
+  - rule: rule_symbol_trash
+    text: |-
+      符号[trash]（纯文本：{curly:trash}）表示“销毁本卡牌”。它被用作卡牌文本中的自指费用，例如“[trash]: 抽2张卡牌”表示“销毁本卡牌，以抽2张卡牌”。有关费用的规则见{ref:sec_costs}，有关卡牌销毁的规则见{ref:sec_trashing}。
+  - rule: rule_symbol_interrupt
+    text: |-
+      符号[interrupt]（纯文本：{curly:interrupt}）表示“中断时点”。它用于标示那些会在其他能力之前立即结算的能力。有关中断能力的规则见{ref:sec_interrupts_replacements}。
+
+- section: sec_deck_construction
+  text: 套牌构筑
+  rules:
+  - subsection: rule_identity
+    text: |-
+      每位玩家的套牌都对应1张身份卡牌，该卡牌决定该套牌的阵营、最小套牌张数和影响力上限。身份卡牌也可能规定对标准构筑规则的其他变体。
+    rules:
+    - rule: rule_gateway_identities
+      text: |-
+        来自{product:System Gateway Starter Pack}的身份{card:The Catalyst}和{card:The Syndicate}仅供该套装内包含的套牌使用。在完整套牌构筑规则下，它们不合法。
+  - rule: rule_legal_deck
+    text: 每副套牌都必须满足本节的所有要求，才能合法用于对局。
+  - subsection: rule_minimum_deck_size
+    text: 套牌至少必须包含与对应身份上所示最小套牌张数相同数量的卡牌。
+    rules:
+    - rule: rule_outside_the_deck
+      text: |-
+        身份卡牌、游戏开始时位于套牌外的额外卡牌，以及玩家辅助卡牌，都不属于套牌本身，也不计入套牌张数。
+    - rule: rule_maximum_deck_size
+      text: 套牌大小没有上限。
+  - rule: rule_disallowed_cards
+    text: 套牌不能包含身份卡牌、玩家辅助卡牌、来自错误阵营的卡牌（例如潜袭者套牌中的公司卡牌，反之亦然），或没有影响力费用的非本阵营卡牌。
+  - subsection: rule_influence_limit
+    text: |-
+      中立卡牌，以及属于与对应身份阵营不同阵营的卡牌，都被视为非本阵营卡牌。套牌中非本阵营卡牌的总影响力费用不得超过该身份的影响力上限。
+    rules:
+    - rule: rule_influence_by_copy
+      text: 套牌中非本阵营卡牌的总影响力费用按张数计算，而不是按名称计算。
+      examples:
+      - text: |-
+          在非塑形者套牌中放入1张{card:Diesel}副本，会使该套牌的总影响力增加2；而在非塑形者套牌中放入2张{card:Diesel}副本，会使该套牌的总影响力增加4。
+  - subsection: rule_agenda_points
+    text: 公司套牌必须包含合计达到一定议案分数的议案，具体数目取决于该套牌的总卡牌数。
+    rules:
+    - rule: rule_40_44
+      text: 40到44张卡牌的套牌必须包含18或19点议案分数。
+    - rule: rule_45_49
+      text: 45到49张卡牌的套牌必须包含20或21点议案分数。
+    - rule: rule_50_54
+      text: 50到54张卡牌的套牌必须包含22或23点议案分数。
+    - rule: rule_54+
+      text: 超过54张卡牌的套牌必须包含22或23点议案分数，再加上每超过50张卡牌的完整5张所对应的额外2点议案分数。
+      examples:
+      - text: 1副66张卡牌的套牌需要额外6点议案分数，因为它比50张多出3组每组5张卡牌。因此，最终需求为28或29点议案分数。
+  - rule: rule_maximum_copies
+    text: 套牌不能包含同名卡牌超过3张副本。有些卡牌在其卡牌文本中规定了其他复制上限。
+  - rule: rule_special_tournament_rules
+    text: 锦标赛对局可能会对身份和套牌的合法配置施加其他限制或要求。 
+
+- section: sec_extra_cards
+  text: 额外卡牌
+  rules:
+  - rule: rule_outside_deck
+    text: 某些能力允许使用套牌外的额外卡牌。
+  - subsection: rule_identity_copy
+    text: |-
+      {n}{card:Jinteki Biotech: Life Imagined}和{card:Méliès U: Only the Brightest}都具有1项会引用该身份不同副本的能力。这些身份还有不同版本，其背面拥有不同能力。{/n}
+    rules:
+    - rule: rule_jinteki_biotech_detail
+      text: |-
+        以{card:Jinteki Biotech}为身份的玩家可以随套牌携带任意数量的该身份副本。在完成游戏准备后，该玩家可以选择其拥有的任意1个副本作为整个游戏期间的活动身份。其他所有副本都置于游戏外。
+    - rule: rule_melies_u_detail
+      text: |-
+        以{card:Méliès U}为身份的玩家可以随套牌携带任意数量的该身份副本。在游戏开始时，其中1个副本将成为其活动身份，而其他所有副本都置于游戏外。每当{card:Méliès U: Only the Brightest}上的第1项能力结算时，该玩家就会被指示“秘密设置”其身份。为完成此指示，玩家秘密选择其当前身份卡牌，或1张位于游戏外的{card:Méliès U}身份卡牌，而所选副本成为其活动身份。玩家可以将其当前身份卡牌洗入游戏外的副本组中，以掩饰自己是保留同一副本还是切换到另1个副本。所选身份卡牌总是以{card:Méliès U: Only the Brightest}这一面朝上进入游戏区。在该能力再次结算之前，其他所有副本都置于游戏外。
+      new:
+  - subsection: rule_adam
+    text: |-
+      1张潜袭者身份卡牌{card:Adam: Compulsive Hacker}具有如下能力：“你在游戏开始时带着3张不同的{subtype:directive}卡牌已安装（这些卡牌不视为你套牌的一部分）。”
+    rules:
+    - rule: rule_adam_different_directives
+      text: |-
+        以亚当为身份的玩家必须随套牌携带至少3张名称不同且具有{subtype:directive}副类型的卡牌。该玩家可以携带超过所需3张的任意数量{subtype:directive}卡牌。
+    - rule: rule_adam_directives_install
+      text: |-
+        玩家展示身份后，以亚当为身份的玩家从其提供的{subtype:directive}卡牌中精确选择3张。这些卡牌在游戏开始时已安装于游戏区。该玩家以此方式携带的其他所有{subtype:directives}都留在游戏外。
+    - rule: rule_adam_directives_deck
+      text: |-
+        以亚当为身份的玩家也可以将{subtype:directive}卡牌放入其套牌中。游戏开始时被选为已安装的那些卡牌，不会影响套牌的影响力要求，也不会影响这些卡牌允许的最大复制数。
+    - rule: rule_adam_directives_during_game
+      text: |-
+        游戏开始后，以这种方式安装的卡牌会被完全视为其他已安装卡牌。会将这些卡牌转移到其他区域的能力正常生效，包括将其洗入存储栈。
+  - subsection: rule_additional_identity
+    text: |-
+      {card:Rebirth}和{card:DJ Fenris}这2张卡牌，会使用玩家在构筑套牌时所选身份之外的身份卡牌。
+    rules:
+    - rule: rule_additional_identities_pile
+      text: |-
+        玩家可以随套牌携带任意数量的额外潜袭者身份卡牌。这些卡牌置于游戏外的一叠牌中。潜袭者可以随时查看这些卡牌。
+    - rule: rule_additional_identities_reference
+      text: |-
+        当某项能力提到潜袭者当前身份之外的身份时，指的就是以这种方式提供的卡牌。如果1张身份卡牌离开游戏区，则必须将其放回游戏外的一叠牌中。
+    - rule: rule_legal_additional_identities
+      text: |-
+        在锦标赛中，以这种方式带入游戏的所有身份都必须在该锦标赛中可被玩家合法用作其实际身份。
+    - rule: rule_additional_identity_double_sided
+      text: |-
+        如果潜袭者将其身份切换为双面身份，则该身份以正面朝上状态进入游戏。如果潜袭者将双面身份切换为另1个身份，则新身份进入游戏时始终牌面朝上，不受先前身份当前状态影响。
+
+- section: sec_starting_the_game
+  text: 开始游戏
+  rules:
+  - subsection: rule_player_roles
+    text: |-
+      双方决定谁扮演公司、谁扮演潜袭者。每位玩家将与其要扮演的一方相对应的身份卡牌牌面朝上放入游戏区，然后放置相应套牌并牌面朝下放入游戏区，还要放置任何适当的额外卡牌。
+    rules:
+    - rule: rule_setup_identity
+      text: 某些身份卡牌具有会影响游戏准备的能力。虽然卡牌要到游戏开始后才会变为活动的，但这些身份仍会按照其文本所指示，在相应步骤中改变准备流程。
+    - rule: rule_double_sided_identity
+      text: 某些身份是双面的（见{ref:sec_identities}）。如果玩家使用的是双面身份，则该身份在游戏开始时正面朝上。
+  - rule: rule_setup_abilities
+    text: |-
+      如果玩家的身份具有会影响游戏准备或游戏开始的能力，且该能力并不直接对应本节规则所列出的某个准备步骤，则该玩家应在此时为其身份的特殊准备或开局能力作出必要决定并进行必要变动。如果此时双方都具有准备或开局能力，则公司先结算其能力。
+  - rule: rule_start_tokens
+    text: |-
+      双方通过收集{ref:sec_counters_and_tokens}所述的所有类型标记来建立银行。
+  - rule: rule_start_credits
+    text: 每位玩家从银行中拿取5个信用点，并将这些信用点放入自己的信用池。
+  - rule: rule_start_shuffle
+    text: 每位玩家洗混自己的套牌。
+  - subsection: rule_start_hand
+    text: 每位玩家从其套牌顶端抽5张卡牌，组成起始手牌。
+    rules:
+    - rule: rule_mulligan
+      text: 抽取起始手牌后，公司可以选择重新调度；然后，潜袭者可以选择重新调度。执行重新调度时，玩家将起始手牌洗回套牌，然后抽取新的起始手牌。其必须保留第2手牌作为起始手牌。
+  - subsection: rule_start_corp_turn
+    text: 游戏开始，公司进行其第1个回合。
+    rules:
+    - rule: rule_before_first_turn
+      text: 如果公司的身份具有1项包含“在你进行第1个回合之前”指示的能力，则公司会在进行第1个回合之前立刻结算该能力，因此也就是在游戏开始之前。
+
+- section: sec_ending_the_game
+  text: 结束游戏
+  rules:
+  - subsection: rule_game_end
+    text: 当某位玩家满足其任一获胜条件时，游戏结束。
+    rules:
+    - rule: rule_simultaneous_win
+      text: 如果双方会同时满足各自的获胜条件，则游戏以平局结束。
+  - subsection: rule_win_conditions
+    text: 每位玩家都有2种可用的获胜条件。
+    rules:
+    - rule: rule_win_agenda_points
+      text: |-
+        任一玩家都可以通过在其分数区中累积议案分数来获胜（通常通过为议案计分或窃取议案完成；见{ref:sec_score_scoring_steal}）。分数达到7点或更多的玩家获胜。
+    - rule: rule_flatline
+      text: |-
+        如果潜袭者{term:flatlined}，公司获胜。如果潜袭者受到的伤害超过其操控器中的卡牌数，则潜袭者会立即死亡。有关伤害的说明见{ref:sec_damage}。如果在其弃牌步骤开始时，其最大手牌上限小于0，潜袭者也会死亡。有关最大手牌上限和弃牌步骤的说明见{ref:sec_discard_phase}。
+    - rule: rule_empty_rnd
+      text: |-
+        如果公司被要求从研发中心抽1张卡牌却因研发中心为空而无法抽牌，则潜袭者获胜。
+
+- section: sec_cards
+  text: 卡牌
+  rules:
+  - rule: rule_corp_card_types
+    text: |-
+      公司卡牌有6种类型：议案、资产、防火墙、身份、事务和升级。除了身份卡牌外，所有卡牌在游戏开始时都会被洗入公司的套牌。
+  - rule: rule_runner_card_types
+    text: |-
+      潜袭者卡牌有5种类型：事件、硬件、身份、程序和资源。除了身份卡牌外，所有卡牌在游戏开始时都会被洗入潜袭者的套牌。
+  - subsection: rule_active_cards
+    text: 活动卡牌
+    rules:
+    - rule: rule_default_active_card_locations
+      text: |-
+        已安装且牌面朝上放在游戏区中的潜袭者卡牌、已安装且已激活的公司卡牌、位于游戏区中的事件与事务、位于公司分数区中的议案，以及双方的身份，都是活动的。
+    - rule: rule_runner_become_active
+      text: 除非另有说明，潜袭者卡牌在打出或安装的过程中就会变为活动的。
+    - rule: rule_corp_become_active
+      text: |-
+        除非另有说明，公司卡牌中事务之外的卡牌在安装进入游戏区时都是未激活的，因此处于闲置状态。资产、防火墙和升级在激活后变为活动的；议案在计分后变为活动的。事务在打出的过程中变为活动的。
+    - rule: rule_identity_become_active
+      text: 身份卡牌在游戏开始时变为活动的。
+  - subsection: rule_inactive_cards
+    text: 闲置卡牌
+    rules:
+    - rule: rule_default_inactive_card_locations
+      text: |-
+        卡牌在研发中心、总部、档案库、堆阵、操控器、存储栈、潜袭者分数区、置于一旁时，以及移出游戏时，都是闲置的。游戏区中牌面朝下的卡牌也处于闲置状态。
+    - rule: rule_inactive_cards_characteristics
+      text: |-
+        闲置的卡牌{n}，牌面朝下的已安装潜袭者卡牌除外，{/n}仍保留其印刷特征（名称、卡牌类型、阵营、费用、副类型、影响力等）。{n}有关牌面朝下的已安装潜袭者卡牌的信息见{ref:sec_facedown_runner_cards}。{/n}
+  - rule: rule_card_draw
+    text: |-
+      玩家抽1张或更多卡牌，就是从其套牌顶端拿取相同数量的卡牌并将它们放入手牌。有关抽牌的更多细节见{ref:Sec_drawing_cards}。
+  - rule: rule_inactive_ability_exception_link
+    text: |-
+      大多数能力只有在其所在卡牌处于活动状态时才是活动的。有关处于闲置状态的卡牌上的能力仍然活动的情况，见{ref:Rule_ability_active_inactive_source_card}。
+  - rule: rule_card_conversion
+    text: |-
+      能力可以将卡牌从一种类型转变为另一种类型，甚至将卡牌转变为指示物。有关卡牌转变的细节见{ref:Rule_add_card_to_score_area,rule_card_to_counter}。
+
+- section: sec_counters_and_tokens
+  text: 指示物与标记
+  rules:
+  - subsection: rule_counters_cards
+    text: |-
+      {term:Counters}和{term:tokens}是用于记录玩家及其卡牌的各种资源、效果和状态的游戏组件（或等价物）。
+    rules:
+    - rule: rule_counter_token
+      text: “counter”和“token”这两个术语可以互换。
+  - subsection: rule_bank
+    text: |-
+      {term:bank}是尚未进入游戏的指示物储备。银行中的指示物可供双方玩家按照游戏规则和卡牌能力的指示拿取和使用。玩家不控制银行中的指示物，也不能花费它们。银行的储备是无限的；即使用于记录某种指示物的游戏组件用尽，也不妨碍玩家获得该类型指示物或将其放到卡牌上。
+    rules:
+    - rule: rule_bank_default
+      text: 如果某条指示要求玩家将指示物放到1张卡牌上，却未指明这些指示物的来源，则从银行中拿取这些指示物。
+    - rule: rule_counters_placed_condition
+      text: 寻找正在被放到卡牌上的指示物的条件或限制，可以由来自银行的指示物或从其他位置转移来的指示物满足。
+  - rule: rule_card_conversion_game_piece
+    text: |-
+      某些能力可以将卡牌转变为指示物。以这种方式进入游戏的指示物由充当游戏组件的卡牌进行追踪。见{ref:rule_card_to_counter}。
+  - rule: rule_additional_counters
+    text: |-
+      某些能力可以使玩家或卡牌拥有，或者被“视为拥有”1个或更多指示物或额外指示物，而无需实际放置或给予这些指示物。以这种方式被视为存在的指示物与指定类型的指示物传递相同的信息和效果，但它不能从其所属的卡牌或玩家身上转移或移除，也不能用于支付费用。
+  - subsection: rule_counter_types
+    text: |-
+      指示物有10种类型：信用点指示物、时点指示物、锁定标记指示物、负面声誉指示物、核心伤害指示物、推进指示物、病毒指示物、能量指示物、议案指示物和状态指示物。
+    rules:
+    - rule: rule_type_credit_counter
+      text: |-
+        {term:Credit counters}用于记录每位玩家在其信用池中拥有的信用点数量；它们也可以放到卡牌上。有关信用点、信用池和其他相关概念的规则见{ref:sec_credits}。
+    - rule: rule_type_click_counter
+      text: |-
+        {term:Click counters}是一种游戏辅助组件，用于记录主动玩家在其回合中已经花费或剩余可花费的时点。有关时点的规则见{ref:sec_clicks}。
+    - rule: rule_type_tag_counter
+      text: |-
+        {term:Tag counters}用于表示潜袭者身上的锁定标记。有关锁定标记的规则见{ref:sec_tags}。
+    - rule: rule_type_bad_pub_counter
+      text: |-
+        {term:Bad publicity counters}{n}用于表示公司身上的负面声誉{/n}。有关负面声誉的规则见{ref:sec_bad_publicity}。
+    - rule: rule_type_core_damage_counter
+      text: |-
+        {term:Core damage counters}是一种游戏辅助组件，用于记录潜袭者所受的核心伤害。潜袭者每受到1点核心伤害，就必须获得1个核心伤害指示物。见{ref:sec_damage}。
+    - rule: rule_type_advancement_counter
+      text: |-
+        {term:Advancement counters}是一种主要放在已安装议案上的指示物，用于记录公司朝着能够为其计分所取得的进度。
+    - rule: rule_type_virus_counter
+      text: |-
+        {term:Virus counters}是一种通用指示物，主要由{subtype:virus}程序使用，公司可以通过清除病毒指示物将其移除。见{ref:rule_purge}。
+    - rule: rule_type_power_counter
+      text: |-
+        {term:Power counters}是一种由多种卡牌使用的通用指示物。它们没有特殊规则。
+    - rule: rule_type_agenda_counter
+      text: |-
+        {term:Agenda counters}是一种通用指示物，主要用于已计分的议案。它们没有特殊规则。
+    - rule: rule_type_condition_counter
+      text: |-
+        {term:Condition counters}是带有规则文本的指示物。只要它们附载在卡牌上，其能力就是活动的。
+
+- section: sec_credits
+  text: 信用点
+  snippet: |
+    潜袭者的每个信用点都代表足以升级其控制台的一些基础部件、在一家像样的餐馆吃顿饭，或购买一张门票和一些零食、度过一个感官影像之夜的钱。
+    公司的每个信用点都代表足以批量制造一批计算机零件、收购一家像样的餐馆，或拍摄一部低成本感官影像的钱。
+  rules:
+  - rule: rule_credit
+    text: |-
+      1个{term:credit}([c])是基本货币单位。玩家花费自己的信用点来支付各种费用、卡牌能力、追踪等。信用点指示物通常每个代表1[c]，但如果标示明确，也可以代表更大的面额。
+  - rule: rule_credit_pool
+    text: |-
+      每位玩家都有1个{term:credit pool}，其中存放着与其可花费信用点相对应的信用点指示物。玩家信用池中的信用点数量是公开信息。
+  - subsection: rule_gain_spend_lose_credits
+    text: 当玩家获得、失去或花费信用点时，信用点就会进入或离开其信用池。
+    rules:
+    - rule: rule_gain_credits
+      text: 只要信用点从任何位置进入玩家的信用池，玩家就{term:gains}信用点。 
+    - rule: rule_lose_credits
+      text: 如果玩家被要求{term:lose}信用点，则该玩家必须将指定数量的信用点从其信用池移动到银行。玩家不能从卡牌上失去信用点。
+      examples:
+      - text: |-
+          如果{card:DNA Tracker}上的1条子进程结算，潜袭者必须从其信用池中失去2[c]，如果其只有1[c]，则失去1[c]。如果潜袭者的信用池为空，则该效果没有任何作用。
+    - rule: rule_spend_credits
+      text: 要{term:spend}或{term:pay}信用点，玩家必须将指定数量的信用点放回银行。默认情况下，这些信用点必须来自玩家的信用池。能力也可以允许玩家在某些条件下花费其卡牌上附载的信用点。如果这些能力有适用，玩家会在允许的来源中选择如何分配自己正在花费的信用点。术语“spend”和“pay”是同义词。
+      examples:
+      - text: 潜袭者可以使用{card:Cyberfeeder}上的信用点来支付{card:Atman}的第1项能力。
+      - text: 潜袭者在秘密花费信用点以结算灵能能力时，可以使用{card:Ghost Runner}上的信用点（例如{card:The Future Perfect}）。 
+      - text: 如果这是潜袭者支付3[c]的唯一方法，那么在结算{card:Tollbooth}上“遭遇时”能力时，潜袭者必须使用{card:Ghost Runner}上的信用点。
+  - subsection: rule_hosted_credits
+    text: 能力可以如{ref:sec_host}所述将信用点放到卡牌上。玩家卡牌上的信用点不在该玩家的信用池中；玩家只能按照卡牌能力的指示与这些信用点互动。
+    rules:
+    - rule: rule_take_credits
+      text: 如果某项能力指示玩家从1张卡牌上{term:take}信用点，则其从该卡牌上移除相同数量的信用点，并获得这些信用点。
+    - rule: rule_spend_hosted_credits
+      text: 如果某项能力规定玩家可以如何花费1张卡牌上的信用点，那么在指定的行动或能力中，这些信用点可以如同在玩家信用池中一样从该卡牌上花费。
+    - rule: rule_spend_hosted_credits_during
+      text: 如果某项能力规定了玩家可在某个时间段内花费1张卡牌上的信用点，那么只要该时间段处于活动状态或该持续时间尚未结束，这些信用点就可以如同在玩家信用池中一样从该卡牌上为任何用途花费（失去信用点除外）。
+    - rule: rule_hosted_credits_use
+      text: 从1张卡牌上花费信用点，视为正在“使用”允许这些信用点被花费的那张卡牌。见{ref:rule_using}。
+  - subsection: rule_sec_recurring
+    toc:
+    text: 可再生信用点
+    rules:
+    - rule: rule_recurring_credits
+      text: |-
+        {term:Recurring Credits}([recurring])会反复在卡牌上放置信用点。“N[recurring]”表示“当本卡牌变为活动的时，在其上放置N个信用点。在你的回合开始前，若本卡牌上的信用点少于N个，则在其上放置信用点，直到其上有N个信用点。”
+    - rule: rule_placing_recurring_credits
+      text: |-
+        可再生信用点会在卡牌一变为活动的时立即首次放置到其上。如果该卡牌是在安装时就以活动状态进入游戏，则在安装的{ref:rule_steps_installing_become_installed}步骤放置；如果是打出事务或事件，则在打出的{ref:rule_steps_playing_active}步骤放置；或者在卡牌翻为牌面朝上或计分后，一旦适用便立即放置。
+    - rule: rule_refill_recurring_credits
+      text: |-
+        可再生信用点在公司回合的{ref:step_corp_turn_recurring_credits_refill}步骤和潜袭者回合的{ref:step_runner_turn_recurring_credits_refill}步骤中补充，在其他于回合开始时适用的能力结算之前。
+    - rule: rule_recurring_credits_do_not_accumulate
+      text: |-
+        可再生信用点不会累积；它们只会补充到所示数量。
+      examples:
+      - text: 潜袭者安装{card:Spinal Modem}，其具有2[recurring]。现在在{card:Spinal Modem}上放置2个信用点。潜袭者稍后在其回合中花费其中1个。到潜袭者下1个回合开始时，{card:Spinal Modem}上的信用点应补充至2[c]，因此其上再放置1个信用点。
+
+- section: sec_clicks
+  text: 时点
+  snippet: |
+    工作、建立关系，尤其是接入矩阵时所做的一切都要花时间，而且总比你想象得快。1个时点代表花在某项特定活动上的抽象时间量，可以是一口气花去的数小时，也可以是分散在一天中的零散时间。
+  rules:
+  - rule: rule_click
+    text: 1个{term:click}([click])是活动的基本单位。玩家花费自己的时点来执行行动和触发能力。每个时点指示物代表1个时点。
+  - subsection: rule_allotted_clicks
+    text: 作为玩家回合的第1个步骤，他们会获得一定数量的时点，可在该回合的行动阶段中花费。有关玩家回合流程的细节见{ref:chpt_turns}。
+    rules:
+    - rule: rule_corp_allotted_clicks
+      text: 公司在其每个回合获得3[click]。
+    - rule: rule_runner_allotted_clicks
+      text: 潜袭者在其每个回合获得4[click]。
+  - subsection: rule_gain_spend_lose_clicks
+    text: 玩家可以获得、失去或花费时点。
+    rules:
+    - rule: rule_gain_clicks
+      text: 只要玩家拥有的时点数量增加，就算其获得了时点。
+    - rule: rule_lose_spend_clicks
+      text: 如果玩家失去或花费时点，其拥有的时点数量就会减少相应数量。就满足卡牌能力的条件和限制而言，“失去”和“花费”并非同义词。
+    - rule: rule_click_actions
+      text: 以[click]开头的支付型能力是行动，并遵循特殊时点规则（见{ref:sec_actions}）。除了执行行动之外，玩家在其回合中花费时点的方式或时机没有其他特殊限制。
+  - rule: rule_priority_subtype
+    text: 某些卡牌具有{subtype:priority}副类型，并带有“只能作为你的第1个[click]打出。”的文本。玩家只能通过打出事件或事务的基础行动来打出{subtype:priority}卡牌，而且只有在其本回合未花费任何其他时点时才可以打出。失去时点不会影响玩家打出{subtype:priority}卡牌的能力。
+
+- section: sec_objects
+  text: 物件
+  rules:
+  - rule: rule_object
+    text: 1个{term:object}是1张卡牌或1个指示物在特定区域中存在的一次实例。当卡牌或指示物从1个区域移动到另1个区域时，它就成为新的物件。
+  - subsection: rule_no_memory
+    text: 只要1张卡牌或1个指示物仍然是同1个物件，对其施加的限制和效果就仍然适用。卡牌和指示物不会记住自己过去曾是哪些物件。
+    examples:
+    - text: 公司使用{card:Vaporframe Fabricator}上的第1项能力，该能力规定它每回合仅限使用1次，并在安装过程中销毁了{card:Vaporframe Fabricator}。随后，公司打出Restore，将同1张{card:Vaporframe Fabricator}重新安装回来。尽管它是同1张实体卡牌，重新安装的{card:Vaporframe Fabricator}却是1个新的物件，而其“每回合限1次”能力在本回合仍可使用。
+    rules:
+    - rule: rule_identify_object_after_move
+      text: 能够移动卡牌的能力可以识别这些卡牌所成为的新物件，并继续对它们生效。
+      examples:
+      - text: 公司打出{card:Priority Construction}，从总部安装1层防火墙。该防火墙现在是游戏区中的1个新物件，但{card:Priority Construction}的第2条指示仍然可以找到它并在其上放置推进指示物。
+  - rule: rule_object_move_location
+    text: 卡牌从其所在位置移动到隐藏或秘密位置时，会成为新的物件，即使新位置仍在同1个区域中。
+    examples:
+    - text: |-
+        公司为{card:Accelerated Beta Test}计分，查看研发中心顶端3张卡牌，并从中安装并激活1层防火墙。作为连锁反应，公司随后使用{card:The Foundry: Refining the Process}搜寻研发中心，其结果是，{card:Accelerated Beta Test}当前查看的其他卡牌会与研发中心其余卡牌一起洗混。由于这些卡牌被移动到了研发中心中的未知位置，{card:Accelerated Beta Test}就无法再对它们生效，因此这些卡牌不能再被查看，也不会被安装或销毁。
+    - text: |-
+        当前游戏状态下，研发中心顶牌是1个物件。研发中心顶端第2张、第3张等等卡牌也是物件。如果公司打出{card:Precognition}并重新排列研发中心顶端5张卡牌，潜袭者将不知道先前顺序中的哪些卡牌对应哪些物件，因此这些卡牌在新顺序下会成为新的物件。
+  - rule: rule_object_move_known_location
+    text: 卡牌或指示物移动到同1个区域内已知位置时，仍然是同1个物件。
+    examples:
+    - text: 潜袭者已用{card:Femme Fatale}选择了1层防火墙，而公司使用{card:Thimblerig}的能力将该防火墙移动到另1个位置。但该防火墙没有离开游戏区，所以它仍然是同1个物件，潜袭者仍可用{card:Femme Fatale}的能力略过它。
+  - rule: rule_object_turn_faceup_facedown
+    text: 被翻为牌面朝上或牌面朝下的卡牌仍然是同1个物件。
+    examples:
+    - text: 公司使用{card:Vaporframe Fabricator}，以0费用安装1层防火墙，然后打出Divert Power，将{card:Vaporframe Fabricator}关闭并以折扣激活其新安装的防火墙。公司可以再次激活{card:Vaporframe Fabricator}，但由于它仍然是同1个物件，其“每回合限1次”能力本回合不能再次使用。
+  - subsection: rule_previous_object
+    text: 当1张卡牌或1个指示物成为新的物件时，其先前物件不再存在，但规则或能力仍然可以记住与过去游戏状态相关的它。
+    examples:
+    - text: 潜袭者打出{card:Bravado}。在潜袭过程中，1层潜袭者已经通过的防火墙被销毁。当潜袭结束时，{card:Bravado}的能力必须确定潜袭者在那次潜袭中通过了多少层防火墙。它会回顾游戏历史，并计算潜袭者通过的每1个不同防火墙物件。尽管对应被销毁防火墙的物件在当前游戏状态中已不复存在，{card:Bravado}仍然可以计算它。
+    - text: 潜袭者在读取研发中心顶牌时将其销毁。该卡牌在其位于研发中心顶端时对应的物件不再存在，但在这次侵入中，它仍然计入潜袭者可从研发中心读取的卡牌数量。
+    rules:
+    - rule: rule_previous_object_source
+      text: 已不复存在的物件仍然会被视为由其创建的任何活动持续效果的来源。有关持续效果的规则见{ref:sec_lingering_effects}。
+      examples:
+      - text: 潜袭者潜袭1台服务器，窃取1张议案，并读取1张已激活的{card:AMAZE Amusements}副本。潜袭者销毁{card:AMAZE Amusements}，而其读取的那个物件不再存在，同时被销毁的卡牌在档案库中成为新的物件。由销毁所创建的持续能力的来源，是该服务器根部中的原始物件，因此该持续能力中对“本服务器”的引用仍然指向被攻击的服务器，而在潜袭结束时，潜袭者将获得2枚锁定标记。
+
+- section: sec_host
+  text: 附载、所附载的与附载
+  rules:
+  - subsection: rule_placed_loaded
+    text: 每当1个物件被“放置”或“填装”到1张卡牌上时，这2个物件之间就会建立宿主关系。放到卡牌上的物件是所附载的，而承载另1个物件的卡牌是宿主。
+    rules:
+    - rule: rule_valid_hosts
+      text: 只有分数区和游戏区中的卡牌才能附载物件。
+  - subsection: rule_hosted_installed_state
+    text: 处于附载状态与处于已安装状态是不同的，但二者并不互斥。
+    rules:
+    - rule: rule_host_without_install
+      text: 如果某项能力指示玩家附载1张未安装的卡牌，但未提及安装该卡牌，则该所附载的卡牌不会变为已安装。
+    - rule: rule_host_corp_card_uninstall
+      text: 如果1张已安装的公司卡牌变为附载于潜袭者卡牌上，则该公司卡牌变为未安装。
+    - rule: rule_install_from_hosted
+      text: 如果1张卡牌从附载状态下被安装，则其不再处于附载状态。该附载关系在安装过程的{ref:rule_steps_installing_place}步骤结束。
+  - rule: rule_hosted_counters_not_on_player
+    text: 所附载的指示物不算“位于”某位玩家身上，也不算玩家“拥有”的物件。检查玩家身上指示物数量的能力不会将它们计入，而移除玩家身上指示物的能力也无法影响它们。
+    new:
+    examples:
+    - text: 公司结算{card:Whitespace}上的第1条子进程，迫使潜袭者失去3[c]。潜袭者不能失去其卡牌上所附载的信用点，即使其信用池中没有3[c]也不行。
+      new:
+    - text: 公司有1张已激活的{card:Superdeep Borehole}，其上附载着负面声誉指示物。当潜袭者在{ref:step_initiation_bad_publicity}中填满其负面声誉基金时，其不会因所附载的负面声誉而获得信用点。
+      new:
+    - text: 公司打出{card:Scapegoat}以移除2点负面声誉。其不能移除{card:Superdeep Borehole}上所附载的负面声誉指示物。
+      new:
+  - rule: rule_hosted_limit
+    text: 1个物件在任何时刻只能附载于1张卡牌上。
+  - rule: rule_hosting_limit
+    text: 除非卡牌能力明确限制，否则1张卡牌可以附载任意数量的其他物件。
+  - subsection: rule_host_relationship
+    text: 任何位于符合条件的位置的卡牌都可以充当宿主，但只有卡牌能力才能创建或允许宿主关系。
+    rules:
+    - rule: rule_host_via_install
+      text: 如果1张卡牌具有描述其可附载卡牌类型和/或数量的能力，但没有直接将卡牌附载到自身的能力，则该卡牌被允许作为所列类型卡牌的合法安装目的地，且数量上限为指定数目。在安装过程的{ref:rule_steps_installing_destination}步骤中，会选择1张宿主卡牌作为安装目的地。
+      examples:
+      - text: |-
+          {card:Off-Campus Apartment}具有“{card:Off-Campus Apartment}可以附载任意数量的{subtype:connections}。”这一能力。这意味着每当潜袭者安装1张{subtype:connection}卡牌时，其可以选择将该卡牌安装到游戏区中并附载于{card:Off-Campus Apartment}上，或者像平常一样直接安装到游戏区中。
+    - rule: rule_host_via_ability
+      text: 如果1张卡牌具有描述其可附载卡牌的能力，同时也具有1个或更多能够在其自身上创建宿主关系的能力，则它只允许卡牌通过那些能力变为附载于其上。卡牌不能通过无关的安装效果直接安装到该卡牌上。
+      examples:
+      - text: |-
+          {card:Glenn Station}写着“{card:Glenn Station}可以附载1张卡牌”，但它也具有1个将卡牌附载于其自身上的支付型能力。因此，{card:Glenn Station}只允许公司通过那项支付型能力附载卡牌，而不能通过安装行动附载卡牌。
+    - rule: rule_host_on_ability
+      text: 如果1张卡牌有能力规定它只能被安装为附载于另1张卡牌上，那么在安装过程中，想要安装该卡牌的玩家必须选择1个符合所给描述的合法目的地。如果在安装过程开始前不存在这样的目的地，则不能安装该卡牌。
+      examples:
+      - text: |-
+          {card:Egret}写着“只能安装在已激活的1层防火墙上。”只有在安装过程开始前，存在1层已安装且已激活的防火墙时，潜袭者才能安装Egret；否则，潜袭者安装{card:Egret}就是非法的。
+    - rule: rule_condition_counter
+      text: 某些事务和事件会将自身转变为状态指示物，并将自己安装为附载于其他卡牌上。事务或事件绝不能通过安装效果被安装；它只能通过其转变能力成为1个已安装的指示物。见{ref:rule_card_to_counter}。
+  - subsection: rule_host_faceup_facedown
+    text: 卡牌可以牌面朝上或牌面朝下地附载。
+    rules:
+    - rule: rule_hosted_when_installed
+      text: 除非另有说明，1张在安装过程中被附载的卡牌，会以其通常安装时应有的牌面朝上或牌面朝下状态附载到目的卡牌上。
+    - rule: rule_hosted_when_not_installed
+      text: 除非另有说明，1张未被安装而被附载的卡牌会牌面朝上附载。
+    - rule: rule_hosted_facedown_distinct
+      text: 与其他牌面朝下的已安装卡牌一样，牌面朝下附载的已安装卡牌也是互不相同的。其被安装（或翻为牌面朝下）的顺序属于公开信息。
+    - rule: rule_hosted_facedown_groups
+      text: 未被安装而牌面朝下附载的卡牌必须根据其宿主分成互不相同的组。属于同1组的卡牌之间不排序，其控制者可以自由排列。
+  - rule: rule_change_hosted
+    text: 卡牌一旦被安装，无论是否附载，玩家都不能改变其附载状态，除非某张卡牌能力明确指示将其附载到1张新卡牌上。
+  - rule: rule_host_transitivity
+    text: 宿主关系不具有传递性。如果卡牌A附载于卡牌B，而卡牌B附载于卡牌C，则卡牌A不视为附载于卡牌C。
+    examples:
+    - text: 如果潜袭者安装1张附载于{card:Dhegdheer}上的{card:Leprechaun}，那么附载于{card:Leprechaun}上的程序不会因为它们附载于{card:Leprechaun}而非{card:Dhegdheer}而获得安装费用减免。
+  - rule: rule_hosted_word_meaning
+    text: 如果1张卡牌上的能力提到1张“所附载的”卡牌或指示物，那么该能力只引用附载在那张卡牌上的物件。
+  - rule: rule_remove_spend_hosted_objects
+    text: 所附载的物件可以从其宿主上移除或花费，而不会影响宿主。
+  - rule: rule_hosted_object_same_zone_as_host
+    text: 创建宿主关系会将所附载物件移动到与宿主相同的区域。如果所附载物件随后移动到另1个区域，或被附载到另一张卡牌上，则宿主关系结束。
+    new:
+    examples:
+    - text: 潜袭者使用{card:Madani}上的行动，选择手牌中的2个程序附载于{card:Madani}。所选卡牌会改变区域，从潜袭者的操控器移动到游戏区。
+      new:
+  - rule: rule_trash_hosted_objects_when_host_trashed
+    text: 如果宿主卡牌改变了区域，除非是从某位玩家的分数区移动到另一位玩家的分数区，否则在下1个检查点期间，该卡牌上附载的所有物件（以及附载在那些物件上的所有物件，以此类推）都会被销毁。此效果无法被防止。有关检查点的细节见{ref:sec_checkpoints}。
+    examples:
+    - text: 潜袭者有1张已安装的{card:Detente}，其上附载着公司卡牌。他们打出{card:Rejig}，将{card:Detente}加入其操控器。所附载的公司卡牌会被销毁。
+    - text: 潜袭者在其分数区中有{card:Next Big Thing}，其上附载着1枚议案指示物。公司打出{card:IP Enforcement}来安装那张议案。该所附载的议案指示物会在安装的{ref:rule_steps_installing_pay_install_cost}步骤后被销毁。
+    - text: 潜袭者在其分数区中有{card:Next Big Thing}，其上附载着1枚议案指示物。公司打出{card:Exchange of Information}，将那张议案与自己的分数区中的议案互换。那枚议案指示物仍然附载在{card:Next Big Thing}上。
+  - rule: rule_condition_counters_can_host
+    text: 状态指示物是唯一能够附载其他物件的指示物类型。对状态指示物的附载遵循与卡牌相同的规则。
+
+- section: sec_ownership
+  text: 拥有与控制
+  rules:
+  - subsection: rule_owner
+    text: 卡牌的拥有者是游戏开始时将该卡牌作为其身份、套牌的一部分或随套牌携带的额外卡牌提供出来的玩家。
+    rules:
+    - rule: rule_owner_converted_to_counter
+      text: 转变为指示物的卡牌仍保留其拥有者。
+    - rule: rule_owner_counters
+      text: 没有玩家拥有未由卡牌转变而来的指示物。
+  - subsection: rule_controller_object
+    text: 1个物件的{term:controller of an object}是对该物件负责的玩家。
+    rules:
+    - rule: rule_controller_card_play_area
+      text: 游戏区中卡牌的控制者是将其安装或放置到那里的玩家。
+    - rule: rule_controller_agenda
+      text: 公司控制公司分数区中的每张议案。潜袭者控制潜袭者分数区中的每张议案。
+    - rule: rule_controller_default_owner
+      text: 其他区域中的卡牌由其拥有者控制。
+    - rule: rule_controller_credits
+      text: 每位玩家控制其信用池中的信用点。
+    - rule: rule_controller_bad_publicity_tag
+      text: 公司控制每个负面声誉指示物。潜袭者控制每个锁定标记指示物。
+    - rule: rule_controller_hosted_counter
+      text: 附载于卡牌上的指示物的控制者是控制该宿主卡牌的玩家。
+    - rule: rule_controller_click_core_damage
+      text: 时点指示物和核心伤害指示物仅为游戏辅助组件，没有控制者。
+  - subsection: rule_pay_costs_controlled_objects
+    text: 除非明确指示，否则玩家只能使用其控制的物件支付费用。
+    rules:
+    - rule: rule_remove_tags_or_bad_publicity_as_cost
+      text: 任一玩家都可以从自己或对手身上移除锁定标记或负面声誉，以支付费用。
+      new:
+  - subsection: rule_controller_ability
+    text: 某项能力的{term:controller of an ability}是负责该能力的玩家。默认情况下，这名玩家就是控制该能力来源的玩家。另见{ref:rule_source}。玩家只能使用其控制的能力。
+    rules:
+    - rule: rule_controller_agenda_abilities
+      text: 除非明确另有说明，议案上的能力由公司控制，即使这些议案位于潜袭者的分数区中也是如此。
+    - rule: rule_ability_controller_specified
+      text: 某些能力会说明它们只能由特定玩家使用。指定的玩家控制每1项此类能力，即使其并不控制该能力的来源也是如此。
+  - subsection: rule_controller_choices
+    text: 除非另有注明，能力的控制者会执行其效果并作出任何所需选择。如果某位玩家被指定执行某个效果的全部或部分，则该指定玩家改为执行该部分效果并作出任何所需选择。
+    examples:
+    - text: |-
+        {card:Rototurret}的第1条子进程写着“销毁1个已安装程序。”由于{card:Rototurret}是1张公司卡牌，所以由公司选择要销毁哪1个已安装程序。相反，{card:Bulwark}的第1条子进程写着“潜袭者销毁1个已安装程序。”由于该效果指定由潜袭者执行，因此由潜袭者选择要销毁自己哪1个已安装程序。
+    rules:
+    - rule: rule_trigger_condition_effect_by_player
+      text: 某些触发条件关心的是由特定玩家执行的效果。只有当该玩家正是执行相关效果的人时，这些条件才算满足。
+      examples:
+      - text: |-
+          公司有1张已激活的{card:Hostile Infrastructure}。Apocalypse并未指定由谁来销毁这些卡牌，因此销毁责任由潜袭者承担，而{card:Hostile Infrastructure}满足其触发条件。
+      - text: |-
+          {card:Alice Merchant}写着“公司必须销毁总部中的1张卡牌”，因此尽管{card:Alice Merchant}是1张潜袭者卡牌，执行该效果的仍然是公司，所以{card:Hostile Infrastructure}不满足其触发条件。
+
+- section: sec_targets
+  text: 目标
+  rules:
+  - subsection: rule_target
+    text: 许多能力要求玩家选择1个或更多要受影响的物件或子进程。为某项能力所选的每个物件和子进程都是该能力的目标。
+    examples:
+    - text: |-
+        {card:Top Hat}的部分文本写着“你可以从研发中心顶端5张卡牌中选择1张并读取它。”该指示的目标是潜袭者在研发中心选择的那张卡牌。
+    - text: |-
+        {card:Colossus}上的1条子进程部分写着“销毁1个已安装程序和1个已安装资源。”该子进程的目标是那2张将被销毁的卡牌。
+    - text: |-
+        {card:Trick of Light}写着“选择1张你可以推进的已安装卡牌。将至多2枚推进指示物从1张其他卡牌上转移到所选择的卡牌上。”这条事务的目标是要转移的推进指示物和目的卡牌。如果选择2枚指示物，它们必须附载于同1张卡牌上。
+    - text: |-
+        潜袭者正在遭遇1层{subtype:barrier}，并使用{card:Cleaver}破解子进程。{card:Cleaver}的对接能力的目标是其将要破解的1条或2条子进程。
+    rules:
+    - rule: rule_searching_does_not_target
+      text: 搜寻过程中找到的卡牌不视为执行搜寻指示的目标。玩家在搜寻真正开始之前，无需宣告自己预计会找到哪些卡牌。有关搜寻的规则见{ref:sec_searching_cards}。
+    - rule: rule_object_subroutine_targets
+      text: 只有物件和子进程会被宣告为目标。如果某条指示要求玩家选择（或“命名”）1个数字、1种卡牌类型、1种副类型、1个卡牌名称、1台服务器或某组指定效果中的1种，则该选择要到该指示结算时才作出。
+  - subsection: rule_announce_targets
+    text: 在某条指示即将发生之前，结算该指示的玩家必须先选择该指示所需的目标。每当该指示要求玩家选择1个或更多物件和/或子进程时，该玩家都要宣告适当的目标。一旦玩家完成对某条指示的目标宣告，该指示就会变为即将发生，而玩家有机会在其结算前通过中断能力修改该指示的效果。见{ref:sec_interrupts_replacements}。
+    rules:
+    - rule: rule_target_indicate
+      text: 当玩家宣告1张卡牌作为目标时，必须清楚指明所选择的是哪张卡牌，而不改变其牌面朝下/朝上状态或位置。
+    - rule: rule_targets_must_be_valid
+      text: 结算该指示的玩家只能选择对该指示有效的目标。若某个目标满足该指示所指定的任何要求，或能够以其他方式受到该指示的作用，则它对该指示有效。
+    - rule: rule_targets_must_be_in_play_area
+      text: 除非某条指示明确指定了必须从哪个区域选择物件作为目标，否则只有游戏区中的指示物和已安装卡牌才是该指示的有效目标。
+      examples:
+      - text: 公司结算1条写着“[sub] 潜袭者销毁1个程序。”的子进程。潜袭者必须销毁其1个已安装程序，不能销毁手牌或存储栈中的程序。
+    - rule: rule_multiple_targets
+      text: 某些效果允许玩家在1次宣告中选择多张卡牌作为目标。{ref:Subsec_quantities_and_sets}包含有关结算涉及卡牌集合的效果的规则。
+    - rule: rule_distinct_targets
+      text: 玩家可以以任意顺序宣告某条指示的目标，但每个物件或子进程在每1次宣告中只能被选为目标1次。如果可用的有效目标不够，则该玩家尽可能选择尽量多的互不相同的目标，其余目标则不予宣告。
+      examples:
+      - text: 潜袭者读取1张上面有3枚推进指示物的{card:Aggressive Secretary}。潜袭者只有2个已安装程序，因此公司选择这2个程序作为{card:Aggressive Secretary}的目标。程序一旦被选择，就会同时被销毁。
+    - rule: rule_targeting_only_once
+      text: 不能在任何其他时机为1条指示选择目标。即使在该指示即将发生时游戏状态因中断能力而发生变化，尚未宣告的目标仍然未被选择。
+  - rule: rule_targets_gone
+    text: |-
+      在某条指示结算时，如果其任何目标要么已经失效，要么尚未被宣告，则按照黄金规则中{ref:rule_if_able,rule_do_as_much_as_you_can}的要求，在不作用于未宣告或失效目标的前提下，尽可能多地结算该能力。目标可能失效，是因为所选物件或子进程不再存在，或者该目标不再满足目标能力所指定的其他要求。
+  - rule: rule_target_beyond_move
+    text: |-
+      在1条选择了特定目标的指示结算后，同1能力的后续指示可以继续作用于该目标，而无需再次选择它，即使该能力移动了该目标或改变了其特征也是如此。另见{ref:rule_no_memory}。
+    examples:
+    - text: |-
+       {card:Howler}的能力以总部中的1张卡牌为目标。它的第1条指示会安装那张卡牌，而第2条指示会创建1个延迟条件能力，引用游戏区中的那张卡牌。只要那张卡牌仍然已安装，后一个能力就可以找到它并对其生效。 
+
+- section: sec_costs
+  text: 费用
+  rules:
+  - subsection: rule_cost
+    text: 为了使用某项能力或应用某个效果，玩家可能需要支付费用。费用可以表现为玩家必须花费的任何卡牌、指示物或其他物品；玩家必须结算的某个效果；或玩家必须满足的其他类型要求。如果玩家无法一次性用其控制的卡牌和指示物支付某个行动或能力的全部费用，则其不能使用与该费用相关的效果。
+    rules:
+    - rule: rule_cost_no_interrupt
+      text: 支付费用这一行为不能被可选中断能力修改或取消。
+      examples:
+      - text: 潜袭者可以销毁{card:Clone Chip}来触发其支付型能力，但不能使用{card:LLDS Energy Regulator}阻止{card:Clone Chip}以这种方式被销毁。
+    - rule: rule_cost_interrupt_static_mandatory
+      text: 如果某项静态能力或强制条件能力中断会在这些步骤作为效果执行时阻止支付费用的步骤完成，则该费用不能被支付。
+      examples:
+      - text: |-
+          潜袭者在安装着{card:Guru Davinder}时，不能支付窃取{card:Obokata Protocol}的额外费用，因为如果其被指示承受4点伤害，眼下无法如此做：{card:Guru Davinder}的第1项能力会阻止该伤害。
+      - text: 潜袭者正以{card:Jesminder Sareen}的身份进行游戏，并遭遇{card:Funhouse}，且在本次潜袭中没有其他与锁定标记相关的效果更早结算。由于{card:Jesminder Sareen}的能力会阻止其承受1枚锁定标记，因此潜袭者不能承受1枚锁定标记来支付{card:Funhouse}能力中的嵌套费用。{card:Funhouse}将终止本次潜袭。
+    - rule: rule_cost_restrictions
+      text: 如果触发某项能力或结算某个效果同时受费用和其他限制约束，则除非所有此类限制都已满足，否则不能支付该费用；而且也不能以会导致任何限制不再满足的方式支付该费用。
+      examples:
+      - text: 潜袭者控制着{card:Zer0}和{card:Clan Vengeance}，并想在{card:Clan Vengeance}上积累更多能量指示物。{card:Zer0}的能力带有“本能力每回合仅限使用1次。”的限制。如果潜袭者本回合已经使用过该能力，那么其不能通过再次尝试使用该能力来承受额外的网域伤害，即使尝试最终没有成功也不行。
+      - text: 公司在1台服务器的根目录中安装{card:Azef Protocol}，该服务器上已激活{card:SanSan City Grid}，并将{card:Azef Protocol}推进2次。由于{card:SanSan City Grid}把{card:Azef Protocol}的推进需求降低到了2，公司现在满足了为{card:Azef Protocol}计分所需的限制，但还必须支付其计分的额外费用。公司不能通过销毁{card:SanSan City Grid}来支付这笔费用，因为这样支付会把{card:Azef Protocol}的推进需求恢复到3，而其计分限制将不再满足。
+    - rule: rule_cost_zero
+      text: 0费用依然可以由玩家支付，尽管实际上并不会支付任何物品。0费用不会自动支付。玩家必须明确宣告自己正在支付0费用，才能支付0费用。
+      examples:
+      - text: |-
+          潜袭者从研发中心读取1张{card:Beanstalk Royalties}，并宣告其正在使用{card:Freedom Khumalo: Crypto-Anarchist}的能力来销毁{card:Beanstalk Royalties}。尽管潜袭者没有从任何卡牌上移除任何病毒指示物，其仍然已经支付了该费用。
+  - subsection: rule_modified_costs
+    text: 费用的实际内容可能取决于游戏状态。能力可以修改自身费用、修改某种类型或满足某些条件的费用，或包含需要计算的费用。
+    rules:
+    - rule: rule_cost_calculation
+      text: 如果某项费用中的某个数量会受到效果影响而改变其数值，则先取该数量的默认值，再依次应用每1项会增加费用的效果，然后依次应用每1项会降低费用的效果来确定其最终值。最后，如果通过此过程确定的值小于0，则将其设为0。
+    - rule: rule_cost_quantities
+      text: 某些能力会使用“for each”“for every”或“plus”之类的短语来计算数量。每当这类计算出现在费用中时，该计算结果会在需要支付费用的时刻确定。该结果会被视为1个总量，因此支付费用时只算1次所支付的内容。注意，额外费用（{ref:rule_nested_cost}）不会与其他费用合并。有关在其他语境下出现的计算数量的规则，另见{ref:Subsec_quantities_and_sets}。
+      examples:
+      - text: 潜袭者接驳1台服务器，该服务器有3层已推进防火墙保护，根部中还有1张已激活的{card:Cayambe Grid}。他们支付{card:Cayambe Grid}能力中的嵌套费用。该费用是1次支付6[c]，而不是3次支付2[c]，因此这只满足了{card:GameNET}能力1次实例的触发条件。
+    - rule: rule_cost_x
+      text: 某些费用包含变量X。在玩家支付这类费用之前，其要选择并宣告1个正整数或0作为X的值。所选值必须遵守任何适用限制。
+      examples:
+      - text: |-
+          {card:Psychographics}是1个费用为X的事务。它还具有如下能力：“X必须小于或等于潜袭者拥有的锁定标记数量。”如果潜袭者有3枚锁定标记，那么公司在打出{card:Psychographics}时，可以选择0、1、2或3作为X的值。
+    - rule: rule_cost_x_out_of_context
+      text: 如果某项能力需要知道1个费用在未支付该费用的语境下的值，则将该费用中出现的任何X视为0。
+    - rule: rule_alternate_payment
+      text: 某些能力会通过允许玩家以替代方式支付该费用的一部分或全部来修改费用。这不会改变费用数值，但会在决定如何支付该费用时给玩家提供额外选项。
+      examples:
+        - text: 公司激活{card:Biawak}，该卡具有“你可以在激活这层防火墙时废除1张议案，以支付其激活费用中10[c]的部分。”的能力，而其激活费用为14[c]。公司选择通过从信用池中花费2[c]、从{card:Mahkota Langit Grid}上花费2[c]，并废除1张议案，来支付{card:Biawak}的激活费用。
+    - rule: rule_install_and_rez_reducing_total
+      text: 指示公司安装并激活1张卡牌的能力，也可以降低这么做所需的“总”费用。这里的“总”表示公司可以在相关卡牌的安装费用和激活费用之间分配这项修正。当此类修正适用时，公司会声明要将多少信用点用于降低安装费用，以及要将多少信用点用于降低激活费用。该声明在{ref:rule_steps_installing_pay_install_cost}开始时作出，也就是在计算安装费用数值之前作出，而且这样声明的数值必须是非负数，其总和必须等于原始“总”修正所指定的信用点数。随后，按照{ref:rule_cost_calculation}中描述的正常流程，相应费用会按所声明的数额降低。
+      examples:
+      - text: 公司使用{card:Tucana}上的能力，从研发中心安装并激活1张{card:Logjam}副本，总共减少3[c]费用。他们安装那张保护着1台已有防火墙的服务器的{card:Logjam}，这意味着如果没有“总共减少3[c]”的修正，其安装费用将是1[c]，激活费用将是6[c]。公司将其中1[c]的折扣用于安装费用，将2[c]用于激活费用，最终安装费用为0[c]，激活费用为4[c]。
+  - subsection: rule_cost_checkpoint
+    text: 玩家支付费用后，会发生1个检查点。见{ref:sec_checkpoints}。
+    rules:
+    - rule: rule_cost_checkpoint_cost_zero
+      text: 即使所支付的费用为0，这个检查点也会发生。
+  - subsection: rule_types_of_costs
+    text: |-
+      费用主要有6种类型：安装费用（主要见于硬件、程序和资源，以及安装防火墙时产生）、打出费用（见于事务和事件）、激活费用（见于资产、升级和防火墙）、支付型能力触发费用、额外费用以及嵌套费用。
+    rules:
+    - rule: rule_inherent_cost
+      text: 安装费用、激活费用和打出费用都是卡牌的固有属性费用。除非该能力另有规定，否则这些费用会自动应用于执行相应效果（安装、激活或打出）的任何能力。另见{ref:sec_printed_cost}（了解这些费用在卡牌上如何显示）以及{ref:sec_install_cost}、{ref:rule_inherent_rez_cost}和{ref:rule_playing_play_cost}（了解安装、激活和打出卡牌时如何支付这些费用）。
+    - rule: rule_inherent_cost_in_ability
+      text: 存在安装费用、激活费用或打出费用，并不会改变1项能力是可选还是强制的状态。如果某个效果指示玩家安装、激活或打出1张卡牌，则其必须在可行时支付相关费用。如果其不能支付，该卡牌就不会被安装、激活或打出。
+    - rule: rule_inherent_and_additional_cost
+      text: 如果某个效果指示玩家安装、激活或打出1张卡牌，但这样做有额外费用，则玩家并不被强制支付该额外费用。若其拒绝支付，则其也不会支付安装、激活或打出费用，而该卡牌也不会被安装、激活或打出。
+    - rule: rule_inherent_cost_aggregates
+      text: 当玩家进行1项会打出或安装1张或多张卡牌且没有其他效果的行动时，即使在发起该行动与支付该费用之间还会发生其他步骤，也视为这些卡牌各自的打出费用或安装费用已经用于执行该行动。
+      examples:
+      - text: |-
+          公司已激活{card:Jeeves Model Bioroids}，并使用基础行动“[Click]：打出1个事务。”来打出{card:Blue Level Clearance}。用于基础行动费用的1个时点，以及用于{card:Blue Level Clearance}额外费用的1个时点，都算作用于执行“[Click]：打出1个事务。”这一行动的时点。
+  - subsection: rule_ignoring_costs
+    text: 某些能力会指示玩家在执行特定效果时忽略某些费用。
+    rules:
+    - rule: rule_ignore_general_cost
+      text: 如果玩家被指示忽略6种主要费用类型中的1种或更多种，则所指定的费用会从必须支付的总费用中移除。任何其他未被指示忽略的费用（通常是额外费用）仍然正常适用。
+    - rule: rule_ignore_credit_cost
+      text: 如果玩家被指示忽略“信用点费用”，则所有需要支付的信用点都会从总费用中移除。任何不由信用点构成的费用仍然正常适用。
+    - rule: rule_ignore_all_costs
+      text: 如果玩家被指示忽略“所有费用”，则相关费用的所有要素都会被移除，包括额外费用，从而使总费用变为0。
+  - subsection: rule_install_cost
+    text: 1张卡牌的{term:install cost}必须在安装该卡牌时支付。
+    rules:
+    - rule: rule_install_cost_on_card
+      text: 程序、资源或硬件的安装费用列在卡牌本身上。
+    - rule: rule_install_cost_ice
+      text: 1层防火墙的安装费用等于安装该防火墙时，其将要保护的服务器上已经保护着的防火墙数量所对应的信用点数。
+    - rule: rule_no_install_cost
+      text: 安装资产、升级或议案没有费用。
+  - rule: rule_play_cost
+    text: 事务或事件的{term:play cost}必须在打出该卡牌时支付。它列在卡牌本身上。
+  - rule: rule_rez_cost
+    text: 资产、升级或1层防火墙的{term:rez cost}必须在激活该卡牌时支付。它列在卡牌本身上。
+  - rule: rule_trigger_cost
+    text: 每项支付型能力的{term:trigger cost}都是该能力文本的第1部分。其后是1个冒号（:），然后是该能力的效果。有关支付型能力的更多细节见{ref:sec_paid_abilities}。
+  - subsection: rule_additional_cost
+    text: 1个{term:additional cost}会在启动某个特定游戏效果的常规费用之外再添加1项内容。玩家必须连同任何常规费用一起支付所有额外费用，才能启动该效果。
+    rules:
+    - rule: rule_decline_additional_cost
+      text: 如果某位玩家本应被迫执行某个游戏效果，但这样做有额外费用，那么该玩家可以拒绝支付该额外费用，即使其有能力支付，也因此阻止该效果发生。
+      examples:
+      - text: 潜袭者读取{card:Obokata Protocol}。通常潜袭者必须窃取其读取的议案，但由于{card:Obokata Protocol}有窃取额外费用，所以潜袭者可以拒绝承受网域伤害，从而不窃取该议案。
+    - rule: rule_additonal_cost_simultaenous
+      text: 玩家必须与所附加的费用同时支付所有额外费用，即使有多张卡牌或多项能力各自加入了不同的额外费用也是如此。玩家不能单独支付原始费用或任何1项额外费用。如果其不能一次性支付所有费用，则其不支付任何费用，相应效果也无法发生。
+      examples:
+      - text: 潜袭者在{card:Ben Musashi}和{card:Predictive Algorithm}都已活动的情况下读取{card:Obokata Protocol}。潜袭者必须能够同时支付2点信用点并承受6点网域伤害，才能窃取{card:Obokata Protocol}，尽管这3项费用分别来自不同的卡牌能力。所有费用支付完毕后，由支付这些费用中的任何1项而满足触发条件的能力，例如{card:I've Had Worse}或{card:Order of Sol}，便可在适用时结算。
+    - rule: rule_additional_cost_checkpoint
+      text: 如果某个通常不需要支付任何费用的效果需要额外费用，则在执行该效果的通常流程之前，先支付该额外费用并结算1个检查点。另见{ref:rule_checkpoint_after_paying_cost}。
+      examples:
+      - text: 公司正在打出{card:Ob Superheavy Logistics}，并开始为{card:Azef Protocol}计分，而{card:Azef Protocol}的计分额外费用是“销毁你其他已安装卡牌中的1张。”如果公司销毁了1张已激活的卡牌，从而满足了{card:Ob Superheavy Logistics}能力的触发条件，那么该能力会在与支付该费用相关的检查点之后结算。这发生在{card:Azef Protocol}被加入公司的分数区之前，也发生在与议案计分相关的任何触发条件满足之前。
+  - subsection: rule_nested_cost
+    text: |-
+      1个{term:nested cost}是出现在能力指示中的费用，必须在该能力结算时支付，才能让该能力的其余部分或部分效果结算。
+    rules:
+    - rule: rule_nested_cost_may
+      text: |-
+        嵌套费用通常写成“[玩家]可以[费用]来[指示]”或“[玩家]可以[费用]。如果[你/其]如此做，[指示]。”如果指定的玩家支付了指定费用，则指定指示会结算。否则，该能力的那一部分不会结算。
+    - rule: rule_nested_cost_unless
+      text: |-
+        嵌套费用也可以写成“[指示]，除非[玩家][费用]”或“[玩家]可以[费用]。如果[你/其]不如此做，[指示]。”如果指定的玩家支付了指定费用，则指定指示不会结算。否则，该指示会结算。
+      examples:
+      - text: |-
+          写着“除非潜袭者支付1[c]，否则终止本次潜袭。”的子进程包含1个嵌套费用。如果潜袭者选择支付1[c]，则该子进程不会终止本次潜袭。
+    - rule: rule_nested_cost_no_may
+      text: 1项写着“如果[你/其]如此做”或“如果[你/其]不如此做”的能力，如果前面没有“可以”，则不表示嵌套费用。
+    - rule: rule_nested_cost_otherwise
+      text: |-
+        某些能力会使用“otherwise”一词来表示，应根据嵌套费用是否已支付来结算不同指示。对于具有{ref:rule_nested_cost_may}所述形式嵌套费用的能力，将“otherwise”视为附加在同1费用上的“如果[你/其]不如此做”分句。相反，对于具有{ref:rule_nested_cost_unless}所述形式嵌套费用的能力，将“otherwise”视为附加在同1费用上的“如果[你/其]如此做”分句。注意，“otherwise”也可以出现在其他类型条件的语境中，单独出现时并不表示嵌套费用。
+
+- section: sec_score_scoring_steal
+  text: 分数、计分与窃取
+  rules:
+  - subsection: rule_score
+    text: 玩家分数区中所有议案上的议案分数总和，就是该玩家的{term:score}。
+    rules:
+    - rule: rule_threat_level
+      text: |-
+        {term:threat level}等于任1位玩家中的最高分数。“Threat N”能力标记会用到威胁等级（{ref:rule_threat_flag}）。
+      examples:
+      - text: 如果潜袭者的分数是4点议案分数，而公司的分数是3点议案分数，则威胁等级为4。
+  - rule: rule_game_win
+    text: 如果任意时刻某位玩家的分数达到7或更高，则其会在下1个检查点获胜。有关获胜的说明见{ref:sec_ending_the_game}，有关检查点的细节见{ref:sec_checkpoints}。
+  - subsection: rule_score_steal
+    text: 玩家通过{term:scoring}或{term:stealing}议案，将议案加入自己的分数区。公司可以在其回合中的某些支付型能力窗口内，选择为1张议案计分并将其放入自己的分数区。潜袭者可以在读取议案时将其窃取到自己的分数区。
+    rules:
+    - rule: rule_advancement_requirement
+      text: 议案的{term:advancement requirement}限制了公司何时能够为其计分。公司只能为其上推进指示物数量大于或等于其推进需求的议案计分。见{ref:sec_advancing_cards}。
+    - rule: rule_not_required_to_score
+      text: 公司没有义务在议案满足推进需求后立即为其计分。
+    - rule: rule_score_not_an_action
+      text: 为议案计分不花费[click]，也不是行动。 
+    - rule: rule_decline_to_steal
+      text: 潜袭者不能拒绝窃取其读取的议案，除非窃取该议案有额外费用，而潜袭者不能或不愿支付该费用。有关读取的细节见{ref:Chpt_access_breach}，有关额外费用的细节见{ref:rule_additional_cost}。
+    - rule: rule_add_agenda_to_score_area
+      text: 如果某个效果直接将1张议案加入分数区，或以其他方式将1张议案从任何区域移动到分数区，则该议案不视为已计分或已窃取。
+    - rule: rule_added_agendas_not_scored_or_stolen
+      text: 如果某个效果把另一张卡牌“作为议案”加入分数区，则新转变而来的议案不视为已计分或已窃取。见{ref:rule_add_card_to_score_area}。
+  - rule: rule_score_area_faceup
+    text: 议案总是以牌面朝上状态加入分数区，不受其先前牌面朝上/朝下状态影响。
+  - rule: rule_score_area_uninstalled
+    text: 如果1张已安装的议案被计分或被窃取，则其变为未安装。被计分或被窃取的议案上的任何推进指示物都会返回银行。见{ref:rule_trash_hosted_objects_when_host_trashed}。
+  - rule: rule_agenda_scored
+    text: 某些议案和其他卡牌具有与议案被计分相关的触发条件。公司将议案从其当前区域移动到自己的分数区后，这些能力就会进入待结算状态。
+  - rule: rule_agenda_stolen
+    text: 某些议案和其他卡牌具有与议案被窃取相关的触发条件。潜袭者将议案从其当前区域移动到自己的分数区后，这些能力就会进入待结算状态。
+  - rule: rule_advancement_counters_reference
+    text: 如果某项能力因议案被计分或被窃取而满足其触发条件，则在该能力效果中凡是提到推进指示物数量的地方，都使用该议案被计分或被窃取前最后已知的推进指示物数量。
+
+- section: sec_advancing_cards
+  text: 推进卡牌
+  rules:
+  - rule: rule_advance
+    text: 要{term:advance}1张卡牌，就是从银行中将1枚推进指示物放到其上。公司通常在行动阶段通过基础行动推进卡牌，但卡牌能力也可以推进卡牌。
+  - rule: rule_placing_advancement_counter
+    text: 结算1条直接将推进指示物放到卡牌上的指示，并不等同于推进1张卡牌。同样，结算1条将推进指示物从1张卡牌移动到另一张卡牌上的指示，也不等同于推进1张卡牌。
+    examples:
+    - text: 公司打出{card:Mushin No Shin}，选择安装1张{card:Oaktown Renovation}。由于这3枚推进指示物是直接放到卡牌上的，公司不会从{card:Oaktown Renovation}上的能力获得任何信用点。
+  - rule: rule_you_can_advance
+    text: 公司只能推进某些已安装卡牌。议案总是可以被推进。如果某张非议案卡牌写着它“可以被推进”或者“你可以推进”该卡牌，则即使它尚未激活，也可以被推进。1张卡牌可被推进的次数没有上限。
+  - rule: rule_advanced_card
+    text: “已推进卡牌”指其上附载着1枚或更多推进指示物的卡牌。
+
+- section: sec_trashing
+  text: 销毁
+  rules:
+  - rule: rule_trashing
+    text: |-
+      {term:Trashing}是将1个物件移动到其拥有者的弃牌堆的行为。
+  - rule: rule_access_trash
+    text: 在读取过程中，潜袭者有机会支付所读取卡牌的销毁费用以销毁它。见{ref:rule_basic_trash_ability}。
+  - rule: rule_trashed_vs_discarded
+    text: 被销毁的卡牌不视为已弃置，反之亦然。阻止卡牌被销毁的卡牌，也不能阻止卡牌被弃置。
+  - subsection: rule_trash_symbol
+    text: 符号[trash]表示销毁其所在的物件。它被用作某些能力的费用。
+    examples:
+    - text: |-
+        {card:Fall Guy}的最后1项能力写着“[trash]: 获得2[c]。”触发该能力的费用，就是销毁{card:Fall Guy}。
+    rules:
+    - rule: rule_trash_ability
+      text: |-
+        “[trash]能力”指触发费用中包含[trash]的支付型能力。
+    - rule: rule_use_trash_ability
+      text: 某些支付型能力的触发费用有多种选项，用“or”分隔。只有当实际支付的费用中包含[trash]时，玩家触发这项能力才算“使用了1项[trash]能力”。
+
+- section: sec_memory
+  text: 内存
+  rules:
+  - rule: rule_memory_unit
+    text: 1个{term:memory unit}([MU])是潜袭者用于安装程序的可用空间。
+  - rule: rule_memory_limit
+    text: 潜袭者的{term:memory limit}是其拥有的[MU]总量。如果潜袭者的身份卡牌没有指定起始内存上限，则其起始内存上限为4[MU]。形如“+N[MU]”的能力会使潜袭者的内存上限增加N[MU]。
+    examples:
+    - text: 潜袭者使用1张起始内存上限为4[MU]的身份。他们有1张已安装的{card:T400 Memory Diamond}副本，其能力为“+1[MU]”。因此，潜袭者可安装最多价值5[MU]的程序。
+    rules:
+    - rule: rule_memory_unused_mu
+      text: 潜袭者的{term:unused} [MU]等于其内存上限减去其所有已安装程序的总内存费用。若潜袭者有0个未用[MU]，则其[MU]已满。
+  - rule: rule_memory_cost
+    text: 程序具有持续计入内存上限的{term:memory cost}。{ref:Rule_program_memory_cost}详细说明了潜袭者已安装程序如何受内存上限约束。
+  - subsection: rule_memory_restricted_mu
+    text: 某些能力会给予潜袭者[MU]，而这些[MU]只能用于符合特定要求的程序。
+    rules:
+    - rule: rule_memory_counting_mu_ignores_restrictions
+      text: 如果某个计算值直接提到潜袭者的内存上限或未用[MU]，则该计算会忽略有关这些[MU]如何分配的要求。
+    - rule: rule_memory_check_mu_restrictions
+      text: |-
+        要判断潜袭者已安装程序是否满足其[MU]上的限制，需要建立1份映射，将每1个已安装程序的内存费用中的每1[MU]分配给1个特定来源（潜袭者的起始内存上限，或提供额外[MU]的某项能力）。分配给每1个来源的[MU]总量不得超过其提供的[MU]数量，而且分配给某1来源的所有程序都必须满足施加在该[MU]上的所有限制。如果无法建立这样的映射，则视为潜袭者已超过其内存上限，并且其必须按照{ref:rule_program_memory_cost}的说明销毁已安装程序。
+
+- section: sec_card_visibility
+  text: 卡牌可见性
+  rules:
+  - subsection: rule_faceup_facedown
+    text: 游戏区和其他公开区域中的卡牌要么牌面朝上，要么牌面朝下。牌面朝上的卡牌对所有玩家都可自由可见。牌面朝下的卡牌会以卡牌信息所在的一面不可见的方式摆放。
+    rules:
+    - rule: rule_hidden_secret_faceup_facedown
+      text: 位于隐藏或秘密区域中的卡牌既不是牌面朝上，也不是牌面朝下。
+    - rule: rule_hosted_cards_treated_as_group
+      text: 某些效果会同时在1个物件上附载多张卡牌，或者同时置于一旁多张卡牌。由同1效果同时进入某个区域的牌面朝下卡牌会被视为1组。分别见{ref:rule_host_faceup_facedown}和{ref:rule_facedown_set_aside_distinct_groups}。
+  - subsection: rule_look
+    text: 当玩家查看1张卡牌时，即使卡牌正面原本对其不可见，也允许其看到卡牌正面。如果该卡牌正面对该玩家原本不可见，则玩家查看时不应向另一位玩家展示该卡牌。
+    rules:
+    - rule: rule_look_at_controlled_facedown
+      text: 玩家可以在任何时候查看自己控制的牌面朝下的卡牌。
+  - subsection: rule_reveal
+    text: 展示1张卡牌，就是向所有玩家展示其正面，然后将其恢复到先前状态。
+    rules:
+    - rule: rule_reveal_not_turn_faceup
+      text: 展示1张牌面朝下的卡牌不算将其翻为牌面朝上。
+      new:
+  - rule: rule_expose
+    text: 某些能力会指示潜袭者揭示1张或多张卡牌。揭示1张卡牌就是展示它，不过只有已安装且未激活的卡牌才能被揭示。
+  - rule: rule_look_reveal_expose_access_distinct
+    text: 指示玩家查看、展示、揭示或读取1张卡牌的效果并不相同，即使它们有时执行方式相似也是如此。有关读取的更多信息见{ref:chpt_access_breach}。
+  - rule: rule_remain_visible
+    text: 如果某项正在结算的能力指示1名或双方玩家查看或展示1张卡牌或1组卡牌，那么每张此类卡牌都会继续对相关玩家可见，直到整项能力完全结算完毕，或者该卡牌移动到其他位置为止。另见{ref:rule_visibility_after_access}。
+  - rule: rule_ambush_text
+    text: “只要潜袭者在研发中心读取这[type]，其就必须展示它。”这一能力是一项静态能力，在整个读取期间都生效。带有旧措辞“如果这张[this card]是从研发中心读取的，则潜袭者必须展示它。”的卡牌也是如此。

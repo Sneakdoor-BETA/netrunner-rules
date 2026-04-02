@@ -1,0 +1,167 @@
+chapter: chpt_appendix_timing_structures
+text: |-
+  附录：时序结构参考
+sections:
+- section: sec_timing_structure_overview
+  text: 概述
+  rules:
+  - rule: rule_timing_structure_quick_ref
+    text: |-
+      以下几页包含游戏中主要时序结构的速查指南。当开始一个新的时序结构时，除非有指示转到不同的阶段或步骤，先从第1个编号步骤开始，然后依序进行该结构。
+  - rule: rule_timing_structure_reference_only
+    text: |-
+      这些指南仅供作为速查参考；关于每个时序结构的完整规则，请参见相应的规则章节。
+- section: sec_appendix_timing_structure_corps_turn
+  text: 公司回合的时序结构（{ref:Sec_steps_corp_turn}）
+  toc_entry: 公司回合的时序结构
+  rules:
+  - timing_structure:
+    bold:
+    elements:
+    - text: 抽牌阶段
+      elements:
+      - text: 公司获得起始[click]。
+      - text: |-
+          支付型能力窗口：（P）（R）（S）。
+      - text: 公司的可再生信用点补充完毕。
+      - text: 公司的回合开始。
+      - text: 公司抽1张卡牌。
+    - text: 行动阶段
+      elements:
+      - text: |-
+          支付型能力窗口：（P）（R）（S）。
+      - text: 公司是否有未花费的[click]？
+        elements:
+        - text: 如果没有，转到（d）。
+        - text: 如果有，公司进行1次行动。
+      - text: 返回（a）。
+      - text: 公司的行动阶段结束。
+    - text: 弃牌阶段
+      elements:
+      - text: 公司弃除卡牌。
+      - text: |-
+          支付型能力窗口：（P）（R）。
+      - text: 公司失去未花费的[click]。
+      - text: 公司的回合结束。
+      - text: 公司的回合完毕，游戏转到潜袭者的回合。
+- section: sec_appendix_timing_structure_runners_turn
+  text: 潜袭者回合的时序结构（{ref:Sec_steps_runner_turn}）
+  toc_entry: 潜袭者回合的时序结构
+  rules:
+  - timing_structure:
+    bold:
+    elements:
+    - text: 行动阶段
+      elements:
+      - text: 潜袭者获得起始[click]。
+      - text: |-
+          支付型能力窗口：（P）（R）。
+      - text: 潜袭者的可再生信用点补充完毕。
+      - text: 潜袭者的回合开始。
+      - text: |-
+          支付型能力窗口：（P）（R）。
+      - text: 潜袭者是否有未花费的[click]？
+        elements:
+        - text: 如果没有，转到（h）。
+        - text: 如果有，潜袭者进行1次行动。
+      - text: 返回（e）。
+      - text: 潜袭者的行动阶段结束。
+    - text: 弃牌阶段
+      elements:
+      - text: 潜袭者弃除卡牌。
+      - text: |-
+          支付型能力窗口：（P）（R）。
+      - text: 潜袭者失去未花费的[click]。
+      - text: 潜袭者的回合结束。
+      - text: 潜袭者的回合完毕，游戏转到公司的回合。
+- section: sec_appendix_timing_structure_of_a_run
+  text: 一次潜袭的时序结构（{ref:Sec_steps_of_a_run}）
+  toc_entry: 一次潜袭的时序结构
+  rules:
+  - timing_structure:
+    bold:
+    elements:
+    - text: 发起阶段
+      elements:
+      - text: 潜袭者宣告被攻击的服务器。
+      - text: 潜袭者{n}填满其负面声誉池。{/n}
+      - text: 本次潜袭开始。
+      - text: 若有，则将潜袭者的位置设为最外层防火墙。
+      - text: |-
+          支付型能力窗口：（P）（R）。
+      - text: 潜袭者是否处于对应于一层防火墙的位置？
+        elements:
+        - text: 如果是，转到（2）。
+        - text: 如果否，转到（4）。
+    - text: 接驳防火墙阶段
+      elements:
+      - text: 潜袭者接驳防火墙。
+      - text: |-
+          支付型能力窗口：（P）（R），且可以激活防火墙。
+      - text: 所接驳的防火墙已激活吗？
+        elements:
+        - text: 如果是，转到（3）。
+        - text: 如果否，转到（4）。
+    - text: 遭遇防火墙阶段
+      elements:
+      - text: 潜袭者遭遇防火墙。
+      - text: |-
+          支付型能力窗口：（P），且可以破解子进程。
+      - text: 是否有未破解的子进程要结算？
+        elements:
+        - text: 如果有，公司结算下一条子进程。
+        - text: 如果没有，转到（e）。
+      - text: 返回（c）。
+      - text: 转到（4）。
+    - text: 移动阶段
+      elements:
+      - text: 如果本次潜袭是从（2）或（3）到达此处，潜袭者通过该防火墙。
+      - text: |-
+          支付型能力窗口：（P）。
+      - text: 潜袭者可以退出潜袭。
+      - text: 如果可能，潜袭者向内转移1个位置。
+      - text: |-
+          支付型能力窗口：（P）（R）。
+      - text: 潜袭者是否移动到了新位置？
+        elements:
+        - text: 如果是，转到（2）。
+        - text: 如果否，转到（g）。
+      - text: 潜袭者接驳该服务器。
+      - text: 转到（5）。
+    - text: 成功阶段
+      elements:
+      - text: 宣告本次潜袭成功。
+      - text: 潜袭者侵入被攻击的服务器。
+      - text: 转到（6）。
+    - text: 潜袭结束阶段
+      elements:
+      - text: 关闭或结算“终止本次潜袭”之前的优先权窗口。
+      - text: 潜袭者{n}清空其负面声誉池。{/n}
+      - text: 如适用，则宣告本次潜袭失败。
+      - text: 本次潜袭完毕。
+- section: sec_appendix_timing_structure_of_breaching_a_server
+  text: 侵入服务器的时序结构（{ref:Sec_breaching_steps}）
+  toc_entry: 侵入服务器的时序结构
+  rules:
+  - timing_structure:
+    elements:
+    - text: 侵入开始。
+    - text: 如果侵入档案库，档案库中牌面朝下的卡牌翻为牌面朝上。
+    - text: 如果侵入总部或研发中心，则确定从公司的手牌或牌组中有多少张可读取卡牌。
+    - text: 是否还有剩余的可读取卡牌待读取？
+      elements:
+      - text: 如果有，潜袭者选择1张可读取卡牌。
+      - text: 如果没有，转到（7）。
+    - text: 潜袭者读取所选择的卡牌。
+    - text: 返回（4）。
+    - text: 侵入服务器完毕。
+- section: sec_appendix_timing_structure_of_accessing_a_card
+  text: 读取卡牌的时序结构（{ref:Sec_steps_accessing_card}）
+  toc_entry: 读取卡牌的时序结构
+  rules:
+  - timing_structure:
+    elements:
+    - text: 该卡牌被读取。
+    - text: 潜袭者可以销毁该卡牌，或使用另一个读取时能力。
+    - text: 如果该卡牌是议案，潜袭者窃取它。
+    - text: 读取完毕。

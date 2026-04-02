@@ -1,0 +1,453 @@
+chapter: chpt_card_manipulation
+text: 卡牌操作
+sections:
+- section: sec_faceup_facedown_status
+  text: 牌面朝上与牌面朝下状态
+  rules:
+  - rule: rule_rezzed_unrezzed
+    text: |-
+      若一张议案、资产、升级或一层防火墙已安装且牌面朝下，则其为{term:unrezzed}。若一张资产、升级或一层防火墙已安装且牌面朝上，则其为{term:rezzed}。潜袭者卡牌、牌面朝上的议案、事务、事件和指示物既不是已激活，也不是未激活。
+
+  - subsection: sec_rez
+    text: 将一张未激活的卡牌激活，就是将其翻为牌面朝上。
+    rules:
+    - rule: rule_rez_in_paw
+      text: |-
+        某些付费能力窗口允许公司激活资产与升级。见 {ref:rule_paid_ability_window}。潜袭中的 {ref:step_approach_paw} 处的付费能力窗口允许公司激活防火墙。
+    - rule: rule_rez_by_ability
+      text: 卡牌能力可以指示或允许公司在其他时点激活卡牌。
+    - rule: rule_cannot_rez_agendas
+      text: 议案不能被激活。
+    - rule: rule_inherent_rez_cost
+      text: |-
+        在激活卡牌之前，公司必须支付该卡牌的激活费用。这包括在付费能力窗口中激活，以及通过卡牌能力激活。卡牌能力可以修改或忽略激活费用，但必须明确写明。
+    - rule: rule_rez_procedure
+      text: |-
+        要结算激活卡牌，公司先支付其激活费用（计入任何修正或额外费用），然后发生一个检查点（如 {ref:rule_checkpoint_after_paying_cost} 所要求），再将该卡牌翻为牌面朝上。就满足触发条件而言，在此流程结束时，该卡牌视为已激活。
+
+  - subsection: sec_derez
+    text: 将一张已激活的卡牌关闭，就是将其翻为牌面朝下。
+    rules:
+    - rule: rule_derez_by_ability
+      text: 只有卡牌效果才能关闭卡牌。
+    - rule: rule_derez_cost
+      text: 关闭卡牌没有固有费用。
+    - rule: rule_derez_procedure
+      text: 关闭卡牌是瞬时的，不包含任何组成步骤。
+
+  - subsection: sec_facedown_runner_cards
+    text: 某些能力可以将潜袭者卡牌牌面朝下安装，或将已安装的潜袭者卡牌翻为牌面朝下。
+    rules:
+    - rule: rule_facedown_runner_cards_are_blank
+      text: 已安装且牌面朝下的潜袭者卡牌不具有任何特征（名称、卡牌类型、派系、费用、副类型、影响力等），且其能力不处于活动状态。
+    - rule: rule_facedown_runner_cards_are_distinct
+      text: |-
+        牌面朝下的已安装潜袭者卡牌彼此不同。每张此类卡牌的来源（何时以及如何牌面朝下安装，或是哪张牌面朝上的已安装卡牌被翻为牌面朝下）都是公开信息。
+    - rule: rule_facedown_runner_cards_flip_in_heap
+      text: 潜袭者牌面朝下的卡牌进入堆阵后，会翻为牌面朝上。
+    - rule: rule_flip_is_not_uninstall
+      text: 被翻为牌面朝下的潜袭者卡牌不视为已卸载，只是继续留在游戏区中。
+    - rule: rule_unflipping_runner_cards
+      text: |-
+        如果一张牌面朝下的已安装潜袭者卡牌被翻为牌面朝上，则该卡牌重新获得其印刷特征，并成为活动的。将一张已安装且牌面朝下的潜袭者卡牌翻为牌面朝上不会满足“当安装时”能力的触发条件。
+    - rule: rule_runner_cards_neither_rezzed_nor_unrezzed
+      text: 潜袭者卡牌从不被视为已激活或未激活。
+
+- section: sec_card_movements
+  text: 卡牌移动
+  rules:
+  - subsection: sec_movement
+    text: |-
+      {term:movement}是卡牌依照特殊规则改变其区域或位置的一种方式。移动包括：排列、抽取、废除、安装、打出、搜寻、计分、窃取、互换和销毁。
+    rules:
+    - rule: rule_non_movements
+      text: |-
+        其他会改变卡牌所在位置的术语不属于移动。如果某项能力指示玩家将卡牌“加入”或“转移”到1个或多个位置，只需将那些卡牌放入所指示的位置。如果某项能力或游戏规则指示玩家对1张或多张卡牌进行“弃除”“置于一旁”或“移出游戏”，则分别只需将那些卡牌放入其所有者的弃牌堆、置于一旁区或移出游戏区。
+
+  - subsection: sec_replacing_movements
+    text: |-
+      如果某个替代效果修改了某个移动的效果，但没有按名称完全替代整个移动，那么经修改后的效果仍然属于该移动的一个实例，并且仍可满足与该移动类型相关的触发条件。
+    examples:
+    - text: |-
+        {card:Harbinger} 的能力通过将销毁它时“把 {card:Harbinger} 加入堆阵”替换为将其翻为牌面朝下来修改销毁它的效果。经修改后的效果结算时，{card:Harbinger} 仍视为已销毁。如果这是本回合潜袭者第一次销毁其一张已安装的卡牌，则其将能够结算 {card:Wasteland} 的能力。
+    rules:
+    - rule: rule_cancelled_movement
+      text: |-
+        如果某个移动被完全替代、被防止，或因其他原因无法执行，则该移动不会发生，与该移动类型相关的条件也不会得到满足。
+      examples:
+      - text: |-
+          公司正在结算 {card:Rototurret} 上的第一条子进程，以销毁1个已安装的程序。潜袭者使用 {card:Sacrificial Construct} 防止该程序被销毁。由于销毁没有发生，潜袭者不会在 {card:District 99} 上放置1枚能量指示物，而如果本回合稍后成功销毁1个程序或1件硬件，{card:District 99} 仍然可以满足其触发条件。
+
+  - rule: movement_arrange
+    text: |-
+      对一组卡牌进行{term:arrange}，就是在其当前所在位置之间重新安置它们。排列的完整规则详见 {ref:sec_arranging_rearranging}。
+      
+  - rule: movement_draw
+    text: |-
+      对若干卡牌进行{term:draw}，就是将那么多张卡牌从玩家牌组顶端移到其手牌。抽牌的完整规则详见 {ref:sec_drawing_cards}。
+
+  - rule: movement_forfeit
+    text: |-
+      对议案进行{term:forfeit}，就是将其从玩家的分数区移到移出游戏区。当玩家废除议案时，其议案分数不再计入该玩家的分数，而且其上所附载的任何物件都会被销毁。
+
+  - rule: movement_install
+    text: |-
+      对卡牌进行{term:install}，就是将其从当前区域移到游戏区。安装卡牌的完整规则详见 {ref:sec_install_uninstall}。
+
+  - rule: movement_play
+    text: |-
+      对事件或事务进行{term:play}，就是将其从当前区域移到游戏区，结算其打出能力，然后将其销毁。打出事件和事务的完整规则详见 {ref:sec_playing_events_and_operations}。
+
+  - rule: movement_search
+    text: |-
+      对某一区域进行{term:search}，就是查看该区域，并可能将该区域中的卡牌置于一旁。搜寻的完整规则详见 {ref:sec_searching_cards}。
+
+  - rule: movement_score
+    text: |-
+      对议案进行{term:score}，就是将其从当前区域移到公司分数区。计分的完整规则详见 {ref:sec_score_scoring_steal}。
+
+  - rule: movement_steal
+    text: |-
+      对议案进行{term:steal}，就是将其从当前区域移到潜袭者分数区。窃取的完整规则详见 {ref:sec_score_scoring_steal}。
+
+  - rule: movement_swap
+    text: |-
+      对一对卡牌进行{term:swap}，就是同时交换它们的位置。互换的完整规则详见 {ref:sec_swapping_cards}。
+
+  - rule: movement_trash
+    text: |-
+      对卡牌进行{term:trash}，就是将其从当前区域移到其所有者的弃牌堆。销毁的完整规则详见 {ref:sec_trashing}。
+
+- section: sec_arranging_rearranging
+  text: 排列与重新排列卡牌
+  rules:
+  - subsection: rule_arrange_rearrange
+    text: 对2张或更多构成有序集合的卡牌进行{term:arrange}或{term:rearrange}，就是在其当前所在位置之间重新安置它们。“arrange”和“rearrange”同义。
+    rules:
+    - rule: rule_arrange_1_or_fewer
+      text: 如果有玩家被指示排列1张或更少的卡牌，则该玩家改为不执行任何操作。
+
+  - subsection: rule_arrange_ice
+    text: 当玩家排列一组已安装的防火墙时，其通过反复选择并互换2层防火墙来完成这一排列。每次互换都遵循 {ref:sec_swapping_cards} 中关于互换卡牌的全部通常规则。
+    rules:
+    - rule: rule_no_checkpoints_during_swaps
+      text: 在这一连串互换过程中不会发生检查点。若某项能力在排列防火墙过程中满足其条件，则该能力会在执行排列防火墙的那条指示结算结束时变为待定。
+  
+  - subsection: rule_arrange_secretly
+    text: 某些指示会要求玩家以“任意顺序”排列其牌组顶端或对手牌组顶端的卡牌。要结算此类指示，该玩家将相应数量的卡牌牌面朝下置于一旁，秘密按其选择的顺序排列，然后将其放回该牌组顶端。其不会声明哪些卡牌被移动到哪些位置。所有被排列的卡牌在排列后都会成为新的物件，即使返回到牌组中同一位置的卡牌也一样。
+    new:
+    rules:
+    - rule: rule_arrange_opponent
+      text: 如果排列的是对手的牌组，则在此过程中，对手不能查看那些置于一旁的卡牌。
+      new:
+    - rule: rule_arrange_and_other_effect
+      text: 如果该指示要求玩家在排列之前对牌组中的卡牌执行其他效果，则这些效果会在卡牌置于一旁时结算。执行该指示的玩家不会声明作用于哪些卡牌。另见 {ref:rule_set_aside_zone_passthrough}。
+      new:
+      examples:
+      - text: 公司打出 {card:Cultivate}，对研发中心顶端5张卡牌执行操作：销毁1张卡牌，将1张卡牌加入总部，并将剩余部分按任意顺序排列。其不会告诉潜袭者，被销毁的卡牌来自研发中心的哪个位置，也不会告诉潜袭者加入总部的那张卡牌来自研发中心的哪个位置。
+        new:
+
+- section: sec_drawing_cards
+  text: 抽牌
+  rules:
+  - rule: rule_drawing
+    text: |-
+      {term:drawing}卡牌是将卡牌从玩家的牌组移到其手牌的过程。
+
+  - subsection: rule_draw_procedure
+    text: 要抽1张或更多卡牌，玩家先将其牌组顶端相应数量的卡牌牌面朝下置于一旁。随后，这些卡牌视为已抽取，与卡牌被抽取相关的触发条件对应的能力可以作用于它们。待任何此类能力的结算完成后，将这些置于一旁的卡牌加入其所有者的手牌。
+    rules:
+    - rule: rule_draw_relevant_abilities_see_set_aside
+      text: 具有引用卡牌被抽取之触发条件的能力可以在置于一旁区看到那些已抽取的卡牌。这是 {ref:rule_set_aside_zone_passthrough} 的例外。
+    - rule: rule_draw_irrelevant_abilities_dont_see_set_aside
+      text: 未明确提及玩家已抽取卡牌的能力受 {ref:rule_set_aside_zone_passthrough} 约束，只能看到这些已抽取的卡牌直接从玩家的牌组移到其手牌。
+
+  - subsection: rule_modify_drawn_cards
+    text: 在已抽取的卡牌被置于一旁期间结算的能力，可以移动那些卡牌，或向该组卡牌加入新卡牌。
+    rules:
+    - rule: rule_card_leaves_drawn_set
+      text: 如果一张已抽取的卡牌离开放置一旁区，则其不再视为“已抽取”，并会在这些已抽取的卡牌加入手牌时留在其新位置。
+    - rule: rule_drawn_card_swapped
+      text: 如果一张已抽取的卡牌与另一张卡牌互换，则移入置于一旁区的那张卡牌此时视为“已抽取”，可以被其他能力操作，并将与其他已抽取卡牌一同加入手牌。
+      examples:
+      - text: 公司在其已激活的 {card:Daily Business Show} 和 {card:Raman Rai} 作用下进行强制抽牌。他们将 {card:Wraparound} 和 {card:Enigma} 从研发中心顶端置于一旁。在查看这些卡牌以及档案库中的卡牌后，公司使用 {card:Raman Rai} 将档案库中的 {card:Enigma} 和 {card:Tollbooth} 展示出来并互换。然后，公司使用 {card:Daily Business Show} 将 {card:Tollbooth} 加入牌组底端。最后，公司将 {card:Wraparound} 加入总部。
+
+  - subsection: rule_drawing_simultaneously
+    text: 如果某项能力指示多名玩家同时抽牌，则这些玩家应共同遵循抽牌流程。所有与这些抽牌有关的能力都会在同一个响应窗口中变为待定。
+    rules:
+    - rule: rule_optional_drawing_simultaneously
+      text: 如果某项能力让多名玩家有机会同时抽牌，则首先从主动玩家开始，依次由每位玩家表明其是否抽牌或要抽多少张。然后同时执行所声明的抽牌。
+
+  - subsection: sec_steps_of_drawing_n_cards
+    text: 抽取N张卡牌的步骤
+    toc:
+    steps:
+    rules:
+    - rule: step_draw_set_aside
+      text: 将抽牌玩家牌组顶端的N张卡牌置于一旁。此时这些卡牌视为已抽取，且其操控者可以查看它们。
+    - rule: step_draw_checkpoint
+      text: 发生一个检查点。
+    - rule: step_draw_add_to_hand
+      text: 将置于一旁的卡牌加入该玩家的手牌。
+
+- section: sec_install_uninstall
+  text: 安装与卸载卡牌
+  rules:
+  - subsection: rule_installing
+    text: |-
+      对议案、资产、防火墙、升级、硬件、程序或资源卡牌进行{term:Installing}，就是将该卡牌放入游戏区的行为。事件、事务和特性从不被安装。
+    rules:
+    - rule: rule_installed_onto_cards
+      text: 如果被安装到的卡牌，或被安装的卡牌/指示物中的任一方拥有允许这么做的能力，那么卡牌和指示物也可以被安装到其他卡牌上。这样创建的关系称为{term:hosting}，详见 {ref:sec_host}。某些能力也会在不安装的情况下附载卡牌。
+    - rule: rule_uninstalled
+      text: 当卡牌或指示物因任何原因不再处于已安装状态时，其为{term:uninstalled}。
+
+  - subsection: rule_corp_cards_default_install
+    text: 公司卡牌通常牌面朝下、未激活，并在激活前保持闲置。公司卡牌会安装到特定位置。有关服务器以及已安装公司卡牌的位置的更多信息，见 {ref:subsec_servers}。
+    rules:
+    - rule: rule_corp_install_choose_destination_server
+      text: 作为安装卡牌的一部分，公司要选择该卡牌的目的服务器。公司可以选择一个已存在的服务器作为目的地，也可以宣告该卡牌将创建一台新的远程服务器。
+    - rule: rule_agenda_asset_root_remote_server
+      text: 公司总是将议案或资产安装到远程服务器的根目录。
+    - rule: rule_upgrade_root_central_remote_server
+      text: 公司总是将升级安装到中央服务器或远程服务器的根目录。
+    - rule: rule_ice_outermost_position
+      text: 除非另有说明，公司总是将防火墙安装到保护目的服务器的最外层位置。见 {ref:rule_create_position}。
+
+  - subsection: rule_cards_in_server_cannot_be_rearranged
+    text: |-
+      除非卡牌能力指示如此做，否则服务器中的卡牌不能被重新排列。为了让双方玩家都能组织这类隐藏信息，公司必须遵守以下卡牌朝向规则：
+    rules:
+    - rule: rule_cards_in_root_vertical
+      text: 议案、资产和升级总是以纵向安装。远程服务器根目录中的升级与议案或资产处于相同位置。潜袭者不应仅凭位置就能分辨远程服务器根目录中安装的是哪种类型的卡牌。
+    - rule: rule_ice_horizontal
+      text: 防火墙总是以横向安装。
+
+  - rule: rule_runner_cards_default_install
+    text: 潜袭者卡牌通常牌面朝上且处于活动状态。潜袭者卡牌通常安装时不指定位置。
+
+  - rule: rule_install_one_at_a_time
+    text: 安装卡牌是 {ref:rule_act_on_multiple_cards} 的例外。若某个效果会安装多张卡牌，则这些卡牌会逐张选择并安装，并在选择并安装下一张之前，为每张卡牌先完成安装流程的所有步骤（{ref:sec_steps_installing}）。每次这样的安装都视为一条独立指示。见 {ref:rule_split_up_instruction}。
+    examples:
+    - text: 潜袭者使用 {card:Mass Install} 安装三张程序。潜袭者可以先安装 {card:Dhegdheer}，然后再将另外两张程序中的1张附载到 {card:Dhegdheer} 上，以降低安装费用。
+
+  - subsection: rule_install_trash_like_cards
+    text: 作为安装流程的一部分，安装议案、资产、升级、防火墙或程序的玩家有机会销毁同类卡牌。
+    rules:
+    - rule: rule_must_trash_cases_in_root_of_server
+      text: 当将议案或资产安装到远程服务器根目录，或将升级安装到任意服务器根目录时，公司可以先销毁该服务器根目录中已安装的任意数量其他卡牌。如果要安装的卡牌是资产或议案，公司必须销毁该服务器中的任何其他资产或议案。如果要安装的卡牌是区域，则公司必须销毁该服务器中的任何其他区域。
+    - rule: rule_install_trash_ice
+      text: 当安装保护某台服务器的防火墙时，公司可以先销毁已安装在保护该服务器位置上的任意数量其他防火墙。以这种方式销毁的防火墙在确定新防火墙的安装费用时不会计入。
+    - rule: rule_install_trash_programs
+      text: 当安装程序时，潜袭者可以先销毁已安装的任意数量程序。如果安装新程序会超出其记忆上限，则其必须这么做。
+
+  - rule: rule_install_corp_cards_trashed_facedown_archives
+    text: 如果公司在安装过程中销毁了任何卡牌，则被销毁的卡牌会以其在已安装时的牌面朝上或牌面朝下状态放入档案库。
+
+  - rule: rule_server_ceases_to_exist
+    text: 如果某台远程服务器最后一张保护卡牌，或该服务器根目录中的最后一张卡牌，在不通过安装另一张卡牌的过程中被卸载，则该服务器会在下一个检查点时不复存在。见 {ref:sec_checkpoints}。
+
+  - rule: rule_install_cannot_destroy_server
+    text: 公司不能通过安装卡牌来摧毁一台服务器。在公司将某张卡牌安装到以远程服务器为目的地时，在安装效果完成之前发生的任何检查点里，该服务器都不会不复存在。即使在安装过程中，远程服务器根目录中或保护该服务器的最后一张卡牌被销毁，在新卡牌安装完成后，该服务器仍视为同一台服务器。
+
+  - rule: rule_uninstall_ice_during_run
+    text: 如果一层防火墙在被接驳或遭遇时被卸载，则任何已打开的付费能力窗口都会先结算完毕。然后接驳或遭遇会结束，而不会完成该时序结构的任何后续步骤。潜袭者会越过那层被卸载防火墙原本占据的位置，且潜袭继续进行。有关潜袭中位置的规则，见 {ref:sec_position}。
+
+  - subsection: sec_install_cost
+    text: 某些类型的卡牌具有安装费用，除非某项能力指明应忽略该费用，否则必须先支付该费用，该卡牌才能成为已安装。
+    rules:
+    - rule: rule_install_cost_link
+      text: 一层防火墙的安装费用等于在支付该费用时，已经安装在目的服务器上并保护该服务器的每一层防火墙各1[credit]。硬件、程序或资源的安装费用印在卡牌上。资产、议案、升级和牌面朝下的潜袭者卡牌没有安装费用。另见 {ref:rule_install_cost_ice}。
+    - rule: rule_install_cost_x
+      text: 如果一张卡牌的安装费用为X，则在通常应支付该费用时，玩家根据卡牌文本框中的任何限定来选择X的值。此X值会一直保持，直到安装效果完成。
+    - rule: rule_install_cost_checkpoint
+      text: 支付安装费用后会发生一个检查点，如 {ref:rule_checkpoint_after_paying_cost} 所要求。
+
+  - rule: rule_x_server_only
+    text: 某些升级拥有一项能力，写明其后跟着“中央服务器”“远程服务器”或1个或多个特定中央服务器，然后是“only”。这是对该升级可占据位置的限制，始终适用，即使该升级不处于活动状态也是如此。公司不能将这类升级安装到未指定服务器的根目录，而且这类升级不能被{n}移动或{/n}互换到未指定服务器的根目录。
+
+  - subsection: rule_install_from_hidden_or_secret_zone
+    text: 如果玩家尝试安装一张牌面朝下的卡牌，或从隐藏区域或秘密区域安装一张卡牌，则在某些情况下，其必须展示该卡牌以验证此次安装是否合法。
+    rules:
+    - rule: rule_no_reveal_for_default_install
+      text: 玩家不应且无需仅为了验证已安装卡牌是否具有合适的卡牌类型而展示它。
+      examples:
+      - text: 公司控制着一台远程服务器，其根目录中有一张牌面朝下的卡牌，并使用基础行动向该根目录安装另一张卡牌。要符合规则，新卡牌必须是资产、升级或议案，因为这些是通常可以安装在远程服务器根目录中的唯一卡牌类型。此外，这两张卡牌中至少有1张必须是升级，因为一台服务器根目录中最多只能有1个资产或议案。然而，公司不会通过展示卡牌来验证这两项属性中的任何一项。
+      - text: 公司在 {card:Brân 1.0} 上结算第一条子进程。其不会展示所安装的卡牌，以验证其是否如子进程文本所述是一层防火墙，也不会展示该卡牌，以验证其是否因为作为保护服务器的卡牌而安装就必须是一层防火墙。
+    - rule: rule_no_reveal_for_server_limitation
+      text: 玩家不应且无需展示已安装的卡牌，以验证其是否满足服务器限制。
+      examples:
+      - text: 公司在一台拥有已激活 {subtype:region} 升级的服务器根目录安装1张卡牌。根据 {ref:subsec_regions}，新卡牌也不能是 {subtype:region} 升级（除非旧的那个在安装过程中被销毁）。其不会展示所安装的卡牌来验证这一点。
+    - rule: rule_reveal_for_ability_limitations
+      text: 玩家必须展示已安装的卡牌，以验证安装该卡牌的能力所施加的任何其他要求。
+      examples:
+      - text: 公司通过销毁1张印刷激活费用为5的卡牌来触发 {card:Ob Superheavy Logistics} 上的能力。其搜寻研发中心并安装 {card:Archer}，但拒绝支付 {card:Archer} 的额外激活费用。由于该能力要求所安装的卡牌印刷激活费用为4，且在整个过程中该卡牌在任何时点都对潜袭者不可见，所以公司必须展示 {card:Archer}，以验证此次安装合法。
+    - rule: rule_reveal_for_install_and_rez
+      text: 某些能力会“安装并激活”1张或更多卡牌。如果结算“安装并激活”效果的玩家被允许选择一张其无法激活的卡牌，或者所安装的卡牌具有该玩家拒绝支付的激活额外费用（见 {ref:rule_inherent_and_additional_cost}），则无论是否有其他限制适用，该玩家都必须展示所安装的卡牌。
+      examples:
+      - text: 公司打出 {card:Trust Operation}，并通过其“安装并激活”效果从档案库安装1张议案。由于议案不能被激活，公司必须展示所安装的议案。
+      - text: 公司打出 {card:Ad Blitz}。由于这张卡牌上的“安装并激活”效果写明了“if able”，所以公司不能选择安装其无法激活的卡牌，也不能在有额外费用时拒绝支付这些额外费用。
+
+  - rule: rule_install_to_invalid_destination
+    text: 某些能力会将卡牌安装到特定位置。如果某项能力指定的目的地无效，或无法识别，则无法进行安装。
+    examples:
+    - text: 公司使用 {card:Nanisivik Grid} 来结算 {card:Brân 1.0} 在档案库中的复制体上的第一条子进程。该子进程试图从 {card:Brân 1.0} “直接向内”安装防火墙，但这张 {card:Brân 1.0} 的复制体并未保护服务器，因此不存在可用于判断“直接向内”的位置。没有合法方式按指示安装卡牌，因此该子进程不会产生效果。
+
+  - subsection: rule_install_and_rez
+    text: 某些能力会指示公司“安装并激活”一张卡牌。要结算这一指示，公司先正常安装该卡牌。待安装完成后，公司再将该卡牌激活。另见 {ref:rule_reveal_for_install_and_rez}。
+    rules:
+    - rule: rule_install_and_rez_one_at_a_time
+      text: 某些“安装并激活”能力会影响不止1张卡牌。在这种情况下，每张卡牌都会在安装后立即被激活，作为同一条指示的一部分，并且在下一次安装开始之前完成。另见 {ref:rule_install_one_at_a_time}。
+
+  - subsection: sec_steps_installing
+    steps:
+    toc:
+    text: 安装卡牌的步骤
+    rules:
+    - rule: rule_steps_installing_place
+      text: 将卡牌放入游戏区，保持其在安装完成后应有的牌面朝上或牌面朝下状态。它此时尚未安装，也尚未成为活动的。
+    - rule: rule_steps_installing_destination
+      text: 选择并声明适合将要安装的卡牌的安装目的地，包括任何附载关系（如适用）。
+    - rule: rule_steps_installing_trash_like_cards
+      text: 如 {ref:rule_install_trash_like_cards} 所述，销毁同类卡牌。
+    - rule: rule_steps_installing_pay_install_cost
+      text: 支付适当的安装费用。（随后会发生费用支付检查点。）
+    - rule: rule_steps_installing_become_installed
+      text: 如果该卡牌将成为一台新远程服务器根目录中，或保护该服务器的第一张卡牌，则创建该服务器。将该卡牌转移到所选择的安装位置。其成为已安装。如果该卡牌牌面朝上，则其成为活动的。
+    - rule: rule_steps_installing_installed_condition
+      text: 任何适用于此次安装的“当安装时……”能力都满足其触发条件，包括已安装卡牌上的能力，然后安装效果结算完毕。
+
+- section: sec_playing_events_and_operations
+  text: 打出事件与事务
+  rules:
+  - rule: rule_playing
+    text: |-
+      {term:Playing}事件或事务是一个过程：将该卡牌放入游戏区，结算其打出能力，然后将该卡牌销毁。议案、资产、防火墙、升级、硬件、程序、资源和特性从不被打出。
+
+  - subsection: rule_playing_play_cost
+    text: 通常，打出事务或事件需要支付其打出费用。发起打出卡牌的能力可以忽略打出费用，也可以要求支付打出费用。
+    rules:
+    - rule: rule_play_cost_x
+      text: 如果一张卡牌的打出费用为X，则在支付打出费用时，玩家根据卡牌文本框中的任何限定来选择X的值。在结算该事件或事务期间，此X值保持不变。
+    - rule: rule_play_cost_checkpoint
+      text: 支付打出费用后会发生一个检查点，如 {ref:rule_checkpoint_after_paying_cost} 所要求。
+
+  - rule: rule_playing_one_at_a_time
+    text: 打出卡牌是 {ref:rule_act_on_multiple_cards} 的例外。若某个效果会打出多张卡牌，则这些卡牌会逐张选择并打出，并在选择并打出下一张之前，先为每张卡牌依序完成打出流程（{ref:sec_steps_playing}）的所有步骤。每次这样的打出都视为一条独立指示。见 {ref:rule_split_up_instruction}。
+    examples:
+    - text: 公司使用 {card:Subcontract} 打出 {card:Hedge Fund} 和另一张事务。公司可以使用从 {card:Hedge Fund} 获得的信用点支付第二张事务的费用。
+  - rule: rule_playing_lingering_effects
+    text: 事务和事件可以创造持续效果。一旦这些效果存在，其就独立于来源事务或事件，而该卡牌被视为已完全结算，准备被销毁。见 {ref:sec_lingering_effects}。
+    examples:
+    - text: |-
+        {card:Test Run} 会创造一个延迟条件能力，它将在本回合结束时结算，但 {card:Test Run} 本身在完成安装一个程序后即被视为已完全结算，并会被销毁。
+  - rule: rule_playing_timing_structure
+    text: 发起时序的事务或事件在该时序持续期间始终留在游戏区中。直到该时序完成，并结算该卡牌上在时序结束时满足触发条件的任何能力后，才视为其已完全结算。
+
+  - subsection: rule_play_no_trash
+    text: 在某些情况下，打出的卡牌在结算后不会被销毁。
+    rules:
+    - rule: rule_play_no_trash_left_play_area
+      text: 如果在到达 {ref:rule_steps_playing_trash_played_card} 时，该打出的卡牌已不在游戏区中，则不销毁它。
+      examples:
+      - text: 潜袭者打出 {card:Ashen Epilogue} 并结算其打出能力。其最后一个能力将其移出游戏。
+    - rule: rule_play_no_trash_hosted
+      text: 如果该打出的卡牌在结算其打出能力时已被转换为状态指示物，或以其他方式附载于一张卡牌上，则不销毁它。另见 {ref:rule_card_to_counter}。
+    - rule: rule_play_not_trashed_until
+      text: 如果该打出的卡牌拥有一项能力，说明其直到某个特定效果发生前都不会被销毁，则改为创造一个持续效果，其持续时间会在该所指示的效果发生时结束。另见 {ref:sec_lingering_effects}。
+    - rule: rule_play_no_trash_if_play_effect_will_rfg
+      text: 如果某项打出事件或事务的能力还包含嵌套条件能力“在其结算后，将其移出游戏。”，则该事件或事务不会被销毁。该卡牌会留在游戏区中，直到那项条件能力将其移出游戏。
+
+  
+  - subsection: sec_steps_playing
+    steps:
+    toc:
+    text: 打出事件或事务的步骤
+    rules:
+    - rule: rule_steps_playing_place
+      text: 将卡牌牌面朝上放入游戏区。它尚未安装，也尚未成为活动的。
+    - rule: rule_steps_playing_play_cost
+      text: 支付打出费用。（随后会发生费用支付检查点。）
+    - rule: rule_steps_playing_active
+      text: 该卡牌成为活动的。
+    - rule: rule_steps_playing_played_condition
+      text: 与打出事件或事务相关的条件得到满足。
+    - rule: rule_steps_playing_played_checkpoint
+      text: 发生一个检查点。
+    - rule: rule_steps_playing_resolve_play_abilities
+      text: 结算该卡牌的打出能力。
+    - rule: rule_steps_playing_trash_played_card
+      text: 若适用，则销毁该卡牌。
+    - rule: rule_steps_playing_after_resolve_condition
+      text: 与结算后或完成结算事件或事务相关的条件得到满足。
+    - rule: rule_steps_playing_complete
+      text: 打出效果结算完毕。
+
+- section: sec_searching_cards
+  text: 搜寻卡牌
+  rules:
+  - subsection: rule_search
+    text: 如果有玩家被指示在某个区域搜寻1张或多张卡牌，则其查看该区域中的所有卡牌，以寻找符合搜寻条件的卡牌。
+    rules:
+    - rule: rule_search_hidden_secret_zone
+      text: 如果有玩家被指示搜寻一个隐藏区域或秘密区域，则在搜寻完成前，其可暂时查看那些卡牌，只要其按照需要向另一名玩家维持该区域的隐藏或秘密状态即可。
+
+  - subsection: rule_find
+    text: 在搜寻过程中，其可以通过从被搜寻的区域取出并牌面朝下置于一旁，找到符合搜寻条件的适当数量卡牌。
+    rules:
+    - rule: rule_valid_search_target_criteria
+      text: 通过搜寻找到的卡牌必须符合该搜寻效果指定的条件。
+    - rule: rule_valid_search_target_install_play
+      text: 当搜寻后接着是引用所找到卡牌的安装指示时，玩家必须能够安装其找到的卡牌。若搜寻后接着是打出指示，也同样如此。
+      examples:
+      - text: 潜袭者使用 {card:Artist Colony} 搜寻1张卡牌并安装它。其不能通过这次搜寻找到1张事件，因为事件永远不能被安装。其也不能找到其无力安装的程序、硬件或资源。
+      - text: 潜袭者使用 {card:Self-modifying Code} 搜寻1个程序并安装它。其在使用 {card:Self-modifying Code} 的能力后已没有信用点，但其有1张已安装的 {card:Patchwork}。其可以搜寻 {card:Imp} 并安装它，但其必须使用 {card:Patchwork}，通过销毁其操控器中的1张卡牌来安装 {card:Imp}。如果潜袭者的操控器中没有卡牌，则其不能找到并安装 {card:Imp}。
+      - text: 公司在拥有0点信用点时，使用 {card:Tucana} 搜寻 {card:Pharos}。其可以找到并安装 {card:Pharos}，即使其无力支付其激活费用。公司必须展示 {card:Pharos}，以表明其不能被激活。见 {ref:rule_reveal_for_install_and_rez}。
+    - rule: rule_reveal_for_search
+      text: 除非发起搜寻的能力指示如此做，否则执行搜寻的玩家无需展示任何找到的卡牌。在发起搜寻的能力恢复结算前，找到的卡牌不会被展示，前提是任何必要的洗混都已完成。
+    - rule: rule_search_multiple_cards
+      text: 如果玩家在没有指定条件的情况下搜寻固定数量的卡牌，则其必须从该区域找到那么多张卡牌；如果数量不足，则找到该区域中的所有卡牌。
+    - rule: rule_fail_to_find
+      text: 如果玩家在牌组中搜寻符合指定条件的1张或多张卡牌，则其可以选择找不到任何东西，即使该牌组中存在符合条件的1张或多张卡牌。
+
+  - rule: rule_shuffle_deck_after_search
+    text: 一旦对牌组的搜寻完成，无论是否找到卡牌，在继续结算发起搜寻的能力剩余效果之前，都必须立即将该牌组洗混。洗混优先于对所找到卡牌应执行的任何操作，也优先于因搜寻、找到或剩余能力而产生的任何连锁反应。
+    examples:
+    - text: 公司在打出 {card:Near-Earth Hub} 时，使用 {card:Tech Startup} 上的能力搜寻其牌组中的1个资产并将其安装。找到该资产后，必须先立即将研发中心洗混，然后公司才能安装该资产或触发 {card:Near-Earth Hub} 的能力。
+  - rule: rule_continue_after_search
+    text: 一旦搜寻完成，且任何必要的洗混都已发生，发起搜寻的能力就会恢复结算。如果搜寻期间没有找到卡牌，那么任何引用所找到卡牌的效果都无法结算，但剩余效果能结算多少就结算多少。
+  - rule: rule_search_condition
+    text: 如果某项条件能力的触发条件涉及搜寻，则该能力会在搜寻完成且任何洗混完成后、但在对所找到卡牌采取行动之前变为待定。 
+
+- section: sec_swapping_cards
+  text: 互换卡牌
+  rules:
+  - rule: rule_swap
+    text: 对两张卡牌进行{term:swap}，就是交换它们的位置。
+  - rule: rule_swap_only_to_valid_location
+    text: 一张卡牌只能被互换到其通常允许占据的位置。当玩家结算一项互换效果时，其必须遵守会影响该卡牌最终目的地的任何适用游戏规则或卡牌能力。如果互换效果结算时不存在合法的交换对象，则该效果不产生任何效果。
+    examples:
+    - text: 当 {card:Metamorph} 上的子进程结算时，公司不能选择互换1张议案和1个升级，使得该议案最终与1个资产处于同一台远程服务器中。
+  - subsection: rule_swap_installed_cards
+    text: 如果互换的是两张已安装卡牌，则每张卡牌会同时移动到对方的位置。两张卡牌在互换过程中始终保持已安装状态，并且不会以其他方式影响游戏状态的其他部分。
+    rules:
+    - rule: rule_swap_installed_cards_preserves_hosting
+      text: 互换已安装卡牌时，任何附载于被互换的任一卡牌上的卡牌或指示物都保持其附载关系。
+      examples:
+      - text: 公司使用 {card:Thimblerig} 的能力将其与附载了 {card:Botulus} 的 {card:Palisade} 互换。{card:Botulus} 在整个过程中始终附载于 {card:Palisade}。
+
+  - subsection: rule_swap_simultaneous
+    text: 如果互换的是位于不同区域的两张卡牌，则每张卡牌会同时移动到对方所在的区域。
+    rules:
+    - rule: rule_state_of_swap_into_zone
+      text: 被互换的每张卡牌都会以一张卡牌通常进入该区域时的状态进入其目的地区域。互换进入档案库的卡牌默认牌面朝下，除非在互换时其对潜袭者可见；互换进入游戏区的公司卡牌则默认未激活，等等。
+    - rule: rule_swap_become_installed
+      text: |-
+        如果待互换的两张卡牌中只有1张已安装，则其在移向目的地区域时变为已卸载。附载其上的任何卡牌或指示物都会被销毁。另一张卡牌则在第一张卡牌原本占据的精确位置上成为已安装，保留任何具体位置（例如服务器、防火墙位置或附载关系）。此时不遵循卡牌安装的正常流程，因此不会支付安装费用，也不能销毁同类卡牌。互换发生后的下一个检查点中，分别满足与这两张卡牌的卸载或安装相关的触发条件。
+      examples:
+      - text: |-
+          公司正在打出 {card:A Teia: IP Recovery}，且有 {card:Tatu-Bola} 保护一台远程服务器。潜袭者对那台服务器发起潜袭并通过 {card:Tatu-Bola}。公司将它与总部的一层防火墙互换。互换后，公司可以使用 {card:A Teia} 的能力，在另一台远程服务器根目录安装1张卡牌。然后其继续结算 {card:Tatu-Bola} 能力的下一条指示，获得4[c]。
+    - rule: rule_swap_score_areas
+      text: 如果互换的是位于玩家分数区中的两张议案，则任何附载的卡牌或指示物都会继续附载于各自的附载议案上。
+    - rule: rule_swap_to_set_aside
+      text: 如果一张卡牌与一张置于一旁的卡牌互换，那么移入置于一旁区的卡牌会成为由把另一张卡牌置于一旁的那项能力所作用的一组卡牌的一部分，而移出置于一旁区的卡牌则不再受该能力作用。有关这种情况的具体例子，见 {ref:rule_drawn_card_swapped}；另见 {ref:rule_set_aside_zone_passthrough}，了解作用于置于一旁区卡牌的效果。

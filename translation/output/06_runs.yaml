@@ -1,0 +1,421 @@
+chapter: chpt_runs
+text: 潜袭
+sections:
+- section: sec_run_general
+  text: 通用
+  rules:
+  - rule: rule_run
+    text: |-
+      一次{term:run}是潜袭者对服务器的攻击。执行一次潜袭的流程中有6个阶段，详见 {ref/through:sec_run_initiation,sec_run_ends_phase}。一次潜袭总是从发起阶段开始。{ref:Sec_steps_of_a_run} 列出了每个阶段中执行的完整步骤，并应与讨论这些阶段的各章节一并参照。
+  - subsection: rule_attacked_server
+    text: 被攻击的服务器是潜袭者试图抵达的服务器，通常是为了侵入该服务器。
+    rules:
+    - rule: rule_announce_attacked_server
+      text: 潜袭者在潜袭的发起阶段宣告被攻击的服务器。
+    - rule: rule_change_attacked_server
+      text: 卡牌能力有时会在潜袭中改变被攻击的服务器。这样不会终止本次潜袭，但可能会影响某些卡牌能力或效果是否适用。
+    - rule: rule_change_runner_position
+      text: 如果某个能力改变了潜袭者的位置，被攻击的服务器和本次潜袭当前的时序步骤也可能随之改变。见 {ref:rule_move_runner_to_position}。
+    - rule: rule_change_attacked_server_directly
+      text: 少数能力会直接改变被攻击的服务器，而不提及潜袭者的位置。这些能力不会改变本次潜袭当前的时序步骤。
+      examples:
+      - text: |-
+          {card:测试暗门}的能力将被攻击的服务器从档案库改为总部。潜袭者在结算此能力后，无需再遭遇保护总部的防火墙。
+  - subsection: rule_modify_run_steps
+    text: 许多能力会修改结算一次潜袭时所采用的步骤顺序。这类能力可以指示玩家跳过步骤或阶段、以其他效果代替某一步骤、从当前时序点直接转到新阶段，或对本节所说明的流程作出其他更改。请遵守 {ref:sec_golden_rules} 中的黄金法则。
+    rules:
+    - rule: rule_directly_approach_encounter
+      text: 某些能力会指示潜袭者在移动到某层防火墙的位置时，接驳或遭遇那层防火墙。见 {ref:rule_move_runner_to_position}。
+    - rule: rule_approach_directly
+      text: 一张卡牌，{card:代码复制器}，会指示潜袭者在不先将其移动到新位置的情况下，接驳其当前位置上的防火墙。此效果会将本次潜袭当前的时序步骤改为 {ref:rule_sec_run_approach_ice_phase}，即接驳防火墙阶段。
+    - rule: rule_forced_encounter_link
+      text: 如果某个能力在不先改变潜袭者位置的情况下指示其遭遇一层防火墙，那么它不会改变本次潜袭当前的时序点、被攻击的服务器，也不会改变潜袭者的位置。该能力的效果是独立于本次潜袭当前状态，结算一个遭遇防火墙阶段。见 {ref:subsec_forced_encounters}。
+    - rule: rule_move_new_run_phase
+      text: 当本次潜袭当前的时序步骤被移至潜袭的另一个阶段时，除非有指示终止本次潜袭（见下方 {ref:rule_end_the_run}），否则先前正在进行的阶段中的剩余步骤都不会再继续结算。如果有一个付费能力窗口正在打开，则玩家正常完成该窗口。然后当前阶段结束，并发生一个检查点。最后，游戏进入新阶段。
+    - rule: rule_run_phase_after
+      text: 如果某个条件提及在接驳某层防火墙“之后”遭遇该层防火墙，或在遭遇某层防火墙“之后”让过该层防火墙，那么该条件只有在按潜袭的标准进程直接连续发生所指明的阶段或步骤时才算满足。
+      examples:
+      - text: 潜袭者使用 {card:反写诗器} 破解了一层正在保护档案库的 {card:蜃楼} 上的子进程。当遭遇结束时，{card:蜃楼} 的能力创建了一个替代效应，使潜袭者转移到档案库的最外层位置，而不是让过 {card:蜃楼}。由于该防火墙并未被让过，{card:反写诗器} 的能力不满足其触发条件。之后，潜袭者再次遭遇同一张 {card:蜃楼}，并没有破解其子进程。当这次遭遇结束时，潜袭者让过 {card:蜃楼}。尽管潜袭者在本次潜袭较早时曾使用 {card:反写诗器} 在一次遭遇中完全破解过 {card:蜃楼}，但由于潜袭者并不是在相关遭遇之后让过它，所以当潜袭者让过 {card:蜃楼} 时，{card:反写诗器} 的触发条件并未满足。
+    - rule: rule_pass_after_breaking
+      new:
+      text: 如果某个条件提及在“完全破解”一层防火墙“之后”让过它，那么该条件只有在潜袭者在一次遭遇之后让过那层防火墙时才算满足（如 {ref:rule_run_phase_after} 所定义），且前提是潜袭者在该次遭遇中确实完全破解了那层防火墙。见 {ref:subsec_fully_break}。
+  - subsection: rule_end_the_run
+    text: 终止本次潜袭就是阻止潜袭者继续朝服务器前进。当某个效果终止本次潜袭时，当前潜袭阶段会结束，但不会继续结算其剩余步骤，也不会先完成已打开的优先权窗口。游戏会立即从当前时序点转到 {ref:rule_sec_run_run_ends_phase}，即潜袭结束阶段。
+    rules:
+    - rule: rule_end_run_access_or_breach_during_run
+      text: 如果本次潜袭正在进行中，则一条终止本次潜袭的指示也会终止正在进行的任何侵入和/或读取。
+      new:
+    - rule: rule_end_encounter_outside_run
+      text: 如果一条终止本次潜袭的指示结算时没有潜袭正在进行，但有一次遭遇正在进行中，则该次遭遇会在不再结算其任何后续步骤的情况下结束。以 {ref:rule_run_ends_process_priority_windows} 所述的相同方式处理任何已打开的优先权窗口，但不要结算潜袭结束阶段的任何其他步骤。该次遭遇期间发起的任何侵入和/或读取也会结束，但在遭遇开始时就已经在进行中的侵入和/或读取不会被终止。
+      new:
+      examples:
+      - text: 潜袭者使用 {card:共济} 在没有潜袭进行中的情况下读取总部中的一张卡牌。他们读取了 {card:偷袭！}，并被迫遭遇 {card:随机卡池}。潜袭者既不选择破解任何子进程，也不花费信用点来支付 {card:随机卡池} 的第一条子进程，因此那条子进程试图终止本次潜袭。虽然没有可终止的潜袭，但该效果仍然会结束这次遭遇。{card:随机卡池} 上的第二条子进程将不会结算。
+        new:
+    - rule: rule_end_run_no_run_or_encounter
+      text: 如果一条终止本次潜袭的指示在既没有潜袭也没有遭遇进行中时结算，则该效果没有任何作用。
+      new:
+      examples:
+      - text: 公司打出 {card:释放}，并结算 {card:利西亚复合军火} 上的最后一条子进程。公司会获得1[c]，但除此之外没有进一步效果。
+        new:
+  - subsection: rule_jacking_out
+    text: |-
+      {term:Jacking out} 是潜袭者主动终止一次潜袭的过程。退出潜袭遵循 {ref:rule_end_the_run} 所述的常规终止本次潜袭流程，但某些卡牌能力会根据潜袭者是否选择以退出潜袭的方式终止本次潜袭而有所不同。
+    rules:
+    - rule: rule_jack_out_after_passing_ice
+      text: 潜袭者在让过一层防火墙后拥有退出潜袭的机会。
+    - rule: rule_jack_out_before_approach
+      text: 如果没有防火墙保护该服务器，潜袭者在接驳该服务器之前拥有退出潜袭的机会。
+
+- section: sec_position
+  text: 位置
+  rules:
+  - subsection: rule_position
+    text: 每台服务器都有一串 {term:positions}，用于为保护该服务器的防火墙排序。保护某服务器的一层防火墙在任一时刻总是恰好占据该服务器序列中的1个位置。
+    rules:
+    - rule: rule_hosted_ice_has_no_position
+      text: 附载在另一张卡牌上的防火墙不算保护服务器，因此不占据位置，无论该防火墙是否已安装。
+  - subsection: rule_create_position
+    text: 当一层防火墙被安装以保护某服务器，或者一层已安装的防火墙被移动时，就会为那层防火墙创建一个新位置。对于正在安装的防火墙，当公司为该防火墙宣告安装目的地时创建该位置（{ref:rule_steps_installing_destination}），并且该防火墙在成为已安装状态时占据该位置（{ref:rule_steps_installing_become_installed}）。对于正在移动的已安装防火墙，则在移动发生时创建该位置，并且那层防火墙会立刻占据该位置。
+    rules:
+    - rule: rule_create_position_outermost
+      text: 如果一层防火墙被安装到或移动到保护某服务器的最外层位置，那么新位置会位于当前最外层已存在位置之外。如果一条安装防火墙的指示没有明确指定其他位置，则该防火墙安装在最外层位置。
+    - rule: rule_create_position_innermost
+      text: 如果一层防火墙被安装到或移动到保护某服务器的最内层位置，那么新位置会位于当前最内层已存在位置之内。
+    - rule: rule_create_position_directly_inward
+      text: 如果一层防火墙被安装在另一层防火墙“正内侧”，那么新位置会位于那层防火墙位置的内侧，并且位于若有的话，下一层已存在的内侧位置的外侧。
+    - rule: rule_create_position_any_position
+      text: 如果一层防火墙被安装在“任意位置”，那么新位置可以由公司选择创建在所有已存在位置之外、所有已存在位置之内，或任意两个相邻已存在位置之间。
+    - rule: rule_create_position_mutate
+      text: 一张卡牌，{card:变异}，拥有一项能力，会将一层防火墙安装在之前被销毁的某层防火墙的“相同位置”。这与 {ref:rule_count_positions} 中所述的“相同位置”用法不同。对于这次安装，该防火墙被安装在被销毁防火墙原本所保护的同一台服务器上，并且新位置会在该服务器的位置序列中占据与被销毁防火墙原来所处位置相同的地方。
+    - rule: rule_create_position_swap
+      text: 如果一层防火墙与一层保护服务器的防火墙互换，则不会创建新位置。第一层防火墙会占据第二层防火墙先前所占据的位置（如果第一层防火墙本来也是在保护服务器，则反之亦然）。
+  - rule: rule_count_positions
+    text: 某些能力会提到保护不同服务器的防火墙处于“相同位置”。如果两层防火墙分别从各自的位置向内数，经过的位置数量相同，那么它们就占据“相同位置”。
+    examples:
+    - text: 某台服务器由2层防火墙保护，并且一张 {card:车} 的复制品附载在这2层防火墙中最外层的那一层上。{card:车} 的能力可以将其移动到任意服务器上保护该服务器的第2层防火墙的位置，计算方式是从最内层防火墙开始向外数。{card:车} 不能被移动到一台仅由1层防火墙保护的服务器上。
+    - text: 潜袭者让过一层位于服务器最内层位置的防火墙，并使用 {card:滑流} 移动到另一台服务器。由于位置是从最内层开始比较的，因此潜袭者能够接驳保护任意服务器的最内层防火墙，而不论那层防火墙外侧还有多少其他防火墙。
+  - rule: rule_destroy_position
+    text: 如果一层防火墙离开其位置，且不是通过与另一层防火墙互换而离开，那么其原位置就不再存在。这会在下一个检查点的 {ref:step_checkpoint_vacant_position} 发生，除非潜袭者就在该位置；如果潜袭者就在该位置，那么该位置会继续存在，直到潜袭者移动到另一个位置，或者不再拥有位置。
+  - subsection: rule_position_runner
+    text: 在潜袭中，潜袭者占据被攻击的服务器的位置。
+    rules:
+    - rule: rule_position_initial
+      text: 在发起阶段的 {ref:step_runner_position}，潜袭者进入保护被攻击服务器的最外层位置。
+    - rule: rule_position_progression
+      text: 潜袭者依序通过被攻击服务器的位置。在潜袭者占据某个位置时，其会接驳、遭遇（如果该防火墙已激活），并让过该位置上的防火墙，然后继续朝内移动到下一个位置，直到其在最内层位置完成这一过程，或者本次潜袭被终止。
+    - rule: rule_no_position_after_innermost_ice
+      text: 一旦潜袭者离开保护某服务器的最内层位置，其便不再拥有位置。这发生在移动阶段的 {ref:step_move_position}。不过，能力仍可在该阶段稍后将潜袭者移动到某个位置。
+    - rule: rule_no_position_after_approach_server
+      text: 在成功阶段和潜袭结束阶段，潜袭者没有位置，也不能再被移动到某个位置。
+      examples:
+      - text: 公司使用 {card:偷袭！}，迫使潜袭者在侵入服务器过程中途遭遇 {card:信元传送门}。由于本次潜袭已经成功，结算 {card:信元传送门} 的子进程除了关闭 {card:信元传送门} 之外不会产生任何有意义的效果。
+    - rule: rule_no_position_outside_run
+      text: 潜袭者在不进行潜袭时没有位置，也不会将上一次潜袭中的位置保留到下一次潜袭。
+  - subsection: rule_ice_change_can_affect_position
+    text: 潜袭者当前位置是位置序列中的一个具体元素，而不是该序列中的索引。增加或移除被攻击服务器的其他位置，不会影响潜袭者的位置。
+    rules:
+    - rule: rule_ice_change_outward
+      text: 如果在潜袭者当前位置的外侧向被攻击服务器添加一个位置，潜袭者通常无需接驳或遭遇新出现的防火墙就能抵达服务器。
+      examples:
+      - text: 潜袭者潜袭一台由2层防火墙保护的服务器。潜袭者接驳最外层防火墙，而公司激活 {card:制图师}。在随后的遭遇中，公司结算 {card:制图师} 的第二条子进程，在被攻击的服务器上安装一层新的防火墙，并在此过程中销毁另外两层防火墙。新防火墙被安装在保护该服务器的最外层位置，这一位置位于潜袭者当前位置的外侧，因此潜袭者不会接驳那层新防火墙。即使新防火墙与服务器之间的位置数少于此前潜袭者与服务器之间的位置数，这一点依然成立。
+    - rule: rule_ice_change_inward
+      text: 如果在潜袭者当前位置的内侧向被攻击服务器添加或移除一个位置，则潜袭者需要接驳和/或遭遇的防火墙会相应改变。
+      examples:
+      - text: 潜袭者遭遇 {card:布兰1.0}，并破解了其最后两条子进程。{card:布兰1.0} 的第一条子进程结算，公司在该服务器保护位置的下一个内侧位置安装了一层新的防火墙。由于该位置位于潜袭者当前位置的内侧，潜袭者在本次潜袭稍后还必须接驳那层新防火墙。
+  - subsection: rule_ice_change_current_position
+    text: 对潜袭者当前位置上的防火墙所做的更改，会影响潜袭的推进，但其在遭遇期间与遭遇之外的影响方式不同。
+    rules:
+    - rule: rule_ice_change_approach_uninstall_move
+      text: 如果一层正在被接驳的防火墙被卸载，或者被移动到另一个位置（保护这台服务器或另一台服务器），那么接驳就会结束，潜袭会继续进入移动阶段。
+    - rule: rule_ice_change_approach_swap
+      text: 如果一层正在被接驳的防火墙与另一层防火墙互换，那么潜袭者仍留在当前位置，且潜袭仍处于接驳防火墙阶段。潜袭者现在正在接驳占据该位置的新防火墙。与正在被接驳的防火墙相关的触发条件，对新防火墙不成立。
+    - rule: rule_ice_change_encounter_uninstall_derez
+      text: 如果一层正在被遭遇的防火墙被卸载或关闭，那么遭遇阶段结束，潜袭会继续进入移动阶段。
+    - rule: rule_ice_change_encounter_move_swap
+      text: 如果一层正在被遭遇的防火墙移动到另一个位置，或者与另一个位置上已安装的防火墙互换，那么潜袭者仍与该被遭遇的防火墙一起继续，并从那层防火墙的新位置继续本次潜袭。
+      examples:
+      - text: 潜袭者将 {card:牛蛙} 作为保护远程服务器的最内层防火墙时遭遇它。{card:牛蛙} 的子进程结算，并将其移动到保护档案库的最外层防火墙位置。潜袭者此时正在档案库上进行潜袭，并从 {card:牛蛙} 的新位置继续本次潜袭。
+    - rule: rule_ice_change_during_movement
+      text: 如果在发起阶段或移动阶段中，潜袭者当前位置上的防火墙被卸载、关闭、移动或互换，则潜袭者不会被移动，且本次潜袭当前的时序步骤不会改变。
+      examples:
+      - text: 一次潜袭开始后，在潜袭者接驳被攻击服务器的最外层防火墙之前，公司使用 {card:八木宇田计划} 将那层防火墙与另一层防火墙互换。潜袭者将接驳新的防火墙。
+      - text: 潜袭者让过一层防火墙后，在 {ref:step_before_jack_out_paw}，公司使用 {card:八木宇田计划} 将那层防火墙与另一层防火墙互换。潜袭者仍然已经让过其位置（但并未让过现在占据该位置的新防火墙），并会在 {ref:step_move_position} 继续移动到下一个位置。他们不会接驳或遭遇那层新防火墙。
+  - subsection: rule_move_runner_to_position
+    text: 在潜袭中，能力可以直接将潜袭者移动到某个位置。
+    rules:
+    - rule: rule_move_to_piece_of_ice
+      text: 如果某个能力指示潜袭者移动到另一位置上的一层防火墙，那么潜袭者的位置就变为该防火墙对应的位置，而那层防火墙所保护的服务器就成为被攻击的服务器。本次潜袭当前的时序步骤会根据潜袭者是被指示接驳还是遭遇该防火墙，而变为 {ref:rule_sec_run_approach_ice_phase} 接驳防火墙阶段或 {ref:rule_sec_run_encounter_ice_phase} 遭遇防火墙阶段。
+    - rule: rule_move_to_specific_position
+      text: 如果某个能力指示潜袭者移动到某台服务器的“最外层位置”，那么该服务器就成为被攻击的服务器。如果那台服务器有任何防火墙保护，潜袭者的位置就变为最外层那层防火墙的位置，且本次潜袭当前的时序步骤会变为 {ref:rule_sec_run_approach_ice_phase} 接驳防火墙阶段。如果那台服务器没有防火墙，潜袭者就不再拥有位置，且本次潜袭当前的时序步骤会变为 {ref:rule_sec_run_movement_phase} 移动阶段。
+    - rule: rule_ineffective_move
+      text: 如果某个能力在成功阶段、潜袭结束阶段，或在没有潜袭进行中时，指示潜袭者移动到某个位置，那么潜袭者不做任何事。见 {ref:rule_no_position_after_approach_server}。
+    - rule: rule_move_to_current_ice
+      text: 如果某个能力指示潜袭者移动到并接驳其已经正在接驳的位置，那么潜袭者不做任何事。
+
+- section: sec_run_initiation
+  text: 发起
+  rules:
+  - rule: rule_run_initiation_phase
+    text: |-
+      {term:initiation phase} 设定本次潜袭的参数并开始潜袭。
+  - subsection: rule_start_initiation_phase
+    text: 在发起阶段开始时，潜袭者宣告一台服务器为被攻击的服务器。
+    rules:
+    - rule: rule_cannot_run_abilities
+      text: 某些能力会说明潜袭者在特定条件下“不能潜袭”或“不能在……上发起潜袭”。这些效果指的就是在发起阶段宣告被攻击服务器这一行为。
+      examples:
+      - text: |-
+          {card:隔绝网络} 的部分文本写道：“潜袭者不能在这台服务器上发起潜袭。”这只会禁止潜袭者在潜袭开始时将这台特定远程服务器宣告为被攻击服务器。如果在潜袭进行中有能力改变了被攻击服务器，{card:隔绝网络} 不会干扰该能力。
+    - rule: rule_additional_cost_to_run
+      text: 某些能力会对潜袭施加额外费用，或者对特定服务器施加额外费用。潜袭某台服务器时产生的任何费用，都必须在将该服务器宣告为被攻击服务器时支付。
+  - rule: rule_initiation_bad_publicity
+    text: 在被攻击的服务器被宣告之后，{n}信用点会被加入潜袭者的负面声誉池。{/n} 见 {ref:sec_bad_publicity} 以了解负面声誉的相关说明。
+  - rule: rule_abilities_during_a_run
+    text: 某些能力会寻找在“潜袭期间”发生的特定条件，或者限制其只能在“潜袭期间”使用。就能力而言，潜袭只有在被攻击的服务器被宣告并且任何费用都已支付之后，才算正式开始。
+    examples:
+    - text: 潜袭者对一台已激活 {card:海因莱因网阵} 的服务器发起潜袭，而公司场上还有 {card:强化版登录协议}。由于潜袭者为了发起潜袭而必须花费的那1个额外时点是用于发起潜袭，而不是在潜袭期间花费的，所以他们不会因 {card:海因莱因网阵} 的能力而失去任何信用点。
+  - rule: rule_run_initiation_phase_next_phase
+    text: 当发起阶段完成时，本次潜袭会转到接驳防火墙阶段（{ref:sec_approach_ice_phase}）或移动阶段（{ref:sec_movement_phase}）。如果被攻击的服务器有防火墙保护，则潜袭者的位置变为最外层那层防火墙，并继续进入接驳防火墙阶段。如果该服务器没有防火墙保护，则本次潜袭会直接进入移动阶段。
+
+- section: sec_approach_ice_phase
+  text: 接驳防火墙
+  rules:
+  - rule: rule_approach_ice_phase
+    text: |-
+      {term:approach ice phase} 给予公司在潜袭者当前位置激活防火墙的机会。
+  - rule: rule_approach_condition
+    text: 就满足触发条件而言，潜袭者接驳一层防火墙，等同于在那层防火墙的位置开始接驳防火墙阶段。具有此触发条件的能力受 {ref:rule_reaction_window_closing_timing_structure} 约束。
+  - rule: rule_rez_ice_restriction
+    text: 接驳防火墙阶段中 {ref:step_approach_paw} 的付费能力窗口，是公司通常唯一可以激活防火墙的时机。在这个窗口中，公司只获得激活被接驳防火墙的能力，而不能激活其他防火墙。
+  - rule: rule_approach_ice_next_phase
+    text: 当接驳防火墙阶段完成时，本次潜袭会转到遭遇防火墙阶段（{ref:sec_encounter_ice_phase}）或移动阶段（{ref:sec_movement_phase}）。如果被接驳的防火墙已激活，则潜袭者接下来会遭遇它。如果被接驳的防火墙未激活，或者该位置上已不再有防火墙，则本次潜袭会直接进入移动阶段。
+
+- section: sec_encounter_ice_phase
+  text: 遭遇防火墙
+  rules:
+  - rule: rule_encounter_ice_phase
+    text: |-
+      {term:encounter ice phase} 给予潜袭者与其当前位置上的防火墙互动的机会，然后要求公司结算该防火墙上未破解的子进程。
+  - rule: rule_encounter_condition
+    text: 就满足触发条件而言，潜袭者遭遇一层防火墙，等同于在那层防火墙的位置开始遭遇防火墙阶段。具有此触发条件的能力受 {ref:rule_reaction_window_closing_timing_structure} 约束。
+  - rule: rule_encounter_unbroken_sub_status
+    text: 每次遭遇开始时，被遭遇防火墙上的每条子进程都会获得与这次遭遇相关联的“未破解”状态。详见 {ref:sec_subroutines}。
+  - rule: rule_encounter_break_paw
+    text: 在遭遇防火墙阶段的付费能力窗口（{ref:step_encounter_paw}）中，潜袭者可以破解该防火墙上的子进程。见 {ref:rule_break_subroutine}。
+  - rule: rule_encounter_sub_resolve
+    text: 在遭遇防火墙阶段的付费能力窗口关闭后，被遭遇防火墙上的未破解子进程会结算。见 {ref:rule_resolve_unbroken_subroutines}。
+  - rule: rule_encounter_ice_next_phase
+    text: 在遭遇防火墙阶段结束时，本次潜袭继续进入移动阶段 {ref:sec_movement_phase}。
+  - subsection: subsec_fully_break
+    text: 完全破解
+    toc:
+    rules:
+    - rule: rule_fully_break
+      text: 在每次遭遇中，当该防火墙上的所有子进程首次都被破解时，潜袭者就完全破解了该防火墙。
+    - rule: rule_object_fully_break
+      text: 每当潜袭者完全破解一层防火墙时，如果其所有子进程都是通过某个单一对象上的能力破解的，那么该对象也会完全破解那层防火墙。
+    - rule: rule_fully_break_no_subroutines
+      text: 如果一层被遭遇的防火墙没有子进程，那么在这次遭遇的 {ref:step_encounter_paw} 开始时，潜袭者就完全破解了它。在这种情况下，没有任何对象会完全破解那层防火墙。
+    - rule: rule_fully_broken_not_retracted
+      text: 如果被遭遇的防火墙在潜袭者完全破解之后又获得了子进程，那么潜袭者已完全破解该防火墙的状态仍然保留。检查潜袭者是否已完全破解那层防火墙的条件仍会照常满足。破解新增的子进程不会再次完全破解该防火墙，也不会再次满足相关条件。
+  - subsection: subsec_bypass
+    text: 略过
+    toc:
+    rules:
+    - rule: rule_bypass
+      text: 当某个效果允许潜袭者略过一层防火墙时，遭遇防火墙阶段会被中止，潜袭者会立刻继续让过那层防火墙。
+    - rule: rule_bypass_start_of_encounter
+      text: 大多数略过效果发生在遭遇开始时，因此 {ref:step_encounter_paw,step_resolve_subroutine} 根本不会发生，这意味着被遭遇防火墙上的子进程既不会被破解，也不会被结算。
+    - rule: rule_bypass_during_encounter
+      text: 少数略过效果可以在更晚的时点触发。如果在 {ref:step_encounter_paw} 略过防火墙，则子进程可能已经被破解，也可能没有被破解，但 {ref:step_resolve_subroutine} 不会发生，因此不会有任何子进程被结算。注意，对零子进程的防火墙来说，潜袭者“破解了所有子进程”当且仅当 {ref:step_encounter_paw} 被到达。见 {ref:rule_vacuous_truth}。
+      examples:
+      - text: 潜袭者打出 {card:叉穿} 并遭遇一层可以通过 {card:蛇蝎美人} 略过的 {card:巨魔}。潜袭者花费0[c]，以 {card:蛇蝎美人} 略过 {card:巨魔}。{card:叉穿} 不满足其触发条件，而且 {card:巨魔} 没有被销毁，因为破解子进程的机会从未到达。
+  - subsection: subsec_forced_encounters
+    text: 强迫遭遇
+    toc:
+    rules:
+    - rule: rule_forced_encounter
+      text: 如果某个能力在不先改变潜袭者位置的情况下指示其遭遇一层防火墙，则结算一个遭遇防火墙阶段，但不要改变潜袭者的位置（如果其有位置的话）。遭遇结束后，回到导致该次遭遇的效果，并从那里继续结算。这种发生在潜袭正常进程之外的遭遇称为{term:forced encounter}。
+      examples:
+      - text: 如果 {card:城} 使 {card:蝶蛹} 被读取，则先结算与 {card:蝶蛹} 的遭遇，然后回到继续结算 {card:城} 上的子进程。
+    - rule: rule_forced_encounter_during_run
+      text: |-
+        {n}在强迫遭遇中，{/n}一条终止本次潜袭的指示会同时作用于正在结算的遭遇防火墙阶段以及该额外遭遇被发起时所处的阶段。{n}另见 {ref:rule_end_encounter_outside_run}。{/n}
+      examples:
+      - text: 公司使用 {card:姊妹花}，使潜袭者在让过那层防火墙时再次遭遇它。如果某条子进程在额外遭遇中指示终止本次潜袭，那么那次遭遇和原本的移动阶段都会被中止，游戏会进入潜袭结束阶段。
+    - rule: rule_forced_encounter_end
+      text: 创建强迫遭遇的指示直到该次遭遇完成后才算结算完毕。
+    - rule: rule_move_during_forced
+      text: 在强迫遭遇期间，如果某个能力移动潜袭者，或者指示潜袭者接驳一层防火墙，那么该移动会照常结算并改变底层潜袭的参数，但不会结束这次强迫遭遇，也不会干扰它。
+
+- section: sec_movement_phase
+  text: 移动
+  rules:
+  - rule: rule_movement_phase
+    text: |-
+      {term:movement phase} 负责处理本次潜袭在各层防火墙之间，以及在最内层防火墙之后、直到潜袭者接驳被攻击服务器之前的推进。
+  - rule: rule_pass_ice
+    text: 如果移动阶段是从接驳防火墙阶段或遭遇防火墙阶段到达此处的，则潜袭者会让过其当前位置上的防火墙。
+  - rule: rule_jack_out_movement_phase
+    text: 在每个移动阶段，潜袭者都有机会退出潜袭。见 {ref:rule_jacking_out}。
+  - rule: rule_runner_continues
+    text: 如果潜袭者不选择退出潜袭，那么如果还有下一个内侧位置，其位置就会移动到那个位置。
+  - rule: rule_runner_approach_new_position
+    text: 如果潜袭者移动到了新位置，则本次潜袭会从移动阶段继续进入接驳防火墙阶段 {ref:sec_approach_ice_phase}。潜袭者将接驳其新位置上的防火墙。
+  - rule: rule_approach_server
+    text: 如果潜袭者没有退出潜袭，也没有返回接驳防火墙阶段，那么他们就会接驳服务器。这本身没有固有效果，但有些卡牌能力会引用这一点。在潜袭者接驳服务器之后，本次潜袭会继续进入成功阶段 {ref:sec_success_phase}。
+
+- section: sec_success_phase
+  text: 成功
+  rules:
+  - rule: rule_success_phase
+    text: |-
+      {term:success phase} 会宣告本次潜袭成功，并允许潜袭者侵入被攻击的服务器。
+  - rule: rule_successful_run
+    text: 在潜袭者突破公司的防御并抵达服务器本身的潜袭，会被宣告为一次 {term:successful run}。卡牌能力经常会引用这一标签。
+  - rule: rule_declaring_successful_run
+    text: 将一次潜袭宣告为成功，并不等同于成功阶段开始。因此，与成功的潜袭相关的触发条件能力不受 {ref:rule_reaction_window_closing_timing_structure} 约束。
+  - subsection: rule_if_successful
+    text: 许多发起潜袭的能力都包含一项触发条件为“如果成功”的条件能力。这表示：“在以这种方式创建的潜袭变为成功之后。”
+    rules:
+    - rule: rule_if_successful_tied_to_server
+      text: 如果某个发起潜袭的效果规定该次潜袭必须针对某台特定服务器或多台特定服务器，那么与该效果相关的任何“如果成功”能力都与那台服务器或那些服务器绑定。如果被攻击的服务器自潜袭发起后发生了变化，且已不再是这次潜袭本可选择的服务器之一，那么这些“如果成功”能力就不满足其触发条件。
+      examples:
+      - text: 潜袭者打出 {card:只因我能}，其效果指示其对一台远程服务器发起潜袭。如果某个效果把这次潜袭移动到中央服务器，那么 {card:只因我能} 上的“如果成功”效果不会适用。不过，如果这次潜袭改为移动到另一台远程服务器，那么“如果成功”效果仍然适用，因为一开始 {card:只因我能} 就允许对那第二台远程服务器发起潜袭。
+    - rule: rule_if_successful_lingering_effect
+      text: |-
+        “如果成功”能力经常会创建持续效果（见 {ref:sec_lingering_effects}），这些效果会修改读取卡牌的流程，或者完全以另一个效果取代侵入被攻击的服务器。此类效果适用于本次潜袭规则所允许的侵入（见 {ref:rule_breach_link}），并会在本次潜袭结束时失效。
+    - rule: rule_if_successful_ability_optional
+      text: 如果某个“如果成功”效果让潜袭者可以选择执行某个效果而不是侵入，那么这个决定会在本应开始侵入的时点作出，也就是 {ref:step_breach}。
+      examples:
+      - text: 潜袭者在总部根目录中安装着 {card:尘埃2X3ZB9CY} 时打出 {card:账户虹吸}，且本次潜袭成功。潜袭者可以等到 {card:尘埃2X3ZB9CY} 的追踪结算完毕后，再决定是正常读取卡牌，还是强迫公司失去信用点。
+  - rule: rule_breach_link
+    text: 当潜袭者侵入服务器时，他们会遵循 {ref:chpt_access_breach} 中详述的流程。
+
+- section: sec_run_ends_phase
+  text: 潜袭结束阶段
+  rules:
+  - rule: rule_run_ends_phase
+    text: |-
+      {term:run ends phase} 会正式结束本次潜袭，并为游戏回到发起这次潜袭时所处的时序结构做好准备。
+  - subsection: rule_run_ends_process_priority_windows
+    text: |-
+      在潜袭结束阶段开始时，游戏会处理本次潜袭结束时仍然打开的每一个优先权窗口。具体流程如下：
+    rules:
+    - rule: rule_run_ends_close_paws
+      text: 如果本次潜袭结束时有一个付费能力窗口正在打开，那么该窗口会关闭。没有任何玩家可以再触发付费能力或结算该窗口通常允许的其他选项（例如激活卡牌）。
+      examples:
+      - text: 公司花费一枚来自已计分 {card:次代II型} 的指示物来终止本次潜袭。一旦如此，潜袭者就没有机会使用这次潜袭中的负面声誉信用点来支付 {card:自修正代码} 的费用。
+    - rule: rule_run_ends_close_reaction_window
+      text: 如果本次潜袭是在一个因阶段开始而打开的响应窗口中被终止的，那么该响应窗口会按 {ref:rule_reaction_window_closing_timing_structure} 所述关闭。不会再结算任何其他待处理能力。
+      examples:
+      - text: 潜袭者在遭遇防火墙阶段开始时打开的响应窗口中使用了 {card:安全联结点} 上的能力。追踪成功，因此该能力终止了本次潜袭。如果 {card:收费站} 的能力也仍在这个响应窗口中待处理，那么它不会被结算，因为遭遇已经结束。
+    - rule: rule_run_ends_other_priority_windows
+      text: 任何其他打开的优先权窗口都会正常完成，{n}但不能启动新的时序结构（包括按照 {ref:rule_consecutive_breaches} 延迟的侵入）{/n}。如果需要以这种方式完成的不止一个优先权窗口，则它们会按 {ref:rule_resolve_ability} 中描述的通常顺序结算。
+      examples:
+      - text: 本次潜袭在 {ref:step_approach_server} 之后的响应窗口中被终止，而 {card:蚁冢} 的能力仍在待处理。公司可以激活 {card:蚁冢} 并将其移动到已接驳的服务器，但潜袭者的位置不能被移动，也不能发起遭遇。
+        new:
+  - rule: rule_run_ends_lose_bad_pub_credits
+    text: 在潜袭结束阶段，如果{n}潜袭者的负面声誉池中仍有任何信用点，那么这些信用点会返回银行。{/n}
+  - subsection: rule_unsuccessful_run
+    text: |-
+      作为潜袭结束阶段的一部分，游戏会判断这次潜袭是否应被宣告为一次 {term:unsuccessful run}。这个标签适用于潜袭者未能抵达其攻击服务器的潜袭，卡牌能力会提及它。如果下列两个条件都未满足，则这次潜袭会被宣告为不成功：
+    rules:
+    - rule: rule_not_unsuccessful_when_reached_success_phase
+      text: 如果本次潜袭到达了 {ref:rule_sec_run_success_phase} 成功阶段，那么它就不会被宣告为不成功。无论本次潜袭实际上是否被宣告成功，这一点都成立。
+      examples:
+      - text: 潜袭者抵达了一台已激活 {card:危海网阵} 的服务器。{card:危海网阵} 的能力阻止本次潜袭被宣告成功，但本次潜袭也不会被宣告为不成功。
+    - rule: rule_server_cease_to_exist_unsuccesful_exception
+      text: 如果被攻击的服务器已经不复存在，则本次潜袭不会被宣告为不成功。见 {ref:rule_server_ceases_to_exist}。
+  - rule: rule_run_ends_condition
+    text: 与潜袭结束相关的条件并不会在某个“终止本次潜袭”效果一结算或潜袭结束阶段一开始时立刻满足。相反，这些条件是在 {ref:step_run_complete} 才满足，也就是整个潜袭时序结构完全结束时。类似地，在潜袭中适用的静态能力，以及持续到潜袭结束为止的持续时间，也都会在 {ref:step_run_complete} 失效。
+    examples:
+    - text: 潜袭者打出 {card:圣道}，进行一次在其中其防止所有伤害的潜袭。在潜袭过程中，{card:诱饵} 上的子进程结算，然后潜袭者遭遇 {card:静电墙} 且没有破解其子进程。当“终止本次潜袭”能力结算时，遭遇也会结束，因此 {card:诱饵} 的延迟条件能力的触发条件得到满足。该能力会在潜袭结束阶段结算，但不会对潜袭者造成伤害，因为 {card:圣道} 的效果仍然适用。同样地，{card:乔治娅·叶梅廖夫} 的第一个能力在 {ref:step_run_declared_unsuccessful} 时满足其触发条件，而那仍然是在本次潜袭结束之前，因此那点伤害会被防止。
+    - text: 潜袭者打出 {card:圣道}，进行一次在其中其防止所有伤害的潜袭。该潜袭成功，但潜袭者在潜袭过程中获得了1枚锁定标记。当本次潜袭结束时，{card:专属反应组} 的能力与 {card:圣道} 的效果同时到期，因此潜袭者会受到2点肢体伤害。
+
+- section: sec_steps_of_a_run
+  text: 潜袭的步骤
+  rules:
+  - subsection: rule_sec_run_initiation_phase
+    steps:
+    text: 发起阶段
+    rules:
+    - rule: step_initiation_announce
+      text: 潜袭者宣告被攻击的服务器。
+    - rule: step_initiation_bad_publicity
+      text: 潜袭者{n}根据公司拥有的每1枚负面声誉，将1[c]从银行加入其负面声誉池。{/n}
+    - rule: step_initiation_formal_begin
+      text: 本次潜袭正式开始。与潜袭开始或发起相关的条件得到满足。
+    - rule: step_runner_position
+      text: 潜袭者的位置被设为对应于被攻击服务器的最外层防火墙，如果有的话。
+    - rule: step_initiation_paw
+      text: 出现一个付费能力窗口，玩家可以使用付费能力，公司也可以激活非防火墙卡牌。（P）（R）
+    - rule: step_initiation_complete
+      text: |-
+        发起阶段完成。如果潜袭者拥有对应某层防火墙的位置，则继续进入 {ref:rule_sec_run_approach_ice_phase} 接驳防火墙阶段，接驳与其位置对应的那层防火墙。如果潜袭者没有位置，或者其位置上没有防火墙，则继续进入 {ref:rule_sec_run_movement_phase} 移动阶段。
+  - subsection: rule_sec_run_approach_ice_phase
+    steps:
+    text: 接驳防火墙阶段
+    rules:
+    - rule: step_approach_begins
+      text: 接驳开始。与潜袭者接驳这层防火墙相关的条件得到满足。
+    - rule: step_approach_paw
+      text: 出现一个付费能力窗口，玩家可以使用付费能力，公司也可以激活非防火墙卡牌。此外，公司还可以激活被接驳的那层防火墙。（P）（R）
+    - rule: step_approach_complete
+      text: 接驳防火墙阶段完成。如果被接驳的防火墙已激活，则继续进入 {ref:rule_sec_run_encounter_ice_phase} 遭遇防火墙阶段。否则，继续进入 {ref:rule_sec_run_movement_phase} 移动阶段。
+  - subsection: rule_sec_run_encounter_ice_phase
+    steps:
+    text: 遭遇防火墙阶段
+    rules:
+    - rule: step_encounter_begins
+      text: 遭遇开始。与潜袭者遭遇这层防火墙相关的条件得到满足。
+    - rule: step_encounter_paw
+      text: 出现一个付费能力窗口，玩家只能使用付费能力。可在这个窗口中破解被遭遇防火墙上的子进程。（P）
+    - rule: step_resolve_subroutine
+      text: 如果仍有本次遭遇中尚未结算的未破解子进程，则公司按顺序结算下一个这样的子进程。否则，跳到（e）。
+    - rule: step_resolve_subroutine_loop
+      text: 返回（c）。
+    - rule: step_encounter_complete
+      text: 遭遇防火墙阶段完成。继续进入 {ref:rule_sec_run_movement_phase} 移动阶段。
+  - subsection: rule_sec_run_movement_phase
+    steps:
+    text: 移动阶段
+    rules:
+    - rule: step_pass_ice
+      text: 如果潜袭者的位置对应一层防火墙，则潜袭者让过那层防火墙。与让过防火墙相关的条件得到满足。如果在刚让过的防火墙更内侧没有任何位置，则与让过保护某服务器全部防火墙相关的条件也得到满足。
+    - rule: step_before_jack_out_paw
+      text: 出现一个付费能力窗口，玩家只能使用付费能力。（P）
+    - rule: step_jack_out_choice
+      text: 潜袭者可以选择退出潜袭，进入 {ref:rule_sec_run_run_ends_phase} 潜袭结束阶段。如果潜袭者不这么做，则继续到（d）。
+    - rule: step_move_position
+      text: 潜袭者的位置移动到下一个内侧位置，如果有的话。
+    - rule: step_after_jack_out_paw
+      text: 出现一个付费能力窗口，玩家可以使用付费能力，公司也可以激活非防火墙卡牌。（P）（R）
+    - rule: step_approach_new_ice
+      text: 如果潜袭者移动到了新位置，则返回 {ref:rule_sec_run_approach_ice_phase} 接驳防火墙阶段，接驳新位置上的那层防火墙。如果没有，则继续到（g）。
+    - rule: step_approach_server
+      text: 潜袭者接驳被攻击的服务器。与潜袭者接驳服务器相关的条件得到满足。
+    - rule: step_movement_complete
+      text: 移动阶段完成。继续进入 {ref:rule_sec_run_success_phase} 成功阶段。
+  - subsection: rule_sec_run_success_phase
+    steps:
+    text: 成功阶段
+    rules:
+    - rule: step_run_declared_successful
+      text: 本次潜袭被宣告成功。与成功的潜袭相关的条件得到满足。
+    - rule: step_breach
+      text: 潜袭者侵入被攻击的服务器。
+    - rule: step_success_complete
+      text: 成功阶段完成。继续进入 {ref:rule_sec_run_run_ends_phase} 潜袭结束阶段。
+  - subsection: rule_sec_run_run_ends_phase
+    steps:
+    text: 潜袭结束阶段
+    rules:
+    - rule: step_open_priority_windows_closed
+      text: 在本阶段转入时仍然打开的任何优先权窗口，都会按 {ref:rule_run_ends_process_priority_windows} 所述完成或关闭。
+    - rule: step_run_ends_bad_publicity
+      text: 潜袭者{n}将负面声誉池中剩余的任何信用点返还给银行。{/n}
+    - rule: step_run_declared_unsuccessful
+      text: 如果本次潜袭中未到达成功阶段，且被攻击的服务器仍然存在，则本次潜袭变为不成功。
+    - rule: step_run_complete
+      text: 潜袭结束阶段和整次潜袭都已完成。

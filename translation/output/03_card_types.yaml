@@ -1,0 +1,245 @@
+chapter: chpt_card_types
+text: 卡牌类型
+sections:
+- section: sec_identities
+  text: 特性
+  rules:
+  - subsection: rule_identity_play_area
+    text: 每位玩家在游戏开始时都有1张活动的特性置于游戏区中。参见{ref:sec_starting_the_game}。
+    rules:
+    - rule: rule_identity_double_sided
+      text: |-
+        有些特性是双面的。双面特性只有正面才会列出其最小牌组张数和影响力上限。双面特性的当前牌面朝上的一面在任一时点都是活动的。
+    - rule: rule_identity_not_installed 
+      text: 特性不会被安装。
+  - rule: rule_identity_deck_size_influence
+    text: |-
+      只有特性牌才有最小牌组张数和影响力上限。这些数值在游戏进行期间不适用；相反，它们决定与该特性相关牌组的牌组构筑限制。参见{ref:sec_deck_construction}。
+  - rule: rule_identity_base_link
+    text: 只有潜袭者特性具有基础中转。此数值用于计算潜袭者的中转值。参见{ref:sec_link}。
+  - rule: rule_identity_HQ
+    text: 公司的特性牌用于标记总部的位置。参见{ref:subsec_hq}。
+
+- section: sec_agendas
+  text: 议案
+  snippet: 议案代表公司的宝贵数据。公司推进并计分议案时，表示关键公司项目已完成。潜袭者窃取议案时，表示其获取了公司的机密数据。
+  rules:
+  - rule: rule_agendas_in_roots
+    text: 公司只能将议案安装在远程服务器的根目录中。在任一给定远程服务器的根目录中，同一时间只能安装1张议案或1张资产。参见{ref:subsec_remote_servers}。
+  - subsection: rule_agenda_advancement_requirement_agenda_points
+    text: 只有议案才有推进需求和议案分数。参见{ref:sec_score_scoring_steal}。
+    rules:
+    - rule: rule_agenda_advancement_requirement
+      text: 议案的推进需求，是公司要对其计分时，该议案上必须放有的推进指示物的最少数量。
+    - rule: rule_score_from_score_area
+      text: 当议案位于其分数区时，议案上的议案分数会计入玩家的分数。
+  - subsection: rule_agendas_not_rezzed
+    text: 议案不能被激活，且在已安装时处于闲置状态。议案在公司的分数区中是活动的。除非该议案的卡牌文本另有说明，否则议案在潜袭者的分数区中是闲置的。参见{ref:sec_score_area}。
+    rules:
+    - rule: rule_agendas_faceup
+      text: 有些议案可以牌面朝上安装，或通过卡牌能力翻成牌面朝上。牌面朝上的议案既不是已激活的，也不是未激活的。如果某张议案的印刷文本指示公司将其牌面朝上安装，则该议案在已安装期间其能力处于活动的。
+    - rule: rule_advancemenet_requirements_modification
+      text: 有些议案会修改窃取或计分它们的需求。只要符合其指定的任何限制或需求，这些能力始终处于活动的状态。参见{ref:rule_ability_active_inactive_source_card}。
+  - rule: rule_agendas_advanced
+    text: 议案始终可以推进。参见{ref:sec_advancing_cards}。
+
+- section: sec_assets
+  text: 资产
+  snippet: 资产代表公司可支配的各种资源与联系。
+  rules:
+  - rule: rule_asset_root_remote
+    text: 公司只能将资产安装在远程服务器的根目录中。在任一给定远程服务器的根目录中，同一时间只能安装1张议案或1张资产。参见{ref:subsec_remote_servers}。
+  - rule: rule_asset_rez_cost
+    text: 资产是具有激活费用的卡牌类型之一。它们在安装时处于未激活状态，并一直保持闲置，直到公司在付费能力窗口中支付其激活费用将其激活。参见{ref:sec_faceup_facedown_status}。
+  - rule: rule_asset_trash_cost
+    text: 资产是具有销毁费用的卡牌类型之一。如果潜袭者读取1张资产，则其可以支付销毁费用来销毁该资产。参见{ref:rule_basic_trash_ability}。
+  - rule: rule_asset_lady_liberty
+    text: 1张资产，{card:自由女神}，具有{subtype:region}副类型，其文本为“每台服务器限制1个{subtype:region}。”有关{subtype:region}卡牌的规则，参见{ref:subsec_regions}。
+
+- section: sec_ice
+  text: 防火墙
+  snippet: 防火墙是通过多种方式保护公司服务器的复杂安防系统。“Ice”一词曾被认为是多种不同词组的缩写，但最常见的完整写法是“Intrusion Countermeasures Electronics”。
+  rules:
+  - rule: rule_ice_piece_of_ice
+    text: |-
+      “Ice”和“piece of ice”同义。
+  - subsection: rule_ice_install
+    text: 防火墙是唯一一种会被安装在保护服务器位置上的卡牌类型。防火墙不会安装在服务器的根目录中。参见{ref:subsec_protecting_a_server}。
+    rules:
+    - rule: rule_ice_layout
+      text: 保护服务器的防火墙会横向排列在该服务器前方，最外层的防火墙距离服务器最远。
+    - rule: rule_ice_instal_outermost
+      text: 当公司安装1层防火墙时，必须将其安装在保护该服务器的最外层位置。参见{ref:sec_install_uninstall}。
+  - subsection: rule_ice_rez_cost
+    text: 防火墙是具有激活费用的卡牌类型之一。它们在安装时处于未激活状态，并一直保持闲置，直到公司在付费能力窗口中支付其激活费用将其激活。参见{ref:sec_faceup_facedown_status}。
+    rules:
+    - rule: rule_ice_rez_window
+      text: 与资产和升级不同，防火墙通常只能在潜袭中被接驳时激活。参见{ref:sec_approach_ice_phase}。
+  - subsection: rule_ice_strength_value
+    text: 防火墙是具有强度的卡牌类型之一。防火墙的强度决定哪些破解器可以与其对接。参见{ref:subsec_icebreakers}。
+    rules:
+    - rule: rule_ice_strength_modification_duration
+      text: 如果某项能力将1层防火墙的强度修改为持续到本次潜袭剩余时间内，且该能力是在非潜袭期间的一次遭遇中结算的，则该修改改为持续到该次遭遇剩余时间内。
+      examples:
+      - text: |-
+          潜袭者在总部读取并遭遇{card:大天使}，并使用{card:帮派标志}。潜袭者使用{card:恶魔护符}降低{card:大天使}的强度。该强度降低通常会持续到当前潜袭的剩余时间内，但由于此时没有潜袭正在进行，因此改为持续到该次遭遇的剩余时间内。
+  - subsection: rule_ice_trash_cost
+    text: 有些防火墙具有销毁费用。如果潜袭者读取1层具有销毁费用的防火墙，则其可以支付该销毁费用来销毁该防火墙。参见{ref:rule_basic_trash_ability}。
+    rules:
+    - rule: rule_ice_access
+      text: 与资产、升级和议案不同，防火墙在已安装时通常不会被读取。遭遇1层防火墙并不意味着读取该防火墙，也不会让潜袭者有机会支付其销毁费用。
+  - rule: rule_ice_install_cost
+    text: 防火墙是唯一具有安装费用的公司卡牌。1层防火墙的安装费用不是印刷数值，而是根据已经保护相关服务器的其他防火墙数量计算得出的数值。参见{ref:rule_install_cost}。
+  - rule: rule_ice_subroutine
+    text: 防火墙是唯一具有子进程的卡牌。参见{ref:sec_subroutines}。
+
+- section: sec_operations
+  text: 事务
+  rules:
+  - subsection: rule_operation_play
+    text: 事务是公司卡牌中唯一可以打出的卡牌。事务从不被安装。打出事务会使其能力变为活动的，而当这些能力全部结算完毕后，该事务便会被销毁。参见{ref:sec_playing_events_and_operations}。
+    rules:
+    - rule: rule_operation_condition
+      text: 有些事务具有{subtype:condition}副类型。作为其能力的一部分，这些{subtype:condition}事务会将自己转换为{subtype:condition}指示物并将自己安装起来。{subtype:condition}事务不能通过安装效果安装；它只能通过自身的转换能力安装。参见{ref:rule_card_to_counter}。
+    - rule: rule_operation_current
+      text: 有些事务具有{subtype:current}副类型。作为其能力的一部分，这些{subtype:current}事务会使自己在另一张{subtype:current}事务或事件被打出，或潜袭者窃取1张议案之前不会被销毁。当这些情况之一发生时，当前活动的{subtype:current}会在下一个检查点被销毁。参见{ref:rule_play_not_trashed_until}。
+    - rule: rule_operation_lockdown
+      text: 有些事务具有{subtype:lockdown}副类型。作为其能力的一部分，这些{subtype:lockdown}事务会使自己在该事务被打出后的公司下个回合开始前不会被销毁。一旦公司的回合开始，此效果便失效，并且该事务会在下一个检查点被销毁，而且届时标记为待处理的任何条件能力都还不能触发。参见{ref:rule_play_not_trashed_until}。
+  - rule: rule_operation_play_cost
+    text: 事务是唯一具有打出费用的公司卡牌。事务的打出费用，就是公司必须花费的信用点数量，才能打出该事务。参见{ref:sec_playing_events_and_operations}。
+  - rule: rule_operation_trash_cost
+    text: 有些事务具有销毁费用。如果潜袭者读取1张具有销毁费用的事务，则其可以支付该销毁费用来销毁该事务。参见{ref:rule_basic_trash_ability}。
+
+- section: sec_upgrades
+  text: 升级
+  rules:
+  - rule: rule_upgrade_install
+    text: 公司可以将升级安装在任一服务器的根目录中。升级是唯一能够安装在中央服务器根目录中的卡牌类型。
+  - rule: rule_upgrade_no_limit
+    text: 单台服务器根目录中可安装的升级数量没有限制。
+  - rule: rule_upgrade_rez_cost
+    text: 升级是具有激活费用的卡牌类型之一。它们在安装时处于未激活状态，并一直保持闲置，直到公司在付费能力窗口中支付其激活费用将其激活。参见{ref:sec_faceup_facedown_status}。
+  - rule: rule_upgrade_trash_cost
+    text: 升级是具有销毁费用的卡牌类型之一。如果潜袭者读取1张升级，则其可以支付销毁费用来销毁该升级。参见{ref:rule_basic_trash_ability}。
+  - subsection: subsec_regions
+    text: 区域
+    toc:
+    rules:
+    - rule: rule_upgrade_region
+      text: 有些升级具有{subtype:region}副类型。所有{subtype:region}的文本都是“每台服务器限制1个{subtype:region}。”
+    - rule: rule_region_one_root
+      text: 区域限制只适用于具有{subtype:region}副类型且安装在服务器根目录中，或正处于安装过程中的卡牌。它不适用于中央服务器中的卡牌，也不适用于防火墙。
+    - rule: rule_region_active_inactive
+      text: 如{ref:rule_region_one_root}所述，区域限制适用于所有卡牌，不论这些卡牌处于活动还是闲置状态。
+    - rule: rule_region_install
+      text: 当公司将1张具有{subtype:region}副类型的卡牌安装到已经有1个{subtype:region}的服务器根目录时，必须销毁那张已安装的{subtype:region}。参见{ref:sec_install_uninstall}。
+    - rule: rule_region_swap
+      text: |-
+        {n}公司不能使用会交换卡牌或在服务器之间转移已安装卡牌的效果，将多于1个{subtype:region}放入服务器根目录中。{/n}
+
+- section: sec_events
+  text: 事件
+  rules:
+  - subsection: rule_event_play
+    text: 事件是潜袭者卡牌中唯一可以打出的卡牌。事件从不被安装。打出事件会使其能力变为活动的，而当这些能力全部结算完毕后，该事件便会被销毁。参见{ref:sec_playing_events_and_operations}。
+    rules:
+    - rule: rule_event_condition
+      text: 1张事件，{card:潜逃}，具有{subtype:condition}副类型。作为其能力的一部分，它会将自己转换为1枚状态指示物并将自己安装起来。该事件不能通过安装效果安装；它只能通过自身的转换能力安装。参见{ref:rule_card_to_counter}。
+    - rule: rule_event_current
+      text: 有些事件具有{subtype:current}副类型。作为其能力的一部分，这些{subtype:current}事件会使自己在另一张{subtype:current}事务或事件被打出，或公司计分1张议案之前不会被销毁。当这些情况之一发生时，当前活动的{subtype:current}会在下一个检查点被销毁。参见{ref:rule_play_not_trashed_until}。
+  - rule: rule_event_play_cost
+    text: 事件是唯一具有打出费用的潜袭者卡牌。事件的打出费用，就是潜袭者必须花费的信用点数量，才能打出该事件。参见{ref:sec_playing_events_and_operations}。
+
+- section: sec_hardware
+  text: 硬件
+  snippet: 潜袭者的硬件是其可支配的实体工具：构成其装备的计算机、芯片和其他机械设备。
+  rules:
+  - rule: rule_hardware_piece_of_hardware
+    text: |-
+      “Hardware”和“piece of hardware”同义。
+  - rule: rule_hardware_install
+    text: 潜袭者将硬件安装到游戏区中。
+  - rule: rule_hardware_install_cost
+    text: 硬件是具有安装费用的卡牌类型之一。潜袭者通过支付其安装费用，将1个硬件牌面朝上并处于活动状态地安装到游戏区中。参见{ref:sec_install_uninstall}。
+  - rule: rule_hardware_no_limit
+    text: 潜袭者可安装的硬件数量没有限制。
+  - subsection: subsec_consoles
+    text: 控制台
+    toc:
+    rules:
+    - rule: rule_hardware_console
+      text: 有些硬件具有{subtype:console}副类型。所有{subtype:console}的文本都是“每位玩家限制1个{subtype:console}。”
+    - rule: rule_install_console
+      text: 如果某位玩家控制的已安装{subtype:console}超过1个，则除最近变为活动的{subtype:console}外，其余全部销毁。以此方式销毁卡牌无法被防止。
+    - rule: rule_console_limitation
+      text: 此限制仅适用于具有{subtype:console}副类型的硬件。
+    - rule: rule_console_limitation_active
+      text: 此限制仅适用于活动的{subtype:console}。玩家的牌组中可以有多张{subtype:console}的副本，甚至可以有不同的{subtype:console}。
+
+- section: sec_programs
+  text: 程序
+  snippet: 程序是潜袭者可支配的数字工具，主要用作侵入手段。
+  rules:
+  - rule: rule_program_install
+    text: 潜袭者将程序安装到游戏区中。
+  - rule: rule_program_install_cost
+    text: 程序是具有安装费用的卡牌类型之一。潜袭者通过支付其安装费用，将1个程序牌面朝上并处于活动状态地安装到游戏区中。参见{ref:sec_install_uninstall}。
+  - subsection: rule_program_memory_cost
+    text: 程序是唯一具有内存费用的卡牌类型。程序的内存费用，是该程序在已安装期间所需要的内存单元数量。
+    rules:
+    - rule: rule_program_memory
+      text: 安装程序不会永久消耗内存。该程序会占用其指定数量的内存单元，直到其被卸载；届时，这些内存单元可供其他程序使用。
+    - rule: rule_program_install_exceed_memory_limit
+      text: 当潜袭者安装1个程序会使已安装程序的总内存费用超过其内存上限时，必须销毁1个或更多已安装程序，使包括新程序在内的已安装程序总内存费用不超过其内存上限。参见{ref:sec_install_uninstall}。
+    - rule: rule_program_other_exceed_memory_limit
+      text: 如果潜袭者的内存上限降低到已安装程序总内存费用之下，或者已安装程序总内存费用因安装另1个程序之外的任何原因而升至内存上限之上，则潜袭者必须销毁1个或更多已安装程序，使剩余程序的总内存费用不超过其内存上限。这发生在内存上限被超出后的下一个检查点。参见{ref:sec_checkpoints}。
+    - rule: rule_program_memory_not_a_cost
+      text: 程序的内存费用并不是费用。它不能被影响安装程序费用的能力提高、降低、忽略或以其他方式修改。
+  - subsection: rule_program_strength_value
+    text: 程序是具有强度的卡牌类型之一。
+    rules:
+    - rule: rule_icebreakers_strength_value
+      text: 具有{subtype:icebreaker}副类型的程序具有印刷的数值强度。破解器的强度决定其可以对接哪层防火墙。参见{ref:subsec_icebreakers}。
+    - rule: rule_programs_without_strength_value
+      text: 不具有{subtype:icebreaker}副类型的程序没有强度值。非{subtype:icebreaker}程序牌上强度印刷的位置会印有破折号（–）。
+  - subsection: subsec_icebreakers
+    text: 破解器
+    toc:
+    rules:
+    - rule: rule_program_icebreaker
+      text: 有些程序具有{subtype:icebreaker}副类型。{subtype:icebreaker}程序具有强度和可与防火墙对接的能力。
+    - rule: rule_icebreaker_strength_increase_implicit
+      text: 破解器上的付费能力如果会修改该破解器的强度，则隐含持续时间为“本次遭遇剩余时间内”。
+      examples:
+      - text: |-
+          {card:腐蚀者}具有“1[c]：强度+1。”这一能力。由于未指定持续时间，此强度提升会持续到本次遭遇结束为止。
+    - rule: rule_icebreaker_strength_increase_specified
+      text: 如果破解器的付费能力为修改其强度指定了另一个持续时间，则该修改会一直持续到所述持续时间和隐含的遭遇持续时间都结束为止。
+      examples:
+      - text: |-
+          {card:戈尔迪之刃}具有“1[c]：在本次潜袭的剩余时间内强度+1。”这一能力。无论该能力是在遭遇中还是在潜袭的其他步骤中触发，它都会持续到当前潜袭结束。若该能力是在发生于潜袭之外的一次遭遇中触发，则该强度提升会持续到该次遭遇结束。
+    - rule: rule_icebreaker_strength_increase_outside_of_encounter
+      text: 如果破解器的付费能力在遭遇外修改其强度，且未指定其他适用持续时间，则该修改会在下一个检查点失效。
+      examples:
+      - text: 如果潜袭者在遭遇外使用{card:腐蚀者}的能力提高其强度，则该提升只持续到下一个检查点。
+    - rule: rule_icebreaker_interface
+      text: 所有{subtype:icebreakers}都具有与防火墙对接的能力，亦称“对接能力”。这些能力由能力文本前的“对接”标记表示。
+    - rule: rule_icebreaker_interface_during_encounter
+      text: 潜袭者只能在一次遭遇的{ref:step_encounter_paw}使用对接能力，且只能选择所遭遇的那层防火墙及其子进程作为该能力效果的目标。有关指定目标的更多信息，参见{ref:sec_targets}。
+    - rule: rule_icebreaker_interface_strength
+      text: 只有当破解器的强度大于或等于所遭遇防火墙的强度时，潜袭者才能在该破解器上使用对接能力。
+    - rule: rule_icebreaker_interface_subtype
+      text: 如果某个对接能力指定其影响某一种特定副类型的防火墙，则该能力只能用于具有所指定副类型的那层防火墙。如果破解器上的某个能力未指定其影响的防火墙副类型，则该能力可用于任何一层防火墙。
+
+- section: sec_resources
+  text: 资源
+  snippet: 资源是各种各样能够帮助潜袭者的联系与技能。
+  rules:
+  - rule: rule_resource_install
+    text: 潜袭者将资源安装到游戏区中。
+  - rule: rule_resource_install_cost
+    text: 资源是具有安装费用的卡牌类型之一。潜袭者通过支付其安装费用，将1张资源牌面朝上并处于活动状态地安装到游戏区中。参见{ref:sec_install_uninstall}。
+  - rule: rule_resource_no_limit
+    text: 潜袭者可安装的资源数量没有限制。
+  - rule: rule_resource_trash_action
+    text: 只要潜袭者带有锁定标记，公司就可以花费[click]和2[c]，以基础行动销毁1张已安装的资源。参见{ref:sec_tags}。
