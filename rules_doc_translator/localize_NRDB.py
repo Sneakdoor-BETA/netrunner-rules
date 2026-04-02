@@ -3,19 +3,32 @@ import yaml
 
 
 def localize_NRDB():
+    src_filename = "generated/nrdb/nrdb.yaml"
     dst_filename = "generated/nrdb/localize_nrdb.yaml"
-    data_filename = "translation/references/cards.json"
+    data_filename = "generated/nrdb/cards.json"
+    with open(src_filename, "r", encoding="utf-8") as src_file:
+        content: dict[str, str] = yaml.safe_load(src_file)
+        # print(content)
 
-    result: dict[str, str] = dict()
     with open(data_filename, "r", encoding="utf-8") as data_file:
         items = json.load(data_file)
+        table: dict[str, str] = dict()
         for item in items:
-            k = item["title_zhCN"]
-            v = item["id"]
+            k = item["title_enUS"].replace('“', '"').replace('”', '"').replace('’', "'")
+            v = item["title_zhCN"]
+            table[k] = v
+            if ":" in k:
+                k1, _ = k.split(":")
+                v1, _ = v.split("：")
+                table[k1] = v1
+
+    result: dict[str, str] = dict()
+    for k, v in content.items():
+        if (k in table) and (len(table[k]) > 0):
+            result[table[k]] = v
+        else:
+            print(k)
             result[k] = v
-            if "：" in k:
-                k1, _ = k.split("：")
-                result[k1] = v
 
     with open(dst_filename, "w") as dst_file:
         yaml.dump(result, dst_file, sort_keys=False, encoding="utf-8", allow_unicode=True, width=100000, default_style='"')
