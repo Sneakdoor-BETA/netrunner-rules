@@ -2,1726 +2,1726 @@
     {
         "key": "chpt_game_concepts",
         "original": "1. Game Concepts",
-        "translation": ""
+        "translation": "游戏概念"
     },
     {
         "key": "sec_concepts_general",
         "original": "1.1. General",
-        "translation": ""
+        "translation": "总则"
     },
     {
         "key": "sec_concepts_general-snippet",
         "original": "These rules are compatible with cards from the game {term:android: netrunner} by Fantasy Flight Games. {term:android: netrunner} is a game about the cyber-struggle between massive Corporations and subversive hackers known as Runners.",
-        "translation": ""
+        "translation": "这些规则与奇幻飞行游戏公司发行的游戏 {term:安卓纪元：矩阵潜袭} 的卡牌兼容。{term:安卓纪元：矩阵潜袭} 是一款讲述庞大企业与被称为潜袭者的颠覆性黑客之间网络斗争的游戏。"
     },
     {
         "key": "rule_player_definitions",
         "original": "1.1.1. The game is played between two players. One player takes the role of the Corp (Corporation) and the other takes the role of the Runner. This rules document will frequently refer to a player interchangeably with their game role.",
-        "translation": ""
+        "translation": "本游戏由两位玩家进行。一位玩家扮演公司（Corp，Corporation），另一位玩家扮演潜袭者（Runner）。本文档会经常用玩家的游戏身份来指代该玩家。"
     },
     {
         "key": "rule_requirements",
         "original": "1.1.2. Each player needs a legal deck, an identity card for their role, and any extra cards used from outside their deck. They also need a supply of tokens as described in {ref:sec_counters_and_tokens}. The constraints that define the legality of a deck are defined in {ref:sec_deck_construction}, and the cases where cards outside the deck and identity can be used are defined in {ref:sec_extra_cards}.",
-        "translation": ""
+        "translation": "每位玩家都需要一副合法牌组、一张与其身份对应的特性卡牌，以及任何从牌组外使用的额外卡牌。其还需要一份如{ref:sec_counters_and_tokens}所述的标记物储备。定义牌组合法性的限制见{ref:sec_deck_construction}，而何时可以使用牌组外卡牌和特性卡牌的情形见{ref:sec_extra_cards}。"
     },
     {
         "key": "rule_game_numbers",
         "original": "1.1.3. All numbers used in the game are integers. Unless otherwise stated, a given value can be positive, negative, or zero.",
-        "translation": ""
+        "translation": "游戏中使用的所有数字都是整数。除非另有说明，某个给定数值可以是正数、负数或零。"
     },
     {
         "key": "sec_golden_rules",
         "original": "1.2. Golden Rules",
-        "translation": ""
+        "translation": "黄金规则"
     },
     {
         "key": "rule_card_precedence",
         "original": "1.2.1. If the text of a card directly contradicts these rules, the text of the card takes precedence.",
-        "translation": ""
+        "translation": "如果卡牌文本与本规则直接冲突，以卡牌文本为准。"
     },
     {
         "key": "rule_cannot_precedence",
         "original": "1.2.2. If a rule or ability directs something to happen, but another effect states that it cannot happen, the \"cannot\" ability takes precedence.",
-        "translation": ""
+        "translation": "如果某条规则或某个能力指示某事发生，而另一个效果说明该事不能发生，则“不能”能力优先。"
     },
     {
         "key": "rule_if_able",
         "original": "1.2.3. If an instruction includes the words \"if able,\" it can only be carried out fully or not at all. If any part of the instruction is not possible to carry out, the entire instruction is ignored.",
-        "translation": ""
+        "translation": "如果一项指示包含“if able”，则其要么完整执行，要么完全不执行。如果该指示的任一部分无法执行，则忽略整项指示。"
     },
     {
         "key": "rule_do_as_much_as_you_can",
         "original": "1.2.4. If an instruction does not include the words \"if able,\" as much of that instruction as possible is carried out. Any parts of the instruction that are not possible to carry out are ignored.",
-        "translation": ""
+        "translation": "如果一项指示不包含“if able”，则尽可能执行该指示。该指示中无法执行的部分会被忽略。"
     },
     {
         "key": "sec_symbols",
         "original": "1.3. Symbols",
-        "translation": ""
+        "translation": "符号"
     },
     {
         "key": "rule_symbols",
         "original": "1.3.1. Several non-English symbols appear on cards and in this rules document. This section serves as a basic guide to those symbols.",
-        "translation": ""
+        "translation": "卡牌和本文档中会出现若干非英文符号。本节提供这些符号的基本说明。"
     },
     {
         "key": "rule_symbol_credits",
         "original": "1.3.2. The symbol [c] (plaintext: {curly:c}) stands for \"credit\". It always appears with a quantity, such as 1[c], which means \"one credit,\" or 3[c], which means \"three credits.\" See {ref:sec_credits} for rules about credits.",
-        "translation": ""
+        "translation": "符号 [c]（纯文本：{curly:c}）表示“信用点”。它总是与数量一起出现，例如 1[c] 表示“1个信用点”，3[c] 表示“3个信用点”。有关信用点的规则，见{ref:sec_credits}。"
     },
     {
         "key": "rule_symbol_clicks",
         "original": "1.3.3. The symbol [click] (plaintext: {curly:click}) stands for \"click\". Multiple clicks can be represented either by multiple symbols, such as [click][click], or by a numeral and symbol, such as 2[click], both meaning \"two clicks.\" See {ref:sec_clicks} for rules about clicks.",
-        "translation": ""
+        "translation": "符号 [click]（纯文本：{curly:click}）表示“时点”。多个时点可以用多个符号表示，例如 [click][click]，也可以用数字加符号表示，例如 2[click]，二者都表示“2个时点”。有关时点的规则，见{ref:sec_clicks}。"
     },
     {
         "key": "rule_symbol_recurring",
         "original": "1.3.4. The symbol [recurring] (plaintext: {curly:recurring}) stands for recurring credit. It always appears with a quantity, such as 1[recurring], which means \"one recurring credit,\" or 3[recurring], which means \"three recurring credits.\" See {ref:rule_sec_recurring} for rules about recurring credits.",
-        "translation": ""
+        "translation": "符号 [recurring]（纯文本：{curly:recurring}）表示常续信用点。它总是与数量一起出现，例如 1[recurring] 表示“1个常续信用点”，3[recurring] 表示“3个常续信用点”。有关常续信用点的规则，见{ref:rule_sec_recurring}。"
     },
     {
         "key": "rule_symbol_link",
         "original": "1.3.5. The symbol [link] (plaintext: {curly:link}) stands for \"link\". It is always used with a quantity, such as 1[link], which means \"1 link.\" See {ref:sec_link} for rules about link.",
-        "translation": ""
+        "translation": "符号 [link]（纯文本：{curly:link}）表示“中转”。它总是与数量一起使用，例如 1[link] 表示“1点中转”。有关中转的规则，见{ref:sec_link}。"
     },
     {
         "key": "rule_symbol_mu",
         "original": "1.3.6. The symbol [MU] (plaintext: {curly:MU}) stands for \"memory\" and also represents the unit used to measure memory. When used with a quantity, it should be read as \"memory units\". For example, 2[MU] means \"2 memory units.\" See {ref:sec_memory} for rules about memory.",
-        "translation": ""
+        "translation": "符号 [MU]（纯文本：{curly:MU}）表示“内存”，也表示衡量内存的单位。与数量一起使用时，应读作“内存单元”。例如，2[MU] 表示“2个内存单元”。有关内存的规则，见{ref:sec_memory}。"
     },
     {
         "key": "rule_symbol_sub",
         "original": "1.3.7. The symbol [sub] (plaintext: {curly:sub}) stands for \"subroutine\". Each symbol marks a single subroutine on a piece of ice. See {ref:sec_subroutines} for information about subroutines.",
-        "translation": ""
+        "translation": "符号 [sub]（纯文本：{curly:sub}）表示“子进程”。每个该符号都会标记一层防火墙上的1条子进程。有关子进程的信息，见{ref:sec_subroutines}。"
     },
     {
         "key": "rule_symbol_trash",
         "original": "1.3.8. The symbol [trash] (plaintext: {curly:trash}) stands for \"trash this card\". It is used as a self-referential cost in card text, such as \"[trash]: Draw 2 cards,\" which means \"Trash this card to draw 2 cards.\" See {ref:sec_costs} for rules about costs, and {ref:sec_trashing} for rules about trashing cards.",
-        "translation": ""
+        "translation": "符号 [trash]（纯文本：{curly:trash}）表示“销毁本卡牌”。它在卡牌文本中用作指向自身的费用，例如“[trash]：抽2张卡牌”表示“销毁本卡牌，以抽2张卡牌。”有关费用的规则，见{ref:sec_costs}；有关销毁卡牌的规则，见{ref:sec_trashing}。"
     },
     {
         "key": "rule_symbol_interrupt",
         "original": "1.3.9. The symbol [interrupt] (plaintext: {curly:interrupt}) stands for \"interrupt timing\". It is used to designate abilities that resolve immediately before other abilities. See {ref:sec_interrupts_replacements} for rules about interrupt abilities.",
-        "translation": ""
+        "translation": "符号 [interrupt]（纯文本：{curly:interrupt}）表示“中断时机”。它用于标示在其他能力之前立即结算的能力。有关中断能力的规则，见{ref:sec_interrupts_replacements}。"
     },
     {
         "key": "sec_deck_construction",
         "original": "1.4. Deck Construction",
-        "translation": ""
+        "translation": "牌组构筑"
     },
     {
         "key": "rule_identity",
         "original": "1.4.1. Each player's deck is associated with a single identity card that determines the faction, minimum deck size, and influence limit of that deck. The identity card may also stipulate other variances from the standard deckbuilding rules.",
-        "translation": ""
+        "translation": "每位玩家的牌组都对应唯一一张特性卡牌，该卡牌决定该牌组的派系、最小牌组张数和影响力上限。特性卡牌还可能规定相较于标准牌组构筑规则的其他差异。"
     },
     {
         "key": "rule_gateway_identities",
         "original": "1.4.1.a. The identities {card:The Catalyst} and {card:The Syndicate} from the {product:System Gateway Starter Pack} are intended for use only with the decks included in that pack. They are not legal for play under the full deck construction rules.",
-        "translation": ""
+        "translation": "来自 {product:系统入口起始包} 的特性 {card:触媒} 和 {card:商盟} 仅供与该补充包所附的牌组一同使用。在完整的牌组构筑规则下，它们不合法。"
     },
     {
         "key": "rule_legal_deck",
         "original": "1.4.2. Each deck must meet all requirements in this section to be legal for play.",
-        "translation": ""
+        "translation": "每副牌组都必须满足本节中的全部要求，才算合法可用。"
     },
     {
         "key": "rule_minimum_deck_size",
         "original": "1.4.3. The deck must contain at least as many cards as the minimum deck size indicated on the corresponding identity.",
-        "translation": ""
+        "translation": "牌组所含卡牌数量必须至少等于对应特性上标示的最小牌组张数。"
     },
     {
         "key": "rule_outside_the_deck",
         "original": "1.4.3.a. Identity cards, extra cards that begin the game outside the deck, and player aid cards are not part of the deck and are not counted towards the size of the deck.",
-        "translation": ""
+        "translation": "特性卡牌、在游戏开始时位于牌组外的额外卡牌，以及玩家辅助卡牌，都不属于牌组的一部分，也不计入牌组张数。"
     },
     {
         "key": "rule_maximum_deck_size",
         "original": "1.4.3.b. There is no maximum deck size.",
-        "translation": ""
+        "translation": "牌组张数没有上限。"
     },
     {
         "key": "rule_disallowed_cards",
         "original": "1.4.4. Decks cannot contain identity cards, player aid cards, cards from the wrong side (Corp cards in a Runner deck or vice-versa), or out-of-faction cards that lack influence costs.",
-        "translation": ""
+        "translation": "牌组不能包含特性卡牌、玩家辅助卡牌、错误阵营的卡牌（例如潜袭者牌组中的公司卡牌，或反之），以及没有影响力费用的非本派系卡牌。"
     },
     {
         "key": "rule_influence_limit",
         "original": "1.4.5. Neutral cards and cards that belong to a faction other than the corresponding identity's faction are all considered out-of-faction. The total influence cost of out-of-faction cards in the deck must not exceed the influence limit of that identity.",
-        "translation": ""
+        "translation": "中立卡牌以及不属于对应特性所属派系的卡牌，全部视为非本派系卡牌。牌组中非本派系卡牌的总影响力费用不能超过该特性的影响力上限。"
     },
     {
         "key": "rule_influence_by_copy",
         "original": "1.4.5.a. The total influence cost of out-of-faction cards is counted by copy and not by name.",
-        "translation": ""
+        "translation": "非本派系卡牌的总影响力费用按张数计算，而不是按名称计算。"
     },
     {
         "key": "rule_influence_by_copy-1-example",
         "original": "Including a single copy of {card:Diesel} in a non-Shaper deck adds 2 to the total influence in that deck, while including two copies of {card:Diesel} in a non-Shaper deck adds 4 to the total influence in that deck.",
-        "translation": ""
+        "translation": "在非塑造者牌组中加入 1 张 {card:迪燃}，会使该牌组的总影响力增加 2；在非塑造者牌组中加入 2 张 {card:迪燃}，则会使该牌组的总影响力增加 4。"
     },
     {
         "key": "rule_agenda_points",
         "original": "1.4.6. A Corp deck must contain agendas totalling a certain number of agenda points, as determined by the total number of cards in the deck.",
-        "translation": ""
+        "translation": "公司牌组必须包含总计达到一定议案分数的议案，该数值由牌组的总卡牌数量决定。"
     },
     {
         "key": "rule_40_44",
         "original": "1.4.6.a. A deck with 40 to 44 cards must contain 18 or 19 agenda points.",
-        "translation": ""
+        "translation": "40 至 44 张牌的牌组必须包含 18 或 19 点议案分数。"
     },
     {
         "key": "rule_45_49",
         "original": "1.4.6.b. A deck with 45 to 49 cards must contain 20 or 21 agenda points.",
-        "translation": ""
+        "translation": "45 至 49 张牌的牌组必须包含 20 或 21 点议案分数。"
     },
     {
         "key": "rule_50_54",
         "original": "1.4.6.c. A deck with 50 to 54 cards must contain 22 or 23 agenda points.",
-        "translation": ""
+        "translation": "50 至 54 张牌的牌组必须包含 22 或 23 点议案分数。"
     },
     {
         "key": "rule_54+",
         "original": "1.4.6.d. A deck with more than 54 cards must contain 22 or 23 agenda points, plus an additional 2 agenda points for every full 5 cards in the deck over 50.",
-        "translation": ""
+        "translation": "超过 54 张牌的牌组必须包含 22 或 23 点议案分数，且牌组中每完整多出 5 张超过 50 张的卡牌，再额外加入 2 点议案分数。"
     },
     {
         "key": "rule_54+-1-example",
         "original": "A 66 card deck requires 6 additional agenda points, since it includes 3 sets of 5 cards beyond 50. This gives a final requirement of either 28 or 29 agenda points.",
-        "translation": ""
+        "translation": "一副 66 张牌的牌组需要额外 6 点议案分数，因为它比 50 张多出了 3 组 5 张卡牌。因此其最终要求为 28 或 29 点议案分数。"
     },
     {
         "key": "rule_maximum_copies",
         "original": "1.4.7. The deck cannot contain more than 3 copies of any single card, by name. Some cards stipulate alternative copy limits in their card text.",
-        "translation": ""
+        "translation": "牌组中按名称计算，任一单张卡牌最多只能包含 3 张。有些卡牌会在其文本中规定不同的张数上限。"
     },
     {
         "key": "rule_special_tournament_rules",
         "original": "1.4.8. Tournament play may impose other restrictions or requirements on the legal configurations of identities and decks.",
-        "translation": ""
+        "translation": "赛事对局可能会对特性和牌组的合法配置施加其他限制或要求。"
     },
     {
         "key": "sec_extra_cards",
         "original": "1.5. Extra Cards",
-        "translation": ""
+        "translation": "额外卡牌"
     },
     {
         "key": "rule_outside_deck",
         "original": "1.5.1. Some abilities allow for the use of additional cards from outside the deck.",
-        "translation": ""
+        "translation": "某些能力允许使用牌组外的额外卡牌。"
     },
     {
         "key": "rule_identity_copy",
         "original": "1.5.2. {n}{card:Jinteki Biotech: Life Imagined} and {card:Méliès U: Only the Brightest} each have an ability which references different copies of the identity. There are different versions of those identities which have different abilities on their reverse side.{/n}",
-        "translation": ""
+        "translation": "{n}{card:人间生物科技：享你所想} 和 {card:梅里爱大学：精英汇聚} 都具有会引用该特性的不同复制版本的能力。这些特性存在不同版本，而其背面具有不同的能力。{/n}"
     },
     {
         "key": "rule_jinteki_biotech_detail",
         "original": "1.5.2.a. A player playing {card:Jinteki Biotech} as their identity may bring any number of copies of that identity along with their deck. After completing game setup, that player may choose any copy they own to be their active identity for the duration of the game. All other copies are placed outside the game.",
-        "translation": ""
+        "translation": "使用 {card:人间生物科技} 作为特性的玩家，可以随牌组携带任意数量该特性的复制版本。在完成游戏设置后，该玩家可以从自己拥有的这些复制版本中选择任意一张，作为本局游戏期间的当前特性。其余复制版本都放在游戏外。"
     },
     {
         "key": "rule_melies_u_detail",
         "original": "1.5.2.b. A player playing {card:Méliès U} as their identity may bring any number of copies of that identity along with their deck. At the start of the game, 1 copy will be their active identity, and all other copies are placed outside the game. Whenever the first ability on {card:Méliès U: Only the Brightest} resolves, that player is instructed to \"secretly set\" their identity. To complete this instruction, the player secretly chooses either their current identity card or 1 of the {card:Méliès U} identity cards outside the game, and the chosen copy becomes their active identity. The player can shuffle their current identity card into the set of copies outside the game in order to obscure whether they choose to keep the same copy or switch to another copy. The chosen identity card always enters the play area with its {card:Méliès U: Only the Brightest} side faceup. All other copies are placed outside the game until the ability resolves again.",
-        "translation": ""
+        "translation": "使用 {card:梅里爱大学} 作为特性的玩家，可以随牌组携带任意数量该特性的复制版本。游戏开始时，其中 1 张作为其当前特性，其余复制版本都置于游戏外。每当 {card:梅里爱大学：精英汇聚} 上的第一个能力结算时，该玩家会被指示“秘密设定”其特性。为完成此指示，该玩家秘密选择其当前的特性卡牌，或游戏外的 1 张 {card:梅里爱大学} 特性卡牌，而所选择的复制版本成为其当前特性。该玩家可以将其当前特性卡牌洗入游戏外的那组复制版本中，以隐藏其是选择保留同一复制版本还是切换到另一复制版本。所选择的特性卡牌总是以 {card:梅里爱大学：精英汇聚} 这一面正面朝上进入游戏区。其余复制版本在该能力再次结算前都置于游戏外。"
     },
     {
         "key": "rule_adam",
         "original": "1.5.3. One Runner identity, {card:Adam: Compulsive Hacker}, has the ability, \"You start the game with 3 different {subtype:directive} cards installed (these cards are not considered part of your deck).\"",
-        "translation": ""
+        "translation": "一张潜袭者特性 {card:亚当：强迫性黑客} 具有以下能力：“你游戏开始时具有三张已安装的不同的 {subtype:指令} 卡牌（这些卡牌不视为你牌组的一部分）。”"
     },
     {
         "key": "rule_adam_different_directives",
         "original": "1.5.3.a. A player playing Adam as their identity must bring at least 3 differently named cards with the {subtype:directive} subtype along with their deck. The player may bring any number of {subtype:directive} cards over the required 3.",
-        "translation": ""
+        "translation": "使用亚当作为特性的玩家，必须随牌组携带至少 3 张名称各不相同且具有 {subtype:指令} 子类别的卡牌。该玩家可以携带超过所需 3 张的任意数量 {subtype:指令} 卡牌。"
     },
     {
         "key": "rule_adam_directives_install",
         "original": "1.5.3.b. After players reveal their identities, the player playing Adam selects exactly 3 of their provided {subtype:directive} cards. Those cards begin the game installed in the play area. All other {subtype:directives} the player brought this way remain outside the game.",
-        "translation": ""
+        "translation": "在玩家展示其特性后，使用亚当的玩家从其携带的 {subtype:指令} 卡牌中恰好选择 3 张。这些卡牌以已安装状态开始游戏，并位于游戏区。该玩家以此法携带的所有其他 {subtype:指令} 都留在游戏外。"
     },
     {
         "key": "rule_adam_directives_deck",
         "original": "1.5.3.c. A player playing Adam can also include {subtype:directive} cards in their deck. The cards chosen to be installed at the beginning of the game do not impact the deck's influence requirements or the maximum allowed number of copies of those cards.",
-        "translation": ""
+        "translation": "使用亚当作为特性的玩家也可以在其牌组中包含 {subtype:指令} 卡牌。被选择在游戏开始时安装的那些卡牌，不会影响该牌组的影响力要求，也不会影响这些卡牌允许包含的最大张数。"
     },
     {
         "key": "rule_adam_directives_during_game",
         "original": "1.5.3.d. Once the game has begun, the cards installed this way are treated exactly as any other installed cards. Abilities that move these cards to other zones function normally, including shuffling them into the stack.",
-        "translation": ""
+        "translation": "游戏一旦开始，以此法安装的卡牌便与任何其他已安装卡牌完全相同。将这些卡牌移动到其他区域的能力会正常生效，包括将其洗入存储栈。"
     },
     {
         "key": "rule_additional_identity",
         "original": "1.5.4. Two cards, {card:Rebirth} and {card:DJ Fenris}, make use of identity cards other than the one selected by the player during deck construction.",
-        "translation": ""
+        "translation": "两张卡牌 {card:重生} 和 {card:DJ芬里斯} 会使用玩家在牌组构筑期间所选特性以外的其他特性卡牌。"
     },
     {
         "key": "rule_additional_identities_pile",
         "original": "1.5.4.a. A player may bring any number of additional Runner identity cards along with their deck. These cards are kept in a pile outside the game. The Runner may look at these cards at any time.",
-        "translation": ""
+        "translation": "玩家可以随牌组携带任意数量额外的潜袭者特性卡牌。这些卡牌置于游戏外的一叠牌中。潜袭者可以随时查看这些卡牌。"
     },
     {
         "key": "rule_additional_identities_reference",
         "original": "1.5.4.b. When an ability refers to an identity other than the Runner's current identity, it refers to the cards provided this way. If an identity card leaves the play area, it must be returned to the pile outside the game.",
-        "translation": ""
+        "translation": "当某个能力提及潜袭者当前特性以外的另一张特性时，它指的就是以此法提供的那些卡牌。如果一张特性卡牌离开游戏区，则其必须返回游戏外的那一叠牌中。"
     },
     {
         "key": "rule_legal_additional_identities",
         "original": "1.5.4.c. In a tournament, all identities brought to the game this way must be legal for players to use as their actual identity in that tournament.",
-        "translation": ""
+        "translation": "在赛事中，以此法带入对局的所有特性，都必须在该赛事中可以合法地作为玩家的实际特性使用。"
     },
     {
         "key": "rule_additional_identity_double_sided",
         "original": "1.5.4.d. If the Runner switches their identity with a double-sided identity, it enters play with the front side faceup. If the Runner switches a double-sided identity with another identity, the new identity enters play faceup regardless of the previous identity's current status.",
-        "translation": ""
+        "translation": "如果潜袭者将其特性切换为一张双面特性，该特性以正面朝上进入游戏。如果潜袭者将一张双面特性与另一张特性切换，则新特性无论先前特性的当前状态为何，都是正面朝上进入游戏。"
     },
     {
         "key": "sec_starting_the_game",
         "original": "1.6. Starting the Game",
-        "translation": ""
+        "translation": "开始游戏"
     },
     {
         "key": "rule_player_roles",
         "original": "1.6.1. The players decide who will play as the Corp and who will play as the Runner. Each player places an appropriate identity card for the side they are to play faceup in the play area, then supplies a corresponding deck, placing it facedown in the play area, and any appropriate extra cards.",
-        "translation": ""
+        "translation": "玩家决定谁扮演公司，谁扮演潜袭者。每位玩家将与其所扮演阵营相应的特性卡牌正面朝上放入游戏区，然后提供对应的牌组并将其背面朝上放入游戏区，以及任何相应的额外卡牌。"
     },
     {
         "key": "rule_setup_identity",
         "original": "1.6.1.a. Some identity cards have abilities that affect setup. Even though cards are not active until the game begins, these identities still alter setup at the appropriate step as indicated by their text.",
-        "translation": ""
+        "translation": "某些特性卡牌具有会影响设置的能力。尽管卡牌在游戏开始前都不是活动的，这些特性仍会依照其文本说明，在适当的步骤改变设置。"
     },
     {
         "key": "rule_double_sided_identity",
         "original": "1.6.1.b. Some identities are double-sided (see {ref:sec_identities}). If a player is playing a double-sided identity, it begins the game with the front side faceup.",
-        "translation": ""
+        "translation": "某些特性是双面的（见{ref:sec_identities}）。如果玩家使用双面特性，则其在游戏开始时以正面朝上。"
     },
     {
         "key": "rule_setup_abilities",
         "original": "1.6.2. If a player's identity has an ability that affects setup or the start of the game, and that ability does not directly correspond to a setup step outlined in this section of the rules, that player makes any necessary decisions and changes for their identity's special setup or start of game abilities at this time. If both players have setup or start of game abilities at this time, the Corp resolves theirs first.",
-        "translation": ""
+        "translation": "如果某位玩家的特性具有会影响设置或游戏开始的能力，而该能力并不直接对应本节规则中列出的某个设置步骤，则该玩家在此时为其特性的特殊设置或游戏开始能力作出任何必要的决定和调整。如果双方玩家此时都具有设置或游戏开始能力，则公司先结算其能力。"
     },
     {
         "key": "rule_start_tokens",
         "original": "1.6.3. The players create the bank by gathering all types of tokens described in {ref:sec_counters_and_tokens}.",
-        "translation": ""
+        "translation": "玩家汇集{ref:sec_counters_and_tokens}中所述的所有类型标记物，以建立银行。"
     },
     {
         "key": "rule_start_credits",
         "original": "1.6.4. Each player takes five credits from the bank, placing the credits in their credit pool.",
-        "translation": ""
+        "translation": "每位玩家从银行拿取 5 个信用点，并将这些信用点放入自己的信用池。"
     },
     {
         "key": "rule_start_shuffle",
         "original": "1.6.5. Each player shuffles their deck.",
-        "translation": ""
+        "translation": "每位玩家洗混其牌组。"
     },
     {
         "key": "rule_start_hand",
         "original": "1.6.6. Each player draws 5 cards from the top of their deck to form their starting hand.",
-        "translation": ""
+        "translation": "每位玩家从其牌组顶端抽 5 张卡牌，作为其起始手牌。"
     },
     {
         "key": "rule_mulligan",
         "original": "1.6.6.a. After drawing starting hands, the Corp may choose to take a mulligan; then, the Runner may choose to take a mulligan. To take a mulligan, the player shuffles their starting hand back into their deck, then draws a new starting hand. They must keep the second hand as their starting hand.",
-        "translation": ""
+        "translation": "在抽完起始手牌后，公司可以选择重新调度；然后，潜袭者可以选择重新调度。要进行重新调度，该玩家将其起始手牌洗回牌组，然后重新抽一手起始手牌。其必须保留第二手作为起始手牌。"
     },
     {
         "key": "rule_start_corp_turn",
         "original": "1.6.7. The game begins and the Corp takes their first turn.",
-        "translation": ""
+        "translation": "游戏开始，由公司进行其第一个回合。"
     },
     {
         "key": "rule_before_first_turn",
         "original": "1.6.7.a. If the Corp's identity has an ability with instructions for \"before taking your first turn,\" the Corp resolves that ability immediately before taking their first turn, and thus before the game starts.",
-        "translation": ""
+        "translation": "如果公司的特性具有“before taking your first turn”的能力指示，则公司在进行其第一个回合之前立即结算该能力，也即在游戏开始之前结算该能力。"
     },
     {
         "key": "sec_ending_the_game",
         "original": "1.7. Ending the Game",
-        "translation": ""
+        "translation": "结束游戏"
     },
     {
         "key": "rule_game_end",
         "original": "1.7.1. The game ends when a player meets one of their win conditions.",
-        "translation": ""
+        "translation": "当某位玩家满足其任一胜利条件时，游戏结束。"
     },
     {
         "key": "rule_simultaneous_win",
         "original": "1.7.1.a. If both players would simultaneously satisfy their win conditions, the game ends in a draw.",
-        "translation": ""
+        "translation": "如果双方玩家会同时满足各自的胜利条件，游戏以平局结束。"
     },
     {
         "key": "rule_win_conditions",
         "original": "1.7.2. Each player has two possible win conditions available.",
-        "translation": ""
+        "translation": "每位玩家都有两个可能的胜利条件。"
     },
     {
         "key": "rule_win_agenda_points",
         "original": "1.7.2.a. Either player can win by collecting agenda points in their score area (usually done by scoring or stealing agendas; see {ref:sec_score_scoring_steal}). A player with a score of 7 or more wins the game.",
-        "translation": ""
+        "translation": "任一玩家都可以通过在其分数区中收集议案分数来获胜（通常是通过计分或窃取议案；见{ref:sec_score_scoring_steal}）。分数达到 7 或以上的玩家赢得游戏。"
     },
     {
         "key": "rule_flatline",
         "original": "1.7.2.b. The Corp wins if the Runner is {term:flatlined}. The Runner is flatlined immediately if they suffer more damage than they have cards in their grip. See {ref:sec_damage} for information about damage. The Runner is also flatlined if, at the beginning of their discard step, their maximum hand size is less than 0. See {ref:sec_discard_phase} for information about maximum hand size and the discard step.",
-        "translation": ""
+        "translation": "如果潜袭者处于{term:死亡}状态，则公司获胜。如果潜袭者受到的伤害多于其操控器中的卡牌数量，则其立即死亡。有关伤害的信息见{ref:sec_damage}。此外，如果在其弃牌步骤开始时，其最大手牌上限小于 0，则潜袭者也会死亡。有关最大手牌上限和弃牌步骤的信息，见{ref:sec_discard_phase}。"
     },
     {
         "key": "rule_empty_rnd",
         "original": "1.7.2.c. The Runner wins if the Corp is required to draw a card from R&D but cannot because R&D is empty.",
-        "translation": ""
+        "translation": "如果公司被要求从研发中心抽 1 张卡牌，但因研发中心已空而无法如此做，则潜袭者获胜。"
     },
     {
         "key": "sec_cards",
         "original": "1.8. Cards",
-        "translation": ""
+        "translation": "卡牌"
     },
     {
         "key": "rule_corp_card_types",
         "original": "1.8.1. There are six types of Corp cards: agendas, assets, ice, identities, operations, and upgrades. All cards except the identity card are shuffled into the Corp's deck at the beginning of the game.",
-        "translation": ""
+        "translation": "公司卡牌共有六种类型：议案、资产、防火墙、特性、事务和升级。除特性卡牌外，所有卡牌都在游戏开始时洗入公司的牌组。"
     },
     {
         "key": "rule_runner_card_types",
         "original": "1.8.2. There are five types of Runner cards: events, hardware, identities, programs, and resources. All cards except the identity card are shuffled into the Runner's deck at the beginning of the game.",
-        "translation": ""
+        "translation": "潜袭者卡牌共有五种类型：事件、硬件、特性、程序和资源。除特性卡牌外，所有卡牌都在游戏开始时洗入潜袭者的牌组。"
     },
     {
         "key": "rule_active_cards",
         "original": "1.8.3. Cards that are {term:active} are able to affect the game through their abilities.",
-        "translation": ""
+        "translation": "处于{term:活动的}状态的卡牌可以通过其能力影响游戏。"
     },
     {
         "key": "rule_default_active_card_locations",
         "original": "1.8.3.a. Runner cards that are installed and faceup in the play area, Corp cards that are installed and rezzed, events and operations in the play area, agendas in the Corp's score area, and both players' identities are active.",
-        "translation": ""
+        "translation": "游戏区中已安装且正面朝上的潜袭者卡牌、已安装且已激活的公司卡牌、游戏区中的事件和事务、公司分数区中的议案，以及双方玩家的特性，都是活动的。"
     },
     {
         "key": "rule_runner_become_active",
         "original": "1.8.3.b. Unless otherwise stated, Runner cards become active as part of the process of playing or installing them.",
-        "translation": ""
+        "translation": "除非另有说明，潜袭者卡牌在打出或安装过程的一部分中变为活动状态。"
     },
     {
         "key": "rule_corp_become_active",
         "original": "1.8.3.c. Unless otherwise stated, Corp cards other than operations are installed unrezzed, and thus inactive, into the play area. Assets, ice, and upgrades become active when they are rezzed; agendas become active when they are scored. Operations become active as part of the process of playing them.",
-        "translation": ""
+        "translation": "除非另有说明，事务以外的公司卡牌都会以未激活状态安装到游戏区，因此是闲置的。资产、防火墙和升级在被激活时变为活动状态；议案在被计分时变为活动状态。事务在打出过程的一部分中变为活动状态。"
     },
     {
         "key": "rule_identity_become_active",
         "original": "1.8.3.d. Identity cards become active when the game begins.",
-        "translation": ""
+        "translation": "特性卡牌在游戏开始时变为活动状态。"
     },
     {
         "key": "rule_inactive_cards",
         "original": "1.8.4. Cards that are {term:inactive} are unable to affect the game or have most of their abilities used.",
-        "translation": ""
+        "translation": "处于{term:闲置的}状态的卡牌不能影响游戏，其大多数能力也不能被使用。"
     },
     {
         "key": "rule_default_inactive_card_locations",
         "original": "1.8.4.a. Cards are inactive in R&D, HQ, Archives, the heap, the grip, the stack, the Runner's score area, while set aside, and while removed from the game. Facedown cards in the play area are also inactive.",
-        "translation": ""
+        "translation": "位于研发中心、总部、档案库、堆阵、操控器、存储栈、潜袭者分数区、被搁置时以及被移出游戏时的卡牌，都是闲置的。游戏区中背面朝上的卡牌也都是闲置的。"
     },
     {
         "key": "rule_inactive_cards_characteristics",
         "original": "1.8.4.b. Inactive cards{n}, except facedown installed Runner cards,{/n} retain their printed characteristics (name, card type, faction, cost, subtypes, influence, etc). {n}See {ref:sec_facedown_runner_cards} for information about facedown installed Runner cards.{/n}",
-        "translation": ""
+        "translation": "闲置的卡牌{n}，背面朝上安装的潜袭者卡牌除外，{/n}会保留其印刷特征（名称、卡牌类型、派系、费用、子类别、影响力等）。{n}有关背面朝上安装的潜袭者卡牌的信息，见{ref:sec_facedown_runner_cards}。{/n}"
     },
     {
         "key": "rule_card_draw",
         "original": "1.8.5. For a player to {term:draw} 1 or more cards is to take that many cards from the top of their deck and put them into their hand. {ref:Sec_drawing_cards} provides more details about drawing cards.",
-        "translation": ""
+        "translation": "玩家{term:抽，抽取}1 张或更多卡牌，是指从其牌组顶端拿取相应数量的卡牌并放入手牌。有关补牌的更多细则，见{ref:Sec_drawing_cards}。"
     },
     {
         "key": "rule_inactive_ability_exception_link",
         "original": "1.8.6. Most abilities are active if and only if the card they appear on is active. {ref:Rule_ability_active_inactive_source_card} details the cases where abilities on inactive cards are still active.",
-        "translation": ""
+        "translation": "大多数能力当且仅当其所在卡牌是活动的时才是活动的。有关闲置卡牌上的能力仍然处于活动状态的情形，详见{ref:Rule_ability_active_inactive_source_card}。"
     },
     {
         "key": "rule_card_conversion",
         "original": "1.8.7. Abilities can convert cards from one type into another type, or even from a card into a counter. {ref:Rule_add_card_to_score_area,rule_card_to_counter} explain the details of card conversion.",
-        "translation": ""
+        "translation": "能力可以将卡牌从一种类型转化为另一种类型，甚至可以将一张卡牌转化为一个指示物。{ref:Rule_add_card_to_score_area,rule_card_to_counter}解释了卡牌转化的详细规则。"
     },
     {
         "key": "sec_counters_and_tokens",
         "original": "1.9. Counters and Tokens",
-        "translation": ""
+        "translation": "指示物与标记"
     },
     {
         "key": "rule_counters_cards",
         "original": "1.9.1. {term:Counters} and {term:tokens} are game pieces (or equivalent) that track various resources, effects, and statuses of players and their cards.",
-        "translation": ""
+        "translation": "{term:指示物}和{term:标记}是用于记录玩家及其卡牌的各种资源、效果和状态的游戏配件（或等效物）。"
     },
     {
         "key": "rule_counter_token",
         "original": "1.9.1.a. The terms \"counter\" and \"token\" are interchangeable.",
-        "translation": ""
+        "translation": "“指示物”和“标记”两个术语可以互换使用。"
     },
     {
         "key": "rule_bank",
         "original": "1.9.2. The {term:bank} is the supply of counters not yet in play. Counters in the bank are available to both players to take and use as dictated by the game rules and card abilities. Players do not control counters in the bank and cannot spend them. The bank is an unlimited supply; running out of game pieces to track a type of counter does not prohibit a player from gaining counters of that type or placing them on cards.",
-        "translation": ""
+        "translation": "{term:银行}是尚未进入游戏的指示物供应。银行中的指示物可供双方玩家依照游戏规则和卡牌能力拿取并使用。玩家不控制银行中的指示物，也不能花费它们。银行的供应是无限的；即便用于记录某类指示物的游戏配件用尽，也不会禁止玩家获得该类型的指示物或将其放到卡牌上。"
     },
     {
         "key": "rule_bank_default",
         "original": "1.9.2.a. If an instruction directs players to place counters on a card without designating where those counters come from, take those counters from the bank.",
-        "translation": ""
+        "translation": "如果一项指示要求玩家将指示物放到一张卡牌上，但没有指定这些指示物来自何处，则从银行拿取这些指示物。"
     },
     {
         "key": "rule_counters_placed_condition",
         "original": "1.9.2.b. A condition or restriction that looks for counters being placed on a card can be met by either counters from the bank or counters moved from another location.",
-        "translation": ""
+        "translation": "查看指示物是否被放到卡牌上的某个条件或限制，既可以由来自银行的指示物满足，也可以由从其他位置转移来的指示物满足。"
     },
     {
         "key": "rule_card_conversion_game_piece",
         "original": "1.9.3. Some abilities can convert a card into a counter. A counter put into play in this way is tracked with the card acting as a game piece. See {ref:rule_card_to_counter}.",
-        "translation": ""
+        "translation": "某些能力可以将卡牌转化为指示物。以此法进入游戏的指示物，会以该卡牌作为游戏配件来进行记录。见{ref:rule_card_to_counter}。"
     },
     {
         "key": "rule_additional_counters",
         "original": "1.9.4. Some abilities can cause a player or card to have or be \"considered to have\" 1 or more counters or additional counters without placing or giving those counters. A counter considered to exist in this way conveys all the same information and effects as a counter of the specified type would, except that it cannot be moved or removed from the card or player it belongs to, nor can it be spent to pay a cost.",
-        "translation": ""
+        "translation": "某些能力可以令某位玩家或某张卡牌拥有，或“视为拥有”1 个或更多指示物，或额外指示物，而无需放置或给予这些指示物。以此法视为存在的指示物，传达与指定类型指示物相同的全部信息和效果，但其不能从所属的卡牌或玩家上被转移或移除，也不能被花费用于支付费用。"
     },
     {
         "key": "rule_counter_types",
         "original": "1.9.5. There are ten types of counters: credit counters, click counters, tag counters, bad publicity counters, core damage counters, advancement counters, virus counters, power counters, agenda counters, and condition counters.",
-        "translation": ""
+        "translation": "指示物共有十种：信用点指示物、时点指示物、锁定标记、负面宣传标记、核心伤害指示物、推进指示物、病毒指示物、能量指示物、议案指示物和状态指示物。"
     },
     {
         "key": "rule_type_credit_counter",
         "original": "1.9.5.a. {term:Credit counters} are used to track the number of credits each player has in their credit pool; they can also be placed on cards. Rules for credits, the credit pool, and other related concepts are in {ref:sec_credits}.",
-        "translation": ""
+        "translation": "{term:信用点指示物}用于记录每位玩家信用池中的信用点数量；它们也可以放到卡牌上。有关信用点、信用池及其他相关概念的规则，见{ref:sec_credits}。"
     },
     {
         "key": "rule_type_click_counter",
         "original": "1.9.5.b. {term:Click counters} are a gameplay aid used to track the clicks the active player has spent or has left to spend during their turn. Rules for clicks are in {ref:sec_clicks}.",
-        "translation": ""
+        "translation": "{term:时点指示物}是用于记录主动玩家在其回合中已经花费或剩余可花费时点的游戏辅助物。有关时点的规则，见{ref:sec_clicks}。"
     },
     {
         "key": "rule_type_tag_counter",
         "original": "1.9.5.c. {term:Tag counters} are used to represent tags on the Runner. Rules for tags are given in {ref:sec_tags}.",
-        "translation": ""
+        "translation": "{term:锁定标记}用于表示潜袭者身上的锁定。有关锁定的规则，见{ref:sec_tags}。"
     },
     {
         "key": "rule_type_bad_pub_counter",
         "original": "1.9.5.d. {term:Bad publicity counters} {n}are used to represent bad publicity on the Corp{/n}. Rules for bad publicity are in {ref:sec_bad_publicity}.",
-        "translation": ""
+        "translation": "{term:负面宣传标记}{n}用于表示公司身上的负面宣传{/n}。有关负面宣传的规则，见{ref:sec_bad_publicity}。"
     },
     {
         "key": "rule_type_core_damage_counter",
         "original": "1.9.5.e. {term:Core damage counters} are a gameplay aid used to track core damage the Runner has suffered. Each point of core damage the Runner suffers forces them to take a core damage counter. See {ref:sec_damage}.",
-        "translation": ""
+        "translation": "{term:核心伤害指示物}是用于记录潜袭者所受到核心伤害的游戏辅助物。潜袭者每受到 1 点核心伤害，就必须拿取 1 个核心伤害指示物。见{ref:sec_damage}。"
     },
     {
         "key": "rule_type_advancement_counter",
         "original": "1.9.5.f. {term:Advancement counters} are a counter used primarily on installed agendas to track the Corp's progress toward being able to score them.",
-        "translation": ""
+        "translation": "{term:推进指示物}主要用于已安装的议案上，以记录公司距离能够计分这些议案的进度。"
     },
     {
         "key": "rule_type_virus_counter",
         "original": "1.9.5.g. {term:Virus counters} are a generic counter, used primarily by {subtype:virus} programs, that can be removed by the Corp purging them. See {ref:rule_purge}.",
-        "translation": ""
+        "translation": "{term:病毒指示物}是一种通用指示物，主要由 {subtype:病毒} 程序使用，公司可以通过清除病毒指示物来移除它们。见{ref:rule_purge}。"
     },
     {
         "key": "rule_type_power_counter",
         "original": "1.9.5.h. {term:Power counters} are a generic counter used by a variety of cards. They have no special rules.",
-        "translation": ""
+        "translation": "{term:能量指示物}是一种由各种卡牌使用的通用指示物。它没有特殊规则。"
     },
     {
         "key": "rule_type_agenda_counter",
         "original": "1.9.5.i. {term:Agenda counters} are a generic counter used primarily on scored agendas. They have no special rules.",
-        "translation": ""
+        "translation": "{term:议案指示物}是一种主要用于已计分议案上的通用指示物。它没有特殊规则。"
     },
     {
         "key": "rule_type_condition_counter",
         "original": "1.9.5.j. {term:Condition counters} are counters that have rules text. Their abilities are active as long as they are hosted on a card.",
-        "translation": ""
+        "translation": "{term:状态指示物}是带有规则文本的指示物。只要其附载在一张卡牌上，其能力就是活动的。"
     },
     {
         "key": "sec_credits",
         "original": "1.10. Credits",
-        "translation": ""
+        "translation": "信用点"
     },
     {
         "key": "sec_credits-snippet",
         "original": "Each of the Runner's credits represents enough money to upgrade some basic parts for their console, have a meal at a decent restaurant, or buy a ticket and some concessions for a night at the sensies.\nEach of the Corp's credits represents enough money to manufacture a run of computer parts, buy out a decent restaurant, or film a low-budget sensie.\n",
-        "translation": ""
+        "translation": "潜袭者的每个信用点都代表着足以为其控制台升级一些基础部件、在不错的餐馆吃一顿饭，或购买一张感官电影票以及一些小食的钱。\n公司的每个信用点都代表着足以生产一批电脑零件、买下一家不错的餐馆，或拍摄一部低成本感官电影的钱。"
     },
     {
         "key": "rule_credit",
         "original": "1.10.1. A {term:credit} ([c]) is the basic unit of currency. Players spend their credits to pay for various costs, card abilities, traces, etc. Credit counters most commonly represent 1[c] each, but can represent larger denominations if clearly marked.",
-        "translation": ""
+        "translation": "{term:信用点}（[c]）是基础货币单位。玩家花费信用点来支付各种费用、卡牌能力、追踪等。信用点指示物通常各代表 1[c]，但如果标识清楚，也可以表示更大的面额。"
     },
     {
         "key": "rule_credit_pool",
         "original": "1.10.2. Each player has a {term:credit pool} where they keep a supply of credit counters matching the credits they have available to spend. The number of credits in a player's credit pool is open information.",
-        "translation": ""
+        "translation": "每位玩家都有一个 {term:信用池}，用以放置与其当前可花费信用点数量相对应的信用点指示物。玩家信用池中的信用点数量是公开信息。"
     },
     {
         "key": "rule_gain_spend_lose_credits",
         "original": "1.10.3. Credits enter and leave a player's credit pool as that player gains, loses, or spends credits.",
-        "translation": ""
+        "translation": "当玩家获得、失去或花费信用点时，信用点会进出该玩家的信用池。"
     },
     {
         "key": "rule_gain_credits",
         "original": "1.10.3.a. A player {term:gains} credits whenever credits enter their credit pool from any location.",
-        "translation": ""
+        "translation": "每当信用点从任何位置进入玩家的信用池时，该玩家便{term:获得}信用点。"
     },
     {
         "key": "rule_lose_credits",
         "original": "1.10.3.b. If a player is required to {term:lose} credits, that player is forced to move the specified number of credits from their credit pool to the bank. Players cannot lose credits from cards.",
-        "translation": ""
+        "translation": "如果玩家被要求{term:失去}信用点，则该玩家必须将所指定数量的信用点从其信用池移到银行。玩家不能从卡牌上失去信用点。"
     },
     {
         "key": "rule_lose_credits-1-example",
         "original": "If a subroutine on {card:DNA Tracker} resolves, the Runner must lose 2[c] from their credit pool, or 1[c] if that is all they have. If the Runner's credit pool is empty, the effect does nothing.",
-        "translation": ""
+        "translation": "如果 {card:DNA追迹者} 的一个子进程结算，潜袭者必须从其信用池中失去 2[c]；如果其仅有 1[c]，则失去 1[c]。如果潜袭者的信用池为空，则该效果不执行。"
     },
     {
         "key": "rule_spend_credits",
         "original": "1.10.3.c. To {term:spend} or {term:pay} credits, a player puts the specified number of credits back into the bank. By default, the credits must come from the player's credit pool. Abilities can also allow players to spend credits hosted on their cards under certain conditions. If any such abilities apply, the player chooses how to divide the credits they are spending from among the allowed locations. The terms \"spend\" and \"pay\" are synonymous.",
-        "translation": ""
+        "translation": "要{term:花费}或{term:支付}信用点，玩家需将指定数量的信用点放回银行。默认情况下，这些信用点必须来自该玩家的信用池。能力也可以在特定条件下允许玩家花费附载在其卡牌上的信用点。如果有任何这类能力适用，则玩家自行选择如何在允许的位置之间分配其所花费的信用点。“花费”和“支付”两个术语同义。"
     },
     {
         "key": "rule_spend_credits-1-example",
         "original": "The Runner may use the credit from {card:Cyberfeeder} to pay for {card:Atman}'s first ability.",
-        "translation": ""
+        "translation": "潜袭者可以使用 {card:赛博补给器} 上的信用点来支付 {card:梵灵} 的第一个能力。"
     },
     {
         "key": "rule_spend_credits-2-example",
         "original": "The Runner may use credits from {card:Ghost Runner} when secretly spending credits to resolve a Psi ability (such as {card:The Future Perfect}).",
-        "translation": ""
+        "translation": "潜袭者在秘密花费信用点以结算灵能能力时（例如 {card:未来完人}），可以使用 {card:潜袭者幽灵} 上的信用点。"
     },
     {
         "key": "rule_spend_credits-3-example",
         "original": "The Runner must use credits from {card:Ghost Runner} if this is the only way for them to pay 3[c] when resolving the \"when encountered\" ability on {card:Tollbooth}.",
-        "translation": ""
+        "translation": "如果这是潜袭者在结算 {card:收费站} 的“when encountered”能力时支付 3[c] 的唯一方式，则其必须使用 {card:潜袭者幽灵} 上的信用点。"
     },
     {
         "key": "rule_hosted_credits",
         "original": "1.10.4. Abilities can place credits on cards, as discussed in {ref:sec_host}. Credits on a player's card are not in that player's credit pool; the player can only interact with those credits as instructed by card abilities.",
-        "translation": ""
+        "translation": "能力可以将信用点放到卡牌上，如{ref:sec_host}所述。玩家卡牌上的信用点不属于该玩家的信用池；玩家只能依照卡牌能力的指示与这些信用点互动。"
     },
     {
         "key": "rule_take_credits",
         "original": "1.10.4.a. If a player is instructed to {term:take} credits from a card, they remove that many credits from that card and gain those credits.",
-        "translation": ""
+        "translation": "如果玩家被指示从一张卡牌上拿取信用点，则其从该卡牌上移除相应数量的信用点，并获得这些信用点。"
     },
     {
         "key": "rule_spend_hosted_credits",
         "original": "1.10.4.b. If an ability specifies how a player is allowed to spend credits from a card, they can be spent from that card as if they were in the player's credit pool for the specified actions or abilities.",
-        "translation": ""
+        "translation": "如果某个能力说明玩家可以如何花费一张卡牌上的信用点，则在进行所指定的行动或使用所指定的能力时，这些信用点可视为位于该玩家的信用池中而从该卡牌上花费。"
     },
     {
         "key": "rule_spend_hosted_credits_during",
         "original": "1.10.4.c. If an ability specifies a time period during which a player is allowed to spend credits from a card, they can be spent from that card as if they were in the player's credit pool for any purpose (other than losing credits) as long as the specified time period is active or the specified duration has not expired.",
-        "translation": ""
+        "translation": "如果某个能力规定了玩家可以在某个时段内花费一张卡牌上的信用点，则只要该时段处于生效中或所规定的持续时间尚未结束，这些信用点都可以视为位于该玩家的信用池中，并可从该卡牌上为任何目的花费（失去信用点除外）。"
     },
     {
         "key": "rule_hosted_credits_use",
         "original": "1.10.4.d. Spending credits from a card is considered \"using\" the card that allowed those credits to be spent. See {ref:rule_using}.",
-        "translation": ""
+        "translation": "从一张卡牌上花费信用点，视为“使用”允许花费这些信用点的那张卡牌。见{ref:rule_using}。"
     },
     {
         "key": "rule_sec_recurring",
         "original": "1.10.5. Recurring Credits",
-        "translation": ""
+        "translation": "常续信用点"
     },
     {
         "key": "rule_recurring_credits",
         "original": "1.10.5.a. {term:Recurring Credits} ([recurring]) place credits on a card repeatedly. The text \"N[recurring]\" means \"When this card becomes active, place N credits on it. Before abilities meet their trigger conditions for your turn beginning, if there are fewer than N credits on this card, place credits on it until there are N credits on it.\"",
-        "translation": ""
+        "translation": "{term:常续信用点}（[recurring]）会反复将信用点放到一张卡牌上。文本“N[recurring]”表示“当本卡牌变为活动状态时，将 N 个信用点放到其上。在你的回合开始的触发条件被满足之前，如果本卡牌上的信用点少于 N 个，则在其上放置信用点，直到其上有 N 个信用点为止。”"
     },
     {
         "key": "rule_placing_recurring_credits",
         "original": "1.10.5.b. Recurring credits are first placed on a card as soon as it becomes active. This occurs at {ref:rule_steps_installing_become_installed} of installing the card if it is installed active, {ref:rule_steps_playing_active} of playing an event or operation, or as soon as the card is turned faceup or scored, as applicable.",
-        "translation": ""
+        "translation": "常续信用点会在卡牌变为活动状态时首次放到该卡牌上。如果该卡牌是以活动状态被安装的，则这发生在安装该卡牌的 {ref:rule_steps_installing_become_installed}；如果是打出事件或事务，则发生在 {ref:rule_steps_playing_active}；在其他适用情况下，则发生在该卡牌正面朝上或被计分时。"
     },
     {
         "key": "rule_refill_recurring_credits",
         "original": "1.10.5.c. Recurring credits are refilled during {ref:step_corp_turn_recurring_credits_refill} of the Corp's turn and {ref:step_runner_turn_recurring_credits_refill} of the Runner's turn, before other abilities that apply at the start of the turn resolve.",
-        "translation": ""
+        "translation": "常续信用点会在公司回合的 {ref:step_corp_turn_recurring_credits_refill} 和潜袭者回合的 {ref:step_runner_turn_recurring_credits_refill} 补充，且发生在其他适用于回合开始时的能力结算之前。"
     },
     {
         "key": "rule_recurring_credits_do_not_accumulate",
         "original": "1.10.5.d. Recurring credits do not accumulate. They are refilled only up to the indicated number.",
-        "translation": ""
+        "translation": "常续信用点不会累积。它们只会补充到所标示的数量。"
     },
     {
         "key": "rule_recurring_credits_do_not_accumulate-1-example",
         "original": "The Runner installs {card:Spinal Modem}, which has 2[recurring]. 2 credits are placed on {card:Spinal Modem} now. The Runner spends 1 of those credits later in their turn. At the beginning of the Runner's next turn, the credits on {card:Spinal Modem} should be replenished up to 2[c], so 1 more credit is placed on it.",
-        "translation": ""
+        "translation": "潜袭者安装了具有 2[recurring] 的 {card:脊髓调制器}。此时会在 {card:脊髓调制器} 上放置 2 个信用点。之后，潜袭者在其回合中花费了其中 1 个信用点。在潜袭者的下个回合开始时，{card:脊髓调制器} 上的信用点应补充至 2[c]，因此再在其上放置 1 个信用点。"
     },
     {
         "key": "sec_clicks",
         "original": "1.11. Clicks",
-        "translation": ""
+        "translation": "时点"
     },
     {
         "key": "sec_clicks-snippet",
         "original": "Working a job, making connections, and especially jacking in—everything you do takes time, and it always goes by faster than you think. A click represents an abstract amount of time spent on a particular activity, either several hours all at once or scattered across the day.\n",
-        "translation": ""
+        "translation": "做一份工作、建立人脉，尤其是接入矩阵，你做的每件事都要花时间，而且时间总是比你想得过得更快。一个时点代表花在某项特定活动上的抽象时间量，可能是一次性的几个小时，也可能是散落在一天中的零碎时间。"
     },
     {
         "key": "rule_click",
         "original": "1.11.1. A {term:click} ([click]) is the basic unit of activity. Players spend their clicks to perform actions and trigger abilities. Each click counter represents 1 click.",
-        "translation": ""
+        "translation": "{term:时点}（[click]）是行动的基本单位。玩家花费时点来执行行动并触发能力。每个时点指示物代表 1 个时点。"
     },
     {
         "key": "rule_allotted_clicks",
         "original": "1.11.2. As the first step of a player's turn, they gain an allotted number of clicks to spend during the action phase of that turn. See {ref:chpt_turns} for details about the procedures of player turns.",
-        "translation": ""
+        "translation": "作为玩家回合的第一步，其会获得该回合行动阶段中可花费的规定数量时点。有关玩家回合流程的细节，见{ref:chpt_turns}。"
     },
     {
         "key": "rule_corp_allotted_clicks",
         "original": "1.11.2.a. The Corp receives 3[click] on each of their turns.",
-        "translation": ""
+        "translation": "公司在其每个回合获得 3[click]。"
     },
     {
         "key": "rule_runner_allotted_clicks",
         "original": "1.11.2.b. The Runner receives 4[click] on each of their turns.",
-        "translation": ""
+        "translation": "潜袭者在其每个回合获得 4[click]。"
     },
     {
         "key": "rule_gain_spend_lose_clicks",
         "original": "1.11.3. Players can gain, lose, or spend clicks.",
-        "translation": ""
+        "translation": "玩家可以获得、失去或花费时点。"
     },
     {
         "key": "rule_gain_clicks",
         "original": "1.11.3.a. A player {term:gains} clicks whenever the number of clicks they have is increased.",
-        "translation": ""
+        "translation": "每当玩家拥有的时点数量增加时，该玩家便{term:获得}时点。"
     },
     {
         "key": "rule_lose_spend_clicks",
         "original": "1.11.3.b. If a player {term:loses} or {term:spends} clicks, the number of clicks they have is reduced by that amount. The terms \"lose\" and \"spend\" are not synonymous for the purposes of meeting conditions and restrictions of card abilities.",
-        "translation": ""
+        "translation": "如果玩家{term:失去}或{term:花费}时点，其拥有的时点数量便减少相应数值。为满足卡牌能力的条件和限制之目的，“失去”和“花费”两个术语并不同义。"
     },
     {
         "key": "rule_click_actions",
         "original": "1.11.3.c. Paid abilities that begin with [click] are actions and have special timing rules (see {ref:sec_actions}). Aside from taking actions, there are no special restrictions to how or when a player can spend their clicks during their turn.",
-        "translation": ""
+        "translation": "以 [click] 开头的付费能力属于行动，并具有特殊的时机规则（见{ref:sec_actions}）。除执行行动外，玩家在其回合中如何或何时花费时点并无其他特殊限制。"
     },
     {
         "key": "rule_priority_subtype",
         "original": "1.11.4. Some cards have the subtype {subtype:priority} and the text, \"Play only as your first [click].\" A player can only play a {subtype:priority} card using the basic action to play an event or operation, and only if they have not spent any other clicks that turn. Losing clicks does not affect a player's ability to play a {subtype:priority} card.",
-        "translation": ""
+        "translation": "某些卡牌具有 {subtype:优先权} 子类别，以及文本“仅能作为你本回合的第一个 [click] 打出。”玩家只能通过打出事件或事务的基本行动来打出 {subtype:优先权} 卡牌，并且只能在该回合尚未花费任何其他时点时如此做。失去时点不会影响玩家打出 {subtype:优先权} 卡牌的能力。"
     },
     {
         "key": "sec_objects",
         "original": "1.12. Objects",
-        "translation": ""
+        "translation": "物件"
     },
     {
         "key": "rule_object",
         "original": "1.12.1. An {term:object} is an occurrence of a card or counter existing in a particular zone. When a card or counter moves from one zone to another, it becomes a new object.",
-        "translation": ""
+        "translation": "{term:物件}是指存在于特定区域中的一张卡牌或一个指示物的某个实例。当一张卡牌或一个指示物从一个区域移动到另一个区域时，其会成为一个新的物件。"
     },
     {
         "key": "rule_no_memory",
         "original": "1.12.2. Restrictions and effects on a card or counter only apply for as long as that card or counter remains the same object. Cards and counters have no memory of the objects they were in the past.",
-        "translation": ""
+        "translation": "施加在一张卡牌或一个指示物上的限制和效果，只在该卡牌或指示物保持为同一物件时适用。卡牌和指示物不会记住其过去曾是哪些物件。"
     },
     {
         "key": "rule_no_memory-1-example",
         "original": "The Corp uses the first ability on {card:Vaporframe Fabricator}, which specifies that it can only be used once per turn, and trashes {card:Vaporframe Fabricator} during the installation process. Then the Corp plays Restore, reinstalling the same copy of {card:Vaporframe Fabricator} from Archives. Even though it is the same physical card, the reinstalled {card:Vaporframe Fabricator} is a new object, and its \"once per turn\" ability is available to be used this turn.",
-        "translation": ""
+        "translation": "公司使用 {card:汽焰编织} 的第一个能力，该能力规定其每回合只能使用一次，并在安装过程中销毁 {card:汽焰编织}。然后公司打出 Restore，将同一张 {card:汽焰编织} 从档案库重新安装。尽管它在物理上仍是同一张卡牌，但重新安装后的 {card:汽焰编织} 是一个新的物件，因此其“每回合一次”能力在本回合仍可再次使用。"
     },
     {
         "key": "rule_identify_object_after_move",
         "original": "1.12.2.a. An ability that moves cards can identify the new objects that those cards become and continue to act on them.",
-        "translation": ""
+        "translation": "移动卡牌的能力可以识别这些卡牌所变成的新物件，并继续对其起作用。"
     },
     {
         "key": "rule_identify_object_after_move-1-example",
         "original": "The Corp plays {card:Priority Construction}, installing a piece of ice from HQ. That ice is now a new object in the play area, but {card:Priority Construction}'s second instruction can still find it and place advancement counters on it.",
-        "translation": ""
+        "translation": "公司打出 {card:优先建设}，从总部安装一层防火墙。该防火墙现在是游戏区中的一个新物件，但 {card:优先建设} 的第二条指示仍可以找到它并在其上放置推进指示物。"
     },
     {
         "key": "rule_object_move_location",
         "original": "1.12.3. A card that moves from its location to a hidden or secret location becomes a new object, even if the new location is in the same zone.",
-        "translation": ""
+        "translation": "一张卡牌从其所在位置移动到一个隐藏或秘密位置时，即使新位置仍在同一区域内，其也会成为新的物件。"
     },
     {
         "key": "rule_object_move_location-1-example",
         "original": "The Corp scores {card:Accelerated Beta Test}, looks at the top 3 cards of R&D, and installs and rezzes a piece of ice from among them. As a chain reaction, the Corp then uses {card:The Foundry: Refining the Process} to search R&D, with the result that the other cards currently being looked at by {card:Accelerated Beta Test} are shuffled along with the rest of R&D. Since the cards were moved to an unknown location in R&D, {card:Accelerated Beta Test} can no longer act on them, so those cards can no longer be looked at and will not be installed or trashed.",
-        "translation": ""
+        "translation": "公司计分 {card:加速版本测试}，查看研发中心顶端的 3 张卡牌，并从中安装且激活一层防火墙。随后连锁地，公司又使用 {card:铸造工厂：精炼流程} 去搜寻研发中心，其结果是当前正由 {card:加速版本测试} 查看的其他卡牌也会和研发中心的其余卡牌一起被洗混。由于这些卡牌已被移动到研发中心中的未知位置，{card:加速版本测试} 不能再对它们起作用，因此这些卡牌不能再被查看，也不会被安装或销毁。"
     },
     {
         "key": "rule_object_move_location-2-example",
         "original": "The top card of R&D in the current game state is an object. So is the 2nd card from the top of R&D, the 3rd card, and so on. If the Corp plays {card:Precognition} and rearranges the top 5 cards of R&D, the Runner will not know which cards correspond to which objects in the previous order, so the cards become new objects under their new order.",
-        "translation": ""
+        "translation": "在当前游戏状态中，研发中心顶端的卡牌是一个物件。研发中心顶端第 2 张卡牌是一个物件，第 3 张卡牌也是，依此类推。如果公司打出 {card:预知} 并重新排列研发中心顶端的 5 张卡牌，则潜袭者将无法知道这些卡牌与原先顺序中的哪些物件对应，因此这些卡牌在新顺序下成为新的物件。"
     },
     {
         "key": "rule_object_move_known_location",
         "original": "1.12.4. A card or counter that moves to a known location in the same zone is still the same object.",
-        "translation": ""
+        "translation": "一张卡牌或一个指示物移动到同一区域中的已知位置时，仍然是同一物件。"
     },
     {
         "key": "rule_object_move_known_location-1-example",
         "original": "The Runner has chosen a piece of ice with {card:Femme Fatale}, and the Corp uses {card:Thimblerig}'s ability to move that ice to another location. But the ice has not left the play area, so it is still the same object and the Runner can still use {card:Femme Fatale}'s ability to bypass it.",
-        "translation": ""
+        "translation": "潜袭者已用 {card:蛇蝎美人} 选择了一层防火墙，而公司使用 {card:隐豆戏法} 的能力将该防火墙移到另一个位置。但该防火墙并未离开游戏区，因此它仍是同一物件，潜袭者仍可以使用 {card:蛇蝎美人} 的能力来略过它。"
     },
     {
         "key": "rule_object_turn_faceup_facedown",
         "original": "1.12.5. A card that is turned faceup or facedown is still the same object.",
-        "translation": ""
+        "translation": "一张卡牌被翻为正面朝上或背面朝上时，仍是同一物件。"
     },
     {
         "key": "rule_object_turn_faceup_facedown-1-example",
         "original": "The Corp uses {card:Vaporframe Fabricator}, installing a piece of ice at no cost, and then plays Divert Power to derez {card:Vaporframe Fabricator} and rez their newly-installed ice at a discount. The Corp can rez {card:Vaporframe Fabricator} again, but since it is still the same object, its \"once per turn\" ability cannot be used again this turn.",
-        "translation": ""
+        "translation": "公司使用 {card:汽焰编织}，免费安装一层防火墙，然后打出能量转向，以折扣关闭 {card:汽焰编织} 并激活其新安装的防火墙。公司之后可以再次激活 {card:汽焰编织}，但由于它仍是同一物件，其“每回合一次”能力本回合不能再次使用。"
     },
     {
         "key": "rule_previous_object",
         "original": "1.12.6. When a card or counter becomes a new object, its previous object ceases to exist, but can still be remembered by rules or abilities that refer to past game states.",
-        "translation": ""
+        "translation": "当一张卡牌或一个指示物成为新的物件时，其先前的物件便不复存在，但规则或能力在引用过去的游戏状态时，仍可以记住它。"
     },
     {
         "key": "rule_previous_object-1-example",
         "original": "The Runner plays {card:Bravado}. During the run, a piece of ice that the Runner has already passed is trashed. When the run ends, {card:Bravado}'s ability must determine how many pieces of ice the Runner passed during that run. It does this by reviewing the game history and counting each distinct ice object that the Runner passed. Even though the object corresponding to the trashed ice no longer exists in the present game state, {card:Bravado} can still count it.",
-        "translation": ""
+        "translation": "潜袭者打出 {card:虚张声势}。在本次潜袭过程中，一层潜袭者已经通过的防火墙被销毁。当该次潜袭结束时，{card:虚张声势} 的能力必须确定潜袭者在该次潜袭中通过了多少层防火墙。它会通过回顾游戏历史并统计潜袭者所通过的每个不同防火墙物件来做到这一点。尽管与被销毁防火墙对应的物件在当前游戏状态中已不存在，{card:虚张声势} 仍然可以将其计入。"
     },
     {
         "key": "rule_previous_object-2-example",
         "original": "The Runner trashes the top card of R&D while accessing it. The object corresponding to that card in its location on top of R&D ceases to exist, but still counts against the number of cards the Runner can access from R&D during this breach.",
-        "translation": ""
+        "translation": "潜袭者在读取研发中心顶端卡牌时将其销毁。与该卡牌在研发中心顶端位置对应的物件不复存在，但它仍会计入潜袭者在此次侵入中可从研发中心读取的卡牌数量。"
     },
     {
         "key": "rule_previous_object_source",
         "original": "1.12.6.a. An object that has ceased to exist still counts as the source for any active lingering effects created by that object. See {ref:sec_lingering_effects} for information about lingering effects.",
-        "translation": ""
+        "translation": "已不复存在的物件，仍然算作由该物件所创建且当前仍处于活动状态的任何延续效果的来源。有关延续效果的信息，见{ref:sec_lingering_effects}。"
     },
     {
         "key": "rule_previous_object_source-1-example",
         "original": "The Runner runs a server, steals an agenda, and accesses a rezzed copy of {card:AMAZE Amusements}. The Runner trashes {card:AMAZE Amusements}, and the object they had accessed ceases to exist, while the trashed card becomes a new object in Archives. The source of the persistent ability created by the trashing is the original object in the root of the server, so the reference to \"this server\" in the persistent ability still refers to the attacked server, and the Runner will take 2 tags when the run ends.",
-        "translation": ""
+        "translation": "潜袭者对一台服务器发起潜袭，窃取了一个议案，并读取了该服务器根目录中的一张已激活 {card:惊奇迷乐园}。潜袭者销毁 {card:惊奇迷乐园} 后，其所读取的那个物件不复存在，而被销毁的卡牌则成为档案库中的一个新物件。由这次销毁创建的持续能力的来源，是该服务器根目录中的原始物件，因此该持续能力中“本服务器”所指仍是被攻击的服务器，而潜袭者在潜袭结束时将拿取 2 枚锁定标记。"
     },
     {
         "key": "sec_host",
         "original": "1.13. Host, Hosted, and Hosting",
-        "translation": ""
+        "translation": "附载、所附载的与附载关系"
     },
     {
         "key": "rule_placed_loaded",
         "original": "1.13.1. Whenever an object is \"placed\" or \"loaded\" onto a card, a host relationship is created between those two objects. The object placed on top of a card is {term:hosted} on that card. The card onto which the other object is placed is the {term:host}.",
-        "translation": ""
+        "translation": "每当一个物件被“placed”或“loaded”到一张卡牌上时，这两个物件之间就会建立附载关系。被放到一张卡牌上的那个物件即所附载于该卡牌。另一个物件被放到其上的那张卡牌则是宿主。"
     },
     {
         "key": "rule_valid_hosts",
         "original": "1.13.1.a. Only cards in score areas and the play area can host objects.",
-        "translation": ""
+        "translation": "只有分数区和游戏区中的卡牌可以作为宿主来附载物件。"
     },
     {
         "key": "rule_hosted_installed_state",
         "original": "1.13.2. The state of being hosted is distinct, but not exclusive from, the state of being installed.",
-        "translation": ""
+        "translation": "处于所附载状态，与处于已安装状态是不同的状态，但二者并不互斥。"
     },
     {
         "key": "rule_host_without_install",
         "original": "1.13.2.a. If an ability instructs a player to host a card that is not installed without reference to installing it, the hosted card does not become installed.",
-        "translation": ""
+        "translation": "如果某个能力在不提及安装的情况下指示玩家附载一张未安装的卡牌，则该所附载的卡牌不会变为已安装。"
     },
     {
         "key": "rule_host_corp_card_uninstall",
         "original": "1.13.2.b. If an installed Corp card becomes hosted on a Runner card, the Corp card becomes uninstalled.",
-        "translation": ""
+        "translation": "如果一张已安装的公司卡牌附载到一张潜袭者卡牌上，则该公司卡牌变为未安装。"
     },
     {
         "key": "rule_install_from_hosted",
         "original": "1.13.2.c. If a card is installed from a hosted state, it ceases to be hosted. The hosting relationship ends at step {ref:rule_steps_installing_place} of the installation.",
-        "translation": ""
+        "translation": "如果一张卡牌从所附载状态被安装，则其不再处于所附载状态。该附载关系在安装的 {ref:rule_steps_installing_place} 步骤结束。"
     },
     {
         "key": "rule_hosted_counters_not_on_player",
         "original": "1.13.3. Hosted counters do not count as \"on\" a player or as objects a player \"has\". They are not counted by abilities that check the number of counters on a player and cannot be affected by abilities that remove counters from a player.",
-        "translation": ""
+        "translation": "所附载的指示物不视为“在”某位玩家身上，也不视为玩家“拥有”的物件。它们不会被检查玩家身上指示物数量的能力计数，也不能被从玩家身上移除指示物的能力影响。"
     },
     {
         "key": "rule_hosted_counters_not_on_player-1-example",
         "original": "The Corp resolves the first subroutine on {card:Whitespace}, forcing the Runner to lose 3[c]. The Runner cannot lose credits hosted on their cards, even if they do not have 3[c] in their credit pool.",
-        "translation": ""
+        "translation": "公司结算 {card:空白} 的第一个子进程，迫使潜袭者失去 3[c]。潜袭者不能失去附载在其卡牌上的信用点，即使其信用池中没有 3[c] 也是如此。"
     },
     {
         "key": "rule_hosted_counters_not_on_player-2-example",
         "original": "The Corp has a rezzed {card:Superdeep Borehole} with hosted bad publicity counters. When the Runner fills their bad publicity fund in {ref:step_initiation_bad_publicity}, they do not receive credits for the hosted bad publicity.",
-        "translation": ""
+        "translation": "公司有一张已激活的 {card:超深钻井}，其上附载有负面宣传标记。当潜袭者在 {ref:step_initiation_bad_publicity} 填充其负面宣传资金池时，其不会因这些所附载的负面宣传获得信用点。"
     },
     {
         "key": "rule_hosted_counters_not_on_player-3-example",
         "original": "The Corp plays {card:Scapegoat} to remove 2 bad publicity. They cannot remove bad publicity counters hosted on {card:Superdeep Borehole}.",
-        "translation": ""
+        "translation": "公司打出 {card:嫁祸} 以移除 2 点负面宣传。其不能移除附载在 {card:超深钻井} 上的负面宣传标记。"
     },
     {
         "key": "rule_hosted_limit",
         "original": "1.13.4. An object can only be hosted on a single card at any given time.",
-        "translation": ""
+        "translation": "一个物件在任一给定时刻只能附载在一张卡牌上。"
     },
     {
         "key": "rule_hosting_limit",
         "original": "1.13.5. A card can host any number of other objects, except where explicitly restricted by a card ability.",
-        "translation": ""
+        "translation": "一张卡牌可以附载任意数量的其他物件，除非卡牌能力明确限制。"
     },
     {
         "key": "rule_host_relationship",
         "original": "1.13.6. Any card in an eligible location can act as a host, but a host relationship can only be created or permitted by a card ability.",
-        "translation": ""
+        "translation": "任何位于合格位置的卡牌都可以作为宿主，但附载关系只能由卡牌能力创建或允许。"
     },
     {
         "key": "rule_host_via_install",
         "original": "1.13.6.a. If a card has an ability describing the types and/or numbers of cards it can host, but it does not have an ability that directly hosts cards onto itself, then the card is permitted as an eligible installation destination for the types of cards listed, up to the number specified. A host card is chosen as an installation destination during {ref:rule_steps_installing_destination} of the installation process.",
-        "translation": ""
+        "translation": "如果一张卡牌具有描述其可以附载哪些类型和/或数量卡牌的能力，但没有能直接将卡牌附载到其自身上的能力，则该卡牌就是所列类型卡牌的一个合格安装目的地，并可容纳不超过所指定数量的卡牌。在安装过程中，于 {ref:rule_steps_installing_destination} 选择宿主卡牌作为安装目的地。"
     },
     {
         "key": "rule_host_via_install-1-example",
         "original": "{card:Off-Campus Apartment} has the ability, \"{card:Off-Campus Apartment} can host any number of {subtype:connections}.\" This means that whenever the Runner installs a {subtype:connection} card, they can choose to install that card into the play area hosted on {card:Off-Campus Apartment} or as normal directly into the play area.",
-        "translation": ""
+        "translation": "{card:校外公寓} 具有“{card:校外公寓} 可以附载任意数量的 {subtype:人脉}。”这一能力。这意味着每当潜袭者安装一张 {subtype:人脉} 卡牌时，其可以选择将该卡牌安装到游戏区并附载于 {card:校外公寓} 上，或像通常一样直接安装到游戏区。"
     },
     {
         "key": "rule_host_via_ability",
         "original": "1.13.6.b. If a card has an ability describing cards it can host, but also one or more abilities that can create host relationships onto itself, then it only allows cards to become hosted on it through those abilities. A card cannot be installed directly onto the card through an unrelated install effect.",
-        "translation": ""
+        "translation": "如果一张卡牌具有描述其可以附载哪些卡牌的能力，但同时也具有一个或多个能够在其自身上创建附载关系的能力，则卡牌只能通过这些能力附载到其上。不能通过无关的安装效果将卡牌直接安装到该卡牌上。"
     },
     {
         "key": "rule_host_via_ability-1-example",
         "original": "{card:Glenn Station} reads, \"{card:Glenn Station} can host a single card\", but also has a paid ability that hosts a card on itself. Therefore, {card:Glenn Station} only lets the Corp host cards through that paid ability, not through an install action.",
-        "translation": ""
+        "translation": "{card:格伦站} 的文本为“{card:格伦站} 可以附载 1 张卡牌”，且它还有一个将卡牌附载到其自身上的付费能力。因此，{card:格伦站} 只允许公司通过该付费能力来附载卡牌，而不能通过安装行动来如此做。"
     },
     {
         "key": "rule_host_on_ability",
         "original": "1.13.6.c. If a card has an ability stipulating that it can only be installed hosted onto another card, then during the installation process a player that wishes to install that card must choose a valid destination matching the description provided. If no such destination exists before the installation process begins, the card cannot be installed.",
-        "translation": ""
+        "translation": "如果一张卡牌具有规定其只能附载到另一张卡牌上安装的能力，则在安装过程中，希望安装该卡牌的玩家必须选择一个符合该描述的有效目的地。如果在安装过程开始前不存在这样的目的地，则该卡牌不能被安装。"
     },
     {
         "key": "rule_host_on_ability-1-example",
         "original": "{card:Egret} states, \"Install only on a rezzed piece of ice.\" The Runner can only install Egret if there is an installed, rezzed piece of ice available before the installation process begins; otherwise, it is illegal for the Runner to install {card:Egret}.",
-        "translation": ""
+        "translation": "{card:白鹭} 的文本为“仅能安装在一层已激活的防火墙上。”如果在安装过程开始前不存在一层已安装且已激活的防火墙，则潜袭者不能安装 {card:白鹭}；只有在这样的防火墙存在时，其才能安装该卡牌。"
     },
     {
         "key": "rule_condition_counter",
         "original": "1.13.6.d. Some operations and events convert themselves into condition counters and install themselves hosted onto other cards. An operation or event can never be installed through an install effect; it can only become an installed counter through its conversion ability. See {ref:rule_card_to_counter}.",
-        "translation": ""
+        "translation": "某些事务和事件会把自身转化为状态指示物，并以附载于其他卡牌上的方式安装自身。事务或事件永远不能通过安装效果被安装；它只能通过其转化能力变为一个已安装的指示物。见{ref:rule_card_to_counter}。"
     },
     {
         "key": "rule_host_faceup_facedown",
         "original": "1.13.7. Cards can be hosted faceup or facedown.",
-        "translation": ""
+        "translation": "卡牌可以以牌面朝上或牌面朝下的方式被附载。"
     },
     {
         "key": "rule_hosted_when_installed",
         "original": "1.13.7.a. Unless otherwise specified, a card that is hosted while it is being installed is hosted onto the destination card in the same faceup or facedown status it would normally be installed in.",
-        "translation": ""
+        "translation": "除非另有说明，在安装过程中被附载的卡牌，会以其通常被安装时的相同牌面朝上或牌面朝下状态附载到目标卡牌上。"
     },
     {
         "key": "rule_hosted_when_not_installed",
         "original": "1.13.7.b. Unless otherwise specified, a card that is hosted without being installed is hosted faceup.",
-        "translation": ""
+        "translation": "除非另有说明，未通过安装而被附载的卡牌，都是牌面朝上附载的。"
     },
     {
         "key": "rule_hosted_facedown_distinct",
         "original": "1.13.7.c. Like other facedown installed cards, installed cards hosted facedown are distinct. The order in which they were installed (or turned facedown) is open information.",
-        "translation": ""
+        "translation": "与其他牌面朝下的已安装卡牌一样，以牌面朝下方式附载的已安装卡牌彼此区分。它们被安装（或被翻为牌面朝下）的顺序属于公开信息。"
     },
     {
         "key": "rule_hosted_facedown_groups",
         "original": "1.13.7.d. Cards hosted facedown without being installed must be kept in distinct groups according to their host. Cards within such a group are not ordered and can be freely arranged by their controller.",
-        "translation": ""
+        "translation": "未通过安装而以牌面朝下方式附载的卡牌，必须按其宿主分别保持为彼此区分的组群。每个组群内的卡牌不具有顺序，其操控者可以自由整理。"
     },
     {
         "key": "rule_change_hosted",
         "original": "1.13.8. Once a card is installed, hosted or not, a player cannot change that card's hosted status unless a card ability explicitly directs it to be hosted onto a new card.",
-        "translation": ""
+        "translation": "一旦卡牌已安装，无论是否处于所附载状态，除非某张卡牌的能力明确指示其附载到一张新卡牌上，否则玩家不能改变该卡牌的附载状态。"
     },
     {
         "key": "rule_host_transitivity",
         "original": "1.13.9. Host relationships are not transitive. If card A is hosted on card B, and card B is hosted on card C, card A is not considered to be hosted on card C.",
-        "translation": ""
+        "translation": "附载关系不具有传递性。如果卡牌 A 附载于卡牌 B，而卡牌 B 附载于卡牌 C，则卡牌 A 不视为附载于卡牌 C。"
     },
     {
         "key": "rule_host_transitivity-1-example",
         "original": "If the Runner installs a {card:Leprechaun} hosted on a {card:Dhegdheer}, programs hosted on {card:Leprechaun} do not have their install costs reduced because they are hosted on {card:Leprechaun} and not on {card:Dhegdheer}.",
-        "translation": ""
+        "translation": "如果潜袭者将 {card:小矮妖} 附载于 {card:长耳怪} 上安装，则附载于 {card:小矮妖} 上的程序不会减少其安装费用，因为它们附载于 {card:小矮妖}，而非附载于 {card:长耳怪}。"
     },
     {
         "key": "rule_hosted_word_meaning",
         "original": "1.13.10. If an ability on a card refers to a \"hosted\" card or counter, that ability only references objects hosted on that card.",
-        "translation": ""
+        "translation": "如果某张卡牌上的能力提及“所附载的”卡牌或指示物，则该能力只会引用附载在该卡牌上的物件。"
     },
     {
         "key": "rule_remove_spend_hosted_objects",
         "original": "1.13.11. Hosted objects can be removed or spent from their host without affecting the host.",
-        "translation": ""
+        "translation": "所附载的物件可以从其宿主上被移除或被花费，而不影响宿主。"
     },
     {
         "key": "rule_hosted_object_same_zone_as_host",
         "original": "1.13.12. Creating a hosting relationship moves the hosted object to the same zone as the host. If the hosted object is subsequently moved to another zone or hosted on a different card, the hosting relationship ends.",
-        "translation": ""
+        "translation": "创建附载关系时，会将所附载的物件移到与宿主相同的区域中。如果该所附载的物件随后被移动到另一个区域，或附载到另一张不同的卡牌上，则附载关系结束。"
     },
     {
         "key": "rule_hosted_object_same_zone_as_host-1-example",
         "original": "The Runner uses the action on {card:Madani}, choosing 2 programs in their grip to host on {card:Madani}. The chosen cards change zones, moving from the Runner's grip to the play area.",
-        "translation": ""
+        "translation": "潜袭者使用 {card:承创} 上的行动，选择其操控器中的 2 个程序附载到 {card:承创} 上。所选择的卡牌会改变区域，从潜袭者的操控器移到游戏区。"
     },
     {
         "key": "rule_trash_hosted_objects_when_host_trashed",
         "original": "1.13.13. If a host card changes zones, except by moving from a player's score area to another player's score area, all objects hosted on that card (and all objects hosted on those objects, and so on) are trashed during the next checkpoint. This cannot be prevented. See {ref:sec_checkpoints} for details on checkpoints.",
-        "translation": ""
+        "translation": "如果一张宿主卡牌改变区域，除非是从一位玩家的分数区移动到另一位玩家的分数区，否则附载在该卡牌上的所有物件（以及附载在这些物件上的所有物件，依此类推）都会在下一个检查点被销毁。此事不能被防止。有关检查点的细则，见{ref:sec_checkpoints}。"
     },
     {
         "key": "rule_trash_hosted_objects_when_host_trashed-1-example",
         "original": "The Runner has an installed copy of {card:Detente} with Corp cards hosted on it. They play {card:Rejig}, adding {card:Detente} to their grip. The hosted Corp cards are trashed.",
-        "translation": ""
+        "translation": "潜袭者有一张已安装的 {card:共济}，其上附载有公司卡牌。其打出 {card:重整}，将 {card:共济} 加入其操控器。那些所附载的公司卡牌会被销毁。"
     },
     {
         "key": "rule_trash_hosted_objects_when_host_trashed-2-example",
         "original": "The Runner has {card:Next Big Thing} in their score area with a hosted agenda counter. The Corp plays {card:IP Enforcement} to install that agenda. The hosted agenda counter will be trashed after {ref:rule_steps_installing_pay_install_cost} of the installation.",
-        "translation": ""
+        "translation": "潜袭者的分数区中有 {card:下一波热潮}，其上附载有一个议案指示物。公司打出 {card:知识产权执法} 以安装该议案。该所附载的议案指示物会在该安装的 {ref:rule_steps_installing_pay_install_cost} 之后被销毁。"
     },
     {
         "key": "rule_trash_hosted_objects_when_host_trashed-3-example",
         "original": "The Runner has {card:Next Big Thing} in their score area with a hosted agenda counter. The Corp plays {card:Exchange of Information} to swap that agenda to their own score area. The agenda counter remains hosted on {card:Next Big Thing}.",
-        "translation": ""
+        "translation": "潜袭者的分数区中有 {card:下一波热潮}，其上附载有一个议案指示物。公司打出 {card:交换信息}，将该议案与其自己分数区中的议案互换。该议案指示物仍继续附载于 {card:下一波热潮} 上。"
     },
     {
         "key": "rule_condition_counters_can_host",
         "original": "1.13.14. Condition counters are the only type of counter that can host other objects. Hosting on condition counters follows the same rules as hosting on cards.",
-        "translation": ""
+        "translation": "状态指示物是唯一能够附载其他物件的指示物类型。附载于状态指示物上时，遵循与附载于卡牌上相同的规则。"
     },
     {
         "key": "sec_ownership",
         "original": "1.14. Ownership and Control",
-        "translation": ""
+        "translation": "所有权与操控"
     },
     {
         "key": "rule_owner",
         "original": "1.14.1. The {term:owner} of a card is the player who provided that card at the start of the game as their identity, part of their deck, or an extra card along with their deck.",
-        "translation": ""
+        "translation": "一张卡牌的 {term:所有者}，是指在游戏开始时将该卡牌作为其特性、其牌组的一部分，或随其牌组携带的额外卡牌提供出来的玩家。"
     },
     {
         "key": "rule_owner_converted_to_counter",
         "original": "1.14.1.a. A card that is converted into a counter retains its owner.",
-        "translation": ""
+        "translation": "一张被转化为指示物的卡牌会保留其所有者。"
     },
     {
         "key": "rule_owner_counters",
         "original": "1.14.1.b. No player owns counters that are not converted cards.",
-        "translation": ""
+        "translation": "未由卡牌转化而来的指示物不属于任何玩家所有。"
     },
     {
         "key": "rule_controller_object",
         "original": "1.14.2. The {term:controller of an object} is the player responsible for that object.",
-        "translation": ""
+        "translation": "{term:一个物件的操控者}是指负责该物件的玩家。"
     },
     {
         "key": "rule_controller_card_play_area",
         "original": "1.14.2.a. The controller of a card in the play area is the player who installed or placed it there.",
-        "translation": ""
+        "translation": "游戏区中一张卡牌的操控者，是安装或将其放入该处的玩家。"
     },
     {
         "key": "rule_controller_agenda",
         "original": "1.14.2.b. The Corp controls each agenda in the Corp's score area. The Runner controls each agenda in the Runner's score area.",
-        "translation": ""
+        "translation": "公司操控公司分数区中的每个议案。潜袭者操控潜袭者分数区中的每个议案。"
     },
     {
         "key": "rule_controller_default_owner",
         "original": "1.14.2.c. Cards in other zones are controlled by their owner.",
-        "translation": ""
+        "translation": "其他区域中的卡牌由其所有者操控。"
     },
     {
         "key": "rule_controller_credits",
         "original": "1.14.2.d. Each player controls the credits in their credit pool.",
-        "translation": ""
+        "translation": "每位玩家都操控其信用池中的信用点。"
     },
     {
         "key": "rule_controller_bad_publicity_tag",
         "original": "1.14.2.e. The Corp controls each bad publicity counter. The Runner controls each tag counter.",
-        "translation": ""
+        "translation": "公司操控每个负面宣传标记。潜袭者操控每个锁定标记。"
     },
     {
         "key": "rule_controller_hosted_counter",
         "original": "1.14.2.f. The controller of a counter hosted on a card is the player who controls the host card.",
-        "translation": ""
+        "translation": "附载在一张卡牌上的指示物，其操控者是该宿主卡牌的操控者。"
     },
     {
         "key": "rule_controller_click_core_damage",
         "original": "1.14.2.g. Click counters and core damage counters are gameplay aids only and have no controller.",
-        "translation": ""
+        "translation": "时点指示物与核心伤害指示物仅是游戏辅助物，并无操控者。"
     },
     {
         "key": "rule_pay_costs_controlled_objects",
         "original": "1.14.3. A player can only pay costs using objects they control{n}, unless specifically indicated.{/n}",
-        "translation": ""
+        "translation": "玩家只能使用其所操控的物件来支付费用{n}，除非有特别说明。{/n}"
     },
     {
         "key": "rule_remove_tags_or_bad_publicity_as_cost",
         "original": "1.14.3.a. Either player can remove tags or bad publicity from themself or their opponent to pay costs.",
-        "translation": ""
+        "translation": "任一玩家都可以从自己或对手身上移除锁定标记或负面宣传，以支付费用。"
     },
     {
         "key": "rule_controller_ability",
         "original": "1.14.4. The {term:controller of an ability} is the player responsible for that ability. By default, this is the player who controls the ability's source. See also {ref:rule_source}. A player can only use abilities they control.",
-        "translation": ""
+        "translation": "{term:一项能力的操控者}是指负责该能力的玩家。默认情况下，这位玩家就是该能力来源的操控者。另见{ref:rule_source}。玩家只能使用其所操控的能力。"
     },
     {
         "key": "rule_controller_agenda_abilities",
         "original": "1.14.4.a. Unless specifically stated otherwise, abilities on agendas are controlled by the Corp, even for agendas in the Runner's score area.",
-        "translation": ""
+        "translation": "除非有特别说明，议案上的能力一律由公司操控，即使该议案位于潜袭者的分数区也是如此。"
     },
     {
         "key": "rule_ability_controller_specified",
         "original": "1.14.4.b. Some abilities state that they can only be used by a specific player. The specified player controls each such ability, even if they do not control its source.",
-        "translation": ""
+        "translation": "某些能力会说明只有特定玩家可以使用它们。每个这类能力都由该特定玩家操控，即使其并不操控该能力的来源也是如此。"
     },
     {
         "key": "rule_controller_choices",
         "original": "1.14.5. Unless otherwise noted, the controller of an ability carries out its effects and makes any choices required. If a player is specified to perform all or part of an effect, the specified player carries out that part of the effect and makes any choices required instead.",
-        "translation": ""
+        "translation": "除非另有说明，能力的操控者执行其效果，并作出所需的任何选择。如果某位玩家被明确指定去执行某个效果的全部或部分，则由该指定玩家执行该部分效果，并作出所需的任何选择。"
     },
     {
         "key": "rule_controller_choices-1-example",
         "original": "{card:Rototurret}'s first subroutine reads, \"Trash 1 installed program.\" Since {card:Rototurret} is a Corp card, the Corp chooses which installed program to trash. Conversely, {card:Bulwark}'s first subroutine reads, \"The Runner trashes 1 installed program.\" Since the Runner is specified to be carrying out this effect, they choose which of their installed programs to trash.",
-        "translation": ""
+        "translation": "{card:旋转炮塔} 的第一个子进程为“销毁1个已安装的程序。”由于 {card:旋转炮塔} 是公司卡牌，因此由公司选择要销毁哪个已安装的程序。相对地，{card:壁垒} 的第一个子进程为“潜袭者销毁1个已安装的程序。”由于这里明确指定由潜袭者来执行该效果，因此由潜袭者选择要销毁其哪个已安装的程序。"
     },
     {
         "key": "rule_trigger_condition_effect_by_player",
         "original": "1.14.5.a. Some trigger conditions care about effects performed by a particular player. These conditions are only met when that player is the one to carry out the relevant effect.",
-        "translation": ""
+        "translation": "某些触发条件会在意某个特定玩家所执行的效果。只有当该玩家确实执行了相关效果时，这些条件才会被满足。"
     },
     {
         "key": "rule_trigger_condition_effect_by_player-1-example",
         "original": "The Corp has a rezzed {card:Hostile Infrastructure}. Apocalypse does not specify who trashes the cards, so the Runner is responsible for the trashing and {card:Hostile Infrastructure} meets its trigger condition.",
-        "translation": ""
+        "translation": "公司有一张已激活的 {card:敌意架构}。Apocalypse 没有说明由谁来销毁这些卡牌，因此由潜袭者负责销毁，而 {card:敌意架构} 的触发条件会被满足。"
     },
     {
         "key": "rule_trigger_condition_effect_by_player-2-example",
         "original": "{card:Alice Merchant} states that \"the Corp must trash 1 card from HQ\", so the Corp carries out this effect even though {card:Alice Merchant} is a Runner card, and therefore {card:Hostile Infrastructure} does not meet its trigger condition.",
-        "translation": ""
+        "translation": "{card:爱丽丝·默切特} 的文本为“公司必须从总部销毁1张卡牌”，因此即使 {card:爱丽丝·默切特} 是潜袭者卡牌，执行该效果的仍是公司，所以 {card:敌意架构} 的触发条件不会被满足。"
     },
     {
         "key": "sec_targets",
         "original": "1.15. Targets",
-        "translation": ""
+        "translation": "目标"
     },
     {
         "key": "rule_target",
         "original": "1.15.1. Many abilities require players to choose 1 or more objects or subroutines to affect. Each object and subroutine chosen for an ability is a {term:target} of that ability.",
-        "translation": ""
+        "translation": "许多能力要求玩家选择 1 个或更多物件或子进程来影响。为某个能力所选择的每个物件和子进程，都是该能力的 {term:目标}。"
     },
     {
         "key": "rule_target-1-example",
         "original": "{card:Top Hat} reads in part, \"you may choose 1 of the top 5 cards of R&D and access it.\" The target of this instruction is the card in R&D the Runner chooses.",
-        "translation": ""
+        "translation": "{card:礼帽} 的部分文本为“你可以选择研发中心顶端 5 张卡牌中的 1 张并读取之。”这条指示的目标，就是潜袭者从研发中心中选择的那张卡牌。"
     },
     {
         "key": "rule_target-2-example",
         "original": "One of the subroutines on {card:Colossus} reads in part, \"Trash 1 installed program and 1 installed resource.\" The targets of this subroutine are the two cards that will be trashed.",
-        "translation": ""
+        "translation": "{card:巨像} 的一个子进程部分文本为“销毁1个已安装的程序和1个已安装的资源。”该子进程的目标，就是将要被销毁的那两张卡牌。"
     },
     {
         "key": "rule_target-3-example",
         "original": "{card:Trick of Light} reads, \"Choose 1 installed card you can advance. Move up to 2 advancement counters from 1 other card to the chosen card.\" The targets of this operation are the advancement counters to be moved and the destination card. If 2 tokens are chosen, they must be hosted on the same card.",
-        "translation": ""
+        "translation": "{card:光影诡计} 的文本为“选择1张你可以推进的已安装卡牌。将最多2枚推进指示物从另1张卡牌移到所选择的卡牌上。”该事务的目标，是那些将要被转移的推进指示物以及目标卡牌。如果选择了 2 个标记，则它们必须附载在同一张卡牌上。"
     },
     {
         "key": "rule_target-4-example",
         "original": "The Runner is encountering a {subtype:barrier} and uses {card:Cleaver} to break subroutines. The targets of {card:Cleaver}'s' interface ability are the 1 or 2 subroutines that it will break.",
-        "translation": ""
+        "translation": "潜袭者正在遭遇一层 {subtype:屏障}，并使用 {card:剁肉刀} 来破解子进程。{card:剁肉刀} 的对接能力的目标，就是它将要破解的 1 条或 2 条子进程。"
     },
     {
         "key": "rule_searching_does_not_target",
         "original": "1.15.1.a. Cards found during a search are not considered targets of the instruction that performs the search. Players do not need to announce what card(s) they expect to find before the search actually takes place. See {ref:sec_searching_cards} for rules about searching.",
-        "translation": ""
+        "translation": "在搜寻过程中找到的卡牌，不视为执行该搜寻指示的目标。在实际进行搜寻之前，玩家不需要宣告其预期找到哪张或哪些卡牌。有关搜寻的规则，见{ref:sec_searching_cards}。"
     },
     {
         "key": "rule_object_subroutine_targets",
         "original": "1.15.1.b. Only objects and subroutines are announced as targets. If an instruction directs a player to choose (or \"name\") a number, a card type, a subtype, a card name, a server, or one of a specified set of effects, that choice is not made until the instruction resolves.",
-        "translation": ""
+        "translation": "只有物件与子进程会被宣告为目标。如果一项指示要求玩家选择（或“指名”）一个数字、一个卡牌类型、一个子类别、一个卡牌名称、一台服务器，或一组指定效果中的某一项，则该选择直到该指示结算时才会作出。"
     },
     {
         "key": "rule_announce_targets",
         "original": "1.15.2. Immediately before an instruction becomes imminent, the player resolving that instruction must first choose the targets required by that instruction. For each time the instruction requires a player to choose 1 or more objects and/or subroutines, that player {term:announces} appropriate targets. Once players are finished announcing targets for an instruction, the instruction becomes imminent, and players have the opportunity to modify the effects of that instruction with interrupt abilities before it resolves. See {ref:sec_interrupts_replacements}.",
-        "translation": ""
+        "translation": "在一项指示即将生效之前，结算该指示的玩家必须先选择该指示所要求的目标。每当该指示要求玩家选择 1 个或更多物件和/或子进程时，该玩家便{term:宣告}合适的目标。一旦玩家完成了为一项指示宣告目标，该指示便成为即将生效，而玩家可以在其结算前用中断能力来修改该指示的效果。见{ref:sec_interrupts_replacements}。"
     },
     {
         "key": "rule_target_indicate",
         "original": "1.15.2.a. When a player announces a card as a target, they indicate clearly which card is being chosen without changing its facedown/faceup status or location.",
-        "translation": ""
+        "translation": "当玩家宣告一张卡牌为目标时，其必须清楚表明所选的是哪张卡牌，且不能改变该卡牌牌面朝上或牌面朝下的状态，也不能改变其位置。"
     },
     {
         "key": "rule_targets_must_be_valid",
         "original": "1.15.2.b. The player resolving the instruction can only choose targets that are valid for that instruction. A target is valid for an instruction if it meets any specified requirements of that instruction or can otherwise be acted upon by that instruction.",
-        "translation": ""
+        "translation": "结算该指示的玩家只能选择对该指示有效的目标。如果某个目标满足该指示所指定的任何要求，或能够以其他方式被该指示影响，则该目标对该指示有效。"
     },
     {
         "key": "rule_targets_must_be_in_play_area",
         "original": "1.15.2.c. Unless an instruction explicitly specifies the zone from which an object must be selected as a target, only counters in the play area and installed cards are valid targets for that instruction.",
-        "translation": ""
+        "translation": "除非一项指示明确指定必须从哪个区域中选择某个物件作为目标，否则只有游戏区中的指示物与已安装的卡牌，才是该指示的有效目标。"
     },
     {
         "key": "rule_targets_must_be_in_play_area-1-example",
         "original": "The Corp resolves a subroutine that says \"[sub] The Runner trashes 1 program.\" The Runner must trash 1 of their installed programs and may not trash a program from their grip or stack.",
-        "translation": ""
+        "translation": "公司结算一个写有“[sub] 潜袭者销毁1个程序。”的子进程。潜袭者必须销毁其 1 个已安装的程序，而不能从其操控器或存储栈中销毁一个程序。"
     },
     {
         "key": "rule_multiple_targets",
         "original": "1.15.2.d. Some effects allow a player to choose multiple cards as targets for a single announcement. {ref:Subsec_quantities_and_sets} contains rules about resolving effects involving sets of cards.",
-        "translation": ""
+        "translation": "某些效果允许玩家通过一次宣告选择多张卡牌作为目标。有关结算卡牌集合相关效果的规则，见{ref:Subsec_quantities_and_sets}。"
     },
     {
         "key": "rule_distinct_targets",
         "original": "1.15.2.e. A player may announce the targets for an instruction in any order, but each object or subroutine can only be chosen as a target once for each announcement. If there are not enough valid targets available, then that player chooses as many distinct targets as possible and the remaining targets are not announced.",
-        "translation": ""
+        "translation": "玩家可以按任意顺序宣告一项指示的目标，但在每次宣告中，每个物件或子进程至多只能被选作一次目标。如果可用的有效目标不足，则该玩家尽可能选择数量足够多的不同目标，其余目标不作宣告。"
     },
     {
         "key": "rule_distinct_targets-1-example",
         "original": "The Runner accesses an {card:Aggressive Secretary} with three advancement counters on it. The Runner only has two installed programs, so the Corp chooses both of those programs for {card:Aggressive Secretary}. After the programs have been chosen, they are both trashed simultaneously.",
-        "translation": ""
+        "translation": "潜袭者读取了一张其上有三枚推进指示物的 {card:激进的助理}。潜袭者只有两个已安装的程序，因此公司为 {card:激进的助理} 选择这两个程序。在程序被选定后，它们会同时被销毁。"
     },
     {
         "key": "rule_targeting_only_once",
         "original": "1.15.2.f. Targets cannot be chosen for an instruction at any other time. Even if the game state changes due to interrupt abilities while the instruction is imminent, unannounced targets remain unchosen.",
-        "translation": ""
+        "translation": "除了在此时以外，不能在其他时间为一项指示选择目标。即使在指示即将生效时，游戏状态因中断能力而发生变化，尚未宣告的目标仍然不会被选择。"
     },
     {
         "key": "rule_targets_gone",
         "original": "1.15.3. At the time an instruction resolves, if any of its targets either have become invalid or were not announced, as much of that ability resolves as possible without acting on the unannounced or invalid targets, following {ref:rule_if_able,rule_do_as_much_as_you_can} of the Golden Rules. A target can be invalid because the chosen object or subroutine no longer exists or because the target no longer meets other requirements specified by the targeting ability.",
-        "translation": ""
+        "translation": "在一项指示结算时，如果其任一目标已经变为无效，或根本未被宣告，则依照黄金规则中的 {ref:rule_if_able,rule_do_as_much_as_you_can}，该能力会在不对未宣告或无效目标起作用的前提下尽可能结算。目标之所以可能无效，是因为所选择的物件或子进程已不再存在，或因为该目标不再满足指定该目标的能力所要求的其他条件。"
     },
     {
         "key": "rule_target_beyond_move",
         "original": "1.15.4. After the resolution of an instruction that chose a particular target, subsequent instructions of the same ability can continue to act on that target without needing to select it again, even if the ability moves the target or changes its properties. See also {ref:rule_no_memory}.",
-        "translation": ""
+        "translation": "在一项选择了特定目标的指示结算之后，即使该能力移动了该目标或改变了其特征，同一能力的后续指示仍可继续对该目标起作用，而无须再次选择它。另见{ref:rule_no_memory}。"
     },
     {
         "key": "rule_target_beyond_move-1-example",
         "original": "{card:Howler}'s ability targets a card in HQ. Its first instruction installs that card, and its second instruction creates a delayed conditional ability that refers to that card in the play area. The latter ability can find and act on the card as long as it is still installed. ",
-        "translation": ""
+        "translation": "{card:嚎叫者} 的能力以总部中的一张卡牌为目标。它的第一条指示安装该卡牌，而第二条指示创建一个延迟条件能力来引用游戏区中的该卡牌。只要那张卡牌仍然已安装，后续能力就能找到它并对其起作用。"
     },
     {
         "key": "sec_costs",
         "original": "1.16. Costs",
-        "translation": ""
+        "translation": "费用"
     },
     {
         "key": "rule_cost",
         "original": "1.16.1. In order to use an ability or apply an effect, a player may be required to pay a cost. A cost can take the form of any card, counter, or other item a player must spend; an effect a player must resolve; or other type of requirement a player must meet. If a player cannot pay the full cost of an action or ability all at once with cards and counters they control, they cannot use the effect associated with that cost.",
-        "translation": ""
+        "translation": "为了使用一个能力或应用一个效果，玩家可能被要求支付一项费用。费用可以表现为玩家必须花费的任意卡牌、指示物或其他项目；玩家必须结算的某个效果；或玩家必须满足的其他类型要求。如果玩家无法一次性用其所操控的卡牌和指示物完整支付某个行动或能力的全部费用，则其不能使用与该费用对应的效果。"
     },
     {
         "key": "rule_cost_no_interrupt",
         "original": "1.16.1.a. The act of paying a cost cannot be modified or cancelled by optional interrupt abilities.",
-        "translation": ""
+        "translation": "支付费用这一行为不能被可选的中断能力修改或取消。"
     },
     {
         "key": "rule_cost_no_interrupt-1-example",
         "original": "The Runner can trash {card:Clone Chip} to trigger its paid ability, but cannot use {card:LLDS Energy Regulator} to prevent {card:Clone Chip} from being trashed this way.",
-        "translation": ""
+        "translation": "潜袭者可以销毁 {card:克隆芯片} 来触发其付费能力，但不能使用 {card:LLDS能量调节器} 来防止 {card:克隆芯片} 以此法被销毁。"
     },
     {
         "key": "rule_cost_interrupt_static_mandatory",
         "original": "1.16.1.b. If a static ability or a mandatory conditional ability interrupt would prevent the steps of paying a cost from being carried out if they were performed as an effect, that cost cannot be paid.",
-        "translation": ""
+        "translation": "如果某个持续能力或某个强制条件能力的中断，会在支付费用的各步骤被当作效果执行时阻止这些步骤被执行，则该费用不能被支付。"
     },
     {
         "key": "rule_cost_interrupt_static_mandatory-1-example",
         "original": "The Runner cannot pay the additional cost to steal {card:Obokata Protocol} while {card:Guru Davinder} is installed, because the Runner could not currently take 4 damage if instructed to: {card:Guru Davinder}'s first ability would prevent the damage.",
-        "translation": ""
+        "translation": "当 {card:古鲁达温德} 已安装时，潜袭者不能支付窃取 {card:小保方协议} 的额外费用，因为如果被指示如此做，潜袭者当前将无法承受 4 点伤害：{card:古鲁达温德} 的第一个能力会防止该伤害。"
     },
     {
         "key": "rule_cost_interrupt_static_mandatory-2-example",
         "original": "The Runner is playing as {card:Jesminder Sareen} and encounters {card:Funhouse}, without any other tag-related effects resolving earlier in the run. Since {card:Jesminder Sareen}'s ability would prevent taking 1 tag, the Runner cannot take 1 tag to pay the nested cost in {card:Funhouse}'s ability. {card:Funhouse} will end the run.",
-        "translation": ""
+        "translation": "潜袭者使用 {card:杰斯敏德·萨林} 作为特性，并遭遇 {card:欢乐屋}，且在本次潜袭中更早时没有其他与锁定相关的效果结算。由于 {card:杰斯敏德·萨林} 的能力会防止拿取 1 枚锁定标记，潜袭者不能拿取 1 枚锁定标记来支付 {card:欢乐屋} 能力中的内部费用。{card:欢乐屋} 将终止本次潜袭。"
     },
     {
         "key": "rule_cost_restrictions",
         "original": "1.16.1.c. If triggering an ability or resolving an effect is subject to both costs and other restrictions, the cost cannot be paid unless all such restrictions are met, and cannot be paid in a way that would result in any restriction no longer being met.",
-        "translation": ""
+        "translation": "如果触发某个能力或结算某个效果同时受到费用和其他限制的约束，则除非所有这些限制都已满足，否则不能支付该费用；并且也不能以会导致任何限制不再满足的方式支付该费用。"
     },
     {
         "key": "rule_cost_restrictions-1-example",
         "original": "The Runner controls {card:Zer0} and {card:Clan Vengeance}, and wants to accumulate more power counters on {card:Clan Vengeance}. {card:Zer0}'s ability has the restriction \"Use this ability only once per turn.\" If the Runner has already used the ability this turn, they cannot suffer additional net damage by attempting (even unsuccessfully) to use the ability again.",
-        "translation": ""
+        "translation": "潜袭者操控 {card:0点} 和 {card:部落复仇}，并想要在 {card:部落复仇} 上累积更多能量指示物。{card:0点} 的能力具有“本能力每回合仅限使用一次”的限制。如果潜袭者本回合已经使用过该能力，则其不能通过再次尝试使用该能力（即使不成功）而额外受到网域伤害。"
     },
     {
         "key": "rule_cost_restrictions-2-example",
         "original": "The Corp installs {card:Azef Protocol} in the root of a server with a rezzed {card:SanSan City Grid} and advances {card:Azef Protocol} twice. Since {card:SanSan City Grid} reduces {card:Azef Protocol}'s advancement requirement to 2, the Corp now meets the restriction necessary to score {card:Azef Protocol}, but must also pay its additional cost to score. The Corp cannot trash the {card:SanSan City Grid} to pay this cost, because paying the cost this way would return {card:Azef Protocol}'s advancement requirement to 3, and the restriction to score it would no longer be met.",
-        "translation": ""
+        "translation": "公司将 {card:阿泽夫协议} 安装在一台根目录中有一张已激活 {card:圣加州城际网阵} 的服务器内，并将 {card:阿泽夫协议} 推进两次。由于 {card:圣加州城际网阵} 将 {card:阿泽夫协议} 的推进需求降为 2，公司现在满足了计分 {card:阿泽夫协议} 所需的限制，但仍必须支付其额外的计分费用。公司不能销毁 {card:圣加州城际网阵} 来支付该费用，因为若如此支付，会让 {card:阿泽夫协议} 的推进需求恢复为 3，而计分它所需的限制便不再满足。"
     },
     {
         "key": "rule_cost_zero",
         "original": "1.16.1.d. A cost of 0 can still be paid by a player, even though no items are paid. Costs of 0 are not paid automatically. A player pays a cost of 0 by explicitly announcing they are paying it.",
-        "translation": ""
+        "translation": "即使不需支付任何项目，费用为 0 仍然可以由玩家支付。0 费用不会被自动支付。玩家通过明确宣告其正在支付 0 费用来支付该费用。"
     },
     {
         "key": "rule_cost_zero-1-example",
         "original": "The Runner accesses a {card:Beanstalk Royalties} from R&D and announces that they are using the ability of {card:Freedom Khumalo: Crypto-Anarchist} to trash the {card:Beanstalk Royalties}. Even though the Runner does not remove any virus counters from any cards, they have still paid the cost.",
-        "translation": ""
+        "translation": "潜袭者从研发中心读取到 {card:豆茎授权金}，并宣告其正在使用 {card:自由库马洛：加密无政府主义者} 的能力来销毁该 {card:豆茎授权金}。尽管潜袭者没有从任何卡牌上移除病毒指示物，其仍然已经支付了该费用。"
     },
     {
         "key": "rule_modified_costs",
         "original": "1.16.2. The actual contents of a cost can be dependent on the game state. Abilities can modify their own costs, modify costs of a certain type or that meet certain criteria, or include costs that need to be calculated.",
-        "translation": ""
+        "translation": "费用的实际内容可以依赖当前游戏状态。能力可以修改其自身的费用、修改某一类型或满足特定条件的费用，或包含需要计算的费用。"
     },
     {
         "key": "rule_cost_calculation",
         "original": "1.16.2.a. If a quantity in a cost is subject to effects modifying its value, determine the final value of that quantity by taking its default value, applying each effect that increases the cost, and then applying each effect that lowers the cost. Finally, if the value determined by this process is less than 0, set the value to 0.",
-        "translation": ""
+        "translation": "如果费用中的某个数量会受到修改其数值的效果影响，则通过取其默认值、依次应用每个增加该费用的效果、再依次应用每个降低该费用的效果，来确定该数量的最终值。最后，如果通过此流程得出的数值小于 0，则将该数值设为 0。"
     },
     {
         "key": "rule_cost_quantities",
         "original": "1.16.2.b. Some abilities calculate a quantity using phrases like \"for each\", \"for every\", or \"plus\". Any time such a calculation appears in a cost, the result of that calculation is determined at the time the cost is to be paid. The result is taken as an aggregate, so that paying the cost is a single instance of whatever was paid. Note that additional costs ({ref:rule_nested_cost}) are not aggregated with other costs. See also {ref:Subsec_quantities_and_sets} for rules about calculated quantities that appear in other contexts.",
-        "translation": ""
+        "translation": "某些能力会使用“for each”“for every”或“plus”等措辞来计算一个数量。每当这种计算出现在费用中时，其结果都在该费用将要被支付时确定。所得结果会被视为一个总数，因此支付该费用属于对所支付项目的一次单独支付。注意，额外费用（{ref:rule_nested_cost}）不会与其他费用合并计算。另见{ref:Subsec_quantities_and_sets}，了解在其他语境中出现的计算数量相关规则。"
     },
     {
         "key": "rule_cost_quantities-1-example",
         "original": "The Runner approaches a server protected by 3 advanced pieces of ice and with a rezzed {card:Cayambe Grid} in its root. They pay the nested cost in {card:Cayambe Grid}'s ability. This cost is 1 payment of 6[c], not 3 payments of 2[c], so this only meets the trigger condition for 1 instance of {card:GameNET}'s ability.",
-        "translation": ""
+        "translation": "潜袭者接驳一台被 3 层已推进防火墙保护且其根目录中有一张已激活 {card:卡扬贝网阵} 的服务器。其支付 {card:卡扬贝网阵} 能力中的内部费用。该费用是一次支付 6[c]，而不是三次各支付 2[c]，因此这只会满足 {card:游网} 能力的 1 次触发条件。"
     },
     {
         "key": "rule_cost_x",
         "original": "1.16.2.c. Some costs contain the variable X. Before a player pays such a cost, they choose and announce a positive integer or 0 to be the value for X. The chosen value must follow any applicable restrictions.",
-        "translation": ""
+        "translation": "某些费用包含变量 X。在玩家支付此类费用之前，其选择并宣告一个正整数或 0 作为 X 的数值。所选择的数值必须遵守任何适用的限制。"
     },
     {
         "key": "rule_cost_x-1-example",
         "original": "{card:Psychographics} is an operation with a play cost of X. It also has the ability, \"X must be equal to or less than the number of tags the Runner has.\" If the Runner has 3 tags, the Corp can choose 0, 1, 2, or 3 as the value for X when they play {card:Psychographics}.",
-        "translation": ""
+        "translation": "{card:心理统计分析} 是一张打出费用为 X 的事务。其还具有“X 必须等于或少于潜袭者拥有的锁定标记数量”的能力。如果潜袭者拥有 3 枚锁定标记，则公司在打出 {card:心理统计分析} 时可以将 X 选择为 0、1、2 或 3。"
     },
     {
         "key": "rule_cost_x_out_of_context",
         "original": "1.16.2.d. If an ability needs to know the value of a cost in a context where that cost is not being paid, treat any X that appears in that cost as 0.",
-        "translation": ""
+        "translation": "如果某个能力需要在某项费用并未被支付的语境下得知该费用的数值，则将该费用中出现的任何 X 视为 0。"
     },
     {
         "key": "rule_alternate_payment",
         "original": "1.16.2.e. Some abilities modify a cost by allowing a player to pay part or all of that cost in an alternate way. This does not change the value of the cost, but gives the player an additional option when deciding how to pay that cost.",
-        "translation": ""
+        "translation": "某些能力会通过允许玩家以另一种方式支付某项费用的部分或全部，来修改该项费用。这不会改变该费用的数值，但会在玩家决定如何支付该费用时，为其提供一个额外选项。"
     },
     {
         "key": "rule_alternate_payment-1-example",
         "original": "The Corp rezzes {card:Biawak}, which has the ability \"You can forfeit 1 agenda as you rez this ice to pay for 10[c] of its rez cost.\" and a rez cost of 14[c]. The Corp chooses to pay {card:Biawak}'s rez cost by spending 2[c] from their credit pool, spending 2[c] from a {card:Mahkota Langit Grid}, and forfeiting 1 agenda.",
-        "translation": ""
+        "translation": "公司激活 {card:巨蜥}，其能力为“你可以在激活本防火墙时废除1个议案，以支付其激活费用中的 10[c]。”而其激活费用为 14[c]。公司选择以下方式支付 {card:巨蜥} 的激活费用：从其信用池中花费 2[c]、从一张 {card:天冕网阵} 上花费 2[c]，并废除 1 个议案。"
     },
     {
         "key": "rule_install_and_rez_reducing_total",
         "original": "1.16.2.f. An ability that instructs the Corp to install and rez a card can also reduce the \"total\" cost to do so. This use of \"total\" indicates that the Corp can divide the modifier between the install cost and the rez cost of the relevant card. When such a modifier applies, the Corp declares a number of credits by which to reduce the install cost and a number of credits by which to reduce the rez cost. This declaration is made at the beginning of {ref:rule_steps_installing_pay_install_cost}, before calculating the value of the install cost, and the numbers declared this way must be nonnegative numbers whose sum is equal to the number of credits specified by the original \"total\" modifier. The respective costs are then lowered by the declared amounts, following the normal procedure described in {ref:rule_cost_calculation}.",
-        "translation": ""
+        "translation": "某个指示公司安装并激活一张卡牌的能力，也可以降低如此做的“总计”费用。这里“总计”的用法表示公司可以在相关卡牌的安装费用和激活费用之间自行分配该修正值。当此类修正适用时，公司宣告一个用以降低安装费用的信用点数值，以及一个用以降低激活费用的信用点数值。此宣告在 {ref:rule_steps_installing_pay_install_cost} 开始时、计算安装费用的数值之前作出，而以此法宣告的两个数值都必须是非负数，且其总和必须等于原始“总计”修正所指定的信用点数量。随后，依照{ref:rule_cost_calculation}所述的通常流程，各项费用分别按所宣告的数值被降低。"
     },
     {
         "key": "rule_install_and_rez_reducing_total-1-example",
         "original": "The Corp uses the ability on {card:Tucana} to install and rez a copy of {card:Logjam} from R&D, paying a total of 3[c] less. They install the {card:Logjam} protecting a server that already has 1 piece of ice protecting it, meaning that without the \"total of 3[c] less\" modifier, the install cost would be 1[c] and the rez cost would be 6[c]. The Corp applies 1[c] of the discount to the install cost and 2[c] to the rez cost, leaving a final install cost of 0[c] and a final rez cost of 4[c].",
-        "translation": ""
+        "translation": "公司使用 {card:巨嘴鸟} 的能力，从研发中心安装并激活一张 {card:阻塞}，总计少支付 3[c]。其将 {card:阻塞} 安装为保护一台已经有 1 层防火墙保护的服务器，因此如果没有“总计少支付 3[c]”这一修正，则安装费用会是 1[c]，激活费用会是 6[c]。公司将其中 1[c] 的折扣应用于安装费用，并将 2[c] 应用于激活费用，最终得到 0[c] 的安装费用和 4[c] 的激活费用。"
     },
     {
         "key": "rule_cost_checkpoint",
         "original": "1.16.3. After a player pays a cost, a checkpoint occurs. See {ref:sec_checkpoints}.",
-        "translation": ""
+        "translation": "玩家支付完一项费用后，会发生一次检查点。见{ref:sec_checkpoints}。"
     },
     {
         "key": "rule_cost_checkpoint_cost_zero",
         "original": "1.16.3.a. This checkpoint occurs even if the cost being paid is 0.",
-        "translation": ""
+        "translation": "即使所支付的费用是 0，也会发生这次检查点。"
     },
     {
         "key": "rule_types_of_costs",
         "original": "1.16.4. There are six main types of costs: install costs (found mainly on hardware, programs, and resources, and incurred when installing ice), play costs (found on operations and events), rez costs (found on assets, upgrades, and ice), paid ability trigger costs, additional costs, and nested costs.",
-        "translation": ""
+        "translation": "费用主要有六种类型：安装费用（主要见于硬件、程序和资源，以及安装防火墙时产生）、打出费用（见于事务与事件）、激活费用（见于资产、升级和防火墙）、付费能力的触发费用、额外费用以及内部费用。"
     },
     {
         "key": "rule_inherent_cost",
         "original": "1.16.4.a. Install costs, rez costs, and play costs are all costs that are inherent properties of cards. These costs are automatically applied to any ability that performs the corresponding effects (installing, rezzing, or playing) unless that ability stipulates otherwise. See also {ref:sec_printed_cost} (for more about these costs as they appear on cards) and {ref:sec_install_cost}, {ref:rule_inherent_rez_cost} and {ref:rule_playing_play_cost} (for more about paying costs to install, rez, and play cards).",
-        "translation": ""
+        "translation": "安装费用、激活费用和打出费用，都是卡牌固有属性形式的费用。除非某个能力另有规定，否则任何执行对应效果（安装、激活或打出）的能力都会自动适用这些费用。另见{ref:sec_printed_cost}（进一步了解这些费用如何呈现在卡牌上），以及 {ref:sec_install_cost}、{ref:rule_inherent_rez_cost} 与 {ref:rule_playing_play_cost}（进一步了解如何支付安装、激活与打出卡牌的费用）。"
     },
     {
         "key": "rule_inherent_cost_in_ability",
         "original": "1.16.4.b. The presence of an install cost, rez cost, or play cost does not change the optional or mandatory status of an ability. If an effect directs a player to install, rez, or play a card, they must pay the associated cost if able. If they cannot, the card is not installed, rezzed, or played.",
-        "translation": ""
+        "translation": "安装费用、激活费用或打出费用的存在，不会改变一个能力是可选还是强制的状态。如果某个效果指示玩家安装、激活或打出一张卡牌，则如可能，其必须支付相关费用。如果不能支付，则该卡牌不会被安装、激活或打出。"
     },
     {
         "key": "rule_inherent_and_additional_cost",
         "original": "1.16.4.c. If an effect directs a player to install, rez, or play a card, but doing so has an additional cost, the player is not forced to pay the additional cost. If they decline to do so, they do not pay the install, rez, or play cost either, and the card is not installed, rezzed, or played.",
-        "translation": ""
+        "translation": "如果某个效果指示玩家安装、激活或打出一张卡牌，但如此做具有额外费用，则该玩家不会被强制支付该额外费用。如果其选择不支付，则其也不会支付安装、激活或打出费用，该卡牌也不会被安装、激活或打出。"
     },
     {
         "key": "rule_inherent_cost_aggregates",
         "original": "1.16.4.d. When a player takes an action that plays or installs one or more cards and has no other effects, the play cost or install cost of each of those cards is considered to have been spent to take that action, even though other steps take place between initiating the action and paying that cost.",
-        "translation": ""
+        "translation": "当玩家执行一个会打出或安装 1 张或更多卡牌且没有其他效果的行动时，这些卡牌各自的打出费用或安装费用，都会被视为为了执行该行动而花费的费用，即使在发起该行动与支付该费用之间还会发生其他步骤也是如此。"
     },
     {
         "key": "rule_inherent_cost_aggregates-1-example",
         "original": "The Corp has {card:Jeeves Model Bioroids} rezzed, and uses the basic action \"[Click]: Play an operation.\" to play {card:Blue Level Clearance}. Both the click spent for the cost of the basic action and the click spent for {card:Blue Level Clearance}'s additional cost count as clicks spent to take the \"[Click]: Play an operation.\" action.",
-        "translation": ""
+        "translation": "公司已激活 {card:吉夫斯型生化人}，并使用基本行动“[Click]：打出一个事务。”来打出 {card:蓝色许可}。为该基本行动的费用所花费的那个时点，以及为 {card:蓝色许可} 的额外费用所花费的那个时点，都会计为执行“[Click]：打出一个事务。”这一行动所花费的时点。"
     },
     {
         "key": "rule_ignoring_costs",
         "original": "1.16.5. Some abilities direct a player to ignore certain costs when performing particular effects.",
-        "translation": ""
+        "translation": "某些能力会指示玩家在执行特定效果时忽略某些费用。"
     },
     {
         "key": "rule_ignore_general_cost",
         "original": "1.16.5.a. If a player is directed to ignore 1 or more of the 6 main types of costs, the specified costs are removed from the total cost that must be paid. Any other costs (usually additional costs) that are not specified to be ignored still apply normally.",
-        "translation": ""
+        "translation": "如果玩家被指示忽略六种主要费用类型中的一种或多种，则所指定的费用会从必须支付的总费用中移除。任何未被指定为忽略的其他费用（通常是额外费用）仍照常适用。"
     },
     {
         "key": "rule_ignore_credit_cost",
         "original": "1.16.5.b. If a player is directed to ignore \"credit costs\", any credits to be paid from any type of cost are removed from the total cost. Any costs that do not consist of credits still apply normally.",
-        "translation": ""
+        "translation": "如果玩家被指示忽略“信用点费用”，则来自任意类型费用中需要支付的所有信用点，都会从总费用中移除。任何不由信用点构成的费用仍照常适用。"
     },
     {
         "key": "rule_ignore_all_costs",
         "original": "1.16.5.c. If a player is directed to ignore \"all costs\", all elements of the relevant cost are removed, including additional costs, so that the total cost becomes 0.",
-        "translation": ""
+        "translation": "如果玩家被指示忽略“所有费用”，则相关费用中的所有组成部分都会被移除，包括额外费用，因此总费用会变为 0。"
     },
     {
         "key": "rule_install_cost",
         "original": "1.16.6. The {term:install cost} of a card must be paid to install that card.",
-        "translation": ""
+        "translation": "一张卡牌的 {term:安装费用} 必须被支付，才能安装该卡牌。"
     },
     {
         "key": "rule_install_cost_on_card",
         "original": "1.16.6.a. The install cost of a program, resource, or piece of hardware is listed on the card itself.",
-        "translation": ""
+        "translation": "程序、资源或硬件的安装费用列在卡牌本身上。"
     },
     {
         "key": "rule_install_cost_ice",
         "original": "1.16.6.b. The install cost of a piece of ice is a number of credits equal to the number of pieces of ice already protecting the server that ice will be installed protecting.",
-        "translation": ""
+        "translation": "一层防火墙的安装费用，等于该防火墙将要安装保护的那台服务器已经受到保护的防火墙数量所对应的信用点数。"
     },
     {
         "key": "rule_no_install_cost",
         "original": "1.16.6.c. There is no cost to install an asset, upgrade, or agenda.",
-        "translation": ""
+        "translation": "安装资产、升级或议案不需要费用。"
     },
     {
         "key": "rule_play_cost",
         "original": "1.16.7. The {term:play cost} of an operation or event must be paid to play that card. It is listed on the card itself.",
-        "translation": ""
+        "translation": "事务或事件的 {term:打出费用} 必须被支付，才能打出该卡牌。它列在卡牌本身上。"
     },
     {
         "key": "rule_rez_cost",
         "original": "1.16.8. The {term:rez cost} of an asset, upgrade, or piece of ice must be paid in order to rez that card. It is listed on the card itself.",
-        "translation": ""
+        "translation": "资产、升级或防火墙的 {term:激活费用} 必须被支付，才能激活该卡牌。它列在卡牌本身上。"
     },
     {
         "key": "rule_trigger_cost",
         "original": "1.16.9. The {term:trigger cost} of each paid ability is the first part of that ability's text. It is followed by a colon (:) and then the ability's effect. See {ref:sec_paid_abilities} for more details on paid abilities.",
-        "translation": ""
+        "translation": "每个付费能力的 {term:触发费用} 是该能力文本的第一部分。其后跟一个冒号（:），然后是该能力的效果。有关付费能力的更多细则，见{ref:sec_paid_abilities}。"
     },
     {
         "key": "rule_additional_cost",
         "original": "1.16.10. An {term:additional cost} adds something to the regular cost of initiating a particular game effect. A player must pay all additional costs along with any regular costs in order to initiate an effect.",
-        "translation": ""
+        "translation": "{term:额外费用}会将某项内容加入到发起特定游戏效果的常规费用中。玩家必须连同任何常规费用一起支付所有额外费用，才能发起该效果。"
     },
     {
         "key": "rule_decline_additional_cost",
         "original": "1.16.10.a. If a player would be forced to carry out a game effect, but doing so has an additional cost, that player may decline to pay the additional cost, even if they are able to pay it, thus preventing that effect from occurring.",
-        "translation": ""
+        "translation": "如果玩家会被强制执行某个游戏效果，但如此做具有额外费用，则该玩家可以选择不支付该额外费用，即使其有能力支付也可以，如此便阻止该效果发生。"
     },
     {
         "key": "rule_decline_additional_cost-1-example",
         "original": "The Runner accesses {card:Obokata Protocol}. Normally the Runner must steal agendas that they access, but because {card:Obokata Protocol} has an additional cost to steal, the Runner can decline to suffer the net damage and not steal the agenda.",
-        "translation": ""
+        "translation": "潜袭者读取 {card:小保方协议}。通常潜袭者必须窃取其所读取的议案，但由于 {card:小保方协议} 具有窃取的额外费用，潜袭者可以选择不承受该网域伤害，并且不窃取该议案。"
     },
     {
         "key": "rule_additonal_cost_simultaenous",
         "original": "1.16.10.b. A player must pay all additional costs simultaneously with the cost that is being added to, even if multiple cards or abilities are adding separate additional costs. A player cannot pay the original cost or any of the additional costs individually. If they cannot pay for all of the costs at once, then they do not pay any of the costs and the corresponding effects cannot occur.",
-        "translation": ""
+        "translation": "玩家必须与被添加到的那项费用同时支付所有额外费用，即使有多张卡牌或多个能力各自增加了不同的额外费用也是如此。玩家不能分别单独支付原始费用或任一额外费用。如果其无法一次性支付所有这些费用，则其不会支付任何费用，而对应效果也不能发生。"
     },
     {
         "key": "rule_additonal_cost_simultaenous-1-example",
         "original": "The Runner accesses {card:Obokata Protocol} while {card:Ben Musashi} and {card:Predictive Algorithm} are both active. The Runner must be able to pay 2 credits and suffer 6 net damage all at once in order to steal the {card:Obokata Protocol}, even though each of the three costs are from different card abilities. After all costs have been paid, abilities that meet their trigger conditions from the paying of any of those costs, such as {card:I've Had Worse} or {card:Order of Sol}, can then resolve as applicable.",
-        "translation": ""
+        "translation": "潜袭者在 {card:武藏弁} 与 {card:预测算法} 都处于活动状态时读取 {card:小保方协议}。潜袭者必须能够一次性支付 2 个信用点并承受 6 点网域伤害，才能窃取该 {card:小保方协议}，即使这三项费用分别来自不同的卡牌能力也是如此。所有费用都支付完毕后，由支付这些费用中的任一项而满足触发条件的能力，例如 {card:这还不算惨} 或 {card:玄晖社}，才会在适用时结算。"
     },
     {
         "key": "rule_additional_cost_checkpoint",
         "original": "1.16.10.c. If an additional cost is required for an effect that does not normally require paying any cost, the additional cost is paid and a checkpoint is resolved before performing the usual procedure to carry out that effect. See also {ref:rule_checkpoint_after_paying_cost}.",
-        "translation": ""
+        "translation": "如果某个通常不需要支付任何费用的效果需要一个额外费用，则在执行该效果的通常流程之前，先支付该额外费用并结算一个检查点。另见{ref:rule_checkpoint_after_paying_cost}。"
     },
     {
         "key": "rule_additional_cost_checkpoint-1-example",
         "original": "The Corp is playing {card:Ob Superheavy Logistics} and initiates scoring {card:Azef Protocol}, which has an additional cost to score of \"trash one of your other installed cards.\" If the Corp trashes a rezzed card, meeting the trigger condition for {card:Ob Superheavy Logistics}'s ability, this ability will resolve following the checkpoint associated with paying the cost. This happens before {card:Azef Protocol} is added to the Corp's score area or any trigger conditions related to scoring an agenda are met.",
-        "translation": ""
+        "translation": "公司使用 {card:鄂毕超重型物流} 作为特性，并发起计分具有“计分本议案的额外费用为‘销毁你另1张已安装的卡牌’”的 {card:阿泽夫协议}。如果公司销毁了一张已激活的卡牌，从而满足 {card:鄂毕超重型物流} 能力的触发条件，则该能力会在与支付该费用相关的检查点之后结算。这发生在 {card:阿泽夫协议} 被加入公司的分数区，或任何与议案被计分相关的触发条件被满足之前。"
     },
     {
         "key": "rule_nested_cost",
         "original": "1.16.11. A {term:nested cost} is a cost appearing within an ability's instructions that must be paid while the ability is resolving in order for some or all of the rest of the effects of that ability to resolve.",
-        "translation": ""
+        "translation": "{term:内部费用}是在能力指示内部出现的一项费用，必须在该能力结算过程中被支付，能力的其余部分或其中某些效果才能结算。"
     },
     {
         "key": "rule_nested_cost_may",
         "original": "1.16.11.a. Nested costs are usually written in the format \"[player] may [cost] to [instructions]\" or \"[player] may [cost]. If [you/they] do, [instructions].\" If the indicated player pays the indicated cost, the indicated instructions are resolved. Otherwise, that part of the ability is not resolved.",
-        "translation": ""
+        "translation": "内部费用通常写成“[player] may [cost] to [instructions]”或“[player] may [cost]. If [you/they] do, [instructions].”的格式。如果所指定的玩家支付了所指定的费用，则所指定的指示会被结算。否则，该能力的那一部分不会被结算。"
     },
     {
         "key": "rule_nested_cost_unless",
         "original": "1.16.11.b. Nested costs can also be written in the format \"[instructions] unless [player] [cost]\" or \"[player] may [cost]. If [you/they] do not, [instructions].\" If the indicated player pays the indicated cost, the indicated instructions are not resolved. Otherwise, that instruction is resolved.",
-        "translation": ""
+        "translation": "内部费用也可以写成“[instructions] unless [player] [cost]”或“[player] may [cost]. If [you/they] do not, [instructions].”的格式。如果所指定的玩家支付了所指定的费用，则所指定的指示不会被结算。否则，该指示会被结算。"
     },
     {
         "key": "rule_nested_cost_unless-1-example",
         "original": "A subroutine reading \"End the run unless the Runner pays 1[c].\" contains a nested cost. If the Runner chooses to pay 1[c], the subroutine will not end the run.",
-        "translation": ""
+        "translation": "一条写着“终止本次潜袭，除非潜袭者支付1[c]。”的子进程包含一个内部费用。如果潜袭者选择支付 1[c]，则该子进程不会终止本次潜袭。"
     },
     {
         "key": "rule_nested_cost_no_may",
         "original": "1.16.11.c. An ability that reads \"If [you/they] do\" or \"If [you/they] do not\" without a preceding \"may\" does not indicate a nested cost.",
-        "translation": ""
+        "translation": "如果一个能力写有“If [you/they] do”或“If [you/they] do not”，但前面没有“may”，则其并不表示一个内部费用。"
     },
     {
         "key": "rule_nested_cost_otherwise",
         "original": "1.16.11.d. Some abilities use the word \"otherwise\" to indicate that different instructions should be resolved depending on whether a nested cost was paid or not. In an ability with a nested cost of a form described in {ref:rule_nested_cost_may}, treat \"otherwise\" as an \"if [you/they] do not\" clause attached to the same cost. Conversely, in an ability with a nested cost of a form described in {ref:rule_nested_cost_unless}, treat \"otherwise\" as an \"if [you/they] do\" clause attached to the same cost. Note that \"otherwise\" can also appear in the context of other types of conditions, and does not by itself indicate a nested cost.",
-        "translation": ""
+        "translation": "某些能力会使用“otherwise”一词，表示根据内部费用是否被支付而结算不同的指示。对于具有{ref:rule_nested_cost_may}所述形式内部费用的能力，将“otherwise”视为附属于同一费用的“if [you/they] do not”从句。相对地，对于具有{ref:rule_nested_cost_unless}所述形式内部费用的能力，将“otherwise”视为附属于同一费用的“if [you/they] do”从句。注意，“otherwise”也可能出现在其他类型条件的语境中，其本身并不表示内部费用。"
     },
     {
         "key": "sec_score_scoring_steal",
         "original": "1.17. Score, Scoring and Stealing",
-        "translation": ""
+        "translation": "分数、计分与窃取"
     },
     {
         "key": "rule_score",
         "original": "1.17.1. The sum of all agenda points on agendas in a player's score area is that player's {term:score}.",
-        "translation": ""
+        "translation": "玩家分数区中所有议案上的议案分数总和，就是该玩家的 {term:计分}。"
     },
     {
         "key": "rule_threat_level",
         "original": "1.17.1.a. The {term:threat level} is equal to the greatest score of any player. The \"Threat N\" ability flag makes use of the threat level ({ref:rule_threat_flag}).",
-        "translation": ""
+        "translation": "{term:威胁等级}等于任一玩家当前最高的分数。“Threat N”能力标记会使用威胁等级（{ref:rule_threat_flag}）。"
     },
     {
         "key": "rule_threat_level-1-example",
         "original": "If the Runner's score is 4 agenda points, and the Corp's score is 3 agenda points, the threat level is 4.",
-        "translation": ""
+        "translation": "如果潜袭者的分数为 4 点议案分数，而公司的分数为 3 点议案分数，则威胁等级为 4。"
     },
     {
         "key": "rule_game_win",
         "original": "1.17.2. If at any time a player's score is greater than or equal to 7, they win the game at the next checkpoint. See {ref:sec_ending_the_game} regarding winning the game, and {ref:sec_checkpoints} for details about checkpoints.",
-        "translation": ""
+        "translation": "如果在任意时刻某位玩家的分数大于或等于 7，则其会在下一个检查点赢得游戏。有关赢得游戏的信息见{ref:sec_ending_the_game}，有关检查点的细则见{ref:sec_checkpoints}。"
     },
     {
         "key": "rule_score_steal",
         "original": "1.17.3. Players add agendas to their score areas by {term:scoring} or {term:stealing} them. The Corp can score an agenda to their score area as an option during certain paid ability windows on their turn. The Runner can steal an agenda to their score area while accessing it.",
-        "translation": ""
+        "translation": "玩家通过{term:计分}或{term:窃取}议案，将它们加入自己的分数区。公司可以在其回合中的某些付费能力窗口里选择将议案计分到自己的分数区。潜袭者可以在读取议案时将其窃取到自己的分数区。"
     },
     {
         "key": "rule_advancement_requirement",
         "original": "1.17.3.a. The {term:advancement requirement} of an agenda restricts when the Corp can score it. The Corp can only score an agenda that has advancement counters on it greater than or equal to its advancement requirement. See {ref:sec_advancing_cards}.",
-        "translation": ""
+        "translation": "议案的 {term:推进需求} 限制公司何时可以为其计分。公司只能为其上推进指示物数量大于或等于其推进需求的议案计分。见{ref:sec_advancing_cards}。"
     },
     {
         "key": "rule_not_required_to_score",
         "original": "1.17.3.b. The Corp is not required to score an agenda immediately upon satisfying its advancement requirement.",
-        "translation": ""
+        "translation": "公司在满足议案的推进需求后，并不必须立即为其计分。"
     },
     {
         "key": "rule_score_not_an_action",
         "original": "1.17.3.c. Scoring an agenda does not cost [click] and is not an action.",
-        "translation": ""
+        "translation": "为议案计分不需要花费 [click]，也不是一个行动。"
     },
     {
         "key": "rule_decline_to_steal",
         "original": "1.17.3.d. The Runner cannot decline to steal an agenda they access, unless there is an additional cost to steal that agenda and the Runner cannot or does not wish to pay it. {ref:Chpt_access_breach} details accessing, and {ref:rule_additional_cost} details additional costs.",
-        "translation": ""
+        "translation": "潜袭者不能拒绝窃取其所读取的议案，除非窃取该议案具有额外费用，而潜袭者无法或不愿支付该费用。有关读取的细则见{ref:Chpt_access_breach}，有关额外费用的细则见{ref:rule_additional_cost}。"
     },
     {
         "key": "rule_add_agenda_to_score_area",
         "original": "1.17.3.e. If an effect directly adds an agenda to a score area or otherwise moves an agenda from any zone to a score area, that agenda is not considered scored or stolen.",
-        "translation": ""
+        "translation": "如果某个效果直接将一个议案加入分数区，或以其他方式将一个议案从任一区域移动到分数区，则该议案不视为被计分或被窃取。"
     },
     {
         "key": "rule_added_agendas_not_scored_or_stolen",
         "original": "1.17.3.f. If an effect causes another card to be added to a score area \"as an agenda\", the newly converted agenda is not considered scored or stolen. See {ref:rule_add_card_to_score_area}.",
-        "translation": ""
+        "translation": "如果某个效果导致另一张卡牌“作为议案”被加入分数区，则新转化而成的议案不视为被计分或被窃取。见{ref:rule_add_card_to_score_area}。"
     },
     {
         "key": "rule_score_area_faceup",
         "original": "1.17.4. Agendas are always added to the score area faceup, regardless of their previous faceup/facedown status.",
-        "translation": ""
+        "translation": "议案总是以牌面朝上的方式加入分数区，无论其先前是牌面朝上还是牌面朝下。"
     },
     {
         "key": "rule_score_area_uninstalled",
         "original": "1.17.5. If an installed agenda is scored or stolen, it becomes uninstalled. Any advancement counters on the scored or stolen agenda are returned to the bank. See {ref:rule_trash_hosted_objects_when_host_trashed}.",
-        "translation": ""
+        "translation": "如果一张已安装的议案被计分或被窃取，则其变为未安装。被计分或被窃取议案上的任何推进指示物都会返回银行。见{ref:rule_trash_hosted_objects_when_host_trashed}。"
     },
     {
         "key": "rule_agenda_scored",
         "original": "1.17.6. Some agendas and other cards have abilities with a trigger condition related to an agenda being scored. These abilities become pending after the Corp moves the agenda from its current zone to their score area.",
-        "translation": ""
+        "translation": "某些议案和其他卡牌具有与议案被计分相关的触发条件。这些能力会在公司将议案从其当前区域移动到自己分数区之后进入待触发状态。"
     },
     {
         "key": "rule_agenda_stolen",
         "original": "1.17.7. Some agendas and other cards have abilities with a trigger condition related to an agenda being stolen. These abilities become pending after the Runner moves the agenda from its current zone to their score area.",
-        "translation": ""
+        "translation": "某些议案和其他卡牌具有与议案被窃取相关的触发条件。这些能力会在潜袭者将议案从其当前区域移动到自己分数区之后进入待触发状态。"
     },
     {
         "key": "rule_advancement_counters_reference",
         "original": "1.17.8. If an ability meets its trigger condition from an agenda being scored or stolen, the agenda's last known number of advancement counters before being scored or stolen is used for any references to the number of advancement counters in the effects of that ability.",
-        "translation": ""
+        "translation": "如果某个能力因一张议案被计分或被窃取而满足其触发条件，则该能力效果中凡是提及推进指示物数量之处，都使用该议案在被计分或被窃取前最后已知的推进指示物数量。"
     },
     {
         "key": "sec_advancing_cards",
         "original": "1.18. Advancing Cards",
-        "translation": ""
+        "translation": "推进卡牌"
     },
     {
         "key": "rule_advance",
         "original": "1.18.1. To {term:advance} a card is to place an advancement counter from the bank on it. The Corp typically advances cards with a basic action during their action phase, but card abilities can also advance cards.",
-        "translation": ""
+        "translation": "{term:推进}一张卡牌，是指将银行中的 1 枚推进指示物放到其上。公司通常在其行动阶段通过基本行动推进卡牌，但卡牌能力也可以推进卡牌。"
     },
     {
         "key": "rule_placing_advancement_counter",
         "original": "1.18.2. Resolving an instruction that directly places an advancement counter onto a card is not the same as advancing a card. Likewise, resolving an instruction that moves an advancement counter from one card to another is not the same as advancing a card.",
-        "translation": ""
+        "translation": "结算一条直接将推进指示物放到一张卡牌上的指示，不等同于推进该卡牌。同样，结算一条将推进指示物从一张卡牌移到另一张卡牌上的指示，也不等同于推进该卡牌。"
     },
     {
         "key": "rule_placing_advancement_counter-1-example",
         "original": "The Corp plays {card:Mushin No Shin}, choosing to install an {card:Oaktown Renovation}. Because the three advancement counters were placed on the card directly, the Corp does not gain any credits from the ability on {card:Oaktown Renovation}.",
-        "translation": ""
+        "translation": "公司打出 {card:无心之心}，选择安装一张 {card:革新奥克敦}。因为那三枚推进指示物是直接被放到该卡牌上的，所以公司不会从 {card:革新奥克敦} 的能力中获得任何信用点。"
     },
     {
         "key": "rule_you_can_advance",
         "original": "1.18.3. The Corp can only advance certain installed cards. Agendas can always be advanced. If a card other than an agenda says that it \"can be advanced\" or that \"you can advance\" that card, the card can be advanced even while it is unrezzed. There is no limit to the number of times a card can be advanced.",
-        "translation": ""
+        "translation": "公司只能推进某些已安装的卡牌。议案总是可以被推进。如果议案以外的卡牌写着其“can be advanced”或“you can advance”该卡牌，则即使该卡牌未激活，它也可以被推进。卡牌可以被推进的次数没有上限。"
     },
     {
         "key": "rule_advanced_card",
         "original": "1.18.4. An \"advanced card\" is a card with 1 or more advancement counters hosted on it.",
-        "translation": ""
+        "translation": "“已推进的卡牌”是指其上附载有 1 枚或更多推进指示物的卡牌。"
     },
     {
         "key": "sec_trashing",
         "original": "1.19. Trashing",
-        "translation": ""
+        "translation": "销毁"
     },
     {
         "key": "rule_trashing",
         "original": "1.19.1. {term:Trashing} is the act of moving an object to its owner's discard pile.",
-        "translation": ""
+        "translation": "{term:销毁}是将一个物件移动到其所有者弃牌堆的行为。"
     },
     {
         "key": "rule_access_trash",
         "original": "1.19.2. During access, the Runner has the opportunity to pay the trash cost of the accessed card to trash it. See {ref:rule_basic_trash_ability}.",
-        "translation": ""
+        "translation": "在读取期间，潜袭者有机会支付被读取卡牌的销毁费用来销毁它。见{ref:rule_basic_trash_ability}。"
     },
     {
         "key": "rule_trashed_vs_discarded",
         "original": "1.19.3. A trashed card is not considered to have been discarded, and vice versa. Cards that prevent a card from being trashed cannot prevent a card from being discarded.",
-        "translation": ""
+        "translation": "被销毁的卡牌不视为被弃置，反之亦然。防止卡牌被销毁的卡牌，不能防止卡牌被弃置。"
     },
     {
         "key": "rule_trash_symbol",
         "original": "1.19.4. The symbol [trash] represents trashing the object it appears on. It is used as a cost for certain abilities.",
-        "translation": ""
+        "translation": "符号 [trash] 表示销毁其所在的物件。它被用作某些能力的费用。"
     },
     {
         "key": "rule_trash_symbol-1-example",
         "original": "{card:Fall Guy}'s last ability reads \"[trash]: Gain 2[c].\" The cost to trigger this ability is to trash {card:Fall Guy}.",
-        "translation": ""
+        "translation": "{card:替罪羊} 的最后一个能力为“[trash]：获得2[c]。”触发该能力的费用，就是销毁 {card:替罪羊}。"
     },
     {
         "key": "rule_trash_ability",
         "original": "1.19.4.a. \"A [trash] ability\" refers to a paid ability that includes [trash] in its trigger cost.",
-        "translation": ""
+        "translation": "“一个 [trash] 能力”是指触发费用中包含 [trash] 的付费能力。"
     },
     {
         "key": "rule_use_trash_ability",
         "original": "1.19.4.b. Some paid abilities have multiple options for their trigger cost, separated by \"or\". A player triggering such an ability only \"used a [trash] ability\" if the actual cost that was paid includes [trash].",
-        "translation": ""
+        "translation": "某些付费能力的触发费用有多个选项，并以“or”分隔。只有当实际支付的费用包含 [trash] 时，触发这类能力的玩家才算“使用了一个 [trash] 能力”。"
     },
     {
         "key": "sec_memory",
         "original": "1.20. Memory",
-        "translation": ""
+        "translation": "内存"
     },
     {
         "key": "rule_memory_unit",
         "original": "1.20.1. A {term:memory unit} ([MU]) is a space available to the Runner to install programs.",
-        "translation": ""
+        "translation": "{term:内存单元}（[MU]）是潜袭者可用于安装程序的可用空间。"
     },
     {
         "key": "rule_memory_limit",
         "original": "1.20.2. The Runner's {term:memory limit} is the total amount of [MU] the Runner has. If the Runner's identity card does not specify a starting memory limit, their starting memory limit is 4[MU]. An ability of the form \"+N[MU]\" increases the Runner's memory limit by N[MU].",
-        "translation": ""
+        "translation": "潜袭者的 {term:内存上限} 是其拥有的 [MU] 总量。如果潜袭者的特性卡牌未指定起始内存上限，则其起始内存上限为 4[MU]。形如“+N[MU]”的能力会使潜袭者的内存上限增加 N[MU]。"
     },
     {
         "key": "rule_memory_limit-1-example",
         "original": "The Runner is playing an identity with a starting memory limit of 4[MU]. They have an installed copy of {card:T400 Memory Diamond}, which has the ability \"+1[MU]\". The Runner can therefore have up to 5[MU] worth of programs installed.",
-        "translation": ""
+        "translation": "潜袭者使用一个起始内存上限为 4[MU] 的特性。其安装了一张具有“+1[MU]”能力的 {card:T400记忆钻石}。因此，潜袭者最多可以安装总计占用 5[MU] 的程序。"
     },
     {
         "key": "rule_memory_cost",
         "original": "1.20.3. Programs have a {term:memory cost} that is continually applied against the memory limit. {ref:Rule_program_memory_cost} details how the Runner's installed programs are constrained by the memory limit.",
-        "translation": ""
+        "translation": "程序具有一个会持续作用于内存上限的 {term:内存费用}。{ref:Rule_program_memory_cost} 详述了潜袭者已安装程序如何受到内存上限的限制。"
     },
     {
         "key": "rule_memory_restricted_mu",
         "original": "1.20.4. Some abilities give the Runner [MU] that can only be used for programs that meet a given requirement.",
-        "translation": ""
+        "translation": "某些能力会给予潜袭者只能用于满足特定要求程序的 [MU]。"
     },
     {
         "key": "rule_memory_counting_mu_ignores_restrictions",
         "original": "1.20.4.a. If a calculated value refers directly to the Runner's memory limit or to their unused [MU], that calculation ignores requirements about how that [MU] can be filled.",
-        "translation": ""
+        "translation": "如果某个计算值直接引用潜袭者的内存上限或其未使用的 [MU]，则该计算会忽略这些 [MU] 应如何被填充的要求。"
     },
     {
         "key": "rule_memory_check_mu_restrictions",
         "original": "1.20.4.b. To determine if the Runner's installed programs satisfy the restrictions on their [MU], create a mapping that assigns each 1[MU] in the memory cost of each installed program to a specific source (either the Runner's starting memory limit or an ability providing additional [MU]). The total [MU] assigned to each source must not exceed the amount of [MU] it provides, and all programs with [MU] assigned to a given source must meet all restrictions imposed on that [MU]. If it is not possible to create such a mapping, the Runner is considered to have exceeded their memory limit, and they must trash installed programs as described in {ref:rule_program_memory_cost}.",
-        "translation": ""
+        "translation": "为了判断潜袭者已安装的程序是否满足其 [MU] 的限制，请创建一个映射，将每个已安装程序的内存费用中的每 1[MU] 指派给一个特定来源（潜袭者的起始内存上限，或提供额外 [MU] 的某个能力）。指派给每个来源的 [MU] 总量不能超过其所提供的 [MU] 数量，而被指派给某一来源的所有程序都必须满足该来源 [MU] 所施加的全部限制。如果无法创建这样的映射，则视为潜袭者已超出其内存上限，并且其必须依照{ref:rule_program_memory_cost}所述销毁已安装的程序。"
     },
     {
         "key": "sec_card_visibility",
         "original": "1.21. Card Visibility",
-        "translation": ""
+        "translation": "卡牌可见性"
     },
     {
         "key": "rule_faceup_facedown",
         "original": "1.21.1. Cards in the play area and other public zones are either {term:faceup} or {term:facedown}. Faceup cards are freely visible to all players. Facedown cards are oriented so that the face containing the card's information is not visible.",
-        "translation": ""
+        "translation": "游戏区和其他公共区域中的卡牌，都是{term:牌面朝上}或{term:牌面朝下}。牌面朝上的卡牌对所有玩家都可自由查看。牌面朝下的卡牌会以其载有卡牌信息的一面不可见的方式放置。"
     },
     {
         "key": "rule_hidden_secret_faceup_facedown",
         "original": "1.21.1.a. Cards in hidden or secret zones (see {ref:sec_game_zones_general}) are neither faceup nor facedown.",
-        "translation": ""
+        "translation": "隐藏区域或秘密区域中的卡牌（见{ref:sec_game_zones_general}）既不属于牌面朝上，也不属于牌面朝下。"
     },
     {
         "key": "rule_hosted_cards_treated_as_group",
         "original": "1.21.1.b. Some effects host multiple cards on an object at the same time or set aside multiple cards at the same time. Facedown cards that enter a zone at the same time by the same effect are treated as a group. See {ref:rule_host_faceup_facedown} and {ref:rule_facedown_set_aside_distinct_groups}, respectively.",
-        "translation": ""
+        "translation": "某些效果会同时将多张卡牌附载到一个物件上，或同时将多张卡牌搁置。由同一效果在同一时间进入某一区域的牌面朝下卡牌，会被视为一个组群。分别见{ref:rule_host_faceup_facedown}与{ref:rule_facedown_set_aside_distinct_groups}。"
     },
     {
         "key": "rule_look",
         "original": "1.21.2. When a player {term:looks} at a card, they are allowed to see the front face of the card even if the front face would not normally be visible to them. A player should look at that card without showing it to the other player if it is not normally visible to that player.",
-        "translation": ""
+        "translation": "当玩家{term:查看}一张卡牌时，即使该卡牌正面通常对其不可见，其也被允许查看该卡牌的正面。如果该卡牌通常对该玩家以外的玩家不可见，则查看时不应向另一位玩家展示。"
     },
     {
         "key": "rule_look_at_controlled_facedown",
         "original": "1.21.2.a. A player may look at facedown cards they control at any time.",
-        "translation": ""
+        "translation": "玩家可以在任何时候查看其所操控的牌面朝下卡牌。"
     },
     {
         "key": "rule_reveal",
         "original": "1.21.3. To {term:reveal} a card is to show its front face to all players, then return it to its previous state.",
-        "translation": ""
+        "translation": "{term:展示}一张卡牌，是指向所有玩家展示其正面，然后将其恢复到先前状态。"
     },
     {
         "key": "rule_reveal_not_turn_faceup",
         "original": "1.21.3.a. Revealing a facedown card does not count as turning it faceup.",
-        "translation": ""
+        "translation": "展示一张牌面朝下的卡牌，不视为将其翻为牌面朝上。"
     },
     {
         "key": "rule_expose",
         "original": "1.21.4. Some abilities instruct the Runner to {term:expose} one or more cards. To expose a card is to reveal it, except that only installed, unrezzed cards can be exposed.",
-        "translation": ""
+        "translation": "某些能力会指示潜袭者{term:揭示}1 张或更多卡牌。揭示一张卡牌，是指展示它，但只有已安装且未激活的卡牌才能被揭示。"
     },
     {
         "key": "rule_look_reveal_expose_access_distinct",
         "original": "1.21.5. Effects that instruct a player to look at, reveal, expose, or access a card are not the same, even if they would be performed similarly at times. See {ref:chpt_access_breach} for more information on accessing.",
-        "translation": ""
+        "translation": "指示玩家查看、展示、揭示或读取一张卡牌的效果，并不相同，即使它们有时执行起来会很相似也是如此。有关读取的更多信息，见{ref:chpt_access_breach}。"
     },
     {
         "key": "rule_remain_visible",
         "original": "1.21.6. If a resolving ability directs one or both players to look at or reveal a card or set of cards, each such card remains visible to the relevant player(s) until the entire ability is finished resolving or the card moves to a different location. See also {ref:rule_visibility_after_access}.",
-        "translation": ""
+        "translation": "如果一个正在结算的能力指示一位或双方玩家查看或展示一张或一组卡牌，则每张这类卡牌会对相关玩家保持可见，直到整个能力结算完毕，或该卡牌移动到不同位置为止。另见{ref:rule_visibility_after_access}。"
     },
     {
         "key": "rule_ambush_text",
         "original": "1.21.7. The ability \"While the Runner is accessing this [type] in R&D, they must reveal it.\" is a static ability that applies for the entire duration of the access. This is also the case for cards with the older wording, \"If [this card] is accessed from R&D, the Runner must reveal it.\"",
-        "translation": ""
+        "translation": "“While the Runner is accessing this [type] in R&D, they must reveal it.”这一能力是一个会在整个读取期间生效的持续能力。对具有较旧措辞“If [this card] is accessed from R&D, the Runner must reveal it.”的卡牌而言，情况也是如此。"
     }
 ]

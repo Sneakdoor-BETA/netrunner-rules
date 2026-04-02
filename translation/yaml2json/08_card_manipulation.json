@@ -2,831 +2,831 @@
     {
         "key": "chpt_card_manipulation",
         "original": "8. Card Manipulation",
-        "translation": ""
+        "translation": "卡牌操作"
     },
     {
         "key": "sec_faceup_facedown_status",
         "original": "8.1. Faceup and Facedown Status",
-        "translation": ""
+        "translation": "牌面朝上与牌面朝下状态"
     },
     {
         "key": "rule_rezzed_unrezzed",
         "original": "8.1.1. An agenda, asset, upgrade, or piece of ice is {term:unrezzed} if it is installed and facedown. An asset, upgrade, or piece of ice is {term:rezzed} if it is installed and faceup. Runner cards, faceup agendas, operations, events, and counters are neither rezzed nor unrezzed.",
-        "translation": ""
+        "translation": "一张议案、资产、升级或防火墙，如果其已安装且牌面朝下，则为{term:未激活的}。一张资产、升级或防火墙，如果其已安装且牌面朝上，则为{term:已激活的}。潜袭者卡牌、牌面朝上的议案、事务、事件与指示物，既不是已激活，也不是未激活。"
     },
     {
         "key": "sec_rez",
         "original": "8.1.2. To {term:rez} an unrezzed card is to turn it faceup.",
-        "translation": ""
+        "translation": "激活"
     },
     {
         "key": "rule_rez_in_paw",
         "original": "8.1.2.a. Some paid ability windows allow the Corp to rez assets and upgrades. See {ref:rule_paid_ability_window}. The paid ability window at {ref:step_approach_paw} of a run allows the Corp to rez ice.",
-        "translation": ""
+        "translation": "某些付费能力窗口允许公司激活资产与升级。见{ref:rule_paid_ability_window}。潜袭中的{ref:step_approach_paw}付费能力窗口允许公司激活防火墙。"
     },
     {
         "key": "rule_rez_by_ability",
         "original": "8.1.2.b. Card abilities can direct or allow the Corp to rez cards at other times.",
-        "translation": ""
+        "translation": "卡牌能力也可以在其他时点指示或允许公司激活卡牌。"
     },
     {
         "key": "rule_cannot_rez_agendas",
         "original": "8.1.2.c. Agendas cannot be rezzed.",
-        "translation": ""
+        "translation": "议案不能被激活。"
     },
     {
         "key": "rule_inherent_rez_cost",
         "original": "8.1.2.d. Before rezzing a card, the Corp must pay that card's rez cost. This includes both rezzing in a paid ability window and rezzing through a card ability. Card abilities can modify or ignore rez costs, but must state this explicitly.",
-        "translation": ""
+        "translation": "在激活一张卡牌之前，公司必须支付该卡牌的激活费用。这既包括在付费能力窗口中进行的激活，也包括通过卡牌能力进行的激活。卡牌能力可以修改或忽略激活费用，但必须明确写出。"
     },
     {
         "key": "rule_rez_procedure",
         "original": "8.1.2.e. To resolve rezzing a card, the Corp pays its rez cost (accounting for any modifiers or additional costs), a checkpoint occurs (as required by {ref:rule_checkpoint_after_paying_cost}), then the Corp turns the card faceup. For purposes of meeting trigger conditions, the card is considered to be rezzed at the conclusion of this process.",
-        "translation": ""
+        "translation": "要结算激活一张卡牌，公司支付其激活费用（计入任何修正或额外费用），发生一次检查点（由{ref:rule_checkpoint_after_paying_cost}要求），然后公司将该卡牌翻为牌面朝上。就满足触发条件而言，该卡牌会在此流程结束时被视为已激活。"
     },
     {
         "key": "sec_derez",
         "original": "8.1.3. To {term:derez} a rezzed card is to turn it facedown.",
-        "translation": ""
+        "translation": "关闭"
     },
     {
         "key": "rule_derez_by_ability",
         "original": "8.1.3.a. Cards are only derezzed by card effects.",
-        "translation": ""
+        "translation": "卡牌只会通过卡牌效果被关闭。"
     },
     {
         "key": "rule_derez_cost",
         "original": "8.1.3.b. There is no inherent cost associated with derezzing a card.",
-        "translation": ""
+        "translation": "关闭一张卡牌没有固有费用。"
     },
     {
         "key": "rule_derez_procedure",
         "original": "8.1.3.c. Derezzing a card is instantaneous and has no component steps.",
-        "translation": ""
+        "translation": "关闭一张卡牌是瞬时的，没有组成步骤。"
     },
     {
         "key": "sec_facedown_runner_cards",
         "original": "8.1.4. Some abilities can install Runner cards facedown or turn already-installed Runner cards facedown.",
-        "translation": ""
+        "translation": "牌面朝下的潜袭者卡牌"
     },
     {
         "key": "rule_facedown_runner_cards_are_blank",
         "original": "8.1.4.a. Installed Runner cards that are facedown {n}do not have any characteristics (name, card type, faction, cost, subtypes, influence, etc){/n}, and their abilities are not active.",
-        "translation": ""
+        "translation": "已安装且牌面朝下的潜袭者卡牌{n}不具有任何特征（名称、卡牌类型、势力、费用、子类别、影响力等）{/n}，且其能力不是活动的。"
     },
     {
         "key": "rule_facedown_runner_cards_are_distinct",
         "original": "8.1.4.b. Facedown installed Runner cards are distinct. The origin of each such card (when and how it was installed facedown, or what faceup installed card was turned facedown) is open information.",
-        "translation": ""
+        "translation": "已安装且牌面朝下的潜袭者卡牌彼此区分。每张此类卡牌的来源（其何时以及如何以牌面朝下方式被安装，或哪张已安装且牌面朝上的卡牌被翻成牌面朝下）属于公开信息。"
     },
     {
         "key": "rule_facedown_runner_cards_flip_in_heap",
         "original": "8.1.4.c. After a facedown Runner card enters the heap, it is turned faceup.",
-        "translation": ""
+        "translation": "一张牌面朝下的潜袭者卡牌进入堆阵后，会被翻为牌面朝上。"
     },
     {
         "key": "rule_flip_is_not_uninstall",
         "original": "8.1.4.d. A Runner card turned facedown is not considered to be uninstalled and simply remains in the play area.",
-        "translation": ""
+        "translation": "一张被翻成牌面朝下的潜袭者卡牌，不视为被卸载；它只是留在游戏区中。"
     },
     {
         "key": "rule_unflipping_runner_cards",
         "original": "8.1.4.e. If an installed facedown Runner card is turned faceup, the {n}card regains its printed characteristics{/n} and it becomes active. Turning an installed facedown Runner card faceup does not meet the trigger conditions of \"when installed\" abilities.",
-        "translation": ""
+        "translation": "如果一张已安装且牌面朝下的潜袭者卡牌被翻为牌面朝上，则该{n}卡牌会恢复其印刷特征{/n}并变为活动状态。将一张已安装且牌面朝下的潜袭者卡牌翻为牌面朝上，不会满足“when installed”能力的触发条件。"
     },
     {
         "key": "rule_runner_cards_neither_rezzed_nor_unrezzed",
         "original": "8.1.4.f. Runner cards are never considered rezzed or unrezzed.",
-        "translation": ""
+        "translation": "潜袭者卡牌从不被视为已激活或未激活。"
     },
     {
         "key": "sec_card_movements",
         "original": "8.2. Card Movements",
-        "translation": ""
+        "translation": "卡牌移动"
     },
     {
         "key": "sec_movement",
         "original": "8.2.1. A {term:movement} is a way that cards change their zone or location following special rules. The movements are: arrange, draw, forfeit, install, play, search, score, steal, swap, and trash.",
-        "translation": ""
+        "translation": "{term:移动}是一类卡牌改变其区域或位置的方式，并遵循特殊规则。这些移动包括：排列、抽牌、废除、安装、打出、搜寻、计分、窃取、互换，以及销毁。"
     },
     {
         "key": "rule_non_movements",
         "original": "8.2.1.a. Other terms that change the locations of cards are not movements. If an ability directs a player to \"add\" or \"move\" cards to 1 or more locations, simply put those cards in the indicated locations. If an ability or game rule directs a player to \"discard\", \"set aside\", or \"remove from the game\" 1 or more cards, simply put those cards in their owner's discard pile, the set-aside zone, or the removed-from-game zone, respectively.",
-        "translation": ""
+        "translation": "其他会改变卡牌位置的术语不属于移动。如果某个能力指示玩家将卡牌“加入”或“转移”到 1 个或多个位置，则只需将这些卡牌放到所指示的位置。如果某个能力或游戏规则指示玩家“弃除”“置于一旁”或“移出游戏”1 张或多张卡牌，则只需分别将这些卡牌放入其所有者的弃牌堆、置于一旁区或移出游戏区。"
     },
     {
         "key": "sec_replacing_movements",
         "original": "8.2.2. If a replacement effect modifies the effects of a movement, but does not replace the entire movement by name, the modified effect is still an occurrence of that movement and can still meet trigger conditions relating to that type of movement.",
-        "translation": ""
+        "translation": "如果一个替代效果修改了某种移动的效果，但并未以名称替代整个移动，则被修改后的效果仍然是该种移动的一次发生，且仍可满足与该类移动有关的触发条件。"
     },
     {
         "key": "sec_replacing_movements-1-example",
         "original": "{card:Harbinger}'s ability modifies the effects of trashing it by replacing adding {card:Harbinger} to the heap with turning it facedown. {card:Harbinger} is still trashed when the modified effect resolves. If this is the first time this turn that the Runner trashed one of their installed cards, they will be able to resolve {card:Wasteland}'s ability.",
-        "translation": ""
+        "translation": "{card:先驱} 的能力通过将 {card:先驱} 加入堆阵改为将其翻为牌面朝下，来修改销毁它的效果。当被修改后的效果结算时，{card:先驱} 仍然算是被销毁。如果这是本回合潜袭者第一次销毁其已安装卡牌之一，则其仍可以结算 {card:荒地} 的能力。"
     },
     {
         "key": "rule_cancelled_movement",
         "original": "8.2.2.a. If a movement is replaced or prevented entirely or otherwise cannot be carried out, that movement does not take place and conditions related to that type of movement are not met.",
-        "translation": ""
+        "translation": "如果某种移动被完全替代、被防止，或因其他原因无法执行，则该移动不会发生，且与该类移动有关的条件不会得到满足。"
     },
     {
         "key": "rule_cancelled_movement-1-example",
         "original": "The Corp is resolving the first subroutine on {card:Rototurret} to trash an installed program. The Runner uses {card:Sacrificial Construct} to prevent the program from being trashed. Since trashing did not occur, the Runner does not place a power counter on {card:District 99}, and {card:District 99} can still meet its trigger condition if a program or piece of hardware is successfully trashed later in the turn.",
-        "translation": ""
+        "translation": "公司正在结算 {card:旋转炮塔} 的第一个子进程，以销毁 1 个已安装程序。潜袭者使用 {card:自毁结构体} 来防止该程序被销毁。由于销毁并未发生，潜袭者不会在 {card:99区} 上放置 1 枚能量指示物，而如果本回合稍后某个程序或硬件成功被销毁，{card:99区} 仍然可以满足其触发条件。"
     },
     {
         "key": "movement_arrange",
         "original": "8.2.3. To {term:arrange} a set of cards is to reposition them among their current locations. The full rules for arranging are detailed in {ref:sec_arranging_rearranging}.",
-        "translation": ""
+        "translation": "{term:排列}一组卡牌，是指在这些卡牌当前所在位置之间重新摆放它们。关于排列的完整规则详见{ref:sec_arranging_rearranging}。"
     },
     {
         "key": "movement_draw",
         "original": "8.2.4. To {term:draw} a given number of cards is to move that many cards from the top of a player's deck to their hand. The full rules for drawing cards are detailed in {ref:sec_drawing_cards}.",
-        "translation": ""
+        "translation": "{term:抽取}若干张卡牌，是指将同样数量的卡牌从玩家牌组顶端转移到其手中。关于抽牌的完整规则详见{ref:sec_drawing_cards}。"
     },
     {
         "key": "movement_forfeit",
         "original": "8.2.5. To {term:forfeit} an agenda is to move it from a player's score area to the removed-from-game zone. When a player forfeits an agenda, its agenda points no longer contribute to that player's score, and any objects hosted on it are trashed.",
-        "translation": ""
+        "translation": "{term:废除}一张议案，是指将其从玩家的分数区转移到移出游戏区。当玩家废除一张议案时，其议案分数不再计入该玩家的分数，而附载于其上的任何物件都会被销毁。"
     },
     {
         "key": "movement_install",
         "original": "8.2.6. To {term:install} a card is to move it from its current zone to the play area. The full rules for installing cards are detailed in {ref:sec_install_uninstall}.",
-        "translation": ""
+        "translation": "{term:安装}一张卡牌，是指将其从当前位置转移到游戏区。关于安装卡牌的完整规则详见{ref:sec_install_uninstall}。"
     },
     {
         "key": "movement_play",
         "original": "8.2.7. To {term:play} an event or operation is to move it from its current zone to the play area, resolve its play abilities, and then trash it. The full rules for playing events and operations are detailed in {ref:sec_playing_events_and_operations}.",
-        "translation": ""
+        "translation": "{term:打出}一张事件或事务，是指将其从当前位置转移到游戏区，结算其打出能力，然后将其销毁。关于打出事件与事务的完整规则详见{ref:sec_playing_events_and_operations}。"
     },
     {
         "key": "movement_search",
         "original": "8.2.8. To {term:search} is to look at a specified zone and potentially set aside cards from that zone. The full rules for searching are detailed in {ref:sec_searching_cards}.",
-        "translation": ""
+        "translation": "{term:搜寻}，是指查看一个指定区域，并可能将其中的卡牌置于一旁。关于搜寻的完整规则详见{ref:sec_searching_cards}。"
     },
     {
         "key": "movement_score",
         "original": "8.2.9. To {term:score} an agenda is to move it from its current zone to the Corp's score area. The full rules for scoring are detailed in {ref:sec_score_scoring_steal}.",
-        "translation": ""
+        "translation": "{term:计分}一张议案，是指将其从当前位置转移到公司的分数区。关于计分的完整规则详见{ref:sec_score_scoring_steal}。"
     },
     {
         "key": "movement_steal",
         "original": "8.2.10. To {term:steal} an agenda is to move it from its current zone to the Runner's score area. The full rules for stealing are detailed in {ref:sec_score_scoring_steal}.",
-        "translation": ""
+        "translation": "{term:窃取}一张议案，是指将其从当前位置转移到潜袭者的分数区。关于窃取的完整规则详见{ref:sec_score_scoring_steal}。"
     },
     {
         "key": "movement_swap",
         "original": "8.2.11. To {term:swap} a pair of cards is to move each card to the other's location simultaneously. The full rules for swapping are detailed in {ref:sec_swapping_cards}.",
-        "translation": ""
+        "translation": "{term:互换}一对卡牌，是指同时将每张卡牌转移到另一张卡牌所在的位置。关于互换的完整规则详见{ref:sec_swapping_cards}。"
     },
     {
         "key": "movement_trash",
         "original": "8.2.12. To {term:trash} a card is to move it from its current zone to its owner's discard pile. The full rules for trashing are detailed in {ref:sec_trashing}.",
-        "translation": ""
+        "translation": "{term:销毁}一张卡牌，是指将其从当前位置转移到其所有者的弃牌堆。关于销毁的完整规则详见{ref:sec_trashing}。"
     },
     {
         "key": "sec_arranging_rearranging",
         "original": "8.3. Arranging and Rearranging Cards",
-        "translation": ""
+        "translation": "排列与重新排列卡牌"
     },
     {
         "key": "rule_arrange_rearrange",
         "original": "8.3.1. To {term:arrange} or {term:rearrange} an ordered set of 2 or more cards is to reposition them among their current locations. The words \"arrange\" and \"rearrange\" are synonymous.",
-        "translation": ""
+        "translation": "{term:排列}或{term:重新排列}一个由 2 张或更多卡牌组成的有序集合，是指在这些卡牌当前所在位置之间重新摆放它们。“arrange”和“rearrange”两个词是同义的。"
     },
     {
         "key": "rule_arrange_1_or_fewer",
         "original": "8.3.1.a. If a player is instructed to arrange 1 or fewer cards, instead that player does nothing.",
-        "translation": ""
+        "translation": "如果玩家被指示排列 1 张或更少的卡牌，则改为该玩家不作任何事。"
     },
     {
         "key": "rule_arrange_ice",
         "original": "8.3.2. When a player arranges a set of installed ice, that player carries out the arrangement by repeatedly choosing and swapping 2 pieces of ice. Each swap follows all the usual rules for swapping cards in {ref:sec_swapping_cards}.",
-        "translation": ""
+        "translation": "当玩家排列一组已安装的防火墙时，该玩家通过反复选择并互换 2 层防火墙来完成排列。每次互换都遵循{ref:sec_swapping_cards}中关于互换卡牌的所有通常规则。"
     },
     {
         "key": "rule_no_checkpoints_during_swaps",
         "original": "8.3.2.a. No checkpoints occur during the sequence of swaps. An ability that meets its condition while ice is being arranged will become pending at the end of resolving the instruction in which arranging ice is taking place.",
-        "translation": ""
+        "translation": "在这一连串互换期间不会发生检查点。若某个能力在排列防火墙期间满足其条件，则它会在执行该排列防火墙之指示的结算结束时变为待结算。"
     },
     {
         "key": "rule_arrange_secretly",
         "original": "8.3.3. Some instructions direct a player to arrange cards from the top of their deck or an opponent's deck \"in any order\". To resolve such an instruction, that player sets aside the appropriate number of cards facedown, secretly puts them in the order of their choice, and returns them to the top of that deck. They do not declare which cards moved to which locations. All of the arranged cards become new objects after they are arranged, even cards that return to the same location in the deck.",
-        "translation": ""
+        "translation": "某些指示会要求玩家以“任意顺序”排列其牌组顶端或对手牌组顶端的卡牌。要结算此类指示，该玩家将相应数量的卡牌牌面朝下置于一旁，秘密地按自己选择的顺序排列它们，然后将其放回该牌组顶端。其不会宣告哪些卡牌转移到了哪些位置。所有被排列的卡牌在排列后都成为新物件，即使某张卡牌回到了牌组中的同一位置也是如此。"
     },
     {
         "key": "rule_arrange_opponent",
         "original": "8.3.3.a. If the player is arranging an opponent's deck, that opponent cannot look at the set-aside cards during this process.",
-        "translation": ""
+        "translation": "如果玩家正在排列对手的牌组，则对手在此过程中不能查看那些置于一旁的卡牌。"
     },
     {
         "key": "rule_arrange_and_other_effect",
         "original": "8.3.3.b. If the instruction directs the player to perform other effects on cards in a deck before arranging them, these effects are performed while the cards are set aside. The player carrying out the instruction does not declare which cards are acted on. See also {ref:rule_set_aside_zone_passthrough}.",
-        "translation": ""
+        "translation": "如果该指示要求玩家在排列牌组中的卡牌之前，先对这些卡牌执行其他效果，则这些效果会在卡牌被置于一旁时执行。执行该指示的玩家不会宣告哪些卡牌受到作用。另见{ref:rule_set_aside_zone_passthrough}。"
     },
     {
         "key": "rule_arrange_and_other_effect-1-example",
         "original": "The Corp plays {card:Cultivate}, acting on the top 5 cards of R&D by trashing 1 card, adding 1 card to HQ, and arranging the rest in any order. They do not tell the Runner what location in R&D the trashed card came from, nor what location the card added to HQ came from.",
-        "translation": ""
+        "translation": "公司打出 {card:培育}，对研发中心顶端的 5 张卡牌执行操作：销毁其中 1 张，将其中 1 张加入总部，并将其余卡牌以任意顺序排列。其不会告知潜袭者，被销毁的卡牌原本位于研发中心中的哪个位置，也不会告知加入总部的那张卡牌原本位于哪个位置。"
     },
     {
         "key": "sec_drawing_cards",
         "original": "8.4. Drawing Cards",
-        "translation": ""
+        "translation": "抽牌"
     },
     {
         "key": "rule_drawing",
         "original": "8.4.1. {term:drawing} cards is a process that moves cards from a player's deck to their hand.",
-        "translation": ""
+        "translation": "{term:抽牌}是将卡牌从玩家牌组转移到其手中的过程。"
     },
     {
         "key": "rule_draw_procedure",
         "original": "8.4.2. To draw 1 or more cards, a player sets aside that many cards from the top of their deck facedown. The cards are then considered drawn, and abilities with trigger conditions related to cards being drawn can act on them. When resolving any such abilities is complete, the set-aside cards are added to their owner's hand.",
-        "translation": ""
+        "translation": "要抽 1 张或多张卡牌，玩家先将同样数量的卡牌从其牌组顶端牌面朝下置于一旁。随后，这些卡牌便被视为已抽取，而触发条件与卡牌被抽取有关的能力可以对其作用。在所有此类能力结算完毕后，这些置于一旁的卡牌会加入其所有者的手牌。"
     },
     {
         "key": "rule_draw_relevant_abilities_see_set_aside",
         "original": "8.4.2.a. Abilities with a trigger condition that refers to cards being drawn can see the drawn cards in the set-aside zone. This is an exception to {ref:rule_set_aside_zone_passthrough}.",
-        "translation": ""
+        "translation": "触发条件提及卡牌被抽取的能力，可以看到位于置于一旁区中的那些已抽取卡牌。这是{ref:rule_set_aside_zone_passthrough}的一个例外。"
     },
     {
         "key": "rule_draw_irrelevant_abilities_dont_see_set_aside",
         "original": "8.4.2.b. Abilities that do not refer specifically to cards a player has drawn are subject to {ref:rule_set_aside_zone_passthrough}, and only see the drawn cards move directly from the player's deck to their hand.",
-        "translation": ""
+        "translation": "不具体提及玩家已抽取卡牌的能力，受{ref:rule_set_aside_zone_passthrough}约束，因此只会看到那些已抽取卡牌如同直接从玩家牌组转移到其手中一样。"
     },
     {
         "key": "rule_modify_drawn_cards",
         "original": "8.4.3. Abilities that resolve while drawn cards are set aside can move those cards or add new cards to that set.",
-        "translation": ""
+        "translation": "在已抽取卡牌被置于一旁期间结算的能力，可以转移这些卡牌，或向该集合中加入新的卡牌。"
     },
     {
         "key": "rule_card_leaves_drawn_set",
         "original": "8.4.3.a. If a drawn card leaves the set-aside zone, it is no longer considered \"drawn\" and remains in its new location when the drawn cards are added to the hand.",
-        "translation": ""
+        "translation": "如果一张已抽取的卡牌离开置于一旁区，则其不再被视为“已抽取”，且在那些已抽取卡牌加入手牌时，它会留在其新位置。"
     },
     {
         "key": "rule_drawn_card_swapped",
         "original": "8.4.3.b. If a drawn card is swapped with another card, the card swapped into the set-aside zone is now considered \"drawn\", can be manipulated by other abilities, and will be added to the hand with the other drawn cards.",
-        "translation": ""
+        "translation": "如果一张已抽取的卡牌与另一张卡牌互换，则互换进入置于一旁区的那张卡牌现在被视为“已抽取”，可以被其他能力操作，并会与其他已抽取卡牌一起加入手牌。"
     },
     {
         "key": "rule_drawn_card_swapped-1-example",
         "original": "The Corp takes their mandatory draw while they have {card:Daily Business Show} and {card:Raman Rai} rezzed. They set aside {card:Wraparound} and {card:Enigma} from the top of R&D. After looking at those cards and the cards in Archives, the Corp uses {card:Raman Rai} to reveal the {card:Enigma} and a {card:Tollbooth} from Archives and swap them. Then, the corp uses {card:Daily Business Show} to add {card:Tollbooth} to the bottom of the deck. Finally, the Corp adds {card:Wraparound} to HQ.",
-        "translation": ""
+        "translation": "公司进行其强制抽牌时，场上有已激活的 {card:每日商业秀} 与 {card:拉曼·雷}。其将研发中心顶端的 {card:环绕筒} 与 {card:谜团} 置于一旁。在查看这些卡牌以及档案库中的卡牌后，公司使用 {card:拉曼·雷} 展示 {card:谜团} 与档案库中的一张 {card:收费站}，并将它们互换。接着，公司使用 {card:每日商业秀} 将 {card:收费站} 加入牌组底部。最后，公司将 {card:环绕筒} 加入总部。"
     },
     {
         "key": "rule_drawing_simultaneously",
         "original": "8.4.4. If an ability directs multiple players to draw cards at the same time, those players follow the procedure for drawing cards together. Abilities relating to all of those draws will become pending in the same reaction window.",
-        "translation": ""
+        "translation": "如果某个能力指示多位玩家同时抽牌，则这些玩家会共同遵循抽牌流程。与这些抽牌全部有关的能力，会在同一个响应窗口中变为待结算。"
     },
     {
         "key": "rule_optional_drawing_simultaneously",
         "original": "8.4.4.a. If an ability gives multiple players the option to draw cards at the same time, first each player indicates whether or how many cards they will draw, starting with the active player. Then the indicated draws are performed simultaneously.",
-        "translation": ""
+        "translation": "如果某个能力给予多位玩家同时抽牌的选项，则先由每位玩家宣告其是否要抽牌，以及要抽多少张，从主动玩家开始。然后，被宣告的抽牌会同时执行。"
     },
     {
         "key": "sec_steps_of_drawing_n_cards",
         "original": "8.4.5. Steps of Drawing N Cards",
-        "translation": ""
+        "translation": "抽取 N 张卡牌的步骤"
     },
     {
         "key": "step_draw_set_aside",
         "original": "8.4.5.a. Set aside N cards from the top of the drawing player's deck. The cards are now considered drawn and can be looked at by their controller.",
-        "translation": ""
+        "translation": "将 N 张卡牌从抽牌玩家的牌组顶端置于一旁。这些卡牌现在被视为已抽取，且其操控者可以查看之。"
     },
     {
         "key": "step_draw_checkpoint",
         "original": "8.4.5.b. A checkpoint occurs.",
-        "translation": ""
+        "translation": "发生一次检查点。"
     },
     {
         "key": "step_draw_add_to_hand",
         "original": "8.4.5.c. Add the set-aside cards to the player's hand.",
-        "translation": ""
+        "translation": "将置于一旁的卡牌加入该玩家的手牌。"
     },
     {
         "key": "sec_install_uninstall",
         "original": "8.5. Installing and Uninstalling Cards",
-        "translation": ""
+        "translation": "安装与卸载卡牌"
     },
     {
         "key": "rule_installing",
         "original": "8.5.1. {term:Installing} an agenda, asset, ice, upgrade, hardware, program, or resource card is the act of placing that card into the play area. Events, operations, and identities are never installed.",
-        "translation": ""
+        "translation": "{term:安装}一张议案、资产、防火墙、升级、硬件、程序或资源卡牌，是将该卡牌置入游戏区的行为。事件、事务与特性从不会被安装。"
     },
     {
         "key": "rule_installed_onto_cards",
         "original": "8.5.1.a. Cards and counters can also be installed onto other cards if either the card being installed onto or the card or counter being installed has an ability allowing this. The relationship created this way is called {term:hosting} and is discussed in {ref:sec_host}. Some abilities also host cards without installing them.",
-        "translation": ""
+        "translation": "如果被安装到的卡牌，或正在被安装的卡牌或指示物，具有允许如此做的能力，则卡牌和指示物也可以安装到其他卡牌上。以这种方式创建的关系称为{term:附载}，详见{ref:sec_host}。某些能力也会在不安装卡牌的情况下附载它们。"
     },
     {
         "key": "rule_uninstalled",
         "original": "8.5.1.b. A card or counter is {term:uninstalled} when it stops being installed for any reason.",
-        "translation": ""
+        "translation": "一张卡牌或一个指示物，只要因任何原因不再处于已安装状态，便是{term:被卸载}。"
     },
     {
         "key": "rule_corp_cards_default_install",
         "original": "8.5.2. Corp cards are installed facedown, unrezzed, and remain inactive until rezzed. Corp cards are installed into specific locations. See {ref:subsec_servers} for more information on servers and the locations of installed Corp cards.",
-        "translation": ""
+        "translation": "公司卡牌以牌面朝下、未激活的状态安装，并在被激活前保持闲置状态。公司卡牌会安装到特定位置中。关于服务器与已安装公司卡牌位置的更多信息，见{ref:subsec_servers}。"
     },
     {
         "key": "rule_corp_install_choose_destination_server",
         "original": "8.5.2.a. As part of installing a card, the Corp chooses which server will be the destination for that card. The Corp can either choose an already existing server as the destination or announces that the card will create a new remote server.",
-        "translation": ""
+        "translation": "作为安装卡牌的一部分，公司要选择哪一台服务器作为该卡牌的目标。公司既可以选择一台已存在的服务器作为目标，也可以宣告该卡牌将创建一台新的远程服务器。"
     },
     {
         "key": "rule_agenda_asset_root_remote_server",
         "original": "8.5.2.b. The Corp always installs an agenda or asset into the root of a remote server.",
-        "translation": ""
+        "translation": "公司总是将议案或资产安装到远程服务器的根目录中。"
     },
     {
         "key": "rule_upgrade_root_central_remote_server",
         "original": "8.5.2.c. The Corp always installs an upgrade into the root of a central or remote server.",
-        "translation": ""
+        "translation": "公司总是将升级安装到中央服务器或远程服务器的根目录中。"
     },
     {
         "key": "rule_ice_outermost_position",
         "original": "8.5.2.d. Unless otherwise indicated, the Corp always installs ice to the outermost position protecting the destination server. See {ref:rule_create_position}.",
-        "translation": ""
+        "translation": "除非另有说明，公司总是将防火墙安装到保护目标服务器的最外层位置。见{ref:rule_create_position}。"
     },
     {
         "key": "rule_cards_in_server_cannot_be_rearranged",
         "original": "8.5.3. Cards in servers cannot be rearranged unless instructed by a card ability. To organize this hidden information for both players, it is important that the Corp observes the following rules for card orientation:",
-        "translation": ""
+        "translation": "除非卡牌能力指示，否则服务器中的卡牌不能被重新排列。为了让双方玩家都妥善处理这些隐藏信息，公司必须遵循以下有关卡牌朝向的规则："
     },
     {
         "key": "rule_cards_in_root_vertical",
         "original": "8.5.3.a. Agendas, assets, and upgrades are always installed in a vertical orientation. An upgrade in the root of a remote server is installed in the same position as an agenda or asset. The Runner should not be able to tell what type of card is installed in the root of a remote server by its position.",
-        "translation": ""
+        "translation": "议案、资产与升级总是以竖直朝向安装。远程服务器根目录中的升级，会安装在与议案或资产相同的位置。潜袭者不应能仅凭位置分辨出远程服务器根目录中安装的是哪种卡牌类型。"
     },
     {
         "key": "rule_ice_horizontal",
         "original": "8.5.3.b. Ice is always installed in a horizontal orientation.",
-        "translation": ""
+        "translation": "防火墙总是以横向朝向安装。"
     },
     {
         "key": "rule_runner_cards_default_install",
         "original": "8.5.4. Runner cards are normally installed faceup, active. Runner cards are generally installed without designated locations.",
-        "translation": ""
+        "translation": "潜袭者卡牌通常以牌面朝上、活动的状态安装。潜袭者卡牌通常在安装时不指定位置。"
     },
     {
         "key": "rule_install_one_at_a_time",
         "original": "8.5.5. Installing cards is an exception to {ref:rule_act_on_multiple_cards}. If an effect would install more than one card, then those cards are chosen and installed one at a time, following all of the steps of the installation process ({ref:sec_steps_installing}) for each card before choosing and installing the next. Each such installation is performed as a separate instruction. See {ref:rule_split_up_instruction}.",
-        "translation": ""
+        "translation": "安装卡牌是{ref:rule_act_on_multiple_cards}的一个例外。如果某个效果将要安装超过一张卡牌，则这些卡牌会逐张被选择并安装；在选择并安装下一张卡牌之前，每张卡牌都要先依照安装流程的全部步骤（{ref:sec_steps_installing}）完成安装。每次此类安装都作为一条独立指示执行。见{ref:rule_split_up_instruction}。"
     },
     {
         "key": "rule_install_one_at_a_time-1-example",
         "original": "The Runner uses {card:Mass Install} to install three programs. The Runner can install {card:Dhegdheer} first, and then host one of the other two programs on {card:Dhegdheer} in order to reduce the install cost.",
-        "translation": ""
+        "translation": "潜袭者使用 {card:集群安装} 安装三个程序。潜袭者可以先安装 {card:长耳怪}，然后将另外两个程序中的一个附载到 {card:长耳怪} 上，以减少安装费用。"
     },
     {
         "key": "rule_install_trash_like_cards",
         "original": "8.5.6. As part of the installation process, a player installing an agenda, asset, upgrade, ice, or program has the opportunity to trash like cards.",
-        "translation": ""
+        "translation": "作为安装流程的一部分，正在安装议案、资产、升级、防火墙或程序的玩家，有机会销毁同类卡牌。"
     },
     {
         "key": "rule_must_trash_cases_in_root_of_server",
         "original": "8.5.6.a. When installing an agenda or asset in the root of a remote server, or an upgrade in the root of any server, the Corp may first trash any number of other cards already installed in the root of that server. If the card to be installed is an asset or agenda, the Corp must trash any other asset or agenda from that server. If the card to be installed is a region, the Corp must trash any other region from that server.",
-        "translation": ""
+        "translation": "当在远程服务器根目录中安装一张议案或资产，或在任意服务器的根目录中安装一个升级时，公司可以先销毁任意数量已安装在该服务器根目录中的其他卡牌。如果要安装的卡牌是一张资产或议案，则公司必须销毁该服务器中的任何其他资产或议案。如果要安装的卡牌是一个区域，则公司必须销毁该服务器中的任何其他区域。"
     },
     {
         "key": "rule_install_trash_ice",
         "original": "8.5.6.b. When installing ice protecting a server, the Corp may first trash any number of other ice already installed protecting that server. Ice trashed in this way will not be counted when determining the install cost of the new ice.",
-        "translation": ""
+        "translation": "当安装一层保护某台服务器的防火墙时，公司可以先销毁任意数量已安装来保护该服务器的其他防火墙。以这种方式被销毁的防火墙，在确定新防火墙的安装费用时不计入数量。"
     },
     {
         "key": "rule_install_trash_programs",
         "original": "8.5.6.c. When installing a program, the Runner may first trash any number of programs already installed. They must do so if installing the new program would exceed their memory limit.",
-        "translation": ""
+        "translation": "当安装一个程序时，潜袭者可以先销毁任意数量已安装的程序。如果安装新程序会超过其内存上限，则其必须如此做。"
     },
     {
         "key": "rule_install_corp_cards_trashed_facedown_archives",
         "original": "8.5.7. If the Corp trashes any cards during the installation process, the trashed cards are placed in Archives with the same faceup or facedown status they had while installed.",
-        "translation": ""
+        "translation": "如果公司在安装流程中销毁了任何卡牌，则这些被销毁的卡牌会以其在已安装时相同的牌面朝上或牌面朝下状态置入档案库。"
     },
     {
         "key": "rule_server_ceases_to_exist",
         "original": "8.5.8. If the last card protecting a remote server or in the root of that server is uninstalled outside of the process of installing another card, then the server ceases to exist during the next checkpoint. See {ref:sec_checkpoints}.",
-        "translation": ""
+        "translation": "如果某台远程服务器中最后一张正在保护它的卡牌，或位于其根目录中的最后一张卡牌，在安装另一张卡牌的流程之外被卸载，则该服务器会在下一次检查点期间不再存在。见{ref:sec_checkpoints}。"
     },
     {
         "key": "rule_install_cannot_destroy_server",
         "original": "8.5.9. The Corp cannot destroy a server by installing cards. While the Corp is installing a card with a remote server as its destination, that server does not cease to exist during any checkpoints that occur before the install effect is complete. Even if the last card installed in the root of or protecting a remote server is trashed during the installation process, it is still considered the same server after the new card has been installed.",
-        "translation": ""
+        "translation": "公司不能通过安装卡牌来摧毁一台服务器。当公司正在安装一张以某台远程服务器为目标的卡牌时，在该安装效果完成之前发生的任何检查点期间，该服务器都不会不再存在。即使一台远程服务器根目录中或正在保护它的最后一张已安装卡牌，在安装流程中被销毁，在新卡牌安装完毕后，它仍被视为同一台服务器。"
     },
     {
         "key": "rule_uninstall_ice_during_run",
         "original": "8.5.10. If a piece of ice is uninstalled while being approached or encountered, any open paid ability window is completed. Then the approach or encounter ends without completing any further steps of that timing structure. The Runner passes the position the uninstalled ice had occupied, and the run continues. See {ref:sec_position} for rules about positions during a run.",
-        "translation": ""
+        "translation": "如果一层防火墙在被接驳或遭遇期间被卸载，则任何已开启的付费能力窗口都会完成。然后，该次接驳或遭遇会在不再完成该时序其余步骤的情况下结束。潜袭者会通过该层已被卸载之防火墙原先占据的位置，而潜袭继续进行。关于潜袭期间位置的规则，见{ref:sec_position}。"
     },
     {
         "key": "sec_install_cost",
         "original": "8.5.11. Some types of cards have an install cost, which must be paid before the card can become installed, unless an ability indicates that this cost should be ignored.",
-        "translation": ""
+        "translation": "安装费用"
     },
     {
         "key": "rule_install_cost_link",
         "original": "8.5.11.a. The install cost of a piece of ice is 1 credit for each piece of ice already installed protecting the destination server at the time the cost is to be paid. The install cost of a piece of hardware, program, or resource is indicated on the card. Assets, agendas, upgrades, and facedown Runner cards have no install cost. See also {ref:rule_install_cost_ice}.",
-        "translation": ""
+        "translation": "一层防火墙的安装费用，是在需要支付该费用时，每有 1 层已安装来保护目标服务器的防火墙，便为 1 个信用点。一个硬件、程序或资源的安装费用印在卡牌上。资产、议案、升级与牌面朝下的潜袭者卡牌没有安装费用。另见{ref:rule_install_cost_ice}。"
     },
     {
         "key": "rule_install_cost_x",
         "original": "8.5.11.b. If a card has an install cost of X, the value for X is chosen by the player at the time the cost would normally be paid, according to any stipulations indicated in the card's text box. This value of X is maintained until the install effect is complete.",
-        "translation": ""
+        "translation": "如果一张卡牌的安装费用为 X，则 X 的数值由玩家在通常应支付该费用时，依照卡牌文本框中写明的任何规定来选择。该 X 值会一直维持到安装效果完成为止。"
     },
     {
         "key": "rule_install_cost_checkpoint",
         "original": "8.5.11.c. After the install cost is paid, a checkpoint occurs, as required by {ref:rule_checkpoint_after_paying_cost}.",
-        "translation": ""
+        "translation": "安装费用支付后，会发生一次检查点，正如{ref:rule_checkpoint_after_paying_cost}所要求的那样。"
     },
     {
         "key": "rule_x_server_only",
         "original": "8.5.12. Some upgrades have an ability that specifies {n}\"central server\", \"remote server\", or 1 or more particular central servers{/n} followed by the word \"only\". This is a restriction on the locations an upgrade can occupy that applies at all times, even if the upgrade is inactive. The Corp cannot choose the root of a non-specified server as the installation destination for such an upgrade, and such an upgrade cannot be {n}moved or{/n} swapped into the root of a non-specified server.",
-        "translation": ""
+        "translation": "某些升级具有一种能力，其指定{n}“central server”“remote server”或 1 台或多台特定中央服务器{/n}，并紧跟单词“only”。这是对该升级可以占据之位置的限制，并且在任何时刻都适用，即使该升级处于闲置状态也是如此。公司不能选择非指定服务器的根目录作为此类升级的安装目的地，而此类升级也不能被{n}转移到或{/n}互换到非指定服务器的根目录中。"
     },
     {
         "key": "rule_install_from_hidden_or_secret_zone",
         "original": "8.5.13. If a player attempts to install a facedown card or a card from a hidden or secret zone, they are required in certain cases to reveal that card in order to verify that the installation is valid.",
-        "translation": ""
+        "translation": "如果玩家试图安装一张牌面朝下的卡牌，或从一个隐藏区域或秘密区域安装一张卡牌，则在某些情况下，为验证该安装是否合法，其必须展示该卡牌。"
     },
     {
         "key": "rule_no_reveal_for_default_install",
         "original": "8.5.13.a. Players are not required to and should not reveal an installed card simply to verify that it has an appropriate card type.",
-        "translation": ""
+        "translation": "玩家无需，也不应仅为了验证一张已安装卡牌是否具有合适的卡牌类型而展示之。"
     },
     {
         "key": "rule_no_reveal_for_default_install-1-example",
         "original": "The Corp controls a remote server with a facedown card in its root, and uses a basic action to install another card into that root. To satisfy the rules, the new card must be an asset, upgrade, or agenda, since those are the only card types that can normally be installed in the root of a remote server. Additionally, at least one of the two cards must be an upgrade, since there can only be at most 1 asset or agenda in the root of a server. However, the Corp does not reveal cards to verify either of these properties.",
-        "translation": ""
+        "translation": "公司操控着一台远程服务器，其根目录中有一张牌面朝下的卡牌，并使用一个基础行动将另一张卡牌安装到该根目录中。为符合规则，这张新卡牌必须是资产、升级或议案，因为只有这些卡牌类型通常可以安装在远程服务器的根目录中。此外，两张卡牌中至少有一张必须是升级，因为一台服务器的根目录中至多只能有 1 张资产或议案。然而，公司不会展示卡牌来验证这两项性质中的任一项。"
     },
     {
         "key": "rule_no_reveal_for_default_install-2-example",
         "original": "The Corp resolves the first subroutine on {card:Brân 1.0}. They do not reveal the card they install to verify that it is a piece of ice as stipulated in the text of the subroutine, nor do they reveal the card to verify that it is a piece of ice as necessitated from installing it protecting a server.",
-        "translation": ""
+        "translation": "公司结算 {card:布兰1.0} 的第一个子进程。其不会展示所安装的卡牌，以验证该卡牌如子进程文本所规定的是一层防火墙；其也不会展示该卡牌，以验证由于将其安装来保护某台服务器而必然要求其是一层防火墙。"
     },
     {
         "key": "rule_no_reveal_for_server_limitation",
         "original": "8.5.13.b. Players are not required to and should not reveal an installed card to verify that it meets server limitations.",
-        "translation": ""
+        "translation": "玩家无需，也不应为了验证一张已安装卡牌是否满足服务器限制而展示之。"
     },
     {
         "key": "rule_no_reveal_for_server_limitation-1-example",
         "original": "The Corp installs a card in the root of a server with a rezzed {subtype:region} upgrade. The new card cannot also be a {subtype:region} upgrade (unless the old one is trashed as part of the installation), as per {ref:subsec_regions}. They do not reveal the installed card to verify this.",
-        "translation": ""
+        "translation": "公司在一台服务器的根目录中安装一张卡牌，而该服务器根目录中有一个已激活的{subtype:区域}升级。依照{ref:subsec_regions}，这张新卡牌不能也是一个{subtype:区域}升级（除非旧的那个作为安装的一部分被销毁）。其不会展示该已安装卡牌来验证这一点。"
     },
     {
         "key": "rule_reveal_for_ability_limitations",
         "original": "8.5.13.c. Players are required to reveal an installed card to verify any other requirements imposed by the ability that installs the card.",
-        "translation": ""
+        "translation": "玩家必须展示一张已安装卡牌，以验证安装该卡牌的能力所施加的任何其他要求。"
     },
     {
         "key": "rule_reveal_for_ability_limitations-1-example",
         "original": "The Corp triggers the ability on {card:Ob Superheavy Logistics} by trashing a card with printed rez cost 5. They search R&D for {card:Archer} and install it, but decline to pay the additional cost to rez {card:Archer}. Since the ability requires the installed card to have printed rez cost 4, and the card is not otherwise visible to the Runner at any point in this process, the Corp must reveal {card:Archer} to verify that the installation is legal.",
-        "translation": ""
+        "translation": "公司通过销毁一张印刷激活费用为 5 的卡牌，触发 {card:鄂毕超重型物流} 上的能力。其从研发中心中搜寻 {card:射手} 并安装之，但选择不支付额外费用来激活 {card:射手}。由于该能力要求所安装的卡牌具有印刷激活费用 4，且在此流程中的任何时点，这张卡牌对潜袭者都并非以其他方式可见，因此公司必须展示 {card:射手}，以验证该安装合法。"
     },
     {
         "key": "rule_reveal_for_install_and_rez",
         "original": "8.5.13.d. Some abilities \"install and rez\" 1 or more cards. If the player resolving an \"install and rez\" effect is allowed to choose a card that they are unable to rez, or if the installed card has an additional cost to rez that the player declines to pay (see {ref:rule_inherent_and_additional_cost}), the player must reveal the installed card, regardless of whether other restrictions apply.",
-        "translation": ""
+        "translation": "某些能力会“install and rez”1 张或多张卡牌。如果结算某个“install and rez”效果的玩家，被允许选择一张其无法激活的卡牌，或者已安装的卡牌具有一个该玩家选择不支付的额外激活费用（见{ref:rule_inherent_and_additional_cost}），则无论是否有其他限制适用，该玩家都必须展示该已安装卡牌。"
     },
     {
         "key": "rule_reveal_for_install_and_rez-1-example",
         "original": "The Corp plays {card:Trust Operation} and installs an agenda from Archives with its \"install and rez\" effect. Since agendas cannot be rezzed, the Corp must reveal the installed agenda.",
-        "translation": ""
+        "translation": "公司打出 {card:托拉斯行动}，并用其“install and rez”效果从档案库中安装一张议案。由于议案不能被激活，公司必须展示该已安装议案。"
     },
     {
         "key": "rule_reveal_for_install_and_rez-2-example",
         "original": "The Corp plays {card:Ad Blitz}. Since the \"install and rez\" effect on this card stipulates \"if able\", the Corp cannot choose to install cards they are unable to rez, nor can they decline additional costs if any apply.",
-        "translation": ""
+        "translation": "公司打出 {card:广告闪电战}。由于这张卡牌上的“install and rez”效果写有“if able”，公司不能选择安装其无法激活的卡牌，若存在额外费用也不能选择不支付。"
     },
     {
         "key": "rule_install_to_invalid_destination",
         "original": "8.5.14. Some abilities install cards to a specific location. If an ability specifies a destination that is invalid or cannot be identified, no installation can take place.",
-        "translation": ""
+        "translation": "某些能力会将卡牌安装到特定位置。如果某个能力指定的目的地无效或无法确定，则不能进行任何安装。"
     },
     {
         "key": "rule_install_to_invalid_destination-1-example",
         "original": "The Corp uses {card:Nanisivik Grid} to resolve the first subroutine on a copy of {card:Brân 1.0} in Archives. This subroutine attempts to install ice \"directly inward\" from {card:Brân 1.0}, but this copy of {card:Brân 1.0} is not protecting a server and therefore does not have a position from which \"directly inward\" can be evaluated. There is no legal way to install a card as directed, so the subroutine will have no effect.",
-        "translation": ""
+        "translation": "公司使用 {card:纳尼西维克网阵} 来结算档案库中一张 {card:布兰1.0} 副本的第一个子进程。该子进程试图将一层防火墙安装在 {card:布兰1.0} 的“正内侧”，但这张 {card:布兰1.0} 副本并未保护任何服务器，因此不存在可据以判断“正内侧”的位置。由于不存在合法方式来按指示安装一张卡牌，该子进程不会有任何效果。"
     },
     {
         "key": "rule_install_and_rez",
         "original": "8.5.15. Some abilities instruct the Corp to \"install and rez\" a card. To resolve this instruction, the Corp first installs the card normally. After the installation is complete, the Corp rezzes the card. See also {ref:rule_reveal_for_install_and_rez}.",
-        "translation": ""
+        "translation": "某些能力会指示公司“install and rez”一张卡牌。要结算该指示，公司先照常安装该卡牌。在安装完成后，公司再激活该卡牌。另见{ref:rule_reveal_for_install_and_rez}。"
     },
     {
         "key": "rule_install_and_rez_one_at_a_time",
         "original": "8.5.15.a. Some \"install and rez\" abilities affect more than 1 card. In this case, each card is rezzed directly after it is installed, as part of the same instruction and before the next installation begins. See also {ref:rule_install_one_at_a_time}.",
-        "translation": ""
+        "translation": "某些“install and rez”能力会影响超过 1 张卡牌。在这种情况下，每张卡牌都会在被安装后立刻激活，作为同一条指示的一部分，且发生在下一次安装开始之前。另见{ref:rule_install_one_at_a_time}。"
     },
     {
         "key": "sec_steps_installing",
         "original": "8.5.16. Steps of Installing a Card",
-        "translation": ""
+        "translation": "安装一张卡牌的步骤"
     },
     {
         "key": "rule_steps_installing_place",
         "original": "8.5.16.a. Place the card into the play area with the same faceup or facedown status it will have when the installation is complete. It is not yet installed or active.",
-        "translation": ""
+        "translation": "将该卡牌以其在安装完成时将具有的相同牌面朝上或牌面朝下状态置入游戏区。它此时尚未被安装，也尚未活动。"
     },
     {
         "key": "rule_steps_installing_destination",
         "original": "8.5.16.b. Choose and declare the install destination appropriate to the card that will be installed, including any host relationships, if applicable.",
-        "translation": ""
+        "translation": "选择并宣告适用于该将被安装卡牌的安装目的地，包括任何附载关系（若适用）。"
     },
     {
         "key": "rule_steps_installing_trash_like_cards",
         "original": "8.5.16.c. Trash like cards as described in {ref:rule_install_trash_like_cards}.",
-        "translation": ""
+        "translation": "按{ref:rule_install_trash_like_cards}所述，销毁同类卡牌。"
     },
     {
         "key": "rule_steps_installing_pay_install_cost",
         "original": "8.5.16.d. Pay the appropriate install cost. (The cost-paid checkpoint then occurs.)",
-        "translation": ""
+        "translation": "支付相应的安装费用。（随后会发生费用支付后的检查点。）"
     },
     {
         "key": "rule_steps_installing_become_installed",
         "original": "8.5.16.e. If the card is to be the first card in the root of or protecting a new remote server, that server is created. Move the card to the chosen install location. It becomes installed. If the card is faceup, it becomes active.",
-        "translation": ""
+        "translation": "如果该卡牌将成为一台新远程服务器根目录中的第一张卡牌，或第一张保护该服务器的卡牌，则创建该服务器。将该卡牌转移到所选择的安装位置。它成为已安装状态。如果该卡牌牌面朝上，则其变为活动状态。"
     },
     {
         "key": "rule_steps_installing_installed_condition",
         "original": "8.5.16.f. Any \"When installed...\" abilities that apply to the installation meet their trigger conditions, including those on the installed card, and the install effect is complete.",
-        "translation": ""
+        "translation": "任何适用于此次安装的“When installed...”能力都会满足其触发条件，包括已安装卡牌自身上的能力，而该安装效果至此完成。"
     },
     {
         "key": "sec_playing_events_and_operations",
         "original": "8.6. Playing Events and Operations",
-        "translation": ""
+        "translation": "打出事件与事务"
     },
     {
         "key": "rule_playing",
         "original": "8.6.1. {term:Playing} an event or operation is a process in which that card is placed into the play area, its play abilities are resolved, and then the card is trashed. Agendas, assets, ice, upgrades, hardware, programs, resources, and identities are never played.",
-        "translation": ""
+        "translation": "{term:打出}一张事件或事务，是将该卡牌置入游戏区、结算其打出能力，然后将该卡牌销毁的过程。议案、资产、防火墙、升级、硬件、程序、资源与特性从不会被打出。"
     },
     {
         "key": "rule_playing_play_cost",
         "original": "8.6.2. Normally, playing an operation or event requires paying its play cost. Abilities that initiate playing a card may ignore the play cost or require it to be paid.",
-        "translation": ""
+        "translation": "通常，打出一张事务或事件需要支付其打出费用。发起打出一张卡牌的能力可以忽略该打出费用，或要求必须支付之。"
     },
     {
         "key": "rule_play_cost_x",
         "original": "8.6.2.a. If a card has a play cost of X, the value for X is chosen by the player at the time the play cost is paid, according to any stipulations written on the card. This value of X is maintained while resolving the event or operation.",
-        "translation": ""
+        "translation": "如果一张卡牌的打出费用为 X，则 X 的数值由玩家在支付打出费用时，依照卡牌上写明的任何规定来选择。该 X 值会在结算该事件或事务期间持续保持。"
     },
     {
         "key": "rule_play_cost_checkpoint",
         "original": "8.6.2.b. After the play cost is paid, a checkpoint occurs, as required by {ref:rule_checkpoint_after_paying_cost}.",
-        "translation": ""
+        "translation": "打出费用支付后，会发生一次检查点，正如{ref:rule_checkpoint_after_paying_cost}所要求的那样。"
     },
     {
         "key": "rule_playing_one_at_a_time",
         "original": "8.6.3. Playing cards is an exception to {ref:rule_act_on_multiple_cards}. If an effect would play more than one card, then those cards are chosen and played one at a time, following all of the steps of the play process ({ref:sec_steps_playing}) for each card before choosing and playing the next. Each such card is played as a separate instruction. See {ref:rule_split_up_instruction}.",
-        "translation": ""
+        "translation": "打出卡牌是{ref:rule_act_on_multiple_cards}的一个例外。如果某个效果将要打出超过一张卡牌，则这些卡牌会逐张被选择并打出；在选择并打出下一张卡牌之前，每张卡牌都要先依照打出流程的全部步骤（{ref:sec_steps_playing}）完成打出。每张此类卡牌都作为一条独立指示被打出。见{ref:rule_split_up_instruction}。"
     },
     {
         "key": "rule_playing_one_at_a_time-1-example",
         "original": "The Corp uses {card:Subcontract} to play {card:Hedge Fund} and another operation. The Corp can use the credits gained from {card:Hedge Fund} to pay for the second operation.",
-        "translation": ""
+        "translation": "公司使用 {card:转包合同} 打出 {card:对冲基金} 和另一张事务。公司可以使用从 {card:对冲基金} 获得的信用点来支付第二张事务的费用。"
     },
     {
         "key": "rule_playing_lingering_effects",
         "original": "8.6.4. Operations and events can create lingering effects. Once those effects exist, they become independent of the source operation or event and the card is considered fully resolved and ready to be trashed. See {ref:sec_lingering_effects}.",
-        "translation": ""
+        "translation": "事务和事件可以创建残留效果。一旦这些效果存在，它们便独立于来源事务或事件，而该卡牌会被视为已完全结算并准备好被销毁。见{ref:sec_lingering_effects}。"
     },
     {
         "key": "rule_playing_lingering_effects-1-example",
         "original": "{card:Test Run} creates a delayed conditional ability that will resolve at the end of the turn, but {card:Test Run} itself is considered fully resolved and is trashed once it finishes installing a program.",
-        "translation": ""
+        "translation": "{card:测试运行} 会创建一个将在回合结束时结算的延迟条件能力，但 {card:测试运行} 本身在其完成安装一个程序后，就被视为已完全结算并被销毁。"
     },
     {
         "key": "rule_playing_timing_structure",
         "original": "8.6.5. An operation or event that initiates a timing structure remains active in the play area for the duration of that timing structure. It is not considered fully resolved until the timing structure is completed and any abilities on the card that meet their trigger conditions when the timing structure ends are resolved.",
-        "translation": ""
+        "translation": "会发起某个时序的事务或事件，会在该时序持续期间一直保持在游戏区中且处于活动状态。只有当该时序完成，且该卡牌上任何在该时序结束时满足触发条件的能力都已结算后，它才被视为已完全结算。"
     },
     {
         "key": "rule_play_no_trash",
         "original": "8.6.6. In certain circumstances, a played card is not trashed after resolving it.",
-        "translation": ""
+        "translation": "在某些情况下，一张被打出的卡牌在结算后不会被销毁。"
     },
     {
         "key": "rule_play_no_trash_left_play_area",
         "original": "8.6.6.a. If the played card is no longer in the play area when {ref:rule_steps_playing_trash_played_card} is reached, it is not trashed.",
-        "translation": ""
+        "translation": "如果到达{ref:rule_steps_playing_trash_played_card}时，该被打出的卡牌已不在游戏区中，则其不会被销毁。"
     },
     {
         "key": "rule_play_no_trash_left_play_area-1-example",
         "original": "The Runner plays {card:Ashen Epilogue} and resolves its play abilities. Its last ability removes it from the game.",
-        "translation": ""
+        "translation": "潜袭者打出 {card:灰白终章} 并结算其打出能力。其最后一个能力会将它移出游戏。"
     },
     {
         "key": "rule_play_no_trash_hosted",
         "original": "8.6.6.b. If the played card has been converted to a condition counter or otherwise hosted on a card while resolving its play abilities, it is not trashed. See also {ref:rule_card_to_counter}.",
-        "translation": ""
+        "translation": "如果一张被打出的卡牌在结算其打出能力期间，被转化为一个状态指示物，或以其他方式附载于一张卡牌上，则其不会被销毁。另见{ref:rule_card_to_counter}。"
     },
     {
         "key": "rule_play_not_trashed_until",
         "original": "8.6.6.c. If the played card has an ability indicating that it is not trashed until a certain effect occurs, instead of trashing it, a lingering effect is created with a duration that expires as the indicated effect occurs. See also {ref:sec_lingering_effects}.",
-        "translation": ""
+        "translation": "如果一张被打出的卡牌具有一个能力，指示其在某个特定效果发生前不会被销毁，则改为创建一个持续时间会在该指定效果发生时失效的残留效果，而不是销毁它。另见{ref:sec_lingering_effects}。"
     },
     {
         "key": "rule_play_no_trash_if_play_effect_will_rfg",
         "original": "8.6.6.d. If an ability that plays an event or operation also contains the nested conditional ability \"After it resolves, remove it from the game.\", the event or operation is not trashed. The card remains in the play area until the conditional ability removes it from the game.",
-        "translation": ""
+        "translation": "如果某个打出事件或事务的能力，还包含一个嵌套条件能力“After it resolves, remove it from the game.”，则该事件或事务不会被销毁。该卡牌会留在游戏区中，直到该条件能力将其移出游戏为止。"
     },
     {
         "key": "sec_steps_playing",
         "original": "8.6.7. Steps of Playing an Event or Operation",
-        "translation": ""
+        "translation": "打出一张事件或事务的步骤"
     },
     {
         "key": "rule_steps_playing_place",
         "original": "8.6.7.a. Place the card faceup into the play area. It is not installed and not yet active.",
-        "translation": ""
+        "translation": "将该卡牌牌面朝上地置入游戏区。它不是已安装状态，也尚未活动。"
     },
     {
         "key": "rule_steps_playing_play_cost",
         "original": "8.6.7.b. Pay the play cost. (The cost-paid checkpoint then occurs.)",
-        "translation": ""
+        "translation": "支付打出费用。（随后会发生费用支付后的检查点。）"
     },
     {
         "key": "rule_steps_playing_active",
         "original": "8.6.7.c. The card becomes active.",
-        "translation": ""
+        "translation": "该卡牌变为活动状态。"
     },
     {
         "key": "rule_steps_playing_played_condition",
         "original": "8.6.7.d. Conditions related to playing an event or operation are met.",
-        "translation": ""
+        "translation": "与打出一张事件或事务有关的条件得到满足。"
     },
     {
         "key": "rule_steps_playing_played_checkpoint",
         "original": "8.6.7.e. A checkpoint occurs.",
-        "translation": ""
+        "translation": "发生一次检查点。"
     },
     {
         "key": "rule_steps_playing_resolve_play_abilities",
         "original": "8.6.7.f. Resolve the play abilities of the card.",
-        "translation": ""
+        "translation": "结算该卡牌的打出能力。"
     },
     {
         "key": "rule_steps_playing_trash_played_card",
         "original": "8.6.7.g. Trash the card if applicable.",
-        "translation": ""
+        "translation": "若适用，则销毁该卡牌。"
     },
     {
         "key": "rule_steps_playing_after_resolve_condition",
         "original": "8.6.7.h. Conditions related to after resolving or finishing resolving an event or operation are met.",
-        "translation": ""
+        "translation": "与事件或事务在结算后或结算完成后有关的条件得到满足。"
     },
     {
         "key": "rule_steps_playing_complete",
         "original": "8.6.7.i. The play effect is complete.",
-        "translation": ""
+        "translation": "该打出效果完成。"
     },
     {
         "key": "sec_searching_cards",
         "original": "8.7. Searching for Cards",
-        "translation": ""
+        "translation": "搜寻卡牌"
     },
     {
         "key": "rule_search",
         "original": "8.7.1. If a player is instructed to {term:search} a zone for one or more cards, they look at all the cards in that zone for cards matching the criteria of the search.",
-        "translation": ""
+        "translation": "如果一位玩家被指示从一个区域中{term:搜寻}一张或多张卡牌，则其会查看该区域中的所有卡牌，以寻找符合该次搜寻条件的卡牌。"
     },
     {
         "key": "rule_search_hidden_secret_zone",
         "original": "8.7.1.a. If a player is instructed to search a hidden or secret zone, they are temporarily allowed to look at those cards until the search is complete, so long as they maintain that zone as hidden or secret as necessary to the other player.",
-        "translation": ""
+        "translation": "如果一位玩家被指示搜寻一个隐藏区域或秘密区域，则在搜寻完成前，只要其按照对另一位玩家所需的方式维持该区域的隐藏或秘密状态，其就可以暂时查看那些卡牌。"
     },
     {
         "key": "rule_find",
         "original": "8.7.2. While a player is searching, they may {term:find} an appropriate number of cards matching any criteria of the search by taking them from the zone being searched and setting them aside facedown.",
-        "translation": ""
+        "translation": "当玩家正在搜寻时，其可以从被搜寻区域中取出符合该次搜寻任意条件的适当数量卡牌，并将其牌面朝下置于一旁，以{term:找到}这些卡牌。"
     },
     {
         "key": "rule_valid_search_target_criteria",
         "original": "8.7.2.a. The card found with a search must match the criteria specified by the search effect.",
-        "translation": ""
+        "translation": "通过一次搜寻找到的卡牌，必须符合该搜寻效果所指定的条件。"
     },
     {
         "key": "rule_valid_search_target_install_play",
         "original": "8.7.2.b. When a search is followed by an install instruction referring to the found card(s), then the player must be able to install the card(s) they find. The same is true when the search is followed by a play instruction.",
-        "translation": ""
+        "translation": "如果一次搜寻之后紧接着有一个提及所找到卡牌的安装指示，则玩家必须能够安装其所找到的卡牌。当搜寻之后紧接着是一个打出指示时，也是如此。"
     },
     {
         "key": "rule_valid_search_target_install_play-1-example",
         "original": "The Runner uses {card:Artist Colony} to search for a card and install it. They cannot find an event with the search because events can never be installed. They also cannot find a program, hardware, or resource that they cannot afford to install.",
-        "translation": ""
+        "translation": "潜袭者使用 {card:艺术家庄园} 来搜寻一张卡牌并安装之。其不能通过该次搜寻找到一张事件，因为事件从不能被安装。其也不能找到一个其无力支付安装费用的程序、硬件或资源。"
     },
     {
         "key": "rule_valid_search_target_install_play-2-example",
         "original": "The Runner uses {card:Self-modifying Code} to search for a program and install it. They have no more credits after using the ability of {card:Self-modifying Code}, but they have an installed copy of {card:Patchwork}. They can search for {card:Imp} and install it, but they must use {card:Patchwork} by trashing a card from their grip to install {card:Imp}. If the Runner does not have a card in their grip, they cannot find and install {card:Imp}.",
-        "translation": ""
+        "translation": "潜袭者使用 {card:自修正代码} 来搜寻一个程序并安装之。其在使用 {card:自修正代码} 的能力后已没有更多信用点，但其安装有一张 {card:补丁}。其可以搜寻并安装 {card:小恶魔}，但必须通过销毁其操控器中的一张卡牌来使用 {card:补丁}，以安装 {card:小恶魔}。如果潜袭者的操控器中没有卡牌，则其不能找到并安装 {card:小恶魔}。"
     },
     {
         "key": "rule_valid_search_target_install_play-3-example",
         "original": "The Corp uses {card:Tucana} to search for {card:Pharos} while they have 0 credits. They are allowed to find and install {card:Pharos}, even though they cannot afford to rez it. The Corp must reveal {card:Pharos} to show that it cannot be rezzed. See {ref:rule_reveal_for_install_and_rez}.",
-        "translation": ""
+        "translation": "公司在有 0 个信用点时，使用 {card:巨嘴鸟} 来搜寻 {card:大灯塔}。即使公司无力支付激活 {card:大灯塔} 的费用，其仍然可以找到并安装 {card:大灯塔}。公司必须展示 {card:大灯塔}，以表明其无法被激活。见{ref:rule_reveal_for_install_and_rez}。"
     },
     {
         "key": "rule_reveal_for_search",
         "original": "8.7.2.c. The searching player is not required to reveal any found cards unless instructed to do so by the ability that initiated the search. Found cards are not revealed until resolution of the ability that initiated the search resumes, pending any necessary shuffling.",
-        "translation": ""
+        "translation": "除非发起该次搜寻的能力指示如此做，否则正在搜寻的玩家无需展示任何找到的卡牌。在发起该次搜寻的能力恢复结算之前，考虑到可能需要进行的任何洗混，所找到的卡牌不会被展示。"
     },
     {
         "key": "rule_search_multiple_cards",
         "original": "8.7.2.d. If a player is searching for a set number of cards without any specified criteria, they must find that many cards from that zone or all the cards in that zone if there are not enough.",
-        "translation": ""
+        "translation": "如果一位玩家在没有任何指定条件的情况下搜寻固定数量的卡牌，则其必须从该区域中找到那么多卡牌；若卡牌数量不足，则找到该区域中的所有卡牌。"
     },
     {
         "key": "rule_fail_to_find",
         "original": "8.7.2.e. If a player is searching a deck for one or more cards with specified criteria, they may choose to fail to find anything, even if one or more cards matching the criteria exist in that deck.",
-        "translation": ""
+        "translation": "如果一位玩家正在牌组中搜寻一张或多张具有指定条件的卡牌，则即使牌组中存在一张或多张符合条件的卡牌，其也可以选择什么都找不到。"
     },
     {
         "key": "rule_shuffle_deck_after_search",
         "original": "8.7.3. Once a search through a deck is complete, whether or not any cards are found, the deck must be immediately reshuffled before continuing to resolve any remaining effects from the ability that initiated the search. The shuffling takes precedence over anything that would be done with the found card(s), as well as any chain reactions that occur as a result of the search, finding, or remaining abilities.",
-        "translation": ""
+        "translation": "一旦对牌组的搜寻完成，无论是否找到任何卡牌，都必须立刻重新洗混该牌组，然后才能继续结算发起该次搜寻之能力的任何剩余效果。洗混优先于对找到的卡牌所要进行的任何事，也优先于因搜寻、找到卡牌或其余能力而发生的任何连锁反应。"
     },
     {
         "key": "rule_shuffle_deck_after_search-1-example",
         "original": "The Corp is playing {card:Near-Earth Hub} and uses the ability on {card:Tech Startup} to search their deck for an asset and install it. After finding the asset, R&D must be immediately shuffled before the Corp installs the asset or triggers {card:Near-Earth Hub}'s ability.",
-        "translation": ""
+        "translation": "公司使用 {card:近地枢纽} 作为特性，并使用 {card:科技创业} 上的能力，从其牌组中搜寻一张资产并安装之。在找到该资产后，必须立刻洗混研发中心，然后公司才能安装该资产或触发 {card:近地枢纽} 的能力。"
     },
     {
         "key": "rule_continue_after_search",
         "original": "8.7.4. Once the search is complete, and any shuffling necessary has occurred, resolution of the ability that initiated the search resumes. If no cards were found during the search, any effects referencing found cards fail to resolve, but as much of the remaining effects resolve as possible.",
-        "translation": ""
+        "translation": "一旦搜寻完成且任何必要的洗混已经发生，发起该次搜寻之能力的结算便会恢复。如果搜寻中未找到任何卡牌，则任何提及所找到卡牌的效果都无法结算，但其余效果仍尽可能结算。"
     },
     {
         "key": "rule_search_condition",
         "original": "8.7.5. If the trigger condition of a conditional ability involves a search, that ability becomes pending after the search is completed and any shuffling is performed, but before the found cards are acted on.",
-        "translation": ""
+        "translation": "如果某个条件能力的触发条件涉及一次搜寻，则该能力会在搜寻完成并进行任何洗混之后、但在对所找到的卡牌采取行动之前变为待结算。"
     },
     {
         "key": "sec_swapping_cards",
         "original": "8.8. Swapping Cards",
-        "translation": ""
+        "translation": "互换卡牌"
     },
     {
         "key": "rule_swap",
         "original": "8.8.1. To {term:swap} two cards is to exchange their locations.",
-        "translation": ""
+        "translation": "{term:互换}两张卡牌，是指交换它们的位置。"
     },
     {
         "key": "rule_swap_only_to_valid_location",
         "original": "8.8.2. A card can only ever be swapped into a location it is normally allowed to occupy. When a player resolves a swap effect, they must observe any applicable game rules or card abilities that would affect that card in its final destination. If a swap effect would resolve while there are no legal exchanges possible, then that effect does nothing.",
-        "translation": ""
+        "translation": "一张卡牌只能被互换到其通常被允许占据的位置中。当玩家结算一个互换效果时，其必须遵守任何会在该卡牌最终目的地对其产生影响的适用游戏规则或卡牌能力。如果某个互换效果在结算时不存在任何合法的交换可能，则该效果不作任何事。"
     },
     {
         "key": "rule_swap_only_to_valid_location-1-example",
         "original": "When the subroutine on {card:Metamorph} resolves, the Corp cannot choose to swap an agenda and an upgrade such that the agenda would end up in the same remote server as an asset.",
-        "translation": ""
+        "translation": "当 {card:变质} 的子进程结算时，公司不能选择互换一张议案与一个升级，使该议案最终与一张资产位于同一台远程服务器中。"
     },
     {
         "key": "rule_swap_installed_cards",
         "original": "8.8.3. If two installed cards are swapped, each card moves to the other's location simultaneously. The two cards remain installed throughout the process of swapping, and do not otherwise affect any other part of the game state.",
-        "translation": ""
+        "translation": "如果两张已安装的卡牌互换，则每张卡牌会同时转移到另一张卡牌的位置上。这两张卡牌在整个互换过程中都保持已安装状态，并且不会以其他方式影响游戏状态的任何其他部分。"
     },
     {
         "key": "rule_swap_installed_cards_preserves_hosting",
         "original": "8.8.3.a. When swapping installed cards, any cards or counters hosted on either of the swapped cards maintain their hosting relationships.",
-        "translation": ""
+        "translation": "在互换已安装卡牌时，附载于任一被互换卡牌上的任何卡牌或指示物，都会保持其附载关系。"
     },
     {
         "key": "rule_swap_installed_cards_preserves_hosting-1-example",
         "original": "The Corp uses {card:Thimblerig}'s ability to swap it with a {card:Palisade} hosting {card:Botulus}. The {card:Botulus} remains hosted on the {card:Palisade} throughout this process.",
-        "translation": ""
+        "translation": "公司使用 {card:隐豆戏法} 上的能力，将其与一张附载了 {card:肉毒杆菌} 的 {card:围栏} 互换。{card:肉毒杆菌} 在整个过程中始终附载于 {card:围栏} 上。"
     },
     {
         "key": "rule_swap_simultaneous",
         "original": "8.8.4. If two cards are swapped between zones, each card moves to the zone the other is in simultaneously.",
-        "translation": ""
+        "translation": "如果两张卡牌在区域之间互换，则每张卡牌会同时转移到另一张卡牌所在的区域中。"
     },
     {
         "key": "rule_state_of_swap_into_zone",
         "original": "8.8.4.a. Each of the swapped cards enters its destination zone in the same state that a card would normally enter that zone. A card swapped into Archives enters Archives facedown unless it was visible to the Runner at the time of the swap, a Corp card swapped into the play area enters unrezzed, etc.",
-        "translation": ""
+        "translation": "每张被互换的卡牌，都会以卡牌通常进入该目的地区域时所具有的相同状态进入该区域。一张被互换进入档案库的卡牌会以牌面朝下状态进入档案库，除非其在互换时对潜袭者是可见的；一张被互换进入游戏区的公司卡牌会以未激活状态进入，等等。"
     },
     {
         "key": "rule_swap_become_installed",
         "original": "8.8.4.b. If only one of the cards to be swapped is installed, then it becomes uninstalled as it moves to the destination zone. Any cards or counters hosted on it are trashed. The other card becomes installed in the exact position the first card occupied, maintaining any specific location (such as server, ice position, or host). The normal procedure for installing a card is not followed, so no install cost is paid and like cards cannot be trashed. At the next checkpoint after the swap takes place, trigger conditions related to uninstalling or installing the two cards are met, respectively.",
-        "translation": ""
+        "translation": "如果待互换的两张卡牌中只有一张已安装，则它会在转移到目标区域时变为被卸载状态。附载于其上的任何卡牌或指示物都会被销毁。另一张卡牌则会在第一张卡牌原先占据的准确位置上成为已安装状态，并保持任何特定位置（例如服务器、防火墙位置或宿主）。不会遵循通常的卡牌安装流程，因此不会支付安装费用，也不能销毁同类卡牌。在互换发生后的下一次检查点，分别与这两张卡牌被卸载或被安装有关的触发条件会得到满足。"
     },
     {
         "key": "rule_swap_become_installed-1-example",
         "original": "The Corp is playing {card:A Teia: IP Recovery} and has {card:Tatu-Bola} protecting a remote server. The Runner runs that server and passes {card:Tatu-Bola}. The Corp swaps it with a piece of ice from HQ. After the swap, the Corp can use {card:A Teia}'s ability to install a card in the root of another remote server. They then continue resolving the next instruction of {card:Tatu-Bola}'s ability, gaining 4[c].",
-        "translation": ""
+        "translation": "公司使用 {card:密网：知识产权回收} 作为特性，并有一张 {card:三带犰狳} 在保护一台远程服务器。潜袭者潜袭该服务器并通过了 {card:三带犰狳}。公司将其与总部中的一层防火墙互换。互换后，公司可以使用 {card:密网} 的能力，在另一台远程服务器的根目录中安装一张卡牌。然后，其继续结算 {card:三带犰狳} 能力的下一条指示，获得 4[c]。"
     },
     {
         "key": "rule_swap_score_areas",
         "original": "8.8.4.c. If two agendas are swapped between the players' score areas, any hosted cards or counters remain hosted on their respective host agendas.",
-        "translation": ""
+        "translation": "如果两张议案在玩家的分数区之间互换，则附载于其上的任何卡牌或指示物都会继续分别附载于其各自的宿主议案上。"
     },
     {
         "key": "rule_swap_to_set_aside",
         "original": "8.8.4.d. If a card is swapped with a set-aside card, the card moving into the set-aside zone becomes part of the group of cards being acted on by the ability that had set the other card aside, and the card moving out of the set-aside zone ceases to be acted on by that ability. See {ref:rule_drawn_card_swapped} for a specific case where this can happen, and see also {ref:rule_set_aside_zone_passthrough} regarding effects acting on cards in the set-aside zone.",
-        "translation": ""
+        "translation": "如果一张卡牌与一张置于一旁的卡牌互换，则转移进入置于一旁区的那张卡牌，会成为原本令另一张卡牌置于一旁之能力所作用卡牌组的一部分，而转移离开置于一旁区的那张卡牌，则不再受该能力作用。关于可能发生这种情况的一个具体案例，见{ref:rule_drawn_card_swapped}；另见{ref:rule_set_aside_zone_passthrough}，其中说明了作用于置于一旁区中卡牌的效果。"
     }
 ]

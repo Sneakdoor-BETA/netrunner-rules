@@ -2,391 +2,391 @@
     {
         "key": "chpt_access_breach",
         "original": "7. Accessing Cards and Breaching Servers",
-        "translation": ""
+        "translation": "读取卡牌与侵入服务器"
     },
     {
         "key": "sec_accessing_cards",
         "original": "7.1. Accessing Cards",
-        "translation": ""
+        "translation": "读取卡牌"
     },
     {
         "key": "rule_accessing",
         "original": "7.1.1. {term:Accessing} is the process of the Corp showing one of their cards to the Runner for potential interaction.",
-        "translation": ""
+        "translation": "{term:读取}，是公司向潜袭者展示其一张卡牌，以便其可能与之互动的过程。"
     },
     {
         "key": "rule_accessing_who_can_look",
         "original": "7.1.2. While the Runner is accessing a card, the Runner is allowed to look at that card, even if it would normally not be visible to them. While the Runner is accessing a card, the Corp is allowed to look at it as well, except when the card is being accessed from R&D.",
-        "translation": ""
+        "translation": "当潜袭者正在读取一张卡牌时，潜袭者可以查看该卡牌，即使该卡牌通常对其不可见。在潜袭者读取一张卡牌期间，公司也可以查看该卡牌，但该卡牌是从研发中心被读取时除外。"
     },
     {
         "key": "rule_accessing_trigger_condition",
         "original": "7.1.3. An ability that meets its trigger condition when its source card is accessed is active even if the source card is inactive. See {ref:rule_ability_active_inactive_source_card}.",
-        "translation": ""
+        "translation": "当某个能力因其来源卡牌被读取而满足触发条件时，即使该来源卡牌处于闲置状态，该能力仍是活动的。见{ref:rule_ability_active_inactive_source_card}。"
     },
     {
         "key": "rule_mid_access_ability_opportunity",
         "original": "7.1.4. During each access, the Runner has 1 opportunity to use a mid-access ability. This occurs after the reaction window at the beginning of the access, and before the Runner steals an accessed agenda.",
-        "translation": ""
+        "translation": "在每次读取期间，潜袭者都有 1 次机会使用一个读取时能力。这发生在读取开始时的响应窗口之后，以及潜袭者窃取被读取的议案之前。"
     },
     {
         "key": "rule_basic_trash_ability",
         "original": "7.1.5. The Runner always has the ability \"Access → Pay the trash cost of the accessed card: Trash it.\" This is the {term:basic trash ability}.",
-        "translation": ""
+        "translation": "潜袭者始终具有能力“读取 -> 支付被读取卡牌的销毁费用：销毁之。”这就是{term:基础销毁能力}。"
     },
     {
         "key": "rule_paying_trash_costs",
         "original": "7.1.5.a. All assets and upgrades have trash costs, as do some ice and operations. If a card does not have a trash cost, the Runner cannot pay its trash cost, and therefore the Runner cannot use the basic trash ability during that access.",
-        "translation": ""
+        "translation": "所有资产和升级都有销毁费用，某些防火墙和事务也有。如果一张卡牌没有销毁费用，则潜袭者不能支付其销毁费用，因此潜袭者不能在该次读取中使用基础销毁能力。"
     },
     {
         "key": "rule_trash_in_archives",
         "original": "7.1.5.b. The Runner cannot trash or pay the trash cost of a card in the Corp's discard pile, either with the basic trash ability or with other mid-access abilities.",
-        "translation": ""
+        "translation": "潜袭者不能销毁公司弃牌堆中的卡牌，也不能支付其销毁费用；无论是通过基础销毁能力，还是通过其他读取时能力，均不能如此做。"
     },
     {
         "key": "rule_access_installed_must_trash_if_able",
         "original": "7.1.5.c. One card, {card:Mumbad Virtual Tour}, has the ability \"If the Runner accesses this upgrade while it is installed, they must trash it, if able.\" When this ability applies, the Runner can use any mid-access ability they have available that trashes the card, but they cannot decline to use a mid-access ability or use one that would not trash the accessed card unless they are unable to pay the cost of any ability that would trash it.",
-        "translation": ""
+        "translation": "有一张卡牌 {card:孟巴德虚拟之旅} 具有能力：“If the Runner accesses this upgrade while it is installed, they must trash it, if able.”。当该能力适用时，潜袭者可以使用其可用的任何会销毁该卡牌的读取时能力，但其不能选择不使用读取时能力，也不能使用一个不会销毁被读取卡牌的读取时能力，除非其无法支付任何会销毁该卡牌之能力的费用。"
     },
     {
         "key": "rule_access_reveal_trash_if_able",
         "original": "7.1.5.d. One card, {card:Neutralize All Threats}, has the ability \"The first time each turn you access a card with a trash cost, reveal it. You must trash that card by paying its trash cost, if able.\" When this ability applies, the Runner can only use the basic trash ability. They cannot decline to use a mid-access ability or use a mid-access ability available from a card unless they cannot pay the cost of the basic trash ability.",
-        "translation": ""
+        "translation": "有一张卡牌 {card:消除威胁} 具有能力：“The first time each turn you access a card with a trash cost, reveal it. You must trash that card by paying its trash cost, if able.”。当该能力适用时，潜袭者只能使用基础销毁能力。其不能选择不使用读取时能力，也不能使用某张卡牌提供的可用读取时能力，除非其无法支付基础销毁能力的费用。"
     },
     {
         "key": "rule_after_mid_access_agenda",
         "original": "7.1.6. If, after resolving mid-access abilities, the Runner is still accessing an agenda, they must steal it.",
-        "translation": ""
+        "translation": "如果在结算读取时能力后，潜袭者仍在读取一张议案，则其必须窃取之。"
     },
     {
         "key": "rule_agenda_additional_cost",
         "original": "7.1.6.a. Some abilities can create additional costs to steal an agenda. The Runner can decline to pay such costs and not steal the agenda. See {ref:rule_additional_cost}.",
-        "translation": ""
+        "translation": "某些能力可以制造窃取议案的额外费用。潜袭者可以选择不支付此类费用，从而不窃取该议案。见{ref:rule_additional_cost}。"
     },
     {
         "key": "rule_moved_while_accessing",
         "original": "7.1.7. If a card moves to another location while it is being accessed, the access ends immediately.",
-        "translation": ""
+        "translation": "如果一张卡牌在被读取期间转移到另一位置，则该次读取立即结束。"
     },
     {
         "key": "rule_end_run_ends_access",
         "original": "7.1.8. {n}An \"end the run\" effect that resolves while a card is being accessed can sometimes end that access. See {ref:rule_end_the_run}.{/n}",
-        "translation": ""
+        "translation": "{n}若一个“终止本次潜袭”效果在一张卡牌正在被读取时结算，则有时会结束该次读取。见{ref:rule_end_the_run}。{/n}"
     },
     {
         "key": "rule_access_set_of_cards",
         "original": "7.1.9. One card, {card:Information Sifting}, uses a method other than a breach to establish a set of cards for the Runner to access. The Runner accesses those cards one at a time in the order of their choice. Each access is performed as a separate instruction. See {ref:rule_split_up_instruction}. Accessing cards in this way is an exception to {ref:rule_act_on_multiple_cards}.",
-        "translation": ""
+        "translation": "有一张卡牌 {card:信息筛选} 使用一种不同于侵入的方法，来为潜袭者建立一组要读取的卡牌。潜袭者按自己选择的顺序逐张读取这些卡牌。每次读取都作为一条独立指示执行。见{ref:rule_split_up_instruction}。以此方式读取卡牌，是{ref:rule_act_on_multiple_cards}的一个例外。"
     },
     {
         "key": "rule_access_cards_without_breach",
         "original": "7.1.10. One card, {card:Counter Surveillance}, instructs the Runner to access a certain number of cards from a server without mentioning a breach. The procedure for these accesses follows the normal rules for breaching that server except: there is no random access limit if the server is HQ or R&D; and the procedure ends once the designated number of cards have been chosen for access.",
-        "translation": ""
+        "translation": "有一张卡牌 {card:反向监视} 指示潜袭者从一台服务器中读取一定数量的卡牌，但未提及侵入。这些读取所遵循的流程，与侵入该服务器时的通常规则相同，但有以下例外：如果该服务器是总部或研发中心，则不存在随机读取上限；且该流程会在已选择指定数量的卡牌供读取后结束。"
     },
     {
         "key": "sec_steps_accessing_card",
         "original": "7.2. Steps of Accessing a Card",
-        "translation": ""
+        "translation": "读取一张卡牌的步骤"
     },
     {
         "key": "step_card_accessed",
         "original": "7.2.1. The card is accessed. Conditions related to accessing this card are met.",
-        "translation": ""
+        "translation": "该卡牌被读取。与读取该卡牌有关的条件得到满足。"
     },
     {
         "key": "step_mid_access_ability",
         "original": "7.2.2. The Runner may use a single mid-access ability, such as the basic trash ability.",
-        "translation": ""
+        "translation": "潜袭者可以使用一个单独的读取时能力，例如基础销毁能力。"
     },
     {
         "key": "step_access_agenda",
         "original": "7.2.3. If the accessed card is an agenda, the Runner must steal it.",
-        "translation": ""
+        "translation": "如果被读取的卡牌是一张议案，则潜袭者必须窃取之。"
     },
     {
         "key": "step_access_complete",
         "original": "7.2.4. The access is complete. Conditions related to an access ending are met.",
-        "translation": ""
+        "translation": "该次读取完成。与一次读取结束有关的条件得到满足。"
     },
     {
         "key": "sec_breaching_servers",
         "original": "7.3. Breaching Servers",
-        "translation": ""
+        "translation": "侵入服务器"
     },
     {
         "key": "rule_breaching_servers",
         "original": "7.3.1. {term:Breaching} a server is the process of the Runner accessing a particular set of cards associated with that server. Most accesses occur during a breach. {ref:Step_breach} of a run calls for the Runner to breach the attacked server, but card abilities can also directly instruct the Runner to breach a server.",
-        "translation": ""
+        "translation": "{term:侵入}一台服务器，是潜袭者读取与该服务器相关联的一组特定卡牌的过程。大多数读取都发生在一次侵入中。一次潜袭的{ref:Step_breach}会要求潜袭者侵入被攻击的服务器，但卡牌能力也可以直接指示潜袭者侵入一台服务器。"
     },
     {
         "key": "rule_visibility_after_access",
         "original": "7.3.1.a. After the Runner accesses a card during a breach, that object remains visible to the Runner for the remainder of the breach.",
-        "translation": ""
+        "translation": "在一次侵入期间，潜袭者读取了一张卡牌后，该物件在本次侵入的剩余时间内仍然对潜袭者可见。"
     },
     {
         "key": "rule_visibility_after_access-1-example",
         "original": "The Runner breaches HQ and accesses {card:Scatter Field}, {card:Palisade}, and {card:Offworld Office}, in that order. When the Runner steals {card:Offworld Office}, the Corp uses {card:Poétrï Luxury Brands} to install a card from HQ. The Runner will know whether the Corp installs the {card:Scatter Field}, the {card:Palisade}, or an unknown card from the rest of HQ.",
-        "translation": ""
+        "translation": "潜袭者侵入总部，并按顺序读取了 {card:散射场}、{card:围栏} 与 {card:地外办公室}。当潜袭者窃取 {card:地外办公室} 时，公司使用 {card:珀依诗奢品} 从总部安装一张卡牌。潜袭者会知道公司安装的是 {card:散射场}、{card:围栏}，还是总部其余卡牌中的一张未知卡牌。"
     },
     {
         "key": "rule_breaching_archives",
         "original": "7.3.2. When the Runner breaches Archives, all the facedown cards in the Corp's discard pile are turned faceup before the Runner accesses any cards.",
-        "translation": ""
+        "translation": "当潜袭者侵入档案库时，公司弃牌堆中所有牌面朝下的卡牌，都会在潜袭者读取任何卡牌之前被翻为牌面朝上。"
     },
     {
         "key": "rule_archives_facedowns_after_breach",
         "original": "7.3.2.a. If a card is added to Archives facedown after this step, that card remains facedown for the remainder of the breach, even after it is accessed. The Runner can only look at a facedown card in Archives once they have accessed it.",
-        "translation": ""
+        "translation": "如果在此步骤之后，有卡牌以牌面朝下的方式加入档案库，则该卡牌在本次侵入的剩余时间内都保持牌面朝下，即使在其被读取后也是如此。潜袭者只有在读取了一张牌面朝下的档案库卡牌之后，才能查看它。"
     },
     {
         "key": "rule_candidates",
         "original": "7.3.3. The cards associated with a breached server that the Runner could potentially access are called {term:Candidates}. The set of candidates is compiled from the cards in the root of the breached server and, for central servers, the cards in the zone that corresponds to that server (see {ref:rule_three_central_servers}). {ref:Sec_determining_candidates} defines which of these cards are candidates.",
-        "translation": ""
+        "translation": "被侵入之服务器所关联、且潜袭者可能读取的卡牌，被称为{term:可读取卡牌}。这组可读取卡牌由被侵入服务器根目录中的卡牌构成；若为中央服务器，则还包括与该服务器对应区域中的卡牌（见{ref:rule_three_central_servers}）。{ref:Sec_determining_candidates}定义了其中哪些卡牌属于可读取卡牌。"
     },
     {
         "key": "rule_candidates_presented",
         "original": "7.3.4. During a breach, the Runner is presented with the current candidates. They choose 1 of those cards and access it. This process repeats until there are no longer any candidates.",
-        "translation": ""
+        "translation": "在一次侵入期间，潜袭者会看到当前的可读取卡牌。其从中选择 1 张并读取之。这个过程会重复，直到不再有任何可读取卡牌。"
     },
     {
         "key": "rule_candidates_breaching_hq",
         "original": "7.3.4.a. When presented with candidates during a breach of HQ, the Runner chooses either a specific candidate that is not in the Corp's hand or to access a random candidate from among the ones in the Corp's hand. A card randomly chosen this way is treated as though the Runner had chosen it.",
-        "translation": ""
+        "translation": "在侵入总部期间看到可读取卡牌时，潜袭者要么选择一张不在公司手牌中的特定可读取卡牌，要么从公司手牌中的那些可读取卡牌中随机读取 1 张。以这种方式随机选择出的卡牌，视为如同是由潜袭者选择的一样。"
     },
     {
         "key": "rule_corp_choosing_candidates_breaching_hq",
         "original": "7.3.4.b. One card, {card:Dedicated Neural Net}, instructs the Corp to choose which cards the Runner accesses from HQ. While this effect applies, the Runner still chooses candidates that are not in the Corp's hand as normal. Whenever the Runner chooses to access a candidate from the Corp's hand, instead of a candidate being chosen at random, the Corp chooses 1 of those candidates for the Runner to access. The chosen card is still treated as though the Runner had chosen it.",
-        "translation": ""
+        "translation": "有一张卡牌 {card:专属神经网络} 会指示公司选择潜袭者从总部读取哪些卡牌。在该效果适用期间，潜袭者仍照常选择那些不在公司手牌中的可读取卡牌。每当潜袭者选择读取公司手牌中的一张可读取卡牌时，不再是随机选出一张可读取卡牌，而是由公司为潜袭者选择其中 1 张读取。被选择的卡牌仍视为如同是由潜袭者选择的一样。"
     },
     {
         "key": "rule_random_access_limit",
         "original": "7.3.5. The Runner can only choose candidates from the Corp's hand or deck a limited number of times during a breach of HQ or R&D, respectively. This number is called the {term:Random Access Limit}. Before the Runner begins accessing cards during a breach of HQ or R&D, the random access limit for that breach is determined, after which it will not change for the remainder of that breach.",
-        "translation": ""
+        "translation": "在侵入总部或研发中心期间，潜袭者只能分别从公司手牌或牌组中选择可读取卡牌有限次。这个数字称为{term:随机读取上限}。在潜袭者开始于侵入总部或研发中心期间读取卡牌之前，先为该次侵入确定随机读取上限，而在该次侵入的剩余时间内，该数值不会改变。"
     },
     {
         "key": "rule_default_random_access_limit",
         "original": "7.3.5.a. By default, the random access limit is 1.",
-        "translation": ""
+        "translation": "随机读取上限的默认值为 1。"
     },
     {
         "key": "rule_increasing_random_access_limit",
         "original": "7.3.5.b. If an ability allows the Runner to \"access additional cards\" during a breach of HQ or R&D, the effect of that ability is to increase the random access limit. Such an ability can only be applied at the beginning of the breach, before the value of the random access limit is set.",
-        "translation": ""
+        "translation": "如果某个能力允许潜袭者在侵入总部或研发中心期间“读取额外的卡牌”，则该能力的效果是提高随机读取上限。此类能力只能在侵入开始时、于随机读取上限数值被设定之前适用。"
     },
     {
         "key": "rule_counting_random_access_limit",
         "original": "7.3.5.c. {n}If the Runner chooses a candidate in HQ or R&D but does not actually access that card for any reason, that candidate still counts towards reaching the random access limit.{/n} ",
-        "translation": ""
+        "translation": "{n}如果潜袭者在总部或研发中心中选择了一张可读取卡牌，但因任何原因并未实际读取该卡牌，则该可读取卡牌仍会计入随机读取上限。{/n}"
     },
     {
         "key": "rule_number_of_accesses",
         "original": "7.3.6. {n}Some abilities count accesses in order to establish a quantity. An ability that counts in this way only includes accesses that are actually performed.{/n}",
-        "translation": ""
+        "translation": "{n}某些能力会统计读取次数，以确定某个数量。以这种方式进行统计的能力，只会将实际完成的读取计入。{/n}"
     },
     {
         "key": "rule_number_of_accesses-1-example",
         "original": "The Runner uses {card:Hades Shard} to breach Archives during a run on HQ. For 1 of the accesses in that breach, after choosing a candidate, they use {card:Archives Interface} to apply a replacement effect, removing the chosen candidate from the game instead of accessing it. When the run ends, the Runner uses {card:Zahya Sadeghi: Versatile Smuggler} to gain 1[c] for each time they accessed a card during the run. The access that was replaced does not contribute to the number of credits the Runner gains.",
-        "translation": ""
+        "translation": "潜袭者在对总部进行潜袭时，使用 {card:冥府碎片} 侵入档案库。在该次侵入的其中一次读取中，其在选择了一张可读取卡牌后，使用 {card:档案库接口} 来适用一个替代效果，使被选择的可读取卡牌改为移出游戏，而不是读取之。当这次潜袭结束时，潜袭者使用 {card:扎赫亚·萨迪吉：多才多艺的走私者}，为其在该次潜袭中每读取过一次卡牌而获得 1[c]。那次被替代的读取不计入潜袭者获得的信用点数量。"
     },
     {
         "key": "rule_number_of_accesses-2-example",
         "original": "The Runner plays {card:Immolation Script}, and the subroutine on {card:Hudson 1.0} resolves before Archives is breached. {n}When the Runner breaches Archives, the first candidate they choose is a piece of ice, and they apply the replacement effect from {card:Immolation Script} to trash a rezzed copy of the chosen ice instead of accessing the candidate copy. No card was actually accessed, so the Runner can proceed to choose another candidate. However, if the Runner had first accessed a card without applying {card:Immolation Script}'s replacement effect, they would then be prohibited from accessing any more cards, so there would be no more candidates to choose and they could not apply a replacement effect afterward.{/n}",
-        "translation": ""
+        "translation": "潜袭者打出 {card:祭品脚本}，而 {card:哈德森1.0} 上的子进程会在档案库被侵入前结算。{n}当潜袭者侵入档案库时，其所选择的第一张可读取卡牌是一层防火墙，其会适用 {card:祭品脚本} 的替代效果，改为销毁一张已激活的、与所选择可读取卡牌同名的副本，而不是读取该张被选择的防火墙。由于并未实际读取任何卡牌，因此潜袭者可以继续选择另一张可读取卡牌。然而，如果潜袭者先读取了一张卡牌而未适用 {card:祭品脚本} 的替代效果，那么其之后就不能再读取更多卡牌，因此不会再有可读取卡牌可供选择，且其之后也就不能再适用替代效果。{/n}"
     },
     {
         "key": "rule_end_run_ends_breach",
         "original": "7.3.7. {n}An \"end the run\" effect that resolves while a server is being breached can sometimes end that breach. See {ref:rule_end_the_run}.{/n}",
-        "translation": ""
+        "translation": "{n}若一个“终止本次潜袭”效果在服务器正被侵入时结算，则有时会结束该次侵入。见{ref:rule_end_the_run}。{/n}"
     },
     {
         "key": "rule_consecutive_breaches",
         "original": "7.3.8. If a server would be breached while a breach is already in progress, instead the new breach takes place when the current breach ends. The effect creating the delayed breach is treated as a conditional ability controlled by the Runner.",
-        "translation": ""
+        "translation": "如果在一次侵入已经进行中的情况下，某台服务器将要被侵入，则改为在当前侵入结束后，再进行新的侵入。创造该延后侵入的效果，视为一个由潜袭者操控的条件能力。"
     },
     {
         "key": "rule_consecutive_breaches-1-example",
         "original": "The Runner steals {card:Clone Retirement} during a breach of HQ, causing the Corp to take bad publicity. The Runner must complete the current breach before beginning the breach granted from {card:Raymond Flint}'s first ability.",
-        "translation": ""
+        "translation": "潜袭者在侵入总部时窃取了 {card:克隆体退役}，从而使公司获得负面宣传标记。潜袭者必须先完成当前这次侵入，才能开始由 {card:雷蒙德·弗林特} 第一个能力赋予的侵入。"
     },
     {
         "key": "sec_determining_candidates",
         "original": "7.4. Determining Candidates",
-        "translation": ""
+        "translation": "确定可读取卡牌"
     },
     {
         "key": "rule_candidates_beginning_breach",
         "original": "7.4.1. The candidates at the beginning of a breach are as follows:",
-        "translation": ""
+        "translation": "一次侵入开始时的可读取卡牌如下："
     },
     {
         "key": "rule_candidates_in_server_root",
         "original": "7.4.1.a. Each card in the root of the breached server is a candidate.",
-        "translation": ""
+        "translation": "被侵入服务器根目录中的每张卡牌，都是可读取卡牌。"
     },
     {
         "key": "rule_candidates_in_hq",
         "original": "7.4.1.b. If the breached server is HQ, each card in the Corp's hand is a candidate.",
-        "translation": ""
+        "translation": "如果被侵入的服务器是总部，则公司手中的每张卡牌都是可读取卡牌。"
     },
     {
         "key": "rule_candidates_in_rnd",
         "original": "7.4.1.c. If the breached server is R&D, the top card of the Corp's deck is a candidate.",
-        "translation": ""
+        "translation": "如果被侵入的服务器是研发中心，则公司牌组的顶牌是可读取卡牌。"
     },
     {
         "key": "rule_candidates_in_archives",
         "original": "7.4.1.d. If the breached server is Archives, each card in the Corp's discard pile is a candidate.",
-        "translation": ""
+        "translation": "如果被侵入的服务器是档案库，则公司弃牌堆中的每张卡牌都是可读取卡牌。"
     },
     {
         "key": "rule_prohibiting_access",
         "original": "7.4.2. If at any time the Runner is prohibited from accessing an object, that object ceases to be a candidate. {n}It cannot become a candidate as long as accessing it remains prohibited.{/n}",
-        "translation": ""
+        "translation": "如果在任意时刻，潜袭者被禁止读取某个物件，则该物件不再是可读取卡牌。{n}只要对其的读取仍被禁止，它就不能重新成为可读取卡牌。{/n}"
     },
     {
         "key": "rule_prohibiting_access-1-example",
         "original": "The Corp performs a successful trace with the ability on {card:Ash 2X3ZB9CY}, prohibiting the Runner from accessing any card other than Ash for the remainder of the current run. When the server is breached, Ash will be the only candidate for the Runner's first selection, and then there will be no candidates remaining, so the breach will end.",
-        "translation": ""
+        "translation": "公司以{card:尘埃2X3ZB9CY}上的能力成功完成了一次追踪，使潜袭者在本次潜袭的剩余时间内，不能读取除{card:尘埃2X3ZB9CY}之外的任何卡牌。当该服务器被侵入时，{card:尘埃2X3ZB9CY}将成为潜袭者首次选择时唯一的可读取卡牌，之后将不再有任何可读取卡牌，因此该次侵入结束。"
     },
     {
         "key": "rule_prohibition_removed",
         "original": "7.4.2.a. If an ability prohibiting some or all accesses becomes inactive during a breach, candidates are reevaluated to account for the prohibition no longer applying: for each card in or in the root of the breached server, if that object had been prohibited from being accessed by the newly inactive ability, and if no other rule or effect is applicable that would stop that object from being a candidate, then that object becomes a candidate.",
-        "translation": ""
+        "translation": "如果某个禁止部分或全部读取的能力在一次侵入期间变为闲置状态，则需要重新评估可读取卡牌，以反映该禁令已不再适用：对于被侵入服务器中或其根目录中的每张卡牌，若该物件此前会因该现已闲置的能力而被禁止读取，且没有其他规则或效果会阻止该物件成为可读取卡牌，则该物件成为可读取卡牌。"
     },
     {
         "key": "rule_prohibition_removed-1-example",
         "original": "The Runner breaches HQ during a run on HQ while {card:Flagship} is rezzed in the root of HQ. They have an installed copy of {card:Docklands Pass}, so the random access limit is set to 2. The Runner accesses a card in HQ, meaning that {card:Flagship}'s restriction applies and all the other cards in HQ cease to be candidates. The Runner then accesses {card:Flagship} and uses {card:Cupellation}'s ability to host {card:Flagship} on {card:Cupellation}, thereby uninstalling it without its persistent ability remaining active (see {ref:subsec_persistent}). Since the restriction on accessing cards other than Flagship no longer applies, the cards in HQ become candidates again, except for the card the Runner previously accessed.",
-        "translation": ""
+        "translation": "潜袭者在对总部进行潜袭时侵入总部，而总部根目录中有一张已激活的 {card:旗舰大厦}。其安装有一张 {card:码头区通行证}，因此随机读取上限被设定为 2。潜袭者读取了总部中的一张卡牌，这意味着 {card:旗舰大厦} 的限制开始适用，而总部中所有其他卡牌都不再是可读取卡牌。随后，潜袭者读取 {card:旗舰大厦}，并使用 {card:灰吹精炼} 的能力将 {card:旗舰大厦} 附载到 {card:灰吹精炼} 上，从而卸载了它，且其持久能力不会继续保持活动状态（见{ref:subsec_persistent}）。由于除 Flagship 以外的卡牌不能被读取这一限制已不再适用，总部中的卡牌再次成为可读取卡牌，但潜袭者先前已经读取过的那张卡牌除外。"
     },
     {
         "key": "rule_prohibiting_access_to_1",
         "original": "7.4.2.b. {n}Some abilities state that the Runner \"cannot access more than 1 card\" during a particular run. The effect of this ability is that as long as the Runner has accessed a card during the indicated run, they are prohibited from accessing other cards during that run. The ability has no effect on breaches or candidates until a card has been accessed, and for breaches of HQ and R&D, it never affects the random access limit, even if a card was accessed before the breach began.{/n}",
-        "translation": ""
+        "translation": "{n}某些能力会说明潜袭者在一次特定潜袭中“cannot access more than 1 card”。该能力的效果是：只要潜袭者在该指定潜袭中已经读取过一张卡牌，其便被禁止在该次潜袭中读取其他卡牌。该能力在有卡牌被读取之前，不会对侵入或可读取卡牌产生影响；对于总部与研发中心的侵入，它也绝不会影响随机读取上限，即使在侵入开始前已经读取过一张卡牌也是如此。{/n}"
     },
     {
         "key": "rule_prohibiting_access_to_1-1-example",
         "original": "The Runner breaches HQ during a run on HQ while {card:Flagship} is rezzed in the root of HQ, and they have an installed copy of {card:Docklands Pass}, but they have previously accessed a card during that run because of {card:Otoroshi}'s ability. The random access limit is still set to 2, but since the Runner is not allowed to access any cards other than {card:Flagship}, none of the cards in the Corp's hand will be candidates. If {card:Flagship}'s ability becomes inactive before the breach ends, the cards in the Corp's hand will become candidates and the Runner will be able to access 2 of them.",
-        "translation": ""
+        "translation": "潜袭者在对总部进行潜袭时侵入总部，而总部根目录中有一张已激活的 {card:旗舰大厦}，且其安装有一张 {card:码头区通行证}，但由于 {card:惊怪} 的能力，其在该次潜袭中先前已经读取过一张卡牌。随机读取上限仍设定为 2，但由于潜袭者不能读取除 {card:旗舰大厦} 之外的任何卡牌，公司手中的卡牌都不会成为可读取卡牌。如果 {card:旗舰大厦} 的能力在该次侵入结束前变为闲置，则公司手中的卡牌会重新成为可读取卡牌，而潜袭者将可以读取其中 2 张。"
     },
     {
         "key": "rule_candidates_already_accessed",
         "original": "7.4.3. Once the Runner chooses a candidate for access, it ceases to be a candidate for the remainder of that breach. It does not matter whether the chosen candidate is actually accessed. As long as the card is chosen, it ceases to be a candidate.",
-        "translation": ""
+        "translation": "一旦潜袭者选择了一张可读取卡牌来读取，它就在该次侵入的剩余时间内不再是可读取卡牌。无论该张被选择的可读取卡牌是否真的被读取，结果都一样。只要其被选择，它就不再是可读取卡牌。"
     },
     {
         "key": "rule_candidates_already_accessed-1-example",
         "original": "The Runner is breaching Archives during a run made with {card:Immolation Script}. They choose a piece of ice from the set of candidates, and apply {card:Immolation Script}'s replacement effect to trash another card instead of accessing the chosen ice. After resolving this, the chosen ice is no longer a candidate and cannot be accessed again this breach. (The newly-trashed card, however, could be a candidate.)",
-        "translation": ""
+        "translation": "潜袭者在用 {card:祭品脚本} 发起的一次潜袭中侵入档案库。其从可读取卡牌中选择了一层防火墙，并适用 {card:祭品脚本} 的替代效果，改为销毁另一张卡牌，而不是读取所选择的该层防火墙。在此结算后，所选择的该层防火墙不再是可读取卡牌，且不能在本次侵入中再次被读取。（不过，那张新被销毁的卡牌则可能成为可读取卡牌。）"
     },
     {
         "key": "rule_candidates_already_accessed-2-example",
         "original": "The Corp is playing {card:Gagarin Deep Space: Expanding the Horizon}, and the Runner breaches a remote server. When the Runner chooses a candidate from the root of that server, an additional cost to access is imposed. The Runner declines to pay the cost and therefore does not perform the access. That card still ceases to be a candidate.",
-        "translation": ""
+        "translation": "公司使用 {card:加加林深空：开阔视界} 作为特性，而潜袭者侵入一台远程服务器。当潜袭者从该服务器根目录中选择一张可读取卡牌时，会被施加一个读取的额外费用。潜袭者选择不支付该费用，因此不执行该次读取。该张卡牌仍然会不再是可读取卡牌。"
     },
     {
         "key": "rule_after_reaching_random_access_limit",
         "original": "7.4.4. When the random access limit is reached during a breach of HQ or R&D, all candidates in the zone corresponding to the breached server cease to be candidates, and no cards in that zone can become candidates for the remainder of that breach. See {ref:rule_random_access_limit}.",
-        "translation": ""
+        "translation": "在侵入总部或研发中心期间，一旦随机读取上限达到，则与被侵入服务器所对应区域中的所有可读取卡牌都不再是可读取卡牌，而且在该次侵入的剩余时间内，该区域中不会有任何卡牌重新成为可读取卡牌。见{ref:rule_random_access_limit}。"
     },
     {
         "key": "rule_candidates_leaving_server",
         "original": "7.4.5. If a candidate leaves the breached server, it ceases to be a candidate. Note that the moved card could be a new object, which could be eligible to become a new candidate if appropriate.",
-        "translation": ""
+        "translation": "如果一张可读取卡牌离开了被侵入的服务器，则其不再是可读取卡牌。注意，被转移的卡牌可能成为一个新物件，而若适用，它可以有资格成为新的可读取卡牌。"
     },
     {
         "key": "rule_candidates_leaving_server-1-example",
         "original": "The Runner trashes an installed upgrade during a breach of Archives. That card moves to the Corp's discard pile. The new object for the upgrade's existence in the Corp's discard pile becomes a candidate, so the Runner will access the same physical card twice during this breach.",
-        "translation": ""
+        "translation": "潜袭者在侵入档案库期间销毁了一个已安装的升级。该卡牌转移到公司的弃牌堆中。与该升级在公司弃牌堆中存在对应的新物件成为可读取卡牌，因此潜袭者会在这次侵入中两次读取同一张实体卡牌。"
     },
     {
         "key": "rule_candidates_entering_server",
         "original": "7.4.6. Cards entering a server while a breach is in progress can become candidates.",
-        "translation": ""
+        "translation": "在一次侵入进行期间进入某台服务器的卡牌，可以成为可读取卡牌。"
     },
     {
         "key": "rule_candidates_entering_root",
         "original": "7.4.6.a. If a card enters the root of a server during a breach of that server, the Runner decides whether that card becomes a candidate during {ref:step_checkpoint_card_entering_root_during_breach} of the next checkpoint. {n}If the Runner chooses for the card not to become a candidate, then that object cannot be a candidate for the remainder of the breach.{/n}",
-        "translation": ""
+        "translation": "如果一张卡牌在一次侵入某台服务器期间进入该服务器的根目录，则潜袭者在下一次检查点的{ref:step_checkpoint_card_entering_root_during_breach}时决定该卡牌是否成为可读取卡牌。{n}如果潜袭者选择不让该卡牌成为可读取卡牌，则该物件在本次侵入的剩余时间内都不能成为可读取卡牌。{/n}"
     },
     {
         "key": "rule_candidates_entering_hq",
         "original": "7.4.6.b. If a card enters the Corp's hand during a breach of HQ while the random access limit has not yet been reached, that card becomes a candidate.",
-        "translation": ""
+        "translation": "如果一张卡牌在侵入总部期间进入公司的手牌，且随机读取上限尚未达到，则该卡牌成为可读取卡牌。"
     },
     {
         "key": "rule_candidates_entering_rnd",
         "original": "7.4.6.c. If a card enters the Corp's deck during a breach of R&D, that card could become a candidate (either at that time or later in the breach), depending on the random access limit and its position within the deck. See {ref:rule_rnd_candidates_1_at_a_time}.",
-        "translation": ""
+        "translation": "如果一张卡牌在侵入研发中心期间进入公司的牌组，则该卡牌有可能成为可读取卡牌（可能在进入时，也可能在该次侵入稍后），这取决于随机读取上限以及它在牌组中的位置。见{ref:rule_rnd_candidates_1_at_a_time}。"
     },
     {
         "key": "rule_candidates_entering_archives",
         "original": "7.4.6.d. If a card enters the Corp's discard pile during a breach of Archives, that card becomes a candidate. See also {ref:rule_archives_facedowns_after_breach}.",
-        "translation": ""
+        "translation": "如果一张卡牌在侵入档案库期间进入公司的弃牌堆，则该卡牌成为可读取卡牌。另见{ref:rule_archives_facedowns_after_breach}。"
     },
     {
         "key": "rule_rnd_candidates_1_at_a_time",
         "original": "7.4.7. During a breach of R&D, the Runner is presented with 1 candidate from the Corp's deck at a time in turn, working down from the top of the deck. Cards are made candidates 1 at a time until the access limit is reached.",
-        "translation": ""
+        "translation": "在侵入研发中心期间，潜袭者每次会看到来自公司牌组的 1 张可读取卡牌，并按顺序从牌组顶向下进行。在达到读取上限之前，卡牌会一次 1 张地成为可读取卡牌。"
     },
     {
         "key": "rule_rnd_topmost_eligibile_candidate",
         "original": "7.4.7.a. After the Runner chooses a candidate from the Corp's deck and whenever any cards enter, leave, or are reordered within the Corp's deck, all cards in the Corp's deck cease to be candidates. Then, if the random access limit has not been reached, the topmost eligible card in the deck becomes a candidate. A card is eligible for this purpose if the Runner has not already chosen to access that object and is not prohibited from accessing that object in this breach.",
-        "translation": ""
+        "translation": "在潜袭者从公司牌组中选择了一张可读取卡牌之后，以及每当有卡牌进入、离开或在公司牌组中重新排序时，公司牌组中的所有卡牌都不再是可读取卡牌。然后，如果随机读取上限尚未达到，则牌组中最顶端且符合资格的那张卡牌成为可读取卡牌。就此目的而言，一张卡牌符合资格，指潜袭者此前尚未选择读取该物件，且在本次侵入中并未被禁止读取该物件。"
     },
     {
         "key": "rule_rnd_topmost_eligibile_candidate-1-example",
         "original": "The Runner plays {card:The Maker's Eye} and breaches R&D, accessing 2 additional cards. They access {card:Celebrity Gift} and then access and steal {card:Bacterial Programming}. The Corp uses {card:Bacterial Programming}'s ability to rearrange cards in R&D, but they leave {card:Celebrity Gift} as the top card of R&D. The cards returned to the top of R&D are new objects, so the Runner must continue the breach from the top of R&D and will access {card:Celebrity Gift} again.",
-        "translation": ""
+        "translation": "潜袭者打出 {card:造物者之眼} 并侵入研发中心，额外读取 2 张卡牌。其读取了 {card:名流的馈赠}，然后读取并窃取了 {card:细菌编程}。公司使用 {card:细菌编程} 的能力重新排列研发中心中的卡牌，但仍将 {card:名流的馈赠} 留在研发中心顶牌。被放回研发中心顶部的卡牌是新物件，因此潜袭者必须从研发中心顶牌开始继续这次侵入，并将再次读取 {card:名流的馈赠}。"
     },
     {
         "key": "rule_rnd_topmost_eligibile_candidate-2-example",
         "original": "The Corp is playing {card:Seidr Laboratories} and has {card:Strongbox} rezzed in the root of R&D. The Runner breaches R&D with a random access limit of 4. They first access the top card of the Corp's deck and leave it in place. The 2nd card from the top now becomes a candidate, and turns out to be an agenda, which the Runner steals by spending [click] to pay the additional cost imposed by {card:Strongbox}. The Corp then uses {card:Seidr Laboratories} to add 1 card from Archives to the top of R&D. The 3rd candidate presented to the Runner is the card newly added to the top of R&D. After accessing that card, the next card down is still the object that was accessed first, so the card below that (currently 3rd from the top) becomes the 4th and final candidate.",
-        "translation": ""
+        "translation": "公司使用 {card:西德尔实验室} 作为特性，且研发中心根目录中有一张已激活的 {card:保险箱}。潜袭者在随机读取上限为 4 的情况下侵入研发中心。其首先读取了公司牌组顶牌并将之留在原处。现在顶牌下方第 2 张卡牌成为可读取卡牌，结果它是一张议案，而潜袭者通过花费[click]支付 {card:保险箱} 施加的额外费用来窃取之。随后，公司使用 {card:西德尔实验室} 将 1 张档案库中的卡牌加入研发中心顶端。呈现给潜袭者的第 3 张可读取卡牌，就是这张新加入研发中心顶牌的卡牌。在读取该卡牌后，再下一张卡牌仍然是最初被读取的那个物件，因此其下方那张卡牌（当前自顶向下第 3 张）成为第 4 张也是最后一张可读取卡牌。"
     },
     {
         "key": "rule_rnd_access_from_bottom",
         "original": "7.4.7.b. One card, {card:Showing Off}, allows the Runner to access cards from the bottom of R&D. While this effect applies, candidates in the Corp's deck are presented working up from the bottom: treat {ref:rule_candidates_in_rnd} as if it said \"bottom\" instead of \"top\" and {ref:rule_rnd_topmost_eligibile_candidate} as if it said \"bottommost\" instead of \"topmost\".",
-        "translation": ""
+        "translation": "有一张卡牌 {card:卖弄} 允许潜袭者从研发中心底部读取卡牌。当该效果适用时，公司牌组中的可读取卡牌会从底部向上呈现：将{ref:rule_candidates_in_rnd}视为写着“bottom”而不是“top”，并将{ref:rule_rnd_topmost_eligibile_candidate}视为写着“bottommost”而不是“topmost”。"
     },
     {
         "key": "sec_breaching_steps",
         "original": "7.5. Steps of Breaching a Server",
-        "translation": ""
+        "translation": "侵入服务器的步骤"
     },
     {
         "key": "step_breaching_begins",
         "original": "7.5.1. Breaching the server formally begins. Conditions related to breaching this server are met.",
-        "translation": ""
+        "translation": "侵入该服务器正式开始。与侵入该服务器有关的条件得到满足。"
     },
     {
         "key": "step_flip_archives",
         "original": "7.5.2. If the breached server is Archives, turn all cards in the Corp's discard pile faceup.",
-        "translation": ""
+        "translation": "如果被侵入的服务器是档案库，则将公司弃牌堆中的所有卡牌翻为牌面朝上。"
     },
     {
         "key": "step_determine_candidates_limit",
         "original": "7.5.3. If the breached server is HQ or R&D, determine the limit to how many times the Runner can choose a candidate from the Corp's hand or deck.",
-        "translation": ""
+        "translation": "如果被侵入的服务器是总部或研发中心，则确定潜袭者可以从公司手牌或牌组中选择可读取卡牌的次数上限。"
     },
     {
         "key": "step_choose_candidate",
         "original": "7.5.4. The Runner chooses a candidate. If they cannot, skip to {ref:step_breach_complete}.",
-        "translation": ""
+        "translation": "潜袭者选择一张可读取卡牌。如果其不能如此做，则跳到{ref:step_breach_complete}。"
     },
     {
         "key": "step_access_candidate",
         "original": "7.5.5. The Runner accesses the chosen card.",
-        "translation": ""
+        "translation": "潜袭者读取所选择的卡牌。"
     },
     {
         "key": "step_repeat_candidate_selection",
         "original": "7.5.6. Return to {ref:step_choose_candidate}.",
-        "translation": ""
+        "translation": "返回{ref:step_choose_candidate}。"
     },
     {
         "key": "step_breach_complete",
         "original": "7.5.7. The breach is complete. Conditions related to the breach ending are met.",
-        "translation": ""
+        "translation": "该次侵入完成。与一次侵入结束有关的条件得到满足。"
     }
 ]

@@ -2,881 +2,881 @@
     {
         "key": "chpt_runs",
         "original": "6. Runs",
-        "translation": ""
+        "translation": "潜袭"
     },
     {
         "key": "sec_run_general",
         "original": "6.1. General",
-        "translation": ""
+        "translation": "总则"
     },
     {
         "key": "rule_run",
         "original": "6.1.1. A {term:run} is a Runner's attack on a server. There are 6 phases used in the procedure of carrying out a run, described in {ref/through:sec_run_initiation,sec_run_ends_phase}. A run always begins with the Initiation Phase. {ref:Sec_steps_of_a_run} contains the full set of steps carried out during each phase, and should be referred to in conjunction with the sections discussing the phases.",
-        "translation": ""
+        "translation": "{term:潜袭}是潜袭者对一台服务器的攻击。执行一次潜袭的流程分为 6 个阶段，详见 {ref/through:sec_run_initiation,sec_run_ends_phase}。潜袭总是从发起阶段开始。{ref:Sec_steps_of_a_run}列出了每个阶段中执行的完整步骤，并应结合讨论各阶段的章节一并参阅。"
     },
     {
         "key": "rule_attacked_server",
         "original": "6.1.2. The {term:attacked server} is the server the Runner is attempting to reach, usually to breach that server.",
-        "translation": ""
+        "translation": "{term:被攻击的服务器}是潜袭者试图抵达的服务器，通常是为了侵入该服务器。"
     },
     {
         "key": "rule_announce_attacked_server",
         "original": "6.1.2.a. The Runner announces the attacked server in the initiation phase of the run.",
-        "translation": ""
+        "translation": "潜袭者会在潜袭的发起阶段中宣告被攻击的服务器。"
     },
     {
         "key": "rule_change_attacked_server",
         "original": "6.1.2.b. Card abilities can sometimes change the attacked server during the run. This does not end the run, but it can affect whether or not certain card abilities or effects apply.",
-        "translation": ""
+        "translation": "卡牌能力有时会在潜袭过程中改变被攻击的服务器。这不会结束潜袭，但可能会影响某些卡牌能力或效果是否适用。"
     },
     {
         "key": "rule_change_runner_position",
         "original": "6.1.2.c. If an ability changes the Runner's position, the attacked server and the current timing step of the run could also change. See {ref:rule_move_runner_to_position}.",
-        "translation": ""
+        "translation": "如果某个能力改变了潜袭者的位置，则被攻击的服务器和潜袭当前所处的时序步骤也可能随之改变。见{ref:rule_move_runner_to_position}。"
     },
     {
         "key": "rule_change_attacked_server_directly",
         "original": "6.1.2.d. A few abilities change the attacked server directly, without referring to the Runner's position. These abilities do not change the current timing step of the run.",
-        "translation": ""
+        "translation": "少数能力会直接改变被攻击的服务器，而不提及潜袭者的位置。这些能力不会改变潜袭当前所处的时序步骤。"
     },
     {
         "key": "rule_change_attacked_server_directly-1-example",
         "original": "{card:Sneakdoor Beta}'s ability changes the attacked server from Archives to HQ. The Runner does not need to encounter ice protecting HQ after resolving this ability.",
-        "translation": ""
+        "translation": "{card:测试暗门} 的能力会将被攻击的服务器从档案库改为总部。潜袭者在结算该能力后，无需遭遇保护总部的防火墙。"
     },
     {
         "key": "rule_modify_run_steps",
         "original": "6.1.3. Many abilities modify the sequence of steps taken to resolve a run. Such abilities can direct players to skip steps or phases, replace steps with other effects, move directly from the current timing point to a new phase, or make other changes to the procedures explained in this section. Heed the Golden Rules in {ref:sec_golden_rules}.",
-        "translation": ""
+        "translation": "许多能力会修改结算一次潜袭时所执行的步骤顺序。此类能力可能会指示玩家跳过某些步骤或阶段、以其他效果替代某些步骤、从当前时点直接移动到新的阶段，或对本节说明的流程作出其他改变。请遵循{ref:sec_golden_rules}中的黄金规则。"
     },
     {
         "key": "rule_directly_approach_encounter",
         "original": "6.1.3.a. Some abilities direct the Runner to approach or encounter a piece of ice as part of moving them to that ice's position. See {ref:rule_move_runner_to_position}.",
-        "translation": ""
+        "translation": "某些能力会在将潜袭者移动到某层防火墙的位置时，指示其接驳或遭遇该防火墙。见{ref:rule_move_runner_to_position}。"
     },
     {
         "key": "rule_approach_directly",
         "original": "6.1.3.b. One card, {card:Code Replicator}, directs the Runner to approach the piece of ice in their position without first moving them to a new position. This effect changes the current timing step of the run to {ref:rule_sec_run_approach_ice_phase}, the Approach Ice Phase.",
-        "translation": ""
+        "translation": "有一张卡牌 {card:代码复制器}，会指示潜袭者在不先移动到新位置的情况下接驳其所在位置的防火墙。该效果会将潜袭当前所处的时序步骤改为{ref:rule_sec_run_approach_ice_phase}，即接驳防火墙阶段。"
     },
     {
         "key": "rule_forced_encounter_link",
         "original": "6.1.3.c. An ability that directs the Runner to encounter a piece of ice without first moving the Runner's position does not change the current timing point of the run, the attacked server, or the Runner's position. The effect of such an ability is to resolve an Encounter Ice Phase independent of the current state of the run. See {ref:subsec_forced_encounters}.",
-        "translation": ""
+        "translation": "若某个能力指示潜袭者在不先改变其位置的情况下遭遇一层防火墙，则不会改变潜袭当前所处的时点、被攻击的服务器或潜袭者的位置。此类能力的效果，是结算一个独立于当前潜袭状态之外的遭遇防火墙阶段。见{ref:subsec_forced_encounters}。"
     },
     {
         "key": "rule_move_new_run_phase",
         "original": "6.1.3.d. Any time the current timing step of the run is moved to a different phase of the run, except for an instruction to end the run (See {ref:rule_end_the_run}, below), no more steps in the previously-active phase are carried out. If a paid ability window is open, players complete that window normally. Then the active phase is complete and a checkpoint occurs. Finally, the game proceeds to the new phase.",
-        "translation": ""
+        "translation": "任何时候，只要潜袭当前所处的时序步骤被移动到潜袭的另一个阶段，除了“终止本次潜袭”的指示之外（见下方{ref:rule_end_the_run}），先前处于活动状态阶段中的后续步骤都不会再执行。如果当前有一个付费能力窗口开启，则玩家照常完成该窗口。然后，该活动阶段完成并发生一次检查点。最后，游戏进入新的阶段。"
     },
     {
         "key": "rule_run_phase_after",
         "original": "6.1.3.e. If a condition refers to encountering a piece of ice \"after\" an approach or passing a piece of ice \"after\" an encounter, then that condition is only met by the indicated phases or steps occurring in direct sequence according to the standard progression of the run.",
-        "translation": ""
+        "translation": "如果某个条件提及在一次接驳“之后”遭遇一层防火墙，或在一次遭遇“之后”通过一层防火墙，则该条件只有在所指示的阶段或步骤依照潜袭的标准推进顺序直接连续发生时才会满足。"
     },
     {
         "key": "rule_run_phase_after-1-example",
         "original": "The Runner uses {card:Inversificator} to break the subroutine on a {card:Mirāju} that is protecting Archives. When the encounter ends, {card:Mirāju}'s ability creates a replacement effect so that the Runner moves to the outermost position of Archives instead of passing {card:Mirāju}. Because the ice is not passed, {card:Inversificator}'s ability does not meet its trigger condition. Later, the Runner encounters the same {card:Mirāju} again and does not break its subroutine. When this encounter ends, the Runner passes {card:Mirāju}. Even though the Runner has used {card:Inversificator} to fully break {card:Mirāju} during an encounter earlier in the run, {card:Inversificator}'s trigger condition is not met when the Runner passes {card:Mirāju} because the Runner is not passing it after the relevant encounter.",
-        "translation": ""
+        "translation": "潜袭者使用 {card:反写诗器} 破解了保护档案库的一张 {card:蜃楼} 上的子进程。当该次遭遇结束时，{card:蜃楼} 的能力会创建一个替代效果，使潜袭者改为移动到档案库的最外层位置，而不是通过 {card:蜃楼}。由于该防火墙并未被通过，{card:反写诗器} 的能力不会满足其触发条件。随后，潜袭者再次遭遇同一张 {card:蜃楼}，且没有破解其子进程。当该次遭遇结束时，潜袭者通过了 {card:蜃楼}。尽管潜袭者在本次潜袭更早时，曾于一次遭遇中用 {card:反写诗器} 完全破解过 {card:蜃楼}，但当潜袭者通过 {card:蜃楼} 时，{card:反写诗器} 的触发条件仍不会满足，因为潜袭者不是在相关遭遇之后通过它的。"
     },
     {
         "key": "rule_pass_after_breaking",
         "original": "6.1.3.f. If a condition refers to passing a piece of ice \"after\" fully breaking it, then that condition is only met when the Runner passes that piece of ice after an encounter (as defined by {ref:rule_run_phase_after}), and only if the Runner fully broke that ice during that encounter. See {ref:subsec_fully_break}.",
-        "translation": ""
+        "translation": "如果某个条件提及在完全破解一层防火墙“之后”通过该防火墙，则该条件只有在潜袭者于一次遭遇之后通过该防火墙时才会满足（依{ref:rule_run_phase_after}的定义），且只有在潜袭者是在该次遭遇中完全破解了该防火墙时才算满足。见{ref:subsec_fully_break}。"
     },
     {
         "key": "rule_end_the_run",
         "original": "6.1.4. To {term:end the run} is to halt the Runner's progress toward the server. When an effect ends the run, the current phase of the run ends without following any of its remaining steps, and before completing open priority windows. The game immediately moves from the current timing point to {ref:rule_sec_run_run_ends_phase}, the Run Ends Phase.",
-        "translation": ""
+        "translation": "{term:终止本次潜袭}，是指中止潜袭者朝服务器推进。当某个效果终止本次潜袭时，潜袭当前阶段会在不执行其余步骤的情况下结束，而且先于当前已开启的优先权窗口完成之前结束。游戏会立即从当前时点进入{ref:rule_sec_run_run_ends_phase}，即潜袭结束阶段。"
     },
     {
         "key": "rule_end_run_access_or_breach_during_run",
         "original": "6.1.4.a. If a run is in progress, an instruction to end the run also ends any breach and/or access taking place.",
-        "translation": ""
+        "translation": "如果当前有潜袭进行中，则一个终止本次潜袭的指示也会结束正在进行的任何侵入和/或读取。"
     },
     {
         "key": "rule_end_encounter_outside_run",
         "original": "6.1.4.b. If an instruction to end the run resolves while there is no run in progress, but there is an encounter in progress, that encounter ends without resolving any more of its steps. Process any open priority windows in the same way as described in {ref:rule_run_ends_process_priority_windows}, but do not resolve any other steps of the Run Ends Phase. Any breach and/or access initiated during the encounter also ends, but a breach and/or access that was already in progress when the encounter began is not ended.",
-        "translation": ""
+        "translation": "如果一个终止本次潜袭的指示在没有潜袭进行中、但有一场遭遇进行中时结算，则该场遭遇会在不再结算其余步骤的情况下结束。以{ref:rule_run_ends_process_priority_windows}所述同样的方式处理任何已开启的优先权窗口，但不结算潜袭结束阶段中的其他任何步骤。在该次遭遇期间发起的任何侵入和/或读取也会结束，但如果某次侵入和/或读取在遭遇开始前就已在进行中，则不会因此结束。"
     },
     {
         "key": "rule_end_encounter_outside_run-1-example",
         "original": "The Runner uses {card:Detente} to access a card in HQ while there is no run in progress. They access {card:Ganked!} and are forced to encounter {card:Loot Box}. The Runner chooses to neither break any subroutines nor spend credits for {card:Loot Box}'s first subroutine, so that subroutine tries to end the run. There is no run to end, but this effect still ends the encounter. The second subroutine on {card:Loot Box} will not resolve.",
-        "translation": ""
+        "translation": "潜袭者使用 {card:共济} 在没有潜袭进行中的情况下读取总部中的一张卡牌。其读取到 {card:偷袭！}，并被迫遭遇 {card:随机卡池}。潜袭者选择既不破解任何子进程，也不为 {card:随机卡池} 的第一个子进程花费信用点，因此该子进程会尝试终止本次潜袭。虽然没有潜袭可供终止，但该效果仍会结束这场遭遇。{card:随机卡池} 的第二个子进程不会结算。"
     },
     {
         "key": "rule_end_run_no_run_or_encounter",
         "original": "6.1.4.c. If an instruction to end the run resolves while there is neither a run nor an encounter in progress, that effect does nothing.",
-        "translation": ""
+        "translation": "如果一个终止本次潜袭的指示在既没有潜袭、也没有遭遇进行中时结算，则该效果不作任何事。"
     },
     {
         "key": "rule_end_run_no_run_or_encounter-1-example",
         "original": "The Corp plays {card:Unleash} and resolves the last subroutine on {card:Lycian Multi-Munition}. The Corp will gain 1[c], but there is no further effect.",
-        "translation": ""
+        "translation": "公司打出 {card:释放} 并结算 {card:利西亚复合军火} 的最后一个子进程。公司会获得 1[c]，但不会有进一步效果。"
     },
     {
         "key": "rule_jacking_out",
         "original": "6.1.5. {term:Jacking out} is the process by which a Runner voluntarily ends a run. Jacking out follows the usual process for ending the run as described in {ref:rule_end_the_run}, but some card abilities function differently depending on whether or not the Runner chose to end the run by jacking out.",
-        "translation": ""
+        "translation": "{term:退出潜袭}，是潜袭者主动结束一次潜袭的过程。退出潜袭遵循{ref:rule_end_the_run}所述终止本次潜袭的一般流程，但某些卡牌能力会根据潜袭者是否是通过退出潜袭来结束该次潜袭而有不同作用。"
     },
     {
         "key": "rule_jack_out_after_passing_ice",
         "original": "6.1.5.a. The Runner has the opportunity to jack out after passing a piece of ice.",
-        "translation": ""
+        "translation": "潜袭者会在通过一层防火墙后获得一次退出潜袭的机会。"
     },
     {
         "key": "rule_jack_out_before_approach",
         "original": "6.1.5.b. If there is no ice protecting the server, the Runner has the opportunity to jack out before approaching the server.",
-        "translation": ""
+        "translation": "如果没有防火墙保护该服务器，则潜袭者会在接驳该服务器前获得一次退出潜袭的机会。"
     },
     {
         "key": "sec_position",
         "original": "6.2. Position",
-        "translation": ""
+        "translation": "位置"
     },
     {
         "key": "rule_position",
         "original": "6.2.1. Each server has a sequence of {term:positions} that assign an order to ice protecting that server. A piece of ice protecting a server always occupies exactly 1 position in that server's sequence at a time.",
-        "translation": ""
+        "translation": "每台服务器都有一列{term:位置}，用于为保护该服务器的防火墙规定顺序。保护一台服务器的一层防火墙，在任意时刻总是恰好占据该服务器序列中的 1 个位置。"
     },
     {
         "key": "rule_hosted_ice_has_no_position",
         "original": "6.2.1.a. A piece of ice that is hosted on another card is not protecting a server and does not occupy a position, regardless of whether the ice is installed.",
-        "translation": ""
+        "translation": "附载于另一张卡牌上的一层防火墙并不在保护任何服务器，因此不占据位置，无论该防火墙是否已安装。"
     },
     {
         "key": "rule_create_position",
         "original": "6.2.2. When a piece of ice is installed protecting a server or an installed piece of ice is moved, a new position is created for that ice. For ice being installed, the position is created when the Corp declares an install destination for the ice ({ref:rule_steps_installing_destination}), and the ice occupies that position once the ice becomes installed ({ref:rule_steps_installing_become_installed}). For installed ice being moved, the position is created when the movement happens, and the ice occupies that position immediately.",
-        "translation": ""
+        "translation": "当一层防火墙被安装来保护某台服务器，或一层已安装的防火墙被转移时，都会为该防火墙创建一个新位置。对于正在安装的防火墙，该位置在公司为该防火墙宣告安装目的地时创建（{ref:rule_steps_installing_destination}），并在该防火墙成为已安装状态时占据该位置（{ref:rule_steps_installing_become_installed}）。对于被转移的已安装防火墙，该位置在转移发生时创建，而该防火墙会立刻占据该位置。"
     },
     {
         "key": "rule_create_position_outermost",
         "original": "6.2.2.a. If a piece of ice is being installed in or moved to the outermost position protecting a server, the new position is outward from the outermost already-existing position. If an instruction to install a piece of ice does not explicitly specify otherwise, the ice is installed in the outermost position.",
-        "translation": ""
+        "translation": "如果一层防火墙被安装到或被转移到保护一台服务器的最外层位置，则新位置会创建在现有最外层位置的外侧。如果一个安装防火墙的指示没有明确指定其他位置，则该防火墙会安装在最外层位置。"
     },
     {
         "key": "rule_create_position_innermost",
         "original": "6.2.2.b. If a piece of ice is being installed in or moved to the innermost position protecting a server, the new position is inward from the innermost already-existing position.",
-        "translation": ""
+        "translation": "如果一层防火墙被安装到或被转移到保护一台服务器的最内层位置，则新位置会创建在现有最内层位置的内侧。"
     },
     {
         "key": "rule_create_position_directly_inward",
         "original": "6.2.2.c. If a piece of ice is being installed \"directly inward\" from another piece of ice, the new position is inward from that ice's position, and outward from the next already-existing position inward, if there is one.",
-        "translation": ""
+        "translation": "如果一层防火墙被安装在另一层防火墙的“正内侧”，则新位置会创建在那层防火墙位置的内侧，并且若其内侧已有下一个现存位置，则新位置会位于该位置的外侧。"
     },
     {
         "key": "rule_create_position_any_position",
         "original": "6.2.2.d. If a piece of ice is being installed \"in any position\", the new position can be created outward from all existing positions, inward from all existing positions, or between any two existing consecutive positions, as the Corp chooses.",
-        "translation": ""
+        "translation": "如果一层防火墙被安装在“任意位置”，则公司可以选择将新位置创建在所有现存位置的外侧、所有现存位置的内侧，或任意两个相邻现存位置之间。"
     },
     {
         "key": "rule_create_position_mutate",
         "original": "6.2.2.e. One card, {card:Mutate}, has an ability that installs a piece of ice in the \"same position\" as a particular piece of ice that was previously trashed. This is a different usage of \"same position\" from that described in {ref:rule_count_positions}. For this installation, the ice is installed protecting the same server the trashed ice was protecting, and the new position is created at the same place in that server's sequence of positions as the position the trashed ice had.",
-        "translation": ""
+        "translation": "有一张卡牌 {card:变异}，其能力会将一层防火墙安装在某层先前被销毁之防火墙的“相同位置”。这与{ref:rule_count_positions}中所述“相同位置”的用法不同。对于这种安装，该防火墙会安装来保护先前被销毁之防火墙所保护的同一台服务器，而新位置会创建在该服务器位置序列中与先前那层被销毁防火墙所处位置相同的地方。"
     },
     {
         "key": "rule_create_position_swap",
         "original": "6.2.2.f. If a piece of ice is swapped with a piece of ice protecting a server, no new position is created. The first ice will occupy the position previously held by the second ice (and vice-versa, if the first piece of ice was also protecting a server).",
-        "translation": ""
+        "translation": "如果一层防火墙与一层保护某台服务器的防火墙互换，则不会创建新位置。第一层防火墙会占据第二层防火墙先前占据的位置（若第一层防火墙原本也在保护某台服务器，则第二层防火墙亦然）。"
     },
     {
         "key": "rule_count_positions",
         "original": "6.2.3. Some abilities refer to ice in the \"same position\" protecting different servers. Two pieces of ice occupy the \"same position\" if their respective servers have the same number of positions inward from their respective positions.",
-        "translation": ""
+        "translation": "某些能力会提及保护不同服务器且处于“相同位置”的防火墙。如果两层防火墙各自所在服务器在其位置内侧所具有的位置数量相同，则这两层防火墙处于“相同位置”。"
     },
     {
         "key": "rule_count_positions-1-example",
         "original": "A server has 2 pieces of ice protecting it, and a copy of {card:Rook} is hosted on the outermost of those 2 pieces of ice. {card:Rook}'s ability can move it to the 2nd piece of ice protecting any server, counted starting from the innermost piece of ice and moving outward. The {card:Rook} cannot be moved to a server protected by only 1 piece of ice.",
-        "translation": ""
+        "translation": "某台服务器有 2 层防火墙保护，而一张 {card:车} 附载于其中最外层那层防火墙上。{card:车} 的能力可以将其转移到任意一台服务器上、第 2 层保护该服务器的防火墙上，计算方式是从最内层防火墙开始向外计数。如果某台服务器只有 1 层防火墙保护，则 {card:车} 不能转移到该服务器上。"
     },
     {
         "key": "rule_count_positions-2-example",
         "original": "The Runner passes a piece of ice in the innermost position protecting a server, and uses {card:Slipstream} to move to another server. Since positions are compared working from the innermost position, the Runner will be able to approach the innermost ice protecting any server, regardless of how many other pieces of ice are outward from that ice.",
-        "translation": ""
+        "translation": "潜袭者通过了一层位于某台服务器最内层位置的防火墙，并使用 {card:滑流} 转移到另一台服务器。由于位置是从最内层位置开始比较的，因此无论该层防火墙外侧还有多少其他防火墙，潜袭者都能够接驳保护任意服务器的最内层防火墙。"
     },
     {
         "key": "rule_destroy_position",
         "original": "6.2.4. If a piece of ice leaves its position, except by being swapped with another piece of ice, its former position ceases to exist. This happens during {ref:step_checkpoint_vacant_position} of the next checkpoint, unless the Runner is in that position, in which case the position continues to exist until the Runner moves to another position or ceases to have a position.",
-        "translation": ""
+        "translation": "如果一层防火墙离开其位置，除非是与另一层防火墙互换，否则其原先的位置会不再存在。这会在下一次检查点的{ref:step_checkpoint_vacant_position}期间发生；但如果潜袭者位于该位置，则该位置会继续存在，直到潜袭者移动到另一位置，或不再具有位置为止。"
     },
     {
         "key": "rule_position_runner",
         "original": "6.2.5. During a run, the Runner occupies the attacked server's positions.",
-        "translation": ""
+        "translation": "在潜袭过程中，潜袭者占据被攻击的服务器的各个位置。"
     },
     {
         "key": "rule_position_initial",
         "original": "6.2.5.a. The Runner enters the outermost position protecting the attacked server at {ref:step_runner_position} of the Initiation Phase.",
-        "translation": ""
+        "translation": "潜袭者会在发起阶段的{ref:step_runner_position}时进入保护被攻击服务器的最外层位置（若存在该位置）。"
     },
     {
         "key": "rule_position_progression",
         "original": "6.2.5.b. The Runner progresses through the positions of the attacked server in order. While the Runner occupies a position, they approach, encounter (if the ice is rezzed), and pass the ice in that position, then they proceed to the next position moving inward, until they complete this process for the innermost position or the run is ended.",
-        "translation": ""
+        "translation": "潜袭者会依序穿过被攻击服务器的各个位置。当潜袭者占据一个位置时，其会接驳该位置上的防火墙、遭遇之（若该防火墙已激活）并通过之，然后向内进入下一个位置，如此反复，直到其完成最内层位置的这一过程，或该次潜袭被终止。"
     },
     {
         "key": "rule_no_position_after_innermost_ice",
         "original": "6.2.5.c. Once the Runner leaves the innermost position protecting a server, they no longer have a position. This occurs at {ref:step_move_position} of the Movement Phase. However, abilities can still move the Runner to a position later in that phase.",
-        "translation": ""
+        "translation": "一旦潜袭者离开保护某台服务器的最内层位置，其就不再具有位置。这发生在移动阶段的{ref:step_move_position}。然而，能力仍然可以在该阶段稍后将潜袭者移动到某个位置。"
     },
     {
         "key": "rule_no_position_after_approach_server",
         "original": "6.2.5.d. During the Success Phase and the Run Ends Phase, the Runner has no position and can no longer move to a position.",
-        "translation": ""
+        "translation": "在成功阶段与潜袭结束阶段中，潜袭者没有位置，也不能再移动到任何位置。"
     },
     {
         "key": "rule_no_position_after_approach_server-1-example",
         "original": "The Corp uses {card:Ganked!} to force the Runner to encounter {card:Cell Portal} in the middle of breaching a server. Since the run is already successful, resolving {card:Cell Portal}'s subroutine will have no meaningful effect except to derez {card:Cell Portal}.",
-        "translation": ""
+        "translation": "公司使用 {card:偷袭！}，在侵入一台服务器的中途强迫潜袭者遭遇 {card:信元传送门}。由于该次潜袭已经成功，结算 {card:信元传送门} 的子进程除了关闭 {card:信元传送门} 之外，不会有任何实质效果。"
     },
     {
         "key": "rule_no_position_outside_run",
         "original": "6.2.5.e. The Runner does not have a position while they are not engaged in a run, nor do they maintain their position from one run to the next.",
-        "translation": ""
+        "translation": "当潜袭者没有进行潜袭时，其不具有位置，也不会将自己在一次潜袭中的位置维持到下一次潜袭。"
     },
     {
         "key": "rule_ice_change_can_affect_position",
         "original": "6.2.6. The Runner's current position is a specific element of the sequence of positions, not an index into that sequence. Adding or removing other positions protecting the attacked server does not affect the Runner's position.",
-        "translation": ""
+        "translation": "潜袭者当前位置是位置序列中的一个特定元素，而不是该序列中的一个索引。向被攻击的服务器添加或移除其他位置，并不会影响潜袭者的位置。"
     },
     {
         "key": "rule_ice_change_outward",
         "original": "6.2.6.a. If a position outward from the Runner's current position is added to the attacked server, the Runner will normally not need to approach or encounter the new piece of ice to reach the server.",
-        "translation": ""
+        "translation": "如果在被攻击服务器上，潜袭者当前位置外侧新增了一个位置，则潜袭者通常无需接驳或遭遇那层新的防火墙就能抵达服务器。"
     },
     {
         "key": "rule_ice_change_outward-1-example",
         "original": "The Runner runs a server protected by 2 pieces of ice. The Runner approaches the outermost ice, and the Corp rezzes {card:Drafter}. During the subsequent encounter, the Corp resolves {card:Drafter}'s second subroutine, installing a new piece of ice protecting the attacked server and trashing both of the other pieces of ice in the process. The new ice is installed to the outermost position protecting the server, which is outward from the Runner's current position, so the Runner will not approach the new piece of ice. This is true even though the number of positions between the new ice and the server is less than the number of positions that were previously between the Runner and the server.",
-        "translation": ""
+        "translation": "潜袭者潜袭一台有 2 层防火墙保护的服务器。潜袭者接驳最外层防火墙，而公司激活了 {card:制图师}。在随后的遭遇中，公司结算了 {card:制图师} 的第二个子进程，安装了一层新的防火墙来保护被攻击的服务器，并在此过程中销毁了其他两层防火墙。新的防火墙被安装在保护该服务器的最外层位置，也就是潜袭者当前位置的外侧，因此潜袭者不会接驳这层新防火墙。即使这层新防火墙与服务器之间的位置数量少于先前潜袭者与服务器之间的位置数量，结论也仍然如此。"
     },
     {
         "key": "rule_ice_change_inward",
         "original": "6.2.6.b. If a position inward from the Runner's current position is added to or removed from the attacked server, the ice the Runner will need to approach and/or encounter changes accordingly.",
-        "translation": ""
+        "translation": "如果在被攻击服务器上，潜袭者当前位置内侧的某个位置被添加或移除，则潜袭者之后需要接驳和/或遭遇的防火墙会据此相应改变。"
     },
     {
         "key": "rule_ice_change_inward-1-example",
         "original": "The Runner encounters {card:Brân 1.0} and breaks its last two subroutines. {card:Brân 1.0}'s first subroutine resolves and the Corp installs a new piece of ice in the next inward position protecting the server. The Runner will have to approach that new piece of ice later in this run because its position is inward from their current position.",
-        "translation": ""
+        "translation": "潜袭者遭遇 {card:布兰1.0}，并破解了其最后两个子进程。{card:布兰1.0} 的第一个子进程结算后，公司在保护该服务器的下一个内侧位置安装了一层新的防火墙。由于其位置在潜袭者当前位置的内侧，潜袭者在本次潜袭稍后将必须接驳那层新的防火墙。"
     },
     {
         "key": "rule_ice_change_current_position",
         "original": "6.2.7. Changes to the piece of ice in the Runner's current position can affect the progression of the run, but they do so differently during an encounter than outside of an encounter.",
-        "translation": ""
+        "translation": "潜袭者当前位置上的防火墙发生变化，可能会影响潜袭的推进；但在遭遇期间与遭遇之外，其影响方式不同。"
     },
     {
         "key": "rule_ice_change_approach_uninstall_move",
         "original": "6.2.7.a. If a piece of ice is uninstalled or moved to another position (protecting this or another server) while it is being approached, the approach ends and the run continues to the Movement Phase.",
-        "translation": ""
+        "translation": "如果一层正在被接驳的防火墙被卸载，或被转移到其他位置（保护本服务器或另一台服务器），则本次接驳结束，潜袭继续进入移动阶段。"
     },
     {
         "key": "rule_ice_change_approach_swap",
         "original": "6.2.7.b. If a piece of ice currently being approached is swapped with another piece of ice, the Runner remains in their current position and the run remains in the Approach Ice Phase. The Runner is now approaching the new piece of ice occupying that position. Trigger conditions related to a piece of ice being approached are not met for the new ice.",
-        "translation": ""
+        "translation": "如果一层正在被接驳的防火墙与另一层防火墙互换，则潜袭者仍留在当前位置，且潜袭仍处于接驳防火墙阶段。潜袭者现在是在接驳占据该位置的新防火墙。与接驳一层防火墙有关的触发条件不会因这层新防火墙而满足。"
     },
     {
         "key": "rule_ice_change_encounter_uninstall_derez",
         "original": "6.2.7.c. If a piece of ice is uninstalled or derezzed while it is being encountered, the Encounter Phase ends and the run continues to the Movement Phase.",
-        "translation": ""
+        "translation": "如果一层正在被遭遇的防火墙被卸载或被关闭，则遭遇阶段结束，潜袭继续进入移动阶段。"
     },
     {
         "key": "rule_ice_change_encounter_move_swap",
         "original": "6.2.7.d. If a piece of ice currently being encountered moves to another position or is swapped with installed ice in another position, the Runner remains with the encountered ice and continues the run from that ice's new position.",
-        "translation": ""
+        "translation": "如果一层正在被遭遇的防火墙转移到另一位置，或与另一位置上的已安装防火墙互换，则潜袭者会仍与被遭遇的该防火墙一同移动，并从该防火墙的新位置继续本次潜袭。"
     },
     {
         "key": "rule_ice_change_encounter_move_swap-1-example",
         "original": "The Runner encounters {card:Bullfrog} as the innermost piece of ice protecting a remote server. {card:Bullfrog}'s subroutine resolves and it is moved to be the outermost piece of ice protecting Archives. The Runner is now running on Archives and continues the run from {card:Bullfrog}'s new position.",
-        "translation": ""
+        "translation": "潜袭者遭遇一张保护远程服务器的、位于最内层的 {card:牛蛙}。{card:牛蛙} 的子进程结算后，其被转移为保护档案库的最外层防火墙。潜袭者现在是在潜袭档案库，并从 {card:牛蛙} 的新位置继续这次潜袭。"
     },
     {
         "key": "rule_ice_change_during_movement",
         "original": "6.2.7.e. If the piece of ice in the Runner's position is uninstalled, derezzed, moved, or swapped during the Initiation Phase or the Movement Phase, the Runner is not moved and the current timing step of the run does not change.",
-        "translation": ""
+        "translation": "如果潜袭者所在位置上的防火墙在发起阶段或移动阶段中被卸载、关闭、转移或互换，则潜袭者不会被移动，且潜袭当前所处的时序步骤不会改变。"
     },
     {
         "key": "rule_ice_change_during_movement-1-example",
         "original": "A run begins, and before the Runner approaches the outermost piece of ice protecting the attacked server, the Corp uses {card:Project Yagi-Uda} to swap that ice with another piece of ice. The Runner will approach the new ice.",
-        "translation": ""
+        "translation": "一次潜袭开始后，在潜袭者接驳保护被攻击服务器的最外层防火墙之前，公司使用 {card:八木宇田计划} 将该防火墙与另一层防火墙互换。潜袭者将会接驳这层新的防火墙。"
     },
     {
         "key": "rule_ice_change_during_movement-2-example",
         "original": "The Runner passes a piece of ice, and in {ref:step_before_jack_out_paw}, the Corp uses {card:Project Yagi-Uda} to swap that ice with another piece of ice. The Runner has still passed their position (but has not passed the new ice occupying that position) and will proceed to the next position in {ref:step_move_position}. They will not approach or encounter the new ice.",
-        "translation": ""
+        "translation": "潜袭者通过了一层防火墙，而在{ref:step_before_jack_out_paw}中，公司使用 {card:八木宇田计划} 将该防火墙与另一层防火墙互换。潜袭者仍然已经通过了其所在位置（但尚未通过现占据该位置的新防火墙），并会在{ref:step_move_position}中进入下一个位置。其不会接驳或遭遇这层新防火墙。"
     },
     {
         "key": "rule_move_runner_to_position",
         "original": "6.2.8. During a run, abilities can move the Runner directly to a position.",
-        "translation": ""
+        "translation": "在潜袭过程中，能力可以将潜袭者直接移动到一个位置。"
     },
     {
         "key": "rule_move_to_piece_of_ice",
         "original": "6.2.8.a. If an ability instructs the Runner to move to a piece of ice in a different position, the Runner's position becomes the position corresponding to that ice, and the server that ice protects becomes the attacked server. The current timing step becomes {ref:rule_sec_run_approach_ice_phase}, the Approach Ice Phase, or {ref:rule_sec_run_encounter_ice_phase}, the Encounter Ice Phase, according to whether the Runner was directed to approach or encounter the ice.",
-        "translation": ""
+        "translation": "如果某个能力指示潜袭者移动到不同位置上的一层防火墙，则潜袭者的位置变为与该防火墙对应的位置，而该防火墙所保护的服务器变为被攻击的服务器。当前时序步骤则根据该能力是指示潜袭者接驳该防火墙还是遭遇该防火墙，而变为{ref:rule_sec_run_approach_ice_phase}接驳防火墙阶段或{ref:rule_sec_run_encounter_ice_phase}遭遇防火墙阶段。"
     },
     {
         "key": "rule_move_to_specific_position",
         "original": "6.2.8.b. If an ability instructs the Runner to move to \"the outermost position\" of a server, that server becomes the attacked server. If there is any ice protecting that server, the Runner's position becomes the position of the outermost such piece of ice, and the current timing step becomes {ref:rule_sec_run_approach_ice_phase}, the Approach Ice Phase. If there is no ice, the Runner ceases to have a position, and the current timing step becomes {ref:rule_sec_run_movement_phase}, the Movement Phase.",
-        "translation": ""
+        "translation": "如果某个能力指示潜袭者移动到某台服务器的“最外层位置”，则该服务器成为被攻击的服务器。如果有任何防火墙保护该服务器，则潜袭者的位置变为该最外层防火墙所在的位置，而当前时序步骤变为{ref:rule_sec_run_approach_ice_phase}接驳防火墙阶段。如果没有防火墙，则潜袭者不再具有位置，而当前时序步骤变为{ref:rule_sec_run_movement_phase}移动阶段。"
     },
     {
         "key": "rule_ineffective_move",
         "original": "6.2.8.c. If an ability instructs the Runner to move to a position during the Success Phase, during the Run Ends Phase, or while there is no run in progress, instead the Runner does nothing. See {ref:rule_no_position_after_approach_server}.",
-        "translation": ""
+        "translation": "如果某个能力在成功阶段、潜袭结束阶段，或在没有潜袭进行中的情况下指示潜袭者移动到一个位置，则改为潜袭者不作任何事。见{ref:rule_no_position_after_approach_server}。"
     },
     {
         "key": "rule_move_to_current_ice",
         "original": "6.2.8.d. If an ability instructs the Runner to move to and approach a position they are already approaching, instead the Runner does nothing.",
-        "translation": ""
+        "translation": "如果某个能力指示潜袭者移动到并接驳一个其已经正在接驳的位置，则改为潜袭者不作任何事。"
     },
     {
         "key": "sec_run_initiation",
         "original": "6.3. Initiation",
-        "translation": ""
+        "translation": "发起"
     },
     {
         "key": "rule_run_initiation_phase",
         "original": "6.3.1. The {term:initiation phase} sets the parameters for the run and begins the run.",
-        "translation": ""
+        "translation": "{term:发起阶段}设定本次潜袭的参数，并使潜袭开始。"
     },
     {
         "key": "rule_start_initiation_phase",
         "original": "6.3.2. At the start of the Initiation Phase, the Runner announces a server to be the attacked server.",
-        "translation": ""
+        "translation": "在发起阶段开始时，潜袭者宣告一台服务器作为被攻击的服务器。"
     },
     {
         "key": "rule_cannot_run_abilities",
         "original": "6.3.2.a. Some abilities state that the Runner \"cannot run on\" or \"cannot initiate a run on\" certain servers under certain conditions. These effects refer to the announcement of the attacked server in the Initiation Phase.",
-        "translation": ""
+        "translation": "某些能力会说明在特定条件下，潜袭者“cannot run on”或“cannot initiate a run on”某些服务器。这些效果所指的，是发起阶段中对被攻击服务器的宣告。"
     },
     {
         "key": "rule_cannot_run_abilities-1-example",
         "original": "{card:Off the Grid} states in part, \"The Runner cannot initiate a run on this server.\" This only prohibits the Runner from announcing this particular remote server as the attacked server at the beginning of the run. If an ability changes the attacked server while a run is in progress, {card:Off the Grid} does not interfere with that ability.",
-        "translation": ""
+        "translation": "{card:隔绝网络} 的部分文本写道：“The Runner cannot initiate a run on this server.”。这只会禁止潜袭者在潜袭开始时宣告这一台特定远程服务器作为被攻击的服务器。如果某个能力在潜袭进行中改变了被攻击的服务器，{card:隔绝网络} 不会妨碍该能力。"
     },
     {
         "key": "rule_additional_cost_to_run",
         "original": "6.3.2.b. Some abilities impose an additional cost to run, either generally or on a particular server. Any costs to run a server must be paid at the time that server is announced as the attacked server.",
-        "translation": ""
+        "translation": "某些能力会对潜袭施加额外费用，可能是一般性的，也可能是针对某台特定服务器的。针对某台服务器进行潜袭的任何费用，都必须在该服务器被宣告为被攻击的服务器时支付。"
     },
     {
         "key": "rule_initiation_bad_publicity",
         "original": "6.3.3. After the attacked server is announced, {n}credits are added to the Runner's bad publicity fund.{/n} See {ref:sec_bad_publicity} for an explanation of bad publicity.",
-        "translation": ""
+        "translation": "在被攻击的服务器被宣告后，{n}会向潜袭者的负面宣传资金池加入信用点。{/n}有关负面宣传的说明，见{ref:sec_bad_publicity}。"
     },
     {
         "key": "rule_abilities_during_a_run",
         "original": "6.3.4. Some abilities look for particular conditions occurring \"during a run\" or are restricted to being used \"during a run.\" For purposes of abilities, the run formally begins only after the attacked server is announced and any costs are paid.",
-        "translation": ""
+        "translation": "某些能力会寻找“在潜袭过程中”发生的特定条件，或限制只能“在潜袭过程中”使用。就能力而言，只有在被攻击的服务器被宣告且所有费用已支付后，这次潜袭才正式开始。"
     },
     {
         "key": "rule_abilities_during_a_run-1-example",
         "original": "The Runner initiates a run against a server with a rezzed {card:Heinlein Grid} while the Corp has {card:Enhanced Login Protocol} in play. They do not lose any credits to {card:Heinlein Grid}'s ability, as the additional click {card:Enhanced Login Protocol} requires them to spend is spent to initiate the run, and is not spent during the run.",
-        "translation": ""
+        "translation": "潜袭者对一台服务器发起潜袭，该服务器根目录中有一张已激活的 {card:海因莱因网阵}，同时公司场上有 {card:强化版登录协议}。潜袭者不会因 {card:海因莱因网阵} 的能力而失去任何信用点，因为 {card:强化版登录协议} 要求其额外花费的时点是在发起潜袭时花费的，而不是在潜袭过程中花费的。"
     },
     {
         "key": "rule_run_initiation_phase_next_phase",
         "original": "6.3.5. When the Initiation Phase completes, the run moves either to the Approach Ice Phase ({ref:sec_approach_ice_phase}) or the Movement Phase ({ref:sec_movement_phase}). If there is ice protecting the attacked server, the Runner's position becomes the outermost piece of ice, and the run proceeds to the Approach Ice Phase. If there is no ice protecting the server, then the run moves directly to the Movement Phase.",
-        "translation": ""
+        "translation": "当发起阶段完成时，潜袭会进入接驳防火墙阶段（{ref:sec_approach_ice_phase}）或移动阶段（{ref:sec_movement_phase}）。如果有防火墙保护被攻击的服务器，则潜袭者的位置变为最外层那层防火墙，且潜袭进入接驳防火墙阶段。如果没有防火墙保护该服务器，则潜袭直接进入移动阶段。"
     },
     {
         "key": "sec_approach_ice_phase",
         "original": "6.4. Approach Ice",
-        "translation": ""
+        "translation": "接驳防火墙"
     },
     {
         "key": "rule_approach_ice_phase",
         "original": "6.4.1. The {term:approach ice phase} gives the Corp the opportunity to rez the ice in the Runner's current position.",
-        "translation": ""
+        "translation": "{term:接驳防火墙阶段}给予公司机会，以激活潜袭者当前位置上的防火墙。"
     },
     {
         "key": "rule_approach_condition",
         "original": "6.4.2. For purposes of meeting trigger conditions, the Runner approaching a piece of ice is equivalent to the Approach Ice Phase beginning at that ice's position. Abilities with this trigger condition are subject to {ref:rule_reaction_window_closing_timing_structure}.",
-        "translation": ""
+        "translation": "就满足触发条件而言，潜袭者接驳一层防火墙，等同于接驳防火墙阶段在该防火墙的位置开始。具有此类触发条件的能力受{ref:rule_reaction_window_closing_timing_structure}约束。"
     },
     {
         "key": "rule_rez_ice_restriction",
         "original": "6.4.3. The paid ability window in {ref:step_approach_paw} of the Approach Ice Phase is the only time the Corp can normally rez ice. In this window, the Corp only gains the ability to rez the piece of ice being approached, not any other ice.",
-        "translation": ""
+        "translation": "接驳防火墙阶段中{ref:step_approach_paw}的付费能力窗口，是公司通常能够激活防火墙的唯一时点。在该窗口中，公司只获得激活正在被接驳之防火墙的权利，而不是任何其他防火墙。"
     },
     {
         "key": "rule_approach_ice_next_phase",
         "original": "6.4.4. When the Approach Ice Phase completes, the run moves either to the Encounter Ice Phase ({ref:sec_encounter_ice_phase}) or the Movement Phase ({ref:sec_movement_phase}). If the approached piece of ice is rezzed, the Runner encounters it next. If the approached piece of ice is unrezzed or if there is no longer ice installed in that position, then the run moves directly to the Movement Phase.",
-        "translation": ""
+        "translation": "当接驳防火墙阶段完成时，潜袭会进入遭遇防火墙阶段（{ref:sec_encounter_ice_phase}）或移动阶段（{ref:sec_movement_phase}）。如果正在被接驳的那层防火墙已激活，则潜袭者接下来会遭遇它。如果正在被接驳的那层防火墙未激活，或者该位置上已不再安装有防火墙，则潜袭会直接进入移动阶段。"
     },
     {
         "key": "sec_encounter_ice_phase",
         "original": "6.5. Encounter Ice",
-        "translation": ""
+        "translation": "遭遇防火墙"
     },
     {
         "key": "rule_encounter_ice_phase",
         "original": "6.5.1. The {term:encounter ice phase} gives the Runner the opportunity to interact with the ice in their current position, then requires the Corp to resolve unbroken subroutines on that ice.",
-        "translation": ""
+        "translation": "{term:遭遇防火墙阶段}给予潜袭者与其当前位置上的防火墙互动的机会，然后要求公司结算该防火墙上未破解的子进程。"
     },
     {
         "key": "rule_encounter_condition",
         "original": "6.5.2. For purposes of meeting trigger conditions, the Runner encountering a piece of ice is equivalent to the Encounter Ice Phase beginning at that ice's position. Abilities with this trigger condition are subject to {ref:rule_reaction_window_closing_timing_structure}.",
-        "translation": ""
+        "translation": "就满足触发条件而言，潜袭者遭遇一层防火墙，等同于遭遇防火墙阶段在该防火墙的位置开始。具有此类触发条件的能力受{ref:rule_reaction_window_closing_timing_structure}约束。"
     },
     {
         "key": "rule_encounter_unbroken_sub_status",
         "original": "6.5.3. As each encounter begins, each subroutine on the encountered ice gains an \"unbroken\" status associated with that encounter. See {ref:sec_subroutines} for details.",
-        "translation": ""
+        "translation": "每次遭遇开始时，被遭遇之防火墙上的每条子进程都会获得一个与该次遭遇相关联的“未破解”状态。详见{ref:sec_subroutines}。"
     },
     {
         "key": "rule_encounter_break_paw",
         "original": "6.5.4. During the paid ability window in the Encounter Ice Phase ({ref:step_encounter_paw}), the Runner can break subroutines on the ice. See {ref:rule_break_subroutine}.",
-        "translation": ""
+        "translation": "在遭遇防火墙阶段的付费能力窗口（{ref:step_encounter_paw}）中，潜袭者可以破解该防火墙上的子进程。见{ref:rule_break_subroutine}。"
     },
     {
         "key": "rule_encounter_sub_resolve",
         "original": "6.5.5. After the paid ability window in the Encounter Ice Phase closes, unbroken subroutines on the encountered ice resolve. See {ref:rule_resolve_unbroken_subroutines}.",
-        "translation": ""
+        "translation": "在遭遇防火墙阶段中的付费能力窗口关闭后，被遭遇之防火墙上未破解的子进程会结算。见{ref:rule_resolve_unbroken_subroutines}。"
     },
     {
         "key": "rule_encounter_ice_next_phase",
         "original": "6.5.6. At the end of the Encounter Ice Phase, the run continues to the Movement Phase, {ref:sec_movement_phase}.",
-        "translation": ""
+        "translation": "在遭遇防火墙阶段结束时，潜袭继续进入移动阶段，见{ref:sec_movement_phase}。"
     },
     {
         "key": "subsec_fully_break",
         "original": "6.5.7. Fully Break",
-        "translation": ""
+        "translation": "完全破解"
     },
     {
         "key": "rule_fully_break",
         "original": "6.5.7.a. During each encounter, the Runner {term:fully breaks} the encountered ice the first time all subroutines on that ice are broken.",
-        "translation": ""
+        "translation": "在每次遭遇中，当被遭遇之防火墙上的所有子进程第一次都被破解时，潜袭者便{term:完全破解}了该防火墙。"
     },
     {
         "key": "rule_object_fully_break",
         "original": "6.5.7.b. Whenever the Runner fully breaks a piece of ice, if all its subroutines were broken using abilities on a single object, that object also {term:fully breaks} the ice.",
-        "translation": ""
+        "translation": "每当潜袭者完全破解一层防火墙时，如果其所有子进程都是通过单一物件上的能力被破解的，则该物件也{term:完全破解}了该防火墙。"
     },
     {
         "key": "rule_fully_break_no_subroutines",
         "original": "6.5.7.c. If an encountered piece of ice has no subroutines, the Runner fully breaks it when {ref:step_encounter_paw} of the encounter begins. No objects fully break the ice in this case.",
-        "translation": ""
+        "translation": "如果一层被遭遇的防火墙没有子进程，则潜袭者会在该次遭遇的{ref:step_encounter_paw}开始时完全破解之。在这种情况下，没有任何物件会完全破解该防火墙。"
     },
     {
         "key": "rule_fully_broken_not_retracted",
         "original": "6.5.7.d. If the encountered piece of ice gains subroutines after the Runner fully breaks it, the Runner's status of having fully broken the ice remains in place. Conditions that check whether the Runner fully broke the ice will still be met as normal. Breaking the new subroutines will not fully break the ice or meet related conditions again.",
-        "translation": ""
+        "translation": "如果被遭遇的那层防火墙在潜袭者完全破解它之后获得新的子进程，则潜袭者已完全破解该防火墙的状态仍然保留。检查潜袭者是否完全破解了该防火墙的条件，仍会正常满足。破解这些新子进程不会再次完全破解该防火墙，也不会再次满足相关条件。"
     },
     {
         "key": "subsec_bypass",
         "original": "6.5.8. Bypass",
-        "translation": ""
+        "translation": "略过"
     },
     {
         "key": "rule_bypass",
         "original": "6.5.8.a. When an effect allows the Runner to {term:bypass} a piece of ice, the Encounter Ice Phase is aborted and the Runner immediately proceeds to pass that ice.",
-        "translation": ""
+        "translation": "当某个效果允许潜袭者{term:略过}一层防火墙时，遭遇防火墙阶段会被中止，而潜袭者会立即继续通过该防火墙。"
     },
     {
         "key": "rule_bypass_start_of_encounter",
         "original": "6.5.8.b. Most bypass effects occur at the beginning of an encounter and result in {ref:step_encounter_paw,step_resolve_subroutine} never occurring, meaning that subroutines on the encountered ice are neither broken nor resolved.",
-        "translation": ""
+        "translation": "多数略过效果发生在一次遭遇的开始，并导致{ref:step_encounter_paw,step_resolve_subroutine}永远不会发生，这意味着被遭遇之防火墙上的子进程既不会被破解，也不会被结算。"
     },
     {
         "key": "rule_bypass_during_encounter",
         "original": "6.5.8.c. A few bypass effects can be triggered later. If ice is bypassed in {ref:step_encounter_paw}, subroutines may or may not have been broken, but {ref:step_resolve_subroutine} never occurs so no subroutines resolve. Note that for ice with zero subroutines, the Runner has \"broken all subroutines\" if and only if {ref:step_encounter_paw} was reached. See {ref:rule_vacuous_truth}.",
-        "translation": ""
+        "translation": "少数略过效果可以在较晚时点触发。如果防火墙在{ref:step_encounter_paw}中被略过，则子进程可能已经被破解，也可能尚未被破解；但{ref:step_resolve_subroutine}永远不会发生，因此不会有子进程结算。注意，对于没有子进程的防火墙，只有且仅有在抵达{ref:step_encounter_paw}时，潜袭者才算“破解了所有子进程”。见{ref:rule_vacuous_truth}。"
     },
     {
         "key": "rule_bypass_during_encounter-1-example",
         "original": "The Runner plays {card:Forked} and encounters a {card:Troll} that they can bypass with {card:Femme Fatale}. The Runner pays 0[c] to bypass the {card:Troll} with {card:Femme Fatale}. {card:Forked} does not meet its trigger condition, and {card:Troll} is not trashed, because the opportunity to break subroutines was never reached.",
-        "translation": ""
+        "translation": "潜袭者打出 {card:叉穿}，并遭遇一张其可以用 {card:蛇蝎美人} 略过的 {card:巨魔}。潜袭者支付 0[c]，以 {card:蛇蝎美人} 略过该张 {card:巨魔}。{card:叉穿} 不会满足其触发条件，而 {card:巨魔} 也不会被销毁，因为从未抵达可以破解子进程的时机。"
     },
     {
         "key": "subsec_forced_encounters",
         "original": "6.5.9. Forced Encounters",
-        "translation": ""
+        "translation": "强迫遭遇"
     },
     {
         "key": "rule_forced_encounter",
         "original": "6.5.9.a. If an ability directs the Runner to encounter a piece of ice without first changing their position, resolve an Encounter Ice Phase but do not change the Runner's position, if any. After the encounter, return to the effect that caused the encounter and proceed from there. This type of encounter outside the normal progression of a run is referred to as a {term:forced encounter}.",
-        "translation": ""
+        "translation": "如果某个能力指示潜袭者在不先改变其位置的情况下遭遇一层防火墙，则结算一个遭遇防火墙阶段，但不改变潜袭者的位置（若其有位置）。遭遇结束后，回到导致该遭遇的效果，并从那里继续。这种发生在潜袭正常推进之外的遭遇，称为{term:强迫遭遇}。"
     },
     {
         "key": "rule_forced_encounter-1-example",
         "original": "If {card:Shiro} causes {card:Chrysalis} to be accessed, resolve the encounter with {card:Chrysalis} and then return to resolving subroutines on {card:Shiro}.",
-        "translation": ""
+        "translation": "如果 {card:城} 使 {card:蝶蛹} 被读取，则先结算与 {card:蝶蛹} 的遭遇，然后再回到 {card:城} 的子进程结算中。"
     },
     {
         "key": "rule_forced_encounter_during_run",
         "original": "6.5.9.b. {n}During a forced encounter,{/n} an instruction to end the run is applied to both the Encounter Ice Phase being resolved and the phase from which the additional encounter was initiated. {n}See also {ref:rule_end_encounter_outside_run}.{/n}",
-        "translation": ""
+        "translation": "{n}在强迫遭遇期间，{/n}一个终止本次潜袭的指示既适用于当前正在结算的遭遇防火墙阶段，也适用于发起该额外遭遇的那个阶段。{n}另见{ref:rule_end_encounter_outside_run}。{/n}"
     },
     {
         "key": "rule_forced_encounter_during_run-1-example",
         "original": "The Corp uses {card:The Twins} to force the Runner to encounter a piece of ice again when they pass it. If a subroutine directs the Corp to end the run during the extra encounter, both that encounter and the original Movement Phase are aborted, and the game proceeds to the Run Ends phase.",
-        "translation": ""
+        "translation": "公司使用 {card:姊妹花}，在潜袭者通过一层防火墙时强迫其再次遭遇该防火墙。如果一个子进程在这次额外遭遇中指示公司终止本次潜袭，则该场额外遭遇与原本的移动阶段都会被中止，而游戏进入潜袭结束阶段。"
     },
     {
         "key": "rule_forced_encounter_end",
         "original": "6.5.9.c. An instruction that creates a forced encounter is not finished resolving until the encounter is complete.",
-        "translation": ""
+        "translation": "创建一次强迫遭遇的指示，要到该遭遇完成后才算结算完毕。"
     },
     {
         "key": "rule_move_during_forced",
         "original": "6.5.9.d. During a forced encounter, if an ability moves the Runner or directs the Runner to approach a piece of ice, that movement resolves and changes the parameters of the underlying run normally, but does not end or interfere with the forced encounter.",
-        "translation": ""
+        "translation": "在强迫遭遇期间，如果某个能力转移潜袭者，或指示潜袭者接驳一层防火墙，则该移动会照常结算，并改变底层潜袭的参数，但不会结束或干扰这场强迫遭遇。"
     },
     {
         "key": "sec_movement_phase",
         "original": "6.6. Movement",
-        "translation": ""
+        "translation": "移动"
     },
     {
         "key": "rule_movement_phase",
         "original": "6.6.1. The {term:movement phase} handles the progression of the run between pieces of ice and after the innermost piece of ice, up to the point when the Runner approaches the attacked server.",
-        "translation": ""
+        "translation": "{term:移动阶段}处理潜袭在各层防火墙之间，以及在最内层防火墙之后的推进，直到潜袭者接驳被攻击的服务器为止。"
     },
     {
         "key": "rule_pass_ice",
         "original": "6.6.2. If the Movement Phase was reached from the Approach Ice Phase or the Encounter Ice Phase, the Runner passes the ice in their position.",
-        "translation": ""
+        "translation": "如果移动阶段是从接驳防火墙阶段或遭遇防火墙阶段进入的，则潜袭者通过其所在位置上的防火墙。"
     },
     {
         "key": "rule_jack_out_movement_phase",
         "original": "6.6.3. During each Movement Phase, the Runner has the opportunity to jack out. See {ref:rule_jacking_out}.",
-        "translation": ""
+        "translation": "在每个移动阶段中，潜袭者都有机会退出潜袭。见{ref:rule_jacking_out}。"
     },
     {
         "key": "rule_runner_continues",
         "original": "6.6.4. If the Runner declines to jack out, their position moves to the next inward position if there is one.",
-        "translation": ""
+        "translation": "如果潜袭者选择不退出潜袭，则其位置会移向下一个更内侧的位置（若存在）。"
     },
     {
         "key": "rule_runner_approach_new_position",
         "original": "6.6.5. If the Runner moves to a new position, the run continues from the Movement Phase to the Approach Ice Phase, {ref:sec_approach_ice_phase}. The Runner will approach the piece of ice in their new position.",
-        "translation": ""
+        "translation": "如果潜袭者移动到了一个新位置，则潜袭会从移动阶段继续进入接驳防火墙阶段，见{ref:sec_approach_ice_phase}。潜袭者会接驳其新位置上的那层防火墙。"
     },
     {
         "key": "rule_approach_server",
         "original": "6.6.6. If the Runner does not jack out or return to the Approach Ice Phase, they approach the server. This has no inherent effects, but is referred to by some card abilities. After the Runner approaches the server, the run continues to the Success Phase, {ref:sec_success_phase}.",
-        "translation": ""
+        "translation": "如果潜袭者既不退出潜袭，也不回到接驳防火墙阶段，则其会接驳该服务器。这本身没有固有效果，但某些卡牌能力会提及它。在潜袭者接驳该服务器后，潜袭继续进入成功阶段，见{ref:sec_success_phase}。"
     },
     {
         "key": "sec_success_phase",
         "original": "6.7. Success",
-        "translation": ""
+        "translation": "成功"
     },
     {
         "key": "rule_success_phase",
         "original": "6.7.1. The {term:success phase} declares the run successful and allows the Runner to breach the attacked server.",
-        "translation": ""
+        "translation": "{term:成功阶段}会宣告该次潜袭成功，并允许潜袭者侵入被攻击的服务器。"
     },
     {
         "key": "rule_successful_run",
         "original": "6.7.2. A run during which the runner breaks through the Corp's defenses and reaches the server itself is declared a {term:successful run}. This label is frequently referred to by card abilities.",
-        "translation": ""
+        "translation": "如果一次潜袭中，潜袭者突破了公司的防线并抵达服务器本身，则该次潜袭被宣告为{term:成功的潜袭}。这个标签经常被卡牌能力提及。"
     },
     {
         "key": "rule_declaring_successful_run",
         "original": "6.7.3. Declaring a run to be successful is not the same as the Success Phase beginning. Accordingly, abilities that have trigger conditions related to a successful run are not subject to {ref:rule_reaction_window_closing_timing_structure}.",
-        "translation": ""
+        "translation": "宣告一次潜袭成功，并不等同于成功阶段开始。因此，触发条件与成功的潜袭有关的能力不受{ref:rule_reaction_window_closing_timing_structure}约束。"
     },
     {
         "key": "rule_if_successful",
         "original": "6.7.4. Many abilities that initiate a run contain a conditional ability with the trigger condition \"If successful\". This means, \"After the run created this way becomes successful\".",
-        "translation": ""
+        "translation": "许多发起潜袭的能力都包含一个触发条件为“If successful”的条件能力。其含义是：“在以此方式创建的潜袭成功之后”。"
     },
     {
         "key": "rule_if_successful_tied_to_server",
         "original": "6.7.4.a. If an effect that initiates a run specifies that that run must be made against a specific server or servers, any \"If successful\" abilities associated with that effect are tied to that server or servers. If the attacked server has changed since the run was initiated, and no longer is a server that could have been chosen for this run, the \"If successful\" abilities do not meet their trigger conditions.",
-        "translation": ""
+        "translation": "如果一个发起潜袭的效果指明该次潜袭必须针对特定的一台或多台服务器进行，则与该效果相关联的任何“If successful”能力都与该一台或多台服务器绑定。如果被攻击的服务器自潜袭发起以来已经发生变化，并且不再是本次潜袭原本可选择的服务器之一，则这些“If successful”能力不会满足其触发条件。"
     },
     {
         "key": "rule_if_successful_tied_to_server-1-example",
         "original": "The Runner plays {card:Because I Can}, which directs them to make a run on a remote server. If an effect moves the run to a central server, the \"If successful\" effect on {card:Because I Can} will not apply. However, if the run is moved instead to another remote server, the \"If successful\" effect is still applied, since {card:Because I Can} would have allowed a run on the second remote server to begin with.",
-        "translation": ""
+        "translation": "潜袭者打出 {card:只因我能}，它指示其对一台远程服务器进行潜袭。如果某个效果将该次潜袭转移到一台中央服务器，则 {card:只因我能} 的“If successful”效果将不适用。然而，如果该次潜袭改为转移到另一台远程服务器，则该“If successful”效果仍然适用，因为 {card:只因我能} 原本就允许对第二台远程服务器发起潜袭。"
     },
     {
         "key": "rule_if_successful_lingering_effect",
         "original": "6.7.4.b. \"If successful\" abilities frequently create lingering effects (see {ref:sec_lingering_effects}) that modify the procedure for accessing cards or replace breaching the attacked server with another effect entirely. These effects apply to the breach permitted by the rules for this run (see {ref:rule_breach_link}), and they expire when the run is complete.",
-        "translation": ""
+        "translation": "“If successful”能力经常会创建残留效果（见{ref:sec_lingering_effects}），以修改读取卡牌的流程，或以其他效果完全替代对被攻击服务器的侵入。这些效果适用于本次潜袭规则所允许的那次侵入（见{ref:rule_breach_link}），并在该次潜袭完成时失效。"
     },
     {
         "key": "rule_if_successful_ability_optional",
         "original": "6.7.4.c. If an \"If successful\" effect gives the Runner an effect they can optionally carry out instead of breaching, that decision is made at the time the breach would begin, in {ref:step_breach}.",
-        "translation": ""
+        "translation": "如果某个“If successful”效果赋予潜袭者一个其可以选择执行、以代替侵入的效果，则该决定会在侵入本应开始时作出，即在{ref:step_breach}。"
     },
     {
         "key": "rule_if_successful_ability_optional-1-example",
         "original": "The Runner plays {card:Account Siphon} while {card:Ash 2X3ZB9CY} is installed in the root of HQ, and the run is successful. The Runner can wait until after the trace from {card:Ash 2X3ZB9CY} completes before deciding to access cards normally or force the Corp to lose credits.",
-        "translation": ""
+        "translation": "潜袭者在总部根目录中安装有 {card:尘埃2X3ZB9CY} 时打出 {card:账户虹吸}，且该次潜袭成功。潜袭者可以等到 {card:尘埃2X3ZB9CY} 的追踪结算完毕后，再决定是照常读取卡牌，还是改为令公司失去信用点。"
     },
     {
         "key": "rule_breach_link",
         "original": "6.7.5. When the Runner breaches the server, they follow the procedures detailed in {ref:chpt_access_breach}.",
-        "translation": ""
+        "translation": "当潜袭者侵入该服务器时，其遵循{ref:chpt_access_breach}中详述的流程。"
     },
     {
         "key": "sec_run_ends_phase",
         "original": "6.8. Run Ends Phase",
-        "translation": ""
+        "translation": "潜袭结束阶段"
     },
     {
         "key": "rule_run_ends_phase",
         "original": "6.8.1. The {term:run ends phase} formalizes the end of the run and prepares the game to return to the timing structure from which the run was initiated.",
-        "translation": ""
+        "translation": "{term:潜袭结束阶段}将潜袭的结束形式化，并为游戏返回到发起该次潜袭的时序作准备。"
     },
     {
         "key": "rule_run_ends_process_priority_windows",
         "original": "6.8.2. At the beginning of the Run Ends Phase, the game processes each priority window that was open when the run was ended. This is done according to the following procedure:",
-        "translation": ""
+        "translation": "在潜袭结束阶段开始时，游戏会处理潜袭被终止时处于开启状态的每个优先权窗口。处理方式如下："
     },
     {
         "key": "rule_run_ends_close_paws",
         "original": "6.8.2.a. If a paid ability window was open when the run was ended, the window closes. No player can trigger further paid abilities or resolve other options the window would normally allow (such as rezzing cards).",
-        "translation": ""
+        "translation": "如果潜袭被终止时有一个付费能力窗口处于开启状态，则该窗口关闭。任何玩家都不能再触发更多付费能力，也不能结算该窗口通常会允许的其他选项（例如激活卡牌）。"
     },
     {
         "key": "rule_run_ends_close_paws-1-example",
         "original": "The Corp spends a counter from a scored {card:Nisei MK II} to end the run. Once this happens, the Runner does not have an opportunity to use their bad publicity credits from this run to pay for using {card:Self-modifying Code}.",
-        "translation": ""
+        "translation": "公司从一张已计分的 {card:次代II型} 上花费一个指示物来终止本次潜袭。一旦如此，潜袭者便没有机会使用本次潜袭的负面宣传资金来支付使用 {card:自修正代码} 的费用。"
     },
     {
         "key": "rule_run_ends_close_reaction_window",
         "original": "6.8.2.b. If the run was ended during a reaction window opened due to a phase beginning, the reaction window closes, as per {ref:rule_reaction_window_closing_timing_structure}. No other pending abilities are resolved.",
-        "translation": ""
+        "translation": "如果潜袭是在某个因某阶段开始而开启的响应窗口中被终止的，则该响应窗口依照{ref:rule_reaction_window_closing_timing_structure}关闭。不会有其他待结算能力结算。"
     },
     {
         "key": "rule_run_ends_close_reaction_window-1-example",
         "original": "The Runner uses the ability on {card:Security Nexus} during a reaction window at the beginning of the Encounter Ice Phase. The trace is successful, so the ability ends the run. If {card:Tollbooth}'s ability is also pending in this reaction window, it will not be resolved, since the encounter has ended.",
-        "translation": ""
+        "translation": "潜袭者在遭遇防火墙阶段开始时的一个响应窗口中使用 {card:安全联结点} 上的能力。追踪成功，因此该能力终止本次潜袭。如果 {card:收费站} 的能力也在该响应窗口中处于待结算状态，则其不会结算，因为该次遭遇已经结束。"
     },
     {
         "key": "rule_run_ends_other_priority_windows",
         "original": "6.8.2.c. Any other open priority window is completed normally, {n}except that new timing structures (including a breach that was delayed according to {ref:rule_consecutive_breaches}) cannot be initiated{/n}. If more than one priority window needs to be completed this way, they are resolved in the usual order described in {ref:rule_resolve_ability}.",
-        "translation": ""
+        "translation": "任何其他已开启的优先权窗口都会照常完成，{n}但不能发起新的时序（包括依照{ref:rule_consecutive_breaches}被延后的侵入）{/n}。如果需要以这种方式完成不止一个优先权窗口，则它们会按照{ref:rule_resolve_ability}所述的通常顺序来结算。"
     },
     {
         "key": "rule_run_ends_other_priority_windows-1-example",
         "original": "The run is ended during the reaction window following {ref:step_approach_server}, while {card:Formicary}'s ability is still pending. The Corp can rez {card:Formicary} and move it to the approached server, but the Runner's position cannot be moved and an encounter cannot be initiated.",
-        "translation": ""
+        "translation": "该次潜袭在{ref:step_approach_server}之后的响应窗口中被终止，而 {card:蚁冢} 的能力仍处于待结算状态。公司可以激活 {card:蚁冢} 并将其转移到被接驳的服务器，但潜袭者的位置不能被移动，也不能发起一次遭遇。"
     },
     {
         "key": "rule_run_ends_lose_bad_pub_credits",
         "original": "6.8.3. During the Run Ends Phase, if {n}there are any credits remaining in the Runner's bad publicity fund, those credits are returned to the bank.{/n}",
-        "translation": ""
+        "translation": "在潜袭结束阶段中，如果{n}潜袭者的负面宣传资金池中仍有任何信用点，则这些信用点会返回银行。{/n}"
     },
     {
         "key": "rule_unsuccessful_run",
         "original": "6.8.4. As part of the Run Ends Phase, the game determines whether the run should be declared an {term:unsuccessful run}. This is a label applied to runs in which the Runner failed to reach the server they attacked, and is referred to by card abilities. The run is declared unsuccessful if neither of the following conditions have been met:",
-        "translation": ""
+        "translation": "作为潜袭结束阶段的一部分，游戏会确定该次潜袭是否应被宣告为{term:失败的潜袭}。这个标签适用于潜袭者未能抵达其所攻击服务器的潜袭，并会被卡牌能力提及。如果以下条件都未满足，则该次潜袭被宣告为失败："
     },
     {
         "key": "rule_not_unsuccessful_when_reached_success_phase",
         "original": "6.8.4.a. If the run reached {ref:rule_sec_run_success_phase}, the Success Phase, it is not declared unsuccessful. This is the case regardless of whether the run was actually declared successful.",
-        "translation": ""
+        "translation": "如果该次潜袭抵达了{ref:rule_sec_run_success_phase}，即成功阶段，则它不会被宣告为失败。无论该次潜袭实际上是否被宣告为成功，结论都如此。"
     },
     {
         "key": "rule_not_unsuccessful_when_reached_success_phase-1-example",
         "original": "The Runner reaches a server with {card:Crisium Grid} rezzed. {card:Crisium Grid}'s ability stops the run from being declared successful, but the run is not declared unsuccessful either.",
-        "translation": ""
+        "translation": "潜袭者抵达一台服务器，而其上有一张已激活的 {card:危海网阵}。{card:危海网阵} 的能力阻止该次潜袭被宣告为成功，但该次潜袭也不会被宣告为失败。"
     },
     {
         "key": "rule_server_cease_to_exist_unsuccesful_exception",
         "original": "6.8.4.b. If the attacked server has ceased to exist, the run is not declared unsuccessful. See {ref:rule_server_ceases_to_exist}.",
-        "translation": ""
+        "translation": "如果被攻击的服务器已不再存在，则该次潜袭不会被宣告为失败。见{ref:rule_server_ceases_to_exist}。"
     },
     {
         "key": "rule_run_ends_condition",
         "original": "6.8.5. Conditions related to a run ending are not met as soon as an \"end the run\" effect resolves or at the beginning of the Run Ends Phase. Instead, these conditions are met at {ref:step_run_complete}, when the entire run timing structure is complete. Similarly, static abilities that apply during a run and durations that apply until the end of a run expire at {ref:step_run_complete}.",
-        "translation": ""
+        "translation": "与潜袭结束有关的条件，不会在一个“终止本次潜袭”效果结算后立即满足，也不会在潜袭结束阶段开始时满足。相反，这些条件会在整个潜袭时序完成的{ref:step_run_complete}时满足。类似地，适用于潜袭期间的静止能力，以及持续到潜袭结束的持续时间，都会在{ref:step_run_complete}失效。"
     },
     {
         "key": "rule_run_ends_condition-1-example",
         "original": "The Runner plays {card:The Noble Path} to make a run in which they prevent all damage. During the run, the subroutine on Chum resolves, and then the Runner encounters {card:Wall of Static} and does not break its subroutine. When the \"end the run\" ability resolves, the encounter also ends, so the trigger condition on {card:Chum}'s delayed conditional ability is met. The ability will resolve and fail to damage the Runner during the Run Ends Phase, because {card:The Noble Path}'s effect still applies. Similarly, {card:Georgia Emelyov}'s first ability meets its trigger condition at {ref:step_run_declared_unsuccessful}, which is still before the run is over, so the damage will be prevented.",
-        "translation": ""
+        "translation": "潜袭者打出 {card:圣道}，进行一次其中其防止所有伤害的潜袭。在该次潜袭中，Chum 的子进程结算，然后潜袭者遭遇 {card:静电墙} 且没有破解其子进程。当“终止本次潜袭”的能力结算时，该次遭遇也结束，因此 {card:诱饵} 的延迟条件能力的触发条件得到满足。该能力会在潜袭结束阶段中结算，但无法对潜袭者造成伤害，因为 {card:圣道} 的效果仍然适用。类似地，{card:乔治娅·叶梅廖夫} 的第一个能力会在{ref:step_run_declared_unsuccessful}时满足其触发条件，这仍然发生在潜袭结束之前，因此该伤害会被防止。"
     },
     {
         "key": "rule_run_ends_condition-2-example",
         "original": "The Runner plays {card:The Noble Path} to make a run in which they prevent all damage. The run is successful but the Runner takes a tag during the run. When the run ends, {card:Dedicated Response Team}'s ability meets its trigger condition at the same time that {card:The Noble Path}'s effect expires, so the Runner will suffer 2 meat damage.",
-        "translation": ""
+        "translation": "潜袭者打出 {card:圣道}，进行一次其中其防止所有伤害的潜袭。该次潜袭成功了，但潜袭者在潜袭过程中拿取了一枚锁定标记。当潜袭结束时，{card:专属反应组} 的能力满足其触发条件的同时，{card:圣道} 的效果失效，因此潜袭者将受到 2 点肢体伤害。"
     },
     {
         "key": "sec_steps_of_a_run",
         "original": "6.9. Steps of a Run",
-        "translation": ""
+        "translation": "潜袭步骤"
     },
     {
         "key": "rule_sec_run_initiation_phase",
         "original": "6.9.1. Initiation Phase",
-        "translation": ""
+        "translation": "发起阶段"
     },
     {
         "key": "step_initiation_announce",
         "original": "6.9.1.a. The Runner announces the attacked server.",
-        "translation": ""
+        "translation": "潜袭者宣告被攻击的服务器。"
     },
     {
         "key": "step_initiation_bad_publicity",
         "original": "6.9.1.b. The Runner {n}adds 1[c] from the bank to their bad publicity fund{/n} for each bad publicity the Corp has.",
-        "translation": ""
+        "translation": "公司每有 1 枚负面宣传标记，潜袭者便{n}从银行中向其负面宣传资金池加入 1[c]{/n}。"
     },
     {
         "key": "step_initiation_formal_begin",
         "original": "6.9.1.c. The run formally begins. Conditions related to the run beginning or initiating are met.",
-        "translation": ""
+        "translation": "该次潜袭正式开始。与潜袭开始或发起有关的条件得到满足。"
     },
     {
         "key": "step_runner_position",
         "original": "6.9.1.d. The Runner's position is set corresponding to the outermost ice protecting the attacked server, if any.",
-        "translation": ""
+        "translation": "潜袭者的位置被设为与保护被攻击服务器的最外层防火墙相对应的位置（若存在该防火墙）。"
     },
     {
         "key": "step_initiation_paw",
         "original": "6.9.1.e. A paid ability window occurs, in which players may use paid abilities and the Corp may rez non-ice cards. (P) (R)",
-        "translation": ""
+        "translation": "发生一个付费能力窗口，玩家可以使用付费能力，公司可以激活非防火墙卡牌。(P) (R)"
     },
     {
         "key": "step_initiation_complete",
         "original": "6.9.1.f. The Initiation Phase is complete. If the Runner has a position corresponding to a piece of ice, proceed to {ref:rule_sec_run_approach_ice_phase}, Approach Ice Phase, approaching the piece of ice corresponding to their position. If the Runner has no position or if there is no ice in their position, proceed to {ref:rule_sec_run_movement_phase}, Movement Phase.",
-        "translation": ""
+        "translation": "发起阶段完成。如果潜袭者具有与一层防火墙对应的位置，则进入{ref:rule_sec_run_approach_ice_phase}，即接驳防火墙阶段，并接驳与其位置对应的那层防火墙。如果潜袭者没有位置，或其位置上没有防火墙，则进入{ref:rule_sec_run_movement_phase}，即移动阶段。"
     },
     {
         "key": "rule_sec_run_approach_ice_phase",
         "original": "6.9.2. Approach Ice Phase",
-        "translation": ""
+        "translation": "接驳防火墙阶段"
     },
     {
         "key": "step_approach_begins",
         "original": "6.9.2.a. The approach begins. Conditions related to the Runner approaching this ice are met.",
-        "translation": ""
+        "translation": "接驳开始。与潜袭者接驳本防火墙有关的条件得到满足。"
     },
     {
         "key": "step_approach_paw",
         "original": "6.9.2.b. A paid ability window occurs, in which players may use paid abilities and the Corp may rez non-ice cards. Additionally, the Corp can rez the approached piece of ice. (P) (R)",
-        "translation": ""
+        "translation": "发生一个付费能力窗口，玩家可以使用付费能力，公司可以激活非防火墙卡牌。此外，公司可以激活正在被接驳的那层防火墙。(P) (R)"
     },
     {
         "key": "step_approach_complete",
         "original": "6.9.2.c. The Approach Ice Phase is complete. If the approached piece of ice is rezzed, continue to {ref:rule_sec_run_encounter_ice_phase}, Encounter Ice Phase. Otherwise, proceed to {ref:rule_sec_run_movement_phase}, Movement Phase.",
-        "translation": ""
+        "translation": "接驳防火墙阶段完成。如果正在被接驳的那层防火墙已激活，则继续进入{ref:rule_sec_run_encounter_ice_phase}，即遭遇防火墙阶段。否则，进入{ref:rule_sec_run_movement_phase}，即移动阶段。"
     },
     {
         "key": "rule_sec_run_encounter_ice_phase",
         "original": "6.9.3. Encounter Ice Phase",
-        "translation": ""
+        "translation": "遭遇防火墙阶段"
     },
     {
         "key": "step_encounter_begins",
         "original": "6.9.3.a. The encounter begins. Conditions related to the Runner encountering this ice are met.",
-        "translation": ""
+        "translation": "遭遇开始。与潜袭者遭遇本防火墙有关的条件得到满足。"
     },
     {
         "key": "step_encounter_paw",
         "original": "6.9.3.b. A paid ability window occurs, in which players may only use paid abilities. Subroutines on the encountered ice can be broken during this window. (P)",
-        "translation": ""
+        "translation": "发生一个付费能力窗口，玩家只能使用付费能力。被遭遇之防火墙上的子进程可以在该窗口中被破解。(P)"
     },
     {
         "key": "step_resolve_subroutine",
         "original": "6.9.3.c. If there are unbroken subroutines that have not yet resolved this encounter, the Corp resolves the next such subroutine in order. Otherwise, skip to (e).",
-        "translation": ""
+        "translation": "如果仍有未破解且在本次遭遇中尚未结算的子进程，则公司按顺序结算下一个此类子进程。否则，跳到（e）。"
     },
     {
         "key": "step_resolve_subroutine_loop",
         "original": "6.9.3.d. Return to (c).",
-        "translation": ""
+        "translation": "返回（c）。"
     },
     {
         "key": "step_encounter_complete",
         "original": "6.9.3.e. The Encounter Ice Phase is complete. Continue to {ref:rule_sec_run_movement_phase}, Movement Phase.",
-        "translation": ""
+        "translation": "遭遇防火墙阶段完成。继续进入{ref:rule_sec_run_movement_phase}，即移动阶段。"
     },
     {
         "key": "rule_sec_run_movement_phase",
         "original": "6.9.4. Movement Phase",
-        "translation": ""
+        "translation": "移动阶段"
     },
     {
         "key": "step_pass_ice",
         "original": "6.9.4.a. If the Runner's position corresponds to a piece of ice, the Runner passes that ice. Conditions related to passing ice are met. If there are no positions more inward than the ice just passed, conditions related to passing all of the ice protecting a server are also met.",
-        "translation": ""
+        "translation": "如果潜袭者的位置对应于一层防火墙，则潜袭者通过该防火墙。与通过防火墙有关的条件得到满足。如果刚被通过的这层防火墙内侧已没有更多位置，则与通过保护一台服务器之所有防火墙有关的条件也会得到满足。"
     },
     {
         "key": "step_before_jack_out_paw",
         "original": "6.9.4.b. A paid ability window occurs, in which players may only use paid abilities. (P)",
-        "translation": ""
+        "translation": "发生一个付费能力窗口，玩家只能使用付费能力。(P)"
     },
     {
         "key": "step_jack_out_choice",
         "original": "6.9.4.c. The Runner may choose to jack out, proceeding to {ref:rule_sec_run_run_ends_phase}, Run Ends Phase. If the Runner does not, continue to (d).",
-        "translation": ""
+        "translation": "潜袭者可以选择退出潜袭，并进入{ref:rule_sec_run_run_ends_phase}，即潜袭结束阶段。如果潜袭者不如此做，则继续到（d）。"
     },
     {
         "key": "step_move_position",
         "original": "6.9.4.d. The Runner's position moves to the next position inward, if any.",
-        "translation": ""
+        "translation": "潜袭者的位置移向下一个更内侧的位置（若存在）。"
     },
     {
         "key": "step_after_jack_out_paw",
         "original": "6.9.4.e. A paid ability window occurs, in which players may use paid abilities and the Corp may rez non-ice cards. (P) (R)",
-        "translation": ""
+        "translation": "发生一个付费能力窗口，玩家可以使用付费能力，公司可以激活非防火墙卡牌。(P) (R)"
     },
     {
         "key": "step_approach_new_ice",
         "original": "6.9.4.f. If the Runner moved to a new position, return to {ref:rule_sec_run_approach_ice_phase}, Approach Ice Phase, approaching the piece of ice in their new position. If not, continue to (g).",
-        "translation": ""
+        "translation": "如果潜袭者移动到了一个新位置，则返回{ref:rule_sec_run_approach_ice_phase}，即接驳防火墙阶段，并接驳其新位置上的那层防火墙。如果没有，则继续到（g）。"
     },
     {
         "key": "step_approach_server",
         "original": "6.9.4.g. The Runner approaches the attacked server. Conditions related to the Runner approaching a server are met.",
-        "translation": ""
+        "translation": "潜袭者接驳被攻击的服务器。与潜袭者接驳一台服务器有关的条件得到满足。"
     },
     {
         "key": "step_movement_complete",
         "original": "6.9.4.h. The Movement Phase is complete. Continue to {ref:rule_sec_run_success_phase}, Success Phase.",
-        "translation": ""
+        "translation": "移动阶段完成。继续进入{ref:rule_sec_run_success_phase}，即成功阶段。"
     },
     {
         "key": "rule_sec_run_success_phase",
         "original": "6.9.5. Success Phase",
-        "translation": ""
+        "translation": "成功阶段"
     },
     {
         "key": "step_run_declared_successful",
         "original": "6.9.5.a. The run is declared successful. Conditions related to a successful run are met.",
-        "translation": ""
+        "translation": "该次潜袭被宣告为成功。与成功的潜袭有关的条件得到满足。"
     },
     {
         "key": "step_breach",
         "original": "6.9.5.b. The Runner breaches the attacked server.",
-        "translation": ""
+        "translation": "潜袭者侵入被攻击的服务器。"
     },
     {
         "key": "step_success_complete",
         "original": "6.9.5.c. The Success Phase is complete. Continue to {ref:rule_sec_run_run_ends_phase}, Run Ends Phase.",
-        "translation": ""
+        "translation": "成功阶段完成。继续进入{ref:rule_sec_run_run_ends_phase}，即潜袭结束阶段。"
     },
     {
         "key": "rule_sec_run_run_ends_phase",
         "original": "6.9.6. Run Ends Phase",
-        "translation": ""
+        "translation": "潜袭结束阶段"
     },
     {
         "key": "step_open_priority_windows_closed",
         "original": "6.9.6.a. Any priority windows that were open when the run moved to this phase are completed or closed as described in {ref:rule_run_ends_process_priority_windows}.",
-        "translation": ""
+        "translation": "当潜袭进入本阶段时，任何仍处于开启状态的优先权窗口都会依照{ref:rule_run_ends_process_priority_windows}所述完成或关闭。"
     },
     {
         "key": "step_run_ends_bad_publicity",
         "original": "6.9.6.b. The Runner {n}returns any remaining credits in the bad publicity fund to the bank.{/n}",
-        "translation": ""
+        "translation": "潜袭者会{n}将负面宣传资金池中任何剩余的信用点返回银行。{/n}"
     },
     {
         "key": "step_run_declared_unsuccessful",
         "original": "6.9.6.c. If the Success Phase was not reached during this run and the attacked server still exists, the run becomes unsuccessful.",
-        "translation": ""
+        "translation": "如果本次潜袭中未曾抵达成功阶段，且被攻击的服务器仍然存在，则该次潜袭变为失败。"
     },
     {
         "key": "step_run_complete",
         "original": "6.9.6.d. The Run Ends Phase and the run as a whole are both complete.",
-        "translation": ""
+        "translation": "潜袭结束阶段与该次潜袭整体都已完成。"
     }
 ]
