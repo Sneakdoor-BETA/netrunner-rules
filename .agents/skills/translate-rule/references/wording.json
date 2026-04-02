@@ -1,0 +1,2726 @@
+[
+    {
+        "en": "ability",
+        "translation": "能力"
+    },
+    {
+        "en": "ability flag",
+        "translation": "能力标记"
+    },
+    {
+        "en": "Academic",
+        "translation": "学术"
+    },
+    {
+        "en": "access",
+        "translation": "读取"
+    },
+    {
+        "en": "according to",
+        "translation": "依照"
+    },
+    {
+        "en": "act",
+        "translation": "行为"
+    },
+    {
+        "en": "act on",
+        "translation": "作用于"
+    },
+    {
+        "en": "action",
+        "translation": "行动"
+    },
+    {
+        "en": "action phase",
+        "translation": "行动阶段"
+    },
+    {
+        "en": "action window",
+        "translation": "行动窗口"
+    },
+    {
+        "en": "active",
+        "translation": "活动的，生效的"
+    },
+    {
+        "en": "active player",
+        "translation": "主动玩家"
+    },
+    {
+        "en": "Adam",
+        "translation": "亚当"
+    },
+    {
+        "en": "add",
+        "translation": "加入"
+    },
+    {
+        "en": "additional",
+        "translation": "额外"
+    },
+    {
+        "en": "additional cost",
+        "translation": "额外费用"
+    },
+    {
+        "en": "advance",
+        "translation": "推进"
+    },
+    {
+        "en": "advancement",
+        "translation": "推进"
+    },
+    {
+        "en": "advancement counter",
+        "translation": "推进指示物"
+    },
+    {
+        "en": "advancement requirement",
+        "translation": "推进需求"
+    },
+    {
+        "en": "Advertisement",
+        "translation": "广告"
+    },
+    {
+        "en": "affect",
+        "translation": "对……造成影响"
+    },
+    {
+        "en": "agenda",
+        "translation": "议案"
+    },
+    {
+        "en": "agenda counter",
+        "translation": "议案指示物"
+    },
+    {
+        "en": "agenda point",
+        "translation": "议案分数"
+    },
+    {
+        "en": "AI",
+        "translation": "智能模块"
+    },
+    {
+        "en": "Alliance",
+        "translation": "联盟"
+    },
+    {
+        "en": "allotted",
+        "translation": "起始"
+    },
+    {
+        "en": "allow",
+        "translation": "使得，使得……能够"
+    },
+    {
+        "en": "also",
+        "translation": "也"
+    },
+    {
+        "en": "always",
+        "translation": "总是"
+    },
+    {
+        "en": "Ambush",
+        "translation": "伏击"
+    },
+    {
+        "en": "amount of damage",
+        "translation": "伤害量"
+    },
+    {
+        "en": "Anarch",
+        "translation": "反叛者"
+    },
+    {
+        "en": "and",
+        "translation": "翻译时根据上下文选择：连接名词用“与”；连接动词用“并”；连接有先后的动词用“且”；连接触发条件用“及”；通常不用“和”"
+    },
+    {
+        "en": "android: netrunner",
+        "translation": "安卓纪元：矩阵潜袭"
+    },
+    {
+        "en": "announce",
+        "translation": "宣告"
+    },
+    {
+        "en": "another",
+        "translation": "另、另一、另一个"
+    },
+    {
+        "en": "another server",
+        "translation": "另一台服务器"
+    },
+    {
+        "en": "AP",
+        "translation": "杀伤"
+    },
+    {
+        "en": "Apex",
+        "translation": "尖峰"
+    },
+    {
+        "en": "applicable",
+        "translation": "适用的"
+    },
+    {
+        "en": "apply",
+        "translation": "有效，适用，使用，应用于，作用于"
+    },
+    {
+        "en": "approach",
+        "translation": "接驳"
+    },
+    {
+        "en": "approach ice phase",
+        "translation": "接驳防火墙阶段"
+    },
+    {
+        "en": "appropriate",
+        "translation": "符合要求的"
+    },
+    {
+        "en": "Archives",
+        "translation": "档案库"
+    },
+    {
+        "en": "arrange",
+        "translation": "排列"
+    },
+    {
+        "en": "as described",
+        "translation": "依照……所述"
+    },
+    {
+        "en": "as if",
+        "translation": "视同"
+    },
+    {
+        "en": "as many as",
+        "translation": "与……相等"
+    },
+    {
+        "en": "Assassination",
+        "translation": "刺杀"
+    },
+    {
+        "en": "asset",
+        "translation": "资产"
+    },
+    {
+        "en": "associated",
+        "translation": "相关的，关联的"
+    },
+    {
+        "en": "at a time",
+        "translation": "同时"
+    },
+    {
+        "en": "at any given time",
+        "translation": "任何时候，在任何时间"
+    },
+    {
+        "en": "at any time",
+        "translation": "在任意时间"
+    },
+    {
+        "en": "at least",
+        "translation": "至少"
+    },
+    {
+        "en": "at this time",
+        "translation": "此时"
+    },
+    {
+        "en": "attack",
+        "translation": "攻击"
+    },
+    {
+        "en": "attacked server",
+        "translation": "被攻击的服务器"
+    },
+    {
+        "en": "attribute",
+        "translation": "属性"
+    },
+    {
+        "en": "available",
+        "translation": "可用的"
+    },
+    {
+        "en": "avoid",
+        "translation": "避免"
+    },
+    {
+        "en": "bad publicity",
+        "translation": "负面声誉标记"
+    },
+    {
+        "en": "bad publicity counter",
+        "translation": "负面声誉指示物"
+    },
+    {
+        "en": "bank",
+        "translation": "银行"
+    },
+    {
+        "en": "barrier",
+        "translation": "屏障"
+    },
+    {
+        "en": "base link",
+        "translation": "基础中转"
+    },
+    {
+        "en": "base trace strength",
+        "translation": "基础追踪强度"
+    },
+    {
+        "en": "basic action",
+        "translation": "基础行动"
+    },
+    {
+        "en": "basic trash ability",
+        "translation": "基础销毁能力"
+    },
+    {
+        "en": "Beanstalk",
+        "translation": "豆茎"
+    },
+    {
+        "en": "become",
+        "translation": "变为"
+    },
+    {
+        "en": "begin",
+        "translation": "开始"
+    },
+    {
+        "en": "bid",
+        "translation": "出价"
+    },
+    {
+        "en": "Bioroid",
+        "translation": "生化人"
+    },
+    {
+        "en": "Black Ops",
+        "translation": "黑色行动"
+    },
+    {
+        "en": "both",
+        "translation": "二者"
+    },
+    {
+        "en": "bottom",
+        "translation": "底端"
+    },
+    {
+        "en": "breach",
+        "translation": "侵入"
+    },
+    {
+        "en": "break",
+        "translation": "破解"
+    },
+    {
+        "en": "bring in",
+        "translation": "引入"
+    },
+    {
+        "en": "broken",
+        "translation": "已破解"
+    },
+    {
+        "en": "build",
+        "translation": "构筑"
+    },
+    {
+        "en": "but",
+        "translation": "但、但是"
+    },
+    {
+        "en": "by default",
+        "translation": "默认情况下"
+    },
+    {
+        "en": "bypass",
+        "translation": "略过"
+    },
+    {
+        "en": "Caïssa",
+        "translation": "西洋棋"
+    },
+    {
+        "en": "can",
+        "translation": "可，可以，能够"
+    },
+    {
+        "en": "can always",
+        "translation": "永远可以，总是可以"
+    },
+    {
+        "en": "can only",
+        "translation": "只能"
+    },
+    {
+        "en": "candidate",
+        "translation": "可读取卡牌"
+    },
+    {
+        "en": "cannot",
+        "translation": "不能"
+    },
+    {
+        "en": "card",
+        "translation": "牌、卡牌"
+    },
+    {
+        "en": "card text",
+        "translation": "卡牌文本"
+    },
+    {
+        "en": "card type",
+        "translation": "卡牌类型"
+    },
+    {
+        "en": "carry out",
+        "translation": "执行"
+    },
+    {
+        "en": "case",
+        "translation": "情况"
+    },
+    {
+        "en": "Cast",
+        "translation": "节目"
+    },
+    {
+        "en": "cause",
+        "translation": "导致"
+    },
+    {
+        "en": "cease to exist",
+        "translation": "消失"
+    },
+    {
+        "en": "central server",
+        "translation": "中央服务器"
+    },
+    {
+        "en": "certain",
+        "translation": "某个，某些"
+    },
+    {
+        "en": "chain reaction",
+        "translation": "连锁反应"
+    },
+    {
+        "en": "change",
+        "translation": "改变，修改"
+    },
+    {
+        "en": "Character",
+        "translation": "人物"
+    },
+    {
+        "en": "characteristics",
+        "translation": "特征"
+    },
+    {
+        "en": "charge",
+        "translation": "充能"
+    },
+    {
+        "en": "check",
+        "translation": "检查"
+    },
+    {
+        "en": "checkpoint",
+        "translation": "检查点"
+    },
+    {
+        "en": "Chip",
+        "translation": "芯片"
+    },
+    {
+        "en": "choose",
+        "translation": "选择"
+    },
+    {
+        "en": "chosen",
+        "translation": "所选择的"
+    },
+    {
+        "en": "Clan",
+        "translation": "部落"
+    },
+    {
+        "en": "click",
+        "translation": "时点"
+    },
+    {
+        "en": "click counter",
+        "translation": "时点指示物"
+    },
+    {
+        "en": "Clone",
+        "translation": "克隆体"
+    },
+    {
+        "en": "close",
+        "translation": "关闭"
+    },
+    {
+        "en": "Cloud",
+        "translation": "云"
+    },
+    {
+        "en": "Code Gate",
+        "translation": "门禁"
+    },
+    {
+        "en": "Companion",
+        "translation": "同伴"
+    },
+    {
+        "en": "complete",
+        "translation": "结束，完成，完毕"
+    },
+    {
+        "en": "completion",
+        "translation": "完成，结束"
+    },
+    {
+        "en": "Comprehensive Rules",
+        "translation": "完整规则书"
+    },
+    {
+        "en": "concept",
+        "translation": "概念"
+    },
+    {
+        "en": "condition",
+        "translation": "条件"
+    },
+    {
+        "en": "condition counter",
+        "translation": "状态指示物"
+    },
+    {
+        "en": "conditional ability",
+        "translation": "条件能力"
+    },
+    {
+        "en": "connection",
+        "translation": "人脉"
+    },
+    {
+        "en": "consider",
+        "translation": "视作"
+    },
+    {
+        "en": "considered",
+        "translation": "视作"
+    },
+    {
+        "en": "console",
+        "translation": "控制台"
+    },
+    {
+        "en": "constrain",
+        "translation": "限制"
+    },
+    {
+        "en": "Consumer-grade",
+        "translation": "消费级"
+    },
+    {
+        "en": "contain",
+        "translation": "包含"
+    },
+    {
+        "en": "context",
+        "translation": "场景"
+    },
+    {
+        "en": "control",
+        "translation": "操控"
+    },
+    {
+        "en": "controller",
+        "translation": "操控者"
+    },
+    {
+        "en": "controller of an ability",
+        "translation": "一项能力的操控者"
+    },
+    {
+        "en": "controller of an object",
+        "translation": "一个物件的操控者"
+    },
+    {
+        "en": "conversion",
+        "translation": "转化，转化效果"
+    },
+    {
+        "en": "convert",
+        "translation": "转化"
+    },
+    {
+        "en": "core damage",
+        "translation": "核心伤害"
+    },
+    {
+        "en": "core damage counter",
+        "translation": "核心伤害指示物"
+    },
+    {
+        "en": "Corp",
+        "translation": "公司"
+    },
+    {
+        "en": "Corp's score area",
+        "translation": "公司分数区"
+    },
+    {
+        "en": "Corporation",
+        "translation": "公司"
+    },
+    {
+        "en": "correspond",
+        "translation": "对应"
+    },
+    {
+        "en": "correspond to",
+        "translation": "对应"
+    },
+    {
+        "en": "corresponding",
+        "translation": "对应的"
+    },
+    {
+        "en": "cost",
+        "translation": "费用"
+    },
+    {
+        "en": "cost condition",
+        "translation": "费用条件"
+    },
+    {
+        "en": "count",
+        "translation": "计算，清点"
+    },
+    {
+        "en": "counter",
+        "translation": "指示物"
+    },
+    {
+        "en": "create",
+        "translation": "创建，建立"
+    },
+    {
+        "en": "credit",
+        "translation": "信用点"
+    },
+    {
+        "en": "credit counter",
+        "translation": "信用点指示物"
+    },
+    {
+        "en": "credit pool",
+        "translation": "信用池"
+    },
+    {
+        "en": "Criminal",
+        "translation": "逆法者"
+    },
+    {
+        "en": "Current",
+        "translation": "局势"
+    },
+    {
+        "en": "Cybernetic",
+        "translation": "义体"
+    },
+    {
+        "en": "Cyborg",
+        "translation": "半机械人"
+    },
+    {
+        "en": "Daemon",
+        "translation": "后台"
+    },
+    {
+        "en": "damage",
+        "translation": "伤害"
+    },
+    {
+        "en": "deal",
+        "translation": "造成"
+    },
+    {
+        "en": "decide",
+        "translation": "决定"
+    },
+    {
+        "en": "deck",
+        "translation": "牌组"
+    },
+    {
+        "en": "deck size",
+        "translation": "牌组张数"
+    },
+    {
+        "en": "deckbuild",
+        "translation": "牌组构筑"
+    },
+    {
+        "en": "declaration",
+        "translation": "声明"
+    },
+    {
+        "en": "declare",
+        "translation": "声明，宣告"
+    },
+    {
+        "en": "decline",
+        "translation": "拒绝"
+    },
+    {
+        "en": "Decoder",
+        "translation": "解码模块"
+    },
+    {
+        "en": "Deep Net",
+        "translation": "深网"
+    },
+    {
+        "en": "define",
+        "translation": "决定"
+    },
+    {
+        "en": "Deflector",
+        "translation": "偏导器"
+    },
+    {
+        "en": "delayed conditional ability",
+        "translation": "延时条件能力"
+    },
+    {
+        "en": "denote",
+        "translation": "表示"
+    },
+    {
+        "en": "depend on",
+        "translation": "依赖于"
+    },
+    {
+        "en": "derez",
+        "translation": "关闭"
+    },
+    {
+        "en": "designate",
+        "translation": "指明"
+    },
+    {
+        "en": "destination",
+        "translation": "目的地"
+    },
+    {
+        "en": "Destroyer",
+        "translation": "毁灭者"
+    },
+    {
+        "en": "detail",
+        "translation": "详细描述"
+    },
+    {
+        "en": "determine",
+        "translation": "决定，确定"
+    },
+    {
+        "en": "Deva",
+        "translation": "提婆"
+    },
+    {
+        "en": "dictate",
+        "translation": "规定"
+    },
+    {
+        "en": "Digital",
+        "translation": "数字体"
+    },
+    {
+        "en": "direct",
+        "translation": "指示，要求"
+    },
+    {
+        "en": "direction",
+        "translation": "指示"
+    },
+    {
+        "en": "Directive",
+        "translation": "指令"
+    },
+    {
+        "en": "discard",
+        "translation": "弃除"
+    },
+    {
+        "en": "discard phase",
+        "translation": "弃牌阶段"
+    },
+    {
+        "en": "discard pile",
+        "translation": "弃牌堆"
+    },
+    {
+        "en": "discard step",
+        "translation": "弃牌步骤"
+    },
+    {
+        "en": "distinct",
+        "translation": "互不相同"
+    },
+    {
+        "en": "Dividends",
+        "translation": "红利"
+    },
+    {
+        "en": "Division",
+        "translation": "部门"
+    },
+    {
+        "en": "document",
+        "translation": "文档"
+    },
+    {
+        "en": "Double",
+        "translation": "双重"
+    },
+    {
+        "en": "double-sided",
+        "translation": "双面"
+    },
+    {
+        "en": "draw",
+        "translation": "抽，抽取"
+    },
+    {
+        "en": "draw phase",
+        "translation": "抽牌阶段"
+    },
+    {
+        "en": "drawing",
+        "translation": "抽取"
+    },
+    {
+        "en": "during",
+        "translation": "……中"
+    },
+    {
+        "en": "each",
+        "translation": "每"
+    },
+    {
+        "en": "effect",
+        "translation": "效果"
+    },
+    {
+        "en": "either",
+        "translation": "任一"
+    },
+    {
+        "en": "eligible",
+        "translation": "合法的"
+    },
+    {
+        "en": "empty",
+        "translation": "清空"
+    },
+    {
+        "en": "encounter",
+        "translation": "遭遇"
+    },
+    {
+        "en": "encounter ice phase",
+        "translation": "遭遇防火墙阶段"
+    },
+    {
+        "en": "encounter phase",
+        "translation": "遭遇防火墙阶段"
+    },
+    {
+        "en": "encountered ice",
+        "translation": "被遭遇防火墙"
+    },
+    {
+        "en": "end",
+        "translation": "结束，终止"
+    },
+    {
+        "en": "end the run",
+        "translation": "终止本次潜袭"
+    },
+    {
+        "en": "Enforcer",
+        "translation": "执法者"
+    },
+    {
+        "en": "enter",
+        "translation": "进入"
+    },
+    {
+        "en": "event",
+        "translation": "事件"
+    },
+    {
+        "en": "examine",
+        "translation": "查看"
+    },
+    {
+        "en": "example",
+        "translation": "示例"
+    },
+    {
+        "en": "exceed",
+        "translation": "超过"
+    },
+    {
+        "en": "Executive",
+        "translation": "主管"
+    },
+    {
+        "en": "Expansion",
+        "translation": "扩张"
+    },
+    {
+        "en": "expected effect",
+        "translation": "预期效果"
+    },
+    {
+        "en": "Expendable",
+        "translation": "可消耗"
+    },
+    {
+        "en": "expire",
+        "translation": "结束"
+    },
+    {
+        "en": "explicit",
+        "translation": "明确"
+    },
+    {
+        "en": "expose",
+        "translation": "揭示"
+    },
+    {
+        "en": "extra card",
+        "translation": "额外卡牌"
+    },
+    {
+        "en": "facedown",
+        "translation": "牌面朝下"
+    },
+    {
+        "en": "faceup",
+        "translation": "牌面朝上"
+    },
+    {
+        "en": "Facility",
+        "translation": "设施"
+    },
+    {
+        "en": "faction",
+        "translation": "派系"
+    },
+    {
+        "en": "find",
+        "translation": "找到"
+    },
+    {
+        "en": "first",
+        "translation": "第一个"
+    },
+    {
+        "en": "flag",
+        "translation": "标记"
+    },
+    {
+        "en": "flatline",
+        "translation": "死亡"
+    },
+    {
+        "en": "flatlined",
+        "translation": "死亡"
+    },
+    {
+        "en": "flavor text",
+        "translation": "背景叙述"
+    },
+    {
+        "en": "for example",
+        "translation": "例如"
+    },
+    {
+        "en": "for information about",
+        "translation": "有关……的信息"
+    },
+    {
+        "en": "for rules about",
+        "translation": "有关……的规则"
+    },
+    {
+        "en": "for the remainder of this turn",
+        "translation": "在本回合的剩余时间内"
+    },
+    {
+        "en": "force",
+        "translation": "迫使"
+    },
+    {
+        "en": "forced encounter",
+        "translation": "强制遭遇"
+    },
+    {
+        "en": "forfeit",
+        "translation": "废除"
+    },
+    {
+        "en": "found",
+        "translation": "搜寻到的"
+    },
+    {
+        "en": "Fracter",
+        "translation": "分解模块"
+    },
+    {
+        "en": "fully break",
+        "translation": "完全破解"
+    },
+    {
+        "en": "G-mod",
+        "translation": "转基因人"
+    },
+    {
+        "en": "gain",
+        "translation": "获得"
+    },
+    {
+        "en": "game",
+        "translation": "游戏"
+    },
+    {
+        "en": "game piece",
+        "translation": "游戏部件"
+    },
+    {
+        "en": "game state",
+        "translation": "游戏状态"
+    },
+    {
+        "en": "gameplay aid",
+        "translation": "游戏辅助道具"
+    },
+    {
+        "en": "Gear",
+        "translation": "装备"
+    },
+    {
+        "en": "generally",
+        "translation": "通常情况下"
+    },
+    {
+        "en": "Genetics",
+        "translation": "基因"
+    },
+    {
+        "en": "give",
+        "translation": "给予"
+    },
+    {
+        "en": "given",
+        "translation": "给定的"
+    },
+    {
+        "en": "Government",
+        "translation": "政府"
+    },
+    {
+        "en": "Grail",
+        "translation": "圣杯"
+    },
+    {
+        "en": "grant",
+        "translation": "赋予"
+    },
+    {
+        "en": "Gray Ops",
+        "translation": "灰色行动"
+    },
+    {
+        "en": "grip",
+        "translation": "操控器"
+    },
+    {
+        "en": "Haas-Bioroid",
+        "translation": "哈斯生化"
+    },
+    {
+        "en": "hand",
+        "translation": "手牌"
+    },
+    {
+        "en": "hand size",
+        "translation": "手牌上限"
+    },
+    {
+        "en": "happen",
+        "translation": "发生"
+    },
+    {
+        "en": "hardware",
+        "translation": "硬件"
+    },
+    {
+        "en": "Harmonic",
+        "translation": "和声"
+    },
+    {
+        "en": "have",
+        "translation": "有，拥有，具有"
+    },
+    {
+        "en": "heap",
+        "translation": "堆阵"
+    },
+    {
+        "en": "hidden",
+        "translation": "隐藏的"
+    },
+    {
+        "en": "hidden information",
+        "translation": "隐藏信息"
+    },
+    {
+        "en": "hidden zone",
+        "translation": "隐藏区域"
+    },
+    {
+        "en": "host",
+        "translation": "附载"
+    },
+    {
+        "en": "host on",
+        "translation": "附载于"
+    },
+    {
+        "en": "hosted",
+        "translation": "所附载的"
+    },
+    {
+        "en": "Hostile",
+        "translation": "敌对"
+    },
+    {
+        "en": "hosting",
+        "translation": "附载"
+    },
+    {
+        "en": "HQ",
+        "translation": "总部"
+    },
+    {
+        "en": "ice",
+        "translation": "防火墙"
+    },
+    {
+        "en": "icebreaker",
+        "translation": "破解器"
+    },
+    {
+        "en": "identified by",
+        "translation": "由……确定"
+    },
+    {
+        "en": "identify your mark",
+        "translation": "发现你的目标"
+    },
+    {
+        "en": "identity",
+        "translation": "特性"
+    },
+    {
+        "en": "identity card",
+        "translation": "特性卡牌"
+    },
+    {
+        "en": "if",
+        "translation": "如果"
+    },
+    {
+        "en": "if able",
+        "translation": "如可能"
+    },
+    {
+        "en": "if appropriate",
+        "translation": "如果适用"
+    },
+    {
+        "en": "ignore",
+        "translation": "忽略"
+    },
+    {
+        "en": "illegal",
+        "translation": "不合法"
+    },
+    {
+        "en": "Illicit",
+        "translation": "非法"
+    },
+    {
+        "en": "imminent",
+        "translation": "即将发生"
+    },
+    {
+        "en": "impose",
+        "translation": "施加"
+    },
+    {
+        "en": "in front of",
+        "translation": "前方"
+    },
+    {
+        "en": "in order",
+        "translation": "按顺序"
+    },
+    {
+        "en": "in order to",
+        "translation": "才能"
+    },
+    {
+        "en": "in progress",
+        "translation": "正在进行"
+    },
+    {
+        "en": "in sequence",
+        "translation": "依次"
+    },
+    {
+        "en": "inactive",
+        "translation": "闲置的"
+    },
+    {
+        "en": "inactive player",
+        "translation": "非主动玩家"
+    },
+    {
+        "en": "include",
+        "translation": "包含"
+    },
+    {
+        "en": "independent",
+        "translation": "独立的"
+    },
+    {
+        "en": "indicate",
+        "translation": "标明，指定"
+    },
+    {
+        "en": "Industrial",
+        "translation": "工业"
+    },
+    {
+        "en": "influence",
+        "translation": "影响力"
+    },
+    {
+        "en": "influence cost",
+        "translation": "影响力费用"
+    },
+    {
+        "en": "influence limit",
+        "translation": "影响力上限"
+    },
+    {
+        "en": "inherent property",
+        "translation": "固有属性"
+    },
+    {
+        "en": "initiate",
+        "translation": "发起"
+    },
+    {
+        "en": "initiation phase",
+        "translation": "发起阶段"
+    },
+    {
+        "en": "Initiative",
+        "translation": "原创"
+    },
+    {
+        "en": "innermost",
+        "translation": "最内层"
+    },
+    {
+        "en": "install",
+        "translation": "安装"
+    },
+    {
+        "en": "install cost",
+        "translation": "安装费用"
+    },
+    {
+        "en": "install protecting……",
+        "translation": "安装用于保护……"
+    },
+    {
+        "en": "installed",
+        "translation": "已安装的"
+    },
+    {
+        "en": "installing",
+        "translation": "安装"
+    },
+    {
+        "en": "instance",
+        "translation": "实例"
+    },
+    {
+        "en": "instruction",
+        "translation": "指示"
+    },
+    {
+        "en": "interact",
+        "translation": "交互"
+    },
+    {
+        "en": "interface",
+        "translation": "对接"
+    },
+    {
+        "en": "interprete",
+        "translation": "诠释"
+    },
+    {
+        "en": "interrupt",
+        "translation": "打断"
+    },
+    {
+        "en": "interrupt window",
+        "translation": "打断窗口"
+    },
+    {
+        "en": "inward",
+        "translation": "内侧"
+    },
+    {
+        "en": "jack out",
+        "translation": "退出潜袭"
+    },
+    {
+        "en": "Jinteki",
+        "translation": "人间会社"
+    },
+    {
+        "en": "Job",
+        "translation": "工作"
+    },
+    {
+        "en": "Killer",
+        "translation": "断路模块"
+    },
+    {
+        "en": "learn",
+        "translation": "得知"
+    },
+    {
+        "en": "legal",
+        "translation": "合法的"
+    },
+    {
+        "en": "lingering effect",
+        "translation": "存留效果"
+    },
+    {
+        "en": "link",
+        "translation": "中转"
+    },
+    {
+        "en": "link strength",
+        "translation": "中转强度"
+    },
+    {
+        "en": "link value",
+        "translation": "中转值"
+    },
+    {
+        "en": "linked ability",
+        "translation": "关联能力"
+    },
+    {
+        "en": "load",
+        "translation": "填装"
+    },
+    {
+        "en": "location",
+        "translation": "位置"
+    },
+    {
+        "en": "Lockdown",
+        "translation": "封锁"
+    },
+    {
+        "en": "look",
+        "translation": "查看"
+    },
+    {
+        "en": "look at",
+        "translation": "查看"
+    },
+    {
+        "en": "look for",
+        "translation": "需要"
+    },
+    {
+        "en": "look through",
+        "translation": "浏览"
+    },
+    {
+        "en": "lose",
+        "translation": "失去"
+    },
+    {
+        "en": "lower",
+        "translation": "降低，减少"
+    },
+    {
+        "en": "maintain",
+        "translation": "保持"
+    },
+    {
+        "en": "Mandate",
+        "translation": "命令"
+    },
+    {
+        "en": "mandatory",
+        "translation": "强制的"
+    },
+    {
+        "en": "mandatory conditional ability",
+        "translation": "强制条件能力"
+    },
+    {
+        "en": "mandatory draw",
+        "translation": "强制抽牌"
+    },
+    {
+        "en": "manipulate",
+        "translation": "操作"
+    },
+    {
+        "en": "mark",
+        "translation": "目标"
+    },
+    {
+        "en": "maximum hand size",
+        "translation": "手牌上限"
+    },
+    {
+        "en": "may",
+        "translation": "可以"
+    },
+    {
+        "en": "mean",
+        "translation": "表示"
+    },
+    {
+        "en": "meat damage",
+        "translation": "肢体伤害"
+    },
+    {
+        "en": "meet",
+        "translation": "满足"
+    },
+    {
+        "en": "Megacorp",
+        "translation": "巨型公司"
+    },
+    {
+        "en": "memory",
+        "translation": "内存"
+    },
+    {
+        "en": "memory cost",
+        "translation": "内存费用"
+    },
+    {
+        "en": "memory limit",
+        "translation": "内存上限"
+    },
+    {
+        "en": "memory unit",
+        "translation": "内存单元"
+    },
+    {
+        "en": "mid-access ability",
+        "translation": "读取时能力"
+    },
+    {
+        "en": "mid-access ability window",
+        "translation": "读取时能力窗口"
+    },
+    {
+        "en": "minimum deck size",
+        "translation": "牌组张数下限"
+    },
+    {
+        "en": "Mod",
+        "translation": "改造"
+    },
+    {
+        "en": "modal ability",
+        "translation": "模态能力"
+    },
+    {
+        "en": "mode",
+        "translation": "模式"
+    },
+    {
+        "en": "modifier",
+        "translation": "修改效果"
+    },
+    {
+        "en": "modify",
+        "translation": "修改"
+    },
+    {
+        "en": "more than",
+        "translation": "超过"
+    },
+    {
+        "en": "Morph",
+        "translation": "变形"
+    },
+    {
+        "en": "move",
+        "translation": "转移（对卡牌），移动（对玩家）"
+    },
+    {
+        "en": "movement",
+        "translation": "移动"
+    },
+    {
+        "en": "movement phase",
+        "translation": "移动阶段"
+    },
+    {
+        "en": "mulligan",
+        "translation": "重新调度"
+    },
+    {
+        "en": "must",
+        "translation": "必须"
+    },
+    {
+        "en": "Mythic",
+        "translation": "神秘"
+    },
+    {
+        "en": "name",
+        "translation": "名称"
+    },
+    {
+        "en": "Natural",
+        "translation": "原生人"
+    },
+    {
+        "en": "NBN",
+        "translation": "网际传媒"
+    },
+    {
+        "en": "need",
+        "translation": "需要"
+    },
+    {
+        "en": "nested",
+        "translation": "嵌套的"
+    },
+    {
+        "en": "nested cost",
+        "translation": "内部费用"
+    },
+    {
+        "en": "net damage",
+        "translation": "网域伤害"
+    },
+    {
+        "en": "Netrunner",
+        "translation": "矩阵潜袭"
+    },
+    {
+        "en": "neutral",
+        "translation": "中立"
+    },
+    {
+        "en": "NEXT",
+        "translation": "次级"
+    },
+    {
+        "en": "normally",
+        "translation": "通常情况下"
+    },
+    {
+        "en": "not yet",
+        "translation": "尚未"
+    },
+    {
+        "en": "note that",
+        "translation": "注意"
+    },
+    {
+        "en": "Null Signal Games",
+        "translation": "Null Signal Games"
+    },
+    {
+        "en": "numeral",
+        "translation": "数字"
+    },
+    {
+        "en": "object",
+        "translation": "物件"
+    },
+    {
+        "en": "Observer",
+        "translation": "观察者"
+    },
+    {
+        "en": "occupy",
+        "translation": "占用"
+    },
+    {
+        "en": "occur",
+        "translation": "发生，出现"
+    },
+    {
+        "en": "occurrence",
+        "translation": "事件"
+    },
+    {
+        "en": "Off-site",
+        "translation": "场外"
+    },
+    {
+        "en": "one at a time",
+        "translation": "逐……"
+    },
+    {
+        "en": "open",
+        "translation": "开放"
+    },
+    {
+        "en": "open information",
+        "translation": "公开信息"
+    },
+    {
+        "en": "operation",
+        "translation": "事务"
+    },
+    {
+        "en": "opponent",
+        "translation": "对手"
+    },
+    {
+        "en": "option",
+        "translation": "选项"
+    },
+    {
+        "en": "optional",
+        "translation": "可选的"
+    },
+    {
+        "en": "optional conditional ability",
+        "translation": "可选条件能力"
+    },
+    {
+        "en": "order",
+        "translation": "顺序"
+    },
+    {
+        "en": "Orgcrime",
+        "translation": "黑社会"
+    },
+    {
+        "en": "orient horizontally",
+        "translation": "横置"
+    },
+    {
+        "en": "orientation",
+        "translation": "朝向"
+    },
+    {
+        "en": "original",
+        "translation": "原"
+    },
+    {
+        "en": "other",
+        "translation": "其他"
+    },
+    {
+        "en": "out-of-faction",
+        "translation": "其他派系"
+    },
+    {
+        "en": "outermost",
+        "translation": "最外层"
+    },
+    {
+        "en": "outline",
+        "translation": "概述"
+    },
+    {
+        "en": "own",
+        "translation": "各自的"
+    },
+    {
+        "en": "owner",
+        "translation": "所有者"
+    },
+    {
+        "en": "ownership",
+        "translation": "所有权"
+    },
+    {
+        "en": "paid ability",
+        "translation": "付费能力"
+    },
+    {
+        "en": "paid ability window",
+        "translation": "付费能力窗口"
+    },
+    {
+        "en": "particular",
+        "translation": "特定的"
+    },
+    {
+        "en": "pass",
+        "translation": "让过"
+    },
+    {
+        "en": "pay",
+        "translation": "支付"
+    },
+    {
+        "en": "pending",
+        "translation": "待定"
+    },
+    {
+        "en": "perform",
+        "translation": "执行"
+    },
+    {
+        "en": "persist",
+        "translation": "继续生效"
+    },
+    {
+        "en": "persistent",
+        "translation": "持久"
+    },
+    {
+        "en": "phase",
+        "translation": "阶段"
+    },
+    {
+        "en": "piece",
+        "translation": "层"
+    },
+    {
+        "en": "place",
+        "translation": "放置"
+    },
+    {
+        "en": "play",
+        "translation": "打出"
+    },
+    {
+        "en": "play ability",
+        "translation": "打出能力"
+    },
+    {
+        "en": "play area",
+        "translation": "游戏区"
+    },
+    {
+        "en": "play cost",
+        "translation": "打出费用"
+    },
+    {
+        "en": "player",
+        "translation": "玩家"
+    },
+    {
+        "en": "player aid card",
+        "translation": "玩家辅助卡牌"
+    },
+    {
+        "en": "playing",
+        "translation": "打出"
+    },
+    {
+        "en": "Police Department",
+        "translation": "警局"
+    },
+    {
+        "en": "Political",
+        "translation": "政治"
+    },
+    {
+        "en": "position",
+        "translation": "位置"
+    },
+    {
+        "en": "power",
+        "translation": "能量"
+    },
+    {
+        "en": "power counter",
+        "translation": "能量指示物"
+    },
+    {
+        "en": "prevent",
+        "translation": "防止"
+    },
+    {
+        "en": "primary condition",
+        "translation": "主要条件"
+    },
+    {
+        "en": "printed",
+        "translation": "印刷"
+    },
+    {
+        "en": "priority",
+        "translation": "优先权"
+    },
+    {
+        "en": "priority window",
+        "translation": "优先权窗口"
+    },
+    {
+        "en": "procedure",
+        "translation": "流程"
+    },
+    {
+        "en": "proceed",
+        "translation": "进行"
+    },
+    {
+        "en": "process",
+        "translation": "过程"
+    },
+    {
+        "en": "program",
+        "translation": "程序"
+    },
+    {
+        "en": "prohibit",
+        "translation": "禁止"
+    },
+    {
+        "en": "property",
+        "translation": "属性"
+    },
+    {
+        "en": "protect",
+        "translation": "保护"
+    },
+    {
+        "en": "provide",
+        "translation": "提供"
+    },
+    {
+        "en": "provided",
+        "translation": "给定的"
+    },
+    {
+        "en": "Psi",
+        "translation": "灵能"
+    },
+    {
+        "en": "psi game",
+        "translation": "灵能博弈"
+    },
+    {
+        "en": "public",
+        "translation": "公开的"
+    },
+    {
+        "en": "public zone",
+        "translation": "公开区域"
+    },
+    {
+        "en": "purge",
+        "translation": "清除"
+    },
+    {
+        "en": "purge virus counters",
+        "translation": "清除病毒指示物"
+    },
+    {
+        "en": "R&D",
+        "translation": "研发中心"
+    },
+    {
+        "en": "Random Access Limit",
+        "translation": "随机读取上限"
+    },
+    {
+        "en": "reach",
+        "translation": "到达"
+    },
+    {
+        "en": "reaction window",
+        "translation": "响应窗口"
+    },
+    {
+        "en": "read as",
+        "translation": "读作"
+    },
+    {
+        "en": "rearrange",
+        "translation": "重新排列"
+    },
+    {
+        "en": "receive",
+        "translation": "获得"
+    },
+    {
+        "en": "recurring credit",
+        "translation": "可再生信用点"
+    },
+    {
+        "en": "reduce",
+        "translation": "减少"
+    },
+    {
+        "en": "refer to",
+        "translation": "提到，涉及"
+    },
+    {
+        "en": "refill",
+        "translation": "补充"
+    },
+    {
+        "en": "region",
+        "translation": "区域"
+    },
+    {
+        "en": "regular",
+        "translation": "常规"
+    },
+    {
+        "en": "relate",
+        "translation": "相关"
+    },
+    {
+        "en": "relate to",
+        "translation": "相关"
+    },
+    {
+        "en": "relationship",
+        "translation": "关系"
+    },
+    {
+        "en": "relevant",
+        "translation": "相关"
+    },
+    {
+        "en": "remainder",
+        "translation": "剩余（时间）"
+    },
+    {
+        "en": "reminder text",
+        "translation": "提示文本"
+    },
+    {
+        "en": "Remote",
+        "translation": "远程"
+    },
+    {
+        "en": "remote server",
+        "translation": "远程服务器"
+    },
+    {
+        "en": "remove",
+        "translation": "移除"
+    },
+    {
+        "en": "remove from the game",
+        "translation": "移出游戏"
+    },
+    {
+        "en": "remove it from the game",
+        "translation": "将其移出游戏"
+    },
+    {
+        "en": "removed from the game",
+        "translation": "移出游戏"
+    },
+    {
+        "en": "removed-from-game zone",
+        "translation": "移出游戏区"
+    },
+    {
+        "en": "replace",
+        "translation": "代替"
+    },
+    {
+        "en": "replacement effect",
+        "translation": "替代效果"
+    },
+    {
+        "en": "represent",
+        "translation": "表示"
+    },
+    {
+        "en": "Reprisal",
+        "translation": "报复"
+    },
+    {
+        "en": "require",
+        "translation": "需要"
+    },
+    {
+        "en": "requirement",
+        "translation": "要求"
+    },
+    {
+        "en": "Research",
+        "translation": "研究"
+    },
+    {
+        "en": "resolve",
+        "translation": "结算"
+    },
+    {
+        "en": "resolve an ability",
+        "translation": "结算一项能力"
+    },
+    {
+        "en": "resolve an instruction",
+        "translation": "结算一项指示"
+    },
+    {
+        "en": "resolving",
+        "translation": "正在结算"
+    },
+    {
+        "en": "resource",
+        "translation": "资源"
+    },
+    {
+        "en": "restriction",
+        "translation": "限制"
+    },
+    {
+        "en": "reveal",
+        "translation": "展示"
+    },
+    {
+        "en": "rez",
+        "translation": "激活"
+    },
+    {
+        "en": "rez cost",
+        "translation": "激活费用"
+    },
+    {
+        "en": "rezzed",
+        "translation": "已激活的"
+    },
+    {
+        "en": "Ritzy",
+        "translation": "豪华"
+    },
+    {
+        "en": "role",
+        "translation": "角色"
+    },
+    {
+        "en": "root",
+        "translation": "根目录"
+    },
+    {
+        "en": "rule",
+        "translation": "规则"
+    },
+    {
+        "en": "run",
+        "translation": "潜袭"
+    },
+    {
+        "en": "run ends phase",
+        "translation": "潜袭结束阶段"
+    },
+    {
+        "en": "Runner",
+        "translation": "潜袭者"
+    },
+    {
+        "en": "Runner's score area",
+        "translation": "潜袭者分数区"
+    },
+    {
+        "en": "sabotage",
+        "translation": "破坏"
+    },
+    {
+        "en": "score",
+        "translation": "分数"
+    },
+    {
+        "en": "score area",
+        "translation": "分数区"
+    },
+    {
+        "en": "scoring",
+        "translation": "计分"
+    },
+    {
+        "en": "search",
+        "translation": "搜寻"
+    },
+    {
+        "en": "secret",
+        "translation": "秘密的"
+    },
+    {
+        "en": "secret zone",
+        "translation": "秘密区域"
+    },
+    {
+        "en": "section",
+        "translation": "节"
+    },
+    {
+        "en": "Security",
+        "translation": "防卫"
+    },
+    {
+        "en": "Security Protocol",
+        "translation": "安全协议"
+    },
+    {
+        "en": "see",
+        "translation": "参见"
+    },
+    {
+        "en": "see also",
+        "translation": "另请参见"
+    },
+    {
+        "en": "Seedy",
+        "translation": "低劣"
+    },
+    {
+        "en": "self-referential",
+        "translation": "指代自身"
+    },
+    {
+        "en": "Sensie",
+        "translation": "复感电影"
+    },
+    {
+        "en": "sentry",
+        "translation": "警报"
+    },
+    {
+        "en": "separate",
+        "translation": "独立的"
+    },
+    {
+        "en": "server",
+        "translation": "服务器"
+    },
+    {
+        "en": "set aside",
+        "translation": "置于一旁"
+    },
+    {
+        "en": "set-aside zone",
+        "translation": "置于一旁区"
+    },
+    {
+        "en": "setup",
+        "translation": "设置"
+    },
+    {
+        "en": "Shaper",
+        "translation": "塑造者"
+    },
+    {
+        "en": "should",
+        "translation": "应、应当"
+    },
+    {
+        "en": "show",
+        "translation": "展示"
+    },
+    {
+        "en": "shuffle",
+        "translation": "洗混"
+    },
+    {
+        "en": "side",
+        "translation": "阵营"
+    },
+    {
+        "en": "some",
+        "translation": "一些"
+    },
+    {
+        "en": "source",
+        "translation": "来源"
+    },
+    {
+        "en": "source card",
+        "translation": "来源卡牌"
+    },
+    {
+        "en": "specific",
+        "translation": "特定的"
+    },
+    {
+        "en": "specification",
+        "translation": "规则"
+    },
+    {
+        "en": "specified",
+        "translation": "指定的，明确的"
+    },
+    {
+        "en": "specify",
+        "translation": "指定"
+    },
+    {
+        "en": "spend",
+        "translation": "花费"
+    },
+    {
+        "en": "stack",
+        "translation": "存储栈"
+    },
+    {
+        "en": "stand for",
+        "translation": "表示"
+    },
+    {
+        "en": "start",
+        "translation": "开始"
+    },
+    {
+        "en": "Starter Pack",
+        "translation": "起始包"
+    },
+    {
+        "en": "starting hand",
+        "translation": "初始手牌"
+    },
+    {
+        "en": "starting memory limit",
+        "translation": "初始内存上限"
+    },
+    {
+        "en": "state",
+        "translation": "规定"
+    },
+    {
+        "en": "statement",
+        "translation": "语句"
+    },
+    {
+        "en": "static ability",
+        "translation": "持续能力"
+    },
+    {
+        "en": "static condition",
+        "translation": "静态条件"
+    },
+    {
+        "en": "status",
+        "translation": "状态"
+    },
+    {
+        "en": "steal",
+        "translation": "窃取"
+    },
+    {
+        "en": "stealing",
+        "translation": "窃取"
+    },
+    {
+        "en": "Stealth",
+        "translation": "隐匿"
+    },
+    {
+        "en": "step",
+        "translation": "步骤"
+    },
+    {
+        "en": "stipulate",
+        "translation": "规定"
+    },
+    {
+        "en": "stipulation",
+        "translation": "规定"
+    },
+    {
+        "en": "strength",
+        "translation": "强度"
+    },
+    {
+        "en": "subject to",
+        "translation": "受到"
+    },
+    {
+        "en": "subroutine",
+        "translation": "子进程"
+    },
+    {
+        "en": "Subsidiary",
+        "translation": "子公司"
+    },
+    {
+        "en": "subtype",
+        "translation": "子类型"
+    },
+    {
+        "en": "success phase",
+        "translation": "成功阶段"
+    },
+    {
+        "en": "successful",
+        "translation": "成功"
+    },
+    {
+        "en": "successful run",
+        "translation": "成功的潜袭"
+    },
+    {
+        "en": "such",
+        "translation": "此类"
+    },
+    {
+        "en": "such as",
+        "translation": "如、例如"
+    },
+    {
+        "en": "suffer",
+        "translation": "受到"
+    },
+    {
+        "en": "Sunny Lebeau",
+        "translation": "桑妮·勒博"
+    },
+    {
+        "en": "survive",
+        "translation": "存活"
+    },
+    {
+        "en": "swap",
+        "translation": "互换"
+    },
+    {
+        "en": "symbol",
+        "translation": "符号"
+    },
+    {
+        "en": "synonymous",
+        "translation": "同义"
+    },
+    {
+        "en": "Sysop",
+        "translation": "管理员"
+    },
+    {
+        "en": "System Gateway",
+        "translation": "核心网关"
+    },
+    {
+        "en": "tag",
+        "translation": "锁定标记"
+    },
+    {
+        "en": "tag counter",
+        "translation": "锁定标记指示物"
+    },
+    {
+        "en": "tagged",
+        "translation": "被锁定"
+    },
+    {
+        "en": "take",
+        "translation": "拿取，承受，执行"
+    },
+    {
+        "en": "target",
+        "translation": "目标"
+    },
+    {
+        "en": "term",
+        "translation": "术语"
+    },
+    {
+        "en": "Terminal",
+        "translation": "终止"
+    },
+    {
+        "en": "text",
+        "translation": "文本"
+    },
+    {
+        "en": "text box",
+        "translation": "文本框"
+    },
+    {
+        "en": "that",
+        "translation": "该"
+    },
+    {
+        "en": "The Catalyst",
+        "translation": "触媒"
+    },
+    {
+        "en": "the number of",
+        "translation": "……的数量"
+    },
+    {
+        "en": "the other",
+        "translation": "另一"
+    },
+    {
+        "en": "The Syndicate",
+        "translation": "商盟"
+    },
+    {
+        "en": "their",
+        "translation": "其"
+    },
+    {
+        "en": "then",
+        "translation": "然后"
+    },
+    {
+        "en": "these",
+        "translation": "这些"
+    },
+    {
+        "en": "this",
+        "translation": "本、此、这"
+    },
+    {
+        "en": "this way",
+        "translation": "此法"
+    },
+    {
+        "en": "those",
+        "translation": "这些"
+    },
+    {
+        "en": "threat",
+        "translation": "威胁"
+    },
+    {
+        "en": "threat level",
+        "translation": "威胁等级"
+    },
+    {
+        "en": "timing",
+        "translation": "时机、时序"
+    },
+    {
+        "en": "timing point",
+        "translation": "时机"
+    },
+    {
+        "en": "timing structure",
+        "translation": "时序"
+    },
+    {
+        "en": "token",
+        "translation": "标记"
+    },
+    {
+        "en": "top",
+        "translation": "顶端"
+    },
+    {
+        "en": "top card",
+        "translation": "顶端的卡牌"
+    },
+    {
+        "en": "top of",
+        "translation": "的顶端"
+    },
+    {
+        "en": "topmost",
+        "translation": "最顶端的"
+    },
+    {
+        "en": "trace",
+        "translation": "追踪"
+    },
+    {
+        "en": "trace attempt",
+        "translation": "追踪尝试"
+    },
+    {
+        "en": "trace strength",
+        "translation": "追踪强度"
+    },
+    {
+        "en": "Tracer",
+        "translation": "追踪者"
+    },
+    {
+        "en": "Transaction",
+        "translation": "交易"
+    },
+    {
+        "en": "Trap",
+        "translation": "陷阱"
+    },
+    {
+        "en": "trash",
+        "translation": "销毁"
+    },
+    {
+        "en": "trash cost",
+        "translation": "销毁费用"
+    },
+    {
+        "en": "treat",
+        "translation": "视为"
+    },
+    {
+        "en": "treated as",
+        "translation": "视作"
+    },
+    {
+        "en": "trigger",
+        "translation": "触发"
+    },
+    {
+        "en": "trigger condition",
+        "translation": "触发条件"
+    },
+    {
+        "en": "trigger cost",
+        "translation": "触发费用"
+    },
+    {
+        "en": "Triple",
+        "translation": "三重"
+    },
+    {
+        "en": "Trojan",
+        "translation": "木马"
+    },
+    {
+        "en": "turn",
+        "translation": "回合"
+    },
+    {
+        "en": "type",
+        "translation": "类型"
+    },
+    {
+        "en": "unbroken",
+        "translation": "未破解"
+    },
+    {
+        "en": "uninstall",
+        "translation": "卸载"
+    },
+    {
+        "en": "uninstalled",
+        "translation": "被卸载"
+    },
+    {
+        "en": "unique",
+        "translation": "独有"
+    },
+    {
+        "en": "unique symbol",
+        "translation": "独有符号"
+    },
+    {
+        "en": "unit",
+        "translation": "单位、单元"
+    },
+    {
+        "en": "unless",
+        "translation": "除非"
+    },
+    {
+        "en": "unless otherwise stated",
+        "translation": "除非另有说明"
+    },
+    {
+        "en": "Unorthodox",
+        "translation": "异类"
+    },
+    {
+        "en": "unrez",
+        "translation": "未激活，未激活的"
+    },
+    {
+        "en": "unrezzed",
+        "translation": "未激活的"
+    },
+    {
+        "en": "unspent",
+        "translation": "未使用的、未花费的"
+    },
+    {
+        "en": "Unsubstantiated",
+        "translation": "未证实"
+    },
+    {
+        "en": "unsuccessful",
+        "translation": "失败"
+    },
+    {
+        "en": "unsuccessful run",
+        "translation": "失败的潜袭"
+    },
+    {
+        "en": "until",
+        "translation": "直到"
+    },
+    {
+        "en": "upgrade",
+        "translation": "升级"
+    },
+    {
+        "en": "use",
+        "translation": "使用"
+    },
+    {
+        "en": "value",
+        "translation": "数值"
+    },
+    {
+        "en": "Vehicle",
+        "translation": "载具"
+    },
+    {
+        "en": "Virtual",
+        "translation": "虚拟"
+    },
+    {
+        "en": "virus",
+        "translation": "病毒"
+    },
+    {
+        "en": "virus counter",
+        "translation": "病毒指示物"
+    },
+    {
+        "en": "visibility",
+        "translation": "可见性"
+    },
+    {
+        "en": "visible",
+        "translation": "可见"
+    },
+    {
+        "en": "Weapon",
+        "translation": "武器"
+    },
+    {
+        "en": "Weyland Consortium",
+        "translation": "威兰财团"
+    },
+    {
+        "en": "when",
+        "translation": "当"
+    },
+    {
+        "en": "whenever",
+        "translation": "每当"
+    },
+    {
+        "en": "while",
+        "translation": "在……期间"
+    },
+    {
+        "en": "will",
+        "translation": "将要"
+    },
+    {
+        "en": "win",
+        "translation": "获胜"
+    },
+    {
+        "en": "win condition",
+        "translation": "胜利条件"
+    },
+    {
+        "en": "win the game",
+        "translation": "赢得游戏胜利"
+    },
+    {
+        "en": "word",
+        "translation": "用语"
+    },
+    {
+        "en": "would",
+        "translation": "将要"
+    },
+    {
+        "en": "zone",
+        "translation": "区域"
+    },
+    {
+        "en": "[click]",
+        "translation": "[click]"
+    },
+    {
+        "en": "[interrupt]",
+        "translation": "[interrupt]"
+    },
+    {
+        "en": "[link]",
+        "translation": "[link]"
+    },
+    {
+        "en": "[MU]",
+        "translation": "[MU]"
+    },
+    {
+        "en": "[recurring]",
+        "translation": "[recurring]"
+    },
+    {
+        "en": "[sub]",
+        "translation": "[sub]"
+    },
+    {
+        "en": "[trash]",
+        "translation": "[trash]"
+    },
+    {
+        "en": "ability",
+        "translation": "能力"
+    },
+    {
+        "en": "[c]",
+        "translation": "[c]"
+    }
+]
